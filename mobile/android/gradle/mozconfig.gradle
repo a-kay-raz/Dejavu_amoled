@@ -276,7 +276,10 @@ if (json == null) {
             DOWNLOAD_ALL_GRADLE_DEPENDENCIES: false,
             ALLOW_INSECURE_GRADLE_REPOSITORIES: false,
             GRADLE_GLEAN_PARSER_VENV: '',
+            ANDROID_SDK_ROOT: System.getenv('ANDROID_SDK_ROOT') ?: System.getenv('ANDROID_HOME') ?: '/usr/local/lib/android/sdk',
             GRADLE_MAVEN_REPOSITORIES: [
+                'https://maven.google.com/',
+                'https://repo.maven.apache.org/maven2/',
                 'https://maven.mozilla.org/maven2/',
                 'https://plugins.gradle.org/m2/'
             ]
@@ -323,11 +326,16 @@ if (sourceRepoFile.canRead()) {
 // `delegate` refers to the RepositoryHandler that receives method calls.
 // In Kotlin, pass `this`.
 gradle.ext.configureMavenRepositories = { handler ->
-    gradle.mozconfig.substs.GRADLE_MAVEN_REPOSITORIES.each { repository ->
-        handler.maven {
-            url = repository
-            if (gradle.mozconfig.substs.ALLOW_INSECURE_GRADLE_REPOSITORIES) {
-                allowInsecureProtocol = true
+    handler.google()
+    handler.mavenCentral()
+    handler.gradlePluginPortal()
+    if (gradle.mozconfig?.substs?.GRADLE_MAVEN_REPOSITORIES) {
+        gradle.mozconfig.substs.GRADLE_MAVEN_REPOSITORIES.each { repository ->
+            handler.maven {
+                url = repository
+                if (gradle.mozconfig.substs.ALLOW_INSECURE_GRADLE_REPOSITORIES) {
+                    allowInsecureProtocol = true
+                }
             }
         }
     }
