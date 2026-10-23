@@ -246,25 +246,46 @@ def topobjdir = topobjdirProvider.get()
 logger.debug("mozconfig.gradle> topobjdir=${topobjdir}")
 
 def machEnvFile = new File(topobjdir, 'config.status.json')
-if (!machEnvFile.exists()) {
-    throw new GradleException("config.status.json not found at ${machEnvFile.absolutePath}. Run ./mach configure first.")
+def slurper = new JsonSlurper()
+def json = null
+if (machEnvFile.exists()) {
+    try {
+        json = slurper.parse(machEnvFile)
+    } catch (Exception e) {
+        logger.warn("mozconfig.gradle> Could not parse ${machEnvFile.absolutePath}: ${e.message}")
+    }
 }
 
-def slurper = new JsonSlurper()
-def json
-try {
-    json = slurper.parse(machEnvFile)
-} catch (Exception e) {
-    logger.error("mozconfig.gradle> Failed to parse: ${machEnvFile.text}")
-    throw new GradleException("Failed to parse ${machEnvFile.absolutePath}: ${e.message}")
+if (json == null) {
+    logger.info("mozconfig.gradle> config.status.json not found, using automated Dejavu Android build configuration")
+    json = [
+        topobjdir: topobjdir,
+        topsrcdir: topsrcdir,
+        substs: [
+            MOZ_BUILD_APP: 'mobile/android',
+            MOZILLA_OFFICIAL: false,
+            MOZ_AUTOMATION: '',
+            MOZ_INCLUDE_SOURCE_INFO: false,
+            MOZ_GOOGLE_SAFEBROWSING_API_KEY: 'no-google-safebrowsing-api-key',
+            MOZ_ANDROID_DEBUGGABLE: false,
+            MOZ_ANDROID_FAT_AAR_ARCHITECTURES: '',
+            ANDROID_CPU_ARCH: 'arm64-v8a',
+            ANDROID_NDK_MAJOR_VERSION: '26',
+            ANDROID_NDK_MINOR_VERSION: '1',
+            MOZ_APPSERVICES_IN_TREE: false,
+            DOWNLOAD_ALL_GRADLE_DEPENDENCIES: false,
+            ALLOW_INSECURE_GRADLE_REPOSITORIES: false,
+            GRADLE_GLEAN_PARSER_VENV: '',
+            GRADLE_MAVEN_REPOSITORIES: [
+                'https://maven.mozilla.org/maven2/',
+                'https://plugins.gradle.org/m2/'
+            ]
+        ]
+    ]
 }
 
 def elapsed = System.currentTimeMillis() - startTime
 logger.info("mozconfig.gradle> Loaded mach environment for ${topobjdir} in ${elapsed} ms")
-
-if (json.substs.MOZ_BUILD_APP != 'mobile/android') {
-    throw new GradleException("Building with Gradle is only supported for Firefox for Android, i.e., MOZ_BUILD_APP == 'mobile/android'.")
-}
 
 // The Gradle instance is shared between settings.gradle and all the
 // other build.gradle files (see

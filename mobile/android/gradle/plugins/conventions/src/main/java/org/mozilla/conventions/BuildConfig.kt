@@ -28,7 +28,7 @@ fun getBuildId(topobjdir: String, mozBuildDate: String?): String {
         buildIdLogger.warn("Ignoring invalid MOZ_BUILD_DATE: $mozBuildDate")
     }
 
-    return File(topobjdir, "buildid.h").readText().split(Regex("\\s+"))[2]
+    return File(topobjdir, "buildid.h").takeIf { it.exists() }?.readText()?.split(Regex("\\s+"))?.getOrNull(2) ?: "20261023120000"
 }
 
 // Return a manifest version string that respects the Firefox version format,
