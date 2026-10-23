@@ -351,7 +351,7 @@ class ProjectPlugin : Plugin<Project> {
     }
 
     private fun configureAndroidBuildToolsVersion(project: Project, substs: Map<String, Any>) {
-        val buildToolsVersion = substs["ANDROID_BUILD_TOOLS_VERSION"] as String
+        val buildToolsVersion = (substs["ANDROID_BUILD_TOOLS_VERSION"] as? String)?.takeIf { it.isNotBlank() } ?: "34.0.0"
 
         // Use android plugin id string and reflection to avoid classloader isolation issues
         project.pluginManager.withPlugin("com.android.base") {
