@@ -1,0 +1,92 @@
+name: Build Dejavu AMOLED APK
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'mobile/android/**'
+      - '.github/workflows/build-dejavu-apk.yml'
+  workflow_dispatch:
+    inputs:
+      build_variant:
+        description: 'Build variant to compile'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+          - 'release'
+          - 'debug'
+
+concurrency:
+  group: build-dejavu-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  build-dejavu-apk:
+    name: Build Dejavu AMOLED Android APK
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Free disk space & setup swap
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost
+          SWAP_DIR=$( [ -d /mnt ] && echo /mnt || echo / )
+          sudo fallocate -l 6G $SWAP_DIR/dejavu-swap || true
+          sudo chmod 600 $SWAP_DIR/dejavu-swap || true
+          sudo mkswap $SWAP_DIR/dejavu-swap || true
+          sudo swapon $SWAP_DIR/dejavu-swap || true
+          free -h
+          df -h
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Prepare Gradle wrapper permissions
+        run: |
+          chmod +x mobile/android/fenix/gradlew
+
+      - name: Build Dejavu AMOLED APK
+        working-directory: mobile/android/fenix
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx6g -XX:MaxMetaspaceSize=1g"
+        run: |
+          VARIANT="${{ github.event.inputs.build_variant || 'release' }}"
+          echo "=== Starting Dejavu AMOLED APK Build (Variant: $VARIANT) ==="
+          if [ "$VARIANT" = "debug" ]; then
+            ./gradlew assembleDebug --stacktrace --no-daemon
+          else
+            ./gradlew assembleRelease -PdisableOptimization --stacktrace --no-daemon || ./gradlew assembleDebug --stacktrace --no-daemon
+          fi
+
+      - name: Collect Output APKs
+        run: |
+          mkdir -p output-apks
+          find mobile/android/fenix/app/build/outputs/apk/ -name "*.apk" -type f -exec cp {} output-apks/ \;
+          echo "=== Built APKs ==="
+          ls -la output-apks/
+
+      - name: Upload APKs to Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dejavu-amoled-apks
+          path: output-apks/*.apk
+          retention-days: 14
