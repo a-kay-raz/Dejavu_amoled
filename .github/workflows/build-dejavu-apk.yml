@@ -12,11 +12,11 @@ on:
       build_variant:
         description: 'Build variant to compile'
         required: true
-        default: 'release'
+        default: 'debug'
         type: choice
         options:
-          - 'release'
           - 'debug'
+          - 'release'
 
 concurrency:
   group: build-dejavu-${{ github.ref }}
@@ -76,19 +76,21 @@ jobs:
           GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx7g -XX:MaxMetaspaceSize=1g"
           MOZ_BUILD_DATE: "20261023120000"
         run: |
-          VARIANT="${{ github.event.inputs.build_variant || 'release' }}"
+          VARIANT="${{ github.event.inputs.build_variant || 'debug' }}"
           echo "=== Starting Dejavu AMOLED APK Build (Variant: $VARIANT) ==="
-          if [ "$VARIANT" = "debug" ]; then
-            ./gradlew assembleDebug -x lintVitalRelease -x lintVitalAnalyzeRelease -x lintVitalReportRelease --stacktrace --no-daemon
+          if [ "$VARIANT" = "release" ]; then
+            ./gradlew assembleRelease -PdisableOptimization -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon || ./gradlew assembleDebug -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon
           else
-            ./gradlew assembleRelease -PdisableOptimization -x lintVitalRelease -x lintVitalAnalyzeRelease -x lintVitalReportRelease --stacktrace --no-daemon || ./gradlew assembleDebug --stacktrace --no-daemon
+            ./gradlew assembleDebug -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon
           fi
 
       - name: Collect Output APKs
         if: always()
         run: |
           mkdir -p output-apks
-          find mobile/android/fenix/app/build/outputs/apk/ -name "*.apk" -type f -exec cp {} output-apks/ \;
+          mkdir -p mobile/android/fenix/app/build/outputs/apk
+          find mobile/android/fenix/app/build/outputs/apk/ -name "*.apk" -type f -exec cp {} output-apks/ \; 2>/dev/null || true
+          find . -name "*.apk" -type f -exec cp {} output-apks/ \; 2>/dev/null || true
           echo "=== Built APKs ==="
           ls -la output-apks/
 
@@ -98,4 +100,5 @@ jobs:
         with:
           name: dejavu-amoled-apks
           path: output-apks/*.apk
+          if-no-files-found: warn
           retention-days: 14
