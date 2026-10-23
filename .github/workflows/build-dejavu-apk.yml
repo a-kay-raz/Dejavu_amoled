@@ -40,7 +40,7 @@ jobs:
         run: |
           sudo rm -rf /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost
           SWAP_DIR=$( [ -d /mnt ] && echo /mnt || echo / )
-          sudo fallocate -l 6G $SWAP_DIR/dejavu-swap || true
+          sudo fallocate -l 8G $SWAP_DIR/dejavu-swap || true
           sudo chmod 600 $SWAP_DIR/dejavu-swap || true
           sudo mkswap $SWAP_DIR/dejavu-swap || true
           sudo swapon $SWAP_DIR/dejavu-swap || true
@@ -53,8 +53,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Configure Android SDK Licenses
+        run: |
+          export ANDROID_HOME=/usr/local/lib/android/sdk
+          export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
+          echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+          cmdline=$(ls -d /usr/local/lib/android/sdk/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)
+          echo "Using sdkmanager: $cmdline"
+          yes | "$cmdline" --licenses || true
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
@@ -66,17 +73,18 @@ jobs:
       - name: Build Dejavu AMOLED APK
         working-directory: mobile/android/fenix
         env:
-          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx6g -XX:MaxMetaspaceSize=1g"
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx7g -XX:MaxMetaspaceSize=1g"
         run: |
           VARIANT="${{ github.event.inputs.build_variant || 'release' }}"
           echo "=== Starting Dejavu AMOLED APK Build (Variant: $VARIANT) ==="
           if [ "$VARIANT" = "debug" ]; then
-            ./gradlew assembleDebug --stacktrace --no-daemon
+            ./gradlew assembleDebug -x lintVitalRelease -x lintVitalAnalyzeRelease -x lintVitalReportRelease --stacktrace --no-daemon
           else
-            ./gradlew assembleRelease -PdisableOptimization --stacktrace --no-daemon || ./gradlew assembleDebug --stacktrace --no-daemon
+            ./gradlew assembleRelease -PdisableOptimization -x lintVitalRelease -x lintVitalAnalyzeRelease -x lintVitalReportRelease --stacktrace --no-daemon || ./gradlew assembleDebug --stacktrace --no-daemon
           fi
 
       - name: Collect Output APKs
+        if: always()
         run: |
           mkdir -p output-apks
           find mobile/android/fenix/app/build/outputs/apk/ -name "*.apk" -type f -exec cp {} output-apks/ \;
