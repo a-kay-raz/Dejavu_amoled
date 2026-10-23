@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Dejavu AMOLED Dark Mode",
+  "version": "1.0.0",
+  "description": "True #000000 AMOLED dark theme for webpages",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "amoled_dark.css"
+      ],
+      "js": [
+        "amoled_dark.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}

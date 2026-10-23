@@ -5,6 +5,7 @@
 package org.mozilla.fenix.dejavu.browser
 
 import android.app.Activity
+import android.content.res.Configuration
 import android.graphics.BitmapShader
 import android.graphics.Canvas
 import android.graphics.ColorFilter
@@ -58,6 +59,8 @@ import org.mozilla.fenix.ext.components
 @Composable
 internal fun shownWorkspaceTheme(): WorkspaceTheme? {
     val context = LocalContext.current
+    val isNight = (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+    if (isNight) return null
     val tabId by context.components.core.store.observeAsComposableState { state ->
         state.selectedTab?.takeUnless { it.content.private }?.id
     }
@@ -116,7 +119,10 @@ class DejavuWindowTheme(private val activity: Activity) : LifecycleAwareFeature 
                     .distinctUntilChanged()
                     .combine(repository.state) { tabId, workspaces -> tabId?.let { workspaces.themeOfTab(it) } }
                     .distinctUntilChanged()
-                    .collect { theme -> window.setBackgroundDrawable(theme?.let { WorkspaceBackdrop(base, it) } ?: base) }
+                    .collect { theme ->
+                        val isNight = (activity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+                        window.setBackgroundDrawable(if (isNight) base else theme?.let { WorkspaceBackdrop(base, it) } ?: base)
+                    }
             }
         }
     }

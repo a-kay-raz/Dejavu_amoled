@@ -278,6 +278,7 @@ class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFrag
         activity?.recreate()
         with(requireComponents.core) {
             engine.settings.preferredColorScheme = getPreferredColorScheme()
+            AmoledWebpageTheme.sync(engine, requireContext())
         }
         requireComponents.useCases.sessionUseCases.reload.invoke()
     }

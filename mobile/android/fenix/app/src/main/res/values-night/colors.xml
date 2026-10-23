@@ -3,69 +3,73 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Material3 color variables -->
+    <!-- Dejavu colors for night mode - True AMOLED #000000 with pristine Gold/Sand/Amber accents -->
     <color name="fx_mobile_primary">@color/dejavuGold80</color>
     <color name="fx_mobile_on_primary">@color/dejavuGold20</color>
     <color name="fx_mobile_primary_container">@color/dejavuGold30</color>
     <color name="fx_mobile_on_primary_container">@color/dejavuGold90</color>
-    <color name="fx_mobile_primary_inverse">@color/dejavuGold80</color>
     <color name="fx_mobile_secondary">@color/dejavuSand80</color>
     <color name="fx_mobile_on_secondary">@color/dejavuSand20</color>
-    <color name="fx_mobile_secondary_container">@color/dejavuSand30</color>
-    <color name="fx_mobile_on_secondary_container">@color/dejavuSand90</color>
+    <color name="fx_mobile_secondary_container">@color/dejavuSand90</color>
+    <color name="fx_mobile_on_secondary_container">@color/dejavuSand10</color>
     <color name="fx_mobile_tertiary">@color/dejavuAmber80</color>
     <color name="fx_mobile_on_tertiary">@color/dejavuAmber20</color>
     <color name="fx_mobile_tertiary_container">@color/dejavuSand35</color>
     <color name="fx_mobile_on_tertiary_container">@color/dejavuPaper</color>
-    <color name="fx_mobile_background">@color/dejavuGilt75</color>
+
+    <color name="fx_mobile_background">@android:color/black</color>
     <color name="fx_mobile_on_background">@color/dejavuPaper</color>
-    <color name="fx_mobile_surface">@color/dejavuGilt75</color>
+    <color name="fx_mobile_surface">@android:color/black</color>
     <color name="fx_mobile_on_surface">@color/dejavuPaper</color>
-    <color name="fx_mobile_surface_variant">@color/dejavuWarm65</color>
+    <color name="fx_mobile_surface_variant">#FF0F0F0F</color>
     <color name="fx_mobile_on_surface_variant">@color/dejavuPaperA70</color>
     <color name="fx_mobile_surface_inverse">@android:color/black</color>
     <color name="fx_mobile_on_surface_inverse">@color/dejavuPaper</color>
+
     <color name="fx_mobile_error">@color/novaRed30</color>
     <color name="fx_mobile_on_error">@color/dejavuWarm80</color>
     <color name="fx_mobile_error_container">@color/novaRed70</color>
     <color name="fx_mobile_on_error_container">@color/dejavuPaper</color>
+
     <color name="fx_mobile_information">@color/dejavuGold80</color>
     <color name="fx_mobile_on_information">@color/dejavuGold20</color>
     <color name="fx_mobile_information_container">@color/dejavuGold30</color>
     <color name="fx_mobile_on_information_container">@color/dejavuGold90</color>
+
     <color name="fx_mobile_success">@color/novaGreen30</color>
     <color name="fx_mobile_on_success">@color/dejavuWarm80</color>
     <color name="fx_mobile_success_container">@color/novaGreen70</color>
     <color name="fx_mobile_on_success_container">@color/dejavuPaper</color>
+
     <color name="fx_mobile_warning">@color/novaYellow30</color>
     <color name="fx_mobile_on_warning">@color/dejavuWarm80</color>
     <color name="fx_mobile_warning_container">@color/novaYellow70</color>
     <color name="fx_mobile_on_warning_container">@color/dejavuPaper</color>
-    <color name="fx_mobile_outline">@color/dejavuWarm45</color>
-    <color name="fx_mobile_outline_variant">@color/dejavuWarm60</color>
-    <color name="fx_mobile_sheet_outline">@color/dejavuGilt75</color>
-    <color name="fx_mobile_surface_bright">@color/dejavuWarm65</color>
-    <color name="fx_mobile_surface_dim">@color/dejavuWarm85</color>
-    <color name="fx_mobile_surface_container">@color/dejavuGilt75</color>
-    <color name="fx_mobile_surface_container_high">@color/dejavuWarm70</color>
-    <color name="fx_mobile_surface_container_highest">@color/dejavuWarm65</color>
-    <color name="fx_mobile_surface_container_low">@color/dejavuWarm80</color>
-    <color name="fx_mobile_surface_container_lowest">@color/dejavuWarm85</color>
-    <color name="fx_mobile_surface_container_selected">@color/dejavuWarm55</color>
+
+    <color name="fx_mobile_outline">#FF2A2A2A</color>
+    <color name="fx_mobile_outline_variant">#FF1A1A1A</color>
+    <color name="fx_mobile_sheet_outline">#FF1A1A1A</color>
+    <color name="fx_mobile_surface_bright">#FF141414</color>
+    <color name="fx_mobile_surface_dim">@android:color/black</color>
+    <color name="fx_mobile_surface_container">@android:color/black</color>
+    <color name="fx_mobile_surface_container_high">#FF0A0A0A</color>
+    <color name="fx_mobile_surface_container_highest">#FF121212</color>
+    <color name="fx_mobile_surface_container_low">@android:color/black</color>
+    <color name="fx_mobile_surface_container_lowest">@android:color/black</color>
+    <color name="fx_mobile_surface_container_selected">#FF1A1A1A</color>
+
     <color name="fx_mobile_autofill_text">@color/dejavuSand80A55</color>
-    <color name="fx_mobile_selected_text">@color/dejavuWarm45A80</color>
+    <color name="fx_mobile_selected_text">#FF262626</color>
     <color name="fx_mobile_icon_private">@color/novaViolet50</color>
     <color name="fx_mobile_scrim">@color/novaBlackA50</color>
-
-    <color name="fx_mobile_splashscreen_background">@color/dejavuGilt75</color>
+    <color name="fx_mobile_splashscreen_background">@android:color/black</color>
 
     <!-- Design system color variables -->
-
     <!-- Layers -->
     <!-- Card background, Menu background, Dialog, Banner -->
-    <color name="fx_mobile_layer_color_2">@color/photonDarkGrey30</color>
+    <color name="fx_mobile_layer_color_2">#FF0A0A0A</color>
     <!-- Search -->
-    <color name="fx_mobile_layer_color_3">@color/photonDarkGrey80</color>
+    <color name="fx_mobile_layer_color_3">#FF121212</color>
     <!-- Warning background -->
     <color name="fx_mobile_layer_color_warning">@color/photonYellow70A77</color>
     <!-- Error background -->
@@ -106,17 +110,17 @@
     <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/photonBlue40</color>
 
     <!-- Protections Dashboard colors -->
-    <color name="protections_dashboard_chip_background">#FF3D3264</color>
+    <color name="protections_dashboard_chip_background">#FF101010</color>
     <color name="protections_dashboard_chip_text">#FFD9D0F5</color>
     <color name="protections_dashboard_progress_bar">@color/novaViolet50</color>
     <color name="protections_dashboard_gradient_start">@color/novaVioletDesaturated90</color>
     <color name="protections_dashboard_gradient_end">@color/novaOrange70</color>
 
     <!-- Colors for Edge to Edge background  -->
-    <color name="homepage_edge_to_edge_gradient_start">#FF0A1A3B</color>
-    <color name="homepage_edge_to_edge_gradient_end">#FF293564</color>
-    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_active">#213B6F</color>
-    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_inactive">#0E1A40</color>
+    <color name="homepage_edge_to_edge_gradient_start">@android:color/black</color>
+    <color name="homepage_edge_to_edge_gradient_end">@android:color/black</color>
+    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_active">#FF151515</color>
+    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_inactive">@android:color/black</color>
     <color name="homepage_tab_edge_to_edge_toolbar_background">#00000000</color>
     <color name="homepage_tab_edge_to_edge_toolbar_outline">#00000000</color>
 
@@ -129,6 +133,5 @@
     <!-- Tab Counter colors -->
     <color name="mozac_ui_tabcounter_default_tint" tools:ignore="UnusedResources">@color/fx_mobile_on_surface</color>
     <color name="mozac_ui_tabcounter_default_text" tools:ignore="UnusedResources">@color/fx_mobile_on_surface</color>
-
     <color name="preference_scroll_highlight">@color/fx_mobile_surface_container_highest</color>
 </resources>

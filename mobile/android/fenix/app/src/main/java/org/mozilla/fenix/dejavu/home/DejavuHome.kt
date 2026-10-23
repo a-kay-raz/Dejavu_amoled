@@ -220,8 +220,9 @@ fun DejavuHome(
     }
     val grain = rememberGrainBrush()
 
+    val isNightHome = (LocalContext.current.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
     fun themeAt(page: Int): WorkspaceTheme? =
-        if (page == privateIndex) privateWorkspaceTheme else state.workspaces.getOrNull(page)?.theme
+        if (isNightHome) null else if (page == privateIndex) privateWorkspaceTheme else state.workspaces.getOrNull(page)?.theme
 
     // Like Zen, there is only one private workspace: asking for a private tab elsewhere leads to it once it exists.
     val newPrivateTab: () -> Unit = {

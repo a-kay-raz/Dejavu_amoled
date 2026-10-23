@@ -4,6 +4,7 @@
 
 package org.mozilla.fenix.dejavu.ui
 
+import android.content.res.Configuration
 import android.view.Window
 import android.view.WindowManager
 import androidx.annotation.DrawableRes
@@ -106,9 +107,10 @@ val LocalPopupTheme = compositionLocalOf<WorkspaceTheme?> { null }
  */
 @Composable
 fun Modifier.popupGlow(): Modifier {
+    val isNight = (LocalView.current.context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
     val glow = DejavuPopup.glowColor
     val grain = rememberGrainBrush()
-    val tint = LocalPopupTheme.current?.let { theme ->
+    val tint = if (isNight) null else LocalPopupTheme.current?.let { theme ->
         theme.copy(
             opacity = (theme.opacity * TINT_STRENGTH).coerceAtMost(MAX_TINT),
             texture = theme.texture * TINT_STRENGTH,

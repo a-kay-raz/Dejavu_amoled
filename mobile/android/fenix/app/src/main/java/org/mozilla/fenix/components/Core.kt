@@ -120,6 +120,7 @@ import org.mozilla.fenix.dejavu.PrivateNewTabMiddleware
 import org.mozilla.fenix.dejavu.browser.CallsAndLocation
 import org.mozilla.fenix.dejavu.browser.GoogleSafeBrowsing
 import org.mozilla.fenix.dejavu.browser.JitAndWebGl
+import org.mozilla.fenix.dejavu.browser.AmoledWebpageTheme
 import org.mozilla.fenix.dejavu.browser.PdfScripts
 import org.mozilla.fenix.dejavu.browser.SearchTelemetryExtensions
 import org.mozilla.fenix.dejavu.dejavuBrowserMiddleware
@@ -276,6 +277,7 @@ class Core(
                     CallsAndLocation.applyNetworkLocation(networkLocationEnabled)
                 }
                 PdfScripts.turnOff(it)
+                AmoledWebpageTheme.install(it, context)
             }
     }
 

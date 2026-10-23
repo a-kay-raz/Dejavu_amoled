@@ -1,0 +1,55 @@
+/* Dejavu AMOLED Dark Mode - Only active when prefers-color-scheme is dark */
+@media (prefers-color-scheme: dark) {
+  :root,
+  html,
+  body {
+    background-color: #000000 !important;
+    color: #e8e6e3 !important;
+    color-scheme: dark !important;
+  }
+
+  [data-dejavu-amoled="bg"] {
+    background-color: #000000 !important;
+    background-image: none !important;
+  }
+
+  [data-dejavu-amoled="surface"] {
+    background-color: #0a0a0a !important;
+    border-color: #1f1f1f !important;
+  }
+
+  [data-dejavu-amoled="card"] {
+    background-color: #121212 !important;
+    border-color: #262626 !important;
+  }
+
+  [data-dejavu-amoled="input"] {
+    background-color: #141414 !important;
+    color: #f5f0e6 !important;
+    border-color: #2a2a2a !important;
+  }
+
+  [data-dejavu-amoled="text"] {
+    color: #e8e6e3 !important;
+  }
+
+  [data-dejavu-amoled="subtext"] {
+    color: #a39e93 !important;
+  }
+
+  /* Keep media, SVGs, canvases, and framed content natural */
+  img,
+  video,
+  canvas,
+  svg,
+  picture,
+  iframe {
+    background-color: transparent !important;
+  }
+
+  /* Selection highlight matches Dejavu Gold */
+  ::selection {
+    background-color: #5c4200 !important;
+    color: #ffdf9e !important;
+  }
+}

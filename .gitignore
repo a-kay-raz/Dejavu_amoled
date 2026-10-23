@@ -442,3 +442,6 @@ commit-changes.md
 .mls_token
 .gps_integrity_token
 .nimbus
+
+# Ensure Dejavu built-in extensions in assets are tracked
+!mobile/android/fenix/app/src/main/assets/extensions/**

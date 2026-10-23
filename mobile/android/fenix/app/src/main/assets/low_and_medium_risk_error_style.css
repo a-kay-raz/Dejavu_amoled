@@ -113,17 +113,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #15141a;
-    --text-color: #fbfbfe;
-    --primary-button-color: #7542e5;
-    --primary-button-text-color: #ffffff;
-    --secondary-button-color: #e0e0e6;
-    --secondary-button-text-color: #312a65;
-    --outline-color: #817f84;
-    --primary-color: #cdb7ff;
-    --information-color: #70abff;
-    --warning-container-color: #5f3100;
-    --on-warning-container-color: #f2f0f8;
-    --header-color: #fbfbfe;
+    --background-color: #000000;
+    --text-color: #f5f0e6;
+    --primary-button-color: #ffc83d;
+    --primary-button-text-color: #3f2e00;
+    --secondary-button-color: #1a1a1a;
+    --secondary-button-text-color: #f5f0e6;
+    --outline-color: #332a1c;
+    --primary-color: #ffc83d;
+    --information-color: #ffc83d;
+    --warning-container-color: #332a1c;
+    --on-warning-container-color: #f5f0e6;
+    --header-color: #ffc83d;
   }
 }

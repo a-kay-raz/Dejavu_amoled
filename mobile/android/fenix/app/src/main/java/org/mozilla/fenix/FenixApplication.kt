@@ -1352,6 +1352,11 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                 super.onConfigurationChanged(config)
                 // Update locale on main process
                 LocaleManager.updateResources(this)
+                try {
+                    components.core.engine.settings.preferredColorScheme = components.core.getPreferredColorScheme()
+                    org.mozilla.fenix.dejavu.browser.AmoledWebpageTheme.sync(components.core.engine, this)
+                } catch (ignored: Throwable) {
+                }
             }
         } else {
             super.onConfigurationChanged(config)
