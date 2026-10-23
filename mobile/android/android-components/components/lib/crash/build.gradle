@@ -53,10 +53,11 @@ android {
 androidComponents {
     onVariants(selector().all()) { variant ->
         // CrashReport.kt and friends are generated into the objdir by the build system (not a
-        // Gradle task), so register the directory as a static source.
-        variant.sources.java.addStaticSourceDirectory(
-            "${gradle.mozconfig.topobjdir}/mobile/android/android-components/components/lib/crash/src/main/java".toString()
-        )
+        // Gradle task), so register the directory as a static source if objdir has it and in-tree does not.
+        def objDirSource = file("${gradle.mozconfig.topobjdir}/mobile/android/android-components/components/lib/crash/src/main/java")
+        if (objDirSource.exists() && !file("src/main/java/mozilla/components/lib/crash/service/CrashReport.kt").exists()) {
+            variant.sources.java.addStaticSourceDirectory(objDirSource.absolutePath)
+        }
     }
 }
 
