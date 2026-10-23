@@ -9,9 +9,13 @@ pluginManagement {
         gradle.ext.mozconfig = gradle.root.mozconfig
         gradle.ext.configureMavenRepositories = gradle.root.ext.configureMavenRepositories
     }
-
     repositories {
-        gradle.configureMavenRepositories(delegate)
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        if (gradle.ext.hasProperty("configureMavenRepositories")) {
+            gradle.configureMavenRepositories(delegate)
+        }
     }
 }
 
@@ -20,7 +24,12 @@ rootProject.name = "conventions"
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
-        gradle.configureMavenRepositories(delegate)
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        if (gradle.ext.hasProperty("configureMavenRepositories")) {
+            gradle.configureMavenRepositories(delegate)
+        }
     }
     versionCatalogs {
         libs {
