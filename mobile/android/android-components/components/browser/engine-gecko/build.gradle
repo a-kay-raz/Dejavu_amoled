@@ -150,6 +150,11 @@ def computeArtifactId() {
 }
 
 def getGeckoViewDependency() {
+    def customVersion = System.env.GECKOVIEW_VERSION ?: project.findProperty("geckoviewVersion")
+    if (customVersion) {
+        rootProject.logger.lifecycle("Getting geckoview from override: ${computeArtifactId()}:${customVersion}")
+        return "org.mozilla.geckoview:${computeArtifactId()}:${customVersion}"
+    }
     // on try, relax geckoview version pin to allow for --use-existing-task
     if ('https://hg.mozilla.org/try' == System.env.GECKO_HEAD_REPOSITORY) {
         rootProject.logger.lifecycle("Getting geckoview on try: ${computeArtifactId()}:+")

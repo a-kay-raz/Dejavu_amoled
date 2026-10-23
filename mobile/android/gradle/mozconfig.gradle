@@ -107,25 +107,26 @@ abstract class TopobjdirValueSource implements ValueSource<String, TopobjdirValu
         def stdout = new ByteArrayOutputStream()
         def stderr = new ByteArrayOutputStream()
 
-        def result = execOperations.exec { spec ->
-            spec.workingDir = new File(topsrcdir)
-            spec.commandLine = command
-            def mozconfigEnv = parameters.mozconfigEnv.get()
-            if (mozconfigEnv) {
-                spec.environment('MOZCONFIG', mozconfigEnv)
+        def result = null
+        try {
+            result = execOperations.exec { spec ->
+                spec.workingDir = new File(topsrcdir)
+                spec.commandLine = command
+                def mozconfigEnv = parameters.mozconfigEnv.get()
+                if (mozconfigEnv) {
+                    spec.environment('MOZCONFIG', mozconfigEnv)
+                }
+                spec.standardOutput = stdout
+                spec.errorOutput = stderr
+                spec.ignoreExitValue = true
             }
-            spec.standardOutput = stdout
-            spec.errorOutput = stderr
-            spec.ignoreExitValue = true
+        } catch (Exception e) {
+            logger.warn("mozconfig.gradle> Failed to execute ./mach environment: ${e.message}")
         }
 
-        if (result.exitValue != 0) {
-            throw new GradleException(
-                "mozconfig.gradle> Error running ./mach environment:\n" +
-                "Process '${command}' finished with non-zero exit value ${result.exitValue}:\n\n" +
-                "stdout:\n${stdout}\n\n" +
-                "stderr:\n${stderr}"
-            )
+        if (result == null || result.exitValue != 0) {
+            logger.warn("mozconfig.gradle> ./mach environment exited with non-zero code or failed, falling back to obj-android")
+            return new File(topsrcdir, "obj-android").absolutePath
         }
 
         def outputString = stdout.toString().normalize().trim()
@@ -136,14 +137,15 @@ abstract class TopobjdirValueSource implements ValueSource<String, TopobjdirValu
         }
 
         def slurper = new JsonSlurper()
-        def jsonMachEnv
+        def jsonMachEnv = null
         try {
             jsonMachEnv = slurper.parseText(outputString)
         } catch (Exception e) {
-            throw new GradleException("Failed to parse JSON from ./mach environment: ${e.message}\nOutput: ${outputString}")
+            logger.warn("mozconfig.gradle> Failed to parse JSON from ./mach environment: ${e.message}")
+            return new File(topsrcdir, "obj-android").absolutePath
         }
 
-        def topobjdir = jsonMachEnv.topobjdir
+        def topobjdir = jsonMachEnv?.topobjdir ?: new File(topsrcdir, "obj-android").absolutePath
 
         if (useCache) {
             try {
@@ -263,6 +265,14 @@ if (json == null) {
         topsrcdir: topsrcdir,
         substs: [
             MOZ_BUILD_APP: 'mobile/android',
+            MOZ_APP_NAME: 'fenix',
+            MOZ_APP_BASENAME: 'Dejavu',
+            MOZ_APP_DISPLAYNAME: 'Dejavu',
+            MOZ_APP_VERSION: '159.0',
+            MOZILLA_VERSION: '159.0',
+            GRE_MILESTONE: '159.0',
+            MOZ_UPDATE_CHANNEL: 'nightly',
+            MOZ_ANDROID_GECKOVIEW_LITE: false,
             MOZILLA_OFFICIAL: false,
             MOZ_AUTOMATION: '',
             MOZ_INCLUDE_SOURCE_INFO: false,
@@ -273,8 +283,13 @@ if (json == null) {
             ANDROID_NDK_MAJOR_VERSION: '26',
             ANDROID_NDK_MINOR_VERSION: '1',
             ANDROID_BUILD_TOOLS_VERSION: '34.0.0',
+            ANDROID_COMPILE_SDK_MAJOR: '35',
+            ANDROID_COMPILE_SDK_MINOR: '0',
+            MOZ_ANDROID_MIN_SDK_VERSION: '26',
+            ANDROID_TARGET_SDK: '35',
             PYTHON3: 'python3',
             MOZ_ARTIFACT_BUILDS: false,
+            COMPILE_ENVIRONMENT: false,
             DLL_PREFIX: 'lib',
             DLL_SUFFIX: '.so',
             ENABLE_MOZSEARCH_PLUGIN: false,
@@ -282,13 +297,25 @@ if (json == null) {
             DOWNLOAD_ALL_GRADLE_DEPENDENCIES: false,
             ALLOW_INSECURE_GRADLE_REPOSITORIES: false,
             GRADLE_GLEAN_PARSER_VENV: '',
+            MOZ_DEBUG: false,
+            MOZ_CRASHREPORTER: false,
+            MOZ_ANDROID_CONTENT_SERVICE_COUNT: 40,
+            RELEASE_OR_BETA: false,
+            NIGHTLY_BUILD: true,
             ANDROID_SDK_ROOT: System.getenv('ANDROID_SDK_ROOT') ?: System.getenv('ANDROID_HOME') ?: '/usr/local/lib/android/sdk',
             GRADLE_MAVEN_REPOSITORIES: [
+                'https://maven.mozilla.org/maven2/',
                 'https://maven.google.com/',
                 'https://repo.maven.apache.org/maven2/',
-                'https://maven.mozilla.org/maven2/',
                 'https://plugins.gradle.org/m2/'
             ]
+        ],
+        defines: [
+            MOZILLA_UAVERSION: '"159.0"',
+            MOZ_BUILDID: '20261023120000',
+            MOZ_SOURCE_STAMP: '20261023120000',
+            MOZ_SOURCE_REPO: 'https://github.com/a-kay-raz/Dejavu_amoled',
+            MOZ_SOURCE_URL: 'https://github.com/a-kay-raz/Dejavu_amoled'
         ]
     ]
 }

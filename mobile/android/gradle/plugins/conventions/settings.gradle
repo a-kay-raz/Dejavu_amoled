@@ -12,6 +12,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = "https://maven.mozilla.org/maven2/" }
         gradlePluginPortal()
         if (gradle.ext.hasProperty("configureMavenRepositories")) {
             gradle.configureMavenRepositories(delegate)
@@ -26,6 +27,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = "https://maven.mozilla.org/maven2/" }
         gradlePluginPortal()
         if (gradle.ext.hasProperty("configureMavenRepositories")) {
             gradle.configureMavenRepositories(delegate)

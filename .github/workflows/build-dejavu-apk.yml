@@ -66,8 +66,13 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Prepare Gradle wrapper permissions
+      - name: Prepare Stubs & Environment
         run: |
+          mkdir -p obj-android
+          echo '#define MOZ_BUILDID 20261023120000' > obj-android/buildid.h
+          echo '#define MOZ_SOURCE_STAMP '${{ github.sha }} >> obj-android/buildid.h
+          echo '#define MOZ_SOURCE_REPO https://github.com/a-kay-raz/Dejavu_amoled' > obj-android/source-repo.h
+          echo '#define MOZ_SOURCE_URL https://github.com/a-kay-raz/Dejavu_amoled' >> obj-android/source-repo.h
           chmod +x mobile/android/fenix/gradlew
 
       - name: Build Dejavu AMOLED APK
@@ -75,13 +80,15 @@ jobs:
         env:
           GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx7g -XX:MaxMetaspaceSize=1g"
           MOZ_BUILD_DATE: "20261023120000"
+          GECKO_HEAD_REPOSITORY: "https://hg.mozilla.org/try"
+          GECKOVIEW_VERSION: "159.0.20260929214846"
         run: |
           VARIANT="${{ github.event.inputs.build_variant || 'debug' }}"
           echo "=== Starting Dejavu AMOLED APK Build (Variant: $VARIANT) ==="
           if [ "$VARIANT" = "release" ]; then
-            ./gradlew assembleRelease -PdisableOptimization -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon || ./gradlew assembleDebug -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon
+            ./gradlew assembleRelease -PdejavuVersion=2.3.4 -PdisableOptimization -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon || ./gradlew assembleDebug -PdejavuVersion=2.3.4 -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon
           else
-            ./gradlew assembleDebug -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon
+            ./gradlew assembleDebug -PdejavuVersion=2.3.4 -x test -x lint -x detekt -x ktfmtCheck --stacktrace --no-daemon
           fi
 
       - name: Collect Output APKs
