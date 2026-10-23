@@ -9,11 +9,14 @@ pluginManagement {
         gradle.ext.mozconfig = gradle.root.mozconfig
         gradle.ext.configureMavenRepositories = gradle.root.ext.configureMavenRepositories
     }
-
     repositories {
-        gradle.configureMavenRepositories(delegate)
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        if (gradle.ext.hasProperty("configureMavenRepositories")) {
+            gradle.configureMavenRepositories(delegate)
+        }
     }
-
     includeBuild("../gradle/plugins/conventions")
     includeBuild("../android-components/plugins/publicsuffixlist")
     includeBuild("../android-components/plugins/dependencies")
@@ -28,6 +31,14 @@ plugins {
 }
 
 dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        if (gradle.ext.hasProperty("configureMavenRepositories")) {
+            gradle.configureMavenRepositories(delegate)
+        }
+    }
     versionCatalogs {
         libs {
             from(files("../../../gradle/libs.versions.toml"))
@@ -59,6 +70,7 @@ def projectLocalProperties = file("local.properties").with { localPropertiesFile
     }
     localProperties
 }
+
 projectLocalProperties.each { prop ->
     gradle.ext."localProperties.${prop.key}" = prop.value
 }
