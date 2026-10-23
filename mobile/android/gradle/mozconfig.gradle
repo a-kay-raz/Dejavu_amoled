@@ -296,7 +296,7 @@ if (json == null) {
             MOZ_APPSERVICES_IN_TREE: false,
             DOWNLOAD_ALL_GRADLE_DEPENDENCIES: false,
             ALLOW_INSECURE_GRADLE_REPOSITORIES: false,
-            GRADLE_GLEAN_PARSER_VENV: '',
+            GRADLE_GLEAN_PARSER_VENV: System.getenv('GRADLE_GLEAN_PARSER_VENV') ?: (new File('/home/runner/glean-venv').exists() ? '/home/runner/glean-venv' : (new File('/tmp/glean-venv').exists() ? '/tmp/glean-venv' : (System.getenv('VIRTUAL_ENV') ?: ''))),
             MOZ_DEBUG: false,
             MOZ_CRASHREPORTER: false,
             MOZ_ANDROID_CONTENT_SERVICE_COUNT: 40,
@@ -329,8 +329,14 @@ logger.info("mozconfig.gradle> Loaded mach environment for ${topobjdir} in ${ela
 // We use this ext property to pass the per-object-directory mozconfig
 // between scripts.  This lets us execute set-up code before we gradle
 // tries to configure the project even once, and as a side benefit
-// saves invoking |mach environment| multiple times.
 gradle.ext.mozconfig = json
+if (System.getenv('GRADLE_GLEAN_PARSER_VENV')) {
+    gradle.ext.mozconfig.substs.GRADLE_GLEAN_PARSER_VENV = System.getenv('GRADLE_GLEAN_PARSER_VENV')
+} else if (new File('/home/runner/glean-venv').exists()) {
+    gradle.ext.mozconfig.substs.GRADLE_GLEAN_PARSER_VENV = '/home/runner/glean-venv'
+} else if (new File('/tmp/glean-venv').exists()) {
+    gradle.ext.mozconfig.substs.GRADLE_GLEAN_PARSER_VENV = '/tmp/glean-venv'
+}
 
 // While we're here, read our VCS configuration when available.  This is usually
 // present in the `mozconfig`, but the source of truth is `source-repo.h`, which
