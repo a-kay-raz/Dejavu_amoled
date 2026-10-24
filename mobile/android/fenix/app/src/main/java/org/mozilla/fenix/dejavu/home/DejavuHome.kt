@@ -4,8 +4,10 @@
 
 package org.mozilla.fenix.dejavu.home
 
+import android.content.res.Configuration
 import androidx.activity.compose.BackHandler
 import androidx.annotation.DrawableRes
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

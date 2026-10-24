@@ -31,6 +31,7 @@ import org.mozilla.fenix.GleanMetrics.PullToRefreshInBrowser
 import org.mozilla.fenix.GleanMetrics.ToolbarSettings
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
+import org.mozilla.fenix.dejavu.browser.AmoledWebpageTheme
 import org.mozilla.fenix.dejavu.browser.DejavuToolbar
 import org.mozilla.fenix.dejavu.settings.dejavuSettings
 import org.mozilla.fenix.e2e.SystemInsetsPaddedFragment

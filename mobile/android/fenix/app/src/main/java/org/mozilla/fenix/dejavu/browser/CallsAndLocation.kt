@@ -43,6 +43,11 @@ object CallsAndLocation {
 
     /** Lets Android's network location be used besides GPS, or not, when Dejavu starts and when the switch changes. */
     fun applyNetworkLocation(allowed: Boolean) {
-        GeckoAppShell.setNetworkLocationAllowed(allowed)
+        try {
+            val method = GeckoAppShell::class.java.getMethod("setNetworkLocationAllowed", java.lang.Boolean.TYPE)
+            method.invoke(null, allowed)
+        } catch (_: Throwable) {
+            // GeckoView without custom Dejavu patch
+        }
     }
 }
