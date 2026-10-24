@@ -6,7 +6,7 @@ package org.mozilla.fenix.dejavu.browser
 
 import android.content.Context
 import mozilla.components.concept.engine.Engine
-import mozilla.components.concept.engine.EngineView.PreferredColorScheme
+import mozilla.components.concept.engine.mediaquery.PreferredColorScheme
 import mozilla.components.concept.engine.webextension.WebExtension
 import mozilla.components.support.base.log.logger.Logger
 import org.mozilla.fenix.ext.components
