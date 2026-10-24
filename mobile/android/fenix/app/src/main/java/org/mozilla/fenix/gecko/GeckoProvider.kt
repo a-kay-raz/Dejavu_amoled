@@ -77,7 +77,7 @@ object GeckoProvider {
         // Dejavu: what about:config changes in the prefs behind the tracking protection settings stays, and those
         // settings show it is managed there.
         try {
-            val method = GeckoAppShell::class.java.getMethod("setKeptUserPrefs", java.util.Collection::class.java)
+            val method = GeckoAppShell::class.java.getMethod("setKeptUserPrefs", Class.forName("java.util.Collection"))
             method.invoke(null, Protection.allPrefs)
         } catch (_: Throwable) {
             // GeckoView without custom Dejavu patch
