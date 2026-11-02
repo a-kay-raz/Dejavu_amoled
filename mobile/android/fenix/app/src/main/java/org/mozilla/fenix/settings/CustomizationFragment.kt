@@ -302,9 +302,7 @@ open class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPadde
         if (AppCompatDelegate.getDefaultNightMode() == mode) return
         AppCompatDelegate.setDefaultNightMode(mode)
         activity?.recreate()
-        with(requireComponents.core) {
-            engine.settings.preferredColorScheme = getPreferredColorScheme()
-        }
+        requireComponents.core.applyPreferredColorScheme()
         requireComponents.useCases.sessionUseCases.reload.invoke()
     }
 

@@ -2093,7 +2093,7 @@ abstract class BaseBrowserFragment :
 
         val preferredColorScheme = components.core.getPreferredColorScheme()
         if (components.core.engine.settings.preferredColorScheme != preferredColorScheme) {
-            components.core.engine.settings.preferredColorScheme = preferredColorScheme
+            components.core.applyPreferredColorScheme()
             components.useCases.sessionUseCases.reload()
         }
         hideToolbar()

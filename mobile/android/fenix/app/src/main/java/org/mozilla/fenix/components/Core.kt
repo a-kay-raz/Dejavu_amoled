@@ -727,6 +727,23 @@ class Core(
         }
     }
 
+    /**
+     * Applies the current colour scheme to the engine, including the blank
+     * page colour, so a theme change does not leave new tabs flashing the
+     * old theme's background. Existing tabs keep the colour their session
+     * started with, since Gecko only reads it when a session is created.
+     */
+    fun applyPreferredColorScheme() {
+        val scheme = getPreferredColorScheme()
+        engine.settings.preferredColorScheme = scheme
+        engine.settings.clearColor =
+            if (scheme == PreferredColorScheme.Dark) {
+                android.graphics.Color.BLACK
+            } else {
+                ContextCompat.getColor(context, R.color.fx_mobile_surface)
+            }
+    }
+
     /** Gets a [SearchEngineSelectorConfig] for the app and device. */
     private fun getSearchEngineSelectorConfig(): SearchEngineSelectorConfig? {
         if (!context.components.settings.useRemoteSearchConfiguration) {

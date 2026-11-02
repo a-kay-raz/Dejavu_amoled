@@ -23,7 +23,6 @@ let port = null;
 let applied = false;
 let disabled = false;
 let observer = null;
-let pending = false;
 const changed = [];
 
 function parseRgb(value) {
@@ -136,31 +135,74 @@ function apply() {
     "html,body{background-color:#000000 !important}";
   (document.head || document.documentElement).appendChild(style);
   const setupObserver = () => {
-    if (observer || !document.body || disabled) return;
-    observer = new MutationObserver(() => {
-      if (pending || disabled) return;
-      pending = true;
-      setTimeout(() => {
-        pending = false;
-        document.querySelectorAll("body *").forEach(el => {
-          if (!SKIPPED_TAGS.has(el.tagName)) recolorElement(el);
-        });
-      }, 100);
+    if (observer || !document.documentElement || disabled) return;
+    observer = new MutationObserver(mutations => {
+      if (disabled) return;
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes") {
+          recolorElement(mutation.target);
+        } else {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType !== 1) return;
+            if (node.tagName === "LINK") {
+              node.addEventListener(
+                "load",
+                () => {
+                  if (!disabled && document.body) recolorRoot(document.body);
+                },
+                { once: true },
+              );
+            } else if (node.tagName === "STYLE") {
+              if (document.body) recolorRoot(document.body);
+            } else {
+              recolorRoot(node);
+            }
+          });
+        }
+      }
     });
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class", "style"],
+    });
   };
+  let started = false;
   const run = () => {
-    if (document.body) {
-      recolorRoot(document.body);
-      setupObserver();
-    }
+    if (started || !document.body || disabled) return;
+    started = true;
+    recolorRoot(document.body);
+    setupObserver();
+    // Stylesheets already in the page may still be loading; recolour once
+    // each one lands, instead of leaving its white backgrounds in place.
+    document.querySelectorAll("link").forEach(link => {
+      link.addEventListener(
+        "load",
+        () => {
+          if (!disabled && document.body) recolorRoot(document.body);
+        },
+        { once: true },
+      );
+    });
   };
-  if (document.readyState === "loading") {
+  if (document.body) {
+    run();
+  } else if (document.readyState === "loading") {
+    // Body does not exist yet at document_start. Watch for it instead of
+    // waiting for DOMContentLoaded, so new elements are black before the
+    // first paint rather than flashing white and then being recoloured.
+    const bodyObserver = new MutationObserver(() => {
+      if (document.body) {
+        bodyObserver.disconnect();
+        run();
+      }
+    });
+    bodyObserver.observe(document.documentElement, { childList: true });
     document.addEventListener("DOMContentLoaded", run, { once: true });
   } else {
     run();
   }
-  setupObserver();
 }
 
 function remove() {

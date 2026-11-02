@@ -26,7 +26,9 @@ import org.mozilla.fenix.dejavu.settings.DejavuSettings
  * AMOLED pages, dark mode only. The built-in extension in
  * assets/extensions/dejavu-amoled runs on every page but does nothing unless
  * the page reports prefers-color-scheme dark, so light mode stays exactly as
- * it was. A host turned off here gets no recolor at all, in any tab.
+ * it was. A host turned off in a normal tab gets no recolor in any tab; a
+ * host toggled in a private tab only changes private tabs, and is never
+ * written to settings.
  */
 object AmoledPages {
     private const val EXTENSION_ID = "amoled@dejavu"
@@ -35,6 +37,10 @@ object AmoledPages {
 
     private val logger = Logger("AmoledPages")
     private var extension: WebExtension? = null
+
+    // Private tabs never write to settings, so their toggle state lives here
+    // only, keyed by host, and overrides the persisted value for private tabs.
+    private val privateDisabled = mutableMapOf<String, Boolean>()
 
     /** Adds the extension to [engine], and listens to the pages of every tab in [store]. */
     fun install(engine: Engine, store: BrowserStore, context: Context) {
@@ -53,11 +59,21 @@ object AmoledPages {
     }
 
     private suspend fun listen(flow: Flow<BrowserState>, extension: WebExtension, settings: DejavuSettings) {
-        flow.map { state -> (state.tabs + state.customTabs).mapNotNull { it.engineState.engineSession } }
+        flow.map { state ->
+            (state.tabs + state.customTabs).mapNotNull { tab ->
+                tab.engineState.engineSession?.let { it to tab.content.private }
+            }
+        }
             .distinctUntilChanged()
             .collect { sessions ->
-                sessions.filterNot { extension.hasContentMessageHandler(it, PORT_NAME) }
-                    .forEach { extension.registerContentMessageHandler(it, PORT_NAME, Messages(settings)) }
+                sessions.filterNot { extension.hasContentMessageHandler(it.first, PORT_NAME) }
+                    .forEach {
+                        extension.registerContentMessageHandler(
+                            it.first,
+                            PORT_NAME,
+                            Messages { host -> isDisabledFor(host, it.second, settings) },
+                        )
+                    }
             }
     }
 
@@ -65,8 +81,10 @@ object AmoledPages {
     fun toggle(context: Context, tab: TabSessionState): Boolean {
         val host = hostOf(tab.content.url) ?: return false
         val settings = DejavuSettings.get(context)
-        val disabled = host !in settings.amoledDisabledHosts.value
-        if (!tab.content.private) {
+        val disabled = !isDisabledFor(host, tab.content.private, settings)
+        if (tab.content.private) {
+            privateDisabled[host] = disabled
+        } else {
             settings.setAmoledDisabled(host, disabled)
         }
         val port = tab.engineState.engineSession?.let { extension?.getConnectedPort(PORT_NAME, it) }
@@ -77,18 +95,25 @@ object AmoledPages {
     /** Whether AMOLED pages are off for the site [tab] shows. */
     fun isDisabled(context: Context, tab: TabSessionState): Boolean {
         val host = hostOf(tab.content.url) ?: return false
-        return host in DejavuSettings.get(context).amoledDisabledHosts.value
+        return isDisabledFor(host, tab.content.private, DejavuSettings.get(context))
     }
+
+    private fun isDisabledFor(host: String, private: Boolean, settings: DejavuSettings): Boolean =
+        if (private) {
+            privateDisabled[host] ?: (host in settings.amoledDisabledHosts.value)
+        } else {
+            host in settings.amoledDisabledHosts.value
+        }
 
     private fun hostOf(url: String): String? =
         runCatching { URI(url).host }.getOrNull()?.removePrefix("www.")?.takeIf { it.isNotBlank() }
 
-    private class Messages(private val settings: DejavuSettings) : MessageHandler {
+    private class Messages(private val isDisabled: (String) -> Boolean) : MessageHandler {
         override fun onPortMessage(message: Any, port: Port) {
             val json = message as? JSONObject ?: return
             if (json.optString("action") != "config") return
             val host = json.optString("host").removePrefix("www.")
-            val disabled = host.isNotBlank() && host in settings.amoledDisabledHosts.value
+            val disabled = host.isNotBlank() && isDisabled(host)
             port.postMessage(JSONObject().put("action", "config").put("disabled", disabled))
         }
 
