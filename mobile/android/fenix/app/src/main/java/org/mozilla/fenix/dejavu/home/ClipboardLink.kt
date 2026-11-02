@@ -38,21 +38,49 @@ internal fun rememberClipboardHasLink(): Boolean {
     val context = LocalContext.current
     val view = LocalView.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
-    val clipboard = remember { context.getSystemService<ClipboardManager>() }
+    // The clipboard listener is held by a native system stub, so it is
+    // registered only while Home is resumed and removed on pause, before the
+    // activity can be destroyed, not only when composition is disposed.
+    val clipboard = remember(context) { context.getSystemService<ClipboardManager>() }
     var hasLink by remember { mutableStateOf(false) }
     var checks by remember { mutableIntStateOf(0) }
 
     DisposableEffect(clipboard, lifecycle, view) {
+        val treeObserver = view.viewTreeObserver
         val onClipChanged = ClipboardManager.OnPrimaryClipChangedListener { checks++ }
-        val onResume = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_RESUME) checks++ }
+        var isRegistered = false
+        val register = {
+            if (!isRegistered) {
+                clipboard?.addPrimaryClipChangedListener(onClipChanged)
+                isRegistered = true
+            }
+        }
+        val unregister = {
+            if (isRegistered) {
+                clipboard?.removePrimaryClipChangedListener(onClipChanged)
+                isRegistered = false
+            }
+        }
+        val onLifecycle = LifecycleEventObserver { _, event ->
+            when (event) {
+                Lifecycle.Event.ON_RESUME -> {
+                    register()
+                    checks++
+                }
+                Lifecycle.Event.ON_PAUSE -> unregister()
+                else -> {}
+            }
+        }
         val onFocus = ViewTreeObserver.OnWindowFocusChangeListener { focused -> if (focused) checks++ }
-        clipboard?.addPrimaryClipChangedListener(onClipChanged)
-        lifecycle.addObserver(onResume)
-        view.viewTreeObserver.addOnWindowFocusChangeListener(onFocus)
+        lifecycle.addObserver(onLifecycle)
+        treeObserver.addOnWindowFocusChangeListener(onFocus)
+        if (lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) {
+            register()
+        }
         onDispose {
-            clipboard?.removePrimaryClipChangedListener(onClipChanged)
-            lifecycle.removeObserver(onResume)
-            view.viewTreeObserver.removeOnWindowFocusChangeListener(onFocus)
+            unregister()
+            lifecycle.removeObserver(onLifecycle)
+            treeObserver.removeOnWindowFocusChangeListener(onFocus)
         }
     }
 

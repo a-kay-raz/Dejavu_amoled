@@ -12,6 +12,7 @@ import leakcanary.LeakCanary
 import mozilla.components.support.base.log.logger.Logger
 import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.ext.getPreferenceKey
+import shark.AndroidReferenceMatchers.Companion.instanceFieldLeak
 
 /** Debug implementation for activating LeakCanary. */
 object LeakCanarySetup : LeakCanarySetupInterface {
@@ -31,6 +32,22 @@ object LeakCanarySetup : LeakCanarySetupInterface {
                 watchersToInstall = AppWatcher.appDefaultWatchers(application),
             )
         }
+
+        // Known Android framework leak, not an app leak: a long-lived clipboard
+        // listener on the application ClipboardManager (Gecko's clipboard
+        // tracking) keeps the application ContextImpl alive, whose autofill
+        // client still points at the last destroyed activity. The app cannot
+        // clear that framework reference, so classify it as a library leak
+        // instead of reporting every destroyed activity as an app leak.
+        LeakCanary.config =
+            LeakCanary.config.copy(
+                referenceMatchers =
+                    LeakCanary.config.referenceMatchers +
+                        instanceFieldLeak(
+                            className = "android.view.autofill.AutofillClientController",
+                            fieldName = "mActivity",
+                        ),
+            )
 
         val isEnabled =
             components.strictMode.allowViolation(StrictMode::allowThreadDiskReads) {
