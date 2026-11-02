@@ -1,4 +1,4 @@
-name: Build Dejavu APK
+name: Amoled app
 
 on:
   workflow_dispatch:
@@ -20,12 +20,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           java-version: "17"
           distribution: temurin
-
-      - uses: android-actions/setup-android@v3
 
       - name: Bootstrap the Mozilla build tools in artifact mode
         run: ./mach --no-interactive bootstrap --application-choice="GeckoView/Firefox for Android"
