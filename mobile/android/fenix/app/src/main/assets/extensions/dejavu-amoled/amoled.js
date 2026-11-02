@@ -26,11 +26,25 @@ let observer = null;
 let fullRecolorTimer = null;
 const changed = [];
 
+function startObserving() {
+  if (observer && document.documentElement && !disabled) {
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class", "style"],
+    });
+  }
+}
+
 function scheduleFullRecolor() {
   if (fullRecolorTimer !== null || disabled || !document.body) return;
   fullRecolorTimer = setTimeout(() => {
     fullRecolorTimer = null;
-    if (!disabled && document.body) recolorRoot(document.body);
+    if (disabled || !document.body) return;
+    observer?.disconnect();
+    recolorRoot(document.body);
+    startObserving();
   }, 150);
 }
 
@@ -147,6 +161,7 @@ function apply() {
     if (observer || !document.documentElement || disabled) return;
     observer = new MutationObserver(mutations => {
       if (disabled) return;
+      observer.disconnect();
       for (const mutation of mutations) {
         if (mutation.type === "attributes") {
           recolorElement(mutation.target);
@@ -163,13 +178,9 @@ function apply() {
           });
         }
       }
+      startObserving();
     });
-    observer.observe(document.documentElement, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["class", "style"],
-    });
+    startObserving();
   };
   let started = false;
   const run = () => {
