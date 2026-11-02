@@ -24,7 +24,7 @@ let applied = false;
 let disabled = false;
 let observer = null;
 let fullRecolorTimer = null;
-const changed = [];
+const changed = new Map();
 
 function startObserving() {
   if (observer && document.documentElement && !disabled) {
@@ -102,7 +102,12 @@ function setImportant(el, property, value) {
     return;
   }
   el.style.setProperty(property, value, "important");
-  changed.push([el, property]);
+  let properties = changed.get(el);
+  if (!properties) {
+    properties = new Set();
+    changed.set(el, properties);
+  }
+  properties.add(property);
 }
 
 function recolorElement(el) {
@@ -220,10 +225,12 @@ function remove() {
     fullRecolorTimer = null;
   }
   document.getElementById(STYLE_ID)?.remove();
-  for (const [el, property] of changed) {
-    el.style.removeProperty(property);
+  for (const [el, properties] of changed) {
+    for (const property of properties) {
+      el.style.removeProperty(property);
+    }
   }
-  changed.length = 0;
+  changed.clear();
   observer?.disconnect();
   observer = null;
 }
