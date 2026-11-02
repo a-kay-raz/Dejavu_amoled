@@ -377,6 +377,13 @@ internal class GenieView(context: Context, val button: PageGenie.Button, private
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         stop()
+        // This view holds the activity context and full-screen pictures, and
+        // PageGenie holds this view statically, so leaving it there after the
+        // window goes away would keep the destroyed activity alive until the
+        // next genie opens. Clearing it here is safe: finish() only nulls the
+        // references to this view, and a view removed this way is never used
+        // again.
+        PageGenie.finish(this)
     }
 
     override fun onDraw(canvas: Canvas) {
