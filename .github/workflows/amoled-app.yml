@@ -18,7 +18,11 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          # Artifact builds find a Mozilla-built Gecko artifact by walking back
+          # through git history to a mozilla-central push. A shallow checkout
+          # leaves only the fork head as a candidate, which has no artifacts,
+          # so the full history is required here.
+          fetch-depth: 0
 
       - uses: actions/setup-java@v5
         with:
