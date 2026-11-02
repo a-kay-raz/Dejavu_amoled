@@ -97,13 +97,6 @@ switching between Play and F-Droid or the APK means uninstalling first.
 needs more hands. If you are an iOS developer who would like to help, or want to sponsor it, email
 [byarchitect@disroot.org](mailto:byarchitect@disroot.org) or say hello in the [Matrix room](#community).
 
-## Roadmap
-
-See what is done, what is being worked on and what comes next. The picture follows the
-[Dejavu Roadmap](https://github.com/users/by-architect/projects/1) board and updates itself; tap it to open the board.
-
-<a href="https://github.com/users/by-architect/projects/1"><img src="https://raw.githubusercontent.com/by-architect/Dejavu/roadmap/roadmap.svg" alt="The Dejavu Roadmap board: what is done, what is being worked on and what comes next"></a>
-
 ## Features
 
 Dejavu is made of small things that save you time every day.
@@ -257,7 +250,7 @@ No members yet. Be the first: [join the crew](https://buymeacoffee.com/ByArchite
 This repository is a fork of Mozilla's Firefox repository, and Dejavu is developed separately from Mozilla. Its engine
 does not follow Firefox's releases yet: it is a Firefox 159 Nightly build from September 25, 2026, so fixes Mozilla
 makes in Firefox after that do not reach Dejavu until it moves to a newer Firefox. Moving to Firefox's releases, and
-then following each one, is on the [roadmap](#roadmap). The Android app is in `mobile/android/fenix`, and Dejavu's
+then following each one, is planned. The Android app is in `mobile/android/fenix`, and Dejavu's
 own code is in the `org.mozilla.fenix.dejavu` package. The steps to build it and run it on a phone are in
 [CONTRIBUTING.md](CONTRIBUTING.md#build-dejavu).
 

@@ -46,7 +46,7 @@ Builds:
 
   - versionName: 3.0.0
     versionCode: 2016220003
-    commit: 5efc9980ae5d91304071cdfded5f0c0e8cd70fe1
+    commit: 36b75a504e3abb0c4a95c9c35642234ce5e3820c
     timeout: 36000
     sudo:
       - echo "deb https://deb.debian.org/debian bookworm main" > /etc/apt/sources.list.d/bookworm.list
