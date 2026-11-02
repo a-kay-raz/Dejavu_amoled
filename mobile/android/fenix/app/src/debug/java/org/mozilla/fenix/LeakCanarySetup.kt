@@ -12,7 +12,8 @@ import leakcanary.LeakCanary
 import mozilla.components.support.base.log.logger.Logger
 import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.ext.getPreferenceKey
-import shark.AndroidReferenceMatchers.Companion.instanceFieldLeak
+import shark.IgnoredReferenceMatcher
+import shark.ReferencePattern.InstanceFieldPattern
 
 /** Debug implementation for activating LeakCanary. */
 object LeakCanarySetup : LeakCanarySetupInterface {
@@ -37,15 +38,19 @@ object LeakCanarySetup : LeakCanarySetupInterface {
         // listener on the application ClipboardManager (Gecko's clipboard
         // tracking) keeps the application ContextImpl alive, whose autofill
         // client still points at the last destroyed activity. The app cannot
-        // clear that framework reference, so classify it as a library leak
-        // instead of reporting every destroyed activity as an app leak.
+        // clear that framework reference, so ignore this one edge in heap
+        // analysis instead of reporting every destroyed activity. Other
+        // paths holding an activity are still reported, because only this
+        // edge is ignored.
         LeakCanary.config =
             LeakCanary.config.copy(
                 referenceMatchers =
                     LeakCanary.config.referenceMatchers +
-                        instanceFieldLeak(
-                            className = "android.view.autofill.AutofillClientController",
-                            fieldName = "mActivity",
+                        IgnoredReferenceMatcher(
+                            InstanceFieldPattern(
+                                "android.view.autofill.AutofillClientController",
+                                "mActivity",
+                            ),
                         ),
             )
 
