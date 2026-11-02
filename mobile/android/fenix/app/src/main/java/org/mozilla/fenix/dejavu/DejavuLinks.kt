@@ -10,10 +10,6 @@ object DejavuLinks {
     const val RELEASES = "$SOURCE_CODE/releases"
     const val ISSUES = "$SOURCE_CODE/issues"
     const val PRIVACY_POLICY = "$SOURCE_CODE/blob/main/PRIVACY.md"
-    const val BUY_ME_A_COFFEE = "https://buymeacoffee.com/ByArchitect"
-
-    /** Dejavu's space on Matrix, with its chat room and the room for bug reports and feature requests. */
-    const val MATRIX = "https://matrix.to/#/#dejavu-browser:matrix.org"
 
     /** The Google Play release's package. Every build rates that one, as no other build has a Play listing. */
     const val PLAY_STORE_ID = "com.byarchitect.dejavu"

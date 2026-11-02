@@ -52,6 +52,7 @@ import org.mozilla.fenix.components.menu.store.MenuAction
 import org.mozilla.fenix.components.menu.store.MenuStore
 import org.mozilla.fenix.components.menu.store.WebExtensionMenuItem
 import org.mozilla.fenix.dejavu.actions.TabAction
+import org.mozilla.fenix.dejavu.browser.AmoledPages
 import org.mozilla.fenix.dejavu.browser.ClearData
 import org.mozilla.fenix.dejavu.browser.SplitSpace
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
@@ -389,6 +390,7 @@ internal fun moreMenuState(
         isInReaderView = tab.readerState.active,
         isWebPage = url.startsWith("http://") || url.startsWith("https://"),
         isPdf = tab.content.isPdf,
+        isAmoledDisabled = AmoledPages.isDisabled(LocalContext.current, tab),
         isDeviceTab = !tab.content.private &&
             workspaces.isDeviceWorkspace(pin?.workspaceId ?: workspaces.workspaceOf(tab.id)),
         splitWays = SplitSpace.supported(LocalConfiguration.current),

@@ -98,8 +98,8 @@ fun Settings.reconcileOnboardingCompletionState() {
  *
  * A user who genuinely completed day 7 before the cutoff (possible wherever continuous onboarding was enabled ahead of
  * this cutoff, see [CONTINUOUS_ONBOARDING_RELEASE_CUTOFF_MILLIS]) is intentionally left untouched rather than
- * backfilled: their seventh-day timestamp is already set, so they were never blocked by ReviewPromptMiddleware's
- * `continuousOnboardingInProgress` gate, and overwriting their genuine progress would serve no purpose. A user from the
+ * backfilled: their seventh-day timestamp is already set, so they were never blocked by a continuous onboarding
+ * gate, and overwriting their genuine progress would serve no purpose. A user from the
  * same population with only partial progress is flattened like cohort 2, losing any remaining stages.
  *
  * @param backfillTimestamp The fixed timestamp used to backfill the initial onboarding and day-N stage timestamps.

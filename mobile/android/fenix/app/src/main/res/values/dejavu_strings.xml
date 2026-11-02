@@ -331,6 +331,8 @@
     <string name="dejavu_menu_unpin_tab">Unpin tab</string>
     <string name="dejavu_menu_essential_tab">Add to essentials</string>
     <string name="dejavu_menu_remove_essential">Remove essential</string>
+    <!-- Turns the AMOLED recolour of web pages on or off for the site of the shown tab, in dark mode. -->
+    <string name="dejavu_menu_amoled_pages">AMOLED pages</string>
     <!-- Saves the page, as it shows, into one HTML file in Downloads that opens without the internet. -->
     <string name="dejavu_menu_save_page">Save page</string>
     <!-- Short message while the page is being saved as an HTML file. -->
@@ -535,21 +537,9 @@
     <!-- Settings, at the top: opens what each version of Dejavu brought, and the tour of its features. -->
     <string name="dejavu_settings_whats_new">What’s new</string>
     <string name="dejavu_settings_whats_new_summary">What each version brought, and a tour of Dejavu</string>
-    <!-- Settings, at the top: who makes Dejavu, with "Source code" under it. %1$s is the maker's name, The Architect. -->
-    <string name="dejavu_settings_author">Created by %1$s</string>
-    <string name="dejavu_author_name" translatable="false">The Architect</string>
-    <!-- Settings, at the top: opens the maker's page on Buy Me a Coffee, a site for small donations. -->
-    <string name="dejavu_settings_coffee">Buy me a coffee</string>
-    <string name="dejavu_settings_coffee_summary">Dejavu has no ads. If you enjoy it, a coffee helps it grow.</string>
-    <!-- Settings, at the top: opens Dejavu's chat room on Matrix, an open chat network. "Matrix" is a name, not translated. -->
-    <string name="dejavu_settings_matrix">Chat on Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Ask a question, suggest a feature or report a bug</string>
     <string name="pref_key_dejavu_top_category" translatable="false">pref_key_dejavu_top_category</string>
-    <string name="pref_key_dejavu_matrix" translatable="false">pref_key_dejavu_matrix</string>
     <string name="pref_key_dejavu_whats_new" translatable="false">pref_key_dejavu_whats_new</string>
     <string name="pref_key_dejavu_tips" translatable="false">pref_key_dejavu_tips</string>
-    <string name="pref_key_dejavu_author" translatable="false">pref_key_dejavu_author</string>
-    <string name="pref_key_dejavu_coffee" translatable="false">pref_key_dejavu_coffee</string>
     <!-- Edit workspace dialog: title of the note that says what Firefox Sync leaves out of workspaces, shown while workspaces sync with Firefox (not Zen). -->
     <string name="dejavu_workspace_firefox_limits">Limited by Firefox Sync</string>
     <!-- Edit workspace dialog: the note for the workspace that shows the open tabs of a computer or phone with Firefox. -->

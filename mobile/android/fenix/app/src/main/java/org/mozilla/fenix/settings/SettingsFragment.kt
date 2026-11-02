@@ -71,7 +71,6 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
 import org.mozilla.fenix.databinding.AmoCollectionOverrideDialogBinding
-import org.mozilla.fenix.dejavu.DejavuLinks
 import org.mozilla.fenix.dejavu.discover.NewThing
 import org.mozilla.fenix.dejavu.discover.NewThings
 import org.mozilla.fenix.dejavu.discover.Tips
@@ -224,9 +223,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
-        // Dejavu: the maker's name is not translated.
-        findPreference<Preference>(getString(R.string.pref_key_dejavu_author))?.title =
-            getString(R.string.dejavu_settings_author, getString(R.string.dejavu_author_name))
         // Dejavu: the switch of the tips about gestures nothing on the screen shows.
         findPreference<SwitchPreferenceCompat>(getString(R.string.pref_key_dejavu_tips))?.let(Tips::bindSwitch)
     }
@@ -356,12 +352,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
         }
     }
 
-    /** Dejavu: opens one of Dejavu's pages in a new tab. */
-    private fun openDejavuPage(url: String) {
-        findNavController().openToBrowser()
-        requireComponents.useCases.fenixBrowserUseCases.loadUrlOrSearch(searchTermOrURL = url, newTab = true)
-    }
-
     @Suppress("LongMethod", "CyclomaticComplexMethod")
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         // Hide the scrollbar so the animation looks smoother
@@ -370,24 +360,9 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
 
         val directions: NavDirections? =
             when (preference.key) {
-                // Dejavu: what each version brought, who makes Dejavu, its chat room, and a way to support it.
+                // Dejavu: what each version brought.
                 resources.getString(R.string.pref_key_dejavu_whats_new) -> {
                     DejavuFeatureTourFragment().show(parentFragmentManager, DejavuFeatureTourFragment.TAG)
-                    null
-                }
-
-                resources.getString(R.string.pref_key_dejavu_author) -> {
-                    openDejavuPage(DejavuLinks.SOURCE_CODE)
-                    null
-                }
-
-                resources.getString(R.string.pref_key_dejavu_matrix) -> {
-                    openDejavuPage(DejavuLinks.MATRIX)
-                    null
-                }
-
-                resources.getString(R.string.pref_key_dejavu_coffee) -> {
-                    openDejavuPage(DejavuLinks.BUY_ME_A_COFFEE)
                     null
                 }
 
@@ -565,14 +540,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                 }
 
                 // About preferences
-                resources.getString(R.string.pref_key_rate) -> {
-                    components.playStoreReviewPromptController.tryLaunchPlayStoreReview(
-                        requireActivity(),
-                        ::openInNewTab,
-                    )
-                    null
-                }
-
                 resources.getString(R.string.pref_key_about) -> {
                     SettingsFragmentDirections.actionSettingsFragmentToAboutFragment()
                 }

@@ -98,6 +98,7 @@ data class MoreMenuState(
     val isInReaderView: Boolean = false,
     val isWebPage: Boolean = false,
     val isPdf: Boolean = false,
+    val isAmoledDisabled: Boolean = false,
     val isDeviceTab: Boolean = false,
     val splitWays: List<SplitOrientation> = emptyList(),
 )
@@ -143,6 +144,7 @@ private fun MoreMenuItem.look(state: MoreMenuState): EntryLook {
             default.copy(enabled = state.isWebPage)
         }
         MoreMenuItem.DESKTOP_SITE -> default.copy(active = state.isDesktopMode)
+        MoreMenuItem.AMOLED_PAGES -> default.copy(enabled = state.isWebPage, active = !state.isAmoledDisabled)
         MoreMenuItem.READER_VIEW -> if (state.isInReaderView) {
             val label = stringResource(R.string.dejavu_menu_close_reader_view)
             EntryLook(label, iconsR.drawable.mozac_ic_reader_view_fill_24, active = true)

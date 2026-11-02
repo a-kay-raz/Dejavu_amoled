@@ -23,6 +23,7 @@ import org.mozilla.fenix.dejavu.NewTabContainerChoice
 import org.mozilla.fenix.dejavu.actions.ActionContext
 import org.mozilla.fenix.dejavu.actions.CustomAction
 import org.mozilla.fenix.dejavu.actions.CustomActionRunner
+import org.mozilla.fenix.dejavu.browser.AmoledPages
 import org.mozilla.fenix.dejavu.browser.DejavuSearchStart
 import org.mozilla.fenix.dejavu.browser.NewTabSearch
 import org.mozilla.fenix.dejavu.browser.SavePage
@@ -55,6 +56,7 @@ internal class DejavuTabCommands(
     fun run(item: MoreMenuItem, workspaces: WorkspaceState): Boolean {
         val pin = workspaces.pinOf(tab.id)
         when (item) {
+            MoreMenuItem.AMOLED_PAGES -> AmoledPages.toggle(appContext, tab)
             MoreMenuItem.SAVE_PAGE -> SavePage.save(appContext, tab)
             MoreMenuItem.SAVE_AS_PDF -> sessionUseCases.saveToPdf(tab.id)
             MoreMenuItem.PRINT -> sessionUseCases.printContent(tab.id)

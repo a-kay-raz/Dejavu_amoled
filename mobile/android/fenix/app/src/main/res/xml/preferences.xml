@@ -6,8 +6,7 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Dejavu: what each version brought, who makes Dejavu, its chat room, and a way to support it, on top of every
-         setting. -->
+    <!-- Dejavu: what each version brought, and the tips about gestures, on top of every setting. -->
     <androidx.preference.PreferenceCategory
         android:key="@string/pref_key_dejavu_top_category"
         android:title="@string/dejavu_settings_title"
@@ -26,26 +25,6 @@
             android:persistent="false"
             android:summary="@string/dejavu_settings_tips_summary"
             android:title="@string/dejavu_settings_tips" />
-
-        <androidx.preference.Preference
-            android:icon="@drawable/dejavu_author_avatar"
-            android:key="@string/pref_key_dejavu_author"
-            android:summary="@string/dejavu_about_source_code"
-            app:widgetLayout="@layout/preference_widget_external_link" />
-
-        <androidx.preference.Preference
-            android:icon="@drawable/dejavu_ic_matrix_24"
-            android:key="@string/pref_key_dejavu_matrix"
-            android:summary="@string/dejavu_settings_matrix_summary"
-            android:title="@string/dejavu_settings_matrix"
-            app:widgetLayout="@layout/preference_widget_external_link" />
-
-        <androidx.preference.Preference
-            android:icon="@drawable/dejavu_ic_coffee_24"
-            android:key="@string/pref_key_dejavu_coffee"
-            android:summary="@string/dejavu_settings_coffee_summary"
-            android:title="@string/dejavu_settings_coffee"
-            app:widgetLayout="@layout/preference_widget_external_link" />
     </androidx.preference.PreferenceCategory>
 
     <!-- Dejavu: the account section is shown before signing in too, its sign in button telling what workspace sync
@@ -261,11 +240,6 @@
         android:title="@string/preferences_category_about"
         app:iconSpaceReserved="false"
         android:layout="@layout/preference_category_no_icon_style">
-        <androidx.preference.Preference
-            android:key="@string/pref_key_rate"
-            app:iconSpaceReserved="false"
-            android:title="@string/preferences_rate" />
-
         <androidx.preference.Preference
             app:widgetLayout="@layout/dejavu_preference_badge"
             android:key="@string/pref_key_about"

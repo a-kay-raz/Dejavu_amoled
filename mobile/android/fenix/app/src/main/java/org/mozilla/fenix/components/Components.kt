@@ -98,7 +98,6 @@ import org.mozilla.fenix.perf.StartupActivityLog
 import org.mozilla.fenix.perf.StartupStateProvider
 import org.mozilla.fenix.perf.StrictModeManager
 import org.mozilla.fenix.perf.lazyMonitored
-import org.mozilla.fenix.reviewprompt.ReviewPromptMiddleware
 import org.mozilla.fenix.search.VoiceSearchAIControlFeature
 import org.mozilla.fenix.settings.emailmasks.middleware.DefaultEmailMasksRepository
 import org.mozilla.fenix.settings.emailmasks.middleware.EmailMasksRepository
@@ -280,13 +279,6 @@ class Components(
     val settings by lazyMonitored { Settings(context) }
     val fenixOnboarding by lazyMonitored { FenixOnboarding(context) }
 
-    val playStoreReviewPromptController by lazyMonitored {
-        createPlayStoreReviewPromptController(
-            context = context,
-            numberOfAppLaunches = { settings.numberOfAppLaunches },
-        )
-    }
-
     val autofillConfiguration by lazyMonitored {
         AutofillConfiguration(
             storage = core.passwordsStorage,
@@ -359,21 +351,6 @@ class Components(
                         HomeTelemetryMiddleware(),
                         SetupChecklistPreferencesMiddleware(DefaultSetupChecklistRepository(context, settings)),
                         SetupChecklistTelemetryMiddleware(),
-                        ReviewPromptMiddleware(
-                                continuousOnboardingInProgress = {
-                                    settings.continuousOnboardingFeatureEnabled &&
-                                        !settings.continuousOnboardingCompleted
-                                },
-                                shouldShowCustomPrompt = {
-                                    settings.customReviewPromptUiEnabled && settings.isTelemetryEnabled
-                                },
-                                disableCustomPrompt = { settings.customReviewPromptUiEnabled = false },
-                                createJexlHelper = nimbus::createJexlHelper,
-                                nimbusEventStore = nimbus.events,
-                            )
-                            .also {
-                                settings.migrateLastReviewPromptTimePrefIfNeeded(nimbus.events)
-                            },
                         AppVisualCompletenessMiddleware(performance.visualCompletenessQueue),
                     ),
             )

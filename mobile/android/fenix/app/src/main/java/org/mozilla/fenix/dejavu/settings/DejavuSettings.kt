@@ -20,6 +20,7 @@ import org.mozilla.fenix.dejavu.containers.ContainerPick
 import org.mozilla.fenix.dejavu.history.HistoryGrouping
 import org.mozilla.fenix.dejavu.menu.ActionsBarLayout
 import org.mozilla.fenix.dejavu.menu.AddressBarButtons
+import org.mozilla.fenix.dejavu.menu.MoreMenuItem
 import org.mozilla.fenix.dejavu.menu.MoreMenuLayout
 
 /**
@@ -44,9 +45,7 @@ class DejavuSettings private constructor(context: Context) {
     private val _externalLinkWorkspaceId = MutableStateFlow(prefs.getString(KEY_EXTERNAL_LINK_WORKSPACE, null))
     private val _externalLinkContainer =
         MutableStateFlow(ContainerPick.fromKey(prefs.getString(KEY_EXTERNAL_LINK_CONTAINER, null)))
-    private val _moreMenuRows = MutableStateFlow(
-        MoreMenuLayout.normalized(MoreMenuLayout.fromJson(prefs.getString(KEY_MORE_MENU_ROWS, null)) ?: MoreMenuLayout.DEFAULT),
-    )
+    private val _moreMenuRows = MutableStateFlow(readMoreMenuRows())
     private val _moreMenuEditHidden = MutableStateFlow(prefs.getBoolean(KEY_MORE_MENU_EDIT_HIDDEN, false))
     private val _systemBarsHidden = MutableStateFlow(prefs.getBoolean(KEY_SYSTEM_BARS_HIDDEN, false))
     private val _barsLayout = MutableStateFlow(BarsLayout.fromKey(prefs.getString(KEY_BARS_LAYOUT, null)))
@@ -384,6 +383,28 @@ class DejavuSettings private constructor(context: Context) {
     }
 
     /**
+     * The saved rows of the "More" menu. A menu saved before the AMOLED entry existed gains it once, on its last
+     * row, saved right away; a user who then removes it in the menu's settings keeps it removed.
+     */
+    private fun readMoreMenuRows(): List<List<String>> {
+        val saved = MoreMenuLayout.fromJson(prefs.getString(KEY_MORE_MENU_ROWS, null)) ?: run {
+            prefs.edit { putBoolean(KEY_AMOLED_MENU_ADDED, true) }
+            return MoreMenuLayout.DEFAULT
+        }
+        val rows = MoreMenuLayout.normalized(saved)
+        if (prefs.getBoolean(KEY_AMOLED_MENU_ADDED, false) || MoreMenuItem.AMOLED_PAGES.key in rows.flatten()) {
+            prefs.edit { putBoolean(KEY_AMOLED_MENU_ADDED, true) }
+            return rows
+        }
+        val updated = MoreMenuLayout.normalized(rows + listOf(listOf(MoreMenuItem.AMOLED_PAGES.key)))
+        prefs.edit {
+            putString(KEY_MORE_MENU_ROWS, MoreMenuLayout.toJson(updated))
+            putBoolean(KEY_AMOLED_MENU_ADDED, true)
+        }
+        return updated
+    }
+
+    /**
      * The saved actions bar. Before it could be changed on its own, the bar showed the first row of the menu, so that
      * is what it starts as, saved right away so that later changes to the menu leave it alone. A bar still as an older
      * Dejavu started it becomes today's, see [ActionsBarLayout.upgraded].
@@ -448,6 +469,7 @@ class DejavuSettings private constructor(context: Context) {
         private const val KEY_EXTERNAL_LINK_WORKSPACE = "external_link_workspace"
         private const val KEY_EXTERNAL_LINK_CONTAINER = "external_link_container"
         private const val KEY_MORE_MENU_ROWS = "more_menu_rows"
+        private const val KEY_AMOLED_MENU_ADDED = "amoled_menu_added"
         private const val KEY_MORE_MENU_EDIT_HIDDEN = "more_menu_edit_hidden"
         private const val KEY_SYSTEM_BARS_HIDDEN = "system_bars_hidden"
         private const val KEY_BARS_LAYOUT = "bars_layout"

@@ -26,7 +26,6 @@ import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTabState
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryGroup
 import org.mozilla.fenix.messaging.state.MessagingReducer
-import org.mozilla.fenix.reviewprompt.ReviewPromptReducer
 import org.mozilla.fenix.search.VoiceSearchReducer
 import org.mozilla.fenix.share.ShareActionReducer
 
@@ -253,8 +252,6 @@ internal object AppStoreReducer {
             is AppAction.LensAction -> LensReducer.reduce(state, action)
 
             is AppAction.QrScannerAction -> QrScannerReducer.reduce(state, action)
-
-            is AppAction.ReviewPromptAction -> ReviewPromptReducer.reduce(state, action)
 
             is AppAction.SearchAction -> SearchStateReducer.reduce(state, action)
 
