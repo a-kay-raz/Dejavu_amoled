@@ -183,9 +183,9 @@ private fun MoreMenuItem.look(state: MoreMenuState): EntryLook {
         -> default.copy(enabled = state.isWebPage)
         // Reader view and the PDF viewer are the browser's own pages, which the page saver cannot read.
         MoreMenuItem.SAVE_PAGE -> default.copy(enabled = state.isWebPage && !state.isInReaderView && !state.isPdf)
-        MoreMenuItem.NEW_TAB, MoreMenuItem.EXTENSIONS, MoreMenuItem.PASSWORDS, MoreMenuItem.BOOKMARKS,
-        MoreMenuItem.DOWNLOADS, MoreMenuItem.HISTORY, MoreMenuItem.SETTINGS, MoreMenuItem.CLEAR_DATA,
-        MoreMenuItem.CLEAR_DATA_AND_QUIT,
+        MoreMenuItem.NEW_TAB, MoreMenuItem.PRIVATE_TAB, MoreMenuItem.EXTENSIONS, MoreMenuItem.PASSWORDS,
+        MoreMenuItem.BOOKMARKS, MoreMenuItem.DOWNLOADS, MoreMenuItem.HISTORY, MoreMenuItem.SETTINGS,
+        MoreMenuItem.CLEAR_DATA, MoreMenuItem.CLEAR_DATA_AND_QUIT,
         -> default
     }
 }

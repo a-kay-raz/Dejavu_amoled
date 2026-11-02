@@ -131,11 +131,11 @@ internal class DejavuTabCommands(
 }
 
 /**
- * Opens the home screen with the address bar ready for a new tab, which is private when [tab], the shown tab, is:
- * what the user enters there opens in the new tab.
+ * Opens the home screen with the address bar ready for a new tab, which is private when [private] says so, or when
+ * [tab], the shown tab, is: what the user enters there opens in the new tab.
  */
-internal fun openNewTab(navController: NavController, tab: TabSessionState) {
-    if (tab.content.private) NewTabContainerChoice.setPrivate() else NewTabContainerChoice.clear()
+internal fun openNewTab(navController: NavController, tab: TabSessionState, private: Boolean = tab.content.private) {
+    if (private) NewTabContainerChoice.setPrivate() else NewTabContainerChoice.clear()
     if (navController.currentDestination?.id != R.id.browserFragment) {
         NewTabSearch.clear()
         navController.navigate(NavGraphDirections.actionGlobalHome(focusOnAddressBar = true))

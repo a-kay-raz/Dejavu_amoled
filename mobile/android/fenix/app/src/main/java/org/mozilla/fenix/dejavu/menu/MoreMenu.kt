@@ -34,6 +34,7 @@ enum class MoreMenuItem(
     REFRESH("refresh", R.string.dejavu_menu_refresh, R.drawable.dejavu_ic_refresh_24),
     READER_VIEW("reader_view", R.string.dejavu_menu_reader_view, iconsR.drawable.mozac_ic_reader_view_24),
     NEW_TAB("new_tab", R.string.dejavu_menu_new_tab, R.drawable.dejavu_ic_new_tab_24),
+    PRIVATE_TAB("private_tab", R.string.dejavu_menu_private_tab, R.drawable.dejavu_ic_private_tab_24),
     FIND_IN_PAGE("find_in_page", R.string.dejavu_menu_find_in_page, R.drawable.dejavu_ic_find_in_page_24),
     BOOKMARK_PAGE("bookmark_page", R.string.dejavu_menu_bookmark_page, R.drawable.dejavu_ic_bookmark_add_24),
     DESKTOP_SITE("desktop_site", R.string.dejavu_menu_desktop_site, iconsR.drawable.mozac_ic_device_desktop_24),
@@ -153,7 +154,7 @@ object MoreMenuLayout {
             MoreMenuItem.SAVE_AS_PDF.key,
         ),
         listOf(TabAction.SLEEP.key, TabAction.COPY_LINK.key, MoreMenuItem.OPEN_IN_APP.key, MoreMenuItem.SPLIT_VIEW.key),
-        listOf(MoreMenuItem.AMOLED_PAGES.key),
+        listOf(MoreMenuItem.AMOLED_PAGES.key, MoreMenuItem.PRIVATE_TAB.key),
     )
 
     /** Whether the entry with [key] fills a row on its own. */

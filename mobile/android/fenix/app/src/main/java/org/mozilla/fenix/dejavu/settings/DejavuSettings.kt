@@ -383,25 +383,29 @@ class DejavuSettings private constructor(context: Context) {
     }
 
     /**
-     * The saved rows of the "More" menu. A menu saved before the AMOLED entry existed gains it once, on its last
-     * row, saved right away; a user who then removes it in the menu's settings keeps it removed.
+     * The saved rows of the "More" menu. A menu saved before the AMOLED or the private tab entry existed gains
+     * each once, on its last row, saved right away; a user who then removes one in the menu's settings keeps it removed.
      */
     private fun readMoreMenuRows(): List<List<String>> {
         val saved = MoreMenuLayout.fromJson(prefs.getString(KEY_MORE_MENU_ROWS, null)) ?: run {
-            prefs.edit { putBoolean(KEY_AMOLED_MENU_ADDED, true) }
+            prefs.edit {
+                putBoolean(KEY_AMOLED_MENU_ADDED, true)
+                putBoolean(KEY_PRIVATE_TAB_ADDED, true)
+            }
             return MoreMenuLayout.DEFAULT
         }
-        val rows = MoreMenuLayout.normalized(saved)
-        if (prefs.getBoolean(KEY_AMOLED_MENU_ADDED, false) || MoreMenuItem.AMOLED_PAGES.key in rows.flatten()) {
-            prefs.edit { putBoolean(KEY_AMOLED_MENU_ADDED, true) }
-            return rows
+        var rows = MoreMenuLayout.normalized(saved)
+        if (!prefs.getBoolean(KEY_AMOLED_MENU_ADDED, false) && MoreMenuItem.AMOLED_PAGES.key !in rows.flatten()) {
+            rows = MoreMenuLayout.normalized(rows + listOf(listOf(MoreMenuItem.AMOLED_PAGES.key)))
+            prefs.edit { putString(KEY_MORE_MENU_ROWS, MoreMenuLayout.toJson(rows)) }
         }
-        val updated = MoreMenuLayout.normalized(rows + listOf(listOf(MoreMenuItem.AMOLED_PAGES.key)))
-        prefs.edit {
-            putString(KEY_MORE_MENU_ROWS, MoreMenuLayout.toJson(updated))
-            putBoolean(KEY_AMOLED_MENU_ADDED, true)
+        prefs.edit { putBoolean(KEY_AMOLED_MENU_ADDED, true) }
+        if (!prefs.getBoolean(KEY_PRIVATE_TAB_ADDED, false) && MoreMenuItem.PRIVATE_TAB.key !in rows.flatten()) {
+            rows = MoreMenuLayout.normalized(rows + listOf(listOf(MoreMenuItem.PRIVATE_TAB.key)))
+            prefs.edit { putString(KEY_MORE_MENU_ROWS, MoreMenuLayout.toJson(rows)) }
         }
-        return updated
+        prefs.edit { putBoolean(KEY_PRIVATE_TAB_ADDED, true) }
+        return rows
     }
 
     /**
@@ -470,6 +474,7 @@ class DejavuSettings private constructor(context: Context) {
         private const val KEY_EXTERNAL_LINK_CONTAINER = "external_link_container"
         private const val KEY_MORE_MENU_ROWS = "more_menu_rows"
         private const val KEY_AMOLED_MENU_ADDED = "amoled_menu_added"
+        private const val KEY_PRIVATE_TAB_ADDED = "private_tab_menu_added"
         private const val KEY_MORE_MENU_EDIT_HIDDEN = "more_menu_edit_hidden"
         private const val KEY_SYSTEM_BARS_HIDDEN = "system_bars_hidden"
         private const val KEY_BARS_LAYOUT = "bars_layout"

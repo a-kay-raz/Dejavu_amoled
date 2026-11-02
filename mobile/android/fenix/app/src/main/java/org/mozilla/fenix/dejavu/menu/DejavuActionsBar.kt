@@ -346,6 +346,7 @@ internal fun runActionsBarEntry(context: Context, navController: NavController, 
     if (commands.run(item, workspaces)) return
     when (item) {
         MoreMenuItem.NEW_TAB -> openNewTab(navController, tab)
+        MoreMenuItem.PRIVATE_TAB -> openNewTab(navController, tab, private = true)
         MoreMenuItem.EXTENSIONS -> navController.openDejavuMenu(fromBar = true, opening = DejavuMenu.Opening.EXTENSIONS)
         MoreMenuItem.FIND_IN_PAGE -> components.appStore.dispatch(FindInPageAction.FindInPageStarted)
         MoreMenuItem.DESKTOP_SITE ->

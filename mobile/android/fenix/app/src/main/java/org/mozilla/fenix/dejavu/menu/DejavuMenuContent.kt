@@ -441,13 +441,14 @@ private class MenuActions(
             }
             MoreMenuEntry.Home, MoreMenuEntry.Search -> return
         }
-        if (item == MoreMenuItem.NEW_TAB) {
+        if (item == MoreMenuItem.NEW_TAB || item == MoreMenuItem.PRIVATE_TAB) {
+            val private = item == MoreMenuItem.PRIVATE_TAB
             if (closer != null) {
-                closer.close { openNewTab(navController, tab) }
+                closer.close { openNewTab(navController, tab, private) }
                 return
             }
             dismiss()
-            openNewTab(navController, tab)
+            openNewTab(navController, tab, private)
             return
         }
         if (item == MoreMenuItem.CLEAR_DATA || item == MoreMenuItem.CLEAR_DATA_AND_QUIT) {
