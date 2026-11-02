@@ -55,6 +55,12 @@ class NotificationsDelegate(val notificationManagerCompat: NotificationManagerCo
                 } else {
                     onPermissionRejected.invoke()
                 }
+                // A stored callback can hold its caller (for example a
+                // service) for the life of this app-scoped delegate, so
+                // clear it once the result has arrived instead of keeping
+                // it until the next permission request overwrites it.
+                onPermissionGranted = {}
+                onPermissionRejected = {}
             }
 
         notificationPermissionHandler[activity] = activityResultLauncher
@@ -64,6 +70,12 @@ class NotificationsDelegate(val notificationManagerCompat: NotificationManagerCo
     @Suppress("unused")
     fun unBindActivity(activity: AppCompatActivity) {
         notificationPermissionHandler.remove(activity)
+        // If no activity is left to deliver a result, a stored callback can
+        // never run, so do not keep holding its caller.
+        if (notificationPermissionHandler.isEmpty()) {
+            onPermissionGranted = {}
+            onPermissionRejected = {}
+        }
     }
 
     /** Checks if the post permission notification was previously granted. */
@@ -155,24 +167,33 @@ class NotificationsDelegate(val notificationManagerCompat: NotificationManagerCo
             return
         }
 
-        this.onPermissionGranted = onPermissionGranted
-        this.onPermissionRejected = onPermissionRejected
-
+        // The rationale UI is not implemented, so it never runs a callback.
+        // Do not store one here either, or it would hold its caller forever
+        // without ever being invoked.
         if (showPermissionRationale) {
             showPermissionRationale(onPermissionGranted, onPermissionRejected)
-        } else {
-            isRequestingPermission = false
+            return
+        }
+
+        // Only store the callbacks when a launcher can actually run them.
+        // Storing them first and finding no started activity afterwards
+        // would keep the caller alive with no result ever arriving.
+        val launcher =
             notificationPermissionHandler.entries
                 .firstOrNull {
                     it.key.lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)
                 }
                 ?.value
-                ?.also {
-                    isRequestingPermission = true
-                    permissionRequestsCount++
+                ?: run {
+                    isRequestingPermission = false
+                    return
                 }
-                ?.launch(POST_NOTIFICATIONS)
-        }
+
+        this.onPermissionGranted = onPermissionGranted
+        this.onPermissionRejected = onPermissionRejected
+        isRequestingPermission = true
+        permissionRequestsCount++
+        launcher.launch(POST_NOTIFICATIONS)
     }
 
     /**
