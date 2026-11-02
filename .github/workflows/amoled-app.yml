@@ -26,7 +26,7 @@ jobs:
           distribution: temurin
 
       - name: Bootstrap the Mozilla build tools in artifact mode
-        run: ./mach --no-interactive bootstrap --application-choice="GeckoView/Firefox for Android"
+        run: ./mach --no-interactive bootstrap --application-choice="GeckoView/Firefox for Android Artifact Mode"
 
       - name: Write the arm64 artifact mozconfig
         run: |
