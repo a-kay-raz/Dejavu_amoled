@@ -74,5 +74,5 @@ jobs:
           This release contains the latest pushed commits on main at dispatch time.
           NOTES_EOF
           gh release create "release-${{ github.run_number }}" "$APK" \
-            --title "Dejavu Release ${{ github.run_number }}" \
+            --title "Dejavu Amoled ${{ github.run_number }}" \
             --notes-file /tmp/release-notes.md
