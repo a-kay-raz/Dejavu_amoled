@@ -117,6 +117,7 @@ import org.mozilla.fenix.components.search.ApplicationSearchMiddleware
 import org.mozilla.fenix.components.search.SearchMigration
 import org.mozilla.fenix.components.search.SearchWidgetMiddleware
 import org.mozilla.fenix.dejavu.PrivateNewTabMiddleware
+import org.mozilla.fenix.dejavu.browser.AmoledPages
 import org.mozilla.fenix.dejavu.browser.CallsAndLocation
 import org.mozilla.fenix.dejavu.browser.GoogleSafeBrowsing
 import org.mozilla.fenix.dejavu.browser.JitAndWebGl
@@ -185,10 +186,14 @@ class Core(
                 loginAutofillEnabled = context.components.settings.shouldAutofillLogins,
                 enterpriseRootsEnabled = context.components.settings.allowThirdPartyRootCerts,
                 clearColor =
-                    ContextCompat.getColor(
-                        context,
-                        R.color.fx_mobile_surface,
-                    ),
+                    if (getPreferredColorScheme() == PreferredColorScheme.Dark) {
+                        android.graphics.Color.BLACK
+                    } else {
+                        ContextCompat.getColor(
+                            context,
+                            R.color.fx_mobile_surface,
+                        )
+                    },
                 httpsOnlyMode = context.components.settings.getHttpsOnlyMode(),
                 dohSettingsMode = context.components.settings.getDohSettingsMode(),
                 dohProviderUrl = context.components.settings.dohProviderUrl,
@@ -433,6 +438,8 @@ class Core(
 
                 // Dejavu: the extension that copies pages for "Save page" listens in every tab.
                 SavePage.install(engine, this)
+
+                AmoledPages.install(engine, this, context)
 
                 // Dejavu: Firefox's search telemetry ("ads" and "cookies" extensions) is not installed, as Dejavu
                 // sends no telemetry: search result pages are not read for it and its list is not downloaded.

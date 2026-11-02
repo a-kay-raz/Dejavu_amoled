@@ -62,6 +62,7 @@ class DejavuSettings private constructor(context: Context) {
     private val _tipsEnabled = MutableStateFlow(prefs.getBoolean(KEY_TIPS_ENABLED, true))
     private val _seenTips = MutableStateFlow(readSet(KEY_SEEN_TIPS))
     private val _seenNewThings = MutableStateFlow(readSet(KEY_SEEN_NEW_THINGS))
+    private val _amoledDisabledHosts = MutableStateFlow(readSet(KEY_AMOLED_DISABLED_HOSTS))
 
     /** Actions the user defined, in creation order. */
     val customActions: StateFlow<List<CustomAction>> = _customActions.asStateFlow()
@@ -165,6 +166,16 @@ class DejavuSettings private constructor(context: Context) {
     fun markTipSeen(key: String) = addKey(_seenTips, KEY_SEEN_TIPS, key)
 
     fun markNewThingSeen(key: String) = addKey(_seenNewThings, KEY_SEEN_NEW_THINGS, key)
+
+    /** Hosts where AMOLED pages stay off, so colour-critical sites show as they were made. */
+    val amoledDisabledHosts: StateFlow<Set<String>> = _amoledDisabledHosts.asStateFlow()
+
+    fun setAmoledDisabled(host: String, disabled: Boolean) {
+        val kept = if (disabled) _amoledDisabledHosts.value + host else _amoledDisabledHosts.value - host
+        if (kept == _amoledDisabledHosts.value) return
+        _amoledDisabledHosts.value = kept
+        prefs.edit { putString(KEY_AMOLED_DISABLED_HOSTS, kept.joinToString(",")) }
+    }
 
     /**
      * The newest version whose changes the tour of Dejavu 2.0 to 3.0 showed when it started, like "2.0", or `null`
@@ -453,6 +464,7 @@ class DejavuSettings private constructor(context: Context) {
         private const val KEY_TIPS_ENABLED = "tips_enabled"
         private const val KEY_SEEN_TIPS = "seen_tips"
         private const val KEY_SEEN_NEW_THINGS = "seen_new_things"
+        private const val KEY_AMOLED_DISABLED_HOSTS = "amoled_disabled_hosts"
         private val DEFAULT_PINNED_ROW_ACTIONS = listOf(TabAction.CLOSE)
         private val DEFAULT_UNPINNED_ROW_ACTIONS = listOf(TabAction.PIN, TabAction.CLOSE)
         private val DEFAULT_FOLDER_ROW_ACTIONS = listOf(TabAction.SLEEP)

@@ -260,17 +260,7 @@ android {
 
             reset()
 
-            // As gradle is unable to pick the right apk to install when multiple apks are generated
-            // while running benchmark tests or generating baseline profiles. To circumvent this,
-            // this flag is passed to make sure only one apk is generated so gradle can pick that one.
-            if (project.hasProperty("benchmarkTest")) {
-                include "arm64-v8a"
-            } else {
-                include "armeabi-v7a", "arm64-v8a", "x86_64"
-                if (gradle.mozconfig.substs.MOZILLA_OFFICIAL || System.getenv("MOZ_BUILD_CONFIG_LINT") == "1") {
-                    universalApk true
-                }
-            }
+            include "arm64-v8a"
         }
     }
 
@@ -558,9 +548,24 @@ tasks.register("updateBuiltInExtensionVersion", Copy) { task ->
         line.replace('${version}', "1.0.${checksum.value.intdiv(100000)}.${checksum.value % 100000}")
     }
 }
-preBuild.dependsOn updateBuiltInExtensionVersion
+tasks.register("updateAmoledExtensionVersion", Copy) { task ->
+    def folder = file('src/main/assets/extensions/dejavu-amoled')
+    def sources = fileTree(folder) { exclude 'manifest.json' }
+    task.inputs.files(sources)
+    task.from(folder) { include 'manifest.template.json' }
+    task.rename { 'manifest.json' }
+    task.into(folder)
+    task.filter { String line ->
+        if (!line.contains('${version}')) return line
+        def checksum = new java.util.zip.CRC32()
+        sources.files.sort { it.name }.each { checksum.update(it.bytes) }
+        line.replace('${version}', "1.0.${checksum.value.intdiv(100000)}.${checksum.value % 100000}")
+    }
+}
+preBuild.dependsOn updateBuiltInExtensionVersion, updateAmoledExtensionVersion
 tasks.matching { it.name.startsWith("explodeAssetSource") }.configureEach { t ->
     t.dependsOn(tasks.named("updateBuiltInExtensionVersion"))
+    t.dependsOn(tasks.named("updateAmoledExtensionVersion"))
 }
 
 dependencies {
