@@ -23,7 +23,16 @@ let port = null;
 let applied = false;
 let disabled = false;
 let observer = null;
+let fullRecolorTimer = null;
 const changed = [];
+
+function scheduleFullRecolor() {
+  if (fullRecolorTimer !== null || disabled || !document.body) return;
+  fullRecolorTimer = setTimeout(() => {
+    fullRecolorTimer = null;
+    if (!disabled && document.body) recolorRoot(document.body);
+  }, 150);
+}
 
 function parseRgb(value) {
   const m = /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/.exec(value);
@@ -145,15 +154,9 @@ function apply() {
           mutation.addedNodes.forEach(node => {
             if (node.nodeType !== 1) return;
             if (node.tagName === "LINK") {
-              node.addEventListener(
-                "load",
-                () => {
-                  if (!disabled && document.body) recolorRoot(document.body);
-                },
-                { once: true },
-              );
+              node.addEventListener("load", scheduleFullRecolor, { once: true });
             } else if (node.tagName === "STYLE") {
-              if (document.body) recolorRoot(document.body);
+              scheduleFullRecolor();
             } else {
               recolorRoot(node);
             }
@@ -175,15 +178,9 @@ function apply() {
     recolorRoot(document.body);
     setupObserver();
     // Stylesheets already in the page may still be loading; recolour once
-    // each one lands, instead of leaving its white backgrounds in place.
+    // a burst of them lands, instead of scanning the whole page per sheet.
     document.querySelectorAll("link").forEach(link => {
-      link.addEventListener(
-        "load",
-        () => {
-          if (!disabled && document.body) recolorRoot(document.body);
-        },
-        { once: true },
-      );
+      link.addEventListener("load", scheduleFullRecolor, { once: true });
     });
   };
   if (document.body) {
@@ -207,6 +204,10 @@ function apply() {
 
 function remove() {
   applied = false;
+  if (fullRecolorTimer !== null) {
+    clearTimeout(fullRecolorTimer);
+    fullRecolorTimer = null;
+  }
   document.getElementById(STYLE_ID)?.remove();
   for (const [el, property] of changed) {
     el.style.removeProperty(property);
