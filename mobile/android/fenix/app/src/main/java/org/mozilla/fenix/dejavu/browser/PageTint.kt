@@ -21,11 +21,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.merge
@@ -41,6 +43,7 @@ import org.mozilla.geckoview.captureRow
 import org.mozilla.geckoview.captureTopEdge
 
 private const val EDGE_SAMPLES = 24
+private const val PAGE_MOVE_DEBOUNCE_MS = 250L
 private const val SETTLE_MS = 120L
 private const val LATER_LOOKS = 5
 private const val LATER_LOOK_MS = 1_000L
@@ -72,12 +75,13 @@ internal class PageTint(
     private val untinted = behindPage.background
 
     /** Follows the page of the selected tab of [browserStore] while [owner] is resumed. */
+    @OptIn(FlowPreview::class)
     fun start(owner: LifecycleOwner, browserStore: BrowserStore, appStore: AppStore) {
         owner.lifecycleScope.launch {
             owner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 val searches = appStore.flow().map { it.searchState.isSearchActive }.distinctUntilChanged()
                 val splits = snapshotFlow { SplitScreen.shown?.tabIds }.distinctUntilChanged()
-                merge(pageChanges(browserStore), pageMoves(), searches, splits).collectLatest {
+                merge(pageChanges(browserStore), pageMoves().debounce(PAGE_MOVE_DEBOUNCE_MS), searches, splits).collectLatest {
                     if (appStore.state.searchState.isSearchActive) {
                         restoreTheme()
                         return@collectLatest
