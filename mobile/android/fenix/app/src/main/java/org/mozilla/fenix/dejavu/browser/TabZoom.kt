@@ -266,30 +266,39 @@ internal object TabZoom {
         val placeholder = colorResource(R.color.fx_mobile_surface)
         val leftBars = (current as? Zoom.Out)?.bars.orEmpty()
         LaunchedEffect(current) {
-            when (current) {
-                is Zoom.In -> {
-                    progress.grow(current.open)
-                    withTimeoutOrNull(REVEAL_TIMEOUT_MS) { awaitPageDrawn() }
-                    shown.animateTo(0f, tween(REVEAL_MS))
-                }
-                is Zoom.Out -> {
-                    current.leave()
-                    // The card covers the home screen while it sets itself up, then shrinks into the tab's row, placed
-                    // in the frames right after the home screen first drew.
-                    withTimeoutOrNull(HOME_TIMEOUT_MS) { current.homeShown.await() }
-                    repeat(ROW_FRAMES) { withFrameNanos { } }
-                    awaitSteadyFrames(maxNanos = SHRINK_SETTLE_NANOS)
-                    row = rows[current.tabId]?.bounds?.takeIf { it.isShown }
-                    if (row != null) {
-                        progress.animateTo(0f, tween(ZOOM_OUT_MS, easing = Emphasized))
-                    } else {
+            // The zoom lives in TabZoom's static state and its lambdas hold the
+            // browser fragment and activity, so it must be cleared even when
+            // this animation is cancelled, e.g. the activity is destroyed
+            // mid-zoom and the overlay's composition is disposed. Without
+            // this, a cancelled zoom keeps the destroyed fragment, activity
+            // and the page picture alive for the rest of the process.
+            try {
+                when (current) {
+                    is Zoom.In -> {
+                        progress.grow(current.open)
+                        withTimeoutOrNull(REVEAL_TIMEOUT_MS) { awaitPageDrawn() }
                         shown.animateTo(0f, tween(REVEAL_MS))
                     }
-                    current.afterLeaving()
-                    if (current.keepsPicture) current.picture?.let(::keepForReopening)
+                    is Zoom.Out -> {
+                        current.leave()
+                        // The card covers the home screen while it sets itself up, then shrinks into the tab's row, placed
+                        // in the frames right after the home screen first drew.
+                        withTimeoutOrNull(HOME_TIMEOUT_MS) { current.homeShown.await() }
+                        repeat(ROW_FRAMES) { withFrameNanos { } }
+                        awaitSteadyFrames(maxNanos = SHRINK_SETTLE_NANOS)
+                        row = rows[current.tabId]?.bounds?.takeIf { it.isShown }
+                        if (row != null) {
+                            progress.animateTo(0f, tween(ZOOM_OUT_MS, easing = Emphasized))
+                        } else {
+                            shown.animateTo(0f, tween(REVEAL_MS))
+                        }
+                        current.afterLeaving()
+                        if (current.keepsPicture) current.picture?.let(::keepForReopening)
+                    }
                 }
+            } finally {
+                finish(current)
             }
-            finish(current)
         }
         Box(
             modifier = Modifier
