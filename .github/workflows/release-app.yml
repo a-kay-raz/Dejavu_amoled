@@ -45,7 +45,13 @@ jobs:
         run: ./mach build
 
       - name: Assemble the release APK
-        run: ./mach gradle :fenix:assembleRelease
+        # Option 1: disableOptimization turns off minifyEnabled and
+        # shrinkResources in the release template (see fenix app
+        # build.gradle). This makes the assemble step much faster and
+        # tests whether R8 optimisation was behind the heavy lag
+        # reported on release-2, which did not occur on the debug
+        # build. Trade-off: a larger, unoptimised APK.
+        run: ./mach gradle :fenix:assembleRelease -PdisableOptimization
 
       - name: Create the GitHub Release
         env:
@@ -57,6 +63,9 @@ jobs:
           sha256sum "$APK"
           cat > /tmp/release-notes.md <<'NOTES_EOF'
           Dejavu release APK, arm64 only, built from main.
+          Optimisation disabled for this release (minify and resource
+          shrinking off, -PdisableOptimization) to test the heavy lag
+          reported on release-2, which did not occur on the debug build.
           App id: com.byarchitect.dejavu (release id, not the debug id org.mozilla.fenix.debug,
           so this installs as a separate app from the debug build).
           Signing: debug-signed by Gradle (no release keystore is configured in this repo),
