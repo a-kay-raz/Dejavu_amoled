@@ -1,4 +1,4 @@
-name: Amoled app
+name: Debug app
 
 on:
   workflow_dispatch:
