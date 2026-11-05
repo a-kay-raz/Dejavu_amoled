@@ -57,7 +57,6 @@
         android:title="@string/dejavu_settings_full_screen"
         app:iconSpaceReserved="false">
         <androidx.preference.SwitchPreferenceCompat
-            app:iconSpaceReserved="false"
             android:key="@string/pref_key_dejavu_hide_system_bars"
             android:persistent="false"
             android:title="@string/dejavu_settings_hide_system_bars"
