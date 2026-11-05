@@ -30,7 +30,8 @@ private const val MAX_ALPHA = 255
 /**
  * Lets pages run from edge to edge, behind the status bar and the navigation bar, keeping [this] browser layout clear
  * only of system bars and display cutouts at its sides. Dejavu's bars keep themselves clear of the status bar and the
- * navigation bar, also of the room they take while hidden over pages. [onBarsChanged] runs once that room changes, as
+ * navigation bar while they show, and of nothing while they are hidden over pages. [onBarsChanged] runs once that room
+ * changes, as
  * the place of the page below the address bar and above the actions bar depends on it. A video shown full screen gets
  * the whole screen.
  */
@@ -43,8 +44,8 @@ fun View.padForSystemBarsAtSides(window: Window, onBarsChanged: () -> Unit) {
             insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
         }
         view.updatePadding(left = sides.left, right = sides.right)
-        val heights = insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.statusBars()).top to
-            insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.navigationBars()).bottom
+        val heights = insets.getInsets(WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.displayCutout())
+            .top to insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
         if (heights != bars) {
             bars = heights
             // Not once the layout is gone, as when a link opened in a private tab rebuilt the screen meanwhile.
@@ -56,8 +57,8 @@ fun View.padForSystemBarsAtSides(window: Window, onBarsChanged: () -> Unit) {
 }
 
 /**
- * Keeps the content of [this] view, at the bottom of the browser, above the navigation bar the page runs behind, also
- * while it is hidden over pages. Above the keyboard, the navigation bar is out of the way. A view [contentHeight] tall,
+ * Keeps the content of [this] view, at the bottom of the browser, above the navigation bar the page runs behind, while
+ * it shows. Above the keyboard, the navigation bar is out of the way. A view [contentHeight] tall,
  * like the find in page bar, grows by the room it keeps, so its content keeps its height.
  */
 fun View.padForNavigationBar(contentHeight: Int? = null) {
@@ -66,7 +67,7 @@ fun View.padForNavigationBar(contentHeight: Int? = null) {
         val bar = if (insets.isVisible(WindowInsetsCompat.Type.ime())) {
             0
         } else {
-            insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.navigationBars()).bottom
+            insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
         }
         view.updatePadding(bottom = ownPadding + bar)
         contentHeight?.let { height ->
@@ -117,20 +118,19 @@ private fun scrimFade(color: Int) = GradientDrawable(
 )
 
 /**
- * The height of the status bar over [this] view, which Dejavu's bars keep below also while it is hidden over pages, or
- * 0 before it is known.
+ * The height of the status bar over [this] view, or of a camera cutout, which Dejavu's bars keep below. 0 while the
+ * status bar is hidden over pages, or before it is known.
  */
 internal val View.statusBarHeight: Int
     get() = ViewCompat.getRootWindowInsets(this)
-        ?.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.statusBars())?.top ?: 0
+        ?.getInsets(WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.displayCutout())?.top ?: 0
 
 /**
- * The height of the navigation bar at the bottom of [this] view, which Dejavu's bars keep above also while it is
- * hidden over pages, or 0 before it is known.
+ * The height of the navigation bar at the bottom of [this] view, which Dejavu's bars keep above. 0 while it is hidden
+ * over pages, or before it is known.
  */
 internal val View.navigationBarHeight: Int
-    get() = ViewCompat.getRootWindowInsets(this)
-        ?.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.navigationBars())?.bottom ?: 0
+    get() = ViewCompat.getRootWindowInsets(this)?.getInsets(WindowInsetsCompat.Type.navigationBars())?.bottom ?: 0
 
 /** The height of the navigation bar shown at the bottom of [this] view, or 0 while it is hidden or not known. */
 internal val View.shownNavigationBarHeight: Int
