@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Изключва се отново, когато Dejavu се рестартира</string>
     <string name="dejavu_preference_mouse_support">Поддръжка на мишка</string>
     <string name="dejavu_preference_mouse_support_summary">Щракването със средния бутон отваря връзката във фонов раздел, а посочването на връзка показва адреса ѝ. Щракването със средния бутон върху раздел го затваря.</string>
+    <string name="dejavu_passkeys_unsupported">Ключовете за достъп все още не се поддържат в тази версия на Android</string>
 </resources>

@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu を再起動すると再びオフになります</string>
     <string name="dejavu_preference_mouse_support">マウスのサポート</string>
     <string name="dejavu_preference_mouse_support_summary">中クリックでリンクをバックグラウンドのタブで開き、リンクにマウスを重ねるとそのアドレスを表示します。 タブを中クリックすると、そのタブを閉じます。</string>
+    <string name="dejavu_passkeys_unsupported">このバージョンの Android では、パスキーはまだサポートされていません</string>
 </resources>

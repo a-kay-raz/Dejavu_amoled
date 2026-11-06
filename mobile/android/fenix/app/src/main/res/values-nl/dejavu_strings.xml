@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Wordt weer uitgeschakeld wanneer Dejavu opnieuw start</string>
     <string name="dejavu_preference_mouse_support">Muisondersteuning</string>
     <string name="dejavu_preference_mouse_support_summary">Een middelklik opent een koppeling in een tabblad op de achtergrond, en met de muis boven een koppeling hangen toont het adres. Een middelklik op een tabblad sluit het.</string>
+    <string name="dejavu_passkeys_unsupported">Wachtwoordsleutels worden nog niet ondersteund op deze Android-versie</string>
 </resources>

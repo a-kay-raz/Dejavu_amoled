@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Iš naujo paleidus Dejavu vėl išsijungia</string>
     <string name="dejavu_preference_mouse_support">Pelės palaikymas</string>
     <string name="dejavu_preference_mouse_support_summary">Spustelėjus viduriniu mygtuku, saitas atveriamas fono kortelėje, o užvedus pelę ant saito rodomas jo adresas. Spustelėjus viduriniu mygtuku kortelę, ji uždaroma.</string>
+    <string name="dejavu_passkeys_unsupported">Prieigos raktai šioje Android versijoje dar nepalaikomi</string>
 </resources>

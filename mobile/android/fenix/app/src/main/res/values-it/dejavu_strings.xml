@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Si disattiva di nuovo al riavvio di Dejavu</string>
     <string name="dejavu_preference_mouse_support">Supporto per il mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic con il tasto centrale apre un link in una scheda in background, e passare sopra un link ne mostra l\'indirizzo. Un clic con il tasto centrale su una scheda la chiude.</string>
+    <string name="dejavu_passkeys_unsupported">Le passkey non sono ancora supportate su questa versione di Android</string>
 </resources>

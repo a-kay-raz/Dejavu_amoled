@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">با راه‌اندازی دوبارهٔ Dejavu دوباره خاموش می‌شود</string>
     <string name="dejavu_preference_mouse_support">پشتیبانی از موشواره</string>
     <string name="dejavu_preference_mouse_support_summary">کلیک وسط پیوند را در یک زبانهٔ پس‌زمینه باز می‌کند و نگه داشتن نشانگر روی پیوند نشانی آن را نشان می‌دهد. کلیک وسط روی یک زبانه آن را می‌بندد.</string>
+    <string name="dejavu_passkeys_unsupported">کلیدهای عبور هنوز در این نسخهٔ Android پشتیبانی نمی‌شوند</string>
 </resources>

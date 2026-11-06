@@ -570,4 +570,5 @@
     <string name="dejavu_remote_debugging_summary">Casann sé as arís nuair a atosaíonn Dejavu</string>
     <string name="dejavu_preference_mouse_support">Tacaíocht luiche</string>
     <string name="dejavu_preference_mouse_support_summary">Osclaíonn cliceáil lárnach nasc i gcluaisín sa chúlra, agus taispeánann foluain os cionn naisc a sheoladh. Dúnann cliceáil lárnach ar chluaisín é.</string>
+    <string name="dejavu_passkeys_unsupported">Níl tacaíocht d\'eochracha rochtana ar an leagan seo de Android fós</string>
 </resources>

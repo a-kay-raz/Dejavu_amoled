@@ -101,11 +101,19 @@ class WorkspaceWallpapersTest {
                 colors = listOf(RED, GREEN, BLUE),
                 light = 0.75f,
                 dark = 0.0625f,
+                lightLook = true,
             ),
             "home" to WorkspaceWallpaper(file = "b.jpg"),
         )
 
         assertEquals(wallpapers, readWallpapers(writeWallpapers(wallpapers)))
+    }
+
+    @Test
+    fun `a wallpaper saved before wallpapers had a look shows in the dark one`() {
+        val read = readWallpapers("""{"work":{"file":"a.jpg","intensity":0.6,"light":0.9,"dark":0.1}}""")
+
+        assertFalse(read.getValue("work").lightLook)
     }
 
     @Test

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">A Dejavu újraindításakor ismét kikapcsol</string>
     <string name="dejavu_preference_mouse_support">Egértámogatás</string>
     <string name="dejavu_preference_mouse_support_summary">A középső gombos kattintás háttérlapon nyitja meg a hivatkozást, a hivatkozás fölé vitt egér pedig megjeleníti a címét. A középső gombos kattintás egy lapon bezárja azt.</string>
+    <string name="dejavu_passkeys_unsupported">A jelkódok még nem támogatottak ezen az Android-verzión</string>
 </resources>

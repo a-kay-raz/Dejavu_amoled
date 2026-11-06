@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Ҳангоми аз нав оғоз шудани Dejavu боз хомӯш мешавад</string>
     <string name="dejavu_preference_mouse_support">Дастгирии муш</string>
     <string name="dejavu_preference_mouse_support_summary">Зеркунӣ бо тугмаи миёна пайвандро дар варақаи пасзамина мекушояд, ва нигоҳ доштани муш болои пайванд нишонии онро нишон медиҳад. Зеркунӣ бо тугмаи миёна болои варақа онро мебандад.</string>
+    <string name="dejavu_passkeys_unsupported">Шоҳкалидҳо дар ин версияи Android ҳоло дастгирӣ намешаванд</string>
 </resources>

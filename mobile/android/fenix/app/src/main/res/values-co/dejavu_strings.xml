@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Si disattiva torna quandu Dejavu riparte</string>
     <string name="dejavu_preference_mouse_support">Supportu di u topu</string>
     <string name="dejavu_preference_mouse_support_summary">Un cliccu cù u buttone di u mezu apre un liame in un\'unghjetta in fondu, è passà nantu à un liame ne mostra l\'indirizzu. Un cliccu cù u buttone di u mezu nant\'à un\'unghjetta a chjode.</string>
+    <string name="dejavu_passkeys_unsupported">E chjave d’accessu ùn sò ancu supportate nant’à sta versione d’Android</string>
 </resources>

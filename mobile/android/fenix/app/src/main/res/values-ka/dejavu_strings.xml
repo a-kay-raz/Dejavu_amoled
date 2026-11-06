@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu-ს ხელახლა გაშვებისას ისევ გამოირთვება</string>
     <string name="dejavu_preference_mouse_support">თაგვის მხარდაჭერა</string>
     <string name="dejavu_preference_mouse_support_summary">შუა ღილაკით დაწკაპება ბმულს ფონურ ჩანართში ხსნის, ხოლო ბმულზე მაჩვენებლის მიტანა მის მისამართს აჩვენებს. ჩანართზე შუა ღილაკით დაწკაპება მას ხურავს.</string>
+    <string name="dejavu_passkeys_unsupported">საშვები Android-ის ამ ვერსიაზე ჯერ არ არის მხარდაჭერილი</string>
 </resources>

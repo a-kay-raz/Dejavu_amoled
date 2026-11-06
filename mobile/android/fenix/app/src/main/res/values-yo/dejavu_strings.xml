@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Ó máa ń padà pa nígbà tí Dejavu bá tún bẹ̀rẹ̀</string>
     <string name="dejavu_preference_mouse_support">Àtìlẹ́yìn máòsì</string>
     <string name="dejavu_preference_mouse_support_summary">Títẹ bọ́tìnnì àárín yóò ṣí ìjápọ̀ nínú táàbù ẹ̀yìn, àti gbígbé máòsì lé orí ìjápọ̀ yóò fi àdírẹ́sì rẹ̀ hàn. Títẹ bọ́tìnnì àárín lórí táàbù yóò tì í.</string>
+    <string name="dejavu_passkeys_unsupported">Àwọn passkey kò tíì ní àtìlẹ́yìn lórí ẹ̀yà Android yìí</string>
 </resources>

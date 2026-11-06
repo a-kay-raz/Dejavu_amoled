@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Mag-o-off ulit kapag nag-restart ang Dejavu</string>
     <string name="dejavu_preference_mouse_support">Suporta sa mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Binubuksan ng middle-click ang link sa isang background tab, at ipinapakita ng pag-hover sa link ang address nito. Isinasara ng middle-click sa isang tab ang tab.</string>
+    <string name="dejavu_passkeys_unsupported">Hindi pa suportado ang mga passkey sa bersyong ito ng Android</string>
 </resources>

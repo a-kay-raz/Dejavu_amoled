@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Знову вимикається після перезапуску Dejavu</string>
     <string name="dejavu_preference_mouse_support">Підтримка миші</string>
     <string name="dejavu_preference_mouse_support_summary">Клацання середньою кнопкою відкриває посилання у фоновій вкладці, а наведення на посилання показує його адресу. Клацання середньою кнопкою по вкладці закриває її.</string>
+    <string name="dejavu_passkeys_unsupported">Ключі доступу поки не підтримуються в цій версії Android</string>
 </resources>

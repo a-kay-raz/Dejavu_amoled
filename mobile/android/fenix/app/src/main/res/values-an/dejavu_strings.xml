@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Se torna a desactivar quan Dejavu se reinicia</string>
     <string name="dejavu_preference_mouse_support">Suporte de churi</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic central ubre un vinclo en una pestanya de fondo, y pasar por denzima d\'un vinclo amuestra la suya adreza. Un clic central en una pestanya la zarra.</string>
+    <string name="dejavu_passkeys_unsupported">Las claus d\'acceso encara no son compatibles con esta versión d\'Android</string>
 </resources>

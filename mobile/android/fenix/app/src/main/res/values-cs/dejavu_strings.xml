@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Po restartu Dejavu se opět vypne</string>
     <string name="dejavu_preference_mouse_support">Podpora myši</string>
     <string name="dejavu_preference_mouse_support_summary">Kliknutí prostředním tlačítkem otevře odkaz v panelu na pozadí a najetí myší na odkaz zobrazí jeho adresu. Kliknutí prostředním tlačítkem na panel jej zavře.</string>
+    <string name="dejavu_passkeys_unsupported">Přístupové klíče zatím nejsou v této verzi Androidu podporovány</string>
 </resources>

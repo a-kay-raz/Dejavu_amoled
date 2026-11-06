@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Atkal izslēdzas, kad Dejavu tiek restartēts</string>
     <string name="dejavu_preference_mouse_support">Peles atbalsts</string>
     <string name="dejavu_preference_mouse_support_summary">Klikšķis ar vidējo pogu atver saiti fona cilnē, un, novietojot peli virs saites, tiek parādīta tās adrese. Klikšķis ar vidējo pogu uz cilnes to aizver.</string>
+    <string name="dejavu_passkeys_unsupported">Piekļuves atslēgas šajā Android versijā vēl netiek atbalstītas</string>
 </resources>

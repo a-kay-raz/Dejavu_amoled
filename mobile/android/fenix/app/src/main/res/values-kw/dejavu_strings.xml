@@ -578,4 +578,5 @@
     <string name="dejavu_remote_debugging_summary">Diweythresys yw arta pan dhastalleth Dejavu</string>
     <string name="dejavu_preference_mouse_support">Skoodhyans logosen</string>
     <string name="dejavu_preference_mouse_support_summary">Klyk kres a eger kevren yn tab kilva, ha gortos a-ugh kevren a dhiskwedh hy thrigva. Klyk kres war dab a\'n serr.</string>
+    <string name="dejavu_passkeys_unsupported">Ny vydh alhwedhow tremena skoodhys war an versyon ma a Android hwath</string>
 </resources>

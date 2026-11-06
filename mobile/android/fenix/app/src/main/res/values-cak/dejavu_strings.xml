@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Nichup chik toq nitikïr chik ri Dejavu</string>
     <string name="dejavu_preference_mouse_support">Ruto\'ik ri ch\'oy</string>
     <string name="dejavu_preference_mouse_support_summary">Toq napitz\'ij ri nik\'aj rupitz\'b\'al, nujäq jun ximonel pa jun ruwi\' chi rij, chuqa\' toq nanuk\' ri ch\'oy pa ruwi\' jun ximonel, nuk\'üt ri rochochib\'al. Toq napitz\'ij ri nik\'aj rupitz\'b\'al pa jun ruwi\', nutz\'apij.</string>
+    <string name="dejavu_passkeys_unsupported">Majani yetikïr ye\'awokisaj ri jaqb\'äl okem pa re ruwäch Android re\'</string>
 </resources>

@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ᱫᱚᱦᱲᱟ ᱮᱦᱚᱵ ᱚᱠᱛᱮ ᱫᱚᱦᱲᱟ ᱵᱚᱸᱫᱚ ᱦᱩᱭᱩᱜᱼᱟ</string>
     <string name="dejavu_preference_mouse_support">ᱢᱟᱣᱩᱥ ᱜᱚᱲᱚ</string>
     <string name="dejavu_preference_mouse_support_summary">ᱛᱟᱞᱟ ᱵᱩᱴᱟᱹᱢ ᱚᱛᱟ ᱠᱟᱛᱮ ᱞᱤᱝᱠ ᱯᱟᱪᱷᱚᱞ ᱴᱮᱵᱽ ᱨᱮ ᱡᱷᱤᱡᱽᱚᱜᱼᱟ, ᱟᱨ ᱞᱤᱝᱠ ᱪᱮᱛᱟᱱ ᱨᱮ ᱢᱟᱣᱩᱥ ᱫᱚᱦᱚ ᱠᱟᱛᱮ ᱚᱱᱟᱨ ᱴᱷᱤᱠᱬᱟᱹ ᱩᱫᱩᱜᱚᱜᱼᱟ ᱾ ᱴᱮᱵᱽ ᱨᱮ ᱛᱟᱞᱟ ᱵᱩᱴᱟᱹᱢ ᱚᱛᱟ ᱞᱮᱱ ᱥᱟᱶ ᱚᱱᱟ ᱵᱚᱱᱚᱫ ᱠᱟᱱᱟ ᱾</string>
+    <string name="dejavu_passkeys_unsupported">ᱱᱚᱶᱟ Android ᱵᱷᱟᱨᱥᱚᱱ ᱨᱮ ᱯᱟᱥᱠᱤ ᱫᱚ ᱱᱤᱛ ᱦᱟᱹᱵᱤᱡ ᱵᱟᱝ ᱜᱚᱲᱚᱭ ᱠᱟᱱᱟ</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Se désactive à nouveau au redémarrage de Dejavu</string>
     <string name="dejavu_preference_mouse_support">Prise en charge de la souris</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic du milieu ouvre un lien dans un onglet en arrière-plan, et survoler un lien affiche son adresse. Un clic du milieu sur un onglet le ferme.</string>
+    <string name="dejavu_passkeys_unsupported">Les clés d’accès ne sont pas encore prises en charge sur cette version d’Android</string>
 </resources>

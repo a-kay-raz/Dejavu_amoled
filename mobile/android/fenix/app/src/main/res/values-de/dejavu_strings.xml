@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Wird beim Neustart von Dejavu wieder deaktiviert</string>
     <string name="dejavu_preference_mouse_support">Mausunterstützung</string>
     <string name="dejavu_preference_mouse_support_summary">Ein Mittelklick öffnet einen Link in einem Hintergrund-Tab, und wenn der Mauszeiger auf einem Link ruht, wird seine Adresse angezeigt. Ein Mittelklick auf einen Tab schließt ihn.</string>
+    <string name="dejavu_passkeys_unsupported">Zugangsschlüssel werden in dieser Android-Version noch nicht unterstützt</string>
 </resources>

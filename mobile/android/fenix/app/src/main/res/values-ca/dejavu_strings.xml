@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Es torna a desactivar quan el Dejavu es reinicia</string>
     <string name="dejavu_preference_mouse_support">Compatibilitat amb el ratolí</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic amb el botó del mig obre un enllaç en una pestanya en segon pla, i passar per sobre d\'un enllaç en mostra l\'adreça. Un clic amb el botó del mig en una pestanya la tanca.</string>
+    <string name="dejavu_passkeys_unsupported">Les claus d’accés encara no són compatibles amb aquesta versió d’Android</string>
 </resources>

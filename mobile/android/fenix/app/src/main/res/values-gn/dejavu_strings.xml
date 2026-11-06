@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Oñembogue jey Dejavu oñepyrũjeývo</string>
     <string name="dejavu_preference_mouse_support">Mbopi pytyvõ</string>
     <string name="dejavu_preference_mouse_support_summary">Pe jopy mbytegua oipe\'a juajuha peteĩ tendayke tapykuépe, ha embohasávo mbopi juajuha ári ohechauka hendaite. Pe jopy mbytegua tendayke ári omboty chupe.</string>
+    <string name="dejavu_passkeys_unsupported">Ko Android peteĩchaguápe ndaikatúi gueteri eipuru ñe’ẽ ñemi jeikerã</string>
 </resources>

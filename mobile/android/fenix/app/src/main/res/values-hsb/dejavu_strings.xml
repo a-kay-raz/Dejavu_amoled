@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Znjemóžni so zaso, hdyž so Dejavu znowa startuje</string>
     <string name="dejavu_preference_mouse_support">Podpěra myški</string>
     <string name="dejavu_preference_mouse_support_summary">Srjedźne kliknjenje wotkaz w pozadkowym rajtarku wočinja, a hdyž myšku nad wotkazom dźeržiće, so jeho adresa pokazuje. Srjedźne kliknjenje na rajtark jón začinja.</string>
+    <string name="dejavu_passkeys_unsupported">Hesłowe kluče so w tutej wersiji Android hišće njepodpěruja</string>
 </resources>

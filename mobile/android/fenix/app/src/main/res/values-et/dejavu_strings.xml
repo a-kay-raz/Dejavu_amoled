@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Lülitub Dejavu taaskäivitamisel uuesti välja</string>
     <string name="dejavu_preference_mouse_support">Hiire tugi</string>
     <string name="dejavu_preference_mouse_support_summary">Keskmise nupuga klõps avab lingi taustal uuel kaardil ja lingi kohal hõljumine näitab selle aadressi. Keskmise nupuga klõps kaardil sulgeb selle.</string>
+    <string name="dejavu_passkeys_unsupported">Pääsuvõtmeid selles Androidi versioonis veel ei toetata</string>
 </resources>

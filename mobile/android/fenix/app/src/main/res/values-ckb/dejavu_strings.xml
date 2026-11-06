@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">کاتێک Dejavu دووبارە دەست پێدەکاتەوە دەکوژێتەوە</string>
     <string name="dejavu_preference_mouse_support">پشتگیری مشک</string>
     <string name="dejavu_preference_mouse_support_summary">کرتەی ناوەڕاست بەستەرێک لە بازدەرێکی پاشبنەمادا دەکاتەوە، و ڕاگرتنی مشک لەسەر بەستەر ناونیشانەکەی پیشان دەدات. کرتەی ناوەڕاست لەسەر بازدەرێک دایدەخات.</string>
+    <string name="dejavu_passkeys_unsupported">کلیلی چوونەژوورەوە (passkey) هێشتا لەم وەشانەی Android پشتگیری ناکرێت</string>
 </resources>

@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Po reštarte Dejavu sa opäť vypne</string>
     <string name="dejavu_preference_mouse_support">Podpora myši</string>
     <string name="dejavu_preference_mouse_support_summary">Kliknutie stredným tlačidlom otvorí odkaz na karte na pozadí a umiestnenie kurzora na odkaz zobrazí jeho adresu. Kliknutie stredným tlačidlom na kartu ju zatvorí.</string>
+    <string name="dejavu_passkeys_unsupported">Prístupové kľúče zatiaľ nie sú v tejto verzii Androidu podporované</string>
 </resources>

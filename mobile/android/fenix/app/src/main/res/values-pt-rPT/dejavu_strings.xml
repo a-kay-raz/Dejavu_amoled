@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Volta a ser desativada quando o Dejavu é reiniciado</string>
     <string name="dejavu_preference_mouse_support">Suporte para rato</string>
     <string name="dejavu_preference_mouse_support_summary">Um clique com o botão do meio abre uma ligação num separador em segundo plano, e passar o rato sobre uma ligação mostra o seu endereço. Um clique com o botão do meio num separador fecha-o.</string>
+    <string name="dejavu_passkeys_unsupported">As chaves de acesso ainda não são suportadas nesta versão do Android</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu یئنیدن باشلاندیقدا گئنه سؤنور</string>
     <string name="dejavu_preference_mouse_support">سیچان دستگی</string>
     <string name="dejavu_preference_mouse_support_summary">اورتا دوگمه ایله کلیک، باغلانتینی آرخا پلاندا بیر تاغدا آچیر، باغلانتینین اوستونه گلمک ده اونون آدرسینی گؤستریر. تاغین اوستونده اورتا دوگمه ایله کلیک اونو باغلاییر.</string>
+    <string name="dejavu_passkeys_unsupported">گیریش آچارلاری (passkey) بو Android ورسییاسیندا هله دستکلنمیر</string>
 </resources>

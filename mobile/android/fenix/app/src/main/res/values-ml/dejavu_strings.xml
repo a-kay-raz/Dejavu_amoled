@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu പുനരാരംഭിക്കുമ്പോൾ വീണ്ടും ഓഫാകും</string>
     <string name="dejavu_preference_mouse_support">മൗസ് പിന്തുണ</string>
     <string name="dejavu_preference_mouse_support_summary">നടുവിലെ ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ ലിങ്ക് പശ്ചാത്തല ടാബിൽ തുറക്കും, ലിങ്കിനു മുകളിൽ പോയിന്റർ വെച്ചാൽ അതിന്റെ വിലാസം കാണിക്കും. ടാബിൽ നടുവിലെ ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ അത് അടയ്ക്കും.</string>
+    <string name="dejavu_passkeys_unsupported">ഈ Android പതിപ്പിൽ ഒളിത്താക്കോലുകൾ ഇതുവരെ പിന്തുണയ്ക്കുന്നില്ല</string>
 </resources>

@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Зноў выключаецца пасля перазапуску Dejavu</string>
     <string name="dejavu_preference_mouse_support">Падтрымка мышы</string>
     <string name="dejavu_preference_mouse_support_summary">Націсканне сярэдняй кнопкай адкрывае спасылку ў фонавай картцы, а навядзенне на спасылку паказвае яе адрас. Націсканне сярэдняй кнопкай на картцы закрывае яе.</string>
+    <string name="dejavu_passkeys_unsupported">Ключы доступу пакуль не падтрымліваюцца ў гэтай версіі Android</string>
 </resources>

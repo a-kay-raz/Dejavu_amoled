@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Skeakelet wer út as Dejavu opnij start</string>
     <string name="dejavu_preference_mouse_support">Mûsstipe</string>
     <string name="dejavu_preference_mouse_support_summary">In middelklik iepenet in keppeling yn in ljepblêd op de eftergrûn, en mei de mûs boppe in keppeling hingje lit it adres sjen. In middelklik op in ljepblêd slút it.</string>
+    <string name="dejavu_passkeys_unsupported">Wachtwurdkaaien wurde noch net stipe op dizze Android-ferzje</string>
 </resources>

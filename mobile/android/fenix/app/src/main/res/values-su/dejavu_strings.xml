@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Pareum deui nalika Dejavu dimimitian deui</string>
     <string name="dejavu_preference_mouse_support">Pangrojong beurit</string>
     <string name="dejavu_preference_mouse_support_summary">Klik tengah muka tutumbu dina tab tukang, sarta nempatkeun beurit dina tutumbu némbongkeun alamatna. Klik tengah dina tab nutup tab éta.</string>
+    <string name="dejavu_passkeys_unsupported">Konci aksés (passkey) can dirojong dina vérsi Android ieu</string>
 </resources>

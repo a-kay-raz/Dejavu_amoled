@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Çaktivizohet sërish kur Dejavu riniset</string>
     <string name="dejavu_preference_mouse_support">Mbulim për miun</string>
     <string name="dejavu_preference_mouse_support_summary">Klikimi me butonin e mesit hap një lidhje në një skedë në prapaskenë, dhe kalimi i miut sipër një lidhjeje shfaq adresën e saj. Klikimi me butonin e mesit mbi një skedë e mbyll atë.</string>
+    <string name="dejavu_passkeys_unsupported">Kyçkalimet ende nuk mbulohen në këtë version të Android-it</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu دے ولا شروع تھیوݨ تے ایہ ولا بند تھی ویندی اے</string>
     <string name="dejavu_preference_mouse_support">ماؤس دی سہولت</string>
     <string name="dejavu_preference_mouse_support_summary">وچلے بٹݨ نال کلک کرݨ نال لنک پچھلی ٹیب وچ کھلدا ہے، تے لنک اُتے ماؤس رکھݨ نال اوندا پتہ ݙکھدا ہے۔ ٹیب اُتے وچلے بٹݨ نال کلک کرݨ نال او بند تھی ویندی ہے۔</string>
+    <string name="dejavu_passkeys_unsupported">ایں Android ورژن تے پاس کی (passkey) ہݨ تئیں سپورٹ کائنی</string>
 </resources>

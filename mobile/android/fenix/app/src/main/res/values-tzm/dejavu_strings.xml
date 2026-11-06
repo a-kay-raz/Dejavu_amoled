@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Ad yensu tikkelt-nniḍen mi ara yales Dejavu asenker</string>
     <string name="dejavu_preference_mouse_support">Tallalt n uɣerda</string>
     <string name="dejavu_preference_mouse_support_summary">Asiti s tqeffalt n wammas iṛẓem aseɣwen deg useksel deg ugilal, ar tasdawt n uɣerda f useɣwen tessken-d tansa nnes. Asiti s tqeffalt n wammas f useksel ad t-isekkeṛ.</string>
+    <string name="dejavu_passkeys_unsupported">Tisura n unekcum (passkeys) mazal ur ttwasefraken deg lqem-a n Android</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ਮੁੜ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਇਹ ਫਿਰ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ</string>
     <string name="dejavu_preference_mouse_support">ਮਾਊਸ ਸਹਾਇਤਾ</string>
     <string name="dejavu_preference_mouse_support_summary">ਵਿਚਕਾਰਲੇ ਬਟਨ ਨਾਲ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਲਿੰਕ ਪਿਛੋਕੜ ਵਾਲੀ ਟੈਬ ਵਿੱਚ ਖੁੱਲ੍ਹਦਾ ਹੈ, ਅਤੇ ਲਿੰਕ ਉੱਤੇ ਪੁਆਇੰਟਰ ਰੱਖਣ ਨਾਲ ਉਸਦਾ ਪਤਾ ਦਿਖਦਾ ਹੈ। ਟੈਬ ਉੱਤੇ ਵਿਚਕਾਰਲੇ ਬਟਨ ਨਾਲ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਉਹ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ।</string>
+    <string name="dejavu_passkeys_unsupported">ਇਸ Android ਵਰਜ਼ਨ ਉੱਤੇ ਪਾਸ-ਕੀ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹਨ</string>
 </resources>

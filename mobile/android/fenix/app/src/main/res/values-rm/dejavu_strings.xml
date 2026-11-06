@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Vegn deactivà puspè cura che Dejavu vegn reavià</string>
     <string name="dejavu_preference_mouse_support">Sustegn da la mieur</string>
     <string name="dejavu_preference_mouse_support_summary">In clic cun il buttun dal mez avra ina colliaziun en in tab en il fund, e passar sur ina colliaziun mussa sia adressa. In clic cun il buttun dal mez sin in tab al serra.</string>
+    <string name="dejavu_passkeys_unsupported">Clavs d’access (passkeys) na vegnan anc betg sustegnidas en questa versiun dad Android</string>
 </resources>

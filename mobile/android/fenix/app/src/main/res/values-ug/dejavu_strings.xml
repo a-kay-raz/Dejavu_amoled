@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu قايتا قوزغالغاندا يەنە تاقىلىدۇ</string>
     <string name="dejavu_preference_mouse_support">مائۇس قوللىشى</string>
     <string name="dejavu_preference_mouse_support_summary">ئوتتۇرا كۇنۇپكا بىلەن چېكىش ئۇلانمىنى ئارقا سۇپىدىكى بەتكۈچتە ئاچىدۇ، ئۇلانما ئۈستىگە مائۇسنى توختىتىش ئۇنىڭ ئادرېسىنى كۆرسىتىدۇ. بەتكۈچنى ئوتتۇرا كۇنۇپكا بىلەن چېكىش ئۇنى تاقايدۇ.</string>
+    <string name="dejavu_passkeys_unsupported">شىفىرلىق ئاچقۇچ بۇ Android نەشرىدە تېخى قوللىمايدۇ</string>
 </resources>

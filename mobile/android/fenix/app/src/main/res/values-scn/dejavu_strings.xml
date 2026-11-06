@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Si disattiva arrè quannu Dejavu s\'arriavvìa</string>
     <string name="dejavu_preference_mouse_support">Supportu pô surciu</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic cû buttuni dô menzu apri un liami nta na scheda n sfunnu, e passari supra un liami ni ammustra lu nnirizzu. Un clic cû buttuni dô menzu supra na scheda la chiudi.</string>
+    <string name="dejavu_passkeys_unsupported">Li chiavi d\'accessu ancora nun sunnu supurtati nta sta virsioni di Android</string>
 </resources>

@@ -579,4 +579,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ફરી શરૂ થાય ત્યારે તે ફરી બંધ થઈ જાય છે</string>
     <string name="dejavu_preference_mouse_support">માઉસ સપોર્ટ</string>
     <string name="dejavu_preference_mouse_support_summary">મધ્ય બટનથી ક્લિક કરવાથી લિંક પૃષ્ઠભૂમિ ટૅબમાં ખૂલે છે, અને લિંક પર પોઇન્ટર રાખવાથી તેનું સરનામું દેખાય છે. ટૅબ પર મધ્ય બટનથી ક્લિક કરવાથી તે બંધ થાય છે.</string>
+    <string name="dejavu_passkeys_unsupported">આ Android સંસ્કરણ પર પાસકી હજી સપોર્ટેડ નથી</string>
 </resources>

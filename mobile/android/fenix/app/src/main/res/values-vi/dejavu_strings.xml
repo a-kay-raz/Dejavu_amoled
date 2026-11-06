@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Tự tắt lại khi Dejavu khởi động lại</string>
     <string name="dejavu_preference_mouse_support">Hỗ trợ chuột</string>
     <string name="dejavu_preference_mouse_support_summary">Nhấp chuột giữa sẽ mở liên kết trong một thẻ nền, và di chuột lên liên kết sẽ hiển thị địa chỉ của nó. Nhấp chuột giữa vào một thẻ sẽ đóng thẻ đó.</string>
+    <string name="dejavu_passkeys_unsupported">Passkey chưa được hỗ trợ trên phiên bản Android này</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Se desactiva tornamai quand Dejavu se reaviá</string>
     <string name="dejavu_preference_mouse_support">Presa en carga de la mirga</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic del mitan dobrís un ligam dins un onglet en rèireplan, e passar sus un ligam aficha son adreça. Un clic del mitan sus un onglet lo barra.</string>
+    <string name="dejavu_passkeys_unsupported">Las claus d’accès son pas encara presas en carga sus aquesta version d’Android</string>
 </resources>

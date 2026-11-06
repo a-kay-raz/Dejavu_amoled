@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Desactívase de nuevu cuando Dejavu se reanicia</string>
     <string name="dejavu_preference_mouse_support">Sofitu pal mur</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic col botón central abre un enllaz nuna llingüeta en segundu planu, y pasar penriba d\'un enllaz amuesa la so direición. Un clic col botón central nuna llingüeta péchala.</string>
+    <string name="dejavu_passkeys_unsupported">Les claves d\'accesu entá nun son compatibles con esta versión d\'Android</string>
 </resources>

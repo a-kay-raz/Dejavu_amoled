@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ପୁଣି ଆରମ୍ଭ ହେଲେ ଏହା ପୁଣି ବନ୍ଦ ହୋଇଯାଏ</string>
     <string name="dejavu_preference_mouse_support">ମାଉସ୍ ସମର୍ଥନ</string>
     <string name="dejavu_preference_mouse_support_summary">ମଝି ବଟନ୍‌ରେ କ୍ଲିକ୍ କଲେ ଲିଙ୍କ୍ ପୃଷ୍ଠଭୂମି ଟ୍ୟାବ୍‌ରେ ଖୋଲେ, ଏବଂ ଲିଙ୍କ୍ ଉପରେ ପଏଣ୍ଟର୍ ରଖିଲେ ଏହାର ଠିକଣା ଦେଖାଏ। ଟ୍ୟାବ୍‌ରେ ମଝି ବଟନ୍‌ରେ କ୍ଲିକ୍ କଲେ ତାହା ବନ୍ଦ ହୁଏ।</string>
+    <string name="dejavu_passkeys_unsupported">ଏହି Android ସଂସ୍କରଣରେ ପାସକି ଏପର୍ଯ୍ୟନ୍ତ ସମର୍ଥିତ ନୁହେଁ</string>
 </resources>

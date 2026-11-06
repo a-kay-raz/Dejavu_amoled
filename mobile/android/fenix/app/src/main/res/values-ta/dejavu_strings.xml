@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu மீண்டும் தொடங்கும்போது மறுபடியும் அணைந்துவிடும்</string>
     <string name="dejavu_preference_mouse_support">சுட்டி ஆதரவு</string>
     <string name="dejavu_preference_mouse_support_summary">நடுப் பொத்தானைச் சொடுக்கினால் இணைப்பு பின்னணிக் கீற்றில் திறக்கும், இணைப்பின் மேல் சுட்டியை வைத்தால் அதன் முகவரி காட்டப்படும். கீற்றின் மேல் நடுப் பொத்தானைச் சொடுக்கினால் அது மூடப்படும்.</string>
+    <string name="dejavu_passkeys_unsupported">இந்த Android பதிப்பில் கடவுச்சாவிகள் இன்னும் ஆதரிக்கப்படவில்லை</string>
 </resources>

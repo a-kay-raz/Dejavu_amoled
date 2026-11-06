@@ -26,6 +26,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -52,22 +53,32 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
+import androidx.core.view.WindowCompat
+import androidx.lifecycle.compose.LifecycleResumeEffect
 import kotlin.math.floor
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.pow
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import mozilla.components.compose.base.theme.Theme
+import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.DejavuColors
 import org.mozilla.fenix.dejavu.ui.DejavuPopup
+import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
 import org.mozilla.fenix.dejavu.workspaces.WallpaperArt
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpaper
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpapers
+import org.mozilla.fenix.theme.FirefoxTheme
+import org.mozilla.fenix.theme.getThemeProvider
 
 private val PREVIEW_WIDTH = 64.dp
 private val TILE_WIDTH = 56.dp
@@ -126,6 +137,74 @@ internal fun veilOf(wallpaper: WorkspaceWallpaper, surface: Color, text: Color):
     val readable = shade?.let { readableVeil(it, veil.luminance(), text.luminance()) } ?: DEFAULT_VEIL
     val alpha = readable + (WorkspaceWallpaper.DEFAULT_INTENSITY - wallpaper.intensity) * INTENSITY_REACH
     return Veil(colors, alpha.coerceIn(MIN_VEIL, MAX_VEIL))
+}
+
+/** The veil of [wallpaper] in its own look, see [wallpaperTheme], with the app in [appTheme]. */
+internal fun veilOf(wallpaper: WorkspaceWallpaper, appTheme: Theme): Veil {
+    val colors = checkNotNull(DejavuColors.colorScheme(wallpaperTheme(wallpaper, appTheme)))
+    return veilOf(wallpaper, colors.surface, colors.onSurface)
+}
+
+/**
+ * The theme a workspace with [wallpaper] shows in on the home screen and the welcome pages, whatever the app's own
+ * [appTheme]: the light one for its light look, else the dark one, so a wallpaper looks the same in the light and
+ * dark themes. The dark look keeps the black of the app's OLED theme.
+ */
+internal fun wallpaperTheme(wallpaper: WorkspaceWallpaper, appTheme: Theme): Theme = when {
+    wallpaper.lightLook -> Theme.Light
+    appTheme == Theme.Oled -> Theme.Oled
+    else -> Theme.Dark
+}
+
+/**
+ * Shows [content] in the theme of [wallpaper], see [wallpaperTheme], or in the app's theme without a wallpaper. The
+ * theme is set either way, so [content] keeps its state when a wallpaper comes or goes.
+ */
+@Composable
+internal fun WallpaperTheme(wallpaper: WorkspaceWallpaper?, content: @Composable () -> Unit) {
+    val appTheme = getThemeProvider().provideTheme()
+    FirefoxTheme(theme = wallpaper?.let { wallpaperTheme(it, appTheme) } ?: appTheme, content = content)
+}
+
+/**
+ * Shows the home screen's [content] over the workspace with [wallpaper]: in its look, see [WallpaperTheme], with the
+ * dialogs and menus opened over it in the colors of [popupTheme].
+ */
+@Composable
+internal fun OverWallpaper(
+    wallpaper: WorkspaceWallpaper?,
+    popupTheme: WorkspaceTheme?,
+    content: @Composable () -> Unit,
+) {
+    WallpaperTheme(wallpaper) {
+        CompositionLocalProvider(LocalPopupTheme provides popupTheme, content = content)
+    }
+}
+
+/**
+ * Keeps the icons of the status bar and the navigation bar readable over [wallpaper], the one shown: light over its
+ * dark look and dark over its light one, whatever the app's theme. Without a wallpaper they follow the theme.
+ */
+@Composable
+internal fun SystemBarIconsOver(wallpaper: WorkspaceWallpaper?) {
+    val activity = LocalContext.current as? HomeActivity ?: return
+    val view = LocalView.current
+    val lightLook = wallpaper?.lightLook
+    LifecycleResumeEffect(activity, lightLook) {
+        val apply = Runnable {
+            if (lightLook == null) {
+                activity.themeManager.applyStatusBarTheme(activity)
+            } else {
+                WindowCompat.getInsetsController(activity.window, activity.window.decorView).run {
+                    isAppearanceLightStatusBars = lightLook
+                    isAppearanceLightNavigationBars = lightLook
+                }
+            }
+        }
+        // Posted, as the app gives each screen that resumes the icons of its theme once the screen's own code ran.
+        view.post(apply)
+        onPauseOrDispose { view.removeCallbacks(apply) }
+    }
 }
 
 /** [color]'s hue at [surface]'s lightness, keeping [VEIL_CHROMA] of its color. */
@@ -196,10 +275,11 @@ internal fun WallpaperLayers(pagerState: PagerState, wallpaperAt: (Int) -> Works
 }
 
 /**
- * The workspace dialog's wallpaper choice: the wallpapers Dejavu draws and a photo of the user's own to pick from, then
- * a small picture of the home screen with [wallpaper], the colors taken from it for the theme, and a slider for how
- * strongly it shows through its veil. [onDraw] draws a picked wallpaper and [onImport] copies a picked photo, which
- * then go to [onPicked]. The theme of a workspace that [syncsWithZen] goes to Zen.
+ * The workspace dialog's wallpaper choice: the wallpapers Dejavu draws and a photo of the user's own to pick from, in
+ * their dark look and their light one, then a small picture of the home screen with [wallpaper], the colors taken from
+ * it for the theme, and a slider for how strongly it shows through its veil. [onDraw] draws a picked wallpaper and
+ * [onImport] copies a picked photo, which then go to [onPicked]. The theme of a workspace that [syncsWithZen] goes to
+ * Zen.
  */
 @Suppress("LongParameterList")
 @Composable
@@ -270,9 +350,9 @@ private fun PictureColors(colors: List<Int>, syncsWithZen: Boolean) {
     }
 }
 
-/** A small picture of the home screen with [wallpaper], under its veil. */
+/** A small picture of the home screen with [wallpaper], under its veil in its own look. */
 @Composable
-private fun WallpaperPreview(wallpaper: WorkspaceWallpaper) {
+private fun WallpaperPreview(wallpaper: WorkspaceWallpaper) = WallpaperTheme(wallpaper) {
     val configuration = LocalConfiguration.current
     val surface = MaterialTheme.colorScheme.surface
     val text = MaterialTheme.colorScheme.onSurface

@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Se dexativa danovo co Dejavu el se reavia</string>
     <string name="dejavu_preference_mouse_support">Suporto par el sorze</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic col boton de mezo el verze un colegamento inte na scheda in sfondo, e passar sora un colegamento el ghe mostra l\'indirizo. Un clic col boton de mezo sora na scheda la sara.</string>
+    <string name="dejavu_passkeys_unsupported">Łe ciavi de aceso no łe xe ancora suportàe in sta version de Android</string>
 </resources>

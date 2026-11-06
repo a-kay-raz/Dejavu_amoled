@@ -294,8 +294,8 @@ private fun LookPage(look: WelcomeLook) {
 }
 
 /**
- * The wallpapers to pick from, in a row: none, the ones Dejavu draws, and a picture of the user's own, with the slider
- * of how strongly the one picked shows through its veil.
+ * The wallpapers to pick from, in their dark look and their light one: none, the ones Dejavu draws, and a picture of
+ * the user's own, with the slider of how strongly the one picked shows through its veil.
  */
 @Composable
 private fun WallpaperChoices(look: WelcomeLook) {

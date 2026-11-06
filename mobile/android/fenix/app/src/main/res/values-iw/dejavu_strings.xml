@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">נכבה שוב כש-Dejavu מופעל מחדש</string>
     <string name="dejavu_preference_mouse_support">תמיכה בעכבר</string>
     <string name="dejavu_preference_mouse_support_summary">לחיצה אמצעית פותחת קישור בלשונית ברקע, וריחוף מעל קישור מציג את הכתובת שלו. לחיצה אמצעית על לשונית סוגרת אותה.</string>
+    <string name="dejavu_passkeys_unsupported">מפתחות גישה עדיין אינם נתמכים בגרסת Android זו</string>
 </resources>

@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Thèid a chur dheth a-rithist nuair a thòisicheas Dejavu às ùr</string>
     <string name="dejavu_preference_mouse_support">Taic luchaige</string>
     <string name="dejavu_preference_mouse_support_summary">Fosglaidh briogadh meadhanach ceangal ann an taba sa chùlaibh, agus seallaidh fantainn os cionn ceangail an seòladh aige. Dùinidh briogadh meadhanach air taba e.</string>
+    <string name="dejavu_passkeys_unsupported">Chan eil taic ri iuchraichean-inntrigidh air an tionndadh seo de Android fhathast</string>
 </resources>

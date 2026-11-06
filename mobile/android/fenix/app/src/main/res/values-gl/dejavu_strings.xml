@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Desactívase de novo cando Dejavu se reinicia</string>
     <string name="dejavu_preference_mouse_support">Compatibilidade co rato</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic co botón central abre unha ligazón nunha lapela en segundo plano, e pasar o rato por riba dunha ligazón amosa o seu enderezo. Un clic co botón central nunha lapela péchaa.</string>
+    <string name="dejavu_passkeys_unsupported">As claves de acceso aínda non son compatibles con esta versión de Android</string>
 </resources>

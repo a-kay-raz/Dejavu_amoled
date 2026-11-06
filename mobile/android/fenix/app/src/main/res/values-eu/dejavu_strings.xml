@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Berriro desaktibatzen da Dejavu berrabiaraztean</string>
     <string name="dejavu_preference_mouse_support">Saguaren euskarria</string>
     <string name="dejavu_preference_mouse_support_summary">Erdiko botoiarekin klik eginez gero, esteka atzeko planoko fitxa batean irekitzen da, eta esteka baten gainetik pasatzean haren helbidea erakusten da. Erdiko botoiarekin fitxa baten gainean klik eginez gero, fitxa ixten da.</string>
+    <string name="dejavu_passkeys_unsupported">Sarbide-gakoak ez dira oraindik onartzen Android bertsio honetan</string>
 </resources>

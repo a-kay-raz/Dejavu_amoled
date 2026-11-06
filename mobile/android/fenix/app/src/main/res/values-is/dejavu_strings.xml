@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Slokknar aftur þegar Dejavu er endurræst</string>
     <string name="dejavu_preference_mouse_support">Músarstuðningur</string>
     <string name="dejavu_preference_mouse_support_summary">Miðsmellur opnar tengil í bakgrunnsflipa og þegar bendli er haldið yfir tengli sést vistfang hans. Miðsmellur á flipa lokar honum.</string>
+    <string name="dejavu_passkeys_unsupported">Aðgangslyklar eru ekki enn studdir í þessari útgáfu af Android</string>
 </resources>

@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Mati lagi saat Dejavu dimulai ulang</string>
     <string name="dejavu_preference_mouse_support">Dukungan mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Klik tengah membuka tautan di tab latar belakang, dan mengarahkan mouse ke tautan menampilkan alamatnya. Klik tengah pada tab menutupnya.</string>
+    <string name="dejavu_passkeys_unsupported">Kunci sandi belum didukung di versi Android ini</string>
 </resources>

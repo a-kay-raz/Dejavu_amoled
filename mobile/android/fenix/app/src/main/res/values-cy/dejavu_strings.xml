@@ -578,4 +578,5 @@
     <string name="dejavu_remote_debugging_summary">Mae\'n troi i ffwrdd eto pan fydd Dejavu yn ailgychwyn</string>
     <string name="dejavu_preference_mouse_support">Cefnogaeth llygoden</string>
     <string name="dejavu_preference_mouse_support_summary">Mae clicio\'r botwm canol yn agor dolen mewn tab cefndir, ac mae hofran dros ddolen yn dangos ei chyfeiriad. Mae clicio\'r botwm canol ar dab yn ei gau.</string>
+    <string name="dejavu_passkeys_unsupported">Nid yw cyfrinallweddi\'n cael eu cefnogi ar y fersiwn hwn o Android eto</string>
 </resources>

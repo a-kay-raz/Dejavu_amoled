@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Wyłącza się znowu po ponownym uruchomieniu Dejavu</string>
     <string name="dejavu_preference_mouse_support">Obsługa myszy</string>
     <string name="dejavu_preference_mouse_support_summary">Kliknięcie środkowym przyciskiem otwiera odnośnik w karcie w tle, a najechanie na odnośnik wyświetla jego adres. Kliknięcie środkowym przyciskiem karty zamyka ją.</string>
+    <string name="dejavu_passkeys_unsupported">Klucze dostępu nie są jeszcze obsługiwane w tej wersji Androida</string>
 </resources>

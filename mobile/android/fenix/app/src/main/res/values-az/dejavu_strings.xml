@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu yenidən başladıqda yenə sönür</string>
     <string name="dejavu_preference_mouse_support">Siçan dəstəyi</string>
     <string name="dejavu_preference_mouse_support_summary">Orta düymə ilə klik keçidi arxa planda yeni vərəqdə açır, keçidin üzərinə gəlmək isə onun ünvanını göstərir. Vərəqin üzərində orta düymə ilə klik onu bağlayır.</string>
+    <string name="dejavu_passkeys_unsupported">Giriş açarları (passkey) bu Android versiyasında hələ dəstəklənmir</string>
 </resources>

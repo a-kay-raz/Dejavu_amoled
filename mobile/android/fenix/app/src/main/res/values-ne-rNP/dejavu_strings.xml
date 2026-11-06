@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu पुनः सुरु हुँदा यो फेरि बन्द हुन्छ</string>
     <string name="dejavu_preference_mouse_support">माउस समर्थन</string>
     <string name="dejavu_preference_mouse_support_summary">बीचको बटनले क्लिक गर्दा लिङ्क पृष्ठभूमि ट्याबमा खुल्छ, र लिङ्कमाथि पोइन्टर राख्दा त्यसको ठेगाना देखिन्छ। ट्याबमा बीचको बटनले क्लिक गर्दा त्यो बन्द हुन्छ।</string>
+    <string name="dejavu_passkeys_unsupported">यो Android संस्करणमा पासकीहरू अझै समर्थित छैनन्</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu እንደገና ሲጀምር ተመልሶ ይጠፋል</string>
     <string name="dejavu_preference_mouse_support">የመዳፊት ድጋፍ</string>
     <string name="dejavu_preference_mouse_support_summary">በመሃል ቁልፍ ጠቅ ማድረግ አገናኝን በጀርባ ትር ውስጥ ይከፍታል፣ በአገናኝ ላይ ማንዣበብ ደግሞ አድራሻውን ያሳያል። በትር ላይ በመሃል ቁልፍ ጠቅ ማድረግ ትሩን ይዘጋል።</string>
+    <string name="dejavu_passkeys_unsupported">የይለፍ ቁልፎች (passkeys) በዚህ የAndroid ስሪት ላይ ገና አይደገፉም</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Malŝaltiĝas denove kiam Dejavu rekomenciĝas</string>
     <string name="dejavu_preference_mouse_support">Subteno de muso</string>
     <string name="dejavu_preference_mouse_support_summary">Meza alklako malfermas ligilon en fona langeto, kaj ŝvebigi la muson super ligilo montras ĝian adreson. Meza alklako sur langeto fermas ĝin.</string>
+    <string name="dejavu_passkeys_unsupported">Pasŝlosiloj ankoraŭ ne estas subtenataj en tiu ĉi versio de Android</string>
 </resources>

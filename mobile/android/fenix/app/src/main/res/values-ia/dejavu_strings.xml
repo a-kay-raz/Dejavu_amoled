@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Se disactiva de novo quando Dejavu se reinitia</string>
     <string name="dejavu_preference_mouse_support">Supporto del mus</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic central aperi un ligamine in un scheda in secunde plano, e passar super un ligamine monstra su adresse. Un clic central super un scheda lo claude.</string>
+    <string name="dejavu_passkeys_unsupported">Le claves-contrasigno non es ancora supportate in iste version de Android</string>
 </resources>

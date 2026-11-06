@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu qayta ishga tushganda yana oʻchadi</string>
     <string name="dejavu_preference_mouse_support">Sichqoncha yordami</string>
     <string name="dejavu_preference_mouse_support_summary">O‘rta tugma bilan bosish havolani orqa fondagi varaqda ochadi, havola ustiga sichqonchani olib borish esa uning manzilini ko‘rsatadi. Varaqni o‘rta tugma bilan bosish uni yopadi.</string>
+    <string name="dejavu_passkeys_unsupported">Kirish kalitlari (passkey) bu Android versiyasida hali qo‘llab-quvvatlanmaydi</string>
 </resources>

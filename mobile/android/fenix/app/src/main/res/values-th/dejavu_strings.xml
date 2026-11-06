@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">ปิดอีกครั้งเมื่อ Dejavu เริ่มใหม่</string>
     <string name="dejavu_preference_mouse_support">การรองรับเมาส์</string>
     <string name="dejavu_preference_mouse_support_summary">การคลิกปุ่มกลางจะเปิดลิงก์ในแท็บเบื้องหลัง และการวางเมาส์เหนือลิงก์จะแสดงที่อยู่ของลิงก์ การคลิกปุ่มกลางที่แท็บจะปิดแท็บนั้น</string>
+    <string name="dejavu_passkeys_unsupported">ยังไม่รองรับพาสคีย์ใน Android รุ่นนี้</string>
 </resources>

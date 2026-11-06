@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Slås av igjen når Dejavu startes på nytt</string>
     <string name="dejavu_preference_mouse_support">Musstøtte</string>
     <string name="dejavu_preference_mouse_support_summary">Et klikk med midtknappen åpner en lenke i en bakgrunnsfane, og når du holder pekeren over en lenke, vises adressen. Et klikk med midtknappen på en fane lukker den.</string>
+    <string name="dejavu_passkeys_unsupported">Passnøkler støttes ikke ennå på denne Android-versjonen</string>
 </resources>

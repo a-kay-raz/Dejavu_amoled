@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Ñifoto kadi so Dejavu fuɗɗitii</string>
     <string name="dejavu_preference_mouse_support">Wallitorde doombru</string>
     <string name="dejavu_preference_mouse_support_summary">Dobo hakkunde ina uddita jokkol e tabbere caggal, kadi ɗaɓɓude doombru e dow jokkol ina hollira ñiiɓirde mayre. Dobo hakkunde e dow tabbere ina maaɗa ɗum.</string>
+    <string name="dejavu_passkeys_unsupported">Les clés d’accès ne sont pas encore prises en charge sur cette version d’Android</string>
 </resources>

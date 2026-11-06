@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Si disativat torra cando Dejavu si torrat a aviare</string>
     <string name="dejavu_preference_mouse_support">Supportu de su sòrighe</string>
     <string name="dejavu_preference_mouse_support_summary">Unu clic cun su butone de mesu aberit unu ligòngiu in un\'ischeda in segundu pranu, e passende subra de unu ligòngiu nde mustrat s\'indiritzu. Unu clic cun su butone de mesu subra de un\'ischeda la serrat.</string>
+    <string name="dejavu_passkeys_unsupported">Sas craes de atzessu non sunt galu suportadas in custa versione de Android</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu қайта іске қосылғанда қайтадан сөнеді</string>
     <string name="dejavu_preference_mouse_support">Тінтуірді қолдау</string>
     <string name="dejavu_preference_mouse_support_summary">Ортаңғы батырмамен шерту сілтемені фондық бетте ашады, ал сілтеменің үстіне апару оның адресін көрсетеді. Бетте ортаңғы батырмамен шерту оны жабады.</string>
+    <string name="dejavu_passkeys_unsupported">Қол жеткізу кілттеріне Android-тың бұл нұсқасында әлі қолдау көрсетілмейді</string>
 </resources>

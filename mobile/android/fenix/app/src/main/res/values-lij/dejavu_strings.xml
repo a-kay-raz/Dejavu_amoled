@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">O se dizativa torna quande Dejavu o se reavvia</string>
     <string name="dejavu_preference_mouse_support">Sopòrto do ratto</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic co-o pomello de mezo o l\'arve un colegamento inte \'n feuggio in sfondo, e passâ in sciô colegamento o ne mostra l\'adresso. Un clic co-o pomello de mezo in sciô feuggio o o sära.</string>
+    <string name="dejavu_passkeys_unsupported">E ciave d\'accesso no son ancon supportæ in sta verscion d\'Android</string>
 </resources>

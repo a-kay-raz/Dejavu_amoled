@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu పునఃప్రారంభమైనప్పుడు మళ్లీ ఆఫ్ అవుతుంది</string>
     <string name="dejavu_preference_mouse_support">మౌస్ మద్దతు</string>
     <string name="dejavu_preference_mouse_support_summary">మధ్య బటన్‌తో క్లిక్ చేస్తే లంకె నేపథ్య ట్యాబులో తెరుచుకుంటుంది, లంకెపై పాయింటర్ ఉంచితే దాని చిరునామా కనిపిస్తుంది. ట్యాబుపై మధ్య బటన్‌తో క్లిక్ చేస్తే అది మూసుకుంటుంది.</string>
+    <string name="dejavu_passkeys_unsupported">ఈ Android వెర్షన్‌లో పాస్‌కీలకు ఇంకా మద్దతు లేదు</string>
 </resources>

@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Opet se isključuje kad se Dejavu ponovno pokrene</string>
     <string name="dejavu_preference_mouse_support">Podrška za miš</string>
     <string name="dejavu_preference_mouse_support_summary">Klik srednjom tipkom otvara poveznicu u kartici u pozadini, a prelazak mišem preko poveznice prikazuje njezinu adresu. Klik srednjom tipkom na karticu zatvara je.</string>
+    <string name="dejavu_passkeys_unsupported">Pristupni ključevi još nisu podržani na ovoj verziji Androida</string>
 </resources>

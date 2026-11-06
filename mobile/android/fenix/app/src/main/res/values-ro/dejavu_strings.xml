@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Se dezactivează din nou când Dejavu repornește</string>
     <string name="dejavu_preference_mouse_support">Suport pentru mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic cu butonul din mijloc deschide un link într-o filă în fundal, iar trecerea cu mouse-ul peste un link îi afișează adresa. Un clic cu butonul din mijloc pe o filă o închide.</string>
+    <string name="dejavu_passkeys_unsupported">Cheile de acces nu sunt încă acceptate pe această versiune de Android</string>
 </resources>

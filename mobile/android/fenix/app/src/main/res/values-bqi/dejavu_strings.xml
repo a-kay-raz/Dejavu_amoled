@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">وختی Dejavu دوواره راه بکفه، خاموش مئبوئه</string>
     <string name="dejavu_preference_mouse_support">پشتیبانی موس</string>
     <string name="dejavu_preference_mouse_support_summary">کلیک وسط یه لینک ناْ د یه بلگه پشت صحنه واز اکونه، وو بردن موس رو لینک نشونی اوننه نشون ایده. کلیک وسط رو یه بلگه اونه وسته کنه.</string>
+    <string name="dejavu_passkeys_unsupported">کیلیت گوڌشتن هنی و ای نسخه Android پشتیبانی نمیبوه</string>
 </resources>

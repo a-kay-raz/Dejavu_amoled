@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Poistuu taas käytöstä, kun Dejavu käynnistyy uudelleen</string>
     <string name="dejavu_preference_mouse_support">Hiiren tuki</string>
     <string name="dejavu_preference_mouse_support_summary">Keskipainikkeen napsautus avaa linkin taustavälilehteen, ja hiiren pitäminen linkin päällä näyttää sen osoitteen. Välilehden napsautus keskipainikkeella sulkee sen.</string>
+    <string name="dejavu_passkeys_unsupported">Pääsyavaimia ei vielä tueta tässä Android-versiossa</string>
 </resources>

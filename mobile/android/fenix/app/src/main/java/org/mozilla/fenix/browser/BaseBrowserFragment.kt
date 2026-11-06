@@ -216,6 +216,7 @@ import org.mozilla.fenix.dejavu.browser.barsLayout
 import org.mozilla.fenix.dejavu.browser.exitFullScreenKeepingBarsHidden
 import org.mozilla.fenix.dejavu.browser.handleDejavuBackPressed
 import org.mozilla.fenix.dejavu.browser.installAboutConfigWarning
+import org.mozilla.fenix.dejavu.browser.installPasskeyWarning
 import org.mozilla.fenix.dejavu.browser.installDejavuSplitView
 import org.mozilla.fenix.dejavu.browser.padForNavigationBar
 import org.mozilla.fenix.dejavu.browser.restoreDejavuRotationAfterFullscreen
@@ -1243,6 +1244,7 @@ abstract class BaseBrowserFragment :
             getContextMenuCandidates(context, binding.dynamicSnackbarContainer)
         }
         installAboutConfigWarning(customTabSessionId)
+        installPasskeyWarning(binding.dynamicSnackbarContainer)
 
         // Dejavu: middle-click opens links in a background tab and hovering shows their address. Not in custom tabs.
         if (customTabSessionId == null) {

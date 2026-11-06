@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Si torne a disativâ cuant che Dejavu al tache di gnûf</string>
     <string name="dejavu_preference_mouse_support">Supuart pe surie</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic di mieç al vierç un colegament intune schede in sotfont, e passâ parsore di un colegament al mostre la sô direzion. Un clic di mieç parsore di une schede le siere.</string>
+    <string name="dejavu_passkeys_unsupported">Lis passkey no son ancjemò supuartadis su cheste version di Android</string>
 </resources>

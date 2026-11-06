@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Wyłōnczo sie zaś po ponownym sztarcie Dejavu</string>
     <string name="dejavu_preference_mouse_support">Spiyranie mysze</string>
     <string name="dejavu_preference_mouse_support_summary">Klikniyncie postrzodkowym knefliym ôtwiyro link we karcie w tle, a najechanie na link pokazuje jego adresa. Klikniyncie postrzodkowym knefliym na karcie zamyko ja.</string>
+    <string name="dejavu_passkeys_unsupported">Klucze dostympu niy sōm jeszcze spiyrane we tyj wersyji Androida</string>
 </resources>

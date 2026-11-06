@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Mademang malih rikala Dejavu kawitin malih</string>
     <string name="dejavu_preference_mouse_support">Dukungan mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Klik tengah ngungkabang link ring tab latar, tur ngenahang mouse ring link ngedengang alamatnyane. Klik tengah ring tab nutup tab punika.</string>
+    <string name="dejavu_passkeys_unsupported">Kunci sandi (passkey) durung kasokong ring versi Android puniki</string>
 </resources>

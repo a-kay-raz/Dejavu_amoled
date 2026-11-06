@@ -578,4 +578,5 @@
     <string name="dejavu_remote_debugging_summary">يتعطّل مجددًا عند إعادة تشغيل Dejavu</string>
     <string name="dejavu_preference_mouse_support">دعم الفأرة</string>
     <string name="dejavu_preference_mouse_support_summary">النقر بالزر الأوسط يفتح الرابط في تبويب في الخلفية، والمرور فوق الرابط يعرض عنوانه. النقر بالزر الأوسط على تبويب يغلقه.</string>
+    <string name="dejavu_passkeys_unsupported">مفاتيح المرور غير مدعومة بعد على إصدار Android هذا</string>
 </resources>

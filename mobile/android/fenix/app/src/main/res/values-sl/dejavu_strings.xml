@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Ob ponovnem zagonu Dejavuja se znova izklopi</string>
     <string name="dejavu_preference_mouse_support">Podpora za miško</string>
     <string name="dejavu_preference_mouse_support_summary">Klik s srednjim gumbom odpre povezavo v zavihku v ozadju, premik miške nad povezavo pa prikaže njen naslov. Klik s srednjim gumbom na zavihek ga zapre.</string>
+    <string name="dejavu_passkeys_unsupported">Ključi za dostop v tej različici Androida še niso podprti</string>
 </resources>

@@ -7,6 +7,7 @@ package org.mozilla.fenix.dejavu.home
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import mozilla.components.compose.base.theme.Theme
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -97,6 +98,36 @@ class WallpaperTest {
     @Test
     fun `a picture without colors is veiled in the plain background`() {
         assertEquals(listOf(DARK_SURFACE), veilOf(WorkspaceWallpaper("a.jpg"), DARK_SURFACE, LIGHT_TEXT).colors)
+    }
+
+    @Test
+    fun `a wallpaper shows in its dark look whatever the app's theme, unless its light look was picked`() {
+        val dark = WorkspaceWallpaper("a.jpg")
+        val light = WorkspaceWallpaper("b.jpg", lightLook = true)
+
+        assertEquals(Theme.Dark, wallpaperTheme(dark, Theme.Light))
+        assertEquals(Theme.Dark, wallpaperTheme(dark, Theme.Dark))
+        assertEquals(Theme.Light, wallpaperTheme(light, Theme.Light))
+        assertEquals(Theme.Light, wallpaperTheme(light, Theme.Dark))
+    }
+
+    @Test
+    fun `the dark look keeps the black of the OLED theme`() {
+        assertEquals(Theme.Oled, wallpaperTheme(WorkspaceWallpaper("a.jpg"), Theme.Oled))
+        assertEquals(Theme.Light, wallpaperTheme(WorkspaceWallpaper("a.jpg", lightLook = true), Theme.Oled))
+    }
+
+    @Test
+    fun `the veil is as dark in the light theme as in the dark one, and pale only in the light look`() {
+        val picture = WorkspaceWallpaper("a.jpg", colors = listOf(RED, BLUE), light = 0.6f, dark = 0.1f)
+        val inLight = veilOf(picture, Theme.Light)
+        val inDark = veilOf(picture, Theme.Dark)
+        val pale = veilOf(picture.copy(lightLook = true), Theme.Dark)
+
+        assertEquals(inDark.colors, inLight.colors)
+        assertEquals(inDark.alpha, inLight.alpha, DELTA)
+        assertTrue(inLight.colors.all { it.luminance() < 0.2f })
+        assertTrue(pale.colors.all { it.luminance() > 0.5f })
     }
 
     /** The contrast of white text over white under a black veil of [alpha], blended in sRGB. */

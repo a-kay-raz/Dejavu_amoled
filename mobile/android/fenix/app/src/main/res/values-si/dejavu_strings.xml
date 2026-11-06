@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu යළි ආරම්භ වූ විට එය නැවත අක්‍රිය වේ</string>
     <string name="dejavu_preference_mouse_support">මූසික සහාය</string>
     <string name="dejavu_preference_mouse_support_summary">මැද බොත්තමෙන් ක්ලික් කිරීමෙන් සබැඳියක් පසුබිම් පටිත්තක විවෘත වන අතර, සබැඳියක් මත මූසිකය තැබීමෙන් එහි ලිපිනය පෙන්වයි. පටිත්තක් මත මැද බොත්තමෙන් ක්ලික් කිරීමෙන් එය වසයි.</string>
+    <string name="dejavu_passkeys_unsupported">මෙම Android සංස්කරණයේ පාස්කී තවම සහාය නොදක්වයි</string>
 </resources>

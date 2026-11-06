@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Slås fra igen, når Dejavu genstarter</string>
     <string name="dejavu_preference_mouse_support">Understøttelse af mus</string>
     <string name="dejavu_preference_mouse_support_summary">Et klik med midterknappen åbner et link i et faneblad i baggrunden, og når du holder markøren over et link, vises dets adresse. Et klik med midterknappen på et faneblad lukker det.</string>
+    <string name="dejavu_passkeys_unsupported">Adgangsnøgler understøttes endnu ikke på denne Android-version</string>
 </resources>

@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">کله چې Dejavu بیا پیل شي، بېرته بندېږي</string>
     <string name="dejavu_preference_mouse_support">د موږک ملاتړ</string>
     <string name="dejavu_preference_mouse_support_summary">د منځني تڼۍ کلیک یوه تړنه په شالید ټب کې پرانیزي، او په تړنه باندې د موږک ساتل یې پته ښيي. په ټب باندې د منځنې تڼۍ کلیک هغه تړي.</string>
+    <string name="dejavu_passkeys_unsupported">پاسکي لا تراوسه د Android په دې نسخه کې نه ملاتړ کېږي</string>
 </resources>

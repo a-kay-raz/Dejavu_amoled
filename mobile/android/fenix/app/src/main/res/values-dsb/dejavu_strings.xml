@@ -562,4 +562,5 @@
     <string name="dejavu_remote_debugging_summary">Wótšaltujo se zasej, gaž se Dejavu znowego startujo</string>
     <string name="dejavu_preference_mouse_support">Pódpěra myški</string>
     <string name="dejavu_preference_mouse_support_summary">Srjejźne kliknjenje wócynja wótkaz w slězynowem rejtariku, a gaž myšku nad wótkazom źaržyśo, se jogo adresa pokazujo. Srjejźne kliknjenje na rejtarik jen zacynja.</string>
+    <string name="dejavu_passkeys_unsupported">Gronidłowe kluce se w toś tej wersiji Android hyšći njepódpěraju</string>
 </resources>

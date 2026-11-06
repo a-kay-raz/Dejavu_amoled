@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dema Dejavu ji nû ve dest pê dike dîsa tê girtin</string>
     <string name="dejavu_preference_mouse_support">Piştgiriya mişkê</string>
     <string name="dejavu_preference_mouse_support_summary">Bi bişkoka navîn tikandin girêdanekê di hilpekîneke paşxanê de vedike, û ragirtina mişkê li ser girêdanê navnîşana wê nîşan dide. Bi bişkoka navîn tikandin li ser hilpekînekê wê digire.</string>
+    <string name="dejavu_passkeys_unsupported">Nifteyên derbasbûnê hîn di vê guhertoya Androidê de nayên destekkirin</string>
 </resources>

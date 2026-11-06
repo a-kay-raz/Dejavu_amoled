@@ -36,7 +36,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
@@ -116,7 +115,6 @@ import org.mozilla.fenix.dejavu.discover.newDot
 import org.mozilla.fenix.dejavu.discover.rememberUnseenNewThings
 import org.mozilla.fenix.dejavu.discover.tipTarget
 import org.mozilla.fenix.dejavu.sync.workspaceIconText
-import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
 import org.mozilla.fenix.dejavu.ui.TapIcon
 import org.mozilla.fenix.dejavu.ui.glass
 import org.mozilla.fenix.dejavu.ui.popupThemeOf
@@ -128,6 +126,7 @@ import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpaper
 import org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataOnQuitType
+import org.mozilla.fenix.theme.getThemeProvider
 
 /**
  * User actions on the Dejavu home screen that leave the screen's own UI state.
@@ -299,11 +298,12 @@ fun DejavuHome(
     // A wallpaper takes the place of its workspace's gradient, whose colors were taken from it.
     fun gradientAt(page: Int): WorkspaceTheme? = themeAt(page).takeIf { wallpaperAt(page) == null }
 
-    // Wallpapers show sharp under a veil of their own colors, which keeps the text over them easy to read.
+    // Wallpapers show sharp under a veil of their own colors, which keeps the text over them easy to read, in the look
+    // picked for them whatever the app's theme.
     val surface = MaterialTheme.colorScheme.surface
-    val onSurface = MaterialTheme.colorScheme.onSurface
-    val veils = remember(wallpapers, surface, onSurface) {
-        wallpapers.mapValues { (_, wallpaper) -> veilOf(wallpaper, surface, onSurface) }
+    val appTheme = getThemeProvider().provideTheme()
+    val veils = remember(wallpapers, appTheme) {
+        wallpapers.mapValues { (_, wallpaper) -> veilOf(wallpaper, appTheme) }
     }
 
     fun veilAt(page: Int): Veil? =
@@ -522,8 +522,8 @@ fun DejavuHome(
         }
     }
 
-    // Dialogs and menus take on the colors of the wallpaper of the workspace they open over.
-    CompositionLocalProvider(LocalPopupTheme provides popupThemeAt(pagerState.currentPage)) {
+    SystemBarIconsOver(wallpaperAt(pagerState.currentPage))
+    OverWallpaper(wallpaperAt(pagerState.currentPage), popupThemeAt(pagerState.currentPage)) {
         // The wallpapers and the theme are drawn behind the system bars too, with the content kept clear of them.
         Box(modifier = modifier.fillMaxSize().background(surface)) {
             if (wallpapers.isNotEmpty()) WallpaperLayers(pagerState, ::wallpaperAt)
@@ -720,31 +720,34 @@ fun DejavuHome(
                                 onRevealed = { revealTabId = null },
                             )
                         }
-                        WorkspacePage(
-                            state = state,
-                            workspace = workspace,
-                            tabs = pageTabs,
-                            selectedTabId = selectedTabId,
-                            containers = containers,
-                            pinnedRowActions = pinnedRowActions,
-                            unpinnedRowActions = unpinnedRowActions,
-                            folderRowActions = folderRowActions,
-                            selection = activeSelection,
-                            drag = drag,
-                            dragAreas = dragAreas,
-                            dragStack = dragStack,
-                            callbacks = callbacks,
-                            canDeleteWorkspace = state.workspaces.size > 1,
-                            canMoveLeft = page > 0,
-                            canMoveRight = page < state.workspaces.size - 1,
-                            hasClosedTab = hasClosedTab,
-                            hasClipboardLink = hasClipboardLink,
-                            revealTabId = revealTabId,
-                            openTabIds = openTabIds,
-                            hasDataToClear = hasDataToClear,
-                            dataPour = pour.takeIf { page == pagerState.currentPage },
-                            askedClear = askedClear.takeIf { page == pagerState.currentPage },
-                        )
+                        // Each page in the look of its own wallpaper, so both show right while swiping between them.
+                        WallpaperTheme(wallpaperAt(page)) {
+                            WorkspacePage(
+                                state = state,
+                                workspace = workspace,
+                                tabs = pageTabs,
+                                selectedTabId = selectedTabId,
+                                containers = containers,
+                                pinnedRowActions = pinnedRowActions,
+                                unpinnedRowActions = unpinnedRowActions,
+                                folderRowActions = folderRowActions,
+                                selection = activeSelection,
+                                drag = drag,
+                                dragAreas = dragAreas,
+                                dragStack = dragStack,
+                                callbacks = callbacks,
+                                canDeleteWorkspace = state.workspaces.size > 1,
+                                canMoveLeft = page > 0,
+                                canMoveRight = page < state.workspaces.size - 1,
+                                hasClosedTab = hasClosedTab,
+                                hasClipboardLink = hasClipboardLink,
+                                revealTabId = revealTabId,
+                                openTabIds = openTabIds,
+                                hasDataToClear = hasDataToClear,
+                                dataPour = pour.takeIf { page == pagerState.currentPage },
+                                askedClear = askedClear.takeIf { page == pagerState.currentPage },
+                            )
+                        }
                     }
 
                     val dragging = drag?.takeIf { it.moved }

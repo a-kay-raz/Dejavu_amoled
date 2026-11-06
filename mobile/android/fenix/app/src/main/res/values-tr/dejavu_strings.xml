@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu yeniden başladığında tekrar kapanır</string>
     <string name="dejavu_preference_mouse_support">Fare desteği</string>
     <string name="dejavu_preference_mouse_support_summary">Orta tıklama bir bağlantıyı arka plandaki bir sekmede açar, bir bağlantının üzerine gelmek ise adresini gösterir. Bir sekmeye orta tıklama onu kapatır.</string>
+    <string name="dejavu_passkeys_unsupported">Geçiş anahtarları bu Android sürümünde henüz desteklenmiyor</string>
 </resources>

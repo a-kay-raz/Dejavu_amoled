@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">ປິດອີກຄັ້ງເມື່ອ Dejavu ເລີ່ມໃໝ່</string>
     <string name="dejavu_preference_mouse_support">ຮອງຮັບເມົ້າ</string>
     <string name="dejavu_preference_mouse_support_summary">ການຄລິກປຸ່ມກາງຈະເປີດລິ້ງໃນແທັບເບື້ອງຫຼັງ, ແລະ ການວາງເມົ້າເທິງລິ້ງຈະສະແດງທີ່ຢູ່ຂອງມັນ. ການຄລິກປຸ່ມກາງໃສ່ແທັບຈະປິດແທັບນັ້ນ.</string>
+    <string name="dejavu_passkeys_unsupported">ລະຫັດຜ່ານກະແຈ (passkey) ຍັງບໍ່ຮອງຮັບໃນ Android ລຸ້ນນີ້</string>
 </resources>

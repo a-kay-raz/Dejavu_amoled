@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">ona li pini sin lon tenpo ni: ilo Dejavu li open sin</string>
     <string name="dejavu_preference_mouse_support">ilo soweli</string>
     <string name="dejavu_preference_mouse_support_summary">nena meso li open e linja lon poki monsi. sina awen e soweli lon linja la ona li pana e nimi ma ona. nena meso lon poki li weka e poki ni.</string>
+    <string name="dejavu_passkeys_unsupported">lon tenpo ni la, sina ken ala kepeken ilo open (passkey) lon ilo Android ni</string>
 </resources>

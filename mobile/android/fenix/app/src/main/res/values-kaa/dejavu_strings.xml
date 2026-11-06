@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu qaytadan iske túskende qayta óshedi</string>
     <string name="dejavu_preference_mouse_support">Tıshqansha qollaw</string>
     <string name="dejavu_preference_mouse_support_summary">Ortańǵı túyme menen basıw siltemeni artqı fondaǵı bette ashadı, al siltemeniń ústine tıshqansha alıp barıw onıń mánzilin kórsetedi. Bet ústine ortańǵı túyme menen basıw onı jabadı.</string>
+    <string name="dejavu_passkeys_unsupported">Kiriw giltleri (passkey) bul Android nusqasında áli qollap-quwatlanbaydı</string>
 </resources>

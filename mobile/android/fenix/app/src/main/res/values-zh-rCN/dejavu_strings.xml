@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu 重启后会再次关闭</string>
     <string name="dejavu_preference_mouse_support">鼠标支持</string>
     <string name="dejavu_preference_mouse_support_summary">中键点击会在后台标签页中打开链接，鼠标悬停在链接上会显示其地址。 在标签页上中键点击会将其关闭。</string>
+    <string name="dejavu_passkeys_unsupported">此 Android 版本尚不支持通行密钥</string>
 </resources>

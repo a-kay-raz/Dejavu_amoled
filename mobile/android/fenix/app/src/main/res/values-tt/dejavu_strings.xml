@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu яңадан башланганда кабат сүнә</string>
     <string name="dejavu_preference_mouse_support">Тычкан ярдәме</string>
     <string name="dejavu_preference_mouse_support_summary">Урта төймә белән чирту сылтаманы фон табында ача, ә сылтама өстенә тычканны китерү аның адресын күрсәтә. Табка урта төймә белән чирту аны ябады.</string>
+    <string name="dejavu_passkeys_unsupported">Android-ның бу нөсхәсендә керү ачкычлары (passkey) әлегә хупланмый</string>
 </resources>

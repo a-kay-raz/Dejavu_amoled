@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">បិទវិញ នៅពេល Dejavu ចាប់ផ្ដើមឡើងវិញ</string>
     <string name="dejavu_preference_mouse_support">ការគាំទ្រកណ្ដុរ</string>
     <string name="dejavu_preference_mouse_support_summary">ការចុចប៊ូតុងកណ្ដាលបើកតំណក្នុងផ្ទាំងផ្ទៃខាងក្រោយ ហើយការដាក់ទស្សន៍ទ្រនិចលើតំណបង្ហាញអាសយដ្ឋានរបស់វា។ ការចុចប៊ូតុងកណ្ដាលលើផ្ទាំងនឹងបិទផ្ទាំងនោះ។</string>
+    <string name="dejavu_passkeys_unsupported">សោសម្ងាត់មិនទាន់ត្រូវបានគាំទ្រនៅលើកំណែ Android នេះនៅឡើយទេ</string>
 </resources>

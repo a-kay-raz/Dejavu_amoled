@@ -570,4 +570,5 @@
     <string name="dejavu_remote_debugging_summary">Diweredekaet e vez en-dro pa adloc’h Dejavu</string>
     <string name="dejavu_preference_mouse_support">Skor al logodenn</string>
     <string name="dejavu_preference_mouse_support_summary">Ur c\'hlik kreiz a zigor ul liamm en un ivinell e drekleur, ha tremen a-us d\'ul liamm a ziskouez e chomlec\'h. Ur c\'hlik kreiz war un ivinell a serr anezhi.</string>
+    <string name="dejavu_passkeys_unsupported">N\'eo ket skoret an alc\'hwezioù tremen gant ar stumm Android-mañ c\'hoazh</string>
 </resources>

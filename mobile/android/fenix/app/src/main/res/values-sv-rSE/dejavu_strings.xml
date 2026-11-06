@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Stängs av igen när Dejavu startas om</string>
     <string name="dejavu_preference_mouse_support">Musstöd</string>
     <string name="dejavu_preference_mouse_support_summary">Ett klick med mittenknappen öppnar en länk i en bakgrundsflik, och när du håller muspekaren över en länk visas dess adress. Ett klick med mittenknappen på en flik stänger den.</string>
+    <string name="dejavu_passkeys_unsupported">Lösenordsnycklar stöds inte ännu i den här Android-versionen</string>
 </resources>

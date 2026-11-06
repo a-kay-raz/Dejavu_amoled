@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu аиҭаартра ашьҭахь еиҭах иаҿыхуеит</string>
     <string name="dejavu_preference_mouse_support">Аҳәынаԥ арыцхыраара</string>
     <string name="dejavu_preference_mouse_support_summary">Аҳәынаԥ абжьаратәи ақәыӷәӷәара азхьарԥш абларҭа ҿыц аҿы иаанартуеит, азхьарԥш ахь аҳәынаԥ анаагалак уи аҭыԥ аарԥшуеит. Азхьарԥш аҿы аҳәынаԥ абжьаратәи ақәыӷәӷәара уи иаарыцәуеит.</string>
+    <string name="dejavu_passkeys_unsupported">Android ари аверсиаҿы passkey-қәа иахьазанӡа ирыдкылам</string>
 </resources>

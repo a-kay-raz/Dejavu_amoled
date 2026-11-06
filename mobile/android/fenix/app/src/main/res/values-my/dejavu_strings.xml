@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ပြန်စသည့်အခါ ပြန်ပိတ်သွားသည်</string>
     <string name="dejavu_preference_mouse_support">မောက်စ် ပံ့ပိုးမှု</string>
     <string name="dejavu_preference_mouse_support_summary">အလယ်ခလုတ်ဖြင့် နှိပ်ပါက လင့်ခ်ကို နောက်ခံ တက်ဗ်တွင် ဖွင့်ပြီး လင့်ခ်ပေါ်တွင် မောက်စ်ထားပါက ၎င်း၏ လိပ်စာကို ပြသသည်။ တက်ဗ်ပေါ်တွင် အလယ်ခလုတ်ဖြင့် နှိပ်ပါက ၎င်းကို ပိတ်သည်။</string>
+    <string name="dejavu_passkeys_unsupported">ဤ Android ဗားရှင်းတွင် passkey များကို မပံ့ပိုးရသေးပါ</string>
 </resources>

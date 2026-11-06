@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu دوبارہ شروع مننگ آ پدا بند مریک</string>
     <string name="dejavu_preference_mouse_support">ماؤس نا مدد</string>
     <string name="dejavu_preference_mouse_support_summary">درمیانی بٹن آن کلک کننگ لنک اے پد نا ٹیب اٹ ملیک، و لنک نا مونا ماؤس اے بننگ اونا پتہ اے پیش کیک۔ ٹیب آ درمیانی بٹن اٹ کلک کننگ اونا بند کیک۔</string>
+    <string name="dejavu_passkeys_unsupported">پاس کی (passkey) ای Android ورژن ٹی ہلے تک سپورٹ مفسہ</string>
 </resources>

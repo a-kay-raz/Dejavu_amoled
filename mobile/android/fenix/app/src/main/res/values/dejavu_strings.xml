@@ -905,4 +905,6 @@
     <string name="dejavu_preference_mouse_support">Mouse support</string>
     <!-- Setting summary of the mouse support switch. -->
     <string name="dejavu_preference_mouse_support_summary">Middle-click opens a link in a background tab, and hovering a link shows its address. Middle-click on a tab closes it.</string>
+    <!-- Shown at the bottom of a web page that asked for a passkey, on Android 13 and older, where Dejavu cannot use passkeys yet. The page shows its own error at the same time. -->
+    <string name="dejavu_passkeys_unsupported">Passkeys aren\'t supported on this Android version yet</string>
 </resources>

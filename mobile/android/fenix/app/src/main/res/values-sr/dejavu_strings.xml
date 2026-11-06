@@ -554,4 +554,5 @@
     <string name="dejavu_remote_debugging_summary">Опет се искључује када се Dejavu поново покрене</string>
     <string name="dejavu_preference_mouse_support">Подршка за миша</string>
     <string name="dejavu_preference_mouse_support_summary">Клик средњим тастером отвара везу у језичку у позадини, а прелазак мишем преко везе приказује њену адресу. Клик средњим тастером на језичак га затвара.</string>
+    <string name="dejavu_passkeys_unsupported">Приступни кључеви још увек нису подржани на овој верзији Android-а</string>
 </resources>

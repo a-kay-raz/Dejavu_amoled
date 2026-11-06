@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Կրկին անջատվում է Dejavu-ի վերագործարկման ժամանակ</string>
     <string name="dejavu_preference_mouse_support">Մկնիկի աջակցում</string>
     <string name="dejavu_preference_mouse_support_summary">Միջին կոճակով սեղմելը հղումը բացում է ֆոնային ներդիրում, իսկ հղման վրա մկնիկը պահելը ցույց է տալիս դրա հասցեն։ Միջին կոճակով սեղմելը ներդիրի վրա փակում է այն։</string>
+    <string name="dejavu_passkeys_unsupported">Անցանիշները դեռ չեն աջակցվում Android-ի այս տարբերակում</string>
 </resources>

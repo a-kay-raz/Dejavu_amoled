@@ -546,4 +546,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu کے دوبارہ شروع ہونے پر یہ پھر سے بند ہو جاتی ہے</string>
     <string name="dejavu_preference_mouse_support">ماؤس کی معاونت</string>
     <string name="dejavu_preference_mouse_support_summary">درمیانی بٹن سے کلک کرنے پر ربط پس منظر کے ٹیب میں کھلتا ہے، اور ربط پر ماؤس رکھنے سے اس کا پتہ دکھائی دیتا ہے۔ ٹیب پر درمیانی بٹن سے کلک کرنے پر وہ بند ہو جاتا ہے۔</string>
+    <string name="dejavu_passkeys_unsupported">اس Android ورژن پر پاس کیز ابھی تک تعاون یافتہ نہیں ہیں</string>
 </resources>

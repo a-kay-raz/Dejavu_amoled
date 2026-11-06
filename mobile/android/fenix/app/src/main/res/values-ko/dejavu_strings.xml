@@ -538,4 +538,5 @@
     <string name="dejavu_remote_debugging_summary">Dejavu를 다시 시작하면 다시 꺼집니다</string>
     <string name="dejavu_preference_mouse_support">마우스 지원</string>
     <string name="dejavu_preference_mouse_support_summary">가운데 버튼으로 클릭하면 링크가 백그라운드 탭에서 열리고, 링크 위에 마우스를 올리면 주소가 표시됩니다. 탭을 가운데 버튼으로 클릭하면 그 탭이 닫힙니다.</string>
+    <string name="dejavu_passkeys_unsupported">이 Android 버전에서는 아직 패스키가 지원되지 않습니다</string>
 </resources>
