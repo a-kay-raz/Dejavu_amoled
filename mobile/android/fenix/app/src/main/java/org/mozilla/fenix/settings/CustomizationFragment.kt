@@ -33,6 +33,7 @@ import org.mozilla.fenix.GleanMetrics.ToolbarSettings
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
 import org.mozilla.fenix.dejavu.browser.BarsLayout
+import org.mozilla.fenix.dejavu.browser.DejavuMouse
 import org.mozilla.fenix.dejavu.browser.DejavuToolbar
 import org.mozilla.fenix.dejavu.discover.NewThing
 import org.mozilla.fenix.dejavu.discover.NewThings
@@ -469,6 +470,16 @@ open class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPadde
             isVisible = !DejavuToolbar.enabled
             isChecked = context.components.settings.isSwipeToolbarToShowTabsEnabled
             onPreferenceChangeListener = SharedPreferenceUpdater()
+        }
+        // Dejavu: the switch of mouse support, which adds or takes out its extension in every page at once.
+        requirePreference<SwitchPreferenceCompat>(R.string.pref_key_mouse_support).apply {
+            isChecked = context.components.settings.isMouseSupportEnabled
+            onPreferenceChangeListener = Preference.OnPreferenceChangeListener { preference, newValue ->
+                SharedPreferenceUpdater().onPreferenceChange(preference, newValue).also {
+                    val core = context.components.core
+                    DejavuMouse.apply(core.engine, core.store, on = newValue == true)
+                }
+            }
         }
         requirePreference<SwitchPreferenceCompat>(R.string.pref_key_shake_gesture_enabled).apply {
             isVisible = context.components.settings.shakeToSummarizeFeatureFlagEnabled && isSummarizationEnabled

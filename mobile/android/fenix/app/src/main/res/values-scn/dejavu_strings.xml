@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Seguita Firefox supra i tò computer e tilèfuni</string>
     <string name="dejavu_settings_whats_new">Nuvità</string>
     <string name="dejavu_settings_whats_new_summary">Chiddu ca purtau ogni virsioni, e un giru di Dejavu</string>
-    <string name="dejavu_settings_author">Criatu di %1$s</string>
     <string name="dejavu_settings_coffee">Pàgami un cafè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nun havi pubblicità. Si ti piaci, un cafè l\'aiuta a crisciri.</string>
     <string name="dejavu_settings_safe_browsing">Navicazzioni sicura di Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Cunsigghi</string>
     <string name="dejavu_settings_tips_summary">Ammustra cunsigghi supra i muvimenti ammucciati, comu tèniri prisatu Scheda nova</string>
     <string name="dejavu_new">Novu</string>
+    <string name="dejavu_menu_customize_reader_view">Pirsunalizza mudalità littura</string>
+    <string name="dejavu_remote_debugging_summary">Si disattiva arrè quannu Dejavu s\'arriavvìa</string>
+    <string name="dejavu_preference_mouse_support">Supportu pô surciu</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic cû buttuni dô menzu apri un liami nta na scheda n sfunnu, e passari supra un liami ni ammustra lu nnirizzu. Un clic cû buttuni dô menzu supra na scheda la chiudi.</string>
 </resources>

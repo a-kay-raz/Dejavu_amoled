@@ -366,6 +366,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                     null
                 }
 
+
                 /* Top level account preferences.
                 Note: Only ONE of these preferences is visible at a time. */
                 resources.getString(R.string.pref_key_sign_in) -> {

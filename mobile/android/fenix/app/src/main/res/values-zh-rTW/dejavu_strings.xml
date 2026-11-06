@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">隨時查看您電腦和手機上的 Firefox</string>
     <string name="dejavu_settings_whats_new">有什麼新鮮事</string>
     <string name="dejavu_settings_whats_new_summary">每個版本帶來的變化，以及 Dejavu 導覽</string>
-    <string name="dejavu_settings_author">由 %1$s 打造</string>
     <string name="dejavu_settings_coffee">請我喝杯咖啡</string>
     <string name="dejavu_settings_coffee_summary">Dejavu 沒有廣告。如果您喜歡它，一杯咖啡能幫助它成長。</string>
     <string name="dejavu_settings_safe_browsing">Google 安全瀏覽</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">提示</string>
     <string name="dejavu_settings_tips_summary">顯示隱藏手勢的相關提示，例如長按「開新分頁」</string>
     <string name="dejavu_new">新功能</string>
+    <string name="dejavu_menu_customize_reader_view">自訂閱讀畫面</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu 重新啟動後會再次關閉</string>
+    <string name="dejavu_preference_mouse_support">滑鼠支援</string>
+    <string name="dejavu_preference_mouse_support_summary">中鍵點擊會在背景分頁中開啟鏈結，滑鼠停在鏈結上會顯示其網址。 在分頁上中鍵點擊會將其關閉。</string>
 </resources>

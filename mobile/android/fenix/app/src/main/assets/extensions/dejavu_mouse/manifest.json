@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Dejavu mouse",
+  "version": "1.4",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dejavu-mouse@dejavu.app"
+    }
+  },
+  "permissions": ["geckoViewAddons", "nativeMessaging", "nativeMessagingFromContent"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ]
+}

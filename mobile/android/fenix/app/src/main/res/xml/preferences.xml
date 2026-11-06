@@ -25,6 +25,7 @@
             android:persistent="false"
             android:summary="@string/dejavu_settings_tips_summary"
             android:title="@string/dejavu_settings_tips" />
+
     </androidx.preference.PreferenceCategory>
 
     <!-- Dejavu: the account section is shown before signing in too, its sign in button telling what workspace sync
@@ -221,6 +222,7 @@
         <androidx.preference.SwitchPreferenceCompat
             android:key="@string/pref_key_remote_debugging"
             android:title="@string/preferences_remote_debugging"
+            android:summary="@string/dejavu_remote_debugging_summary"
             app:iconSpaceReserved="false"
             android:defaultValue="false" />
 

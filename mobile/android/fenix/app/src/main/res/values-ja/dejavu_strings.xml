@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">パソコンとスマートフォンのFirefoxと連動</string>
     <string name="dejavu_settings_whats_new">新機能</string>
     <string name="dejavu_settings_whats_new_summary">各バージョンで追加された内容とDejavuの機能紹介</string>
-    <string name="dejavu_settings_author">作成者: %1$s</string>
     <string name="dejavu_settings_coffee">コーヒーをおごる</string>
     <string name="dejavu_settings_coffee_summary">Dejavuには広告がありません。気に入ったら、コーヒー1杯がDejavuの成長を支えます。</string>
     <string name="dejavu_settings_safe_browsing">Google セーフ ブラウジング</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">ヒント</string>
     <string name="dejavu_settings_tips_summary">「新しいタブ」の長押しなど、隠れたジェスチャーのヒントを表示します</string>
     <string name="dejavu_new">新機能</string>
+    <string name="dejavu_menu_customize_reader_view">リーダービューをカスタマイズ</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu を再起動すると再びオフになります</string>
+    <string name="dejavu_preference_mouse_support">マウスのサポート</string>
+    <string name="dejavu_preference_mouse_support_summary">中クリックでリンクをバックグラウンドのタブで開き、リンクにマウスを重ねるとそのアドレスを表示します。 タブを中クリックすると、そのタブを閉じます。</string>
 </resources>

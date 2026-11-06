@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Suis Firefox sur tes ordinateurs et téléphones</string>
     <string name="dejavu_settings_whats_new">Ko hesɗi</string>
     <string name="dejavu_settings_whats_new_summary">Ce que chaque version a apporté, et une visite guidée de Dejavu</string>
-    <string name="dejavu_settings_author">Créé par %1$s</string>
     <string name="dejavu_settings_coffee">Offre-moi un café</string>
     <string name="dejavu_settings_coffee_summary">Dejavu n\'a pas de publicité. Si tu l\'apprécies, un café l\'aide à grandir.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Conseils</string>
     <string name="dejavu_settings_tips_summary">Afficher des conseils sur les beese junngo cachés, comme l\'appui long sur Tabbere hesere</string>
     <string name="dejavu_new">Hesere</string>
+    <string name="dejavu_menu_customize_reader_view">Heertin jiytol tarorde</string>
+    <string name="dejavu_remote_debugging_summary">Ñifoto kadi so Dejavu fuɗɗitii</string>
+    <string name="dejavu_preference_mouse_support">Wallitorde doombru</string>
+    <string name="dejavu_preference_mouse_support_summary">Dobo hakkunde ina uddita jokkol e tabbere caggal, kadi ɗaɓɓude doombru e dow jokkol ina hollira ñiiɓirde mayre. Dobo hakkunde e dow tabbere ina maaɗa ɗum.</string>
 </resources>

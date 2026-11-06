@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">Tuturkeun Firefox di komputer jeung telepon anjeun</string>
     <string name="dejavu_settings_whats_new">Nu anyar</string>
     <string name="dejavu_settings_whats_new_summary">Naon nu dibawa ku unggal vérsi, jeung wawanohan Dejavu</string>
-    <string name="dejavu_settings_author">Dijieun ku %1$s</string>
     <string name="dejavu_settings_coffee">Traktir kuring kopi</string>
     <string name="dejavu_settings_coffee_summary">Dejavu teu aya iklanna. Upami anjeun resep, sacangkir kopi ngabantu Dejavu tumuwuh.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Pintonkeun tips ngeunaan réngkak nu nyumput, saperti nahan “Tab Anyar”</string>
     <string name="dejavu_new">Anyar</string>
+    <string name="dejavu_menu_customize_reader_view">Robah panémbong pamaca</string>
+    <string name="dejavu_remote_debugging_summary">Pareum deui nalika Dejavu dimimitian deui</string>
+    <string name="dejavu_preference_mouse_support">Pangrojong beurit</string>
+    <string name="dejavu_preference_mouse_support_summary">Klik tengah muka tutumbu dina tab tukang, sarta nempatkeun beurit dina tutumbu némbongkeun alamatna. Klik tengah dina tab nutup tab éta.</string>
 </resources>

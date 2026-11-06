@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Volg Firefox op je computers en telefoons</string>
     <string name="dejavu_settings_whats_new">Wat is er nieuw</string>
     <string name="dejavu_settings_whats_new_summary">Wat elke versie bracht, en een rondleiding door Dejavu</string>
-    <string name="dejavu_settings_author">Gemaakt door %1$s</string>
     <string name="dejavu_settings_coffee">Trakteer me op een koffie</string>
     <string name="dejavu_settings_coffee_summary">Dejavu heeft geen advertenties. Als je ervan geniet, helpt een koffie hem te groeien.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Tips tonen over verborgen bewegingen, zoals “Nieuw tabblad” ingedrukt houden</string>
     <string name="dejavu_new">Nieuw</string>
+    <string name="dejavu_menu_customize_reader_view">Lezerweergave aanpassen</string>
+    <string name="dejavu_remote_debugging_summary">Wordt weer uitgeschakeld wanneer Dejavu opnieuw start</string>
+    <string name="dejavu_preference_mouse_support">Muisondersteuning</string>
+    <string name="dejavu_preference_mouse_support_summary">Een middelklik opent een koppeling in een tabblad op de achtergrond, en met de muis boven een koppeling hangen toont het adres. Een middelklik op een tabblad sluit het.</string>
 </resources>

@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">តាមដាន Firefox លើកុំព្យូទ័រ និងទូរស័ព្ទរបស់អ្នក</string>
     <string name="dejavu_settings_whats_new">មានអ្វីថ្មី</string>
     <string name="dejavu_settings_whats_new_summary">អ្វីដែលកំណែនីមួយៗបាននាំមក និងដំណើរស្វែងយល់ពី Dejavu</string>
-    <string name="dejavu_settings_author">បង្កើតដោយ %1$s</string>
     <string name="dejavu_settings_coffee">ទិញកាហ្វេឲ្យខ្ញុំមួយកែវ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu គ្មានការផ្សាយពាណិជ្ជកម្មទេ។ ប្រសិនបើអ្នកចូលចិត្តវា កាហ្វេមួយកែវជួយឲ្យវារីកចម្រើន។</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">គន្លឹះ</string>
     <string name="dejavu_settings_tips_summary">បង្ហាញគន្លឹះអំពីកាយវិការដែលលាក់ ដូចជាការចុចប៊ូតុង ផ្ទាំងថ្មី ឱ្យជាប់</string>
     <string name="dejavu_new">ថ្មី</string>
+    <string name="dejavu_menu_customize_reader_view">ប្ដូរតាមបំណងទិដ្ឋភាពអ្នកអាន</string>
+    <string name="dejavu_remote_debugging_summary">បិទវិញ នៅពេល Dejavu ចាប់ផ្ដើមឡើងវិញ</string>
+    <string name="dejavu_preference_mouse_support">ការគាំទ្រកណ្ដុរ</string>
+    <string name="dejavu_preference_mouse_support_summary">ការចុចប៊ូតុងកណ្ដាលបើកតំណក្នុងផ្ទាំងផ្ទៃខាងក្រោយ ហើយការដាក់ទស្សន៍ទ្រនិចលើតំណបង្ហាញអាសយដ្ឋានរបស់វា។ ការចុចប៊ូតុងកណ្ដាលលើផ្ទាំងនឹងបិទផ្ទាំងនោះ។</string>
 </resources>

@@ -13,6 +13,8 @@ def catalog = project.extensions.getByType(org.gradle.api.artifacts.VersionCatal
 
 android {
     sourceSets.main.kotlin.srcDirs += 'src/proprietary/java'
+    // The tests of the proprietary code, which do not compile against the stand-ins in src/foss/java.
+    sourceSets.test.kotlin.srcDirs += 'src/testProprietary/java'
 }
 
 dependencies {

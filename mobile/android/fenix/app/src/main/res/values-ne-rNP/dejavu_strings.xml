@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">आफ्ना कम्प्युटर र फोनहरुमा Firefox लाई पछ्याउनुहोस्</string>
     <string name="dejavu_settings_whats_new">के नयाँ छ</string>
     <string name="dejavu_settings_whats_new_summary">हरेक संस्करणले के ल्यायो, र Dejavu को एक भ्रमण</string>
-    <string name="dejavu_settings_author">%1$s द्वारा सिर्जना गरिएको</string>
     <string name="dejavu_settings_coffee">मलाई एक कप कफी किनिदिनुहोस्</string>
     <string name="dejavu_settings_coffee_summary">Dejavu मा विज्ञापनहरु छैनन्। यदि तपाईंलाई यो मन पर्छ भने, एक कप कफीले यसलाई बढ्न मद्दत गर्छ।</string>
     <string name="dejavu_settings_safe_browsing">Google सुरक्षित ब्राउजिङ</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">सुझावहरु</string>
     <string name="dejavu_settings_tips_summary">“नयाँ ट्याब” थिचिराख्ने जस्ता लुकेका इशाराहरुबारे सुझावहरु देखाउनुहोस्</string>
     <string name="dejavu_new">नयाँ</string>
+    <string name="dejavu_menu_customize_reader_view">पाठक दृश्य अनुकुलन गर्नुहोस्</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu पुनः सुरु हुँदा यो फेरि बन्द हुन्छ</string>
+    <string name="dejavu_preference_mouse_support">माउस समर्थन</string>
+    <string name="dejavu_preference_mouse_support_summary">बीचको बटनले क्लिक गर्दा लिङ्क पृष्ठभूमि ट्याबमा खुल्छ, र लिङ्कमाथि पोइन्टर राख्दा त्यसको ठेगाना देखिन्छ। ट्याबमा बीचको बटनले क्लिक गर्दा त्यो बन्द हुन्छ।</string>
 </resources>

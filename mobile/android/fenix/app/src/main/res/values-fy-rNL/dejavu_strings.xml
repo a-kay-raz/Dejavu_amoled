@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Folgje Firefox op jo kompjûters en telefoans</string>
     <string name="dejavu_settings_whats_new">Wat is der nij</string>
     <string name="dejavu_settings_whats_new_summary">Wat elke ferzje brocht, en in rûnlieding troch Dejavu</string>
-    <string name="dejavu_settings_author">Makke troch %1$s</string>
     <string name="dejavu_settings_coffee">Traktearje my op in kofje</string>
     <string name="dejavu_settings_coffee_summary">Dejavu hat gjin advertinsjes. As it jo befalt, helpt in kofje it te groeien.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Tips oer ferstoppe bewegingen toane, lykas ‘Nij ljepblêd’ yndrukt hâlde</string>
     <string name="dejavu_new">Nij</string>
+    <string name="dejavu_menu_customize_reader_view">Lêzerwerjefte oanpasse</string>
+    <string name="dejavu_remote_debugging_summary">Skeakelet wer út as Dejavu opnij start</string>
+    <string name="dejavu_preference_mouse_support">Mûsstipe</string>
+    <string name="dejavu_preference_mouse_support_summary">In middelklik iepenet in keppeling yn in ljepblêd op de eftergrûn, en mei de mûs boppe in keppeling hingje lit it adres sjen. In middelklik op in ljepblêd slút it.</string>
 </resources>

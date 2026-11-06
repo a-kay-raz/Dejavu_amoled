@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">ଆପଣଙ୍କ କମ୍ପ୍ୟୁଟର ଏବଂ ଫୋନ୍‌ରେ Firefox କୁ ଅନୁସରଣ କରନ୍ତୁ</string>
     <string name="dejavu_settings_whats_new">ନୂଆ କଣ ଅଛି</string>
     <string name="dejavu_settings_whats_new_summary">ପ୍ରତ୍ୟେକ ସଂସ୍କରଣ କଣ ଆଣିଲା, ଏବଂ Dejavu ର ଏକ ଭ୍ରମଣ</string>
-    <string name="dejavu_settings_author">%1$s ଙ୍କ ଦ୍ୱାରା ତିଆରି</string>
     <string name="dejavu_settings_coffee">ମୋତେ ଗୋଟିଏ କଫି କିଣିଦିଅନ୍ତୁ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ରେ କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ। ଯଦି ଆପଣଙ୍କୁ ଏହା ଭଲ ଲାଗେ, ଗୋଟିଏ କଫି ଏହାକୁ ବଢ଼ିବାରେ ସାହାଯ୍ୟ କରେ।</string>
     <string name="dejavu_settings_safe_browsing">Google ସୁରକ୍ଷିତ ବ୍ରାଉଜିଂ</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">ପରାମର୍ଶ</string>
     <string name="dejavu_settings_tips_summary">“ନୂଆ ଟ୍ୟାବ୍” ଦବାଇ ଧରିବା ଭଳି ଲୁଚିଥିବା ଜେଶ୍ଚର୍ ବିଷୟରେ ପରାମର୍ଶ ଦେଖାନ୍ତୁ</string>
     <string name="dejavu_new">ନୂଆ</string>
+    <string name="dejavu_menu_customize_reader_view">ପାଠକ ଦୃଶ୍ୟ କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu ପୁଣି ଆରମ୍ଭ ହେଲେ ଏହା ପୁଣି ବନ୍ଦ ହୋଇଯାଏ</string>
+    <string name="dejavu_preference_mouse_support">ମାଉସ୍ ସମର୍ଥନ</string>
+    <string name="dejavu_preference_mouse_support_summary">ମଝି ବଟନ୍‌ରେ କ୍ଲିକ୍ କଲେ ଲିଙ୍କ୍ ପୃଷ୍ଠଭୂମି ଟ୍ୟାବ୍‌ରେ ଖୋଲେ, ଏବଂ ଲିଙ୍କ୍ ଉପରେ ପଏଣ୍ଟର୍ ରଖିଲେ ଏହାର ଠିକଣା ଦେଖାଏ। ଟ୍ୟାବ୍‌ରେ ମଝି ବଟନ୍‌ରେ କ୍ଲିକ୍ କଲେ ତାହା ବନ୍ଦ ହୁଏ।</string>
 </resources>

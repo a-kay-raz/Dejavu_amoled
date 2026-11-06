@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Firefox na swójich licadłach a telefonach slědowaś</string>
     <string name="dejavu_settings_whats_new">Nowe funkcije a změny</string>
     <string name="dejavu_settings_whats_new_summary">Což jo kužda wersija pśinjasła, a tura pśez Dejavu</string>
-    <string name="dejavu_settings_author">Napórał %1$s</string>
     <string name="dejavu_settings_coffee">Kup mi kafej</string>
     <string name="dejavu_settings_coffee_summary">Dejavu njama žedno wabjenje. Jolic se śi spódoba, pomaga jomu kafej rosć.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Pokazki</string>
     <string name="dejavu_settings_tips_summary">Pokazki wó schowanych gestach pokazaś, na pś. dłujke tłocenje na „Nowy rejtarik“</string>
     <string name="dejavu_new">Nowy</string>
+    <string name="dejavu_menu_customize_reader_view">Cytański naglěd pśiměriś</string>
+    <string name="dejavu_remote_debugging_summary">Wótšaltujo se zasej, gaž se Dejavu znowego startujo</string>
+    <string name="dejavu_preference_mouse_support">Pódpěra myški</string>
+    <string name="dejavu_preference_mouse_support_summary">Srjejźne kliknjenje wócynja wótkaz w slězynowem rejtariku, a gaž myšku nad wótkazom źaržyśo, se jogo adresa pokazujo. Srjejźne kliknjenje na rejtarik jen zacynja.</string>
 </resources>

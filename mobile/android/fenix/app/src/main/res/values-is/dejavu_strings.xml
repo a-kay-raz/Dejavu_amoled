@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Fylgstu með Firefox á tölvunum og símunum þínum</string>
     <string name="dejavu_settings_whats_new">Hvað er nýtt</string>
     <string name="dejavu_settings_whats_new_summary">Hvað hver útgáfa færði, og kynnisferð um Dejavu</string>
-    <string name="dejavu_settings_author">Búið til af %1$s</string>
     <string name="dejavu_settings_coffee">Bjóddu mér upp á kaffi</string>
     <string name="dejavu_settings_coffee_summary">Dejavu er án auglýsinga. Ef þér líkar það, hjálpar kaffibolli því að vaxa.</string>
     <string name="dejavu_settings_safe_browsing">Örugg vöfrun Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Ábendingar</string>
     <string name="dejavu_settings_tips_summary">Sýna ábendingar um faldar bendingar, eins og að halda „Nýr flipi“ niðri</string>
     <string name="dejavu_new">Nýtt</string>
+    <string name="dejavu_menu_customize_reader_view">Sérsníða lesham</string>
+    <string name="dejavu_remote_debugging_summary">Slokknar aftur þegar Dejavu er endurræst</string>
+    <string name="dejavu_preference_mouse_support">Músarstuðningur</string>
+    <string name="dejavu_preference_mouse_support_summary">Miðsmellur opnar tengil í bakgrunnsflipa og þegar bendli er haldið yfir tengli sést vistfang hans. Miðsmellur á flipa lokar honum.</string>
 </resources>

@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Jälgi Firefoxi oma arvutites ja telefonides</string>
     <string name="dejavu_settings_whats_new">Mis on uut</string>
     <string name="dejavu_settings_whats_new_summary">Mida iga versioon tõi ning Dejavu tutvustus</string>
-    <string name="dejavu_settings_author">Loonud %1$s</string>
     <string name="dejavu_settings_coffee">Osta mulle kohvi</string>
     <string name="dejavu_settings_coffee_summary">Dejavus pole reklaame. Kui see sulle meeldib, aitab kohv sel kasvada.</string>
     <string name="dejavu_settings_safe_browsing">Google\'i turvaline sirvimine</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Vihjed</string>
     <string name="dejavu_settings_tips_summary">Näita vihjeid peidetud žestide kohta, nagu nupu „Uus kaart“ all hoidmine</string>
     <string name="dejavu_new">Uus</string>
+    <string name="dejavu_menu_customize_reader_view">Kohanda lugemisvaadet</string>
+    <string name="dejavu_remote_debugging_summary">Lülitub Dejavu taaskäivitamisel uuesti välja</string>
+    <string name="dejavu_preference_mouse_support">Hiire tugi</string>
+    <string name="dejavu_preference_mouse_support_summary">Keskmise nupuga klõps avab lingi taustal uuel kaardil ja lingi kohal hõljumine näitab selle aadressi. Keskmise nupuga klõps kaardil sulgeb selle.</string>
 </resources>

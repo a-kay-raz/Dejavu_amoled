@@ -88,6 +88,7 @@ internal class SpacesSyncEngine(
 ) {
     @Volatile
     private var token: SyncToken? = null
+    private val setup = StorageSetupCache()
 
     /** Server time before which the servers asked not to sync again, in local milliseconds. */
     @Volatile
@@ -101,6 +102,7 @@ internal class SpacesSyncEngine(
     /** Forgets everything about the server, for a sign out. */
     fun reset() {
         token = null
+        setup.forget()
         store.clear()
     }
 
@@ -138,10 +140,7 @@ internal class SpacesSyncEngine(
 
         val info = JSONObject(client.expect("GET", "info/collections").body)
         if (!info.has("meta") || !info.has("crypto")) return SpacesSyncResult.NotSetUp
-        val limits = UploadLimits.from(
-            client.request("GET", "info/configuration").takeIf { it.isSuccess }?.body?.let(SyncJson::parseObject),
-        )
-
+        setup.check(token, info)
         checkMetaGlobal(client, data, turnOn)?.let { return it }
         val keys = collectionKeys(client, syncKeys, data) ?: return SpacesSyncResult.NotSetUp
 
@@ -183,6 +182,10 @@ internal class SpacesSyncEngine(
         var sent = 0
         if (changes.isNotEmpty()) {
             log("Uploading ${changes.size} records: ${changes.joinToString { if (it.deleted) "-${it.id}" else it.id }}")
+            // Asked only before uploading, which is rare, so that a sync where nothing changed makes one request.
+            val limits = UploadLimits.from(
+                client.request("GET", "info/configuration").takeIf { it.isSuccess }?.body?.let(SyncJson::parseObject),
+            )
             val uploaded = upload(client, keys, changes, collectionModified, limits)
             changes.filter { it.id in uploaded.succeeded }.forEach { data.server[it.id] = it }
             sent = uploaded.succeeded.size
@@ -244,7 +247,7 @@ internal class SpacesSyncEngine(
      */
     @Suppress("ReturnCount")
     private fun checkMetaGlobal(client: StorageClient, data: SpacesSyncData, turnOn: Boolean): SpacesSyncResult? {
-        val response = client.expect("GET", "storage/meta/global", allowed = setOf(HTTP_NOT_FOUND))
+        val response = setup.get(client, META_GLOBAL)
         if (response.status == HTTP_NOT_FOUND) return SpacesSyncResult.NotSetUp
         val modified = response.header("X-Last-Modified")
         val payload = JSONObject(JSONObject(response.body).getString("payload"))
@@ -271,7 +274,8 @@ internal class SpacesSyncEngine(
         payload.put("engines", engines)
         payload.strings("declined")?.let { declined -> payload.put("declined", JSONArray(declined - COLLECTION)) }
         val body = JSONObject().put("id", "global").put("payload", SyncJson.stringify(payload))
-        client.expect("PUT", "storage/meta/global", SyncJson.stringify(body), ifUnmodifiedSince = modified)
+        client.expect("PUT", META_GLOBAL, SyncJson.stringify(body), ifUnmodifiedSince = modified)
+        setup.forget()
         data.syncId = newSyncId
         data.resetCollection()
         return null
@@ -279,10 +283,9 @@ internal class SpacesSyncEngine(
 
     /** The keys of the spaces collection, read from crypto/keys with the account's sync key. */
     private fun collectionKeys(client: StorageClient, syncKeys: KeyBundle, data: SpacesSyncData): KeyBundle? {
-        val response = client.expect("GET", "storage/crypto/keys", allowed = setOf(HTTP_NOT_FOUND))
+        val response = setup.get(client, CRYPTO_KEYS)
         if (response.status == HTTP_NOT_FOUND) return null
-        val payload = JSONObject(JSONObject(response.body).getString("payload"))
-        val keys = JSONObject(syncKeys.decrypt(payload))
+        val keys = JSONObject(decryptKeys(response, syncKeys, setup))
         val bundle = KeyBundle.fromPair(keys.optJSONObject("collections")?.optJSONArray(COLLECTION))
             ?: KeyBundle.fromPair(keys.optJSONArray("default"))
             ?: throw SyncCryptoException("crypto/keys has no default key")

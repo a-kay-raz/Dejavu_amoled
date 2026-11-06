@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Suandar Firefox sin tes computers e telefons</string>
     <string name="dejavu_settings_whats_new">Novaziuns</string>
     <string name="dejavu_settings_whats_new_summary">Tge che mintga versiun ha purtà, ed ina tura tras Dejavu</string>
-    <string name="dejavu_settings_author">Creà da %1$s</string>
     <string name="dejavu_settings_coffee">Paja in caffè a mai</string>
     <string name="dejavu_settings_coffee_summary">Dejavu n’ha naginas reclamas. Sch’el ta plascha, al gida in caffè a crescher.</string>
     <string name="dejavu_settings_safe_browsing">Navigaziun segira da Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Cussegls</string>
     <string name="dejavu_settings_tips_summary">Mussar cussegls davart gests zuppads, sco tegnair smatgà Nov tab</string>
     <string name="dejavu_new">Nov</string>
+    <string name="dejavu_menu_customize_reader_view">Persunalisar la vista da lectura</string>
+    <string name="dejavu_remote_debugging_summary">Vegn deactivà puspè cura che Dejavu vegn reavià</string>
+    <string name="dejavu_preference_mouse_support">Sustegn da la mieur</string>
+    <string name="dejavu_preference_mouse_support_summary">In clic cun il buttun dal mez avra ina colliaziun en in tab en il fund, e passar sur ina colliaziun mussa sia adressa. In clic cun il buttun dal mez sin in tab al serra.</string>
 </resources>

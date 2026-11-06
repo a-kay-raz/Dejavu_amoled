@@ -177,6 +177,7 @@ object DejavuSync {
     private const val FOREGROUND_POLL_MS = 5 * 60_000L
     private const val MIN_INTERVAL_MS = 10_000L
     private const val CONFLICT_RETRY_MS = 5_000L
+    private const val MAX_CONFLICT_RETRIES = 3
     private const val DEVICES_REFRESH_MS = 60_000L
     private const val UNREACHABLE_RETRY_MS = 30_000L
     private const val MAX_RETRY_DOUBLINGS = 4
@@ -230,6 +231,9 @@ object DejavuSync {
 
     /** Syncs in a row that could not reach the servers, which space out the next tries. */
     private var failedToReach = 0
+
+    /** Syncs in a row that another device's changes cut short, each retried soon until there are too many. */
+    private var conflictsInARow = 0
 
     /** Which tabs here are tabs of the Firefox computers Dejavu shows. */
     @Volatile
@@ -450,13 +454,18 @@ object DejavuSync {
             if (!syncing) return@collectLatest
             // Tabs that are not pinned count by what their records hold: address, title and container. A tab opened in the
             // workspace of a Firefox computer is sent to it once its page loaded, so loading counts too.
+            // Compared field by field rather than mapped to a list per tab, as the browser changes often while
+            // pages load.
             val tabs = context.components.core.store.flow()
-                .map { state ->
-                    state.normalTabs.map { tab ->
-                        listOf(tab.id, tab.content.url, tab.content.title, tab.contextId, tab.content.loading)
+                .map { state -> state.normalTabs }
+                .distinctUntilChanged { old, new ->
+                    old.size == new.size && old.indices.all { index ->
+                        val a = old[index]
+                        val b = new[index]
+                        a.id == b.id && a.content.url == b.content.url && a.content.title == b.content.title &&
+                            a.contextId == b.contextId && a.content.loading == b.content.loading
                     }
                 }
-                .distinctUntilChanged()
             combine(repository.state, containers.records, tabs) { _, _, _ -> }
                 .drop(1)
                 .debounce(LOCAL_CHANGE_DELAY_MS)
@@ -573,6 +582,8 @@ object DejavuSync {
     ): Outcome {
         val context = appContext ?: return Outcome(null)
         val forgotten = forgottenTabs(context)
+        val conflicts = conflictsInARow
+        conflictsInARow = 0
         return try {
             val auth = authOf(account) ?: throw SyncAuthException("The account has no sync key")
             val connected = connectedDevices(account)
@@ -610,10 +621,16 @@ object DejavuSync {
             }
             Outcome(problem, found)
         } catch (e: SyncConflictException) {
-            logger.info("Changed elsewhere during the sync, syncing again", e)
-            scope.launch {
-                delay(CONFLICT_RETRY_MS)
-                request()
+            conflictsInARow = conflicts + 1
+            if (conflictsInARow <= MAX_CONFLICT_RETRIES) {
+                logger.info("Changed elsewhere during the sync, syncing again", e)
+                scope.launch {
+                    delay(CONFLICT_RETRY_MS)
+                    request()
+                }
+            } else {
+                // Leaves it to the next regular sync rather than asking the servers every few seconds.
+                logger.warn("Changed elsewhere during $conflictsInARow syncs in a row, waiting for the next sync", e)
             }
             Outcome(null)
         } catch (e: SyncAuthException) {

@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">ຕິດຕາມ Firefox ຢູ່ຄອມພິວເຕີ ແລະ ໂທລະສັບຂອງທ່ານ</string>
     <string name="dejavu_settings_whats_new">ສິ່ງໃໝ່ໆ</string>
     <string name="dejavu_settings_whats_new_summary">ສິ່ງທີ່ແຕ່ລະລຸ້ນນຳມາ ແລະ ການພາຊົມ Dejavu</string>
-    <string name="dejavu_settings_author">ສ້າງໂດຍ %1$s</string>
     <string name="dejavu_settings_coffee">ລ້ຽງກາເຟຂ້ອຍຈອກໜຶ່ງ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ບໍ່ມີໂຄສະນາ. ຖ້າທ່ານມັກມັນ, ກາເຟຈອກໜຶ່ງຊ່ວຍໃຫ້ມັນເຕີບໂຕ.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">ຄຳແນະນຳ</string>
     <string name="dejavu_settings_tips_summary">ສະແດງຄຳແນະນຳກ່ຽວກັບທ່າທາງທີ່ເຊື່ອງໄວ້ ເຊັ່ນ: ການກົດ “ແທັບໃຫມ່” ຄ້າງໄວ້</string>
     <string name="dejavu_new">ໃຫມ່</string>
+    <string name="dejavu_menu_customize_reader_view">ປັບແຕ່ງມຸມມອງຜູ້ອ່ານ</string>
+    <string name="dejavu_remote_debugging_summary">ປິດອີກຄັ້ງເມື່ອ Dejavu ເລີ່ມໃໝ່</string>
+    <string name="dejavu_preference_mouse_support">ຮອງຮັບເມົ້າ</string>
+    <string name="dejavu_preference_mouse_support_summary">ການຄລິກປຸ່ມກາງຈະເປີດລິ້ງໃນແທັບເບື້ອງຫຼັງ, ແລະ ການວາງເມົ້າເທິງລິ້ງຈະສະແດງທີ່ຢູ່ຂອງມັນ. ການຄລິກປຸ່ມກາງໃສ່ແທັບຈະປິດແທັບນັ້ນ.</string>
 </resources>

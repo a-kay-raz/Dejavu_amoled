@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Jarraitu Firefoxi zure ordenagailu eta telefonoetan</string>
     <string name="dejavu_settings_whats_new">Nobedadeak</string>
     <string name="dejavu_settings_whats_new_summary">Bertsio bakoitzak ekarritakoa, eta Dejavuren bisita gidatua</string>
-    <string name="dejavu_settings_author">Sortzailea: %1$s</string>
     <string name="dejavu_settings_coffee">Erosidazu kafe bat</string>
     <string name="dejavu_settings_coffee_summary">Dejavuk ez du iragarkirik. Gustuko baduzu, kafe batek hazten laguntzen dio.</string>
     <string name="dejavu_settings_safe_browsing">Google-ren nabigatze segurua</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Aholkuak</string>
     <string name="dejavu_settings_tips_summary">Erakutsi ezkutuko keinuei buruzko aholkuak, hala nola «Fitxa berria» sakatuta eustea</string>
     <string name="dejavu_new">Berria</string>
+    <string name="dejavu_menu_customize_reader_view">Pertsonalizatu irakurtzeko ikuspegia</string>
+    <string name="dejavu_remote_debugging_summary">Berriro desaktibatzen da Dejavu berrabiaraztean</string>
+    <string name="dejavu_preference_mouse_support">Saguaren euskarria</string>
+    <string name="dejavu_preference_mouse_support_summary">Erdiko botoiarekin klik eginez gero, esteka atzeko planoko fitxa batean irekitzen da, eta esteka baten gainetik pasatzean haren helbidea erakusten da. Erdiko botoiarekin fitxa baten gainean klik eginez gero, fitxa ixten da.</string>
 </resources>

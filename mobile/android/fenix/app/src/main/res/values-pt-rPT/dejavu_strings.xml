@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Acompanha o Firefox nos teus computadores e telemóveis</string>
     <string name="dejavu_settings_whats_new">Novidades</string>
     <string name="dejavu_settings_whats_new_summary">O que cada versão trouxe e uma visita guiada ao Dejavu</string>
-    <string name="dejavu_settings_author">Criado por %1$s</string>
     <string name="dejavu_settings_coffee">Paga-me um café</string>
     <string name="dejavu_settings_coffee_summary">O Dejavu não tem anúncios. Se gostas dele, um café ajuda-o a crescer.</string>
     <string name="dejavu_settings_safe_browsing">Navegação segura da Google</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Dicas</string>
     <string name="dejavu_settings_tips_summary">Mostrar dicas sobre gestos ocultos, como manter premido o botão Novo separador</string>
     <string name="dejavu_new">Novo</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizar vista de leitura</string>
+    <string name="dejavu_remote_debugging_summary">Volta a ser desativada quando o Dejavu é reiniciado</string>
+    <string name="dejavu_preference_mouse_support">Suporte para rato</string>
+    <string name="dejavu_preference_mouse_support_summary">Um clique com o botão do meio abre uma ligação num separador em segundo plano, e passar o rato sobre uma ligação mostra o seu endereço. Um clique com o botão do meio num separador fecha-o.</string>
 </resources>

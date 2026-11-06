@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Urmărește Firefox pe computerele și telefoanele tale</string>
     <string name="dejavu_settings_whats_new">Ce este nou</string>
     <string name="dejavu_settings_whats_new_summary">Ce a adus fiecare versiune și un tur prin Dejavu</string>
-    <string name="dejavu_settings_author">Creat de %1$s</string>
     <string name="dejavu_settings_coffee">Cumpără-mi o cafea</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nu are reclame. Dacă îți place, o cafea îl ajută să crească.</string>
     <string name="dejavu_settings_safe_browsing">Navigare sigură Google</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Sfaturi</string>
     <string name="dejavu_settings_tips_summary">Afișează sfaturi despre gesturile ascunse, cum ar fi ținerea apăsată pe „Filă nouă”</string>
     <string name="dejavu_new">Nou</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizează modul de lectură</string>
+    <string name="dejavu_remote_debugging_summary">Se dezactivează din nou când Dejavu repornește</string>
+    <string name="dejavu_preference_mouse_support">Suport pentru mouse</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic cu butonul din mijloc deschide un link într-o filă în fundal, iar trecerea cu mouse-ul peste un link îi afișează adresa. Un clic cu butonul din mijloc pe o filă o închide.</string>
 </resources>

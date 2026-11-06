@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Firefox ن رو کامپیوترا و گوشی یلت دنبال کن</string>
     <string name="dejavu_settings_whats_new">چ چیه نۊ هڌ</string>
     <string name="dejavu_settings_whats_new_summary">چیایی که هر نسخه آورد، و یه گشت من Dejavu</string>
-    <string name="dejavu_settings_author">ساخته %1$s</string>
     <string name="dejavu_settings_coffee">یه قهوه سیم بخر</string>
     <string name="dejavu_settings_coffee_summary">Dejavu تبلیغ نداره. اگه خوشت اومد، یه قهوه کمکش می‌کنه که گپ بۊ.</string>
     <string name="dejavu_settings_safe_browsing">مرور ایمن Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">نکته یل</string>
     <string name="dejavu_settings_tips_summary">نشون دادن نکته یل سی اشاره یل قایم، مثل نگه داشتن «بلگه نۊ»</string>
     <string name="dejavu_new">نۊ</string>
+    <string name="dejavu_menu_customize_reader_view">سفارشی کردن نما خۊندنی</string>
+    <string name="dejavu_remote_debugging_summary">وختی Dejavu دوواره راه بکفه، خاموش مئبوئه</string>
+    <string name="dejavu_preference_mouse_support">پشتیبانی موس</string>
+    <string name="dejavu_preference_mouse_support_summary">کلیک وسط یه لینک ناْ د یه بلگه پشت صحنه واز اکونه، وو بردن موس رو لینک نشونی اوننه نشون ایده. کلیک وسط رو یه بلگه اونه وسته کنه.</string>
 </resources>

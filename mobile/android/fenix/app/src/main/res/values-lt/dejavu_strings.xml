@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Sekite Firefox savo kompiuteriuose ir telefonuose</string>
     <string name="dejavu_settings_whats_new">Kas naujo</string>
     <string name="dejavu_settings_whats_new_summary">Kiekvienos versijos naujovės ir Dejavu apžvalga</string>
-    <string name="dejavu_settings_author">Sukūrė %1$s</string>
     <string name="dejavu_settings_coffee">Nupirkite man kavos</string>
     <string name="dejavu_settings_coffee_summary">Dejavu neturi reklamų. Jei jums patinka, puodelis kavos padeda jai augti.</string>
     <string name="dejavu_settings_safe_browsing">„Google“ saugus naršymas</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Patarimai</string>
     <string name="dejavu_settings_tips_summary">Rodyti patarimus apie paslėptus gestus, pavyzdžiui, mygtuko „Nauja kortelė“ palaikymą</string>
     <string name="dejavu_new">Nauja</string>
+    <string name="dejavu_menu_customize_reader_view">Tinkinti skaitymo rodinį</string>
+    <string name="dejavu_remote_debugging_summary">Iš naujo paleidus Dejavu vėl išsijungia</string>
+    <string name="dejavu_preference_mouse_support">Pelės palaikymas</string>
+    <string name="dejavu_preference_mouse_support_summary">Spustelėjus viduriniu mygtuku, saitas atveriamas fono kortelėje, o užvedus pelę ant saito rodomas jo adresas. Spustelėjus viduriniu mygtuku kortelę, ji uždaroma.</string>
 </resources>

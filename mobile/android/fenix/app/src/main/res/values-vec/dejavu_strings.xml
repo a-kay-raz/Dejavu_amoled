@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Segui Firefox so i to computer e tełèfoni</string>
     <string name="dejavu_settings_whats_new">Novità</string>
     <string name="dejavu_settings_whats_new_summary">Quel che onji version ła ga portà, e un giro par Dejavu</string>
-    <string name="dejavu_settings_author">Creà da %1$s</string>
     <string name="dejavu_settings_coffee">Pàgheme un cafè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu no’l ga publicità. Se el te piase, un cafè el lo juta a crésser.</string>
     <string name="dejavu_settings_safe_browsing">Navegasion segura de Google</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Consegi</string>
     <string name="dejavu_settings_tips_summary">Mostra consegi so i gesti sconti, come tegner strucà Nova scheda</string>
     <string name="dejavu_new">Novo</string>
+    <string name="dejavu_menu_customize_reader_view">Personalixa ła modalità ƚetura</string>
+    <string name="dejavu_remote_debugging_summary">Se dexativa danovo co Dejavu el se reavia</string>
+    <string name="dejavu_preference_mouse_support">Suporto par el sorze</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic col boton de mezo el verze un colegamento inte na scheda in sfondo, e passar sora un colegamento el ghe mostra l\'indirizo. Un clic col boton de mezo sora na scheda la sara.</string>
 </resources>

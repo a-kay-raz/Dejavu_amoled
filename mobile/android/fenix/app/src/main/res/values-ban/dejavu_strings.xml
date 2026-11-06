@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">Tutin Firefox di komputer lan ponsel ragane</string>
     <string name="dejavu_settings_whats_new">Ane anyar</string>
     <string name="dejavu_settings_whats_new_summary">Ane abana olih tiap versi, lan tur Dejavu</string>
-    <string name="dejavu_settings_author">Kakaryanin olih %1$s</string>
     <string name="dejavu_settings_coffee">Beliang tiang kopi</string>
     <string name="dejavu_settings_coffee_summary">Dejavu tusing ngelah iklan. Yen ragane demen, agelas kopi nulungin Dejavu apang tumbuh.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Edengang tips indik gestur ane kaengkebang, minakadi nekek “Tab Anyar”</string>
     <string name="dejavu_new">Anyar</string>
+    <string name="dejavu_menu_customize_reader_view">Setel tampilan pamaca</string>
+    <string name="dejavu_remote_debugging_summary">Mademang malih rikala Dejavu kawitin malih</string>
+    <string name="dejavu_preference_mouse_support">Dukungan mouse</string>
+    <string name="dejavu_preference_mouse_support_summary">Klik tengah ngungkabang link ring tab latar, tur ngenahang mouse ring link ngedengang alamatnyane. Klik tengah ring tab nutup tab punika.</string>
 </resources>

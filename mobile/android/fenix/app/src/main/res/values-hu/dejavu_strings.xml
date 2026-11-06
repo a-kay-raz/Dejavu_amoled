@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Kövesse a Firefoxot számítógépein és telefonjain</string>
     <string name="dejavu_settings_whats_new">Újdonságok</string>
     <string name="dejavu_settings_whats_new_summary">Mit hozott minden verzió, és a Dejavu bemutatója</string>
-    <string name="dejavu_settings_author">Készítette: %1$s</string>
     <string name="dejavu_settings_coffee">Hívjon meg egy kávéra</string>
     <string name="dejavu_settings_coffee_summary">A Dejavuban nincsenek reklámok. Ha tetszik, egy kávé segíti a fejlődését.</string>
     <string name="dejavu_settings_safe_browsing">Google Biztonságos Böngészés</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Tippek</string>
     <string name="dejavu_settings_tips_summary">Tippek megjelenítése a rejtett kézmozdulatokról, például az Új lap gomb hosszú megnyomásáról</string>
     <string name="dejavu_new">Új</string>
+    <string name="dejavu_menu_customize_reader_view">Olvasó nézet testreszabása</string>
+    <string name="dejavu_remote_debugging_summary">A Dejavu újraindításakor ismét kikapcsol</string>
+    <string name="dejavu_preference_mouse_support">Egértámogatás</string>
+    <string name="dejavu_preference_mouse_support_summary">A középső gombos kattintás háttérlapon nyitja meg a hivatkozást, a hivatkozás fölé vitt egér pedig megjeleníti a címét. A középső gombos kattintás egy lapon bezárja azt.</string>
 </resources>

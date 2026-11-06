@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Segui Firefox sui tuoi computer e telefoni</string>
     <string name="dejavu_settings_whats_new">Novità</string>
     <string name="dejavu_settings_whats_new_summary">Cosa ha portato ogni versione e un tour di Dejavu</string>
-    <string name="dejavu_settings_author">Creato da %1$s</string>
     <string name="dejavu_settings_coffee">Offrimi un caffè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu non ha pubblicità. Se ti piace, un caffè lo aiuta a crescere.</string>
     <string name="dejavu_settings_safe_browsing">Navigazione sicura di Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Suggerimenti</string>
     <string name="dejavu_settings_tips_summary">Mostra suggerimenti sui gesti nascosti, come tenere premuto «Nuova scheda»</string>
     <string name="dejavu_new">Novità</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizza modalità lettura</string>
+    <string name="dejavu_remote_debugging_summary">Si disattiva di nuovo al riavvio di Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Supporto per il mouse</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic con il tasto centrale apre un link in una scheda in background, e passare sopra un link ne mostra l\'indirizzo. Un clic con il tasto centrale su una scheda la chiude.</string>
 </resources>

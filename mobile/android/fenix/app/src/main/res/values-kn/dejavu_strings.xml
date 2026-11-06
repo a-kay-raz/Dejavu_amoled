@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ಗಳು ಮತ್ತು ಫೋನ್‌ಗಳಲ್ಲಿರುವ Firefox ಅನ್ನು ಅನುಸರಿಸಿ</string>
     <string name="dejavu_settings_whats_new">ಹೊಸತೇನಿದೆ</string>
     <string name="dejavu_settings_whats_new_summary">ಪ್ರತಿ ಆವೃತ್ತಿ ಏನು ತಂದಿತು, ಮತ್ತು Dejavu ನ ಪರಿಚಯ ಪ್ರವಾಸ</string>
-    <string name="dejavu_settings_author">%1$s ಅವರಿಂದ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="dejavu_settings_coffee">ನನಗೆ ಒಂದು ಕಾಫಿ ಕೊಡಿಸಿ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ನಲ್ಲಿ ಜಾಹೀರಾತುಗಳಿಲ್ಲ. ನಿಮಗೆ ಇದು ಇಷ್ಟವಾದರೆ, ಒಂದು ಕಾಫಿ ಇದರ ಬೆಳವಣಿಗೆಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ.</string>
     <string name="dejavu_settings_safe_browsing">Google ಸುರಕ್ಷಿತ ಬ್ರೌಸಿಂಗ್</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">ಸಲಹೆಗಳು</string>
     <string name="dejavu_settings_tips_summary">“ಹೊಸ ಟ್ಯಾಬ್” ಅನ್ನು ಒತ್ತಿ ಹಿಡಿಯುವಂತಹ ಮರೆಯಾದ ಸನ್ನೆಗಳ ಬಗ್ಗೆ ಸಲಹೆಗಳನ್ನು ತೋರಿಸು</string>
     <string name="dejavu_new">ಹೊಸದು</string>
+    <string name="dejavu_menu_customize_reader_view">ಓದುಗರ ನೋಟವನ್ನು ಅಗತ್ಯಾನುಗುಣಗೊಳಿಸಿ</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu ಮರುಪ್ರಾರಂಭವಾದಾಗ ಮತ್ತೆ ಆಫ್ ಆಗುತ್ತದೆ</string>
+    <string name="dejavu_preference_mouse_support">ಮೌಸ್ ಬೆಂಬಲ</string>
+    <string name="dejavu_preference_mouse_support_summary">ಮಧ್ಯದ ಬಟನ್ ಕ್ಲಿಕ್ ಕೊಂಡಿಯನ್ನು ಹಿನ್ನೆಲೆ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ, ಮತ್ತು ಕೊಂಡಿಯ ಮೇಲೆ ಪಾಯಿಂಟರ್ ಇರಿಸಿದರೆ ಅದರ ವಿಳಾಸ ಕಾಣಿಸುತ್ತದೆ. ಟ್ಯಾಬ್ ಮೇಲೆ ಮಧ್ಯದ ಬಟನ್ ಕ್ಲಿಕ್ ಅದನ್ನು ಮುಚ್ಚುತ್ತದೆ.</string>
 </resources>

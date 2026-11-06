@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Sekojiet Firefox savos datoros un tālruņos</string>
     <string name="dejavu_settings_whats_new">Kas jauns</string>
     <string name="dejavu_settings_whats_new_summary">Katras versijas jaunumi un ekskursija pa Dejavu</string>
-    <string name="dejavu_settings_author">Izveidoja %1$s</string>
     <string name="dejavu_settings_coffee">Uzsauciet man kafiju</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nav reklāmu. Ja tā jums patīk, kafijas tase palīdz tai augt.</string>
     <string name="dejavu_settings_safe_browsing">Google droša pārlūkošana</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Padomi</string>
     <string name="dejavu_settings_tips_summary">Rādīt padomus par slēptiem žestiem, piemēram, pogas Jauna cilne turēšanu</string>
     <string name="dejavu_new">Jaunums</string>
+    <string name="dejavu_menu_customize_reader_view">Pielāgot lasītāja režīmu</string>
+    <string name="dejavu_remote_debugging_summary">Atkal izslēdzas, kad Dejavu tiek restartēts</string>
+    <string name="dejavu_preference_mouse_support">Peles atbalsts</string>
+    <string name="dejavu_preference_mouse_support_summary">Klikšķis ar vidējo pogu atver saiti fona cilnē, un, novietojot peli virs saites, tiek parādīta tās adrese. Klikšķis ar vidējo pogu uz cilnes to aizver.</string>
 </resources>

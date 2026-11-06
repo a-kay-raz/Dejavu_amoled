@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Следвайте Firefox на компютрите и телефоните си</string>
     <string name="dejavu_settings_whats_new">Какво е новото</string>
     <string name="dejavu_settings_whats_new_summary">Какво донесе всяка версия и обиколка на Dejavu</string>
-    <string name="dejavu_settings_author">Създадено от %1$s</string>
     <string name="dejavu_settings_coffee">Купете ми кафе</string>
     <string name="dejavu_settings_coffee_summary">Dejavu няма реклами. Ако ви харесва, едно кафе му помага да расте.</string>
     <string name="dejavu_settings_safe_browsing">Безопасно сърфиране с Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Съвети</string>
     <string name="dejavu_settings_tips_summary">Показване на съвети за скрити жестове, като задържане на „Нов раздел“</string>
     <string name="dejavu_new">Нов</string>
+    <string name="dejavu_menu_customize_reader_view">Приспособяване на изгледа за четене</string>
+    <string name="dejavu_remote_debugging_summary">Изключва се отново, когато Dejavu се рестартира</string>
+    <string name="dejavu_preference_mouse_support">Поддръжка на мишка</string>
+    <string name="dejavu_preference_mouse_support_summary">Щракването със средния бутон отваря връзката във фонов раздел, а посочването на връзка показва адреса ѝ. Щракването със средния бутон върху раздел го затваря.</string>
 </resources>

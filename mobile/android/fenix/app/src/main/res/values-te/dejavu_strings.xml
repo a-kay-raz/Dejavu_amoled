@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">మీ కంప్యూటర్లు మరియు ఫోనుల్లోని Firefoxను అనుసరించండి</string>
     <string name="dejavu_settings_whats_new">కొత్తవి ఏమిటి</string>
     <string name="dejavu_settings_whats_new_summary">ప్రతి వెర్షన్ తెచ్చినవి, మరియు Dejavu పరిచయం</string>
-    <string name="dejavu_settings_author">%1$s రూపొందించారు</string>
     <string name="dejavu_settings_coffee">నాకు ఒక కాఫీ కొనివ్వండి</string>
     <string name="dejavu_settings_coffee_summary">Dejavuలో ప్రకటనలు లేవు. మీకు నచ్చితే, ఒక కాఫీ దాని ఎదుగుదలకు సహాయపడుతుంది.</string>
     <string name="dejavu_settings_safe_browsing">Google సురక్షిత బ్రౌజింగ్</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">చిట్కాలు</string>
     <string name="dejavu_settings_tips_summary">కొత్త ట్యాబు బటన్‌ను నొక్కిపట్టుకోవడం వంటి దాగి ఉన్న సైగల గురించి చిట్కాలను చూపించు</string>
     <string name="dejavu_new">కొత్తది</string>
+    <string name="dejavu_menu_customize_reader_view">చదివే వీక్షణను అభిమతీకరించు</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu పునఃప్రారంభమైనప్పుడు మళ్లీ ఆఫ్ అవుతుంది</string>
+    <string name="dejavu_preference_mouse_support">మౌస్ మద్దతు</string>
+    <string name="dejavu_preference_mouse_support_summary">మధ్య బటన్‌తో క్లిక్ చేస్తే లంకె నేపథ్య ట్యాబులో తెరుచుకుంటుంది, లంకెపై పాయింటర్ ఉంచితే దాని చిరునామా కనిపిస్తుంది. ట్యాబుపై మధ్య బటన్‌తో క్లిక్ చేస్తే అది మూసుకుంటుంది.</string>
 </resources>

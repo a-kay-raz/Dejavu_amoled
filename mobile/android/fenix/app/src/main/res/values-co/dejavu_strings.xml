@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Seguitate Firefox nant\'à i vostri urdinatori è telefoni</string>
     <string name="dejavu_settings_whats_new">Ciò chì hè novu</string>
     <string name="dejavu_settings_whats_new_summary">Ciò chì ogni versione hà purtatu, è una visita di Dejavu</string>
-    <string name="dejavu_settings_author">Creatu da %1$s</string>
     <string name="dejavu_settings_coffee">Pagate mi un caffè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ùn hà micca publicità. S\'ellu vi piace, un caffè l\'aiuta à cresce.</string>
     <string name="dejavu_settings_safe_browsing">Navigazione sicura di Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Cunsiglii</string>
     <string name="dejavu_settings_tips_summary">Affissà cunsiglii nant\'à e mosse piatte, cum\'è tene appughjatu Nova unghjetta</string>
     <string name="dejavu_new">Novu</string>
+    <string name="dejavu_menu_customize_reader_view">Persunalizà u modu di lettura</string>
+    <string name="dejavu_remote_debugging_summary">Si disattiva torna quandu Dejavu riparte</string>
+    <string name="dejavu_preference_mouse_support">Supportu di u topu</string>
+    <string name="dejavu_preference_mouse_support_summary">Un cliccu cù u buttone di u mezu apre un liame in un\'unghjetta in fondu, è passà nantu à un liame ne mostra l\'indirizzu. Un cliccu cù u buttone di u mezu nant\'à un\'unghjetta a chjode.</string>
 </resources>

@@ -21,7 +21,10 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SnapshotMutationPolicy
+import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -34,6 +37,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
@@ -45,9 +49,12 @@ import mozilla.components.browser.state.action.TabListAction
 import mozilla.components.browser.state.selector.findTab
 import mozilla.components.browser.state.selector.normalTabs
 import mozilla.components.browser.state.selector.privateTabs
+import mozilla.components.browser.state.state.BrowserState
 import mozilla.components.browser.state.state.ContainerState
 import mozilla.components.browser.state.state.SessionState
 import mozilla.components.browser.state.state.TabSessionState
+import mozilla.components.browser.state.store.BrowserStore
+import mozilla.components.lib.state.ext.observe
 import mozilla.components.lib.state.ext.observeAsComposableState
 import mozilla.components.support.ktx.kotlin.isUrl
 import mozilla.components.support.ktx.kotlin.toNormalizedUrl
@@ -157,8 +164,8 @@ fun ComposeView.setDejavuHomeContent(
             val searchAtBottom by settings.homeSearchAtBottom.collectAsState()
             val containerRecords by containerStorage.records.collectAsState()
             val containers = remember(containerRecords) { containerRecords.orEmpty().associateBy { it.contextId } }
-            val tabs by fenix.core.store.observeAsComposableState { it.normalTabs }
-            val allPrivateTabs by fenix.core.store.observeAsComposableState { it.privateTabs }
+            val tabs by fenix.core.store.observeTabsForHome { it.normalTabs }
+            val allPrivateTabs by fenix.core.store.observeTabsForHome { it.privateTabs }
             val isPrivateLocked by fenix.appStore.observeAsComposableState { it.isPrivateScreenLocked }
             val selectedTabId by fenix.core.store.observeAsComposableState { it.selectedTabId }
             // Read only by the downloads button, so download progress redraws nothing else.
@@ -213,10 +220,19 @@ fun ComposeView.setDejavuHomeContent(
                     hasClosedTab = hasClosedTab,
                     hasClipboardLink = hasClipboardLink,
                     containers = containers,
-                    pinnedRowActions = resolveRowActions(pinnedKeys, ActionPlace.PINNED_ROWS, customActions),
-                    unpinnedRowActions = resolveRowActions(unpinnedKeys, ActionPlace.UNPINNED_ROWS, customActions),
-                    folderRowActions = resolveRowActions(folderKeys, ActionPlace.FOLDER_ROWS, customActions),
-                    selectionActions = resolveSelectionActions(hiddenSelectionKeys, customActions),
+                    // Remembered, so that the workspace pages can skip recomposing when nothing they show changed.
+                    pinnedRowActions = remember(pinnedKeys, customActions) {
+                        resolveRowActions(pinnedKeys, ActionPlace.PINNED_ROWS, customActions)
+                    },
+                    unpinnedRowActions = remember(unpinnedKeys, customActions) {
+                        resolveRowActions(unpinnedKeys, ActionPlace.UNPINNED_ROWS, customActions)
+                    },
+                    folderRowActions = remember(folderKeys, customActions) {
+                        resolveRowActions(folderKeys, ActionPlace.FOLDER_ROWS, customActions)
+                    },
+                    selectionActions = remember(hiddenSelectionKeys, customActions) {
+                        resolveSelectionActions(hiddenSelectionKeys, customActions)
+                    },
                     essentialsPerContainer = essentialsPerContainer,
                     wallpapers = wallpapers,
                     downloads = downloads,
@@ -313,6 +329,30 @@ private const val STARTER_ICONS_DELAY_MS = 2_000L
 
 private fun <T> Components.readOnMainThread(block: () -> T): T =
     strictMode.allowViolation(StrictMode::allowThreadDiskReads, block)
+
+/**
+ * The tabs [select] picks from this store, like [observeAsComposableState], but only updated when something the home
+ * shows of them changes, see [isSameOnHome]. Load progress and the other updates of a loading page then no longer
+ * recompose the home. The tabs keep the values of their last update, so fields that [isSameOnHome] leaves out may be
+ * out of date: read those from the store.
+ */
+@Composable
+internal fun BrowserStore.observeTabsForHome(
+    select: (BrowserState) -> List<TabSessionState>,
+): State<List<TabSessionState>> {
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val tabs = remember { mutableStateOf(select(state), HomeTabsPolicy) }
+    DisposableEffect(this, lifecycleOwner) {
+        val subscription = observe(lifecycleOwner) { browserState -> tabs.value = select(browserState) }
+        onDispose { subscription?.unsubscribe() }
+    }
+    return tabs
+}
+
+/** Takes a new list of tabs as the same one while the home would show it the same. */
+private object HomeTabsPolicy : SnapshotMutationPolicy<List<TabSessionState>> {
+    override fun equivalent(a: List<TabSessionState>, b: List<TabSessionState>): Boolean = isSameOnHome(a, b)
+}
 
 @Suppress("TooManyFunctions", "LongParameterList")
 private class DefaultDejavuHomeInteractor(

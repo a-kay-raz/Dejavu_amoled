@@ -192,6 +192,25 @@ val TabSessionState.displayTitle: String
     get() = pageLabel(content.title, content.url)
 
 /**
+ * Whether [old] and [new] look the same on the home and in its rows, dialogs and actions: the same tabs in the same
+ * order, with the same id, address, title, icon, container and awake state. Those are all the tab fields the home
+ * reads; the rows of private tabs show their icon. Load progress, security and media change many times per page load
+ * and are left out.
+ */
+fun isSameOnHome(old: List<TabSessionState>, new: List<TabSessionState>): Boolean =
+    old === new || (old.size == new.size && old.indices.all { isSameOnHome(old[it], new[it]) })
+
+private fun isSameOnHome(old: TabSessionState, new: TabSessionState): Boolean =
+    old === new || (
+        old.id == new.id &&
+            old.content.url == new.content.url &&
+            old.content.title == new.content.title &&
+            old.content.icon === new.content.icon &&
+            old.contextId == new.contextId &&
+            old.isAwake == new.isAwake
+        )
+
+/**
  * The page's [title], like browsers show on tabs, or its address when the page has no title or its title is its own
  * address. Any other title is shown as the page wrote it, never made to look like an address.
  */
@@ -304,6 +323,14 @@ private fun pinnedClose(targets: ActionTargets): RowAction? = when {
     targets.folders.isEmpty() -> RowAction.BuiltIn(TabAction.UNPIN)
     else -> null
 }
+
+/**
+ * What a middle-click does on a row: what its Close button does, except unpinning, which a stray click should not do.
+ * So it closes the tab of an unpinned row, puts the tab of a pinned one to sleep, and does nothing otherwise.
+ */
+fun middleClickAction(targets: ActionTargets, isPinned: Boolean): RowAction? =
+    rowActions(listOf(CloseAction), targets, isPinned)
+        .firstOrNull { (it as? RowAction.BuiltIn)?.action != TabAction.UNPIN }
 
 /** Folder that a new folder grouping [targets] goes in: their common parent, while it can hold one more level. */
 fun WorkspaceState.newFolderParent(targets: ActionTargets): String? =

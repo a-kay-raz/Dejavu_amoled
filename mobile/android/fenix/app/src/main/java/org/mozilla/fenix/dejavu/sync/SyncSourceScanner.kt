@@ -65,6 +65,7 @@ internal sealed interface ScanResult {
  */
 internal class SyncSourceScanner(private val http: SyncHttp, private val clock: SyncClock = SyncClock()) {
     private val tokens = SyncTokens(http, clock)
+    private val setup = StorageSetupCache()
     private var cached: Pair<String, FoundSyncData>? = null
 
     /** Server time before which the servers asked not to sync again, in local milliseconds. */
@@ -74,6 +75,7 @@ internal class SyncSourceScanner(private val http: SyncHttp, private val clock: 
 
     fun reset() {
         tokens.forget()
+        setup.forget()
         cached = null
     }
 
@@ -109,8 +111,9 @@ internal class SyncSourceScanner(private val http: SyncHttp, private val clock: 
         }
         cached?.takeIf { it.first == signature }?.let { return ScanResult.Found(it.second) }
 
-        val meta = client.metaGlobal() ?: return ScanResult.NotSetUp
-        val keys = client.collectionKeys(KeyBundle.fromSyncKey(auth.syncKey)) ?: return ScanResult.NotSetUp
+        setup.check(token, info)
+        val meta = client.metaGlobal(setup) ?: return ScanResult.NotSetUp
+        val keys = client.collectionKeys(KeyBundle.fromSyncKey(auth.syncKey), setup) ?: return ScanResult.NotSetUp
         fun download(collection: String, stampModified: Boolean = false) =
             if (info.has(collection)) client.downloadAll(collection, keys.of(collection), stampModified) else emptyMap()
 

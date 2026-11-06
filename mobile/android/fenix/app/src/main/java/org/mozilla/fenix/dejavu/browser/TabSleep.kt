@@ -5,6 +5,9 @@
 package org.mozilla.fenix.dejavu.browser
 
 import android.content.ComponentCallbacks2
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ProcessLifecycleOwner
 import java.util.concurrent.ConcurrentHashMap
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -42,6 +45,7 @@ import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 internal class TabSleepMiddleware : Middleware<BrowserState, BrowserAction> {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
     private var ticker: Job? = null
+    private var observing = false
 
     // When each tab stopped being the shown one. A tab's own last access is when it was last selected, so a tab read
     // for an hour would otherwise count as unused from the moment it is left.
@@ -83,9 +87,33 @@ internal class TabSleepMiddleware : Middleware<BrowserState, BrowserAction> {
         sleep(store, TabSleep.tabsOverLimit(store.state, lastShown, keep, limit))
     }
 
+    /**
+     * Checks for idle tabs once a minute, only while the app is shown. In the background nothing is opened, and low
+     * memory handling above does not need the ticker.
+     */
     private fun startTicker(store: Store<BrowserState, BrowserAction>) {
-        if (ticker != null) return
-        ticker = scope.launch {
+        if (observing) return
+        observing = true
+        // addObserver must run on the main thread. The callbacks run there too, so [ticker] is only used there.
+        scope.launch(Dispatchers.Main) {
+            ProcessLifecycleOwner.get().lifecycle.addObserver(
+                object : DefaultLifecycleObserver {
+                    override fun onStart(owner: LifecycleOwner) {
+                        ticker?.cancel()
+                        ticker = tick(store)
+                    }
+
+                    override fun onStop(owner: LifecycleOwner) {
+                        ticker?.cancel()
+                        ticker = null
+                    }
+                },
+            )
+        }
+    }
+
+    private fun tick(store: Store<BrowserState, BrowserAction>): Job =
+        scope.launch {
             while (isActive) {
                 delay(CHECK_INTERVAL_MS)
                 val minutes = sleepMinutes()
@@ -110,7 +138,6 @@ internal class TabSleepMiddleware : Middleware<BrowserState, BrowserAction> {
                 }
             }
         }
-    }
 
     /**
      * Whether Android runs low on memory, which only Android 13 and older say.

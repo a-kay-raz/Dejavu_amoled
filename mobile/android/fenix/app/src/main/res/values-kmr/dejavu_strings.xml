@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Firefox li ser kompîtur û telefonên xwe bişopîne</string>
     <string name="dejavu_settings_whats_new">Çi tiştên nû hene?</string>
     <string name="dejavu_settings_whats_new_summary">Her guhertoyê çi anî, û gerek di Dejavu de</string>
-    <string name="dejavu_settings_author">Ji hêla %1$s ve hatiye afirandin</string>
     <string name="dejavu_settings_coffee">Qehweyekê ji min re bikire</string>
     <string name="dejavu_settings_coffee_summary">Dejavu bê reklam e. Heke tu jê hez dikî, qehweyek dibe alîkar ku ew pêş bikeve.</string>
     <string name="dejavu_settings_safe_browsing">Gerîna Ewle ya Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Şîret</string>
     <string name="dejavu_settings_tips_summary">Şîretên li ser hereketên tiliyan ên veşartî nîşan bide, wekî bi dirêjahî tikandina li «Hilpekîna nû»</string>
     <string name="dejavu_new">Nû</string>
+    <string name="dejavu_menu_customize_reader_view">Moda xwînerê taybet bike</string>
+    <string name="dejavu_remote_debugging_summary">Dema Dejavu ji nû ve dest pê dike dîsa tê girtin</string>
+    <string name="dejavu_preference_mouse_support">Piştgiriya mişkê</string>
+    <string name="dejavu_preference_mouse_support_summary">Bi bişkoka navîn tikandin girêdanekê di hilpekîneke paşxanê de vedike, û ragirtina mişkê li ser girêdanê navnîşana wê nîşan dide. Bi bişkoka navîn tikandin li ser hilpekînekê wê digire.</string>
 </resources>

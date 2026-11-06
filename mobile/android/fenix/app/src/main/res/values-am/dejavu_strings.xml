@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Firefoxን በኮምፒውተሮችዎ እና በስልኮችዎ ላይ ይከተሉ</string>
     <string name="dejavu_settings_whats_new">ምን አዲስ ነገር አለ</string>
     <string name="dejavu_settings_whats_new_summary">እያንዳንዱ ስሪት ያመጣው እና የDejavu ጉብኝት</string>
-    <string name="dejavu_settings_author">በ%1$s የተሰራ</string>
     <string name="dejavu_settings_coffee">ቡና ይግዙልኝ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ማስታወቂያዎች የሉትም። ከወደዱት፣ አንድ ቡና እንዲያድግ ይረዳዋል።</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">ጠቃሚ ምክሮች</string>
     <string name="dejavu_settings_tips_summary">ስለተደበቁ የእጅ ምልክቶች ጠቃሚ ምክሮችን አሳይ፣ ለምሳሌ «አዲስ ትር»ን ተጭኖ መያዝ</string>
     <string name="dejavu_new">አዲስ</string>
+    <string name="dejavu_menu_customize_reader_view">የአንባቢ እይታን አብጅ</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu እንደገና ሲጀምር ተመልሶ ይጠፋል</string>
+    <string name="dejavu_preference_mouse_support">የመዳፊት ድጋፍ</string>
+    <string name="dejavu_preference_mouse_support_summary">በመሃል ቁልፍ ጠቅ ማድረግ አገናኝን በጀርባ ትር ውስጥ ይከፍታል፣ በአገናኝ ላይ ማንዣበብ ደግሞ አድራሻውን ያሳያል። በትር ላይ በመሃል ቁልፍ ጠቅ ማድረግ ትሩን ይዘጋል።</string>
 </resources>

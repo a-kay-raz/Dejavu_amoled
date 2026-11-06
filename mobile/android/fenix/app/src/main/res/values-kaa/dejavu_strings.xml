@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Kompyuterlerińiz hám telefonlarıńızdaǵı Firefox-qa ergesiń</string>
     <string name="dejavu_settings_whats_new">Ne jańalıq</string>
     <string name="dejavu_settings_whats_new_summary">Hár bir nusqanıń jańalıqları hám Dejavu menen tanısıw</string>
-    <string name="dejavu_settings_author">Avtor: %1$s</string>
     <string name="dejavu_settings_coffee">Maǵan bir kofe satıp alıń</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-da reklama joq. Eger ol sizge unasa, bir kofe onıń rawajlanıwına járdem beredi.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Keńesler</string>
     <string name="dejavu_settings_tips_summary">Jasırın háreketler haqqında keńeslerdi kórsetiw, mısalı «Jańa bet» túymesin basıp turıw</string>
     <string name="dejavu_new">Jańa</string>
+    <string name="dejavu_menu_customize_reader_view">Oqıw kórinisin jeke sazlaw</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu qaytadan iske túskende qayta óshedi</string>
+    <string name="dejavu_preference_mouse_support">Tıshqansha qollaw</string>
+    <string name="dejavu_preference_mouse_support_summary">Ortańǵı túyme menen basıw siltemeni artqı fondaǵı bette ashadı, al siltemeniń ústine tıshqansha alıp barıw onıń mánzilin kórsetedi. Bet ústine ortańǵı túyme menen basıw onı jabadı.</string>
 </resources>

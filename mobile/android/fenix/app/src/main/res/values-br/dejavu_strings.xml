@@ -344,7 +344,6 @@
     <string name="dejavu_feature_firefox_sync">Heuliañ Firefox war hoc\'h urzhiataerioù hag ho pellgomzerioù</string>
     <string name="dejavu_settings_whats_new">Petra zo nevez</string>
     <string name="dejavu_settings_whats_new_summary">Ar pezh a zo bet degaset gant pep stumm, hag un dro e Dejavu</string>
-    <string name="dejavu_settings_author">Krouet gant %1$s</string>
     <string name="dejavu_settings_coffee">Prenit ur banne kafe din</string>
     <string name="dejavu_settings_coffee_summary">N’eus bruderezh ebet e Dejavu. Ma kavit mat anezhañ, ur banne kafe a sikour anezhañ da greskiñ.</string>
     <string name="dejavu_settings_safe_browsing">Merdeiñ suraet Google</string>
@@ -567,4 +566,8 @@
     <string name="dejavu_settings_tips">Alioù</string>
     <string name="dejavu_settings_tips_summary">Diskouez alioù diwar-benn ar jestroù kuzh, evel derc’hel war “Ivinell nevez”</string>
     <string name="dejavu_new">Nevez</string>
+    <string name="dejavu_menu_customize_reader_view">Personelaat ar mod lenn</string>
+    <string name="dejavu_remote_debugging_summary">Diweredekaet e vez en-dro pa adloc’h Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Skor al logodenn</string>
+    <string name="dejavu_preference_mouse_support_summary">Ur c\'hlik kreiz a zigor ul liamm en un ivinell e drekleur, ha tremen a-us d\'ul liamm a ziskouez e chomlec\'h. Ur c\'hlik kreiz war un ivinell a serr anezhi.</string>
 </resources>

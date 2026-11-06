@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Segui Firefox in sci tò computer e telefoni</string>
     <string name="dejavu_settings_whats_new">Novitæ</string>
     <string name="dejavu_settings_whats_new_summary">E novitæ de ògni verscion, e un giro pe Dejavu</string>
-    <string name="dejavu_settings_author">Creou da %1$s</string>
     <string name="dejavu_settings_coffee">Pagime un caffè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu o no l\'à de publicitæ. Se o te piaxe, un caffè o l\'agiutta a cresce.</string>
     <string name="dejavu_settings_safe_browsing">Navegaçion segûa de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Conseggi</string>
     <string name="dejavu_settings_tips_summary">Mostra conseggi in scî gesti ascoxi, comme tegnî sciaccou “Neuvo feuggio”</string>
     <string name="dejavu_new">Neuvo</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizza modalitæ letua</string>
+    <string name="dejavu_remote_debugging_summary">O se dizativa torna quande Dejavu o se reavvia</string>
+    <string name="dejavu_preference_mouse_support">Sopòrto do ratto</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic co-o pomello de mezo o l\'arve un colegamento inte \'n feuggio in sfondo, e passâ in sciô colegamento o ne mostra l\'adresso. Un clic co-o pomello de mezo in sciô feuggio o o sära.</string>
 </resources>

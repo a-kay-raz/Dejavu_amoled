@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Ακολουθήστε το Firefox στους υπολογιστές και τα τηλέφωνά σας</string>
     <string name="dejavu_settings_whats_new">Τι νέο υπάρχει</string>
     <string name="dejavu_settings_whats_new_summary">Τι έφερε κάθε έκδοση, και μια περιήγηση στο Dejavu</string>
-    <string name="dejavu_settings_author">Δημιουργός: %1$s</string>
     <string name="dejavu_settings_coffee">Κεράστε με έναν καφέ</string>
     <string name="dejavu_settings_coffee_summary">Το Dejavu δεν έχει διαφημίσεις. Αν σας αρέσει, ένας καφές το βοηθά να μεγαλώσει.</string>
     <string name="dejavu_settings_safe_browsing">Ασφαλής περιήγηση Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Συμβουλές</string>
     <string name="dejavu_settings_tips_summary">Εμφάνιση συμβουλών για κρυφές χειρονομίες, όπως το παρατεταμένο πάτημα του «Νέα καρτέλα»</string>
     <string name="dejavu_new">Νέο</string>
+    <string name="dejavu_menu_customize_reader_view">Προσαρμογή προβολής ανάγνωσης</string>
+    <string name="dejavu_remote_debugging_summary">Απενεργοποιείται ξανά όταν γίνεται επανεκκίνηση του Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Υποστήριξη ποντικιού</string>
+    <string name="dejavu_preference_mouse_support_summary">Το μεσαίο κλικ ανοίγει έναν σύνδεσμο σε καρτέλα στο παρασκήνιο και η τοποθέτηση του δείκτη σε σύνδεσμο εμφανίζει τη διεύθυνσή του. Το μεσαίο κλικ σε καρτέλα την κλείνει.</string>
 </resources>

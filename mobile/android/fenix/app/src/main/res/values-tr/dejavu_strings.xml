@@ -340,7 +340,6 @@
     <string name="dejavu_feature_firefox_sync">Bilgisayarlarınızda ve telefonlarınızda Firefox\'u takip edin</string>
     <string name="dejavu_settings_whats_new">Yeni neler var?</string>
     <string name="dejavu_settings_whats_new_summary">Her sürümün getirdikleri ve bir Dejavu turu</string>
-    <string name="dejavu_settings_author">%1$s tarafından oluşturuldu</string>
     <string name="dejavu_settings_coffee">Bana bir kahve ısmarlayın</string>
     <string name="dejavu_settings_coffee_summary">Dejavu\'da reklam yok. Beğendiyseniz bir kahve onun büyümesine yardımcı olur.</string>
     <string name="dejavu_settings_safe_browsing">Google Güvenli Tarama</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">İpuçları</string>
     <string name="dejavu_settings_tips_summary">Yeni sekme\'ye basılı tutmak gibi gizli parmak hareketleriyle ilgili ipuçlarını göster</string>
     <string name="dejavu_new">Yeni</string>
+    <string name="dejavu_menu_customize_reader_view">Okuyucu görünümünü özelleştir</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu yeniden başladığında tekrar kapanır</string>
+    <string name="dejavu_preference_mouse_support">Fare desteği</string>
+    <string name="dejavu_preference_mouse_support_summary">Orta tıklama bir bağlantıyı arka plandaki bir sekmede açar, bir bağlantının üzerine gelmek ise adresini gösterir. Bir sekmeye orta tıklama onu kapatır.</string>
 </resources>

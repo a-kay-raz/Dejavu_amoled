@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Firefox na swojich ličakach a telefonach slědować</string>
     <string name="dejavu_settings_whats_new">Nowe funkcije a změny</string>
     <string name="dejavu_settings_whats_new_summary">Štož je kóžda wersija přinjesła, a wodźenje po Dejavu</string>
-    <string name="dejavu_settings_author">Wutworjene wot %1$s</string>
     <string name="dejavu_settings_coffee">Kup mi kofej</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nima wabjenja. Jeli so ći lubi, kofej jemu pomha rosć.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Pokiwy</string>
     <string name="dejavu_settings_tips_summary">Pokiwy wo schowanych gestach pokazać, kaž dołhe tłóčenje na „Nowy rajtark“</string>
     <string name="dejavu_new">Nowy</string>
+    <string name="dejavu_menu_customize_reader_view">Čitanski napohlad přiměrić</string>
+    <string name="dejavu_remote_debugging_summary">Znjemóžni so zaso, hdyž so Dejavu znowa startuje</string>
+    <string name="dejavu_preference_mouse_support">Podpěra myški</string>
+    <string name="dejavu_preference_mouse_support_summary">Srjedźne kliknjenje wotkaz w pozadkowym rajtarku wočinja, a hdyž myšku nad wotkazom dźeržiće, so jeho adresa pokazuje. Srjedźne kliknjenje na rajtark jón začinja.</string>
 </resources>

@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Sekvu Firefox sur viaj komputiloj kaj telefonoj</string>
     <string name="dejavu_settings_whats_new">Novaĵoj</string>
     <string name="dejavu_settings_whats_new_summary">Kion ĉiu versio alportis, kaj trarigardo de Dejavu</string>
-    <string name="dejavu_settings_author">Kreita de %1$s</string>
     <string name="dejavu_settings_coffee">Aĉetu al mi kafon</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ne havas reklamojn. Se ĝi plaĉas al vi, kafo helpas ĝin kreski.</string>
     <string name="dejavu_settings_safe_browsing">Sekura retumado de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Konsiloj</string>
     <string name="dejavu_settings_tips_summary">Montri konsilojn pri kaŝitaj gestoj, ekzemple teni “Nova langeto”</string>
     <string name="dejavu_new">Nova</string>
+    <string name="dejavu_menu_customize_reader_view">Personecigi la legilan vidon</string>
+    <string name="dejavu_remote_debugging_summary">Malŝaltiĝas denove kiam Dejavu rekomenciĝas</string>
+    <string name="dejavu_preference_mouse_support">Subteno de muso</string>
+    <string name="dejavu_preference_mouse_support_summary">Meza alklako malfermas ligilon en fona langeto, kaj ŝvebigi la muson super ligilo montras ĝian adreson. Meza alklako sur langeto fermas ĝin.</string>
 </resources>

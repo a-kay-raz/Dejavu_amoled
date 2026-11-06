@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Lean Firefox air na coimpiutairean is fònaichean agad</string>
     <string name="dejavu_settings_whats_new">Na tha ùr</string>
     <string name="dejavu_settings_whats_new_summary">Na thug gach tionndadh leis, agus turas air feadh Dejavu</string>
-    <string name="dejavu_settings_author">Air a chruthachadh le %1$s</string>
     <string name="dejavu_settings_coffee">Ceannaich cofaidh dhomh</string>
     <string name="dejavu_settings_coffee_summary">Chan eil sanasachd ann an Dejavu. Ma chòrdas e riut, cuidichidh cofaidh leis fàs.</string>
     <string name="dejavu_settings_safe_browsing">Brabhsadh Sàbhailte Google</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Gliocasan</string>
     <string name="dejavu_settings_tips_summary">Seall gliocasan mu ghluasadan falaichte, mar a bhith a\' cumail “Taba ùr” sìos</string>
     <string name="dejavu_new">Ùr</string>
+    <string name="dejavu_menu_customize_reader_view">Gnàthaich sealladh an leughadair</string>
+    <string name="dejavu_remote_debugging_summary">Thèid a chur dheth a-rithist nuair a thòisicheas Dejavu às ùr</string>
+    <string name="dejavu_preference_mouse_support">Taic luchaige</string>
+    <string name="dejavu_preference_mouse_support_summary">Fosglaidh briogadh meadhanach ceangal ann an taba sa chùlaibh, agus seallaidh fantainn os cionn ceangail an seòladh aige. Dùinidh briogadh meadhanach air taba e.</string>
 </resources>

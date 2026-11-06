@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">اپنے کمپیوٹرز اور فونز کے Firefox پر نظر رکھیں</string>
     <string name="dejavu_settings_whats_new">نیا کیا ہے</string>
     <string name="dejavu_settings_whats_new_summary">ہر ورژن میں کیا آیا، اور Dejavu کا تعارفی دورہ</string>
-    <string name="dejavu_settings_author">تخلیق کار: %1$s</string>
     <string name="dejavu_settings_coffee">مجھے ایک کافی پلائیں</string>
     <string name="dejavu_settings_coffee_summary">Dejavu میں کوئی اشتہار نہیں۔ اگر آپ کو یہ پسند ہے تو ایک کافی اسے بڑھنے میں مدد دیتی ہے۔</string>
     <string name="dejavu_settings_safe_browsing">Google محفوظ براؤزنگ</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">تجاویز</string>
     <string name="dejavu_settings_tips_summary">پوشیدہ اشاروں کے بارے میں تجاویز دکھائیں، جیسے ”نیا ٹیب“ کو دبا کر رکھنا</string>
     <string name="dejavu_new">نیا</string>
+    <string name="dejavu_menu_customize_reader_view">ریڈر ویو کی تخصیص کریں</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu کے دوبارہ شروع ہونے پر یہ پھر سے بند ہو جاتی ہے</string>
+    <string name="dejavu_preference_mouse_support">ماؤس کی معاونت</string>
+    <string name="dejavu_preference_mouse_support_summary">درمیانی بٹن سے کلک کرنے پر ربط پس منظر کے ٹیب میں کھلتا ہے، اور ربط پر ماؤس رکھنے سے اس کا پتہ دکھائی دیتا ہے۔ ٹیب پر درمیانی بٹن سے کلک کرنے پر وہ بند ہو جاتا ہے۔</string>
 </resources>

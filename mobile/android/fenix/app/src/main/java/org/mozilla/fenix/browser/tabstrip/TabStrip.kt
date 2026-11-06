@@ -90,6 +90,7 @@ import org.mozilla.fenix.compose.HorizontalFadingEdgeBox
 import org.mozilla.fenix.compose.ext.isItemPartiallyVisible
 import org.mozilla.fenix.dejavu.browser.DejavuTabStrip
 import org.mozilla.fenix.dejavu.browser.SLEEPING_TAB_ALPHA
+import org.mozilla.fenix.dejavu.browser.closeOnMiddleClick
 import org.mozilla.fenix.tabstray.browser.compose.ReorderableDragItemContainer
 import org.mozilla.fenix.tabstray.browser.compose.createListReorderState
 import org.mozilla.fenix.tabstray.browser.compose.detectListPressAndDrag
@@ -443,6 +444,8 @@ private fun TabItem(
         Row(
             modifier =
                 Modifier.fillMaxSize()
+                    // Dejavu: a middle-click closes the tab like its close button, and does nothing on a pinned one.
+                    .closeOnMiddleClick({ onCloseTabClick(state.id, state.isPrivate) }.takeUnless { state.isPinned })
                     .clickable { onSelectedTabClick(state.id, state.url) }
                     .semantics {
                         role = Role.Tab

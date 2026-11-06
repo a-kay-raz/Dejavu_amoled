@@ -5,6 +5,7 @@
 package org.mozilla.fenix.dejavu.sync
 
 import java.net.URLEncoder
+import java.security.GeneralSecurityException
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -33,6 +34,39 @@ internal inline fun <T> SyncTokens.retryingOnce(block: () -> T): T = try {
 }
 
 /**
+ * meta/global and crypto/keys as last downloaded, given again while info/collections shows the same server times for
+ * both, so that a sync where nothing changed only asks for info/collections.
+ */
+internal class StorageSetupCache {
+    private var signature: String? = null
+    private val responses = HashMap<String, SyncResponse>()
+
+    /** Forgets what it kept unless the storage of [token] and the times of meta and crypto in [info] are the same. */
+    @Synchronized
+    fun check(token: SyncToken, info: JSONObject) {
+        val current = "${token.endpoint} ${timestampOf(info.opt("meta"))} ${timestampOf(info.opt("crypto"))}"
+        if (current != signature) {
+            responses.clear()
+            signature = current
+        }
+    }
+
+    @Synchronized
+    fun forget() {
+        signature = null
+        responses.clear()
+    }
+
+    /** The answer to GET [path], kept from before or downloaded with [client]. Only successes are kept. */
+    fun get(client: StorageClient, path: String): SyncResponse {
+        synchronized(this) { responses[path] }?.let { return it }
+        val response = client.expect("GET", path, allowed = setOf(HTTP_NOT_FOUND))
+        if (response.isSuccess) synchronized(this) { responses[path] = response }
+        return response
+    }
+}
+
+/**
  * meta/global, which lists the collections the account syncs.
  *
  * @property engines Each collection's entry, with its version and sync id.
@@ -47,20 +81,25 @@ internal class CollectionKeys(private val default: KeyBundle, private val own: M
     fun of(collection: String): KeyBundle = own[collection] ?: default
 }
 
-/** Reads meta/global; `null` while Firefox Sync has not set up the account's storage. */
-internal fun StorageClient.metaGlobal(): MetaGlobal? {
-    val response = expect("GET", "storage/meta/global", allowed = setOf(HTTP_NOT_FOUND))
+/**
+ * Reads meta/global, from [cache] while it has it; `null` while Firefox Sync has not set up the account's storage.
+ */
+internal fun StorageClient.metaGlobal(cache: StorageSetupCache? = null): MetaGlobal? {
+    val response = cache?.get(this, META_GLOBAL) ?: expect("GET", META_GLOBAL, allowed = setOf(HTTP_NOT_FOUND))
     if (response.status == HTTP_NOT_FOUND) return null
     val payload = JSONObject(JSONObject(response.body).getString("payload"))
     if (payload.optInt("storageVersion") != STORAGE_VERSION) return null
     return MetaGlobal(payload.optJSONObject("engines") ?: JSONObject(), payload.strings("declined").orEmpty().toSet())
 }
 
-/** Reads crypto/keys with the account's [syncKeys]; `null` while Firefox Sync has not set up the account's storage. */
-internal fun StorageClient.collectionKeys(syncKeys: KeyBundle): CollectionKeys? {
-    val response = expect("GET", "storage/crypto/keys", allowed = setOf(HTTP_NOT_FOUND))
+/**
+ * Reads crypto/keys with the account's [syncKeys], from [cache] while it has it; `null` while Firefox Sync has not set
+ * up the account's storage.
+ */
+internal fun StorageClient.collectionKeys(syncKeys: KeyBundle, cache: StorageSetupCache? = null): CollectionKeys? {
+    val response = cache?.get(this, CRYPTO_KEYS) ?: expect("GET", CRYPTO_KEYS, allowed = setOf(HTTP_NOT_FOUND))
     if (response.status == HTTP_NOT_FOUND) return null
-    val keys = JSONObject(syncKeys.decrypt(JSONObject(JSONObject(response.body).getString("payload"))))
+    val keys = JSONObject(decryptKeys(response, syncKeys, cache))
     val default = KeyBundle.fromPair(keys.optJSONArray("default"))
         ?: throw SyncCryptoException("crypto/keys has no default key")
     val collections = keys.optJSONObject("collections")
@@ -69,6 +108,14 @@ internal fun StorageClient.collectionKeys(syncKeys: KeyBundle): CollectionKeys? 
         ?.toMap()
         .orEmpty()
     return CollectionKeys(default, own, response.header("X-Last-Modified"))
+}
+
+/** Decrypts the payload of crypto/keys in [response], forgetting what [cache] kept when it cannot. */
+internal fun decryptKeys(response: SyncResponse, syncKeys: KeyBundle, cache: StorageSetupCache?): String = try {
+    syncKeys.decrypt(JSONObject(JSONObject(response.body).getString("payload")))
+} catch (e: GeneralSecurityException) {
+    cache?.forget()
+    throw e
 }
 
 /**
@@ -116,6 +163,8 @@ internal fun StorageClient.downloadAll(
 /** Key Dejavu adds to a downloaded record for the time the server last changed it; no browser writes it. */
 internal const val SERVER_MODIFIED = "dejavuServerModified"
 
+internal const val META_GLOBAL = "storage/meta/global"
+internal const val CRYPTO_KEYS = "storage/crypto/keys"
 private const val STORAGE_VERSION = 5
 private const val PAGE_SIZE = 1000
 private const val HTTP_NOT_FOUND = 404

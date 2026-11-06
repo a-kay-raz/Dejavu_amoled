@@ -351,7 +351,6 @@
     <string name="dejavu_feature_firefox_sync">تابع Firefox على حواسيبك وهواتفك</string>
     <string name="dejavu_settings_whats_new">ما الجديد</string>
     <string name="dejavu_settings_whats_new_summary">ما جاء به كل إصدار، وجولة في Dejavu</string>
-    <string name="dejavu_settings_author">أنشأه %1$s</string>
     <string name="dejavu_settings_coffee">اشترِ لي قهوة</string>
     <string name="dejavu_settings_coffee_summary">لا إعلانات في Dejavu. إن أعجبك، فإن فنجان قهوة يساعده على النمو.</string>
     <string name="dejavu_settings_safe_browsing">التصفح الآمن من Google</string>
@@ -575,4 +574,8 @@
     <string name="dejavu_settings_tips">نصائح</string>
     <string name="dejavu_settings_tips_summary">عرض نصائح عن الإيماءات المخفية، مثل الضغط مطولًا على «تبويب جديد»</string>
     <string name="dejavu_new">جديد</string>
+    <string name="dejavu_menu_customize_reader_view">خصّص منظور القارئ</string>
+    <string name="dejavu_remote_debugging_summary">يتعطّل مجددًا عند إعادة تشغيل Dejavu</string>
+    <string name="dejavu_preference_mouse_support">دعم الفأرة</string>
+    <string name="dejavu_preference_mouse_support_summary">النقر بالزر الأوسط يفتح الرابط في تبويب في الخلفية، والمرور فوق الرابط يعرض عنوانه. النقر بالزر الأوسط على تبويب يغلقه.</string>
 </resources>

@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Sledujte Firefox na svojich počítačoch a telefónoch</string>
     <string name="dejavu_settings_whats_new">Novinky</string>
     <string name="dejavu_settings_whats_new_summary">Čo priniesla každá verzia a prehliadka Dejavu</string>
-    <string name="dejavu_settings_author">Vytvoril %1$s</string>
     <string name="dejavu_settings_coffee">Kúpte mi kávu</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nemá reklamy. Ak sa vám páči, káva mu pomôže rásť.</string>
     <string name="dejavu_settings_safe_browsing">Bezpečné prehliadanie Google</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Tipy</string>
     <string name="dejavu_settings_tips_summary">Zobraziť tipy o skrytých gestách, ako je podržanie tlačidla Nová karta</string>
     <string name="dejavu_new">Novinka</string>
+    <string name="dejavu_menu_customize_reader_view">Prispôsobiť zobrazenie Čítačka</string>
+    <string name="dejavu_remote_debugging_summary">Po reštarte Dejavu sa opäť vypne</string>
+    <string name="dejavu_preference_mouse_support">Podpora myši</string>
+    <string name="dejavu_preference_mouse_support_summary">Kliknutie stredným tlačidlom otvorí odkaz na karte na pozadí a umiestnenie kurzora na odkaz zobrazí jeho adresu. Kliknutie stredným tlačidlom na kartu ju zatvorí.</string>
 </resources>

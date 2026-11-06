@@ -45,6 +45,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.ui.icons.R as iconsR
+import org.mozilla.fenix.dejavu.browser.closeOnMiddleClick
 import org.mozilla.fenix.dejavu.browser.tabZoomTarget
 import org.mozilla.fenix.dejavu.containers.ContainerRecord
 import org.mozilla.fenix.dejavu.containers.color
@@ -212,6 +213,8 @@ internal fun EssentialsGrid(
                             modifier = Modifier
                                 .weight(1f)
                                 .tabZoomTarget(tab?.id)
+                                // Essentials stay, so a middle-click does nothing, and does not open one either.
+                                .closeOnMiddleClick(null)
                                 .tipTarget(
                                     Tip.ESSENTIAL_HOLD,
                                     TipGesture.Hold,

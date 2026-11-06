@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">تینا کمپیوٹراک او فوناک پار Firefox اے فالو کبو</string>
     <string name="dejavu_settings_whats_new">پوسکنو چیزاک</string>
     <string name="dejavu_settings_whats_new_summary">ہر ورژن نا پوسکنو چیزاک، او Dejavu نا ٹور</string>
-    <string name="dejavu_settings_author">%1$s نا جوڑ کرتین</string>
     <string name="dejavu_settings_coffee">کنے کافی اس ہلبو</string>
     <string name="dejavu_settings_coffee_summary">Dejavu اٹ ہچو اشتہار اف۔ اگر نی اے پسند کن، کافی اس اے نا بڑھنگ اٹ کمک کن۔</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">مشوراک</string>
     <string name="dejavu_settings_tips_summary">لکوکا اشاراک نا بارو اٹ مشوراک تس، جیسا کہ «پوسکنو ٹیب اس» اے دبا ہلنگ</string>
     <string name="dejavu_new">پوسکن</string>
+    <string name="dejavu_menu_customize_reader_view">خواننگ دروشم اے کسٹمائز کبو</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu دوبارہ شروع مننگ آ پدا بند مریک</string>
+    <string name="dejavu_preference_mouse_support">ماؤس نا مدد</string>
+    <string name="dejavu_preference_mouse_support_summary">درمیانی بٹن آن کلک کننگ لنک اے پد نا ٹیب اٹ ملیک، و لنک نا مونا ماؤس اے بننگ اونا پتہ اے پیش کیک۔ ٹیب آ درمیانی بٹن اٹ کلک کننگ اونا بند کیک۔</string>
 </resources>

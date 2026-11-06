@@ -351,7 +351,6 @@
     <string name="dejavu_feature_firefox_sync">Holya Firefox war dha jynnow-amontya ha\'th bellgowsers</string>
     <string name="dejavu_settings_whats_new">Pyth yw nowydh</string>
     <string name="dejavu_settings_whats_new_summary">Pyth a dhros pub versyon, ha tro yn Dejavu</string>
-    <string name="dejavu_settings_author">Gwrys gans %1$s</string>
     <string name="dejavu_settings_coffee">Prena koffi dhymm</string>
     <string name="dejavu_settings_coffee_summary">Nyns eus argemmynnow yn Dejavu. Mars yw da genes, koffi a\'n gweres dhe devi.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -575,4 +574,8 @@
     <string name="dejavu_settings_tips">Kussulyow</string>
     <string name="dejavu_settings_tips_summary">Diskwedhes kussulyow a-dro dhe wayansow kudh, kepar ha synsy “Tab Nowyth”</string>
     <string name="dejavu_new">Nowydh</string>
+    <string name="dejavu_menu_customize_reader_view">Chanjya an gwel redya</string>
+    <string name="dejavu_remote_debugging_summary">Diweythresys yw arta pan dhastalleth Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Skoodhyans logosen</string>
+    <string name="dejavu_preference_mouse_support_summary">Klyk kres a eger kevren yn tab kilva, ha gortos a-ugh kevren a dhiskwedh hy thrigva. Klyk kres war dab a\'n serr.</string>
 </resources>

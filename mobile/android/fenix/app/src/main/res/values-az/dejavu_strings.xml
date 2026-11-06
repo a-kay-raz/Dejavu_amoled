@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Kompüterlərinizdə və telefonlarınızda Firefox-u izləyin</string>
     <string name="dejavu_settings_whats_new">Yeniliklər</string>
     <string name="dejavu_settings_whats_new_summary">Hər versiyanın gətirdikləri və Dejavu turu</string>
-    <string name="dejavu_settings_author">%1$s tərəfindən yaradılıb</string>
     <string name="dejavu_settings_coffee">Mənə bir qəhvə alın</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-da reklam yoxdur. Xoşunuza gəlirsə, bir qəhvə onun böyüməsinə kömək edir.</string>
     <string name="dejavu_settings_safe_browsing">Google Təhlükəsiz Baxış</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Məsləhətlər</string>
     <string name="dejavu_settings_tips_summary">Gizli jestlər haqqında məsləhətlər göstər, məsələn, Yeni vərəq düyməsini basıb saxlamaq</string>
     <string name="dejavu_new">Yeni</string>
+    <string name="dejavu_menu_customize_reader_view">Oxuyucu görünüşünü fərdiləşdir</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu yenidən başladıqda yenə sönür</string>
+    <string name="dejavu_preference_mouse_support">Siçan dəstəyi</string>
+    <string name="dejavu_preference_mouse_support_summary">Orta düymə ilə klik keçidi arxa planda yeni vərəqdə açır, keçidin üzərinə gəlmək isə onun ünvanını göstərir. Vərəqin üzərində orta düymə ilə klik onu bağlayır.</string>
 </resources>

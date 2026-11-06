@@ -89,7 +89,7 @@ class FirefoxTabsEngineTest {
 
         engine.sync(auth, connected = null, localDeviceId = PHONE)
 
-        assertEquals(listOf("GET info/collections", "GET storage/meta/global", "GET storage/crypto/keys"), server.requests)
+        assertEquals(listOf("GET info/collections"), server.requests)
     }
 
     @Test

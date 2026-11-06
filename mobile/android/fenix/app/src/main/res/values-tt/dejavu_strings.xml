@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Компьютерләрегездәге һәм телефоннарыгыздагы Firefox-ны күзәтеп торыгыз</string>
     <string name="dejavu_settings_whats_new">Яңалыклар</string>
     <string name="dejavu_settings_whats_new_summary">Һәр нөсхә нәрсә алып килде, һәм Dejavu белән танышу</string>
-    <string name="dejavu_settings_author">%1$s тарафыннан ясалган</string>
     <string name="dejavu_settings_coffee">Миңа кофе алып бирегез</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-да реклама юк. Ошаса, бер чынаяк кофе аңа үсәргә ярдәм итә.</string>
     <string name="dejavu_settings_safe_browsing">Google куркынычсыз карау</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Киңәшләр</string>
     <string name="dejavu_settings_tips_summary">Яшерен ишарәләр турында киңәшләр күрсәтү, мәсәлән, Яңа таб төймәсенә басып тору</string>
     <string name="dejavu_new">Яңа</string>
+    <string name="dejavu_menu_customize_reader_view">Уку режимын көйләү</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu яңадан башланганда кабат сүнә</string>
+    <string name="dejavu_preference_mouse_support">Тычкан ярдәме</string>
+    <string name="dejavu_preference_mouse_support_summary">Урта төймә белән чирту сылтаманы фон табында ача, ә сылтама өстенә тычканны китерү аның адресын күрсәтә. Табка урта төймә белән чирту аны ябады.</string>
 </resources>

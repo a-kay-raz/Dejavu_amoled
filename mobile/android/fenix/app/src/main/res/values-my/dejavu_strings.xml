@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">သင့်ကွန်ပျူတာနှင့် ဖုန်းများရှိ Firefox ကို လိုက်ကြည့်ပါ</string>
     <string name="dejavu_settings_whats_new">ဘာအသစ်ထွက်လဲ</string>
     <string name="dejavu_settings_whats_new_summary">ဗားရှင်းတစ်ခုစီတွင် ပါလာသည့်အရာများနှင့် Dejavu ကို လှည့်လည်ကြည့်ရှုခြင်း</string>
-    <string name="dejavu_settings_author">%1$s မှ ဖန်တီးသည်</string>
     <string name="dejavu_settings_coffee">ကျွန်ုပ်ကို ကော်ဖီတစ်ခွက် တိုက်ပါ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu တွင် ကြော်ငြာများ မရှိပါ။ သင်နှစ်သက်ပါက ကော်ဖီတစ်ခွက်က ၎င်းကို ကြီးထွားလာစေရန် ကူညီပေးသည်။</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">အကြံပြုချက်များ</string>
     <string name="dejavu_settings_tips_summary">“တက်ဗ် အသစ်” ကို ဖိထားခြင်းကဲ့သို့ ဝှက်ထားသော လက်ဟန်အမူအရာများအကြောင်း အကြံပြုချက်များ ပြသရန်</string>
     <string name="dejavu_new">အသစ်</string>
+    <string name="dejavu_menu_customize_reader_view">စာဖတ်သူ မြင်ကွင်းကို စိတ်ကြိုက်လုပ်ပါ</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu ပြန်စသည့်အခါ ပြန်ပိတ်သွားသည်</string>
+    <string name="dejavu_preference_mouse_support">မောက်စ် ပံ့ပိုးမှု</string>
+    <string name="dejavu_preference_mouse_support_summary">အလယ်ခလုတ်ဖြင့် နှိပ်ပါက လင့်ခ်ကို နောက်ခံ တက်ဗ်တွင် ဖွင့်ပြီး လင့်ခ်ပေါ်တွင် မောက်စ်ထားပါက ၎င်း၏ လိပ်စာကို ပြသသည်။ တက်ဗ်ပေါ်တွင် အလယ်ခလုတ်ဖြင့် နှိပ်ပါက ၎င်းကို ပိတ်သည်။</string>
 </resources>

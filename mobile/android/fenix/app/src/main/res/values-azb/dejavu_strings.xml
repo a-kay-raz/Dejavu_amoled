@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">کومپیوترلرینیزده و تلفن‌لرینیزده Firefox-و ایزله‌یین</string>
     <string name="dejavu_settings_whats_new">یئنی نه وار؟</string>
     <string name="dejavu_settings_whats_new_summary">هر ورسییانین گتیردیک‌لری و Dejavu تورو</string>
-    <string name="dejavu_settings_author">%1$s طرفیندن یارادیلیب</string>
     <string name="dejavu_settings_coffee">منه بیر قهوه آلین</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-دا تبلیغ یوخدور. خوشونوزا گلیرسه، بیر قهوه اونون بؤیومه‌سینه کؤمک ائدیر.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">مصلحت‌لر</string>
     <string name="dejavu_settings_tips_summary">گیزلی ایشاره‌لر حاقیندا مصلحت‌لر گؤستر، مثلاً یئنی تاغ دوگمه‌سینی باسیب ساخلاماق</string>
     <string name="dejavu_new">یئنی</string>
+    <string name="dejavu_menu_customize_reader_view">اوخوجو گؤرونوشو اؤزللشدیر</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu یئنیدن باشلاندیقدا گئنه سؤنور</string>
+    <string name="dejavu_preference_mouse_support">سیچان دستگی</string>
+    <string name="dejavu_preference_mouse_support_summary">اورتا دوگمه ایله کلیک، باغلانتینی آرخا پلاندا بیر تاغدا آچیر، باغلانتینین اوستونه گلمک ده اونون آدرسینی گؤستریر. تاغین اوستونده اورتا دوگمه ایله کلیک اونو باغلاییر.</string>
 </resources>

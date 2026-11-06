@@ -275,9 +275,11 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                 applySecretSettingsOverrides(applicationContext)
             }
 
-            // Dejavu's defaults turn telemetry and studies off, so they must be in place before those start.
+            // Dejavu's defaults turn telemetry, studies and remote debugging off, so they must be in place before those
+            // start.
             StrictMode.allowThreadDiskWrites().let { policy ->
                 try {
+                    DejavuDefaults.applyEveryStart(applicationContext)
                     DejavuDefaults.applyOnce(applicationContext)
                 } finally {
                     StrictMode.setThreadPolicy(policy)

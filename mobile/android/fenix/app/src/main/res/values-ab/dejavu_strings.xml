@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Шәкомпьютерқәеи шәтелефонқәеи рҟны Firefox ашьҭалара</string>
     <string name="dejavu_settings_whats_new">Ҿыцс иҟоузеи</string>
     <string name="dejavu_settings_whats_new_summary">Аверсиа цыԥхьаӡа иаанагаз, насгьы Dejavu аҭҵаара</string>
-    <string name="dejavu_settings_author">Аԥызҵаз: %1$s</string>
     <string name="dejavu_settings_coffee">Акаҳуа исзаашәхәа</string>
     <string name="dejavu_settings_coffee_summary">Dejavu аҟны аӡыргақәа ыҟаӡам. Ишәгәаԥхозар, акаҳуа иара аизҳара иацхраауеит.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Ацхыраарақәа</string>
     <string name="dejavu_settings_tips_summary">Иҵәахыу анапқәа ирызку ацхыраарақәа аарԥшра, иаҳҳәап, «Абларҭа ҿыц» аанкылара</string>
     <string name="dejavu_new">Иҿыцу</string>
+    <string name="dejavu_menu_customize_reader_view">Аԥхьара аԥшра рхиатәуп</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu аиҭаартра ашьҭахь еиҭах иаҿыхуеит</string>
+    <string name="dejavu_preference_mouse_support">Аҳәынаԥ арыцхыраара</string>
+    <string name="dejavu_preference_mouse_support_summary">Аҳәынаԥ абжьаратәи ақәыӷәӷәара азхьарԥш абларҭа ҿыц аҿы иаанартуеит, азхьарԥш ахь аҳәынаԥ анаагалак уи аҭыԥ аарԥшуеит. Азхьарԥш аҿы аҳәынаԥ абжьаратәи ақәыӷәӷәара уи иаарыцәуеит.</string>
 </resources>

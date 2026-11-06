@@ -79,8 +79,20 @@ class SpacesSyncEngineTest {
 
         assertEquals(SpacesSyncResult.Synced(received = 0, sent = 0, pending = 0, unpinnedTabs = true), engine.sync(auth))
 
+        assertEquals(listOf("GET info/collections"), server.requests)
+    }
+
+    @Test
+    fun `meta global is read again once it changed on the server`() = runTest {
+        server.upload(ZenRecords.desktop())
+        engine.sync(auth)
+        server.setMeta(server.meta().getJSONObject("engines"))
+        server.requests.clear()
+
+        engine.sync(auth)
+
         assertEquals(
-            listOf("GET info/collections", "GET info/configuration", "GET storage/meta/global", "GET storage/crypto/keys"),
+            listOf("GET info/collections", "GET storage/meta/global", "GET storage/crypto/keys"),
             server.requests,
         )
     }

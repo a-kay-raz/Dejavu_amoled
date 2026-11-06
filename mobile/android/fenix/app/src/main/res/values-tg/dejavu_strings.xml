@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Firefox-ро дар компютерҳо ва телефонҳои худ пайгирӣ кунед</string>
     <string name="dejavu_settings_whats_new">Чӣ нав аст</string>
     <string name="dejavu_settings_whats_new_summary">Ҳар версия чӣ овард ва шиносоӣ бо Dejavu</string>
-    <string name="dejavu_settings_author">Аз ҷониби %1$s сохта шудааст</string>
     <string name="dejavu_settings_coffee">Ба ман қаҳва харед</string>
     <string name="dejavu_settings_coffee_summary">Dejavu реклама надорад. Агар ба шумо писанд ояд, як пиёла қаҳва ба рушди он кӯмак мекунад.</string>
     <string name="dejavu_settings_safe_browsing">Тамошои бехатари Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Маслиҳатҳо</string>
     <string name="dejavu_settings_tips_summary">Нишон додани маслиҳатҳо дар бораи ишораҳои пинҳон, масалан, пахш карда нигоҳ доштани «Варақаи нав»</string>
     <string name="dejavu_new">Нав</string>
+    <string name="dejavu_menu_customize_reader_view">Фармоишдиҳии намоиши хониш</string>
+    <string name="dejavu_remote_debugging_summary">Ҳангоми аз нав оғоз шудани Dejavu боз хомӯш мешавад</string>
+    <string name="dejavu_preference_mouse_support">Дастгирии муш</string>
+    <string name="dejavu_preference_mouse_support_summary">Зеркунӣ бо тугмаи миёна пайвандро дар варақаи пасзамина мекушояд, ва нигоҳ доштани муш болои пайванд нишонии онро нишон медиҳад. Зеркунӣ бо тугмаи миёна болои варақа онро мебандад.</string>
 </resources>

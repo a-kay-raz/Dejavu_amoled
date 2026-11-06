@@ -669,23 +669,19 @@ fun DejavuHome(
                             return@HorizontalPager
                         }
                         val workspace = state.workspaces[page]
-                        WorkspacePage(
-                            state = state,
-                            workspace = workspace,
-                            tabs = tabs.filter { state.workspaceOf(it.id) == workspace.id },
-                            selectedTabId = selectedTabId,
-                            containers = containers,
-                            pinnedRowActions = pinnedRowActions,
-                            unpinnedRowActions = unpinnedRowActions,
-                            folderRowActions = folderRowActions,
-                            selection = activeSelection,
-                            drag = drag,
-                            dragAreas = dragAreas,
-                            dragStack = dragStack,
-                            callbacks = WorkspacePageCallbacks(
+                        // Remembered, so that a page skips recomposing when nothing it shows changed.
+                        val pageTabs = remember(tabs, state, workspace.id) {
+                            tabs.filter { state.workspaceOf(it.id) == workspace.id }
+                        }
+                        val callbacks = remember(state, workspace.id, page, privateIndex, onPrivatePage, interactor) {
+                            WorkspacePageCallbacks(
                                 onTabClick = { tab ->
                                     val current = selection
-                                    if (current != null) selection = current.toggleTab(tab.id).takeIf { it.size > 0 } else interactor.onTabClick(tab.id)
+                                    if (current != null) {
+                                        selection = current.toggleTab(tab.id).takeIf { it.size > 0 }
+                                    } else {
+                                        interactor.onTabClick(tab.id)
+                                    }
                                 },
                                 onPinClick = ::onPinClick,
                                 onStartDrag = { picked ->
@@ -722,7 +718,22 @@ fun DejavuHome(
                                 onReopenClosedTab = { revealTabId = interactor.onReopenClosedTab() },
                                 onOpenClipboard = { interactor.onOpenClipboardLink(workspace.id) },
                                 onRevealed = { revealTabId = null },
-                            ),
+                            )
+                        }
+                        WorkspacePage(
+                            state = state,
+                            workspace = workspace,
+                            tabs = pageTabs,
+                            selectedTabId = selectedTabId,
+                            containers = containers,
+                            pinnedRowActions = pinnedRowActions,
+                            unpinnedRowActions = unpinnedRowActions,
+                            folderRowActions = folderRowActions,
+                            selection = activeSelection,
+                            drag = drag,
+                            dragAreas = dragAreas,
+                            dragStack = dragStack,
+                            callbacks = callbacks,
                             canDeleteWorkspace = state.workspaces.size > 1,
                             canMoveLeft = page > 0,
                             canMoveRight = page < state.workspaces.size - 1,

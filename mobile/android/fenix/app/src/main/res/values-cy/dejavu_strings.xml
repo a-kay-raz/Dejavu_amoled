@@ -351,7 +351,6 @@
     <string name="dejavu_feature_firefox_sync">Dilyn Firefox ar eich cyfrifiaduron a\'ch ffonau</string>
     <string name="dejavu_settings_whats_new">Beth sy’n newydd</string>
     <string name="dejavu_settings_whats_new_summary">Beth ddaeth gyda phob fersiwn, a thaith o gwmpas Dejavu</string>
-    <string name="dejavu_settings_author">Crëwyd gan %1$s</string>
     <string name="dejavu_settings_coffee">Prynwch goffi i mi</string>
     <string name="dejavu_settings_coffee_summary">Does dim hysbysebion yn Dejavu. Os ydych chi’n ei fwynhau, mae coffi’n ei helpu i dyfu.</string>
     <string name="dejavu_settings_safe_browsing">Pori Diogel Google</string>
@@ -575,4 +574,8 @@
     <string name="dejavu_settings_tips">Awgrymiadau</string>
     <string name="dejavu_settings_tips_summary">Dangos awgrymiadau am ystumiau cudd, fel dal Tab newydd</string>
     <string name="dejavu_new">Newydd</string>
+    <string name="dejavu_menu_customize_reader_view">Cyfaddasu’r golwg darllenydd</string>
+    <string name="dejavu_remote_debugging_summary">Mae\'n troi i ffwrdd eto pan fydd Dejavu yn ailgychwyn</string>
+    <string name="dejavu_preference_mouse_support">Cefnogaeth llygoden</string>
+    <string name="dejavu_preference_mouse_support_summary">Mae clicio\'r botwm canol yn agor dolen mewn tab cefndir, ac mae hofran dros ddolen yn dangos ei chyfeiriad. Mae clicio\'r botwm canol ar dab yn ei gau.</string>
 </resources>

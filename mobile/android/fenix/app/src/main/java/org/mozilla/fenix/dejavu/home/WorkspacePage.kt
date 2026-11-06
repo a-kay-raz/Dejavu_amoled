@@ -12,7 +12,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.gestures.animateScrollBy
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -36,7 +35,6 @@ import androidx.compose.foundation.lazy.LazyListItemInfo
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
@@ -88,6 +86,7 @@ import org.mozilla.fenix.dejavu.actions.icon
 import org.mozilla.fenix.dejavu.actions.label
 import org.mozilla.fenix.dejavu.browser.ClearData
 import org.mozilla.fenix.dejavu.browser.SplitSpace
+import org.mozilla.fenix.dejavu.browser.closeOnMiddleClick
 import org.mozilla.fenix.dejavu.browser.tabZoomTarget
 import org.mozilla.fenix.dejavu.containers.ContainerIcon
 import org.mozilla.fenix.dejavu.containers.ContainerPick
@@ -279,21 +278,23 @@ internal fun WorkspacePage(
     dataPour: DataPour? = null,
     askedClear: ClearData.Request? = null,
 ) {
-    val tabsById = tabs.associateBy { it.id }
-    val awakeTabIds = tabs.filter { it.isAwake }.map { it.id }.toSet()
+    val tabsById = remember(tabs) { tabs.associateBy { it.id } }
+    val awakeTabIds = remember(tabs) { tabs.filter { it.isAwake }.map { it.id }.toSet() }
     // The workspace of a device on the account follows the device: its tabs are only opened and closed here.
     val isDevice = workspace.device != null
-    val pinLines = pinLines(state.pinnedTree(workspace.id), state)
-    val pinnedTabIds = state.pins.mapNotNull { it.tabId }.toSet()
-    val otherTabs = tabs.filterNot { it.id in pinnedTabIds }
-    val splitTabIds = state.splits.flatMap { it.tabIds }.toSet()
-    val lines = tabLines(otherTabs, state)
+    val pinLines = remember(state, workspace.id) { pinLines(state.pinnedTree(workspace.id), state) }
+    val pinnedTabIds = remember(state.pins) { state.pins.mapNotNull { it.tabId }.toSet() }
+    val otherTabs = remember(tabs, pinnedTabIds) { tabs.filterNot { it.id in pinnedTabIds } }
+    val splitTabIds = remember(state.splits) { state.splits.flatMap { it.tabIds }.toSet() }
+    val lines = remember(otherTabs, state) { tabLines(otherTabs, state) }
     // The tip about split views points at the second tab, to drop onto the first one, while no tabs are split.
     val showsSplitTip = SplitSpace.supported(LocalConfiguration.current).isNotEmpty() && splitTabIds.isEmpty() &&
         lines.firstOrNull()?.tabs?.size == 1
     // The key of the row each pinned item and tab shows on, for the ones sharing a row with a split view partner.
-    val lineKeys = pinLines.flatMap { line -> line.entries.map { PIN_PREFIX + it.item.id to line.key } }.toMap() +
-        lines.flatMap { line -> line.tabs.map { TAB_PREFIX + it.id to line.key } }
+    val lineKeys = remember(pinLines, lines) {
+        pinLines.flatMap { line -> line.entries.map { PIN_PREFIX + it.item.id to line.key } }.toMap() +
+            lines.flatMap { line -> line.tabs.map { TAB_PREFIX + it.id to line.key } }
+    }
 
     // Rows come and go and move between the pinned and the other tabs in motions of their own, see RowMotions.
     val motions = rememberRowMotions()
@@ -315,7 +316,7 @@ internal fun WorkspacePage(
         }
     }
 
-    val listState = rememberLazyListState()
+    val listState = rememberHomeListState(workspace.id)
     val pageContent = PageContent(state, otherTabs, workspace, pinLines, lines, lineKeys, tabsById, containers)
     val content by rememberUpdatedState(pageContent)
     val latestCallbacks by rememberUpdatedState(callbacks)
@@ -361,16 +362,24 @@ internal fun WorkspacePage(
         onDispose { if (dragAreas[workspace.id] === dragArea) dragAreas.remove(workspace.id) }
     }
 
-    // Scrolls to a reopened tab once it is back in this workspace, unless its row is already in view.
-    LaunchedEffect(revealTabId, pinLines, lines) {
-        val tabId = revealTabId ?: return@LaunchedEffect
+    fun rowIndexOf(tabId: String): Int? {
         val pinIndex = pinLines.indexOfFirst { line -> line.entries.any { it.item.tabId == tabId } }
         val tabIndex = lines.indexOfFirst { line -> line.tabs.any { it.id == tabId } }
-        val index = when {
+        return when {
             pinIndex >= 0 -> 1 + pinIndex
             tabIndex >= 0 -> pinLines.size + FIRST_TAB_OFFSET + tabIndex
-            else -> return@LaunchedEffect
+            else -> null
         }
+    }
+
+    // The tab the home screen was opened from is in view as it shows, wherever the list was left.
+    LaunchedEffect(workspace.id) {
+        selectedTabId?.let(::rowIndexOf)?.let { listState.revealWhenShown(it) }
+    }
+
+    // Scrolls to a reopened tab once it is back in this workspace, unless its row is already in view.
+    LaunchedEffect(revealTabId, pinLines, lines) {
+        val index = revealTabId?.let(::rowIndexOf) ?: return@LaunchedEffect
         listState.reveal(index)
         latestCallbacks.onRevealed()
     }
@@ -397,6 +406,12 @@ internal fun WorkspacePage(
     }
     val lineColor = MaterialTheme.colorScheme.primary
     val insideColor = MaterialTheme.colorScheme.primaryContainer
+
+    // A middle-click on a row does what its Close button does, but not while rows are being picked or dragged.
+    fun middleClick(targets: ActionTargets, isPinned: Boolean): (() -> Unit)? =
+        middleClickAction(targets, isPinned)
+            ?.takeIf { selection == null && drag == null }
+            ?.let { action -> { callbacks.onRowAction(action, targets) } }
 
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(
@@ -454,6 +469,7 @@ internal fun WorkspacePage(
                                 isAwake = tab?.isAwake == true,
                                 picked = selection?.let { pin.id in it.pinIds },
                                 onClick = { if (drag == null) callbacks.onPinClick(pin) },
+                                onMiddleClick = middleClick(targets, isPinned = true),
                                 onIconClick = resetPin?.let { action ->
                                     { if (drag == null) callbacks.onRowAction(action, targets) }
                                 },
@@ -476,7 +492,7 @@ internal fun WorkspacePage(
                         actions = rowActions(folderRowActions, targets, isPinned = true),
                         onAction = { callbacks.onRowAction(it, targets) },
                         onClick = { if (drag == null) callbacks.onFolderClick(item) },
-                        modifier = rowModifier,
+                        modifier = rowModifier.closeOnMiddleClick(null),
                     )
                 } else {
                     val tab = item.tabId?.let { tabsById[it] }
@@ -496,7 +512,9 @@ internal fun WorkspacePage(
                         onAction = { callbacks.onRowAction(it, targets) },
                         onClick = { if (drag == null) callbacks.onPinClick(item) },
                         onIconClick = resetPin?.let { action -> { if (drag == null) callbacks.onRowAction(action, targets) } },
-                        modifier = rowModifier.tabZoomTarget(tab?.id),
+                        modifier = rowModifier
+                            .tabZoomTarget(tab?.id)
+                            .closeOnMiddleClick(middleClick(targets, isPinned = true)),
                     )
                 }
             }
@@ -556,6 +574,10 @@ internal fun WorkspacePage(
                                 isAwake = half.isAwake,
                                 picked = selection?.let { half.id in it.tabIds },
                                 onClick = { if (drag == null) callbacks.onTabClick(half) },
+                                onMiddleClick = middleClick(
+                                    ActionTargets(tabs = listOf(half), restricted = isDevice),
+                                    isPinned = false,
+                                ),
                             )
                         },
                         depth = 0,
@@ -583,6 +605,7 @@ internal fun WorkspacePage(
                     onClick = { if (drag == null) callbacks.onTabClick(tab) },
                     modifier = rowModifier
                         .tabZoomTarget(tab.id)
+                        .closeOnMiddleClick(middleClick(targets, isPinned = false))
                         .tipTarget(Tip.PIN, TipGesture.Drag(dy = PIN_DRAG), enabled = index == 0, at = ROW_TOUCH)
                         .tipTarget(Tip.ESSENTIAL_ADD, TipGesture.Drag(toTop = true), index == 0, ROW_TOUCH)
                         .tipTarget(
@@ -752,25 +775,6 @@ private fun dropFallback(
         DropLine.TOP -> Offset(row.center.x, row.top)
         DropLine.BOTTOM -> Offset(row.center.x, row.bottom)
         DropLine.INSIDE -> row.center
-    }
-}
-
-/**
- * Scrolls as little as it takes to show the row at [index] whole. A row below the ones in view comes in at the bottom,
- * so the rows above it, the header with its buttons first, stay in view as far as they can.
- */
-private suspend fun LazyListState.reveal(index: Int) {
-    val layout = layoutInfo
-    val visible = layout.visibleItemsInfo
-    val first = visible.firstOrNull() ?: return
-    val last = visible.last()
-    val row = visible.firstOrNull { it.index == index }
-    val end = layout.viewportEndOffset
-    when {
-        row != null && row.offset < layout.viewportStartOffset -> animateScrollToItem(index)
-        row != null -> if (row.offset + row.size > end) animateScrollBy((row.offset + row.size - end).toFloat())
-        index < first.index -> animateScrollToItem(index)
-        else -> animateScrollBy((last.offset + last.size - end + (index - last.index) * last.size).toFloat())
     }
 }
 
@@ -1435,6 +1439,7 @@ internal fun TabRow(
  * One of the two tabs of a [TabPairRow].
  *
  * @property picked Whether the tab is picked in selection mode, or `null` outside selection mode.
+ * @property onMiddleClick What a middle-click does to the tab, or `null` for nothing.
  * @property onIconClick Takes a pinned tab that left its pinned page back to it, shown with a brighter icon square.
  */
 private data class PairHalf(
@@ -1444,6 +1449,7 @@ private data class PairHalf(
     val isAwake: Boolean,
     val picked: Boolean?,
     val onClick: () -> Unit,
+    val onMiddleClick: (() -> Unit)? = null,
     val onIconClick: (() -> Unit)? = null,
 )
 
@@ -1490,6 +1496,7 @@ private fun TabPairRow(
                     .fillMaxHeight()
                     .clip(RowShape)
                     .background(if (picked == true) MaterialTheme.colorScheme.secondaryContainer else Color.Transparent)
+                    .closeOnMiddleClick(half.onMiddleClick)
                     .clickable(onClick = half.onClick),
             ) {
                 Box(

@@ -182,7 +182,7 @@
     <string name="dejavu_settings_title">Dejavu</string>
     <!-- About page. %1$s is the name of the app. -->
     <string name="dejavu_about_content">%1$s is an independent browser built from Mozilla’s open source Firefox and GeckoView code. It is not made, endorsed or supported by Mozilla. Firefox is a trademark of the Mozilla Foundation in the U.S. and other countries.</string>
-    <!-- About screen link to Dejavu's source code, which takes the place of Firefox's "Know your rights" page. -->
+    <!-- Link to Dejavu's source code, at the top of Settings and on the About screen, where it takes the place of Firefox's "Know your rights" page. -->
     <string name="dejavu_about_source_code">Source code</string>
     <string name="dejavu_settings_tab_actions">Tab actions</string>
     <string name="dejavu_settings_tab_actions_entry_summary">One list of actions, and where each one shows</string>
@@ -317,6 +317,8 @@
     <!-- Shows the page as Firefox's Reader view, plain text without ads and clutter. Same words as dejavu_page_info_reader_view. -->
     <string name="dejavu_menu_reader_view">Reader view</string>
     <string name="dejavu_menu_close_reader_view">Close reader view</string>
+    <!-- A row of the More menu while the page is in reader view: opens Firefox's reader view settings, for its font, text size and colors. -->
+    <string name="dejavu_menu_customize_reader_view">Customize reader view</string>
     <!-- Opens the home screen with the address bar ready, so what the user types opens in a new tab. -->
     <string name="dejavu_menu_new_tab">New tab</string>
     <!-- Opens the home screen with the address bar ready, so what the user types opens in a new private tab. -->
@@ -539,9 +541,11 @@
     <!-- Settings, at the top: opens what each version of Dejavu brought, and the tour of its features. -->
     <string name="dejavu_settings_whats_new">What’s new</string>
     <string name="dejavu_settings_whats_new_summary">What each version brought, and a tour of Dejavu</string>
+
     <string name="pref_key_dejavu_top_category" translatable="false">pref_key_dejavu_top_category</string>
     <string name="pref_key_dejavu_whats_new" translatable="false">pref_key_dejavu_whats_new</string>
     <string name="pref_key_dejavu_tips" translatable="false">pref_key_dejavu_tips</string>
+
     <!-- Edit workspace dialog: title of the note that says what Firefox Sync leaves out of workspaces, shown while workspaces sync with Firefox (not Zen). -->
     <string name="dejavu_workspace_firefox_limits">Limited by Firefox Sync</string>
     <!-- Edit workspace dialog: the note for the workspace that shows the open tabs of a computer or phone with Firefox. -->
@@ -708,6 +712,8 @@
     <string name="dejavu_remote_debugging_warning_title">Turn on remote debugging?</string>
     <!-- Message of the remote debugging warning. -->
     <string name="dejavu_remote_debugging_warning_message">While it is on, a computer connected to this phone over USB, with USB debugging allowed, can control Dejavu and read its data, like open tabs, cookies and saved passwords, without asking. Turn it off when you are done.</string>
+    <!-- Under the Remote debugging via USB switch in Settings: it turns itself off each time the app starts. -->
+    <string name="dejavu_remote_debugging_summary">Turns off again when Dejavu restarts</string>
     <!-- Button that confirms turning a setting on. -->
     <string name="dejavu_turn_on">Turn on</string>
     <!-- Title of the warning shown before "Block direct call connections" is turned off, which lets calls in websites connect directly. Its buttons are Cancel and Turn off. -->
@@ -892,4 +898,8 @@
     <string name="dejavu_settings_tips_summary">Show tips about hidden gestures, like holding New Tab</string>
     <!-- Read out by screen readers for the orange dot that marks what the new version of Dejavu brought, in the settings and the menu. -->
     <string name="dejavu_new">New</string>
+    <!-- Setting title: middle-clicking a link opens it in a background tab and hovering a link shows its address. -->
+    <string name="dejavu_preference_mouse_support">Mouse support</string>
+    <!-- Setting summary of the mouse support switch. -->
+    <string name="dejavu_preference_mouse_support_summary">Middle-click opens a link in a background tab, and hovering a link shows its address. Middle-click on a tab closes it.</string>
 </resources>

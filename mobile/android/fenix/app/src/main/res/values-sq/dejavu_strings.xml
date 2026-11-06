@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Ndiqni Firefox-in në kompjuterët dhe telefonat tuaj</string>
     <string name="dejavu_settings_whats_new">Ç\'ka të re</string>
     <string name="dejavu_settings_whats_new_summary">Çfarë solli çdo version dhe një vizitë e udhëhequr nëpër Dejavu</string>
-    <string name="dejavu_settings_author">Krijuar nga %1$s</string>
     <string name="dejavu_settings_coffee">Më blini një kafe</string>
     <string name="dejavu_settings_coffee_summary">Dejavu s\'ka reklama. Nëse ju pëlqen, një kafe e ndihmon të rritet.</string>
     <string name="dejavu_settings_safe_browsing">Shfletim i sigurt nga Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Ndihmëza</string>
     <string name="dejavu_settings_tips_summary">Shfaq ndihmëza mbi gjeste të fshehura, si mbajtja shtypur e “Skedë e re”</string>
     <string name="dejavu_new">E re</string>
+    <string name="dejavu_menu_customize_reader_view">Përshtate pamjen lexues</string>
+    <string name="dejavu_remote_debugging_summary">Çaktivizohet sërish kur Dejavu riniset</string>
+    <string name="dejavu_preference_mouse_support">Mbulim për miun</string>
+    <string name="dejavu_preference_mouse_support_summary">Klikimi me butonin e mesit hap një lidhje në një skedë në prapaskenë, dhe kalimi i miut sipër një lidhjeje shfaq adresën e saj. Klikimi me butonin e mesit mbi një skedë e mbyll atë.</string>
 </resources>

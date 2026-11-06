@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Spremljajte Firefox na svojih računalnikih in telefonih</string>
     <string name="dejavu_settings_whats_new">Kaj je novega</string>
     <string name="dejavu_settings_whats_new_summary">Kaj je prinesla vsaka različica in predstavitev Dejavuja</string>
-    <string name="dejavu_settings_author">Ustvaril %1$s</string>
     <string name="dejavu_settings_coffee">Kupite mi kavo</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nima oglasov. Če vam je všeč, mu kava pomaga rasti.</string>
     <string name="dejavu_settings_safe_browsing">Google Varno brskanje</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Nasveti</string>
     <string name="dejavu_settings_tips_summary">Prikaži nasvete o skritih potezah, kot je pridržanje gumba „Nov zavihek“</string>
     <string name="dejavu_new">Novo</string>
+    <string name="dejavu_menu_customize_reader_view">Prilagodi bralni pogled</string>
+    <string name="dejavu_remote_debugging_summary">Ob ponovnem zagonu Dejavuja se znova izklopi</string>
+    <string name="dejavu_preference_mouse_support">Podpora za miško</string>
+    <string name="dejavu_preference_mouse_support_summary">Klik s srednjim gumbom odpre povezavo v zavihku v ozadju, premik miške nad povezavo pa prikaže njen naslov. Klik s srednjim gumbom na zavihek ga zapre.</string>
 </resources>

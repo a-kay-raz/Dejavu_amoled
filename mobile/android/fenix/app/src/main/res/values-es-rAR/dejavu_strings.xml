@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Seguí Firefox en tus computadoras y teléfonos</string>
     <string name="dejavu_settings_whats_new">¿Qué hay de nuevo?</string>
     <string name="dejavu_settings_whats_new_summary">Lo que trajo cada versión y un recorrido por Dejavu</string>
-    <string name="dejavu_settings_author">Creado por %1$s</string>
     <string name="dejavu_settings_coffee">Invitame un café</string>
     <string name="dejavu_settings_coffee_summary">Dejavu no tiene anuncios. Si te gusta, un café lo ayuda a crecer.</string>
     <string name="dejavu_settings_safe_browsing">Navegación segura de Google</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Consejos</string>
     <string name="dejavu_settings_tips_summary">Mostrar consejos sobre gestos ocultos, como mantener presionado “Nueva pestaña”</string>
     <string name="dejavu_new">Nuevo</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizar vista de lectura</string>
+    <string name="dejavu_remote_debugging_summary">Se desactiva de nuevo cuando Dejavu se reinicia</string>
+    <string name="dejavu_preference_mouse_support">Compatibilidad con mouse</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic con el botón del medio abre un enlace en una pestaña en segundo plano, y pasar el mouse sobre un enlace muestra su dirección. Un clic con el botón del medio sobre una pestaña la cierra.</string>
 </resources>

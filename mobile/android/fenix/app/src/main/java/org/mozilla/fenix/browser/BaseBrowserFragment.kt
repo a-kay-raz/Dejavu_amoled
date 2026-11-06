@@ -209,6 +209,7 @@ import org.mozilla.fenix.crashes.CrashContentIntegration
 import org.mozilla.fenix.crashes.CrashContentView
 import org.mozilla.fenix.customtabs.ExternalAppBrowserActivity
 import org.mozilla.fenix.databinding.FragmentBrowserBinding
+import org.mozilla.fenix.dejavu.browser.DejavuMouse
 import org.mozilla.fenix.dejavu.browser.DejavuToolbar
 import org.mozilla.fenix.dejavu.browser.SplitPanes
 import org.mozilla.fenix.dejavu.browser.barsLayout
@@ -1242,6 +1243,11 @@ abstract class BaseBrowserFragment :
             getContextMenuCandidates(context, binding.dynamicSnackbarContainer)
         }
         installAboutConfigWarning(customTabSessionId)
+
+        // Dejavu: middle-click opens links in a background tab and hovering shows their address. Not in custom tabs.
+        if (customTabSessionId == null) {
+            DejavuMouse.install(this, binding.browserLayout, binding.dynamicSnackbarContainer)
+        }
 
         val isCoverEnabled = TabReloadCoverGating.isCoverEnabled(settings)
         val isScrollAwareEnabled = TabReloadCoverGating.isScrollAwareEnabled(settings)

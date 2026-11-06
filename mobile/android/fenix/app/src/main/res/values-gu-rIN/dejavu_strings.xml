@@ -356,7 +356,6 @@
     <string name="dejavu_feature_firefox_sync">તમારા કમ્પ્યુટર અને ફોન પર Firefox ને અનુસરો</string>
     <string name="dejavu_settings_whats_new">નવું શું છે</string>
     <string name="dejavu_settings_whats_new_summary">દરેક સંસ્કરણ શું લાવ્યું, અને Dejavu નો પરિચય</string>
-    <string name="dejavu_settings_author">%1$s દ્વારા બનાવેલ</string>
     <string name="dejavu_settings_coffee">મને એક કૉફી પીવડાવો</string>
     <string name="dejavu_settings_coffee_summary">Dejavu માં કોઈ જાહેરાતો નથી. જો તમને તે ગમે, તો એક કૉફી તેને વિકસવામાં મદદ કરે છે.</string>
     <string name="dejavu_settings_safe_browsing">Google સુરક્ષિત બ્રાઉઝિંગ</string>
@@ -576,4 +575,8 @@
     <string name="dejavu_settings_tips">ટિપ્સ</string>
     <string name="dejavu_settings_tips_summary">છુપાયેલા હાવભાવ વિશે ટિપ્સ બતાવો, જેમ કે “નવી ટૅબ” દબાવી રાખવી</string>
     <string name="dejavu_new">નવું</string>
+    <string name="dejavu_menu_customize_reader_view">વાંચકો જુઓ કસ્ટમાઇઝ કરો</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu ફરી શરૂ થાય ત્યારે તે ફરી બંધ થઈ જાય છે</string>
+    <string name="dejavu_preference_mouse_support">માઉસ સપોર્ટ</string>
+    <string name="dejavu_preference_mouse_support_summary">મધ્ય બટનથી ક્લિક કરવાથી લિંક પૃષ્ઠભૂમિ ટૅબમાં ખૂલે છે, અને લિંક પર પોઇન્ટર રાખવાથી તેનું સરનામું દેખાય છે. ટૅબ પર મધ્ય બટનથી ક્લિક કરવાથી તે બંધ થાય છે.</string>
 </resources>

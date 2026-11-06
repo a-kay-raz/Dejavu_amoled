@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">o lukin e ilo Firefox lon ilo sona sina en ilo kalama sina</string>
     <string name="dejavu_settings_whats_new">seme li sin</string>
     <string name="dejavu_settings_whats_new_summary">nasin sin wan wan li pana e seme, en tawa lukin lon Dejavu</string>
-    <string name="dejavu_settings_author">jan pali: %1$s</string>
     <string name="dejavu_settings_coffee">o esun e telo pimeja tawa mi</string>
     <string name="dejavu_settings_coffee_summary">Dejavu li jo ala e sitelen esun. ona li pona tawa sina la, telo pimeja li pona e kama suli ona.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">toki sona</string>
     <string name="dejavu_settings_tips_summary">o pana e toki sona pi pilin nena len, sama luka awen lon nena “poki sin”</string>
     <string name="dejavu_new">sin</string>
+    <string name="dejavu_menu_customize_reader_view">o nasin e lukin pona</string>
+    <string name="dejavu_remote_debugging_summary">ona li pini sin lon tenpo ni: ilo Dejavu li open sin</string>
+    <string name="dejavu_preference_mouse_support">ilo soweli</string>
+    <string name="dejavu_preference_mouse_support_summary">nena meso li open e linja lon poki monsi. sina awen e soweli lon linja la ona li pana e nimi ma ona. nena meso lon poki li weka e poki ni.</string>
 </resources>

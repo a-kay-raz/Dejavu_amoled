@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Стежте за Firefox на своїх комп’ютерах і телефонах</string>
     <string name="dejavu_settings_whats_new">Що нового</string>
     <string name="dejavu_settings_whats_new_summary">Що принесла кожна версія, і знайомство з Dejavu</string>
-    <string name="dejavu_settings_author">Створив %1$s</string>
     <string name="dejavu_settings_coffee">Пригостіть мене кавою</string>
     <string name="dejavu_settings_coffee_summary">Dejavu не має реклами. Якщо він вам подобається, кава допоможе йому розвиватися.</string>
     <string name="dejavu_settings_safe_browsing">Безпечний перегляд Google</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Поради</string>
     <string name="dejavu_settings_tips_summary">Показувати поради про приховані жести, як-от утримання кнопки «Нова вкладка»</string>
     <string name="dejavu_new">Нове</string>
+    <string name="dejavu_menu_customize_reader_view">Налаштувати режим читання</string>
+    <string name="dejavu_remote_debugging_summary">Знову вимикається після перезапуску Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Підтримка миші</string>
+    <string name="dejavu_preference_mouse_support_summary">Клацання середньою кнопкою відкриває посилання у фоновій вкладці, а наведення на посилання показує його адресу. Клацання середньою кнопкою по вкладці закриває її.</string>
 </resources>

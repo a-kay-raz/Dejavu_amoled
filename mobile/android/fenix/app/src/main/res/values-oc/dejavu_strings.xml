@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Seguissètz Firefox sus vòstres ordenadors e telefòns</string>
     <string name="dejavu_settings_whats_new">Qu’es nòu</string>
     <string name="dejavu_settings_whats_new_summary">Çò que cada version a portat, e una visita de Dejavu</string>
-    <string name="dejavu_settings_author">Creat per %1$s</string>
     <string name="dejavu_settings_coffee">Pagatz-me un cafè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu a pas cap de publicitat. Se vos agrada, un cafè l’ajuda a créisser.</string>
     <string name="dejavu_settings_safe_browsing">Navegacion segura de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Conselhs</string>
     <string name="dejavu_settings_tips_summary">Afichar de conselhs suls gèstes amagats, coma téner quichat Onglet novèl</string>
     <string name="dejavu_new">Novèl</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizar la vista de lectura</string>
+    <string name="dejavu_remote_debugging_summary">Se desactiva tornamai quand Dejavu se reaviá</string>
+    <string name="dejavu_preference_mouse_support">Presa en carga de la mirga</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic del mitan dobrís un ligam dins un onglet en rèireplan, e passar sus un ligam aficha son adreça. Un clic del mitan sus un onglet lo barra.</string>
 </resources>

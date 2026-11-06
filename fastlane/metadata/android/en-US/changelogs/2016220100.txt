@@ -1,0 +1,1 @@
+Use a mouse: middle-click opens a link in a background tab or closes a tab, and hovering a link shows its address. Reader view's font, text size and colors can be changed from the More menu. The home screen opens where you left it, with your tab in view. Remote debugging over USB turns off at every start. Plus less battery use in the background and fixes for temporary containers.

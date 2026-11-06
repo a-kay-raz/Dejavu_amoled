@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Sledujte Firefox na svých počítačích a telefonech</string>
     <string name="dejavu_settings_whats_new">Co je nového</string>
     <string name="dejavu_settings_whats_new_summary">Co přinesla každá verze a prohlídka Dejavu</string>
-    <string name="dejavu_settings_author">Vytvořil %1$s</string>
     <string name="dejavu_settings_coffee">Kupte mi kávu</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nemá žádné reklamy. Pokud se vám líbí, káva mu pomůže růst.</string>
     <string name="dejavu_settings_safe_browsing">Bezpečné prohlížení Google</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Tipy</string>
     <string name="dejavu_settings_tips_summary">Zobrazovat tipy ke skrytým gestům, například podržení tlačítka „Nový panel“</string>
     <string name="dejavu_new">Novinka</string>
+    <string name="dejavu_menu_customize_reader_view">Přizpůsobit zobrazení čtečky</string>
+    <string name="dejavu_remote_debugging_summary">Po restartu Dejavu se opět vypne</string>
+    <string name="dejavu_preference_mouse_support">Podpora myši</string>
+    <string name="dejavu_preference_mouse_support_summary">Kliknutí prostředním tlačítkem otevře odkaz v panelu na pozadí a najetí myší na odkaz zobrazí jeho adresu. Kliknutí prostředním tlačítkem na panel jej zavře.</string>
 </resources>

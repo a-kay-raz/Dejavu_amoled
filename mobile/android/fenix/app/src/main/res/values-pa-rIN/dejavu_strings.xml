@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">ਆਪਣੇ ਕੰਪਿਊਟਰਾਂ ਅਤੇ ਫ਼ੋਨਾਂ ਦੇ Firefox ਨਾਲ ਜੁੜੇ ਰਹੋ</string>
     <string name="dejavu_settings_whats_new">ਨਵਾਂ ਕੀ ਹੈ</string>
     <string name="dejavu_settings_whats_new_summary">ਹਰ ਵਰਜਨ ਕੀ ਲੈ ਕੇ ਆਇਆ, ਅਤੇ Dejavu ਦਾ ਇੱਕ ਟੂਰ</string>
-    <string name="dejavu_settings_author">%1$s ਵਲੋਂ ਬਣਾਇਆ</string>
     <string name="dejavu_settings_coffee">ਮੈਨੂੰ ਇੱਕ ਕੌਫ਼ੀ ਪਿਲਾਓ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu ਵਿੱਚ ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ ਹਨ। ਜੇ ਤੁਹਾਨੂੰ ਇਹ ਪਸੰਦ ਹੈ, ਤਾਂ ਇੱਕ ਕੌਫ਼ੀ ਇਸ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ।</string>
     <string name="dejavu_settings_safe_browsing">Google ਸੁਰੱਖਿਅਤ ਬ੍ਰਾਊਜ਼ਿੰਗ</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">ਸੁਝਾਅ</string>
     <string name="dejavu_settings_tips_summary">“ਨਵੀਂ ਟੈਬ” ਨੂੰ ਦਬਾ ਕੇ ਰੱਖਣ ਵਰਗੇ ਲੁਕਵੇਂ ਇਸ਼ਾਰਿਆਂ ਬਾਰੇ ਸੁਝਾਅ ਦਿਖਾਓ</string>
     <string name="dejavu_new">ਨਵਾਂ</string>
+    <string name="dejavu_menu_customize_reader_view">ਪੜ੍ਹਨ ਝਲਕ ਨੂੰ ਕਸਟਮਾਈਜ਼ ਕਰੋ</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu ਮੁੜ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਇਹ ਫਿਰ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ</string>
+    <string name="dejavu_preference_mouse_support">ਮਾਊਸ ਸਹਾਇਤਾ</string>
+    <string name="dejavu_preference_mouse_support_summary">ਵਿਚਕਾਰਲੇ ਬਟਨ ਨਾਲ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਲਿੰਕ ਪਿਛੋਕੜ ਵਾਲੀ ਟੈਬ ਵਿੱਚ ਖੁੱਲ੍ਹਦਾ ਹੈ, ਅਤੇ ਲਿੰਕ ਉੱਤੇ ਪੁਆਇੰਟਰ ਰੱਖਣ ਨਾਲ ਉਸਦਾ ਪਤਾ ਦਿਖਦਾ ਹੈ। ਟੈਬ ਉੱਤੇ ਵਿਚਕਾਰਲੇ ਬਟਨ ਨਾਲ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਉਹ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ।</string>
 </resources>

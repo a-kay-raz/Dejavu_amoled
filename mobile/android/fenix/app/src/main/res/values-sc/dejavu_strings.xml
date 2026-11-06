@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Sighi Firefox in is computer e in is telèfonos tuos</string>
     <string name="dejavu_settings_whats_new">Novidades</string>
     <string name="dejavu_settings_whats_new_summary">Su chi at portadu dònnia versione, e unu giru de Dejavu</string>
-    <string name="dejavu_settings_author">Creadu dae %1$s</string>
     <string name="dejavu_settings_coffee">Pàgami unu cafè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu no tenet publitzidade. Si t\'agradat, unu cafè l\'agiudat a crèschere.</string>
     <string name="dejavu_settings_safe_browsing">Navigatzione segura de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Cussìgios</string>
     <string name="dejavu_settings_tips_summary">Ammustra cussìgios subra de is gestos cuados, comente mantènnere pretzionadu “Ischeda noa”</string>
     <string name="dejavu_new">Nou</string>
+    <string name="dejavu_menu_customize_reader_view">Personaliza sa visualizatzione de letura</string>
+    <string name="dejavu_remote_debugging_summary">Si disativat torra cando Dejavu si torrat a aviare</string>
+    <string name="dejavu_preference_mouse_support">Supportu de su sòrighe</string>
+    <string name="dejavu_preference_mouse_support_summary">Unu clic cun su butone de mesu aberit unu ligòngiu in un\'ischeda in segundu pranu, e passende subra de unu ligòngiu nde mustrat s\'indiritzu. Unu clic cun su butone de mesu subra de un\'ischeda la serrat.</string>
 </resources>

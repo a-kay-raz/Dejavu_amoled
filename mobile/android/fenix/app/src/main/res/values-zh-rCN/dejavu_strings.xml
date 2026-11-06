@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">随时查看您计算机和手机上的 Firefox</string>
     <string name="dejavu_settings_whats_new">新版变化</string>
     <string name="dejavu_settings_whats_new_summary">每个版本带来的变化，以及 Dejavu 导览</string>
-    <string name="dejavu_settings_author">由 %1$s 创建</string>
     <string name="dejavu_settings_coffee">请我喝杯咖啡</string>
     <string name="dejavu_settings_coffee_summary">Dejavu 没有广告。如果您喜欢它，一杯咖啡能帮助它成长。</string>
     <string name="dejavu_settings_safe_browsing">Google 安全浏览</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">提示</string>
     <string name="dejavu_settings_tips_summary">显示有关隐藏手势的提示，例如长按“新建标签页”</string>
     <string name="dejavu_new">新</string>
+    <string name="dejavu_menu_customize_reader_view">定制阅读模式</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu 重启后会再次关闭</string>
+    <string name="dejavu_preference_mouse_support">鼠标支持</string>
+    <string name="dejavu_preference_mouse_support_summary">中键点击会在后台标签页中打开链接，鼠标悬停在链接上会显示其地址。 在标签页上中键点击会将其关闭。</string>
 </resources>

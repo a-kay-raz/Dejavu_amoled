@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">ඔබේ පරිගණක සහ දුරකථනවල Firefox අනුගමනය කරන්න</string>
     <string name="dejavu_settings_whats_new">අළුත් දෑ</string>
     <string name="dejavu_settings_whats_new_summary">එක් එක් සංස්කරණය ගෙන ආ දේ, සහ Dejavu හඳුන්වාදීමක්</string>
-    <string name="dejavu_settings_author">%1$s විසින් නිර්මාණය කරන ලදී</string>
     <string name="dejavu_settings_coffee">මට කෝපි එකක් අරන් දෙන්න</string>
     <string name="dejavu_settings_coffee_summary">Dejavu හි දැන්වීම් නැත. ඔබ එයට කැමති නම්, කෝපි එකක් එහි වර්ධනයට උදව් වේ.</string>
     <string name="dejavu_settings_safe_browsing">Google ආරක්ෂිත බ්‍රවුස් කිරීම</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">ඉඟි</string>
     <string name="dejavu_settings_tips_summary">“නව පටිත්ත” තද කර අල්ලාගෙන සිටීම වැනි සැඟවුණු අභින පිළිබඳ ඉඟි පෙන්වන්න</string>
     <string name="dejavu_new">නව</string>
+    <string name="dejavu_menu_customize_reader_view">කියවීමේ දැක්ම රිසිකරණය කරන්න</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu යළි ආරම්භ වූ විට එය නැවත අක්‍රිය වේ</string>
+    <string name="dejavu_preference_mouse_support">මූසික සහාය</string>
+    <string name="dejavu_preference_mouse_support_summary">මැද බොත්තමෙන් ක්ලික් කිරීමෙන් සබැඳියක් පසුබිම් පටිත්තක විවෘත වන අතර, සබැඳියක් මත මූසිකය තැබීමෙන් එහි ලිපිනය පෙන්වයි. පටිත්තක් මත මැද බොත්තමෙන් ක්ලික් කිරීමෙන් එය වසයි.</string>
 </resources>

@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">آپݨے کمپیوٹراں تے فوناں دے Firefox تے نظر رکھو</string>
     <string name="dejavu_settings_whats_new">کیا نواں ہے؟</string>
     <string name="dejavu_settings_whats_new_summary">ہر ورشن کیا گھن آیا، تے Dejavu دا تعارف</string>
-    <string name="dejavu_settings_author">%1$s دا بݨایا ہویا</string>
     <string name="dejavu_settings_coffee">میکوں ہک کافی پلاؤ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu وچ کوئی اشتہار کائنی۔ جے ایہ تہاکوں چنڳا لڳدا ہے، تاں ہک کافی ایندے ودھݨ وچ مدد کریندی ہے۔</string>
     <string name="dejavu_settings_safe_browsing">Google محفوظ براؤزنگ</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">مشورے</string>
     <string name="dejavu_settings_tips_summary">لُکے ہوئے اشاریاں بارے مشورے ݙکھاؤ، جیویں نویں ٹیب بٹݨ کوں دبا تے رکھݨ</string>
     <string name="dejavu_new">نواں</string>
+    <string name="dejavu_menu_customize_reader_view">من پسند قاری نظارہ بݨاو</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu دے ولا شروع تھیوݨ تے ایہ ولا بند تھی ویندی اے</string>
+    <string name="dejavu_preference_mouse_support">ماؤس دی سہولت</string>
+    <string name="dejavu_preference_mouse_support_summary">وچلے بٹݨ نال کلک کرݨ نال لنک پچھلی ٹیب وچ کھلدا ہے، تے لنک اُتے ماؤس رکھݨ نال اوندا پتہ ݙکھدا ہے۔ ٹیب اُتے وچلے بٹݨ نال کلک کرݨ نال او بند تھی ویندی ہے۔</string>
 </resources>

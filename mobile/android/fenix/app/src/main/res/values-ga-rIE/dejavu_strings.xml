@@ -344,7 +344,6 @@
     <string name="dejavu_feature_firefox_sync">Lean Firefox ar do ríomhairí agus d’fhóin</string>
     <string name="dejavu_settings_whats_new">Gach rud nua</string>
     <string name="dejavu_settings_whats_new_summary">Cad a thug gach leagan, agus turas timpeall ar Dejavu</string>
-    <string name="dejavu_settings_author">Cruthaithe ag %1$s</string>
     <string name="dejavu_settings_coffee">Ceannaigh caife dom</string>
     <string name="dejavu_settings_coffee_summary">Níl aon fhógraíocht i Dejavu. Más maith leat é, cabhraíonn caife leis fás.</string>
     <string name="dejavu_settings_safe_browsing">Brabhsáil Shábháilte Google</string>
@@ -567,4 +566,8 @@
     <string name="dejavu_settings_tips">Leideanna</string>
     <string name="dejavu_settings_tips_summary">Taispeáin leideanna faoi ghothaí folaithe, mar shampla “Cluaisín nua” a choinneáil brúite</string>
     <string name="dejavu_new">Nua</string>
+    <string name="dejavu_menu_customize_reader_view">Saincheap an t-amharc léitheoireachta</string>
+    <string name="dejavu_remote_debugging_summary">Casann sé as arís nuair a atosaíonn Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Tacaíocht luiche</string>
+    <string name="dejavu_preference_mouse_support_summary">Osclaíonn cliceáil lárnach nasc i gcluaisín sa chúlra, agus taispeánann foluain os cionn naisc a sheoladh. Dúnann cliceáil lárnach ar chluaisín é.</string>
 </resources>

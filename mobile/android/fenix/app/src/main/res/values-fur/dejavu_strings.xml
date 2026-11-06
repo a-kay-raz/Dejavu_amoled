@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Seguìs Firefox sui tiei computers e telefons</string>
     <string name="dejavu_settings_whats_new">Novitâts</string>
     <string name="dejavu_settings_whats_new_summary">Ce che e à puartât ogni version, e une visite vuidade di Dejavu</string>
-    <string name="dejavu_settings_author">Creât di %1$s</string>
     <string name="dejavu_settings_coffee">Paiimi un cafè</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nol à publicitât. Se ti plâs, un cafè lu jude a cressi.</string>
     <string name="dejavu_settings_safe_browsing">Navigazion sigure di Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Sugjeriments</string>
     <string name="dejavu_settings_tips_summary">Mostre sugjeriments sui mots platâts, come tignî fracât Gnove schede</string>
     <string name="dejavu_new">Gnûf</string>
+    <string name="dejavu_menu_customize_reader_view">Personalize viodude di leture</string>
+    <string name="dejavu_remote_debugging_summary">Si torne a disativâ cuant che Dejavu al tache di gnûf</string>
+    <string name="dejavu_preference_mouse_support">Supuart pe surie</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic di mieç al vierç un colegament intune schede in sotfont, e passâ parsore di un colegament al mostre la sô direzion. Un clic di mieç parsore di une schede le siere.</string>
 </resources>

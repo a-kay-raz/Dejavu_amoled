@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Följ Firefox på dina datorer och telefoner</string>
     <string name="dejavu_settings_whats_new">Vad är nytt</string>
     <string name="dejavu_settings_whats_new_summary">Vad varje version förde med sig, och en rundtur i Dejavu</string>
-    <string name="dejavu_settings_author">Skapad av %1$s</string>
     <string name="dejavu_settings_coffee">Bjud mig på en kaffe</string>
     <string name="dejavu_settings_coffee_summary">Dejavu har inga annonser. Om du gillar appen hjälper en kaffe den att växa.</string>
     <string name="dejavu_settings_safe_browsing">Google Säker webbsökning</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Visa tips om dolda gester, som att hålla ned Ny flik</string>
     <string name="dejavu_new">Ny</string>
+    <string name="dejavu_menu_customize_reader_view">Anpassa läsvyn</string>
+    <string name="dejavu_remote_debugging_summary">Stängs av igen när Dejavu startas om</string>
+    <string name="dejavu_preference_mouse_support">Musstöd</string>
+    <string name="dejavu_preference_mouse_support_summary">Ett klick med mittenknappen öppnar en länk i en bakgrundsflik, och när du håller muspekaren över en länk visas dess adress. Ett klick med mittenknappen på en flik stänger den.</string>
 </resources>

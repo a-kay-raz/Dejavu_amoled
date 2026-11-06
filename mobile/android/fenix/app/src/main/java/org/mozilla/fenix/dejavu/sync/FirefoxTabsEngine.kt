@@ -55,6 +55,7 @@ internal class FirefoxTabsEngine(
     private val log: (String) -> Unit = {},
 ) {
     private val tokens = SyncTokens(http, clock)
+    private val setup = StorageSetupCache()
 
     /**
      * Ids of the tabs of computers shown during this run of the app. One of them that is gone was closed by the user,
@@ -77,6 +78,7 @@ internal class FirefoxTabsEngine(
     /** Forgets everything about the server and the computers shown, for a sign out. */
     fun reset() {
         tokens.forget()
+        setup.forget()
         store.clear()
         shownHere.clear()
     }
@@ -195,9 +197,11 @@ internal class FirefoxTabsEngine(
         }
         val info = JSONObject(client.expect("GET", "info/collections").body)
         if (!info.has("meta") || !info.has("crypto")) return FirefoxSyncResult.NotSetUp
-        val meta = client.metaGlobal() ?: return FirefoxSyncResult.NotSetUp
+        setup.check(token, info)
+        val meta = client.metaGlobal(setup) ?: return FirefoxSyncResult.NotSetUp
         if (TABS in meta.declined) return FirefoxSyncResult.TabsOff
-        val keys = client.collectionKeys(KeyBundle.fromSyncKey(auth.syncKey)) ?: return FirefoxSyncResult.NotSetUp
+        val keys = client.collectionKeys(KeyBundle.fromSyncKey(auth.syncKey), setup)
+            ?: return FirefoxSyncResult.NotSetUp
         if (keys.modified != data.keysModified) {
             data.forgetRecords()
             data.keysModified = keys.modified

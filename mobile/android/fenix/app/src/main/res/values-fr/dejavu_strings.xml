@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Suis Firefox sur tes ordinateurs et téléphones</string>
     <string name="dejavu_settings_whats_new">Nouveautés</string>
     <string name="dejavu_settings_whats_new_summary">Ce que chaque version a apporté, et une visite guidée de Dejavu</string>
-    <string name="dejavu_settings_author">Créé par %1$s</string>
     <string name="dejavu_settings_coffee">Offre-moi un café</string>
     <string name="dejavu_settings_coffee_summary">Dejavu n’a pas de publicité. Si tu l’apprécies, un café l’aide à grandir.</string>
     <string name="dejavu_settings_safe_browsing">Navigation sécurisée de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Astuces</string>
     <string name="dejavu_settings_tips_summary">Afficher des astuces sur les mouvements cachés, comme maintenir « Nouvel onglet » appuyé</string>
     <string name="dejavu_new">Nouveau</string>
+    <string name="dejavu_menu_customize_reader_view">Personnaliser le mode lecture</string>
+    <string name="dejavu_remote_debugging_summary">Se désactive à nouveau au redémarrage de Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Prise en charge de la souris</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic du milieu ouvre un lien dans un onglet en arrière-plan, et survoler un lien affiche son adresse. Un clic du milieu sur un onglet le ferme.</string>
 </resources>

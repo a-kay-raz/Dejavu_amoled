@@ -119,6 +119,7 @@ import org.mozilla.fenix.components.search.SearchWidgetMiddleware
 import org.mozilla.fenix.dejavu.PrivateNewTabMiddleware
 import org.mozilla.fenix.dejavu.browser.AmoledPages
 import org.mozilla.fenix.dejavu.browser.CallsAndLocation
+import org.mozilla.fenix.dejavu.browser.DejavuMouse
 import org.mozilla.fenix.dejavu.browser.GoogleSafeBrowsing
 import org.mozilla.fenix.dejavu.browser.JitAndWebGl
 import org.mozilla.fenix.dejavu.browser.PdfScripts
@@ -440,6 +441,9 @@ class Core(
                 SavePage.install(engine, this)
 
                 AmoledPages.install(engine, this, context)
+
+                // Dejavu: the extension of mouse support is in every page while it is on, and out of them while off.
+                DejavuMouse.apply(engine, this, context.components.settings.isMouseSupportEnabled)
 
                 // Dejavu: Firefox's search telemetry ("ads" and "cookies" extensions) is not installed, as Dejavu
                 // sends no telemetry: search result pages are not read for it and its list is not downloaded.

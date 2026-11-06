@@ -320,6 +320,8 @@ private fun SheetHandle(modifier: Modifier = Modifier) {
  * @param onEntryClick Invoked when an enabled entry is clicked.
  * @param onManageExtensions Opens the extensions settings.
  * @param onEdit Opens the settings of the menu, from a button below the rows; without it there is no such button.
+ * @param onCustomizeReaderView Opens Firefox's settings of reader view, from a row under the row with the reader view
+ * entry, or above all rows when the menu has no such entry; without it there is no such row.
  */
 @Suppress("LongParameterList")
 @Composable
@@ -332,10 +334,13 @@ fun MoreMenu(
     onEntryClick: (MoreMenuEntry) -> Unit,
     onManageExtensions: () -> Unit,
     onEdit: (() -> Unit)? = null,
+    onCustomizeReaderView: (() -> Unit)? = null,
 ) {
     val unseen = rememberUnseenNewThings()
+    val readerViewRow = rows.indexOfFirst { row -> MoreMenuEntry.BuiltIn(MoreMenuItem.READER_VIEW) in row }
     Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.padding(vertical = 6.dp)) {
-        rows.forEach { row ->
+        if (onCustomizeReaderView != null && readerViewRow == -1) CustomizeReaderViewRow(onCustomizeReaderView)
+        rows.forEachIndexed { index, row ->
             val single = row.singleOrNull()
             if (single is MoreMenuEntry.BuiltIn && single.item == MoreMenuItem.EXTENSIONS) {
                 ExtensionsDrawer(
@@ -357,6 +362,7 @@ fun MoreMenu(
                     repeat(MoreMenuLayout.MAX_PER_ROW - row.size) { Spacer(Modifier.weight(1f)) }
                 }
             }
+            if (onCustomizeReaderView != null && index == readerViewRow) CustomizeReaderViewRow(onCustomizeReaderView)
         }
         if (onEdit != null) {
             Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
@@ -421,6 +427,33 @@ private fun MenuTile(look: EntryLook, onClick: () -> Unit, modifier: Modifier = 
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurface,
             textAlign = TextAlign.Center,
+        )
+    }
+}
+
+/** A full width row that opens Firefox's settings of reader view: its font, text size and colors. */
+@Composable
+private fun CustomizeReaderViewRow(onClick: () -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 4.dp)
+            .clip(RoundedCornerShape(20.dp))
+            .background(MaterialTheme.colorScheme.surfaceContainerHigh)
+            .clickable(role = Role.Button, onClick = onClick)
+            .padding(horizontal = 16.dp, vertical = 14.dp),
+    ) {
+        Icon(
+            painter = painterResource(iconsR.drawable.mozac_ic_reader_view_customize_24),
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurface,
+        )
+        Spacer(Modifier.width(14.dp))
+        Text(
+            text = stringResource(R.string.dejavu_menu_customize_reader_view),
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurface,
         )
     }
 }

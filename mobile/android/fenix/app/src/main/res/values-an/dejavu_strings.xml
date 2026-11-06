@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Sigue Firefox en os tuyos ordinadors y telefonos</string>
     <string name="dejavu_settings_whats_new">Novedatz</string>
     <string name="dejavu_settings_whats_new_summary">Lo que portó cada versión, y una visita guiada per Dejavu</string>
-    <string name="dejavu_settings_author">Creau per %1$s</string>
     <string name="dejavu_settings_coffee">Compra-me un café</string>
     <string name="dejavu_settings_coffee_summary">Dejavu no tiene anuncios. Si te fa goyo, un café l\'aduya a crexer.</string>
     <string name="dejavu_settings_safe_browsing">Navegación segura de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Consellos</string>
     <string name="dejavu_settings_tips_summary">Amostrar consellos sobre cenyos amagaus, como mantener pretau «Nueva pestanya»</string>
     <string name="dejavu_new">Nuevo</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizar la vista de lectura</string>
+    <string name="dejavu_remote_debugging_summary">Se torna a desactivar quan Dejavu se reinicia</string>
+    <string name="dejavu_preference_mouse_support">Suporte de churi</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic central ubre un vinclo en una pestanya de fondo, y pasar por denzima d\'un vinclo amuestra la suya adreza. Un clic central en una pestanya la zarra.</string>
 </resources>

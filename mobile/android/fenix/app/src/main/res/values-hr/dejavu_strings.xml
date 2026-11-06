@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Pratite Firefox na svojim računalima i telefonima</string>
     <string name="dejavu_settings_whats_new">Što je novo</string>
     <string name="dejavu_settings_whats_new_summary">Što je donijela svaka verzija i obilazak Dejavua</string>
-    <string name="dejavu_settings_author">Autor: %1$s</string>
     <string name="dejavu_settings_coffee">Častite me kavom</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nema oglasa. Ako vam se sviđa, kava mu pomaže da raste.</string>
     <string name="dejavu_settings_safe_browsing">Google sigurno pregledavanje</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Savjeti</string>
     <string name="dejavu_settings_tips_summary">Prikaži savjete o skrivenim gestama, poput zadržavanja „Nova kartica“</string>
     <string name="dejavu_new">Novo</string>
+    <string name="dejavu_menu_customize_reader_view">Prilagodi prikaz čitača</string>
+    <string name="dejavu_remote_debugging_summary">Opet se isključuje kad se Dejavu ponovno pokrene</string>
+    <string name="dejavu_preference_mouse_support">Podrška za miš</string>
+    <string name="dejavu_preference_mouse_support_summary">Klik srednjom tipkom otvara poveznicu u kartici u pozadini, a prelazak mišem preko poveznice prikazuje njezinu adresu. Klik srednjom tipkom na karticu zatvara je.</string>
 </resources>

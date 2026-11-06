@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Segue Firefox nos teus ordenadores e teléfonos</string>
     <string name="dejavu_settings_whats_new">Novidades</string>
     <string name="dejavu_settings_whats_new_summary">O que trouxo cada versión e un percorrido por Dejavu</string>
-    <string name="dejavu_settings_author">Creado por %1$s</string>
     <string name="dejavu_settings_coffee">Convídame a un café</string>
     <string name="dejavu_settings_coffee_summary">Dejavu non ten anuncios. Se che gusta, un café axúdao a medrar.</string>
     <string name="dejavu_settings_safe_browsing">Navegación segura de Google</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Consellos</string>
     <string name="dejavu_settings_tips_summary">Amosar consellos sobre xestos agochados, como manter premido «Nova lapela»</string>
     <string name="dejavu_new">Novo</string>
+    <string name="dejavu_menu_customize_reader_view">Personalizar a vista de lectura</string>
+    <string name="dejavu_remote_debugging_summary">Desactívase de novo cando Dejavu se reinicia</string>
+    <string name="dejavu_preference_mouse_support">Compatibilidade co rato</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic co botón central abre unha ligazón nunha lapela en segundo plano, e pasar o rato por riba dunha ligazón amosa o seu enderezo. Un clic co botón central nunha lapela péchaa.</string>
 </resources>

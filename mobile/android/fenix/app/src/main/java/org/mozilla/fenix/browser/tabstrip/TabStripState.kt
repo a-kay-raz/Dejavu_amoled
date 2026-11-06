@@ -51,6 +51,7 @@ data class TabStripState(
  * @property isPrivate Whether or not the tab is private.
  * @property isSelected Whether or not the tab is selected.
  * @property isCloseButtonVisible Whether or not the close button is visible.
+ * @property isPinned Dejavu: whether the item is a pinned tab or essential, which has no close button as it stays.
  * @property isAsleep Dejavu: whether the tab's page is not loaded, like a sleeping tab or a pinned tab whose tab is
  *   closed, which shows faded.
  */
@@ -63,6 +64,7 @@ data class TabStripItem(
     val isSelected: Boolean,
     val isCloseButtonVisible: Boolean = true,
     val isAsleep: Boolean = false,
+    val isPinned: Boolean = false,
 )
 
 /**
@@ -133,6 +135,7 @@ private fun List<SiblingTab>.toTabStripItems(isSelectDisabled: Boolean, selected
             isSelected = isSelected,
             isCloseButtonVisible = sibling.pin == null && (size <= MAX_TABS_WITH_CLOSE_BUTTON_VISIBLE || isSelected),
             isAsleep = !sibling.isAwake && !isSelected,
+            isPinned = sibling.pin != null,
         )
     }
 

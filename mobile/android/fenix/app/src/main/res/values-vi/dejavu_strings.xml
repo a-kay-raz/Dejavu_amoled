@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">Theo dõi Firefox trên máy tính và điện thoại của bạn</string>
     <string name="dejavu_settings_whats_new">Có gì mới</string>
     <string name="dejavu_settings_whats_new_summary">Những gì mỗi phiên bản mang lại, và một chuyến tham quan Dejavu</string>
-    <string name="dejavu_settings_author">Được tạo bởi %1$s</string>
     <string name="dejavu_settings_coffee">Mời tôi một ly cà phê</string>
     <string name="dejavu_settings_coffee_summary">Dejavu không có quảng cáo. Nếu bạn thích, một ly cà phê sẽ giúp Dejavu phát triển.</string>
     <string name="dejavu_settings_safe_browsing">Duyệt web an toàn của Google</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">Mẹo</string>
     <string name="dejavu_settings_tips_summary">Hiển thị mẹo về các cử chỉ ẩn, như nhấn giữ “Thẻ mới”</string>
     <string name="dejavu_new">Mới</string>
+    <string name="dejavu_menu_customize_reader_view">Tùy chỉnh chế độ đọc sách</string>
+    <string name="dejavu_remote_debugging_summary">Tự tắt lại khi Dejavu khởi động lại</string>
+    <string name="dejavu_preference_mouse_support">Hỗ trợ chuột</string>
+    <string name="dejavu_preference_mouse_support_summary">Nhấp chuột giữa sẽ mở liên kết trong một thẻ nền, và di chuột lên liên kết sẽ hiển thị địa chỉ của nó. Nhấp chuột giữa vào một thẻ sẽ đóng thẻ đó.</string>
 </resources>

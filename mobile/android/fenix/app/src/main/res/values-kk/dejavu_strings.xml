@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Компьютерлеріңіз бен телефондарыңыздағы Firefox-ты бақылаңыз</string>
     <string name="dejavu_settings_whats_new">Не жаңалық</string>
     <string name="dejavu_settings_whats_new_summary">Әр нұсқаның не әкелгені және Dejavu-мен танысу</string>
-    <string name="dejavu_settings_author">%1$s жасаған</string>
     <string name="dejavu_settings_coffee">Маған кофе алып беріңіз</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-да жарнама жоқ. Ол сізге ұнаса, бір кесе кофе оның дамуына көмектеседі.</string>
     <string name="dejavu_settings_safe_browsing">Google қауіпсіз шолу</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Кеңестер</string>
     <string name="dejavu_settings_tips_summary">«Жаңа бет» түймесін басып тұру сияқты жасырын ым қимылдары туралы кеңестерді көрсету</string>
     <string name="dejavu_new">Жаңа</string>
+    <string name="dejavu_menu_customize_reader_view">Оқу режимін баптау</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu қайта іске қосылғанда қайтадан сөнеді</string>
+    <string name="dejavu_preference_mouse_support">Тінтуірді қолдау</string>
+    <string name="dejavu_preference_mouse_support_summary">Ортаңғы батырмамен шерту сілтемені фондық бетте ашады, ал сілтеменің үстіне апару оның адресін көрсетеді. Бетте ортаңғы батырмамен шерту оны жабады.</string>
 </resources>

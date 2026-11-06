@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Tatzeqelb\'ej Firefox pa ri taq akematz\'ib\' chuqa\' pa ri taq awoyonib\'al</string>
     <string name="dejavu_settings_whats_new">Achike ri k\'ak\'a\'</string>
     <string name="dejavu_settings_whats_new_summary">Ri xuk\'äm pe chi jujun ruwäch, chuqa\' jun b\'iyin pa Dejavu</string>
-    <string name="dejavu_settings_author">Xb\'an ruma %1$s</string>
     <string name="dejavu_settings_coffee">Taloq\'oj jun kafe chuwe</string>
     <string name="dejavu_settings_coffee_summary">Majun taq eltzijol pa Dejavu. We nuqa chawäch, jun kafe nuto\' richin nik\'iy.</string>
     <string name="dejavu_settings_safe_browsing">Google Safe Browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Taq na\'oj</string>
     <string name="dejavu_settings_tips_summary">Kek\'ut taq na\'oj chi kij ewan taq b\'anoj paläj, achi\'el nachäp jun ramaj “K\'ak\'a\' ruwi\'”</string>
     <string name="dejavu_new">K\'ak\'a\'</string>
+    <string name="dejavu_menu_customize_reader_view">Ke\'ichinäx rutz\'etoj sik\'inem</string>
+    <string name="dejavu_remote_debugging_summary">Nichup chik toq nitikïr chik ri Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Ruto\'ik ri ch\'oy</string>
+    <string name="dejavu_preference_mouse_support_summary">Toq napitz\'ij ri nik\'aj rupitz\'b\'al, nujäq jun ximonel pa jun ruwi\' chi rij, chuqa\' toq nanuk\' ri ch\'oy pa ruwi\' jun ximonel, nuk\'üt ri rochochib\'al. Toq napitz\'ij ri nik\'aj rupitz\'b\'al pa jun ruwi\', nutz\'apij.</string>
 </resources>

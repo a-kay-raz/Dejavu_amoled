@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Følg Firefox på dine computere og telefoner</string>
     <string name="dejavu_settings_whats_new">Nyheder</string>
     <string name="dejavu_settings_whats_new_summary">Hvad hver version bragte, og en rundtur i Dejavu</string>
-    <string name="dejavu_settings_author">Skabt af %1$s</string>
     <string name="dejavu_settings_coffee">Køb mig en kop kaffe</string>
     <string name="dejavu_settings_coffee_summary">Dejavu har ingen reklamer. Hvis du kan lide det, hjælper en kop kaffe det med at vokse.</string>
     <string name="dejavu_settings_safe_browsing">Google Beskyttet browsing</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Vis tips om skjulte bevægelser, som at holde Nyt faneblad nede</string>
     <string name="dejavu_new">Ny</string>
+    <string name="dejavu_menu_customize_reader_view">Tilpas læsevisning</string>
+    <string name="dejavu_remote_debugging_summary">Slås fra igen, når Dejavu genstarter</string>
+    <string name="dejavu_preference_mouse_support">Understøttelse af mus</string>
+    <string name="dejavu_preference_mouse_support_summary">Et klik med midterknappen åbner et link i et faneblad i baggrunden, og når du holder markøren over et link, vises dets adresse. Et klik med midterknappen på et faneblad lukker det.</string>
 </resources>

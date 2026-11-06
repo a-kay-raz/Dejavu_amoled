@@ -8,6 +8,7 @@ import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import androidx.core.content.edit
+import androidx.preference.PreferenceManager
 import androidx.work.WorkManager
 import java.io.File
 import kotlinx.coroutines.CoroutineScope
@@ -170,6 +171,18 @@ internal object DejavuDefaults {
                 }
             }
         }
+    }
+
+    /**
+     * Turns remote debugging over USB off at every start, before the browser engine reads it: while it is on, a
+     * computer connected over USB controls the browser without asking, so it lasts only until Dejavu closes. Its switch
+     * keeps its own copy in the default preferences, which the settings screen shows.
+     */
+    fun applyEveryStart(context: Context) {
+        val key = context.getPreferenceKey(R.string.pref_key_remote_debugging)
+        listOf(context.components.settings.preferences, PreferenceManager.getDefaultSharedPreferences(context))
+            .filter { it.getBoolean(key, false) }
+            .forEach { it.edit { putBoolean(key, false) } }
     }
 
     /**

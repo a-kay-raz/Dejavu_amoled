@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">컴퓨터와 휴대폰의 Firefox를 따라가세요</string>
     <string name="dejavu_settings_whats_new">새 기능</string>
     <string name="dejavu_settings_whats_new_summary">버전별 새로운 점과 Dejavu 둘러보기</string>
-    <string name="dejavu_settings_author">%1$s 제작</string>
     <string name="dejavu_settings_coffee">커피 한 잔 사 주세요</string>
     <string name="dejavu_settings_coffee_summary">Dejavu에는 광고가 없습니다. 마음에 드신다면 커피 한 잔이 Dejavu의 성장에 힘이 됩니다.</string>
     <string name="dejavu_settings_safe_browsing">Google 세이프 브라우징</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">팁</string>
     <string name="dejavu_settings_tips_summary">\'새 탭\' 길게 누르기 등 숨겨진 제스처에 대한 팁 표시</string>
     <string name="dejavu_new">신규</string>
+    <string name="dejavu_menu_customize_reader_view">읽기 모드 사용자 지정</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu를 다시 시작하면 다시 꺼집니다</string>
+    <string name="dejavu_preference_mouse_support">마우스 지원</string>
+    <string name="dejavu_preference_mouse_support_summary">가운데 버튼으로 클릭하면 링크가 백그라운드 탭에서 열리고, 링크 위에 마우스를 올리면 주소가 표시됩니다. 탭을 가운데 버튼으로 클릭하면 그 탭이 닫힙니다.</string>
 </resources>

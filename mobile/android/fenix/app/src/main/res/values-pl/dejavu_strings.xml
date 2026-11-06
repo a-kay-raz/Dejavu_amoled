@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Śledź Firefoksa na swoich komputerach i telefonach</string>
     <string name="dejavu_settings_whats_new">Co nowego</string>
     <string name="dejavu_settings_whats_new_summary">Co przyniosła każda wersja i przewodnik po Dejavu</string>
-    <string name="dejavu_settings_author">Autorstwa %1$s</string>
     <string name="dejavu_settings_coffee">Postaw mi kawę</string>
     <string name="dejavu_settings_coffee_summary">Dejavu nie ma reklam. Jeśli ci się podoba, kawa pomaga jej się rozwijać.</string>
     <string name="dejavu_settings_safe_browsing">Bezpieczne przeglądanie Google</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Wskazówki</string>
     <string name="dejavu_settings_tips_summary">Wyświetlaj wskazówki o ukrytych gestach, takich jak przytrzymanie przycisku „Nowa karta”</string>
     <string name="dejavu_new">Nowe</string>
+    <string name="dejavu_menu_customize_reader_view">Dostosuj widok poprawionej czytelności</string>
+    <string name="dejavu_remote_debugging_summary">Wyłącza się znowu po ponownym uruchomieniu Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Obsługa myszy</string>
+    <string name="dejavu_preference_mouse_support_summary">Kliknięcie środkowym przyciskiem otwiera odnośnik w karcie w tle, a najechanie na odnośnik wyświetla jego adres. Kliknięcie środkowym przyciskiem karty zamyka ją.</string>
 </resources>

@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">உங்கள் கணினிகளிலும் கைப்பேசிகளிலும் Firefox-ஐப் பின்தொடரவும்</string>
     <string name="dejavu_settings_whats_new">புதியது என்ன</string>
     <string name="dejavu_settings_whats_new_summary">ஒவ்வொரு பதிப்பும் கொண்டுவந்தவை, மற்றும் Dejavu அறிமுகம்</string>
-    <string name="dejavu_settings_author">%1$s உருவாக்கியது</string>
     <string name="dejavu_settings_coffee">எனக்கு ஒரு காபி வாங்கித் தாருங்கள்</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-வில் விளம்பரங்கள் இல்லை. உங்களுக்குப் பிடித்திருந்தால், ஒரு காபி அதன் வளர்ச்சிக்கு உதவும்.</string>
     <string name="dejavu_settings_safe_browsing">Google பாதுகாப்பு உலாவல்</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">உதவிக்குறிப்புகள்</string>
     <string name="dejavu_settings_tips_summary">புதிய கீற்று பொத்தானை அழுத்திப் பிடிப்பது போன்ற மறைந்திருக்கும் சைகைகள் பற்றிய உதவிக்குறிப்புகளைக் காட்டு</string>
     <string name="dejavu_new">புதியது</string>
+    <string name="dejavu_menu_customize_reader_view">வாசிப்பு தோற்றத்தைத் தனிப்பயனாக்கு</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu மீண்டும் தொடங்கும்போது மறுபடியும் அணைந்துவிடும்</string>
+    <string name="dejavu_preference_mouse_support">சுட்டி ஆதரவு</string>
+    <string name="dejavu_preference_mouse_support_summary">நடுப் பொத்தானைச் சொடுக்கினால் இணைப்பு பின்னணிக் கீற்றில் திறக்கும், இணைப்பின் மேல் சுட்டியை வைத்தால் அதன் முகவரி காட்டப்படும். கீற்றின் மேல் நடுப் பொத்தானைச் சொடுக்கினால் அது மூடப்படும்.</string>
 </resources>

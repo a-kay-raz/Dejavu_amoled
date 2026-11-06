@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">كومپيۇتېر ۋە تېلېفونلىرىڭىزدىكى Firefox قا ئەگىشىڭ</string>
     <string name="dejavu_settings_whats_new">يېڭىلىقلار</string>
     <string name="dejavu_settings_whats_new_summary">ھەر بىر نەشرنىڭ ئېلىپ كەلگەنلىرى ۋە Dejavu بىلەن تونۇشۇش</string>
-    <string name="dejavu_settings_author">%1$s ياسىغان</string>
     <string name="dejavu_settings_coffee">ماڭا بىر قەھۋە ئېلىپ بېرىڭ</string>
     <string name="dejavu_settings_coffee_summary">Dejavu دا ئېلان يوق. ياقتۇرسىڭىز، بىر قەھۋە ئۇنىڭ تەرەققىي قىلىشىغا ياردەم بېرىدۇ.</string>
     <string name="dejavu_settings_safe_browsing">Google بىخەتەر كۆرۈش</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">كۆرسەتمىلەر</string>
     <string name="dejavu_settings_tips_summary">«يېڭى بەتكۈچ»نى بېسىپ تۇرۇشقا ئوخشاش يوشۇرۇن قول ئىشارىلىرى ھەققىدىكى كۆرسەتمىلەرنى كۆرسەت</string>
     <string name="dejavu_new">يېڭى</string>
+    <string name="dejavu_menu_customize_reader_view">ئوقۇرمەن كۆرۈنۈشىنى خاسلاشتۇر</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu قايتا قوزغالغاندا يەنە تاقىلىدۇ</string>
+    <string name="dejavu_preference_mouse_support">مائۇس قوللىشى</string>
+    <string name="dejavu_preference_mouse_support_summary">ئوتتۇرا كۇنۇپكا بىلەن چېكىش ئۇلانمىنى ئارقا سۇپىدىكى بەتكۈچتە ئاچىدۇ، ئۇلانما ئۈستىگە مائۇسنى توختىتىش ئۇنىڭ ئادرېسىنى كۆرسىتىدۇ. بەتكۈچنى ئوتتۇرا كۇنۇپكا بىلەن چېكىش ئۇنى تاقايدۇ.</string>
 </resources>

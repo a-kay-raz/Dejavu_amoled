@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">Հետևեք Firefox֊ին ձեր համակարգիչներում և հեռախոսներում</string>
     <string name="dejavu_settings_whats_new">Ինչն է նոր</string>
     <string name="dejavu_settings_whats_new_summary">Ինչ է բերել յուրաքանչյուր տարբերակ, և շրջայց Dejavu֊ում</string>
-    <string name="dejavu_settings_author">Ստեղծող՝ %1$s</string>
     <string name="dejavu_settings_coffee">Հյուրասիրեք ինձ սուրճով</string>
     <string name="dejavu_settings_coffee_summary">Dejavu֊ն գովազդ չունի։ Եթե այն ձեզ դուր է գալիս, մի բաժակ սուրճն օգնում է դրա զարգացմանը։</string>
     <string name="dejavu_settings_safe_browsing">Google Անվտանգ դիտարկում</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">Հուշումներ</string>
     <string name="dejavu_settings_tips_summary">Ցուցադրել հուշումներ թաքնված ժեստերի մասին, օրինակ՝ «Նոր ներդիր»֊ը պահելը</string>
     <string name="dejavu_new">Նոր</string>
+    <string name="dejavu_menu_customize_reader_view">Հարմարեցնել ընթերցելու տեսքը</string>
+    <string name="dejavu_remote_debugging_summary">Կրկին անջատվում է Dejavu-ի վերագործարկման ժամանակ</string>
+    <string name="dejavu_preference_mouse_support">Մկնիկի աջակցում</string>
+    <string name="dejavu_preference_mouse_support_summary">Միջին կոճակով սեղմելը հղումը բացում է ֆոնային ներդիրում, իսկ հղման վրա մկնիկը պահելը ցույց է տալիս դրա հասցեն։ Միջին կոճակով սեղմելը ներդիրի վրա փակում է այն։</string>
 </resources>

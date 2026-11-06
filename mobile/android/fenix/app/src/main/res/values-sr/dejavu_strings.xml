@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Пратите Firefox на својим рачунарима и телефонима</string>
     <string name="dejavu_settings_whats_new">Шта је ново</string>
     <string name="dejavu_settings_whats_new_summary">Шта је донела свака верзија и обилазак Dejavu-а</string>
-    <string name="dejavu_settings_author">Направио %1$s</string>
     <string name="dejavu_settings_coffee">Купите ми кафу</string>
     <string name="dejavu_settings_coffee_summary">Dejavu нема огласе. Ако вам се допада, кафа му помаже да расте.</string>
     <string name="dejavu_settings_safe_browsing">Google безбедно прегледање</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Савети</string>
     <string name="dejavu_settings_tips_summary">Прикажи савете о скривеним гестовима, као што је задржавање дугмета „Нови језичак“</string>
     <string name="dejavu_new">Ново</string>
+    <string name="dejavu_menu_customize_reader_view">Прилагоди приказ читача</string>
+    <string name="dejavu_remote_debugging_summary">Опет се искључује када се Dejavu поново покрене</string>
+    <string name="dejavu_preference_mouse_support">Подршка за миша</string>
+    <string name="dejavu_preference_mouse_support_summary">Клик средњим тастером отвара везу у језичку у позадини, а прелазак мишем преко везе приказује њену адресу. Клик средњим тастером на језичак га затвара.</string>
 </resources>

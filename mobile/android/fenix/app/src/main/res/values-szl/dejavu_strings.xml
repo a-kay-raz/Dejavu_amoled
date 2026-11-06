@@ -337,7 +337,6 @@
     <string name="dejavu_feature_firefox_sync">Ôbserwuj Firefox na twojich kōmputrach i telefōnach</string>
     <string name="dejavu_settings_whats_new">Co nowego</string>
     <string name="dejavu_settings_whats_new_summary">Co prziniosła kożdo wersyjo, i przewodnik po Dejavu</string>
-    <string name="dejavu_settings_author">Zrobiōne bez %1$s</string>
     <string name="dejavu_settings_coffee">Postow mi kawa</string>
     <string name="dejavu_settings_coffee_summary">Dejavu niy mo reklam. Jak ci sie podobo, kawa pōmoże jij sie rozwijać.</string>
     <string name="dejavu_settings_safe_browsing">Bezpieczne przeglōndanie Google</string>
@@ -559,4 +558,8 @@
     <string name="dejavu_settings_tips">Porady</string>
     <string name="dejavu_settings_tips_summary">Pokazuj porady ô skrytych gestach, jak przitrzimanie „Nowo karta”</string>
     <string name="dejavu_new">Nowe</string>
+    <string name="dejavu_menu_customize_reader_view">Przipasuj wyglōnd do czytanio</string>
+    <string name="dejavu_remote_debugging_summary">Wyłōnczo sie zaś po ponownym sztarcie Dejavu</string>
+    <string name="dejavu_preference_mouse_support">Spiyranie mysze</string>
+    <string name="dejavu_preference_mouse_support_summary">Klikniyncie postrzodkowym knefliym ôtwiyro link we karcie w tle, a najechanie na link pokazuje jego adresa. Klikniyncie postrzodkowym knefliym na karcie zamyko ja.</string>
 </resources>

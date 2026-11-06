@@ -316,7 +316,6 @@
     <string name="dejavu_feature_firefox_sync">Ikuti Firefox di komputer dan ponsel Anda</string>
     <string name="dejavu_settings_whats_new">Apa yang baru</string>
     <string name="dejavu_settings_whats_new_summary">Apa yang dibawa setiap versi, dan tur Dejavu</string>
-    <string name="dejavu_settings_author">Dibuat oleh %1$s</string>
     <string name="dejavu_settings_coffee">Traktir saya kopi</string>
     <string name="dejavu_settings_coffee_summary">Dejavu tidak memiliki iklan. Jika Anda menyukainya, secangkir kopi membantunya berkembang.</string>
     <string name="dejavu_settings_safe_browsing">Google Penjelajahan Aman</string>
@@ -535,4 +534,8 @@
     <string name="dejavu_settings_tips">Tips</string>
     <string name="dejavu_settings_tips_summary">Tampilkan tips tentang gestur tersembunyi, seperti menahan “Tab baru”</string>
     <string name="dejavu_new">Baru</string>
+    <string name="dejavu_menu_customize_reader_view">Sesuaikan tampilan pembaca</string>
+    <string name="dejavu_remote_debugging_summary">Mati lagi saat Dejavu dimulai ulang</string>
+    <string name="dejavu_preference_mouse_support">Dukungan mouse</string>
+    <string name="dejavu_preference_mouse_support_summary">Klik tengah membuka tautan di tab latar belakang, dan mengarahkan mouse ke tautan menampilkan alamatnya. Klik tengah pada tab menutupnya.</string>
 </resources>

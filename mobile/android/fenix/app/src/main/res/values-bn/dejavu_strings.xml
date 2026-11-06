@@ -356,7 +356,6 @@
     <string name="dejavu_feature_firefox_sync">আপনার কম্পিউটার ও ফোনে Firefox অনুসরণ করুন</string>
     <string name="dejavu_settings_whats_new">নতুন যা আছে</string>
     <string name="dejavu_settings_whats_new_summary">প্রতিটি সংস্করণ যা এনেছে, আর Dejavu-এর একটি ট্যুর</string>
-    <string name="dejavu_settings_author">%1$s-এর তৈরি</string>
     <string name="dejavu_settings_coffee">আমাকে একটি কফি কিনে দিন</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-তে কোনো বিজ্ঞাপন নেই। ভালো লাগলে, একটি কফি এটিকে বেড়ে উঠতে সাহায্য করে।</string>
     <string name="dejavu_settings_safe_browsing">Google নিরাপদ ব্রাউজিং</string>
@@ -576,4 +575,8 @@
     <string name="dejavu_settings_tips">টিপস</string>
     <string name="dejavu_settings_tips_summary">লুকানো জেসচার নিয়ে টিপস দেখান, যেমন “নতুন ট্যাব” চেপে ধরা</string>
     <string name="dejavu_new">নতুন</string>
+    <string name="dejavu_menu_customize_reader_view">পাঠক দর্শন কাস্টমাইজ করুন</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu আবার চালু হলে এটি নিজে থেকেই বন্ধ হয়ে যায়</string>
+    <string name="dejavu_preference_mouse_support">মাউস সমর্থন</string>
+    <string name="dejavu_preference_mouse_support_summary">মাঝের বোতামে ক্লিক করলে লিংক একটি পটভূমি ট্যাবে খোলে, আর লিংকের উপর পয়েন্টার রাখলে তার ঠিকানা দেখায়। ট্যাবে মাঝের বোতামে ক্লিক করলে সেটি বন্ধ হয়।</string>
 </resources>

@@ -323,7 +323,6 @@
     <string name="dejavu_feature_firefox_sync">მიჰყევით Firefox-ს თქვენს კომპიუტერებსა და ტელეფონებზე</string>
     <string name="dejavu_settings_whats_new">სიახლეები</string>
     <string name="dejavu_settings_whats_new_summary">რა მოიტანა თითოეულმა ვერსიამ და Dejavu-ს გაცნობა</string>
-    <string name="dejavu_settings_author">შემქმნელი: %1$s</string>
     <string name="dejavu_settings_coffee">მიყიდეთ ყავა</string>
     <string name="dejavu_settings_coffee_summary">Dejavu-ში რეკლამა არ არის. თუ მოგწონთ, ერთი ფინჯანი ყავა მის განვითარებას უწყობს ხელს.</string>
     <string name="dejavu_settings_safe_browsing">Google-ის უსაფრთხო დათვალიერება</string>
@@ -543,4 +542,8 @@
     <string name="dejavu_settings_tips">რჩევები</string>
     <string name="dejavu_settings_tips_summary">რჩევების ჩვენება ფარული ჟესტების შესახებ, მაგალითად „ახალი ჩანართი“ ღილაკზე ხანგრძლივად შეხება</string>
     <string name="dejavu_new">სიახლე</string>
+    <string name="dejavu_menu_customize_reader_view">კითხვის რეჟიმის მორგება</string>
+    <string name="dejavu_remote_debugging_summary">Dejavu-ს ხელახლა გაშვებისას ისევ გამოირთვება</string>
+    <string name="dejavu_preference_mouse_support">თაგვის მხარდაჭერა</string>
+    <string name="dejavu_preference_mouse_support_summary">შუა ღილაკით დაწკაპება ბმულს ფონურ ჩანართში ხსნის, ხოლო ბმულზე მაჩვენებლის მიტანა მის მისამართს აჩვენებს. ჩანართზე შუა ღილაკით დაწკაპება მას ხურავს.</string>
 </resources>

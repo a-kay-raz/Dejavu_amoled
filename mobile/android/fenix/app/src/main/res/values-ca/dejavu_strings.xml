@@ -330,7 +330,6 @@
     <string name="dejavu_feature_firefox_sync">Seguiu el Firefox als vostres ordinadors i telèfons</string>
     <string name="dejavu_settings_whats_new">Novetats</string>
     <string name="dejavu_settings_whats_new_summary">El que ha portat cada versió, i un recorregut pel Dejavu</string>
-    <string name="dejavu_settings_author">Creat per %1$s</string>
     <string name="dejavu_settings_coffee">Convideu-me a un cafè</string>
     <string name="dejavu_settings_coffee_summary">El Dejavu no té anuncis. Si us agrada, un cafè l\'ajuda a créixer.</string>
     <string name="dejavu_settings_safe_browsing">Navegació segura de Google</string>
@@ -551,4 +550,8 @@
     <string name="dejavu_settings_tips">Consells</string>
     <string name="dejavu_settings_tips_summary">Mostra consells sobre gestos ocults, com ara mantenir premut «Pestanya nova»</string>
     <string name="dejavu_new">Nou</string>
+    <string name="dejavu_menu_customize_reader_view">Personalitza la vista de lectura</string>
+    <string name="dejavu_remote_debugging_summary">Es torna a desactivar quan el Dejavu es reinicia</string>
+    <string name="dejavu_preference_mouse_support">Compatibilitat amb el ratolí</string>
+    <string name="dejavu_preference_mouse_support_summary">Un clic amb el botó del mig obre un enllaç en una pestanya en segon pla, i passar per sobre d\'un enllaç en mostra l\'adreça. Un clic amb el botó del mig en una pestanya la tanca.</string>
 </resources>
