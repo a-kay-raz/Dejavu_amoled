@@ -266,12 +266,3 @@ have their own licenses, listed in [toolkit/content/license.html](toolkit/conten
 
 Dejavu is an independent project, not made or endorsed by Mozilla or the Zen Browser team. Firefox is a trademark of
 the Mozilla Foundation, and this repository grants no rights to Mozilla's trademarks.
-
-## Star history
-
-<a href="https://github.com/by-architect/Dejavu/stargazers">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/by-architect/Dejavu/roadmap/stars-dark.svg">
-    <img alt="Star history of Dejavu" src="https://raw.githubusercontent.com/by-architect/Dejavu/roadmap/stars.svg">
-  </picture>
-</a>
