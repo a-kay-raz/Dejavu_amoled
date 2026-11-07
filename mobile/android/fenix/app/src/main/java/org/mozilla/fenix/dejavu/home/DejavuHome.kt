@@ -221,6 +221,8 @@ interface DejavuHomeInteractor : TabEditor {
  * [searchAtBottom]; selecting keeps its bars where they are, the selection on top and its actions at the bottom.
  * [hasDataToClear] tells whether the data chosen for Clear data has anything to delete, which shows the Clear button.
  * Tips about gestures nothing shows point them out while [tipsAllowed], when nothing else needs the user's attention.
+ * While a search screen is open over it ([searching]), the system bars' icons follow the theme, see
+ * [SystemBarIconsOver].
  */
 @Suppress("LongMethod", "LongParameterList", "CognitiveComplexMethod", "CyclomaticComplexMethod")
 @Composable
@@ -244,6 +246,7 @@ fun DejavuHome(
     searchAtBottom: Boolean = false,
     hasDataToClear: Boolean = false,
     tipsAllowed: Boolean = false,
+    searching: Boolean = false,
 ) {
     // The private workspace is an extra last page, there while private tabs are open.
     val privateIndex = state.workspaces.size.takeIf { privateTabs.isNotEmpty() }
@@ -522,7 +525,7 @@ fun DejavuHome(
         }
     }
 
-    SystemBarIconsOver(wallpaperAt(pagerState.currentPage))
+    SystemBarIconsOver(wallpaperAt(pagerState.currentPage), searching)
     OverWallpaper(wallpaperAt(pagerState.currentPage), popupThemeAt(pagerState.currentPage)) {
         // The wallpapers and the theme are drawn behind the system bars too, with the content kept clear of them.
         Box(modifier = modifier.fillMaxSize().background(surface)) {

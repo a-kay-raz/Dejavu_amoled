@@ -183,13 +183,14 @@ internal fun OverWallpaper(
 
 /**
  * Keeps the icons of the status bar and the navigation bar readable over [wallpaper], the one shown: light over its
- * dark look and dark over its light one, whatever the app's theme. Without a wallpaper they follow the theme.
+ * dark look and dark over its light one, whatever the app's theme. Without a wallpaper, and while a search screen is
+ * open over the home screen ([searching]), they follow the theme, see [barsLookOver].
  */
 @Composable
-internal fun SystemBarIconsOver(wallpaper: WorkspaceWallpaper?) {
+internal fun SystemBarIconsOver(wallpaper: WorkspaceWallpaper?, searching: Boolean = false) {
     val activity = LocalContext.current as? HomeActivity ?: return
     val view = LocalView.current
-    val lightLook = wallpaper?.lightLook
+    val lightLook = barsLookOver(wallpaper, searching)
     LifecycleResumeEffect(activity, lightLook) {
         val apply = Runnable {
             if (lightLook == null) {
@@ -206,6 +207,14 @@ internal fun SystemBarIconsOver(wallpaper: WorkspaceWallpaper?) {
         onPauseOrDispose { view.removeCallbacks(apply) }
     }
 }
+
+/**
+ * The look under the system bars of the home screen, which picks their icons: the light or dark look of [wallpaper],
+ * or `null` where they follow the app's theme: without a wallpaper, and while a search screen is open ([searching]),
+ * as it veils the home screen, or the page it opened over, in the theme's colors.
+ */
+internal fun barsLookOver(wallpaper: WorkspaceWallpaper?, searching: Boolean): Boolean? =
+    wallpaper?.lightLook?.takeUnless { searching }
 
 /** [color]'s hue at [surface]'s lightness, keeping [VEIL_CHROMA] of its color. */
 private fun tinted(color: Color, surface: Color): Color {

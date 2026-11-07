@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.luminance
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import mozilla.components.compose.base.theme.Theme
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -109,6 +110,19 @@ class WallpaperTest {
         assertEquals(Theme.Dark, wallpaperTheme(dark, Theme.Dark))
         assertEquals(Theme.Light, wallpaperTheme(light, Theme.Light))
         assertEquals(Theme.Light, wallpaperTheme(light, Theme.Dark))
+    }
+
+    @Test
+    fun `the system bars' icons follow the look of the wallpaper, and the theme without one`() {
+        assertEquals(false, barsLookOver(WorkspaceWallpaper("a.jpg"), searching = false))
+        assertEquals(true, barsLookOver(WorkspaceWallpaper("b.jpg", lightLook = true), searching = false))
+        assertNull(barsLookOver(null, searching = false))
+    }
+
+    @Test
+    fun `a search screen veils the wallpaper in the theme's colors, so the system bars' icons follow the theme`() {
+        assertNull(barsLookOver(WorkspaceWallpaper("a.jpg"), searching = true))
+        assertNull(barsLookOver(WorkspaceWallpaper("b.jpg", lightLook = true), searching = true))
     }
 
     @Test
