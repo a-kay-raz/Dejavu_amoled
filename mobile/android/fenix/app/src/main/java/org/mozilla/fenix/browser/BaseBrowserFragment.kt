@@ -125,7 +125,6 @@ import mozilla.components.feature.readerview.ReaderViewFeature
 import mozilla.components.feature.search.SearchFeature
 import mozilla.components.feature.session.FullScreenFeature
 import mozilla.components.feature.session.PictureInPictureFeature
-import mozilla.components.feature.session.ScreenOrientationFeature
 import mozilla.components.feature.session.SessionFeature
 import mozilla.components.feature.session.SwipeRefreshFeature
 import mozilla.components.feature.sitepermissions.SitePermissionsFeature
@@ -211,6 +210,7 @@ import org.mozilla.fenix.customtabs.ExternalAppBrowserActivity
 import org.mozilla.fenix.databinding.FragmentBrowserBinding
 import org.mozilla.fenix.dejavu.browser.DejavuMouse
 import org.mozilla.fenix.dejavu.browser.DejavuToolbar
+import org.mozilla.fenix.dejavu.browser.FullscreenOrientationFeature
 import org.mozilla.fenix.dejavu.browser.SplitPanes
 import org.mozilla.fenix.dejavu.browser.barsLayout
 import org.mozilla.fenix.dejavu.browser.exitFullScreenKeepingBarsHidden
@@ -342,7 +342,7 @@ abstract class BaseBrowserFragment :
     private var fullScreenMediaSessionFeature = ViewBoundFeatureWrapper<MediaSessionFullscreenFeature>()
     private val searchFeature = ViewBoundFeatureWrapper<SearchFeature>()
     private val webAuthnFeature = ViewBoundFeatureWrapper<WebAuthnFeature>()
-    private val screenOrientationFeature = ViewBoundFeatureWrapper<ScreenOrientationFeature>()
+    private val screenOrientationFeature = ViewBoundFeatureWrapper<FullscreenOrientationFeature>()
     private val biometricPromptFeature = ViewBoundFeatureWrapper<BiometricPromptFeature>()
     private val crashContentIntegration = ViewBoundFeatureWrapper<CrashContentIntegration>()
     private val readerViewBinding = ViewBoundFeatureWrapper<ReaderViewBinding>()
@@ -1422,11 +1422,13 @@ abstract class BaseBrowserFragment :
             )
         }
 
+        // Dejavu: page orientation locks only turn the screen while a tab is fullscreen (issue #290).
         screenOrientationFeature.set(
             feature =
-                ScreenOrientationFeature(
+                FullscreenOrientationFeature(
                     engine = requireComponents.core.engine,
                     activity = requireActivity(),
+                    store = requireComponents.core.store,
                 ),
             owner = this,
             view = view,
