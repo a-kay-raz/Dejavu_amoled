@@ -98,6 +98,7 @@ import org.mozilla.fenix.dejavu.menu.tap
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
 import org.mozilla.fenix.dejavu.ui.DejavuDropdownMenu
 import org.mozilla.fenix.dejavu.ui.DejavuMenuItem
+import org.mozilla.fenix.dejavu.ui.DejavuToolbarMenus
 import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
 import org.mozilla.fenix.dejavu.ui.TapIcon
 import org.mozilla.fenix.dejavu.ui.rememberIconTaps
@@ -114,9 +115,15 @@ import org.mozilla.fenix.dejavu.workspaces.SplitOrientation
  *
  * @param store The store of the address bar.
  */
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun DejavuAddressBar(store: BrowserToolbarStore) {
+    // The menu of the container button looks like Dejavu's other menus.
+    DejavuToolbarMenus(shownPopupTheme()) { PageAddressBar(store) }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun PageAddressBar(store: BrowserToolbarStore) {
     val split = SplitScreen.shown
     val selectedId by components.core.store.observeAsComposableState { it.selectedTabId }
     if (split != null && selectedId in split.tabIds) {

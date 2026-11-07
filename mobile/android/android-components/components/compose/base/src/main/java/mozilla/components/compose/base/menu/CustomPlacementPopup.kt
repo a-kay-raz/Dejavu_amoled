@@ -18,6 +18,7 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
@@ -53,6 +54,14 @@ private const val FULLY_HIDDEN_POPUP_ANIMATION_RATIO = 0f
 
 /** Layout scope for content that can be shown inside of [CustomPlacementPopup]. */
 @LayoutScopeMarker @Immutable object CustomPlacementPopup
+
+/**
+ * Dejavu: the card [CustomPlacementPopup] shows its content on, drawn with the given modifier around the given content,
+ * so an app can give these popups the look of its own menus. Without one, the popup keeps its plain [Card]. With one,
+ * [CustomPlacementPopupVerticalContent] and the menu items drawn in it leave their background to the card.
+ */
+val LocalCustomPlacementPopupCard =
+    staticCompositionLocalOf<(@Composable (Modifier, @Composable () -> Unit) -> Unit)?> { null }
 
 /**
  * Composable for displaying a custom popup.
@@ -198,6 +207,11 @@ private fun CustomPlacementPopupContent(
         this.transformOrigin = transformOrigin
     }
 
+    val card = LocalCustomPlacementPopupCard.current
+    if (card != null) {
+        card(Modifier.graphicsLayer { graphicsLayerAnim() }) { CustomPlacementPopup.content() }
+        return
+    }
     Card(
         shape = MaterialTheme.shapes.small,
         modifier = Modifier.graphicsLayer { graphicsLayerAnim() },
