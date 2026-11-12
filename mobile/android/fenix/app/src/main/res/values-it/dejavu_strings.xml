@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Si disattiva di nuovo al riavvio di Dejavu</string>
     <string name="dejavu_preference_mouse_support">Supporto per il mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic con il tasto centrale apre un link in una scheda in background, e passare sopra un link ne mostra l\'indirizzo. Un clic con il tasto centrale su una scheda la chiude.</string>
+    <string name="dejavu_no_closed_tabs">Nessuna scheda chiusa di recente</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d in questa scheda</string>
+    <string name="dejavu_tab_pages">Pagine in questa scheda</string>
+    <string name="dejavu_settings_tabs_import_export">Importa ed esporta schede</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Sposta spazi, cartelle e schede verso e da Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery è un gestore di schede per Firefox sui computer. Qui i suoi pannelli sono spazi, i suoi gruppi di schede sono cartelle e le sue schede bloccate sono preferiti.</string>
+    <string name="dejavu_sidebery_export">Esporta su Sidebery</string>
+    <string name="dejavu_sidebery_import">Importa da Sidebery</string>
+    <string name="dejavu_sidebery_steps">Nel «Snapshots viewer» di Sidebery, «Import snapshot» legge il file di Dejavu e «Open all windows» ne apre le schede. Per portare qui delle schede, scegli lì un’istantanea, poi «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nuovi spazi</string>
+    <string name="dejavu_sidebery_essentials">Preferiti</string>
+    <string name="dejavu_sidebery_new_containers">Nuovi contenitori</string>
+    <string name="dejavu_sidebery_left_out">Esclusi</string>
+    <string name="dejavu_sidebery_left_out_note">Pagine che un telefono non può aprire, come i file locali, e schede di finestre anonime</string>
+    <string name="dejavu_sidebery_nothing_new">Questo file non contiene nulla di nuovo.</string>
+    <string name="dejavu_sidebery_import_button">Importa</string>
+    <string name="dejavu_sidebery_imported">Importato da Sidebery</string>
+    <string name="dejavu_sidebery_exported">Salvato per Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impossibile salvare il file. Riprova.</string>
+    <string name="dejavu_sidebery_bad_file">Questo file non è un’istantanea né un backup di Sidebery.</string>
 </resources>

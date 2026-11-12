@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Skeakelet wer út as Dejavu opnij start</string>
     <string name="dejavu_preference_mouse_support">Mûsstipe</string>
     <string name="dejavu_preference_mouse_support_summary">In middelklik iepenet in keppeling yn in ljepblêd op de eftergrûn, en mei de mûs boppe in keppeling hingje lit it adres sjen. In middelklik op in ljepblêd slút it.</string>
+    <string name="dejavu_no_closed_tabs">Gjin koartlyn sluten ljepblêden</string>
+    <string name="dejavu_tab_page_number">Side %1$d yn dit ljepblêd</string>
+    <string name="dejavu_tab_pages">Siden yn dit ljepblêd</string>
+    <string name="dejavu_settings_tabs_import_export">Ljepblêden ymportearje en eksportearje</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Wurkromten, mappen en ljepblêden nei en fan Sidebery ferpleatse</string>
+    <string name="dejavu_sidebery_hint">Sidebery is in ljepblêdbehearder foar Firefox op kompjûters. Syn panielen binne hjir wurkromten, syn ljepblêdgroepen mappen en syn fêstsette ljepblêden essinsjes.</string>
+    <string name="dejavu_sidebery_export">Nei Sidebery eksportearje</string>
+    <string name="dejavu_sidebery_import">Ut Sidebery ymportearje</string>
+    <string name="dejavu_sidebery_steps">Yn de «Snapshots viewer» fan Sidebery lêst «Import snapshot» it bestân fan Dejavu en iepenet «Open all windows» de ljepblêden. Om ljepblêden hjirhinne te heljen, kies dêr in momintopname en dan «Export snapshot» en «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nije wurkromten</string>
+    <string name="dejavu_sidebery_essentials">Essinsjes</string>
+    <string name="dejavu_sidebery_new_containers">Nije konteners</string>
+    <string name="dejavu_sidebery_left_out">Weilitten</string>
+    <string name="dejavu_sidebery_left_out_note">Siden dy’t in telefoan net iepenje kin, lykas lokale bestannen, en ljepblêden fan priveefinsters</string>
+    <string name="dejavu_sidebery_nothing_new">Der stiet neat nijs yn dit bestân.</string>
+    <string name="dejavu_sidebery_import_button">Ymportearje</string>
+    <string name="dejavu_sidebery_imported">Ut Sidebery ymportearre</string>
+    <string name="dejavu_sidebery_exported">Bewarre foar Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">It bestân koe net bewarre wurde. Probearje it opnij.</string>
+    <string name="dejavu_sidebery_bad_file">Dit bestân is gjin momintopname of reservekopy fan Sidebery.</string>
 </resources>

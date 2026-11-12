@@ -376,6 +376,8 @@ internal fun moreMenuState(
         }
     }
     val translationEngineSupported = fenix.core.store.state.translationEngine.isEngineSupported == true
+    val undoTabs by fenix.core.store.observeAsComposableState { it.undoHistory.tabs }
+    val closedTabs by fenix.core.store.observeAsComposableState { it.closedTabs }
     return MoreMenuState(
         canGoBack = tab.content.canGoBack,
         canGoForward = tab.content.canGoForward,
@@ -387,6 +389,8 @@ internal fun moreMenuState(
         isPinChanged = pin?.url != null && pin.url != url,
         isSplit = workspaces.splits.any { tab.id in it.tabIds },
         isPrivate = tab.content.private,
+        canRestoreClosedTab =
+            restoreChoiceOf(tab.content.private, undoTabs.map { it.state }, closedTabs) != RestoreChoice.None,
         hasExternalApp = hasExternalApp,
         canTranslate = translationEngineSupported &&
             FxNimbus.features.translations.value().mainFlowBrowserMenuEnabled &&

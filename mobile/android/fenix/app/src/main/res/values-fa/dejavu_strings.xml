@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">با راه‌اندازی دوبارهٔ Dejavu دوباره خاموش می‌شود</string>
     <string name="dejavu_preference_mouse_support">پشتیبانی از موشواره</string>
     <string name="dejavu_preference_mouse_support_summary">کلیک وسط پیوند را در یک زبانهٔ پس‌زمینه باز می‌کند و نگه داشتن نشانگر روی پیوند نشانی آن را نشان می‌دهد. کلیک وسط روی یک زبانه آن را می‌بندد.</string>
+    <string name="dejavu_no_closed_tabs">هیچ زبانهٔ به‌تازگی بسته‌شده‌ای نیست</string>
+    <string name="dejavu_tab_page_number">صفحهٔ %1$d در این زبانه</string>
+    <string name="dejavu_tab_pages">صفحه‌های این زبانه</string>
+    <string name="dejavu_settings_tabs_import_export">وارد کردن و صادر کردن زبانه‌ها</string>
+    <string name="dejavu_settings_tabs_import_export_summary">جابه‌جایی فضاهای کاری، پوشه‌ها و زبانه‌ها به Sidebery و از آن</string>
+    <string name="dejavu_sidebery_hint">Sidebery یک مدیر زبانه برای Firefox روی رایانه‌هاست. پنل‌های آن اینجا فضای کاری‌اند، گروه‌های زبانه‌اش پوشه و زبانه‌های سنجاق‌شده‌اش ضروریات.</string>
+    <string name="dejavu_sidebery_export">صادر کردن به Sidebery</string>
+    <string name="dejavu_sidebery_import">وارد کردن از Sidebery</string>
+    <string name="dejavu_sidebery_steps">در «Snapshots viewer» در Sidebery، «Import snapshot» پرونده Dejavu را می‌خواند و «Open all windows» زبانه‌هایش را باز می‌کند. برای آوردن زبانه‌ها به اینجا، آنجا یک نمای لحظه‌ای انتخاب کنید و سپس «Export snapshot» و «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">فضاهای کاری جدید</string>
+    <string name="dejavu_sidebery_essentials">ضروریات</string>
+    <string name="dejavu_sidebery_new_containers">محفظه‌های جدید</string>
+    <string name="dejavu_sidebery_left_out">کنار گذاشته‌شده</string>
+    <string name="dejavu_sidebery_left_out_note">صفحه‌هایی که تلفن نمی‌تواند باز کند، مثل پرونده‌های محلی، و زبانه‌های پنجره‌های خصوصی</string>
+    <string name="dejavu_sidebery_nothing_new">در این پرونده چیز تازه‌ای نیست.</string>
+    <string name="dejavu_sidebery_import_button">وارد کردن</string>
+    <string name="dejavu_sidebery_imported">از Sidebery وارد شد</string>
+    <string name="dejavu_sidebery_exported">برای Sidebery ذخیره شد</string>
+    <string name="dejavu_sidebery_export_failed">پرونده ذخیره نشد. دوباره تلاش کنید.</string>
+    <string name="dejavu_sidebery_bad_file">این پرونده نمای لحظه‌ای یا پشتیبان Sidebery نیست.</string>
 </resources>

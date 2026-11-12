@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Stängs av igen när Dejavu startas om</string>
     <string name="dejavu_preference_mouse_support">Musstöd</string>
     <string name="dejavu_preference_mouse_support_summary">Ett klick med mittenknappen öppnar en länk i en bakgrundsflik, och när du håller muspekaren över en länk visas dess adress. Ett klick med mittenknappen på en flik stänger den.</string>
+    <string name="dejavu_no_closed_tabs">Inga nyligen stängda flikar</string>
+    <string name="dejavu_tab_page_number">Sida %1$d i den här fliken</string>
+    <string name="dejavu_tab_pages">Sidor i den här fliken</string>
+    <string name="dejavu_settings_tabs_import_export">Importera och exportera flikar</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Flytta arbetsytor, mappar och flikar till och från Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery är en flikhanterare för Firefox på datorer. Dess paneler är här arbetsytor, dess flikgrupper mappar och dess fästa flikar favoriter.</string>
+    <string name="dejavu_sidebery_export">Exportera till Sidebery</string>
+    <string name="dejavu_sidebery_import">Importera från Sidebery</string>
+    <string name="dejavu_sidebery_steps">I Sidebery-vyn «Snapshots viewer» läser «Import snapshot» filen från Dejavu och «Open all windows» öppnar dess flikar. För att hämta flikar hit väljer du en ögonblicksbild där och sedan «Export snapshot» och «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nya arbetsytor</string>
+    <string name="dejavu_sidebery_essentials">Favoriter</string>
+    <string name="dejavu_sidebery_new_containers">Nya behållare</string>
+    <string name="dejavu_sidebery_left_out">Utelämnade</string>
+    <string name="dejavu_sidebery_left_out_note">Sidor som en telefon inte kan öppna, som lokala filer, och flikar från privata fönster</string>
+    <string name="dejavu_sidebery_nothing_new">Det finns inget nytt i den här filen.</string>
+    <string name="dejavu_sidebery_import_button">Importera</string>
+    <string name="dejavu_sidebery_imported">Importerat från Sidebery</string>
+    <string name="dejavu_sidebery_exported">Sparat för Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Det gick inte att spara filen. Försök igen.</string>
+    <string name="dejavu_sidebery_bad_file">Den här filen är inte en ögonblicksbild eller säkerhetskopia från Sidebery.</string>
 </resources>

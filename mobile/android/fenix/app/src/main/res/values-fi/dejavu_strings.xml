@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Poistuu taas käytöstä, kun Dejavu käynnistyy uudelleen</string>
     <string name="dejavu_preference_mouse_support">Hiiren tuki</string>
     <string name="dejavu_preference_mouse_support_summary">Keskipainikkeen napsautus avaa linkin taustavälilehteen, ja hiiren pitäminen linkin päällä näyttää sen osoitteen. Välilehden napsautus keskipainikkeella sulkee sen.</string>
+    <string name="dejavu_no_closed_tabs">Ei viimeksi suljettuja välilehtiä</string>
+    <string name="dejavu_tab_page_number">Tämän välilehden sivu %1$d</string>
+    <string name="dejavu_tab_pages">Tämän välilehden sivut</string>
+    <string name="dejavu_settings_tabs_import_export">Tuo ja vie välilehtiä</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Siirrä työtiloja, kansioita ja välilehtiä Sideberyyn ja Sideberystä</string>
+    <string name="dejavu_sidebery_hint">Sidebery on Firefoxin välilehtien hallinta tietokoneille. Sen paneelit ovat täällä työtiloja, välilehtiryhmät kansioita ja kiinnitetyt välilehdet suosikkeja.</string>
+    <string name="dejavu_sidebery_export">Vie Sideberyyn</string>
+    <string name="dejavu_sidebery_import">Tuo Sideberystä</string>
+    <string name="dejavu_sidebery_steps">Sideberyn näkymässä «Snapshots viewer» «Import snapshot» lukee Dejavun tiedoston ja «Open all windows» avaa sen välilehdet. Tuodaksesi välilehtiä tänne valitse siellä tilannevedos ja sitten «Export snapshot» ja «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Uudet työtilat</string>
+    <string name="dejavu_sidebery_essentials">Suosikit</string>
+    <string name="dejavu_sidebery_new_containers">Uudet säiliöt</string>
+    <string name="dejavu_sidebery_left_out">Jätetty pois</string>
+    <string name="dejavu_sidebery_left_out_note">Sivut, joita puhelin ei voi avata, kuten paikalliset tiedostot, ja yksityisten ikkunoiden välilehdet</string>
+    <string name="dejavu_sidebery_nothing_new">Tiedostossa ei ole mitään uutta.</string>
+    <string name="dejavu_sidebery_import_button">Tuo</string>
+    <string name="dejavu_sidebery_imported">Tuotu Sideberystä</string>
+    <string name="dejavu_sidebery_exported">Tallennettu Sideberyä varten</string>
+    <string name="dejavu_sidebery_export_failed">Tiedostoa ei voitu tallentaa. Yritä uudelleen.</string>
+    <string name="dejavu_sidebery_bad_file">Tämä tiedosto ei ole Sideberyn tilannevedos tai varmuuskopio.</string>
 </resources>

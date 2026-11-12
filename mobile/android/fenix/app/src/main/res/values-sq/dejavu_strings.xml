@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Çaktivizohet sërish kur Dejavu riniset</string>
     <string name="dejavu_preference_mouse_support">Mbulim për miun</string>
     <string name="dejavu_preference_mouse_support_summary">Klikimi me butonin e mesit hap një lidhje në një skedë në prapaskenë, dhe kalimi i miut sipër një lidhjeje shfaq adresën e saj. Klikimi me butonin e mesit mbi një skedë e mbyll atë.</string>
+    <string name="dejavu_no_closed_tabs">S’ka skeda të mbyllura së fundi</string>
+    <string name="dejavu_tab_page_number">Faqja %1$d në këtë skedë</string>
+    <string name="dejavu_tab_pages">Faqet në këtë skedë</string>
+    <string name="dejavu_settings_tabs_import_export">Importo dhe eksporto skeda</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Kaloni hapësira pune, dosje dhe skeda te Sidebery dhe prej Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery është një përgjegjës skedash për Firefox në kompjutera. Panelet e tij këtu janë hapësira pune, grupet e skedave janë dosje dhe skedat e fiksuara janë thelbësore.</string>
+    <string name="dejavu_sidebery_export">Eksporto te Sidebery</string>
+    <string name="dejavu_sidebery_import">Importo nga Sidebery</string>
+    <string name="dejavu_sidebery_steps">Te «Snapshots viewer» i Sidebery, «Import snapshot» lexon kartelën nga Dejavu dhe «Open all windows» hap skedat e saj. Që të sillni skeda këtu, zgjidhni atje një fotografim, pastaj «Export snapshot» dhe «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Hapësira të reja pune</string>
+    <string name="dejavu_sidebery_essentials">Thelbësore</string>
+    <string name="dejavu_sidebery_new_containers">Kontejnerë të rinj</string>
+    <string name="dejavu_sidebery_left_out">Të lëna jashtë</string>
+    <string name="dejavu_sidebery_left_out_note">Faqe që një telefon s’i hap dot, si kartela vendore, dhe skeda dritaresh private</string>
+    <string name="dejavu_sidebery_nothing_new">S’ka gjë të re në këtë kartelë.</string>
+    <string name="dejavu_sidebery_import_button">Importo</string>
+    <string name="dejavu_sidebery_imported">U importua nga Sidebery</string>
+    <string name="dejavu_sidebery_exported">U ruajt për Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Kartela s’u ruajt dot. Riprovoni.</string>
+    <string name="dejavu_sidebery_bad_file">Kjo kartelë s’është fotografim apo kopjeruajtje e Sidebery-t.</string>
 </resources>

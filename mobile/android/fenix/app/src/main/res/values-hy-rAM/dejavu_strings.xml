@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Կրկին անջատվում է Dejavu-ի վերագործարկման ժամանակ</string>
     <string name="dejavu_preference_mouse_support">Մկնիկի աջակցում</string>
     <string name="dejavu_preference_mouse_support_summary">Միջին կոճակով սեղմելը հղումը բացում է ֆոնային ներդիրում, իսկ հղման վրա մկնիկը պահելը ցույց է տալիս դրա հասցեն։ Միջին կոճակով սեղմելը ներդիրի վրա փակում է այն։</string>
+    <string name="dejavu_no_closed_tabs">Վերջերս փակված ներդիրներ չկան</string>
+    <string name="dejavu_tab_page_number">Էջ %1$d այս ներդիրում</string>
+    <string name="dejavu_tab_pages">Այս ներդիրի էջերը</string>
+    <string name="dejavu_settings_tabs_import_export">Ներդիրների ներմուծում և արտահանում</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Տեղափոխեք տարածքներ, թղթապանակներ և ներդիրներ Sidebery և Sidebery-ից</string>
+    <string name="dejavu_sidebery_hint">Sidebery-ն ներդիրների կառավարիչ է համակարգիչների Firefox-ի համար։ Նրա վահանակներն այստեղ տարածքներ են, ներդիրների խմբերը՝ թղթապանակներ, իսկ ամրացված ներդիրները՝ կարևոր կայքեր։</string>
+    <string name="dejavu_sidebery_export">Արտահանել Sidebery</string>
+    <string name="dejavu_sidebery_import">Ներմուծել Sidebery-ից</string>
+    <string name="dejavu_sidebery_steps">Sidebery-ի «Snapshots viewer»-ում «Import snapshot»-ը կարդում է Dejavu-ի ֆայլը, իսկ «Open all windows»-ը բացում է դրա ներդիրները։ Ներդիրներն այստեղ բերելու համար այնտեղ ընտրեք պատկերաքաղվածք, ապա «Export snapshot» և «Save as JSON»։</string>
+    <string name="dejavu_sidebery_new_workspaces">Նոր տարածքներ</string>
+    <string name="dejavu_sidebery_essentials">Կարևոր կայքեր</string>
+    <string name="dejavu_sidebery_new_containers">Նոր կոնտեյներներ</string>
+    <string name="dejavu_sidebery_left_out">Դուրս մնացած</string>
+    <string name="dejavu_sidebery_left_out_note">Էջեր, որոնք հեռախոսը չի կարող բացել, օրինակ՝ տեղային ֆայլեր, և գաղտնի պատուհանների ներդիրներ</string>
+    <string name="dejavu_sidebery_nothing_new">Այս ֆայլում նոր բան չկա։</string>
+    <string name="dejavu_sidebery_import_button">Ներմուծել</string>
+    <string name="dejavu_sidebery_imported">Ներմուծվեց Sidebery-ից</string>
+    <string name="dejavu_sidebery_exported">Պահվեց Sidebery-ի համար</string>
+    <string name="dejavu_sidebery_export_failed">Չհաջողվեց պահել ֆայլը։ Կրկին փորձեք։</string>
+    <string name="dejavu_sidebery_bad_file">Այս ֆայլը Sidebery-ի պատկերաքաղվածք կամ պահուստ չէ։</string>
 </resources>

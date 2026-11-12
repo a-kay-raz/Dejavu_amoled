@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Oñembogue jey Dejavu oñepyrũjeývo</string>
     <string name="dejavu_preference_mouse_support">Mbopi pytyvõ</string>
     <string name="dejavu_preference_mouse_support_summary">Pe jopy mbytegua oipe\'a juajuha peteĩ tendayke tapykuépe, ha embohasávo mbopi juajuha ári ohechauka hendaite. Pe jopy mbytegua tendayke ári omboty chupe.</string>
+    <string name="dejavu_no_closed_tabs">Ndaipóri tendayke oñemboty ramóva</string>
+    <string name="dejavu_tab_page_number">Kuatiarogue %1$d ko tendaykepe</string>
+    <string name="dejavu_tab_pages">Kuatiarogue ko tendaykepegua</string>
+    <string name="dejavu_settings_tabs_import_export">Tendayke jegueru ha jeguerahauka</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Embohasa tembiapo renda, karpeta ha tendayke Sidebery-pe ha Sidebery-gui</string>
+    <string name="dejavu_sidebery_hint">Sidebery ha’e tendayke ñangarekoha Firefox-pe ĝuarã mohenda’ahápe. Ipanel-kuéra ko’ápe ha’e tembiapo renda, itendayke aty ha’e karpeta ha itendayke mboguapypyre ha’e iporãvéva.</string>
+    <string name="dejavu_sidebery_export">Eguerahauka Sidebery-pe</string>
+    <string name="dejavu_sidebery_import">Egueru Sidebery-gui</string>
+    <string name="dejavu_sidebery_steps">Sidebery «Snapshots viewer»-pe, «Import snapshot» omoñe’ẽ marandurenda Dejavu-gua ha «Open all windows» oipe’a itendayke. Reru hag̃ua tendayke ko’ápe, eiporavo upépe peteĩ snapshot, upéi «Export snapshot» ha «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Tembiapo renda pyahu</string>
+    <string name="dejavu_sidebery_essentials">Iporãvéva</string>
+    <string name="dejavu_sidebery_new_containers">Ryru pyahu</string>
+    <string name="dejavu_sidebery_left_out">Oñemboykéva</string>
+    <string name="dejavu_sidebery_left_out_note">Kuatiarogue pumbyry ndaikatúiva oipe’a, marandurenda ko’ágã ary peichagua, ha ovetã ñemiguáva tendayke</string>
+    <string name="dejavu_sidebery_nothing_new">Ndaipóri mba’eve ipyahúva ko marandurendápe.</string>
+    <string name="dejavu_sidebery_import_button">Egueru</string>
+    <string name="dejavu_sidebery_imported">Ojegueru Sidebery-gui</string>
+    <string name="dejavu_sidebery_exported">Oñeñongatu Sidebery-pe ĝuarã</string>
+    <string name="dejavu_sidebery_export_failed">Ndaikatúi oñeñongatu marandurenda. Eha’ã jey.</string>
+    <string name="dejavu_sidebery_bad_file">Ko marandurenda ndaha’éi snapshot térã Sidebery mokõiha.</string>
 </resources>

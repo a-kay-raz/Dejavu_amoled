@@ -570,4 +570,24 @@
     <string name="dejavu_remote_debugging_summary">Casann sé as arís nuair a atosaíonn Dejavu</string>
     <string name="dejavu_preference_mouse_support">Tacaíocht luiche</string>
     <string name="dejavu_preference_mouse_support_summary">Osclaíonn cliceáil lárnach nasc i gcluaisín sa chúlra, agus taispeánann foluain os cionn naisc a sheoladh. Dúnann cliceáil lárnach ar chluaisín é.</string>
+    <string name="dejavu_no_closed_tabs">Níl aon chluaisín a dúnadh le déanaí</string>
+    <string name="dejavu_tab_page_number">Leathanach %1$d sa chluaisín seo</string>
+    <string name="dejavu_tab_pages">Leathanaigh sa chluaisín seo</string>
+    <string name="dejavu_settings_tabs_import_export">Iompórtáil agus easpórtáil cluaisíní</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Bog spásanna oibre, fillteáin agus cluaisíní go Sidebery agus uaidh</string>
+    <string name="dejavu_sidebery_hint">Is bainisteoir cluaisíní é Sidebery do Firefox ar ríomhairí. Is spásanna oibre anseo a phainéil, is fillteáin a ghrúpaí cluaisíní agus is riachtanais a chluaisíní greamaithe.</string>
+    <string name="dejavu_sidebery_export">Easpórtáil go Sidebery</string>
+    <string name="dejavu_sidebery_import">Iompórtáil ó Sidebery</string>
+    <string name="dejavu_sidebery_steps">In «Snapshots viewer» Sidebery, léann «Import snapshot» an comhad ó Dejavu agus osclaíonn «Open all windows» a chluaisíní. Chun cluaisíní a thabhairt anseo, roghnaigh grianghraf ansin, ansin «Export snapshot» agus «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Spásanna oibre nua</string>
+    <string name="dejavu_sidebery_essentials">Riachtanais</string>
+    <string name="dejavu_sidebery_new_containers">Coimeádáin nua</string>
+    <string name="dejavu_sidebery_left_out">Fágtha amach</string>
+    <string name="dejavu_sidebery_left_out_note">Leathanaigh nach féidir le fón a oscailt, mar chomhaid logánta, agus cluaisíní fuinneog príobháideach</string>
+    <string name="dejavu_sidebery_nothing_new">Níl aon rud nua sa chomhad seo.</string>
+    <string name="dejavu_sidebery_import_button">Iompórtáil</string>
+    <string name="dejavu_sidebery_imported">Iompórtáilte ó Sidebery</string>
+    <string name="dejavu_sidebery_exported">Sábháilte do Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Níorbh fhéidir an comhad a shábháil. Bain triail eile as.</string>
+    <string name="dejavu_sidebery_bad_file">Ní grianghraf ná cúltaca de Sidebery é an comhad seo.</string>
 </resources>

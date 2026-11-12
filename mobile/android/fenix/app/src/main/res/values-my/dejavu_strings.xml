@@ -538,4 +538,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ပြန်စသည့်အခါ ပြန်ပိတ်သွားသည်</string>
     <string name="dejavu_preference_mouse_support">မောက်စ် ပံ့ပိုးမှု</string>
     <string name="dejavu_preference_mouse_support_summary">အလယ်ခလုတ်ဖြင့် နှိပ်ပါက လင့်ခ်ကို နောက်ခံ တက်ဗ်တွင် ဖွင့်ပြီး လင့်ခ်ပေါ်တွင် မောက်စ်ထားပါက ၎င်း၏ လိပ်စာကို ပြသသည်။ တက်ဗ်ပေါ်တွင် အလယ်ခလုတ်ဖြင့် နှိပ်ပါက ၎င်းကို ပိတ်သည်။</string>
+    <string name="dejavu_no_closed_tabs">လတ်တလော ပိတ်ခဲ့သည့် တက်ဗ် မရှိ</string>
+    <string name="dejavu_tab_page_number">ဤတပ်ဗ်ရှိ စာမျက်နှာ %1$d</string>
+    <string name="dejavu_tab_pages">ဤတပ်ဗ်ရှိ စာမျက်နှာများ</string>
+    <string name="dejavu_settings_tabs_import_export">တက်ဗ်များ တင်သွင်းခြင်းနှင့် တင်ပို့ခြင်း</string>
+    <string name="dejavu_settings_tabs_import_export_summary">လုပ်ငန်းခွင်များ၊ ဖိုင်တွဲများနှင့် တက်ဗ်များကို Sidebery သို့ နှင့် Sidebery မှ ရွှေ့ပါ</string>
+    <string name="dejavu_sidebery_hint">Sidebery သည် ကွန်ပျူတာများပေါ်ရှိ Firefox အတွက် တက်ဗ်စီမံခန့်ခွဲသူ ဖြစ်သည်။ ၎င်း၏ panel များသည် ဤနေရာတွင် လုပ်ငန်းခွင်များ၊ တက်ဗ်အုပ်စုများသည် ဖိုင်တွဲများ၊ ပင်ထိုးထားသော တက်ဗ်များသည် မရှိမဖြစ်များ ဖြစ်သည်။</string>
+    <string name="dejavu_sidebery_export">Sidebery သို့ တင်ပို့ရန်</string>
+    <string name="dejavu_sidebery_import">Sidebery မှ တင်သွင်းရန်</string>
+    <string name="dejavu_sidebery_steps">Sidebery ၏ «Snapshots viewer» တွင် «Import snapshot» သည် Dejavu မှ ဖိုင်ကို ဖတ်ပြီး «Open all windows» သည် ၎င်း၏ တက်ဗ်များကို ဖွင့်သည်။ တက်ဗ်များကို ဤနေရာသို့ ယူလာရန် ထိုနေရာတွင် snapshot တစ်ခုကို ရွေးပြီး «Export snapshot» နှင့် «Save as JSON» ကို ရွေးပါ။</string>
+    <string name="dejavu_sidebery_new_workspaces">လုပ်ငန်းခွင်အသစ်များ</string>
+    <string name="dejavu_sidebery_essentials">မရှိမဖြစ်များ</string>
+    <string name="dejavu_sidebery_new_containers">ကွန်တိန်နာအသစ်များ</string>
+    <string name="dejavu_sidebery_left_out">ချန်ထားသည်</string>
+    <string name="dejavu_sidebery_left_out_note">ဖုန်းက မဖွင့်နိုင်သော စာမျက်နှာများ (ဥပမာ စက်တွင်းဖိုင်များ) နှင့် သီးသန့်ဝင်းဒိုးများ၏ တက်ဗ်များ</string>
+    <string name="dejavu_sidebery_nothing_new">ဤဖိုင်တွင် အသစ်ဘာမျှ မရှိပါ။</string>
+    <string name="dejavu_sidebery_import_button">တင်သွင်းရန်</string>
+    <string name="dejavu_sidebery_imported">Sidebery မှ တင်သွင်းပြီး</string>
+    <string name="dejavu_sidebery_exported">Sidebery အတွက် သိမ်းပြီး</string>
+    <string name="dejavu_sidebery_export_failed">ဖိုင်ကို မသိမ်းနိုင်ပါ။ ထပ်စမ်းကြည့်ပါ။</string>
+    <string name="dejavu_sidebery_bad_file">ဤဖိုင်သည် Sidebery ၏ snapshot သို့မဟုတ် backup မဟုတ်ပါ။</string>
 </resources>

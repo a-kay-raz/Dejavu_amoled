@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Ad yensu tikkelt-nniḍen mi ara yales Dejavu asenker</string>
     <string name="dejavu_preference_mouse_support">Tallalt n uɣerda</string>
     <string name="dejavu_preference_mouse_support_summary">Asiti s tqeffalt n wammas iṛẓem aseɣwen deg useksel deg ugilal, ar tasdawt n uɣerda f useɣwen tessken-d tansa nnes. Asiti s tqeffalt n wammas f useksel ad t-isekkeṛ.</string>
+    <string name="dejavu_no_closed_tabs">Ulac iseksal yemdlen melmi kan</string>
+    <string name="dejavu_tab_page_number">Tasna %1$d g useksel-a</string>
+    <string name="dejavu_tab_pages">Tisniwin g useksel-a</string>
+    <string name="dejavu_settings_tabs_import_export">Kcem d ssufeɣ iseksal</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Smutti imukan n umahil, ikuramen d iseksal ɣer Sidebery d seg Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery d amsefrak n iseksal i Firefox ɣef yisenselkimen. Igalisen-ns da d imukan n umahil, igrawen n iseksal d ikuramen, iseksal yessersen d ayen ilaqen.</string>
+    <string name="dejavu_sidebery_export">Ssufeɣ ɣer Sidebery</string>
+    <string name="dejavu_sidebery_import">Kcem seg Sidebery</string>
+    <string name="dejavu_sidebery_steps">Deg «Snapshots viewer» n Sidebery, «Import snapshot» iɣra afaylu n Dejavu, «Open all windows» ad ilday iseksal-ns. Ad d-tawiḍ iseksal ɣer da, sti tawlaft din, sakin «Export snapshot» d «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Imukan n umahil imaynuten</string>
+    <string name="dejavu_sidebery_essentials">Ayen ilaqen</string>
+    <string name="dejavu_sidebery_new_containers">Isenduqen imaynuten</string>
+    <string name="dejavu_sidebery_left_out">Ittwaǧǧan</string>
+    <string name="dejavu_sidebery_left_out_note">Tisniwin ur yezmir ad tent-yeldi utilifun, am yifuyla idiganen, d iseksal n isfuyla imeẓlayen</string>
+    <string name="dejavu_sidebery_nothing_new">Ulac kra n umaynu deg ufaylu-a.</string>
+    <string name="dejavu_sidebery_import_button">Kcem</string>
+    <string name="dejavu_sidebery_imported">Ittwakcem seg Sidebery</string>
+    <string name="dejavu_sidebery_exported">Ittwaḥrez i Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Ur yezmir ad ittwaḥrez ufaylu. Ɛreḍ tikkelt nniḍen.</string>
+    <string name="dejavu_sidebery_bad_file">Afaylu-a mačči d tawlaft niɣ d aḥraz n Sidebery.</string>
 </resources>

@@ -380,19 +380,32 @@ fun DejavuDropdownMenu(
     )
 }
 
-/** An item of a [DejavuDropdownMenu], highlighted in a rounded box when pressed. */
+/**
+ * An item of a [DejavuDropdownMenu], highlighted in a rounded box when pressed. Its [text] takes up to [maxLines]
+ * lines, cut off after that.
+ */
 @Composable
 fun DejavuMenuItem(
     text: String,
     onClick: () -> Unit,
     enabled: Boolean = true,
     leadingIcon: (@Composable () -> Unit)? = null,
+    trailingIcon: (@Composable () -> Unit)? = null,
+    maxLines: Int = Int.MAX_VALUE,
 ) {
     DropdownMenuItem(
-        text = { Text(text = text, style = MaterialTheme.typography.bodyLarge) },
+        text = {
+            Text(
+                text = text,
+                style = MaterialTheme.typography.bodyLarge,
+                maxLines = maxLines,
+                overflow = TextOverflow.Ellipsis,
+            )
+        },
         onClick = onClick,
         modifier = Modifier.padding(horizontal = ITEM_INSET).clip(DejavuPopup.ItemShape),
         leadingIcon = leadingIcon,
+        trailingIcon = trailingIcon,
         enabled = enabled,
         colors = MenuDefaults.itemColors(
             textColor = MaterialTheme.colorScheme.onSurface,

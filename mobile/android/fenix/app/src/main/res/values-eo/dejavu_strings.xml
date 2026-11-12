@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Malŝaltiĝas denove kiam Dejavu rekomenciĝas</string>
     <string name="dejavu_preference_mouse_support">Subteno de muso</string>
     <string name="dejavu_preference_mouse_support_summary">Meza alklako malfermas ligilon en fona langeto, kaj ŝvebigi la muson super ligilo montras ĝian adreson. Meza alklako sur langeto fermas ĝin.</string>
+    <string name="dejavu_no_closed_tabs">Estas neniu ĵuse fermita langeto</string>
+    <string name="dejavu_tab_page_number">Paĝo %1$d en tiu ĉi langeto</string>
+    <string name="dejavu_tab_pages">Paĝoj en tiu ĉi langeto</string>
+    <string name="dejavu_settings_tabs_import_export">Importi kaj eksporti langetojn</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Movi laborspacojn, dosierujojn kaj langetojn al kaj el Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery estas administrilo de langetoj por Firefox en komputiloj. Ĝiaj paneloj ĉi tie estas laborspacoj, ĝiaj grupoj de langetoj estas dosierujoj kaj ĝiaj pinglitaj langetoj estas esencaĵoj.</string>
+    <string name="dejavu_sidebery_export">Eksporti al Sidebery</string>
+    <string name="dejavu_sidebery_import">Importi el Sidebery</string>
+    <string name="dejavu_sidebery_steps">En «Snapshots viewer» de Sidebery, «Import snapshot» legas la dosieron el Dejavu kaj «Open all windows» malfermas ĝiajn langetojn. Por alporti langetojn ĉi tien, elektu tie momentkopion, poste «Export snapshot» kaj «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Novaj laborspacoj</string>
+    <string name="dejavu_sidebery_essentials">Esencaĵoj</string>
+    <string name="dejavu_sidebery_new_containers">Novaj ujoj</string>
+    <string name="dejavu_sidebery_left_out">Preterlasitaj</string>
+    <string name="dejavu_sidebery_left_out_note">Paĝoj, kiujn telefono ne povas malfermi, kiel lokaj dosieroj, kaj langetoj de privataj fenestroj</string>
+    <string name="dejavu_sidebery_nothing_new">Estas nenio nova en ĉi tiu dosiero.</string>
+    <string name="dejavu_sidebery_import_button">Importi</string>
+    <string name="dejavu_sidebery_imported">Importite el Sidebery</string>
+    <string name="dejavu_sidebery_exported">Konservite por Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Ne eblis konservi la dosieron. Provu denove.</string>
+    <string name="dejavu_sidebery_bad_file">Ĉi tiu dosiero ne estas momentkopio aŭ savkopio de Sidebery.</string>
 </resources>

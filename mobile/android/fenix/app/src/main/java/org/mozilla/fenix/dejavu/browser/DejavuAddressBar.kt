@@ -57,9 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import mozilla.components.browser.state.selector.findTab
 import mozilla.components.browser.state.selector.selectedTab
-import mozilla.components.browser.state.state.SecurityInfo
 import mozilla.components.browser.state.state.TabSessionState
-import mozilla.components.browser.toolbar.R as browserToolbarR
 import mozilla.components.compose.browser.toolbar.ActionContainer
 import mozilla.components.compose.browser.toolbar.R as toolbarR
 import mozilla.components.compose.browser.toolbar.concept.Action
@@ -70,9 +68,7 @@ import mozilla.components.compose.browser.toolbar.store.BrowserToolbarInteractio
 import mozilla.components.compose.browser.toolbar.store.BrowserToolbarStore
 import mozilla.components.concept.engine.utils.ABOUT_HOME_URL
 import mozilla.components.lib.state.ext.observeAsComposableState
-import mozilla.components.support.ktx.kotlin.isContentUrl
 import mozilla.components.support.utils.ClipboardHandler
-import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.components
 import org.mozilla.fenix.dejavu.actions.TabAction
@@ -105,12 +101,13 @@ import org.mozilla.fenix.dejavu.workspaces.SplitOrientation
 
 /**
  * Dejavu's address bar while a page is shown: only its state, like Safari's. A field in the app's colors shows the
- * page title in the middle, with the site's security icon next to it and the site's domain in small letters below it.
- * While the page loads, colors run through the domain's letters instead of a loading bar. The tab's container, or the
- * "no container" icon, sits at its start. The bar shows above pages or below them, as the layout of the bars has it,
- * see [BarsLayout], with the button the user chose on each side of the field; a side without one leaves its room to
- * the field. Tapping the bar starts a search, and long-pressing it copies the address or pastes one. Where no actions
- * bar opens the "More" menu, swiping the bar opens it; elsewhere swiping it does nothing.
+ * page title in the middle, with the site's domain in small letters below it, and at its end how many pages Back goes
+ * through before it closes the tab, which lists them when tapped and opens the site's protections when held, see
+ * [PageCounter]. While the page loads, colors run through the domain's letters instead of a loading bar. The tab's
+ * container, or the "no container" icon, sits at its start. The bar shows above pages or below them, as the layout of
+ * the bars has it, see [BarsLayout], with the button the user chose on each side of the field; a side without one
+ * leaves its room to the field. Tapping the bar starts a search, and long-pressing it copies the address or pastes
+ * one. Where no actions bar opens the "More" menu, swiping the bar opens it; elsewhere swiping it does nothing.
  *
  * @param store The store of the address bar.
  */
@@ -176,10 +173,14 @@ fun DejavuAddressBar(store: BrowserToolbarStore) {
                     url = url,
                     loading = loading,
                     container = containerAction(),
-                    pageActions = pageActions,
                     onInteraction = { store.dispatch(it) },
                     modifier = Modifier.align(Alignment.Center),
-                )
+                ) {
+                    PageCounter(
+                        tabId = null,
+                        onHold = pageActions.siteInfoClick()?.let { event -> { store.dispatch(event) } },
+                    )
+                }
             }
         }
         CompositionLocalProvider(LocalPopupTheme provides theme) {
@@ -251,9 +252,10 @@ private fun DejavuSplitAddressBar(store: BrowserToolbarStore, split: ShownSplit)
                     }
                 },
             )
-        // The page out of focus only shows its container and its site's icon; touching them turns to it first.
+        // The page out of focus only shows its container and its page counter; touching them turns to it first.
         val container = containerAction(tab.id)
-        val pageActions = if (focused) shownPageActions else listOfNotNull(siteInfoPreview(tab))
+        val holdCounter = if (focused) shownPageActions.siteInfoClick()?.let { event -> { dispatch(event) } } else focus
+        val tapCounter = if (focused) null else focus
         val onInteraction: (BrowserToolbarEvent) -> Unit = if (focused) dispatch else ({ focus() })
         if (stacked) {
             SplitPageRow(
@@ -262,10 +264,11 @@ private fun DejavuSplitAddressBar(store: BrowserToolbarStore, split: ShownSplit)
                 url = tab.content.url,
                 loading = tab.content.loading,
                 container = container,
-                pageActions = pageActions,
                 onInteraction = onInteraction,
                 modifier = modifier.then(dimmed).then(touched),
-            )
+            ) {
+                PageCounter(tabId = tab.id, onHold = holdCounter, onTap = tapCounter)
+            }
         } else {
             // Side by side, each page has its own buttons, which turn to it before they act on it.
             val onEvent: (BrowserToolbarEvent) -> Unit =
@@ -284,10 +287,11 @@ private fun DejavuSplitAddressBar(store: BrowserToolbarStore, split: ShownSplit)
                         url = tab.content.url,
                         loading = tab.content.loading,
                         container = container,
-                        pageActions = pageActions,
                         onInteraction = onInteraction,
                         modifier = Modifier.align(Alignment.Center),
-                    )
+                    ) {
+                        PageCounter(tabId = tab.id, onHold = holdCounter, onTap = tapCounter)
+                    }
                 }
             }
         }
@@ -347,7 +351,7 @@ private fun DejavuSplitAddressBar(store: BrowserToolbarStore, split: ShownSplit)
 /**
  * A page of a split shown top and bottom, in a row of the address field: [container] at its start, the page's [title]
  * and the domain of [url] below it, with colors running through the domain while the page is [loading], and
- * [pageActions] at its end.
+ * [pageCounter] at its end.
  */
 @Suppress("LongParameterList")
 @Composable
@@ -357,9 +361,9 @@ private fun SplitPageRow(
     url: String,
     loading: Boolean,
     container: Action?,
-    pageActions: List<Action>,
     onInteraction: (BrowserToolbarEvent) -> Unit,
     modifier: Modifier = Modifier,
+    pageCounter: @Composable () -> Unit,
 ) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier.padding(horizontal = FIELD_PADDING)) {
         Box(contentAlignment = Alignment.Center, modifier = Modifier.size(SLOT_SIZE)) {
@@ -374,7 +378,7 @@ private fun SplitPageRow(
             )
         }
         Box(contentAlignment = Alignment.Center, modifier = Modifier.size(SLOT_SIZE)) {
-            ActionContainer(actions = pageActions, onInteraction = onInteraction)
+            pageCounter()
         }
     }
 }
@@ -396,10 +400,11 @@ internal fun DejavuAddressBarPreview(tab: TabSessionState) {
                     url = tab.content.url,
                     loading = tab.content.loading,
                     container = containerAction(tab.id),
-                    pageActions = listOfNotNull(siteInfoPreview(tab)),
                     onInteraction = {},
                     modifier = Modifier.align(Alignment.Center),
-                )
+                ) {
+                    PageCounter(tabId = tab.id, onHold = null, onTap = {})
+                }
             }
         }
     }
@@ -544,7 +549,7 @@ private fun PageOrigin.startSearch(store: BrowserToolbarStore, layout: BarsLayou
 
 /**
  * The rounded field of the address bar: [container] at its start, [text] in the middle, with the domain of [url] in
- * small letters below the text unless the text already says it, and [pageActions], the site's security icon, at its
+ * small letters below the text unless the text already says it, and [pageCounter], the tab's [PageCounter], at its
  * end. While the page is [loading], colors run through the domain's letters.
  */
 @Suppress("LongParameterList")
@@ -555,9 +560,9 @@ private fun AddressField(
     url: String?,
     loading: Boolean,
     container: Action?,
-    pageActions: List<Action>,
     onInteraction: (BrowserToolbarEvent) -> Unit,
     modifier: Modifier = Modifier,
+    pageCounter: @Composable () -> Unit,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -590,7 +595,7 @@ private fun AddressField(
         }
         // As wide as the container's slot, so the title stays in the middle.
         Box(contentAlignment = Alignment.Center, modifier = Modifier.size(SLOT_SIZE)) {
-            ActionContainer(actions = pageActions, onInteraction = onInteraction)
+            pageCounter()
         }
     }
 }
@@ -627,29 +632,6 @@ private fun TitleAndDomain(text: String, color: Color, domain: String?, loading:
             modifier = Modifier.loadingColors(loading),
         )
     }
-}
-
-/**
- * The site's security icon for [tab], as the address bar's store shows it once the page is shown; none in Reader
- * View.
- */
-private fun siteInfoPreview(tab: TabSessionState): Action? {
-    if (tab.readerState.active) return null
-    val security = tab.content.securityInfo
-    val protection = tab.trackingProtection
-    val icon = when {
-        tab.content.url.isContentUrl() -> iconsR.drawable.mozac_ic_page_portrait_24
-        security == SecurityInfo.Unknown -> iconsR.drawable.mozac_ic_globe_24
-        !security.isSecure -> iconsR.drawable.mozac_ic_shield_slash_24
-        protection.enabled && !protection.ignoredOnTrackingProtection -> iconsR.drawable.mozac_ic_shield_checkmark_24
-        else -> iconsR.drawable.mozac_ic_shield_cross_24
-    }
-    return Action.ActionButtonRes(
-        drawableResId = icon,
-        contentDescription = browserToolbarR.string.mozac_browser_toolbar_content_description_site_info,
-        highlighted = tab.content.permissionHighlights.permissionsChanged || protection.ignoredOnTrackingProtection,
-        onClick = object : BrowserToolbarEvent {},
-    )
 }
 
 @Composable

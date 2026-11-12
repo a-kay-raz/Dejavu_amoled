@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu қайта іске қосылғанда қайтадан сөнеді</string>
     <string name="dejavu_preference_mouse_support">Тінтуірді қолдау</string>
     <string name="dejavu_preference_mouse_support_summary">Ортаңғы батырмамен шерту сілтемені фондық бетте ашады, ал сілтеменің үстіне апару оның адресін көрсетеді. Бетте ортаңғы батырмамен шерту оны жабады.</string>
+    <string name="dejavu_no_closed_tabs">Жуырда жабылған беттер жоқ</string>
+    <string name="dejavu_tab_page_number">Осы беттегі парақ %1$d</string>
+    <string name="dejavu_tab_pages">Осы беттегі парақтар</string>
+    <string name="dejavu_settings_tabs_import_export">Беттерді импорттау және экспорттау</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Жұмыс кеңістіктерін, қалталарды және беттерді Sidebery-ге және Sidebery-ден тасымалдау</string>
+    <string name="dejavu_sidebery_hint">Sidebery — компьютерлердегі Firefox үшін беттер басқарушысы. Оның панельдері мұнда жұмыс кеңістіктері, бет топтары қалталар, ал бекітілген беттері негізгілер болады.</string>
+    <string name="dejavu_sidebery_export">Sidebery-ге экспорттау</string>
+    <string name="dejavu_sidebery_import">Sidebery-ден импорттау</string>
+    <string name="dejavu_sidebery_steps">Sidebery-дің «Snapshots viewer» бөлімінде «Import snapshot» Dejavu файлын оқиды, ал «Open all windows» оның беттерін ашады. Беттерді осында әкелу үшін сол жерде снапшот таңдап, содан кейін «Export snapshot» және «Save as JSON» таңдаңыз.</string>
+    <string name="dejavu_sidebery_new_workspaces">Жаңа жұмыс кеңістіктері</string>
+    <string name="dejavu_sidebery_essentials">Негізгілер</string>
+    <string name="dejavu_sidebery_new_containers">Жаңа контейнерлер</string>
+    <string name="dejavu_sidebery_left_out">Қосылмағандар</string>
+    <string name="dejavu_sidebery_left_out_note">Телефон аша алмайтын беттер, мысалы жергілікті файлдар, және жеке терезелердің беттері</string>
+    <string name="dejavu_sidebery_nothing_new">Бұл файлда жаңа ештеңе жоқ.</string>
+    <string name="dejavu_sidebery_import_button">Импорттау</string>
+    <string name="dejavu_sidebery_imported">Sidebery-ден импортталды</string>
+    <string name="dejavu_sidebery_exported">Sidebery үшін сақталды</string>
+    <string name="dejavu_sidebery_export_failed">Файлды сақтау мүмкін болмады. Қайталап көріңіз.</string>
+    <string name="dejavu_sidebery_bad_file">Бұл файл Sidebery снапшоты немесе сақтық көшірмесі емес.</string>
 </resources>

@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu പുനരാരംഭിക്കുമ്പോൾ വീണ്ടും ഓഫാകും</string>
     <string name="dejavu_preference_mouse_support">മൗസ് പിന്തുണ</string>
     <string name="dejavu_preference_mouse_support_summary">നടുവിലെ ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ ലിങ്ക് പശ്ചാത്തല ടാബിൽ തുറക്കും, ലിങ്കിനു മുകളിൽ പോയിന്റർ വെച്ചാൽ അതിന്റെ വിലാസം കാണിക്കും. ടാബിൽ നടുവിലെ ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ അത് അടയ്ക്കും.</string>
+    <string name="dejavu_no_closed_tabs">അടുത്തിടെ അടച്ച ടാബുകളൊന്നുമില്ല</string>
+    <string name="dejavu_tab_page_number">ഈ ടാബിലെ താൾ %1$d</string>
+    <string name="dejavu_tab_pages">ഈ ടാബിലെ താളുകൾ</string>
+    <string name="dejavu_settings_tabs_import_export">ടാബുകൾ ഇമ്പോർട്ടും എക്സ്പോർട്ടും ചെയ്യുക</string>
+    <string name="dejavu_settings_tabs_import_export_summary">പണിയിടങ്ങൾ, ഫോൾഡറുകൾ, ടാബുകൾ എന്നിവ Sidebery-ലേക്കും അതിൽ നിന്നും നീക്കുക</string>
+    <string name="dejavu_sidebery_hint">കമ്പ്യൂട്ടറുകളിലെ Firefox-നുള്ള ടാബ് മാനേജറാണ് Sidebery. അതിന്റെ പാനലുകൾ ഇവിടെ പണിയിടങ്ങളും ടാബ് ഗ്രൂപ്പുകൾ ഫോൾഡറുകളും പിൻ ചെയ്ത ടാബുകൾ പ്രധാനപ്പെട്ടവയും ആണ്.</string>
+    <string name="dejavu_sidebery_export">Sidebery-ലേക്ക് എക്സ്പോർട്ട് ചെയ്യുക</string>
+    <string name="dejavu_sidebery_import">Sidebery-ൽ നിന്ന് ഇമ്പോർട്ട് ചെയ്യുക</string>
+    <string name="dejavu_sidebery_steps">Sidebery-യുടെ «Snapshots viewer»-ൽ «Import snapshot» Dejavu-ൽ നിന്നുള്ള ഫയൽ വായിക്കുന്നു, «Open all windows» അതിലെ ടാബുകൾ തുറക്കുന്നു. ടാബുകൾ ഇവിടേക്ക് കൊണ്ടുവരാൻ അവിടെ ഒരു സ്നാപ്ഷോട്ട് തിരഞ്ഞെടുത്ത് «Export snapshot», «Save as JSON» എന്നിവ തിരഞ്ഞെടുക്കുക.</string>
+    <string name="dejavu_sidebery_new_workspaces">പുതിയ പണിയിടങ്ങൾ</string>
+    <string name="dejavu_sidebery_essentials">പ്രധാനപ്പെട്ടവ</string>
+    <string name="dejavu_sidebery_new_containers">പുതിയ കണ്ടെയ്നറുകൾ</string>
+    <string name="dejavu_sidebery_left_out">ഒഴിവാക്കിയവ</string>
+    <string name="dejavu_sidebery_left_out_note">ഫോണിന് തുറക്കാനാകാത്ത പേജുകൾ, ഉദാഹരണത്തിന് ലോക്കൽ ഫയലുകൾ, സ്വകാര്യ ജാലകങ്ങളിലെ ടാബുകൾ</string>
+    <string name="dejavu_sidebery_nothing_new">ഈ ഫയലിൽ പുതിയതായി ഒന്നുമില്ല.</string>
+    <string name="dejavu_sidebery_import_button">ഇമ്പോർട്ട് ചെയ്യുക</string>
+    <string name="dejavu_sidebery_imported">Sidebery-ൽ നിന്ന് ഇമ്പോർട്ട് ചെയ്തു</string>
+    <string name="dejavu_sidebery_exported">Sidebery-ക്കായി സേവ് ചെയ്തു</string>
+    <string name="dejavu_sidebery_export_failed">ഫയൽ സേവ് ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="dejavu_sidebery_bad_file">ഈ ഫയൽ Sidebery-യുടെ സ്നാപ്ഷോട്ടോ ബാക്കപ്പോ അല്ല.</string>
 </resources>

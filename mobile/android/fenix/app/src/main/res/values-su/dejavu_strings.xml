@@ -538,4 +538,24 @@
     <string name="dejavu_remote_debugging_summary">Pareum deui nalika Dejavu dimimitian deui</string>
     <string name="dejavu_preference_mouse_support">Pangrojong beurit</string>
     <string name="dejavu_preference_mouse_support_summary">Klik tengah muka tutumbu dina tab tukang, sarta nempatkeun beurit dina tutumbu némbongkeun alamatna. Klik tengah dina tab nutup tab éta.</string>
+    <string name="dejavu_no_closed_tabs">Taya tab nu anyar ditutup</string>
+    <string name="dejavu_tab_page_number">Kaca %1$d dina tab ieu</string>
+    <string name="dejavu_tab_pages">Kaca dina tab ieu</string>
+    <string name="dejavu_settings_tabs_import_export">Impor jeung ékspor tab</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Pindahkeun rohangan, map, jeung tab ka Sidebery jeung ti Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery nyaéta pangatur tab pikeun Firefox dina komputer. Panélna di dieu nyaéta rohangan, grup tabna nyaéta map, sarta tab nu disematna nyaéta penting.</string>
+    <string name="dejavu_sidebery_export">Ékspor ka Sidebery</string>
+    <string name="dejavu_sidebery_import">Impor ti Sidebery</string>
+    <string name="dejavu_sidebery_steps">Dina «Snapshots viewer» Sidebery, «Import snapshot» maca berkas ti Dejavu sarta «Open all windows» muka tab-tabna. Pikeun mawa tab ka dieu, pilih snapshot di ditu, tuluy «Export snapshot» jeung «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Rohangan anyar</string>
+    <string name="dejavu_sidebery_essentials">Penting</string>
+    <string name="dejavu_sidebery_new_containers">Wadah anyar</string>
+    <string name="dejavu_sidebery_left_out">Teu kaasup</string>
+    <string name="dejavu_sidebery_left_out_note">Kaca nu teu bisa dibuka ku telepon, saperti berkas lokal, jeung tab tina jandéla pribadi</string>
+    <string name="dejavu_sidebery_nothing_new">Teu aya nu anyar dina berkas ieu.</string>
+    <string name="dejavu_sidebery_import_button">Impor</string>
+    <string name="dejavu_sidebery_imported">Diimpor ti Sidebery</string>
+    <string name="dejavu_sidebery_exported">Disimpen pikeun Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Berkas teu bisa disimpen. Cobaan deui.</string>
+    <string name="dejavu_sidebery_bad_file">Berkas ieu lain snapshot atawa cadangan Sidebery.</string>
 </resources>

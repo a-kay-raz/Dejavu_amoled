@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Nichup chik toq nitikïr chik ri Dejavu</string>
     <string name="dejavu_preference_mouse_support">Ruto\'ik ri ch\'oy</string>
     <string name="dejavu_preference_mouse_support_summary">Toq napitz\'ij ri nik\'aj rupitz\'b\'al, nujäq jun ximonel pa jun ruwi\' chi rij, chuqa\' toq nanuk\' ri ch\'oy pa ruwi\' jun ximonel, nuk\'üt ri rochochib\'al. Toq napitz\'ij ri nik\'aj rupitz\'b\'al pa jun ruwi\', nutz\'apij.</string>
+    <string name="dejavu_no_closed_tabs">Taq ruwi\' man nimakol ta ketz\'apïx</string>
+    <string name="dejavu_tab_page_number">Ruxaq %1$d pa re ruwi’ re’</string>
+    <string name="dejavu_tab_pages">Taq ruxaq pa re ruwi’ re’</string>
+    <string name="dejavu_settings_tabs_import_export">Tijik\'am chuqa\' tik\'wäx el taq ruwi\'</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Ke\'asilöx taq samajib\'äl, taq karpeta chuqa\' taq ruwi\' pa Sidebery chuqa\' pa Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery jun nuk\'unel taq ruwi\' richin Firefox pa taq kematz\'ib\'. Ri taq ruwäch wawe\' e samajib\'äl, ri taq rumolaj ruwi\' e karpeta, chuqa\' ri ximon taq ruwi\' e rajawaxel.</string>
+    <string name="dejavu_sidebery_export">Tik\'wäx el pa Sidebery</string>
+    <string name="dejavu_sidebery_import">Tijik\'am pa Sidebery</string>
+    <string name="dejavu_sidebery_steps">Pa «Snapshots viewer» richin Sidebery, «Import snapshot» nusik\'ij ri yakb\'äl richin Dejavu chuqa\' «Open all windows» yerujaq ri taq ruwi\'. Richin ye\'ak\'am taq ruwi\' wawe\', tacha\' jun snapshot chiri\', k\'a ri\' «Export snapshot» chuqa\' «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">K\'ak\'a\' taq samajib\'äl</string>
+    <string name="dejavu_sidebery_essentials">Taq rajawaxel</string>
+    <string name="dejavu_sidebery_new_containers">K\'ak\'a\' taq k\'olib\'äl</string>
+    <string name="dejavu_sidebery_left_out">Xe\'el</string>
+    <string name="dejavu_sidebery_left_out_note">Taq ruxaq ri man nitikïr ta nujäq jun oyonib\'äl, achi\'el taq yakb\'äl wawe\', chuqa\' taq ruwi\' richin ichinan taq tzuwäch</string>
+    <string name="dejavu_sidebery_nothing_new">Majun k\'ak\'a\' ta k\'o pa re yakb\'äl re\'.</string>
+    <string name="dejavu_sidebery_import_button">Tijik\'am</string>
+    <string name="dejavu_sidebery_imported">Xjik\'am pa Sidebery</string>
+    <string name="dejavu_sidebery_exported">Xyak richin Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Man xtikïr ta xyak ri yakb\'äl. Tatojtob\'ej chik.</string>
+    <string name="dejavu_sidebery_bad_file">Re yakb\'äl re\' man jun snapshot ta o jun rachib\'il richin Sidebery.</string>
 </resources>

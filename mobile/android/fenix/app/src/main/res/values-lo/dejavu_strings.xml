@@ -538,4 +538,24 @@
     <string name="dejavu_remote_debugging_summary">ປິດອີກຄັ້ງເມື່ອ Dejavu ເລີ່ມໃໝ່</string>
     <string name="dejavu_preference_mouse_support">ຮອງຮັບເມົ້າ</string>
     <string name="dejavu_preference_mouse_support_summary">ການຄລິກປຸ່ມກາງຈະເປີດລິ້ງໃນແທັບເບື້ອງຫຼັງ, ແລະ ການວາງເມົ້າເທິງລິ້ງຈະສະແດງທີ່ຢູ່ຂອງມັນ. ການຄລິກປຸ່ມກາງໃສ່ແທັບຈະປິດແທັບນັ້ນ.</string>
+    <string name="dejavu_no_closed_tabs">ບໍ່ມີແທັບທີ່ຫາກໍ່ປິດໄປມື້ກີ້ນີ້</string>
+    <string name="dejavu_tab_page_number">ຫນ້າທີ %1$d ໃນແທັບນີ້</string>
+    <string name="dejavu_tab_pages">ຫນ້າໃນແທັບນີ້</string>
+    <string name="dejavu_settings_tabs_import_export">ນຳເຂົ້າ ແລະ ສົ່ງອອກແທັບ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ຍ້າຍພື້ນທີ່ເຮັດວຽກ, ໂຟນເດີ ແລະ ແທັບ ໄປ ແລະ ມາຈາກ Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery ແມ່ນຕົວຈັດການແທັບສຳລັບ Firefox ໃນຄອມພິວເຕີ. ແຜງຂອງມັນຢູ່ນີ້ແມ່ນພື້ນທີ່ເຮັດວຽກ, ກຸ່ມແທັບແມ່ນໂຟນເດີ ແລະ ແທັບທີ່ປັກໄວ້ແມ່ນສິ່ງສຳຄັນ.</string>
+    <string name="dejavu_sidebery_export">ສົ່ງອອກໄປ Sidebery</string>
+    <string name="dejavu_sidebery_import">ນຳເຂົ້າຈາກ Sidebery</string>
+    <string name="dejavu_sidebery_steps">ໃນ «Snapshots viewer» ຂອງ Sidebery, «Import snapshot» ອ່ານໄຟລ໌ຈາກ Dejavu ແລະ «Open all windows» ເປີດແທັບຂອງມັນ. ເພື່ອນຳແທັບມາບ່ອນນີ້, ໃຫ້ເລືອກສະແນັບຊັອດຢູ່ທີ່ນັ້ນ, ຈາກນັ້ນ «Export snapshot» ແລະ «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">ພື້ນທີ່ເຮັດວຽກໃໝ່</string>
+    <string name="dejavu_sidebery_essentials">ສິ່ງສຳຄັນ</string>
+    <string name="dejavu_sidebery_new_containers">ຄອນເທນເນີໃໝ່</string>
+    <string name="dejavu_sidebery_left_out">ປະໄວ້</string>
+    <string name="dejavu_sidebery_left_out_note">ໜ້າທີ່ໂທລະສັບເປີດບໍ່ໄດ້ ເຊັ່ນ ໄຟລ໌ໃນເຄື່ອງ ແລະ ແທັບຂອງໜ້າຕ່າງສ່ວນຕົວ</string>
+    <string name="dejavu_sidebery_nothing_new">ບໍ່ມີຫຍັງໃໝ່ໃນໄຟລ໌ນີ້.</string>
+    <string name="dejavu_sidebery_import_button">ນຳເຂົ້າ</string>
+    <string name="dejavu_sidebery_imported">ນຳເຂົ້າຈາກ Sidebery ແລ້ວ</string>
+    <string name="dejavu_sidebery_exported">ບັນທຶກໄວ້ສຳລັບ Sidebery ແລ້ວ</string>
+    <string name="dejavu_sidebery_export_failed">ບໍ່ສາມາດບັນທຶກໄຟລ໌ໄດ້. ລອງໃໝ່ອີກຄັ້ງ.</string>
+    <string name="dejavu_sidebery_bad_file">ໄຟລ໌ນີ້ບໍ່ແມ່ນສະແນັບຊັອດ ຫຼື ການສຳຮອງຂອງ Sidebery.</string>
 </resources>

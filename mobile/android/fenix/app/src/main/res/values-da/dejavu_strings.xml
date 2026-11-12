@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Slås fra igen, når Dejavu genstarter</string>
     <string name="dejavu_preference_mouse_support">Understøttelse af mus</string>
     <string name="dejavu_preference_mouse_support_summary">Et klik med midterknappen åbner et link i et faneblad i baggrunden, og når du holder markøren over et link, vises dets adresse. Et klik med midterknappen på et faneblad lukker det.</string>
+    <string name="dejavu_no_closed_tabs">Ingen nyligt lukkede faneblade</string>
+    <string name="dejavu_tab_page_number">Side %1$d i dette faneblad</string>
+    <string name="dejavu_tab_pages">Sider i dette faneblad</string>
+    <string name="dejavu_settings_tabs_import_export">Importer og eksporter faneblade</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Flyt arbejdsområder, mapper og faneblade til og fra Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery er en fanebladshåndtering til Firefox på computere. Dens paneler er her arbejdsområder, dens fanebladsgrupper er mapper, og dens fastgjorte faneblade er favoritter.</string>
+    <string name="dejavu_sidebery_export">Eksporter til Sidebery</string>
+    <string name="dejavu_sidebery_import">Importer fra Sidebery</string>
+    <string name="dejavu_sidebery_steps">I Sideberys «Snapshots viewer» læser «Import snapshot» filen fra Dejavu, og «Open all windows» åbner dens faneblade. For at hente faneblade hertil skal du vælge et snapshot der og derefter «Export snapshot» og «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nye arbejdsområder</string>
+    <string name="dejavu_sidebery_essentials">Favoritter</string>
+    <string name="dejavu_sidebery_new_containers">Nye beholdere</string>
+    <string name="dejavu_sidebery_left_out">Udeladt</string>
+    <string name="dejavu_sidebery_left_out_note">Sider, som en telefon ikke kan åbne, fx lokale filer, og faneblade fra private vinduer</string>
+    <string name="dejavu_sidebery_nothing_new">Der er intet nyt i denne fil.</string>
+    <string name="dejavu_sidebery_import_button">Importer</string>
+    <string name="dejavu_sidebery_imported">Importeret fra Sidebery</string>
+    <string name="dejavu_sidebery_exported">Gemt til Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Filen kunne ikke gemmes. Prøv igen.</string>
+    <string name="dejavu_sidebery_bad_file">Denne fil er ikke et snapshot eller en sikkerhedskopi fra Sidebery.</string>
 </resources>

@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Se desactiva tornamai quand Dejavu se reaviá</string>
     <string name="dejavu_preference_mouse_support">Presa en carga de la mirga</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic del mitan dobrís un ligam dins un onglet en rèireplan, e passar sus un ligam aficha son adreça. Un clic del mitan sus un onglet lo barra.</string>
+    <string name="dejavu_no_closed_tabs">Cap d’onglet tampat recentament</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d d’aqueste onglet</string>
+    <string name="dejavu_tab_pages">Paginas d’aqueste onglet</string>
+    <string name="dejavu_settings_tabs_import_export">Importar e exportar d’onglets</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Desplaçar espacis de trabalh, dossièrs e onglets cap a Sidebery e dempuèi Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery es un gestionari d’onglets per Firefox sus ordenador. Aquí sos panèls son d’espacis de trabalh, sos grops d’onglets son de dossièrs e sos onglets fixats son d’essencials.</string>
+    <string name="dejavu_sidebery_export">Exportar cap a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar dempuèi Sidebery</string>
+    <string name="dejavu_sidebery_steps">Dins lo « Snapshots viewer » de Sidebery, « Import snapshot » legís lo fichièr de Dejavu e « Open all windows » ne dobrís los onglets. Per portar d’onglets aquí, causissètz-i una captura, puèi « Export snapshot » e « Save as JSON ».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espacis de trabalh novèls</string>
+    <string name="dejavu_sidebery_essentials">Essencials</string>
+    <string name="dejavu_sidebery_new_containers">Contenidors novèls</string>
+    <string name="dejavu_sidebery_left_out">Daissats de costat</string>
+    <string name="dejavu_sidebery_left_out_note">Paginas qu’un telefòn pòt pas dobrir, coma los fichièrs locals, e onglets de fenèstras privadas</string>
+    <string name="dejavu_sidebery_nothing_new">I a pas res de nòu dins aqueste fichièr.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importat dempuèi Sidebery</string>
+    <string name="dejavu_sidebery_exported">Enregistrat per Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impossible d’enregistrar lo fichièr. Ensajatz tornarmai.</string>
+    <string name="dejavu_sidebery_bad_file">Aqueste fichièr es pas una captura nimai una salvagarda de Sidebery.</string>
 </resources>

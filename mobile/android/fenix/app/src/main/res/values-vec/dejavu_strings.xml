@@ -554,4 +554,24 @@
     <string name="dejavu_remote_debugging_summary">Se dexativa danovo co Dejavu el se reavia</string>
     <string name="dejavu_preference_mouse_support">Suporto par el sorze</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic col boton de mezo el verze un colegamento inte na scheda in sfondo, e passar sora un colegamento el ghe mostra l\'indirizo. Un clic col boton de mezo sora na scheda la sara.</string>
+    <string name="dejavu_no_closed_tabs">Nisuna scheda sarà de recente</string>
+    <string name="dejavu_tab_page_number">Pàgina %1$d in sta scheda</string>
+    <string name="dejavu_tab_pages">Pàgine in sta scheda</string>
+    <string name="dejavu_settings_tabs_import_export">Inporta e esporta schede</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Sposta spasi de laoro, carteƚe e schede verso e da Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery el xe un gestor de schede par Firefox sui computer. Cuà i so paneƚi i xe spasi de laoro, i so grupi de schede i xe carteƚe e łe so schede fisà łe xe essensiałi.</string>
+    <string name="dejavu_sidebery_export">Esporta in Sidebery</string>
+    <string name="dejavu_sidebery_import">Inporta da Sidebery</string>
+    <string name="dejavu_sidebery_steps">Inte el «Snapshots viewer» de Sidebery, «Import snapshot» el lese el file de Dejavu e «Open all windows» el verze łe so schede. Par portar schede cuà, sielzi là na istantanea, dopo «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Novi spasi de laoro</string>
+    <string name="dejavu_sidebery_essentials">Essensiałi</string>
+    <string name="dejavu_sidebery_new_containers">Novi contenidori</string>
+    <string name="dejavu_sidebery_left_out">Lasà fora</string>
+    <string name="dejavu_sidebery_left_out_note">Pàxine che un tełefono no \'l pol verzar, come i file łocałi, e schede de finestre privà</string>
+    <string name="dejavu_sidebery_nothing_new">No ghe xe gnente de novo in sto file.</string>
+    <string name="dejavu_sidebery_import_button">Inporta</string>
+    <string name="dejavu_sidebery_imported">Inportà da Sidebery</string>
+    <string name="dejavu_sidebery_exported">Salvà par Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">No xe stà posibiłe salvar el file. Prova da novo.</string>
+    <string name="dejavu_sidebery_bad_file">Sto file no \'l xe na istantanea né na copia de sicuresa de Sidebery.</string>
 </resources>

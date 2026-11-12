@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Desactívase de novo cando Dejavu se reinicia</string>
     <string name="dejavu_preference_mouse_support">Compatibilidade co rato</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic co botón central abre unha ligazón nunha lapela en segundo plano, e pasar o rato por riba dunha ligazón amosa o seu enderezo. Un clic co botón central nunha lapela péchaa.</string>
+    <string name="dejavu_no_closed_tabs">Non hai lapelas pechadas recentemente</string>
+    <string name="dejavu_tab_page_number">Páxina %1$d desta lapela</string>
+    <string name="dejavu_tab_pages">Páxinas desta lapela</string>
+    <string name="dejavu_settings_tabs_import_export">Importar e exportar lapelas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Move espazos de traballo, cartafoles e lapelas a Sidebery e desde Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery é un xestor de lapelas para o Firefox en computadores. Aquí os seus paneis son espazos de traballo, os seus grupos de lapelas son cartafoles e as súas lapelas fixadas son esenciais.</string>
+    <string name="dejavu_sidebery_export">Exportar a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar desde Sidebery</string>
+    <string name="dejavu_sidebery_steps">No «Snapshots viewer» de Sidebery, «Import snapshot» le o ficheiro de Dejavu e «Open all windows» abre as súas lapelas. Para traer lapelas aquí, escolle alí unha instantánea e despois «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espazos de traballo novos</string>
+    <string name="dejavu_sidebery_essentials">Esenciais</string>
+    <string name="dejavu_sidebery_new_containers">Contedores novos</string>
+    <string name="dejavu_sidebery_left_out">Excluídas</string>
+    <string name="dejavu_sidebery_left_out_note">Páxinas que un teléfono non pode abrir, como ficheiros locais, e lapelas de xanelas privadas</string>
+    <string name="dejavu_sidebery_nothing_new">Non hai nada novo neste ficheiro.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importado desde Sidebery</string>
+    <string name="dejavu_sidebery_exported">Gardado para Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Non foi posible gardar o ficheiro. Téntao de novo.</string>
+    <string name="dejavu_sidebery_bad_file">Este ficheiro non é unha instantánea nin unha copia de seguranza de Sidebery.</string>
 </resources>

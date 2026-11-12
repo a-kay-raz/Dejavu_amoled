@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Blir slått av igjen når Dejavu startar på nytt</string>
     <string name="dejavu_preference_mouse_support">Musstøtte</string>
     <string name="dejavu_preference_mouse_support_summary">Eit klikk med midtknappen opnar ei lenke i ei bakgrunnsfane, og når du held peikaren over ei lenke, blir adressa vist. Eit klikk med midtknappen på ei fane lukkar henne.</string>
+    <string name="dejavu_no_closed_tabs">Ingen nyleg attlatne faner</string>
+    <string name="dejavu_tab_page_number">Side %1$d i denne fana</string>
+    <string name="dejavu_tab_pages">Sider i denne fana</string>
+    <string name="dejavu_settings_tabs_import_export">Importer og eksporter faner</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Flytt arbeidsområde, mapper og faner til og frå Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery er ein fanehandsamar for Firefox på datamaskiner. Panela der er arbeidsområde her, fanegruppene er mapper, og dei festa fanene er favorittar.</string>
+    <string name="dejavu_sidebery_export">Eksporter til Sidebery</string>
+    <string name="dejavu_sidebery_import">Importer frå Sidebery</string>
+    <string name="dejavu_sidebery_steps">I «Snapshots viewer» i Sidebery les «Import snapshot» fila frå Dejavu, og «Open all windows» opnar fanene i ho. For å hente faner hit vel du eit augeblinksbilete der, og deretter «Export snapshot» og «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nye arbeidsområde</string>
+    <string name="dejavu_sidebery_essentials">Favorittar</string>
+    <string name="dejavu_sidebery_new_containers">Nye behaldarar</string>
+    <string name="dejavu_sidebery_left_out">Utelate</string>
+    <string name="dejavu_sidebery_left_out_note">Sider ein telefon ikkje kan opne, som lokale filer, og faner frå private vindauge</string>
+    <string name="dejavu_sidebery_nothing_new">Det er ikkje noko nytt i denne fila.</string>
+    <string name="dejavu_sidebery_import_button">Importer</string>
+    <string name="dejavu_sidebery_imported">Importert frå Sidebery</string>
+    <string name="dejavu_sidebery_exported">Lagra for Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Klarte ikkje å lagre fila. Prøv igjen.</string>
+    <string name="dejavu_sidebery_bad_file">Denne fila er ikkje eit augeblinksbilete eller ein tryggingskopi frå Sidebery.</string>
 </resources>

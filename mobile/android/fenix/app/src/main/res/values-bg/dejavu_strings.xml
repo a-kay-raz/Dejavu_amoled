@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Изключва се отново, когато Dejavu се рестартира</string>
     <string name="dejavu_preference_mouse_support">Поддръжка на мишка</string>
     <string name="dejavu_preference_mouse_support_summary">Щракването със средния бутон отваря връзката във фонов раздел, а посочването на връзка показва адреса ѝ. Щракването със средния бутон върху раздел го затваря.</string>
+    <string name="dejavu_no_closed_tabs">Няма наскоро затворени раздели</string>
+    <string name="dejavu_tab_page_number">Страница %1$d в този раздел</string>
+    <string name="dejavu_tab_pages">Страници в този раздел</string>
+    <string name="dejavu_settings_tabs_import_export">Внасяне и изнасяне на раздели</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Преместване на работни пространства, папки и раздели към и от Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery е мениджър на раздели за Firefox на компютри. Панелите му тук са работни пространства, групите раздели са папки, а закачените раздели са любими.</string>
+    <string name="dejavu_sidebery_export">Изнасяне към Sidebery</string>
+    <string name="dejavu_sidebery_import">Внасяне от Sidebery</string>
+    <string name="dejavu_sidebery_steps">В «Snapshots viewer» на Sidebery «Import snapshot» чете файла от Dejavu, а «Open all windows» отваря разделите му. За да донесете раздели тук, изберете снимка там, след това «Export snapshot» и «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Нови работни пространства</string>
+    <string name="dejavu_sidebery_essentials">Любими</string>
+    <string name="dejavu_sidebery_new_containers">Нови контейнери</string>
+    <string name="dejavu_sidebery_left_out">Пропуснати</string>
+    <string name="dejavu_sidebery_left_out_note">Страници, които телефонът не може да отвори, като локални файлове, и раздели от поверителни прозорци</string>
+    <string name="dejavu_sidebery_nothing_new">Няма нищо ново в този файл.</string>
+    <string name="dejavu_sidebery_import_button">Внасяне</string>
+    <string name="dejavu_sidebery_imported">Внесено от Sidebery</string>
+    <string name="dejavu_sidebery_exported">Запазено за Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Файлът не можа да бъде запазен. Опитайте отново.</string>
+    <string name="dejavu_sidebery_bad_file">Този файл не е снимка или резервно копие на Sidebery.</string>
 </resources>

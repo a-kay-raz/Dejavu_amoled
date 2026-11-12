@@ -538,4 +538,24 @@
     <string name="dejavu_remote_debugging_summary">ona li pini sin lon tenpo ni: ilo Dejavu li open sin</string>
     <string name="dejavu_preference_mouse_support">ilo soweli</string>
     <string name="dejavu_preference_mouse_support_summary">nena meso li open e linja lon poki monsi. sina awen e soweli lon linja la ona li pana e nimi ma ona. nena meso lon poki li weka e poki ni.</string>
+    <string name="dejavu_no_closed_tabs">poki pi pini poka li lon ala</string>
+    <string name="dejavu_tab_page_number">lipu nanpa %1$d lon poki ni</string>
+    <string name="dejavu_tab_pages">lipu lon poki ni</string>
+    <string name="dejavu_settings_tabs_import_export">o kama e poki, o pana e poki</string>
+    <string name="dejavu_settings_tabs_import_export_summary">o tawa e kulupu poki e tomo poki e poki tawa Sidebery li tan Sidebery</string>
+    <string name="dejavu_sidebery_hint">ilo Sidebery li lawa e poki lon ilo Firefox pi ilo nanpa suli. lipu ona li kulupu poki lon ni, kulupu poki ona li tomo poki, poki awen ona li lipu suli.</string>
+    <string name="dejavu_sidebery_export">o pana tawa Sidebery</string>
+    <string name="dejavu_sidebery_import">o kama tan Sidebery</string>
+    <string name="dejavu_sidebery_steps">lon «Snapshots viewer» pi ilo Sidebery la, «Import snapshot» li lukin e lipu tan Dejavu, «Open all windows» li open e poki ona. sina wile kama e poki lon ni la, o kepeken sitelen tenpo lon ilo Sidebery, o kepeken «Export snapshot» en «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">kulupu poki sin</string>
+    <string name="dejavu_sidebery_essentials">lipu suli</string>
+    <string name="dejavu_sidebery_new_containers">leko sin</string>
+    <string name="dejavu_sidebery_left_out">ona li kama ala</string>
+    <string name="dejavu_sidebery_left_out_note">lipu ni li ken ala open lon ilo toki: lipu awen pi ilo ni en poki pi lupa len</string>
+    <string name="dejavu_sidebery_nothing_new">lipu ni li jo ala e ijo sin.</string>
+    <string name="dejavu_sidebery_import_button">o kama</string>
+    <string name="dejavu_sidebery_imported">ijo li kama tan Sidebery</string>
+    <string name="dejavu_sidebery_exported">lipu li awen tawa Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">lipu li ken ala awen. o pali sin.</string>
+    <string name="dejavu_sidebery_bad_file">lipu ni li sitelen tenpo ala li awen ala pi ilo Sidebery.</string>
 </resources>

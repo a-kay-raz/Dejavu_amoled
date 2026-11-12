@@ -538,4 +538,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu 重新啟動後會再次關閉</string>
     <string name="dejavu_preference_mouse_support">滑鼠支援</string>
     <string name="dejavu_preference_mouse_support_summary">中鍵點擊會在背景分頁中開啟鏈結，滑鼠停在鏈結上會顯示其網址。 在分頁上中鍵點擊會將其關閉。</string>
+    <string name="dejavu_no_closed_tabs">沒有最近關閉的分頁</string>
+    <string name="dejavu_tab_page_number">此分頁中的第 %1$d 頁</string>
+    <string name="dejavu_tab_pages">此分頁中的頁面</string>
+    <string name="dejavu_settings_tabs_import_export">匯入與匯出分頁</string>
+    <string name="dejavu_settings_tabs_import_export_summary">在 Sidebery 與這裡之間移動工作區、資料夾與分頁</string>
+    <string name="dejavu_sidebery_hint">Sidebery 是電腦版 Firefox 的分頁管理工具。它的面板在這裡是工作區，分頁群組是資料夾，釘選的分頁則是常用網站。</string>
+    <string name="dejavu_sidebery_export">匯出至 Sidebery</string>
+    <string name="dejavu_sidebery_import">從 Sidebery 匯入</string>
+    <string name="dejavu_sidebery_steps">在 Sidebery 的「快照檢視器」中，「匯入快照」會讀取 Dejavu 的檔案，「開啟全部視窗」會開啟其中的分頁。若要把分頁帶到這裡，請在那裡選擇一個快照，再選擇「匯出快照」與「另存為 JSON」。</string>
+    <string name="dejavu_sidebery_new_workspaces">新工作區</string>
+    <string name="dejavu_sidebery_essentials">常用網站</string>
+    <string name="dejavu_sidebery_new_containers">新容器</string>
+    <string name="dejavu_sidebery_left_out">未匯入</string>
+    <string name="dejavu_sidebery_left_out_note">手機無法開啟的頁面（如本機檔案），以及隱私視窗中的分頁</string>
+    <string name="dejavu_sidebery_nothing_new">這個檔案中沒有新內容。</string>
+    <string name="dejavu_sidebery_import_button">匯入</string>
+    <string name="dejavu_sidebery_imported">已從 Sidebery 匯入</string>
+    <string name="dejavu_sidebery_exported">已為 Sidebery 儲存</string>
+    <string name="dejavu_sidebery_export_failed">無法儲存檔案，請再試一次。</string>
+    <string name="dejavu_sidebery_bad_file">這個檔案不是 Sidebery 快照或備份。</string>
 </resources>

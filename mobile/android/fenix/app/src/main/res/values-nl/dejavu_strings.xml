@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Wordt weer uitgeschakeld wanneer Dejavu opnieuw start</string>
     <string name="dejavu_preference_mouse_support">Muisondersteuning</string>
     <string name="dejavu_preference_mouse_support_summary">Een middelklik opent een koppeling in een tabblad op de achtergrond, en met de muis boven een koppeling hangen toont het adres. Een middelklik op een tabblad sluit het.</string>
+    <string name="dejavu_no_closed_tabs">Geen onlangs gesloten tabbladen</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d in dit tabblad</string>
+    <string name="dejavu_tab_pages">Pagina’s in dit tabblad</string>
+    <string name="dejavu_settings_tabs_import_export">Tabbladen importeren en exporteren</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Werkruimtes, mappen en tabbladen naar en van Sidebery verplaatsen</string>
+    <string name="dejavu_sidebery_hint">Sidebery is een tabbladbeheerder voor Firefox op computers. De panelen ervan zijn hier werkruimtes, de tabbladgroepen mappen en de vastgemaakte tabbladen favorieten.</string>
+    <string name="dejavu_sidebery_export">Naar Sidebery exporteren</string>
+    <string name="dejavu_sidebery_import">Uit Sidebery importeren</string>
+    <string name="dejavu_sidebery_steps">In de «Snapshots viewer» van Sidebery leest «Import snapshot» het bestand van Dejavu en opent «Open all windows» de tabbladen ervan. Om tabbladen hierheen te halen, kiest u daar een momentopname en daarna «Export snapshot» en «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nieuwe werkruimtes</string>
+    <string name="dejavu_sidebery_essentials">Favorieten</string>
+    <string name="dejavu_sidebery_new_containers">Nieuwe containers</string>
+    <string name="dejavu_sidebery_left_out">Weggelaten</string>
+    <string name="dejavu_sidebery_left_out_note">Pagina’s die een telefoon niet kan openen, zoals lokale bestanden, en tabbladen uit privévensters</string>
+    <string name="dejavu_sidebery_nothing_new">Er staat niets nieuws in dit bestand.</string>
+    <string name="dejavu_sidebery_import_button">Importeren</string>
+    <string name="dejavu_sidebery_imported">Geïmporteerd uit Sidebery</string>
+    <string name="dejavu_sidebery_exported">Opgeslagen voor Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Het bestand kon niet worden opgeslagen. Probeer het opnieuw.</string>
+    <string name="dejavu_sidebery_bad_file">Dit bestand is geen momentopname of back-up van Sidebery.</string>
 </resources>

@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu-ს ხელახლა გაშვებისას ისევ გამოირთვება</string>
     <string name="dejavu_preference_mouse_support">თაგვის მხარდაჭერა</string>
     <string name="dejavu_preference_mouse_support_summary">შუა ღილაკით დაწკაპება ბმულს ფონურ ჩანართში ხსნის, ხოლო ბმულზე მაჩვენებლის მიტანა მის მისამართს აჩვენებს. ჩანართზე შუა ღილაკით დაწკაპება მას ხურავს.</string>
+    <string name="dejavu_no_closed_tabs">ბოლოს დახურული ჩანართები არაა</string>
+    <string name="dejavu_tab_page_number">ამ ჩანართის გვერდი %1$d</string>
+    <string name="dejavu_tab_pages">ამ ჩანართის გვერდები</string>
+    <string name="dejavu_settings_tabs_import_export">ჩანართების შემოტანა და გატანა</string>
+    <string name="dejavu_settings_tabs_import_export_summary">სივრცეების, საქაღალდეებისა და ჩანართების გადატანა Sidebery-ში და Sidebery-დან</string>
+    <string name="dejavu_sidebery_hint">Sidebery არის ჩანართების მმართველი Firefox-ისთვის კომპიუტერებზე. მისი პანელები აქ სივრცეებია, ჩანართების ჯგუფები — საქაღალდეები, ხოლო მიმაგრებული ჩანართები — საჭირო საიტები.</string>
+    <string name="dejavu_sidebery_export">Sidebery-ში გატანა</string>
+    <string name="dejavu_sidebery_import">Sidebery-დან შემოტანა</string>
+    <string name="dejavu_sidebery_steps">Sidebery-ის «Snapshots viewer»-ში «Import snapshot» კითხულობს Dejavu-ს ფაილს, ხოლო «Open all windows» ხსნის მის ჩანართებს. ჩანართების აქ გადმოსატანად იქ აირჩიეთ ანაბეჭდი, შემდეგ «Export snapshot» და «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">ახალი სივრცეები</string>
+    <string name="dejavu_sidebery_essentials">საჭირო საიტები</string>
+    <string name="dejavu_sidebery_new_containers">ახალი კონტეინერები</string>
+    <string name="dejavu_sidebery_left_out">გამოტოვებული</string>
+    <string name="dejavu_sidebery_left_out_note">გვერდები, რომლებსაც ტელეფონი ვერ გახსნის, მაგალითად ადგილობრივი ფაილები, და პირადი ფანჯრების ჩანართები</string>
+    <string name="dejavu_sidebery_nothing_new">ამ ფაილში ახალი არაფერია.</string>
+    <string name="dejavu_sidebery_import_button">შემოტანა</string>
+    <string name="dejavu_sidebery_imported">შემოტანილია Sidebery-დან</string>
+    <string name="dejavu_sidebery_exported">შენახულია Sidebery-სთვის</string>
+    <string name="dejavu_sidebery_export_failed">ფაილის შენახვა ვერ მოხერხდა. სცადეთ ხელახლა.</string>
+    <string name="dejavu_sidebery_bad_file">ეს ფაილი არ არის Sidebery-ის ანაბეჭდი ან სარეზერვო ასლი.</string>
 </resources>

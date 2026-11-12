@@ -578,4 +578,24 @@
     <string name="dejavu_remote_debugging_summary">Diweythresys yw arta pan dhastalleth Dejavu</string>
     <string name="dejavu_preference_mouse_support">Skoodhyans logosen</string>
     <string name="dejavu_preference_mouse_support_summary">Klyk kres a eger kevren yn tab kilva, ha gortos a-ugh kevren a dhiskwedh hy thrigva. Klyk kres war dab a\'n serr.</string>
+    <string name="dejavu_no_closed_tabs">Nyns eus tabow degeys agensow</string>
+    <string name="dejavu_tab_page_number">Folen %1$d y’n tab ma</string>
+    <string name="dejavu_tab_pages">Folennow y’n tab ma</string>
+    <string name="dejavu_settings_tabs_import_export">Ynperthi hag esperthi tabow</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Gwaya tyleryow-ober, plegellow ha tabow dhe Sidebery hag a Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery yw rewlyas tabow rag Firefox war jynnow-amontya. Y bannelow yw tyleryow-ober omma, y vagasow tabow yw plegellow ha’y dabow fastyes yw pythow poesek.</string>
+    <string name="dejavu_sidebery_export">Esperthi dhe Sidebery</string>
+    <string name="dejavu_sidebery_import">Ynperthi a Sidebery</string>
+    <string name="dejavu_sidebery_steps">Yn «Snapshots viewer» Sidebery, «Import snapshot» a red an restren a Dejavu hag «Open all windows» a iger hy thabow. Rag dri tabow omma, dewisewgh skeusen ena, ena «Export snapshot» ha «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Tyleryow-ober nowydh</string>
+    <string name="dejavu_sidebery_essentials">Pythow poesek</string>
+    <string name="dejavu_sidebery_new_containers">Kontaynerow nowydh</string>
+    <string name="dejavu_sidebery_left_out">Gesys yn-mes</string>
+    <string name="dejavu_sidebery_left_out_note">Folennow na yll pellgowser aga ygeri, kepar ha restrennow leel, ha tabow fenestri privedh</string>
+    <string name="dejavu_sidebery_nothing_new">Nyns eus travyth nowydh y’n restren ma.</string>
+    <string name="dejavu_sidebery_import_button">Ynperthi</string>
+    <string name="dejavu_sidebery_imported">Ynperthys a Sidebery</string>
+    <string name="dejavu_sidebery_exported">Gwithys rag Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Ny allsa an restren bos gwithys. Assayewgh arta.</string>
+    <string name="dejavu_sidebery_bad_file">Nyns yw an restren ma skeusen po kopi gwitha a Sidebery.</string>
 </resources>

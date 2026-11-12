@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu یئنیدن باشلاندیقدا گئنه سؤنور</string>
     <string name="dejavu_preference_mouse_support">سیچان دستگی</string>
     <string name="dejavu_preference_mouse_support_summary">اورتا دوگمه ایله کلیک، باغلانتینی آرخا پلاندا بیر تاغدا آچیر، باغلانتینین اوستونه گلمک ده اونون آدرسینی گؤستریر. تاغین اوستونده اورتا دوگمه ایله کلیک اونو باغلاییر.</string>
+    <string name="dejavu_no_closed_tabs">بو یاخین زاماندا باغلانان تاغ یوخ</string>
+    <string name="dejavu_tab_page_number">بو تاغدا صفحه %1$d</string>
+    <string name="dejavu_tab_pages">بو تاغداکی صفحه‌لر</string>
+    <string name="dejavu_settings_tabs_import_export">تاغلاری ایچری آل و ایخراج ات</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ایش ساحه‌لرینی، پوشه‌لری و تاغلاری Sidebery-یه و Sidebery-دن کؤچور</string>
+    <string name="dejavu_sidebery_hint">Sidebery کامپیوترلرده Firefox اوچون بیر تاغ ایداره‌چیسیدیر. اونون پانل‌لری بوردا ایش ساحه‌لری، تاغ قروپلاری پوشه‌لر، برکیدیلمیش تاغلاری ایسه اساس‌لاردیر.</string>
+    <string name="dejavu_sidebery_export">Sidebery-یه ایخراج ات</string>
+    <string name="dejavu_sidebery_import">Sidebery-دن ایچری آل</string>
+    <string name="dejavu_sidebery_steps">Sidebery-نین «Snapshots viewer» بؤلومونده «Import snapshot» Dejavu-دان گلن فایلی اوخویور، «Open all windows» ایسه تاغلاری آچیر. تاغلاری بورا گتیرمک اوچون اوردا بیر snapshot سئچین، سونرا «Export snapshot» و «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">یئنی ایش ساحه‌لری</string>
+    <string name="dejavu_sidebery_essentials">اساس‌لار</string>
+    <string name="dejavu_sidebery_new_containers">یئنی کانتینرلر</string>
+    <string name="dejavu_sidebery_left_out">کناردا قالانلار</string>
+    <string name="dejavu_sidebery_left_out_note">تلفونون آچا بیلمه‌دیگی صفحه‌لر، یئرلی فایل‌لار کیمی، و گیزلی پنجره‌لرین تاغلاری</string>
+    <string name="dejavu_sidebery_nothing_new">بو فایلدا یئنی بیر شئی یوخدور.</string>
+    <string name="dejavu_sidebery_import_button">ایچری آل</string>
+    <string name="dejavu_sidebery_imported">Sidebery-دن ایچری آلیندی</string>
+    <string name="dejavu_sidebery_exported">Sidebery اوچون ساخلاندی</string>
+    <string name="dejavu_sidebery_export_failed">فایل ساخلانا بیلمه‌دی. یئنیدن چالیشین.</string>
+    <string name="dejavu_sidebery_bad_file">بو فایل Sidebery snapshot-و یا یدک نوسخه‌سی دئییل.</string>
 </resources>

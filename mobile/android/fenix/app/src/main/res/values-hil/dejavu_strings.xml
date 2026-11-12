@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Mag-off liwat kon mag-restart ang Dejavu</string>
     <string name="dejavu_preference_mouse_support">Suporta sa mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Ang middle-click nagabukas sang link sa background tab, kag ang pag-hover sa link nagapakita sang iya address. Ang middle-click sa tab nagasara sini.</string>
+    <string name="dejavu_no_closed_tabs">Wala sing tab nga bag-o lang nasira</string>
+    <string name="dejavu_tab_page_number">Pahina %1$d sa sini nga tab</string>
+    <string name="dejavu_tab_pages">Mga pahina sa sini nga tab</string>
+    <string name="dejavu_settings_tabs_import_export">Pag-import kag pag-export sang mga tab</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Ibalhin ang mga workspace, folder kag tab pakadto kag halin sa Sidebery</string>
+    <string name="dejavu_sidebery_hint">Ang Sidebery isa ka tab manager para sa Firefox sa mga kompyuter. Ang iya mga panel diri mga workspace, ang iya mga grupo sang tab mga folder, kag ang iya mga naka-pin nga tab mga importante.</string>
+    <string name="dejavu_sidebery_export">I-export sa Sidebery</string>
+    <string name="dejavu_sidebery_import">I-import halin sa Sidebery</string>
+    <string name="dejavu_sidebery_steps">Sa «Snapshots viewer» sang Sidebery, ang «Import snapshot» nagabasa sang file halin sa Dejavu kag ang «Open all windows» nagabukas sang iya mga tab. Agod dalhon ang mga tab diri, magpili sang snapshot didto, dayon «Export snapshot» kag «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Bag-o nga mga workspace</string>
+    <string name="dejavu_sidebery_essentials">Importante</string>
+    <string name="dejavu_sidebery_new_containers">Bag-o nga mga container</string>
+    <string name="dejavu_sidebery_left_out">Wala ginlakip</string>
+    <string name="dejavu_sidebery_left_out_note">Mga pahina nga indi mabuksan sang telepono, pareho sang lokal nga mga file, kag mga tab sang pribado nga bintana</string>
+    <string name="dejavu_sidebery_nothing_new">Wala sing bag-o sa sini nga file.</string>
+    <string name="dejavu_sidebery_import_button">I-import</string>
+    <string name="dejavu_sidebery_imported">Na-import halin sa Sidebery</string>
+    <string name="dejavu_sidebery_exported">Natipigan para sa Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Indi matipigan ang file. Tilawi liwat.</string>
+    <string name="dejavu_sidebery_bad_file">Ini nga file indi snapshot ukon backup sang Sidebery.</string>
 </resources>

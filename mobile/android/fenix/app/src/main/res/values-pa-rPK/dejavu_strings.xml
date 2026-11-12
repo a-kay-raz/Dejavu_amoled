@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu دے مڑ شروع ہون اُتے ایہہ فیر بند ہو جاندی اے</string>
     <string name="dejavu_preference_mouse_support">ماؤس دی سہولت</string>
     <string name="dejavu_preference_mouse_support_summary">وچکارلے بٹن نال کلک کرن نال لنک پچھوکڑ والی ٹیب وچ کھلدا اے، تے لنک اتے ماؤس رکھن نال اوہدا پتہ وکھائی دیندا اے۔ ٹیب اتے وچکارلے بٹن نال کلک کرن نال اوہ بند ہو جاندی اے۔</string>
+    <string name="dejavu_no_closed_tabs">کوئی وی تازہ بند کیتیاں ٹیباں نہیں ہن</string>
+    <string name="dejavu_tab_page_number">ایس ٹیب وچ صفحہ %1$d</string>
+    <string name="dejavu_tab_pages">ایس ٹیب دے صفحے</string>
+    <string name="dejavu_settings_tabs_import_export">ٹیباں امپورٹ تے ایکسپورٹ کرو</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ورک سپیساں، فولڈراں تے ٹیباں نوں Sidebery وچ تے Sidebery توں لے جاؤ</string>
+    <string name="dejavu_sidebery_hint">Sidebery کمپیوٹراں اتے Firefox لئی ٹیب منیجر اے۔ ایہدے پینل ایتھے ورک سپیس نیں، ایہدے ٹیب گروپ فولڈر نیں تے ایہدیاں پن کیتیاں ٹیباں ضروری چیزاں نیں۔</string>
+    <string name="dejavu_sidebery_export">Sidebery وچ ایکسپورٹ کرو</string>
+    <string name="dejavu_sidebery_import">Sidebery توں امپورٹ کرو</string>
+    <string name="dejavu_sidebery_steps">Sidebery دے «Snapshots viewer» وچ «Import snapshot» Dejavu دی فائل پڑھدا اے تے «Open all windows» اوہدیاں ٹیباں کھولدا اے۔ ٹیباں ایتھے لیان لئی اوتھے اک سنیپ شاٹ چنو، فیر «Export snapshot» تے «Save as JSON»۔</string>
+    <string name="dejavu_sidebery_new_workspaces">نویں ورک سپیس</string>
+    <string name="dejavu_sidebery_essentials">ضروری چیزاں</string>
+    <string name="dejavu_sidebery_new_containers">نویں کنٹینر</string>
+    <string name="dejavu_sidebery_left_out">چھڈیاں گئیاں</string>
+    <string name="dejavu_sidebery_left_out_note">اوہ صفحے جو فون نئیں کھول سکدا، جیویں لوکل فائلاں، تے پرائیویٹ ونڈوآں دیاں ٹیباں</string>
+    <string name="dejavu_sidebery_nothing_new">ایس فائل وچ کجھ نواں نئیں۔</string>
+    <string name="dejavu_sidebery_import_button">امپورٹ کرو</string>
+    <string name="dejavu_sidebery_imported">Sidebery توں امپورٹ کیتا</string>
+    <string name="dejavu_sidebery_exported">Sidebery لئی سانبھیا</string>
+    <string name="dejavu_sidebery_export_failed">فائل سانبھی نئیں جا سکی۔ مڑ کوشش کرو۔</string>
+    <string name="dejavu_sidebery_bad_file">ایہ فائل Sidebery دا سنیپ شاٹ یا بیک اپ نئیں۔</string>
 </resources>

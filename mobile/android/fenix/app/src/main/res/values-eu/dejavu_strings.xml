@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Berriro desaktibatzen da Dejavu berrabiaraztean</string>
     <string name="dejavu_preference_mouse_support">Saguaren euskarria</string>
     <string name="dejavu_preference_mouse_support_summary">Erdiko botoiarekin klik eginez gero, esteka atzeko planoko fitxa batean irekitzen da, eta esteka baten gainetik pasatzean haren helbidea erakusten da. Erdiko botoiarekin fitxa baten gainean klik eginez gero, fitxa ixten da.</string>
+    <string name="dejavu_no_closed_tabs">Itxitako azken fitxarik ez</string>
+    <string name="dejavu_tab_page_number">Fitxa honetako %1$d. orria</string>
+    <string name="dejavu_tab_pages">Fitxa honetako orriak</string>
+    <string name="dejavu_settings_tabs_import_export">Inportatu eta esportatu fitxak</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Eraman laneremuak, karpetak eta fitxak Sideberyra eta Sideberytik</string>
+    <string name="dejavu_sidebery_hint">Sidebery ordenagailuetako Firefoxen fitxa-kudeatzaile bat da. Hemen bere panelak laneremuak dira, bere fitxa-taldeak karpetak eta finkatutako fitxak funtsezkoak.</string>
+    <string name="dejavu_sidebery_export">Esportatu Sideberyra</string>
+    <string name="dejavu_sidebery_import">Inportatu Sideberytik</string>
+    <string name="dejavu_sidebery_steps">Sideberyren «Snapshots viewer» atalean, «Import snapshot» aukerak Dejavuren fitxategia irakurtzen du eta «Open all windows» aukerak bere fitxak irekitzen ditu. Fitxak hona ekartzeko, aukeratu han argazki bat, eta gero «Export snapshot» eta «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Laneremu berriak</string>
+    <string name="dejavu_sidebery_essentials">Funtsezkoak</string>
+    <string name="dejavu_sidebery_new_containers">Edukiontzi berriak</string>
+    <string name="dejavu_sidebery_left_out">Kanpoan utzitakoak</string>
+    <string name="dejavu_sidebery_left_out_note">Telefono batek ireki ezin dituen orriak, fitxategi lokalak adibidez, eta leiho pribatuetako fitxak</string>
+    <string name="dejavu_sidebery_nothing_new">Ez dago ezer berririk fitxategi honetan.</string>
+    <string name="dejavu_sidebery_import_button">Inportatu</string>
+    <string name="dejavu_sidebery_imported">Sideberytik inportatuta</string>
+    <string name="dejavu_sidebery_exported">Sideberyrentzat gordeta</string>
+    <string name="dejavu_sidebery_export_failed">Ezin izan da fitxategia gorde. Saiatu berriro.</string>
+    <string name="dejavu_sidebery_bad_file">Fitxategi hau ez da Sideberyren argazkia edo babeskopia.</string>
 </resources>

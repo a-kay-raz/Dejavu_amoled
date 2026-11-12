@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Ñifoto kadi so Dejavu fuɗɗitii</string>
     <string name="dejavu_preference_mouse_support">Wallitorde doombru</string>
     <string name="dejavu_preference_mouse_support_summary">Dobo hakkunde ina uddita jokkol e tabbere caggal, kadi ɗaɓɓude doombru e dow jokkol ina hollira ñiiɓirde mayre. Dobo hakkunde e dow tabbere ina maaɗa ɗum.</string>
+    <string name="dejavu_no_closed_tabs">Alaa tabbe uddaaɗe sakket njiytaa</string>
+    <string name="dejavu_tab_page_number">Page %1$d de cet onglet</string>
+    <string name="dejavu_tab_pages">Pages de cet onglet</string>
+    <string name="dejavu_settings_tabs_import_export">Importer et exporter des onglets</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Transférer espaces, dossiers et onglets vers et depuis Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery est un gestionnaire d’onglets pour Firefox sur ordinateur. Ici, ses panneaux sont des espaces, ses groupes d’onglets des dossiers et ses onglets épinglés des favoris.</string>
+    <string name="dejavu_sidebery_export">Exporter vers Sidebery</string>
+    <string name="dejavu_sidebery_import">Importer depuis Sidebery</string>
+    <string name="dejavu_sidebery_steps">Dans la « Visionneuse d’instantanés » de Sidebery, « Importer un instantané » lit le fichier de Dejavu et « Ouvrir toutes les fenêtres » ouvre ses onglets. Pour amener des onglets ici, choisissez-y un instantané, puis « Exporter un instantané » et « Sauvegarder en JSON ».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nouveaux espaces</string>
+    <string name="dejavu_sidebery_essentials">Favoris</string>
+    <string name="dejavu_sidebery_new_containers">Nouveaux conteneurs</string>
+    <string name="dejavu_sidebery_left_out">Laissés de côté</string>
+    <string name="dejavu_sidebery_left_out_note">Pages qu’un téléphone ne peut pas ouvrir, comme les fichiers locaux, et onglets des fenêtres privées</string>
+    <string name="dejavu_sidebery_nothing_new">Ce fichier ne contient rien de nouveau.</string>
+    <string name="dejavu_sidebery_import_button">Importer</string>
+    <string name="dejavu_sidebery_imported">Importé depuis Sidebery</string>
+    <string name="dejavu_sidebery_exported">Enregistré pour Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impossible d’enregistrer le fichier. Veuillez réessayer.</string>
+    <string name="dejavu_sidebery_bad_file">Ce fichier n’est ni un instantané ni une sauvegarde de Sidebery.</string>
 </resources>

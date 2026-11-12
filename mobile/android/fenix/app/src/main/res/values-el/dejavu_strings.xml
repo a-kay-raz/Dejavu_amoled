@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Απενεργοποιείται ξανά όταν γίνεται επανεκκίνηση του Dejavu</string>
     <string name="dejavu_preference_mouse_support">Υποστήριξη ποντικιού</string>
     <string name="dejavu_preference_mouse_support_summary">Το μεσαίο κλικ ανοίγει έναν σύνδεσμο σε καρτέλα στο παρασκήνιο και η τοποθέτηση του δείκτη σε σύνδεσμο εμφανίζει τη διεύθυνσή του. Το μεσαίο κλικ σε καρτέλα την κλείνει.</string>
+    <string name="dejavu_no_closed_tabs">Καμία πρόσφατα κλεισμένη καρτέλα</string>
+    <string name="dejavu_tab_page_number">Σελίδα %1$d σε αυτή την καρτέλα</string>
+    <string name="dejavu_tab_pages">Σελίδες σε αυτή την καρτέλα</string>
+    <string name="dejavu_settings_tabs_import_export">Εισαγωγή και εξαγωγή καρτελών</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Μεταφορά χώρων εργασίας, φακέλων και καρτελών προς και από το Sidebery</string>
+    <string name="dejavu_sidebery_hint">Το Sidebery είναι διαχείριση καρτελών για το Firefox σε υπολογιστές. Τα πάνελ του είναι εδώ χώροι εργασίας, οι ομάδες καρτελών του φάκελοι και οι καρφιτσωμένες καρτέλες του αγαπημένα.</string>
+    <string name="dejavu_sidebery_export">Εξαγωγή στο Sidebery</string>
+    <string name="dejavu_sidebery_import">Εισαγωγή από το Sidebery</string>
+    <string name="dejavu_sidebery_steps">Στο «Snapshots viewer» του Sidebery, το «Import snapshot» διαβάζει το αρχείο από το Dejavu και το «Open all windows» ανοίγει τις καρτέλες του. Για να φέρετε καρτέλες εδώ, επιλέξτε εκεί ένα στιγμιότυπο και μετά «Export snapshot» και «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Νέοι χώροι εργασίας</string>
+    <string name="dejavu_sidebery_essentials">Αγαπημένα</string>
+    <string name="dejavu_sidebery_new_containers">Νέοι περιέκτες</string>
+    <string name="dejavu_sidebery_left_out">Εκτός</string>
+    <string name="dejavu_sidebery_left_out_note">Σελίδες που δεν μπορεί να ανοίξει ένα τηλέφωνο, όπως τοπικά αρχεία, και καρτέλες ιδιωτικών παραθύρων</string>
+    <string name="dejavu_sidebery_nothing_new">Δεν υπάρχει τίποτα νέο σε αυτό το αρχείο.</string>
+    <string name="dejavu_sidebery_import_button">Εισαγωγή</string>
+    <string name="dejavu_sidebery_imported">Εισήχθη από το Sidebery</string>
+    <string name="dejavu_sidebery_exported">Αποθηκεύτηκε για το Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Δεν ήταν δυνατή η αποθήκευση του αρχείου. Δοκιμάστε ξανά.</string>
+    <string name="dejavu_sidebery_bad_file">Αυτό το αρχείο δεν είναι στιγμιότυπο ούτε αντίγραφο ασφαλείας του Sidebery.</string>
 </resources>

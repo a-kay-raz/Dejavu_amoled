@@ -72,7 +72,7 @@ abstract class DejavuSettingsGroupFragment(
     }
 }
 
-/** Closing and sleeping tabs, containers, the homepage and where links open, from General. */
+/** Closing and sleeping tabs, containers, the homepage, where links open and moving tabs to Sidebery, from General. */
 class DejavuTabsWorkspacesFragment : DejavuSettingsGroupFragment(
     R.xml.dejavu_tabs_workspaces_preferences,
     R.string.dejavu_settings_tabs_workspaces,
@@ -85,6 +85,7 @@ class DejavuTabsWorkspacesFragment : DejavuSettingsGroupFragment(
         Entry(R.string.pref_key_home, R.id.homeSettingsFragment),
         Entry(R.string.pref_key_dejavu_external_links, R.id.dejavu_external_links_graph),
         Entry(R.string.pref_key_open_links_in_apps, R.id.openLinksInAppsFragment),
+        Entry(R.string.pref_key_dejavu_tabs_import_export, R.id.dejavu_tabs_import_export_graph),
     )
 
     override fun update(settings: Settings) {

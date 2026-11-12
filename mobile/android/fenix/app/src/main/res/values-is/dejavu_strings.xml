@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Slokknar aftur þegar Dejavu er endurræst</string>
     <string name="dejavu_preference_mouse_support">Músarstuðningur</string>
     <string name="dejavu_preference_mouse_support_summary">Miðsmellur opnar tengil í bakgrunnsflipa og þegar bendli er haldið yfir tengli sést vistfang hans. Miðsmellur á flipa lokar honum.</string>
+    <string name="dejavu_no_closed_tabs">Engir nýlega lokaðir flipar</string>
+    <string name="dejavu_tab_page_number">Síða %1$d í þessum flipa</string>
+    <string name="dejavu_tab_pages">Síður í þessum flipa</string>
+    <string name="dejavu_settings_tabs_import_export">Flytja inn og út flipa</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Færa vinnusvæði, möppur og flipa til og frá Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery er flipastjóri fyrir Firefox á tölvum. Spjöld þess eru hér vinnusvæði, flipahópar þess möppur og festir flipar þess eftirlæti.</string>
+    <string name="dejavu_sidebery_export">Flytja út í Sidebery</string>
+    <string name="dejavu_sidebery_import">Flytja inn úr Sidebery</string>
+    <string name="dejavu_sidebery_steps">Í «Snapshots viewer» í Sidebery les «Import snapshot» skrána frá Dejavu og «Open all windows» opnar flipa hennar. Til að koma með flipa hingað skaltu velja skyndimynd þar og síðan «Export snapshot» og «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Ný vinnusvæði</string>
+    <string name="dejavu_sidebery_essentials">Eftirlæti</string>
+    <string name="dejavu_sidebery_new_containers">Ný hólf</string>
+    <string name="dejavu_sidebery_left_out">Sleppt</string>
+    <string name="dejavu_sidebery_left_out_note">Síður sem sími getur ekki opnað, til dæmis staðbundnar skrár, og flipar úr huliðsgluggum</string>
+    <string name="dejavu_sidebery_nothing_new">Ekkert nýtt er í þessari skrá.</string>
+    <string name="dejavu_sidebery_import_button">Flytja inn</string>
+    <string name="dejavu_sidebery_imported">Flutt inn úr Sidebery</string>
+    <string name="dejavu_sidebery_exported">Vistað fyrir Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Ekki tókst að vista skrána. Reyndu aftur.</string>
+    <string name="dejavu_sidebery_bad_file">Þessi skrá er ekki skyndimynd eða öryggisafrit úr Sidebery.</string>
 </resources>

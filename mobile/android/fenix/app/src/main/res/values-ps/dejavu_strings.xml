@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">کله چې Dejavu بیا پیل شي، بېرته بندېږي</string>
     <string name="dejavu_preference_mouse_support">د موږک ملاتړ</string>
     <string name="dejavu_preference_mouse_support_summary">د منځني تڼۍ کلیک یوه تړنه په شالید ټب کې پرانیزي، او په تړنه باندې د موږک ساتل یې پته ښيي. په ټب باندې د منځنې تڼۍ کلیک هغه تړي.</string>
+    <string name="dejavu_no_closed_tabs">وروستي بند شوي ټبونه نشته</string>
+    <string name="dejavu_tab_page_number">په دې ټب کې پاڼه %1$d</string>
+    <string name="dejavu_tab_pages">په دې ټب کې پاڼې</string>
+    <string name="dejavu_settings_tabs_import_export">ټبونه واردول او صادرول</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ساحې، پوښې او ټبونه Sidebery ته او له Sidebery څخه ولېږدوئ</string>
+    <string name="dejavu_sidebery_hint">Sidebery په کمپیوټرونو کې د Firefox لپاره د ټبونو مدیر دی. د هغه پینلونه دلته ساحې دي، د ټبونو ډلې یې پوښې دي او پین شوي ټبونه یې مهمې ویب پاڼې دي.</string>
+    <string name="dejavu_sidebery_export">Sidebery ته صادرول</string>
+    <string name="dejavu_sidebery_import">له Sidebery څخه واردول</string>
+    <string name="dejavu_sidebery_steps">د Sidebery په «Snapshots viewer» کې «Import snapshot» د Dejavu دوتنه لولي او «Open all windows» یې ټبونه پرانیزي. د دې لپاره چې ټبونه دلته راوړئ، هلته یو سنیپ شاټ وټاکئ، بیا «Export snapshot» او «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">نوې ساحې</string>
+    <string name="dejavu_sidebery_essentials">مهمې ویب پاڼې</string>
+    <string name="dejavu_sidebery_new_containers">نوي کانتینرونه</string>
+    <string name="dejavu_sidebery_left_out">پرېښودل شوي</string>
+    <string name="dejavu_sidebery_left_out_note">هغه پاڼې چې ټېلیفون یې نشي پرانیستلی، لکه سیمه‌ییزې دوتنې، او د شخصي کړکیو ټبونه</string>
+    <string name="dejavu_sidebery_nothing_new">په دې دوتنه کې هېڅ نوی شی نشته.</string>
+    <string name="dejavu_sidebery_import_button">واردول</string>
+    <string name="dejavu_sidebery_imported">له Sidebery څخه وارد شو</string>
+    <string name="dejavu_sidebery_exported">د Sidebery لپاره خوندي شو</string>
+    <string name="dejavu_sidebery_export_failed">دوتنه خوندي نه شوه. بیا هڅه وکړئ.</string>
+    <string name="dejavu_sidebery_bad_file">دا دوتنه د Sidebery سنیپ شاټ یا بیک اپ نه دی.</string>
 </resources>

@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu qayta ishga tushganda yana oʻchadi</string>
     <string name="dejavu_preference_mouse_support">Sichqoncha yordami</string>
     <string name="dejavu_preference_mouse_support_summary">O‘rta tugma bilan bosish havolani orqa fondagi varaqda ochadi, havola ustiga sichqonchani olib borish esa uning manzilini ko‘rsatadi. Varaqni o‘rta tugma bilan bosish uni yopadi.</string>
+    <string name="dejavu_no_closed_tabs">Yaqinda yopilgan varaqlar yoʻq</string>
+    <string name="dejavu_tab_page_number">Bu varaqdagi %1$d-sahifa</string>
+    <string name="dejavu_tab_pages">Bu varaqdagi sahifalar</string>
+    <string name="dejavu_settings_tabs_import_export">Varaqlarni import va eksport qilish</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Ish maydonlari, jildlar va varaqlarni Sidebery-ga va Sidebery-dan ko‘chirish</string>
+    <string name="dejavu_sidebery_hint">Sidebery kompyuterlardagi Firefox uchun varaqlar boshqaruvchisi. Uning panellari bu yerda ish maydonlari, varaq guruhlari jildlar, mahkamlangan varaqlari esa muhimlar bo‘ladi.</string>
+    <string name="dejavu_sidebery_export">Sidebery-ga eksport qilish</string>
+    <string name="dejavu_sidebery_import">Sidebery-dan import qilish</string>
+    <string name="dejavu_sidebery_steps">Sidebery-ning «Snapshots viewer» bo‘limida «Import snapshot» Dejavu faylini o‘qiydi, «Open all windows» esa uning varaqlarini ochadi. Varaqlarni bu yerga olib kelish uchun u yerda snapshot tanlang, so‘ng «Export snapshot» va «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Yangi ish maydonlari</string>
+    <string name="dejavu_sidebery_essentials">Muhimlar</string>
+    <string name="dejavu_sidebery_new_containers">Yangi konteynerlar</string>
+    <string name="dejavu_sidebery_left_out">Chetda qolganlar</string>
+    <string name="dejavu_sidebery_left_out_note">Telefon ocholmaydigan sahifalar, masalan mahalliy fayllar, va maxfiy oynalarning varaqlari</string>
+    <string name="dejavu_sidebery_nothing_new">Bu faylda yangi hech narsa yo‘q.</string>
+    <string name="dejavu_sidebery_import_button">Import qilish</string>
+    <string name="dejavu_sidebery_imported">Sidebery-dan import qilindi</string>
+    <string name="dejavu_sidebery_exported">Sidebery uchun saqlandi</string>
+    <string name="dejavu_sidebery_export_failed">Faylni saqlab bo‘lmadi. Qaytadan urinib ko‘ring.</string>
+    <string name="dejavu_sidebery_bad_file">Bu fayl Sidebery snapshot-i yoki zaxira nusxasi emas.</string>
 </resources>

@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu قايتا قوزغالغاندا يەنە تاقىلىدۇ</string>
     <string name="dejavu_preference_mouse_support">مائۇس قوللىشى</string>
     <string name="dejavu_preference_mouse_support_summary">ئوتتۇرا كۇنۇپكا بىلەن چېكىش ئۇلانمىنى ئارقا سۇپىدىكى بەتكۈچتە ئاچىدۇ، ئۇلانما ئۈستىگە مائۇسنى توختىتىش ئۇنىڭ ئادرېسىنى كۆرسىتىدۇ. بەتكۈچنى ئوتتۇرا كۇنۇپكا بىلەن چېكىش ئۇنى تاقايدۇ.</string>
+    <string name="dejavu_no_closed_tabs">يېقىندا تاقالغان بەتكۈچ يوق</string>
+    <string name="dejavu_tab_page_number">بۇ بەتكۈچتىكى %1$d-بەت</string>
+    <string name="dejavu_tab_pages">بۇ بەتكۈچتىكى بەتلەر</string>
+    <string name="dejavu_settings_tabs_import_export">بەتكۈچلەرنى ئەكىرىش ۋە چىقىرىش</string>
+    <string name="dejavu_settings_tabs_import_export_summary">خىزمەت دائىرىلىرى، قىسقۇچلار ۋە بەتكۈچلەرنى Sidebery غا ۋە Sidebery دىن يۆتكەش</string>
+    <string name="dejavu_sidebery_hint">Sidebery كومپيۇتېرلاردىكى Firefox ئۈچۈن بەتكۈچ باشقۇرغۇچ. ئۇنىڭ تاختايلىرى بۇ يەردە خىزمەت دائىرىلىرى، بەتكۈچ گۇرۇپپىلىرى قىسقۇچلار، مىخلانغان بەتكۈچلىرى مۇھىملار بولىدۇ.</string>
+    <string name="dejavu_sidebery_export">Sidebery غا چىقىرىش</string>
+    <string name="dejavu_sidebery_import">Sidebery دىن ئەكىرىش</string>
+    <string name="dejavu_sidebery_steps">Sidebery نىڭ «Snapshots viewer» بۆلىكىدە «Import snapshot» Dejavu ھۆججىتىنى ئوقۇيدۇ، «Open all windows» ئۇنىڭ بەتكۈچلىرىنى ئاچىدۇ. بەتكۈچلەرنى بۇ يەرگە ئەكېلىش ئۈچۈن ئۇ يەردە بىر تېز سۈرەت تاللاپ، ئاندىن «Export snapshot» ۋە «Save as JSON» نى تاللاڭ.</string>
+    <string name="dejavu_sidebery_new_workspaces">يېڭى خىزمەت دائىرىلىرى</string>
+    <string name="dejavu_sidebery_essentials">مۇھىملار</string>
+    <string name="dejavu_sidebery_new_containers">يېڭى قاچىلار</string>
+    <string name="dejavu_sidebery_left_out">سىرتتا قالغانلار</string>
+    <string name="dejavu_sidebery_left_out_note">تېلېفون ئاچالمايدىغان بەتلەر، مەسىلەن يەرلىك ھۆججەتلەر، ۋە شەخسىي كۆزنەكلەرنىڭ بەتكۈچلىرى</string>
+    <string name="dejavu_sidebery_nothing_new">بۇ ھۆججەتتە يېڭى نەرسە يوق.</string>
+    <string name="dejavu_sidebery_import_button">ئەكىرىش</string>
+    <string name="dejavu_sidebery_imported">Sidebery دىن ئەكىرىلدى</string>
+    <string name="dejavu_sidebery_exported">Sidebery ئۈچۈن ساقلاندى</string>
+    <string name="dejavu_sidebery_export_failed">ھۆججەتنى ساقلىغىلى بولمىدى. قايتا سىناڭ.</string>
+    <string name="dejavu_sidebery_bad_file">بۇ ھۆججەت Sidebery نىڭ تېز سۈرىتى ياكى زاپىسى ئەمەس.</string>
 </resources>

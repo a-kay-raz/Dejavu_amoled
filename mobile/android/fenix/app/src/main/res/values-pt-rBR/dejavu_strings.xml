@@ -554,4 +554,24 @@
     <string name="dejavu_remote_debugging_summary">É desativada de novo quando o Dejavu é reiniciado</string>
     <string name="dejavu_preference_mouse_support">Suporte a mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Um clique com o botão do meio abre um link em uma aba em segundo plano, e passar o mouse sobre um link mostra o endereço dele. Um clique com o botão do meio em uma aba a fecha.</string>
+    <string name="dejavu_no_closed_tabs">Nenhuma aba fechada recentemente</string>
+    <string name="dejavu_tab_page_number">Página %1$d nesta aba</string>
+    <string name="dejavu_tab_pages">Páginas nesta aba</string>
+    <string name="dejavu_settings_tabs_import_export">Importar e exportar abas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mova espaços de trabalho, pastas e abas para o Sidebery e a partir dele</string>
+    <string name="dejavu_sidebery_hint">O Sidebery é um gerenciador de abas para o Firefox em computadores. Aqui, os painéis dele são espaços de trabalho, os grupos de abas são pastas e as abas fixadas são essenciais.</string>
+    <string name="dejavu_sidebery_export">Exportar para o Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar do Sidebery</string>
+    <string name="dejavu_sidebery_steps">No «Snapshots viewer» do Sidebery, «Import snapshot» lê o arquivo do Dejavu e «Open all windows» abre as abas dele. Para trazer abas para cá, escolha lá um instantâneo e depois «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Novos espaços de trabalho</string>
+    <string name="dejavu_sidebery_essentials">Essenciais</string>
+    <string name="dejavu_sidebery_new_containers">Novos contêineres</string>
+    <string name="dejavu_sidebery_left_out">Deixadas de fora</string>
+    <string name="dejavu_sidebery_left_out_note">Páginas que um celular não consegue abrir, como arquivos locais, e abas de janelas privativas</string>
+    <string name="dejavu_sidebery_nothing_new">Não há nada novo neste arquivo.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importado do Sidebery</string>
+    <string name="dejavu_sidebery_exported">Salvo para o Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Não foi possível salvar o arquivo. Tente novamente.</string>
+    <string name="dejavu_sidebery_bad_file">Este arquivo não é um instantâneo nem um backup do Sidebery.</string>
 </resources>

@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">A Dejavu újraindításakor ismét kikapcsol</string>
     <string name="dejavu_preference_mouse_support">Egértámogatás</string>
     <string name="dejavu_preference_mouse_support_summary">A középső gombos kattintás háttérlapon nyitja meg a hivatkozást, a hivatkozás fölé vitt egér pedig megjeleníti a címét. A középső gombos kattintás egy lapon bezárja azt.</string>
+    <string name="dejavu_no_closed_tabs">Nincs nemrég bezárt lap</string>
+    <string name="dejavu_tab_page_number">%1$d. oldal ezen a lapon</string>
+    <string name="dejavu_tab_pages">Oldalak ezen a lapon</string>
+    <string name="dejavu_settings_tabs_import_export">Lapok importálása és exportálása</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Munkaterületek, mappák és lapok áthelyezése a Sideberybe és onnan</string>
+    <string name="dejavu_sidebery_hint">A Sidebery egy lapkezelő a számítógépes Firefoxhoz. Panelei itt munkaterületek, lapcsoportjai mappák, kitűzött lapjai pedig kedvencek.</string>
+    <string name="dejavu_sidebery_export">Exportálás a Sideberybe</string>
+    <string name="dejavu_sidebery_import">Importálás a Sideberyből</string>
+    <string name="dejavu_sidebery_steps">A Sidebery „Pillanatképek” részében a „Pillanatkép importálása” beolvassa a Dejavuból származó fájlt, a „Minden ablak megnyitása” pedig megnyitja a lapjait. Ha lapokat hozna ide, válasszon ott egy pillanatképet, majd a „Pillanatkép exportálása” és a „Mentés JSON-fájlként” lehetőséget.</string>
+    <string name="dejavu_sidebery_new_workspaces">Új munkaterületek</string>
+    <string name="dejavu_sidebery_essentials">Kedvencek</string>
+    <string name="dejavu_sidebery_new_containers">Új konténerek</string>
+    <string name="dejavu_sidebery_left_out">Kihagyva</string>
+    <string name="dejavu_sidebery_left_out_note">Oldalak, amelyeket a telefon nem tud megnyitni, például a helyi fájlok, és a privát ablakok lapjai</string>
+    <string name="dejavu_sidebery_nothing_new">Ebben a fájlban nincs semmi új.</string>
+    <string name="dejavu_sidebery_import_button">Importálás</string>
+    <string name="dejavu_sidebery_imported">Importálva a Sideberyből</string>
+    <string name="dejavu_sidebery_exported">Mentve a Sidebery számára</string>
+    <string name="dejavu_sidebery_export_failed">Nem sikerült menteni a fájlt. Próbálja újra.</string>
+    <string name="dejavu_sidebery_bad_file">Ez a fájl nem a Sidebery pillanatképe vagy biztonsági mentése.</string>
 </resources>

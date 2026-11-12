@@ -562,4 +562,24 @@
     <string name="dejavu_remote_debugging_summary">Po reštarte Dejavu sa opäť vypne</string>
     <string name="dejavu_preference_mouse_support">Podpora myši</string>
     <string name="dejavu_preference_mouse_support_summary">Kliknutie stredným tlačidlom otvorí odkaz na karte na pozadí a umiestnenie kurzora na odkaz zobrazí jeho adresu. Kliknutie stredným tlačidlom na kartu ju zatvorí.</string>
+    <string name="dejavu_no_closed_tabs">Nemáte žiadne nedávno zatvorené karty</string>
+    <string name="dejavu_tab_page_number">Stránka %1$d na tejto karte</string>
+    <string name="dejavu_tab_pages">Stránky na tejto karte</string>
+    <string name="dejavu_settings_tabs_import_export">Import a export kariet</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Presun pracovných priestorov, priečinkov a kariet do Sidebery a zo Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery je správca kariet pre Firefox na počítačoch. Jeho panely sú tu pracovné priestory, skupiny kariet sú priečinky a pripnuté karty sú obľúbené.</string>
+    <string name="dejavu_sidebery_export">Exportovať do Sidebery</string>
+    <string name="dejavu_sidebery_import">Importovať zo Sidebery</string>
+    <string name="dejavu_sidebery_steps">V Sidebery v časti «Snapshots viewer» načíta «Import snapshot» súbor z Dejavu a «Open all windows» otvorí jeho karty. Ak chcete karty preniesť sem, vyberte tam snímku a potom «Export snapshot» a «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nové pracovné priestory</string>
+    <string name="dejavu_sidebery_essentials">Obľúbené</string>
+    <string name="dejavu_sidebery_new_containers">Nové kontajnery</string>
+    <string name="dejavu_sidebery_left_out">Vynechané</string>
+    <string name="dejavu_sidebery_left_out_note">Stránky, ktoré telefón nedokáže otvoriť, napríklad miestne súbory, a karty zo súkromných okien</string>
+    <string name="dejavu_sidebery_nothing_new">V tomto súbore nie je nič nové.</string>
+    <string name="dejavu_sidebery_import_button">Importovať</string>
+    <string name="dejavu_sidebery_imported">Importované zo Sidebery</string>
+    <string name="dejavu_sidebery_exported">Uložené pre Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Súbor sa nepodarilo uložiť. Skúste to znova.</string>
+    <string name="dejavu_sidebery_bad_file">Tento súbor nie je snímka ani záloha Sidebery.</string>
 </resources>

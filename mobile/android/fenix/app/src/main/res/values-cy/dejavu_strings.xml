@@ -578,4 +578,24 @@
     <string name="dejavu_remote_debugging_summary">Mae\'n troi i ffwrdd eto pan fydd Dejavu yn ailgychwyn</string>
     <string name="dejavu_preference_mouse_support">Cefnogaeth llygoden</string>
     <string name="dejavu_preference_mouse_support_summary">Mae clicio\'r botwm canol yn agor dolen mewn tab cefndir, ac mae hofran dros ddolen yn dangos ei chyfeiriad. Mae clicio\'r botwm canol ar dab yn ei gau.</string>
+    <string name="dejavu_no_closed_tabs">Dim tabiau wedi’u cau yn ddiweddar</string>
+    <string name="dejavu_tab_page_number">Tudalen %1$d yn y tab hwn</string>
+    <string name="dejavu_tab_pages">Tudalennau yn y tab hwn</string>
+    <string name="dejavu_settings_tabs_import_export">Mewnforio ac allforio tabiau</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Symud gweithleoedd, ffolderi a thabiau i Sidebery ac oddi wrtho</string>
+    <string name="dejavu_sidebery_hint">Mae Sidebery yn rheolwr tabiau ar gyfer Firefox ar gyfrifiaduron. Yma, mae ei baneli yn weithleoedd, ei grwpiau tabiau yn ffolderi a’i dabiau wedi’u pinio yn hanfodion.</string>
+    <string name="dejavu_sidebery_export">Allforio i Sidebery</string>
+    <string name="dejavu_sidebery_import">Mewnforio o Sidebery</string>
+    <string name="dejavu_sidebery_steps">Yn «Snapshots viewer» Sidebery, mae «Import snapshot» yn darllen y ffeil o Dejavu ac mae «Open all windows» yn agor ei dabiau. I ddod â thabiau yma, dewiswch giplun yno, yna «Export snapshot» a «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Gweithleoedd newydd</string>
+    <string name="dejavu_sidebery_essentials">Hanfodion</string>
+    <string name="dejavu_sidebery_new_containers">Cynwysyddion newydd</string>
+    <string name="dejavu_sidebery_left_out">Wedi’u hepgor</string>
+    <string name="dejavu_sidebery_left_out_note">Tudalennau na all ffôn eu hagor, fel ffeiliau lleol, a thabiau ffenestri preifat</string>
+    <string name="dejavu_sidebery_nothing_new">Does dim byd newydd yn y ffeil hon.</string>
+    <string name="dejavu_sidebery_import_button">Mewnforio</string>
+    <string name="dejavu_sidebery_imported">Wedi’u mewnforio o Sidebery</string>
+    <string name="dejavu_sidebery_exported">Wedi’i gadw ar gyfer Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Methu cadw’r ffeil. Rhowch gynnig arall arni.</string>
+    <string name="dejavu_sidebery_bad_file">Nid yw’r ffeil hon yn giplun nac yn gopi wrth gefn o Sidebery.</string>
 </resources>

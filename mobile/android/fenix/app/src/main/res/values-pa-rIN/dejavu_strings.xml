@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ਮੁੜ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ ਇਹ ਫਿਰ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ</string>
     <string name="dejavu_preference_mouse_support">ਮਾਊਸ ਸਹਾਇਤਾ</string>
     <string name="dejavu_preference_mouse_support_summary">ਵਿਚਕਾਰਲੇ ਬਟਨ ਨਾਲ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਲਿੰਕ ਪਿਛੋਕੜ ਵਾਲੀ ਟੈਬ ਵਿੱਚ ਖੁੱਲ੍ਹਦਾ ਹੈ, ਅਤੇ ਲਿੰਕ ਉੱਤੇ ਪੁਆਇੰਟਰ ਰੱਖਣ ਨਾਲ ਉਸਦਾ ਪਤਾ ਦਿਖਦਾ ਹੈ। ਟੈਬ ਉੱਤੇ ਵਿਚਕਾਰਲੇ ਬਟਨ ਨਾਲ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਉਹ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ।</string>
+    <string name="dejavu_no_closed_tabs">ਕੋਈ ਵੀ ਤਾਜ਼ਾ ਬੰਦ ਕੀਤੀਆਂ ਟੈਬਾਂ ਨਹੀਂ ਹਨ</string>
+    <string name="dejavu_tab_page_number">ਇਸ ਟੈਬ ਵਿੱਚ ਸਫ਼ਾ %1$d</string>
+    <string name="dejavu_tab_pages">ਇਸ ਟੈਬ ਵਿਚਲੇ ਸਫ਼ੇ</string>
+    <string name="dejavu_settings_tabs_import_export">ਟੈਬਾਂ ਇੰਪੋਰਟ ਅਤੇ ਐਕਸਪੋਰਟ ਕਰੋ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ਵਰਕਸਪੇਸਾਂ, ਫੋਲਡਰਾਂ ਅਤੇ ਟੈਬਾਂ ਨੂੰ Sidebery ਵਿੱਚ ਅਤੇ Sidebery ਤੋਂ ਲਿਜਾਓ</string>
+    <string name="dejavu_sidebery_hint">Sidebery ਕੰਪਿਊਟਰਾਂ ਉੱਤੇ Firefox ਲਈ ਟੈਬ ਮੈਨੇਜਰ ਹੈ। ਇਸਦੇ ਪੈਨਲ ਇੱਥੇ ਵਰਕਸਪੇਸ ਹਨ, ਇਸਦੇ ਟੈਬ ਗਰੁੱਪ ਫੋਲਡਰ ਹਨ ਅਤੇ ਇਸਦੀਆਂ ਪਿੰਨ ਕੀਤੀਆਂ ਟੈਬਾਂ ਜ਼ਰੂਰੀ ਹਨ।</string>
+    <string name="dejavu_sidebery_export">Sidebery ਵਿੱਚ ਐਕਸਪੋਰਟ ਕਰੋ</string>
+    <string name="dejavu_sidebery_import">Sidebery ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ</string>
+    <string name="dejavu_sidebery_steps">Sidebery ਦੇ «Snapshots viewer» ਵਿੱਚ «Import snapshot» Dejavu ਦੀ ਫ਼ਾਇਲ ਪੜ੍ਹਦਾ ਹੈ ਅਤੇ «Open all windows» ਉਸਦੀਆਂ ਟੈਬਾਂ ਖੋਲ੍ਹਦਾ ਹੈ। ਟੈਬਾਂ ਇੱਥੇ ਲਿਆਉਣ ਲਈ ਉੱਥੇ ਇੱਕ ਸਨੈਪਸ਼ਾਟ ਚੁਣੋ, ਫਿਰ «Export snapshot» ਅਤੇ «Save as JSON»।</string>
+    <string name="dejavu_sidebery_new_workspaces">ਨਵੇਂ ਵਰਕਸਪੇਸ</string>
+    <string name="dejavu_sidebery_essentials">ਜ਼ਰੂਰੀ</string>
+    <string name="dejavu_sidebery_new_containers">ਨਵੇਂ ਕੰਟੇਨਰ</string>
+    <string name="dejavu_sidebery_left_out">ਛੱਡੀਆਂ ਗਈਆਂ</string>
+    <string name="dejavu_sidebery_left_out_note">ਉਹ ਸਫ਼ੇ ਜੋ ਫ਼ੋਨ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦਾ, ਜਿਵੇਂ ਲੋਕਲ ਫ਼ਾਇਲਾਂ, ਅਤੇ ਪ੍ਰਾਈਵੇਟ ਵਿੰਡੋਆਂ ਦੀਆਂ ਟੈਬਾਂ</string>
+    <string name="dejavu_sidebery_nothing_new">ਇਸ ਫ਼ਾਇਲ ਵਿੱਚ ਕੁਝ ਨਵਾਂ ਨਹੀਂ ਹੈ।</string>
+    <string name="dejavu_sidebery_import_button">ਇੰਪੋਰਟ ਕਰੋ</string>
+    <string name="dejavu_sidebery_imported">Sidebery ਤੋਂ ਇੰਪੋਰਟ ਕੀਤਾ</string>
+    <string name="dejavu_sidebery_exported">Sidebery ਲਈ ਸੰਭਾਲਿਆ</string>
+    <string name="dejavu_sidebery_export_failed">ਫ਼ਾਇਲ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="dejavu_sidebery_bad_file">ਇਹ ਫ਼ਾਇਲ Sidebery ਦਾ ਸਨੈਪਸ਼ਾਟ ਜਾਂ ਬੈਕਅੱਪ ਨਹੀਂ ਹੈ।</string>
 </resources>

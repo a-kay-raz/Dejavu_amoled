@@ -562,4 +562,24 @@
     <string name="dejavu_remote_debugging_summary">Wyłącza się znowu po ponownym uruchomieniu Dejavu</string>
     <string name="dejavu_preference_mouse_support">Obsługa myszy</string>
     <string name="dejavu_preference_mouse_support_summary">Kliknięcie środkowym przyciskiem otwiera odnośnik w karcie w tle, a najechanie na odnośnik wyświetla jego adres. Kliknięcie środkowym przyciskiem karty zamyka ją.</string>
+    <string name="dejavu_no_closed_tabs">Nie ma ostatnio zamkniętych kart</string>
+    <string name="dejavu_tab_page_number">Strona %1$d w tej karcie</string>
+    <string name="dejavu_tab_pages">Strony w tej karcie</string>
+    <string name="dejavu_settings_tabs_import_export">Import i eksport kart</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Przenoś obszary robocze, foldery i karty do i z Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery to menedżer kart dla Firefoksa na komputery. Jego panele są tutaj obszarami roboczymi, grupy kart folderami, a przypięte karty ulubionymi.</string>
+    <string name="dejavu_sidebery_export">Eksportuj do Sidebery</string>
+    <string name="dejavu_sidebery_import">Importuj z Sidebery</string>
+    <string name="dejavu_sidebery_steps">W „Przeglądarce migawek” Sidebery przycisk „Importuj migawkę” wczytuje plik z Dejavu, a „Otwórz wszystkie okna” otwiera jego karty. Aby przenieść tu karty, wybierz tam migawkę, a potem „Eksportuj migawkę” i „Zapisz jako JSON”.</string>
+    <string name="dejavu_sidebery_new_workspaces">Nowe obszary robocze</string>
+    <string name="dejavu_sidebery_essentials">Ulubione</string>
+    <string name="dejavu_sidebery_new_containers">Nowe kontenery</string>
+    <string name="dejavu_sidebery_left_out">Pominięte</string>
+    <string name="dejavu_sidebery_left_out_note">Strony, których telefon nie może otworzyć, np. pliki lokalne, oraz karty z okien prywatnych</string>
+    <string name="dejavu_sidebery_nothing_new">W tym pliku nie ma nic nowego.</string>
+    <string name="dejavu_sidebery_import_button">Importuj</string>
+    <string name="dejavu_sidebery_imported">Zaimportowano z Sidebery</string>
+    <string name="dejavu_sidebery_exported">Zapisano dla Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Nie udało się zapisać pliku. Spróbuj ponownie.</string>
+    <string name="dejavu_sidebery_bad_file">Ten plik nie jest migawką ani kopią zapasową Sidebery.</string>
 </resources>

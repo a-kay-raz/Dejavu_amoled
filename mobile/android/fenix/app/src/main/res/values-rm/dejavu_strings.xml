@@ -546,4 +546,24 @@
     <string name="dejavu_remote_debugging_summary">Vegn deactivà puspè cura che Dejavu vegn reavià</string>
     <string name="dejavu_preference_mouse_support">Sustegn da la mieur</string>
     <string name="dejavu_preference_mouse_support_summary">In clic cun il buttun dal mez avra ina colliaziun en in tab en il fund, e passar sur ina colliaziun mussa sia adressa. In clic cun il buttun dal mez sin in tab al serra.</string>
+    <string name="dejavu_no_closed_tabs">Nagins tabs serrads dacurt</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d en quest tab</string>
+    <string name="dejavu_tab_pages">Paginas en quest tab</string>
+    <string name="dejavu_settings_tabs_import_export">Importar ed exportar tabs</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Spustar spazis da lavur, dossiers e tabs a Sidebery e da Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery è in administratur da tabs per Firefox sin computers. Ses panels èn qua spazis da lavur, ses gruppas da tabs èn dossiers e ses tabs fixads èn essenzials.</string>
+    <string name="dejavu_sidebery_export">Exportar a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar da Sidebery</string>
+    <string name="dejavu_sidebery_steps">En il «Snapshots viewer» da Sidebery legia «Import snapshot» la datoteca da Dejavu ed «Open all windows» avra ses tabs. Per purtar tabs qua, tscherna là in maletg instantan, lura «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Novs spazis da lavur</string>
+    <string name="dejavu_sidebery_essentials">Essenzials</string>
+    <string name="dejavu_sidebery_new_containers">Novs containers</string>
+    <string name="dejavu_sidebery_left_out">Laschads davent</string>
+    <string name="dejavu_sidebery_left_out_note">Paginas ch’in telefon na po betg avrir, sco datotecas localas, e tabs da fanestras privatas</string>
+    <string name="dejavu_sidebery_nothing_new">I na dat nagut nov en questa datoteca.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importà da Sidebery</string>
+    <string name="dejavu_sidebery_exported">Memorisà per Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impussibel da memorisar la datoteca. Emprova anc ina giada.</string>
+    <string name="dejavu_sidebery_bad_file">Questa datoteca n’è nagin maletg instantan e nagina copia da segirezza da Sidebery.</string>
 </resources>
