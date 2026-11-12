@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — сіздің негізгі браузеріңіз.</string>
     <string name="dejavu_welcome_sync_title">Жұмыс кеңістіктеріңіз әр құрылғыда</string>
     <string name="dejavu_welcome_sync_text">Жұмыс кеңістіктерін, бекітілген беттерді және негізгілерді Zen-мен, ал беттерді Firefox-пен синхрондау үшін Mozilla есептік жазбасымен кіріңіз.</string>
-    <string name="dejavu_settings_matrix">Matrix-те сөйлесу</string>
-    <string name="dejavu_settings_matrix_summary">Сұрақ қойыңыз, мүмкіндік ұсыныңыз немесе қате туралы хабарлаңыз</string>
+    <string name="dejavu_settings_email">Эл. пошта</string>
+    <string name="dejavu_settings_email_summary">Сұрақ қойыңыз, мүмкіндік ұсыныңыз немесе қате туралы хабарлаңыз</string>
     <string name="dejavu_menu_clear_data">Деректерді тазалау</string>
     <string name="dejavu_menu_clear_data_and_quit">Деректерді тазалап, жұмысты аяқтау</string>
     <string name="dejavu_clear_data_button">«Деректерді тазалау» батырмасы</string>

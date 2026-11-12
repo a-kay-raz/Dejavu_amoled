@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Default browser mo na ang Dejavu.</string>
     <string name="dejavu_welcome_sync_title">Ang iyong mga workspace sa bawat device</string>
     <string name="dejavu_welcome_sync_text">Mag-sign in gamit ang Mozilla account para i-sync ang mga workspace, naka-pin na tab at Mahahalaga sa Zen, o mga tab sa Firefox.</string>
-    <string name="dejavu_settings_matrix">Makipag-chat sa Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Magtanong, magmungkahi ng feature, o mag-ulat ng bug</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Magtanong, magmungkahi ng feature, o mag-ulat ng bug</string>
     <string name="dejavu_menu_clear_data">Linisin ang data</string>
     <string name="dejavu_menu_clear_data_and_quit">Linisin ang data at isara</string>
     <string name="dejavu_clear_data_button">Button na “Linisin ang data”</string>

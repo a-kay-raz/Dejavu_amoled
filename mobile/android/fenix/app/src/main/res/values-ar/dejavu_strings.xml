@@ -548,8 +548,8 @@
     <string name="dejavu_welcome_default_done">أصبح Dejavu متصفحك المبدئي.</string>
     <string name="dejavu_welcome_sync_title">مساحات عملك على كل أجهزتك</string>
     <string name="dejavu_welcome_sync_text">سجّل الدخول بحساب Mozilla لمزامنة مساحات العمل والتبويبات المثبتة والأساسيات مع Zen، أو التبويبات مع Firefox.</string>
-    <string name="dejavu_settings_matrix">دردش على Matrix</string>
-    <string name="dejavu_settings_matrix_summary">اطرح سؤالًا، أو اقترح ميزة، أو أبلغ عن خطأ</string>
+    <string name="dejavu_settings_email">البريد الإلكتروني</string>
+    <string name="dejavu_settings_email_summary">اطرح سؤالًا، أو اقترح ميزة، أو أبلغ عن خطأ</string>
     <string name="dejavu_menu_clear_data">مسح البيانات</string>
     <string name="dejavu_menu_clear_data_and_quit">مسح البيانات والخروج</string>
     <string name="dejavu_clear_data_button">زر مسح البيانات</string>

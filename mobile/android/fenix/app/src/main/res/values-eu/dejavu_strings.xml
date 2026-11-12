@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu da zure nabigatzaile lehenetsia.</string>
     <string name="dejavu_welcome_sync_title">Zure laneremuak gailu guztietan</string>
     <string name="dejavu_welcome_sync_text">Hasi saioa Mozilla kontu batekin laneremuak, finkatutako fitxak eta funtsezkoak Zenekin sinkronizatzeko, edo fitxak Firefoxekin.</string>
-    <string name="dejavu_settings_matrix">Txateatu Matrixen</string>
-    <string name="dejavu_settings_matrix_summary">Egin galdera bat, proposatu eginbide bat edo jakinarazi akats bat</string>
+    <string name="dejavu_settings_email">Posta elektronikoa</string>
+    <string name="dejavu_settings_email_summary">Egin galdera bat, proposatu eginbide bat edo jakinarazi akats bat</string>
     <string name="dejavu_menu_clear_data">Garbitu datuak</string>
     <string name="dejavu_menu_clear_data_and_quit">Garbitu datuak eta irten</string>
     <string name="dejavu_clear_data_button">«Garbitu datuak» botoia</string>

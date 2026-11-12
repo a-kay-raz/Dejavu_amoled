@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu е вашият браузър по подразбиране.</string>
     <string name="dejavu_welcome_sync_title">Работните ви пространства на всяко устройство</string>
     <string name="dejavu_welcome_sync_text">Влезте с профил в Mozilla, за да синхронизирате работни пространства, закачени раздели и Любими със Zen или раздели с Firefox.</string>
-    <string name="dejavu_settings_matrix">Чат в Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Задайте въпрос, предложете функция или съобщете за грешка</string>
+    <string name="dejavu_settings_email">Имейл</string>
+    <string name="dejavu_settings_email_summary">Задайте въпрос, предложете функция или съобщете за грешка</string>
     <string name="dejavu_menu_clear_data">Изчистване на данни</string>
     <string name="dejavu_menu_clear_data_and_quit">Изчистване на данни и изход</string>
     <string name="dejavu_clear_data_button">Бутон „Изчистване на данни“</string>

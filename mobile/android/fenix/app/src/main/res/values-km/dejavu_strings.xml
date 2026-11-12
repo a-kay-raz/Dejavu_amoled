@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu គឺជាកម្មវិធីរុករកលំនាំដើមរបស់អ្នក។</string>
     <string name="dejavu_welcome_sync_title">ចន្លោះការងាររបស់អ្នកនៅលើគ្រប់ឧបករណ៍</string>
     <string name="dejavu_welcome_sync_text">ចូលគណនី Mozilla ដើម្បីធ្វើសមកាលកម្មចន្លោះការងារ ផ្ទាំងបានខ្ទាស់ និងសំខាន់ៗជាមួយ Zen ឬផ្ទាំងជាមួយ Firefox។</string>
-    <string name="dejavu_settings_matrix">ជជែកនៅលើ Matrix</string>
-    <string name="dejavu_settings_matrix_summary">សួរសំណួរ ស្នើមុខងារ ឬរាយការណ៍កំហុស</string>
+    <string name="dejavu_settings_email">អ៊ីមែល</string>
+    <string name="dejavu_settings_email_summary">សួរសំណួរ ស្នើមុខងារ ឬរាយការណ៍កំហុស</string>
     <string name="dejavu_menu_clear_data">សម្អាតទិន្នន័យ</string>
     <string name="dejavu_menu_clear_data_and_quit">សម្អាតទិន្នន័យ និងចេញ</string>
     <string name="dejavu_clear_data_button">ប៊ូតុងសម្អាតទិន្នន័យ</string>

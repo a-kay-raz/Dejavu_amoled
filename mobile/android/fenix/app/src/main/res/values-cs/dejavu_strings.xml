@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu je váš výchozí prohlížeč.</string>
     <string name="dejavu_welcome_sync_title">Vaše pracovní prostory na všech zařízeních</string>
     <string name="dejavu_welcome_sync_text">Přihlaste se k účtu Mozilla a synchronizujte pracovní prostory, připnuté panely a Oblíbené se Zenem, nebo panely s Firefoxem.</string>
-    <string name="dejavu_settings_matrix">Chat v síti Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Položte otázku, navrhněte funkci nebo nahlaste chybu</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Položte otázku, navrhněte funkci nebo nahlaste chybu</string>
     <string name="dejavu_menu_clear_data">Vymazat data</string>
     <string name="dejavu_menu_clear_data_and_quit">Vymazat data a ukončit</string>
     <string name="dejavu_clear_data_button">Tlačítko „Vymazat data“</string>

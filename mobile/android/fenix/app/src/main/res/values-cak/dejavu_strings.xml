@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Wakami Dejavu ri nab\'ey awokik\'amaya\'l.</string>
     <string name="dejavu_welcome_sync_title">Ri taq asamajib\'äl pa ronojel taq awokisaxel</string>
     <string name="dejavu_welcome_sync_text">Tatok pa jun Rukwenta Mozilla richin najunamirisaj taq samajib\'äl, ximon taq ruwi\' chuqa\' taq rajawaxel rik\'in Zen, o taq ruwi\' rik\'in Firefox.</string>
-    <string name="dejavu_settings_matrix">Katzijon pa Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Tab\'ana\' jun k\'utuj, tachilab\'ej jun samaj o taya\' rutzijol jun sachoj</string>
+    <string name="dejavu_settings_email">Taqoya\'l</string>
+    <string name="dejavu_settings_email_summary">Tab\'ana\' jun k\'utuj, tachilab\'ej jun samaj o taya\' rutzijol jun sachoj</string>
     <string name="dejavu_menu_clear_data">Keyuj taq tzij</string>
     <string name="dejavu_menu_clear_data_and_quit">Keyuj taq tzij chuqa\' tel</string>
     <string name="dejavu_clear_data_button">Rupitz\'b\'al “Keyuj taq tzij”</string>

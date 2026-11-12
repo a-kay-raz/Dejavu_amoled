@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — сезнең төп браузерыгыз.</string>
     <string name="dejavu_welcome_sync_title">Эш өлкәләрегез һәр җиһазда</string>
     <string name="dejavu_welcome_sync_text">Эш өлкәләрен, беркетелгән табларны һәм төп сайтларны Zen белән, яки табларны Firefox белән синхронлаштыру өчен Mozilla хисап язмасы белән керегез.</string>
-    <string name="dejavu_settings_matrix">Matrix аша сөйләшегез</string>
-    <string name="dejavu_settings_matrix_summary">Сорау бирегез, функция тәкъдим итегез яки хата турында хәбәр итегез</string>
+    <string name="dejavu_settings_email">Эл. почта</string>
+    <string name="dejavu_settings_email_summary">Сорау бирегез, функция тәкъдим итегез яки хата турында хәбәр итегез</string>
     <string name="dejavu_menu_clear_data">Мәгълүматларны чистарту</string>
     <string name="dejavu_menu_clear_data_and_quit">Мәгълүматларны чистарту һәм чыгу</string>
     <string name="dejavu_clear_data_button">«Мәгълүматларны чистарту» төймәсе</string>

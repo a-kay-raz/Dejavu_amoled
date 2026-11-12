@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu es tu navegador predeterminado.</string>
     <string name="dejavu_welcome_sync_title">Tus espacios de trabajo en todos tus dispositivos</string>
     <string name="dejavu_welcome_sync_text">Inicia sesión con una cuenta de Mozilla para sincronizar espacios de trabajo, pestañas fijadas y esenciales con Zen, o pestañas con Firefox.</string>
-    <string name="dejavu_settings_matrix">Chatea en Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Haz una pregunta, sugiere una función o reporta un error</string>
+    <string name="dejavu_settings_email">Correo electrónico</string>
+    <string name="dejavu_settings_email_summary">Haz una pregunta, sugiere una función o reporta un error</string>
     <string name="dejavu_menu_clear_data">Borrar datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Borrar datos y salir</string>
     <string name="dejavu_clear_data_button">Botón “Borrar datos”</string>

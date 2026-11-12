@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu geroka te ya sereke ye.</string>
     <string name="dejavu_welcome_sync_title">Qadên te li ser her amûrê</string>
     <string name="dejavu_welcome_sync_text">Bi hesabekî Mozilla têkeve da ku qad, hilpekînên sabît û malperên girîng bi Zen re, an jî hilpekînan bi Firefox re hevdem bikî.</string>
-    <string name="dejavu_settings_matrix">Li ser Matrixê sohbet bike</string>
-    <string name="dejavu_settings_matrix_summary">Pirsekê bipirse, taybetmendiyekê pêşniyar bike an çewtiyekê ragihîne</string>
+    <string name="dejavu_settings_email">Emaîl</string>
+    <string name="dejavu_settings_email_summary">Pirsekê bipirse, taybetmendiyekê pêşniyar bike an çewtiyekê ragihîne</string>
     <string name="dejavu_menu_clear_data">Daneyan paqij bike</string>
     <string name="dejavu_menu_clear_data_and_quit">Daneyan paqij bike û derkeve</string>
     <string name="dejavu_clear_data_button">Bişkoka «Daneyan paqij bike»</string>

@@ -540,8 +540,8 @@
     <string name="dejavu_welcome_default_done">Is é Dejavu do bhrabhsálaí réamhshocraithe.</string>
     <string name="dejavu_welcome_sync_title">Do spásanna oibre ar gach gléas</string>
     <string name="dejavu_welcome_sync_text">Sínigh isteach le cuntas Mozilla chun spásanna oibre, cluaisíní greamaithe agus riachtanais a shioncronú le Zen, nó cluaisíní le Firefox.</string>
-    <string name="dejavu_settings_matrix">Comhrá ar Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Cuir ceist, mol gné nó tuairiscigh fabht</string>
+    <string name="dejavu_settings_email">Ríomhphost</string>
+    <string name="dejavu_settings_email_summary">Cuir ceist, mol gné nó tuairiscigh fabht</string>
     <string name="dejavu_menu_clear_data">Glan sonraí</string>
     <string name="dejavu_menu_clear_data_and_quit">Glan sonraí agus scoir</string>
     <string name="dejavu_clear_data_button">Cnaipe “Glan sonraí”</string>

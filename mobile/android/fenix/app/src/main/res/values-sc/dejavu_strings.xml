@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu est su navigadore predefinidu tuo.</string>
     <string name="dejavu_welcome_sync_title">Is ispàtzios de traballu tuos in dònnia dispositivu</string>
     <string name="dejavu_welcome_sync_text">Intra cun unu contu Mozilla pro sincronizare ispàtzios de traballu, ischedas fissadas e essentziales cun Zen, o ischedas cun Firefox.</string>
-    <string name="dejavu_settings_matrix">Chistiona in Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Faghe una pregunta, cussìgia una funtzione o sinnala unu errore</string>
+    <string name="dejavu_settings_email">Posta eletrònica</string>
+    <string name="dejavu_settings_email_summary">Faghe una pregunta, cussìgia una funtzione o sinnala unu errore</string>
     <string name="dejavu_menu_clear_data">Illìmpia is datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Illìmpia is datos e essi</string>
     <string name="dejavu_clear_data_button">Butone “Illìmpia is datos”</string>

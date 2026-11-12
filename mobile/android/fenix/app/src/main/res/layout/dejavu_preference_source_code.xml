@@ -4,7 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <!-- Dejavu: the Source code row at the top of Settings. It is laid out like the rows around it (AndroidX's
-     preference_material), but as it has no summary, an unseen copy of the Chat on Matrix row's texts makes it as tall
+     preference_material), but as it has no summary, an unseen copy of the Email row's texts makes it as tall
      as that row under it, at any width, text size and language, and its title sits in the middle. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -53,14 +53,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:text="@string/dejavu_settings_matrix"
+                android:text="@string/dejavu_settings_email"
                 android:textAppearance="?android:attr/textAppearanceListItem" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="10"
-                android:text="@string/dejavu_settings_matrix_summary"
+                android:text="@string/dejavu_settings_email_summary"
                 android:textAppearance="?android:attr/textAppearanceListItemSecondary" />
         </LinearLayout>
 

@@ -549,8 +549,8 @@
     <string name="dejavu_welcome_default_done">Dejavu এখন আপনার ডিফল্ট ব্রাউজার।</string>
     <string name="dejavu_welcome_sync_title">প্রতিটি ডিভাইসে আপনার ওয়ার্কস্পেস</string>
     <string name="dejavu_welcome_sync_text">Mozilla অ্যাকাউন্ট দিয়ে সাইন ইন করে Zen ব্রাউজারের সাথে ওয়ার্কস্পেস, পিন করা ট্যাব ও এসেনশিয়াল, অথবা Firefox ব্রাউজারের সাথে ট্যাব সিঙ্ক করুন।</string>
-    <string name="dejavu_settings_matrix">Matrix-এ চ্যাট করুন</string>
-    <string name="dejavu_settings_matrix_summary">প্রশ্ন করুন, ফিচারের পরামর্শ দিন বা বাগ রিপোর্ট করুন</string>
+    <string name="dejavu_settings_email">ইমেইল</string>
+    <string name="dejavu_settings_email_summary">প্রশ্ন করুন, ফিচারের পরামর্শ দিন বা বাগ রিপোর্ট করুন</string>
     <string name="dejavu_menu_clear_data">ডেটা সাফ করুন</string>
     <string name="dejavu_menu_clear_data_and_quit">ডেটা সাফ করে প্রস্থান করুন</string>
     <string name="dejavu_clear_data_button">“ডেটা সাফ করুন” বোতাম</string>

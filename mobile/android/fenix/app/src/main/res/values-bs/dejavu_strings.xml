@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu je vaš podrazumijevani preglednik.</string>
     <string name="dejavu_welcome_sync_title">Vaši radni prostori na svakom uređaju</string>
     <string name="dejavu_welcome_sync_text">Prijavite se Mozilla računom da sinhronizujete radne prostore, prikvačene tabove i Favorite sa Zenom ili tabove sa Firefoxom.</string>
-    <string name="dejavu_settings_matrix">Razgovarajte na Matrixu</string>
-    <string name="dejavu_settings_matrix_summary">Postavite pitanje, predložite funkciju ili prijavite grešku</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Postavite pitanje, predložite funkciju ili prijavite grešku</string>
     <string name="dejavu_menu_clear_data">Obriši podatke</string>
     <string name="dejavu_menu_clear_data_and_quit">Obriši podatke i zatvori</string>
     <string name="dejavu_clear_data_button">Dugme „Obriši podatke“</string>

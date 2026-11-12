@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Το Dejavu είναι το προεπιλεγμένο σας πρόγραμμα περιήγησης.</string>
     <string name="dejavu_welcome_sync_title">Οι χώροι εργασίας σας σε κάθε συσκευή</string>
     <string name="dejavu_welcome_sync_text">Συνδεθείτε με λογαριασμό Mozilla για να συγχρονίζετε χώρους εργασίας, καρφιτσωμένες καρτέλες και αγαπημένα με το Zen, ή καρτέλες με το Firefox.</string>
-    <string name="dejavu_settings_matrix">Συνομιλία στο Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Κάντε μια ερώτηση, προτείνετε μια λειτουργία ή αναφέρετε ένα σφάλμα</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Κάντε μια ερώτηση, προτείνετε μια λειτουργία ή αναφέρετε ένα σφάλμα</string>
     <string name="dejavu_menu_clear_data">Εκκαθάριση δεδομένων</string>
     <string name="dejavu_menu_clear_data_and_quit">Εκκαθάριση δεδομένων και έξοδος</string>
     <string name="dejavu_clear_data_button">Κουμπί «Εκκαθάριση δεδομένων»</string>

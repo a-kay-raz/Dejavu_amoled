@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu är din standardwebbläsare.</string>
     <string name="dejavu_welcome_sync_title">Dina arbetsytor på alla enheter</string>
     <string name="dejavu_welcome_sync_text">Logga in med ett Mozilla-konto för att synkronisera arbetsytor, fästa flikar och favoriter med Zen, eller flikar med Firefox.</string>
-    <string name="dejavu_settings_matrix">Chatta på Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Ställ en fråga, föreslå en funktion eller rapportera en bugg</string>
+    <string name="dejavu_settings_email">E-post</string>
+    <string name="dejavu_settings_email_summary">Ställ en fråga, föreslå en funktion eller rapportera en bugg</string>
     <string name="dejavu_menu_clear_data">Rensa data</string>
     <string name="dejavu_menu_clear_data_and_quit">Rensa data och avsluta</string>
     <string name="dejavu_clear_data_button">Knappen Rensa data</string>

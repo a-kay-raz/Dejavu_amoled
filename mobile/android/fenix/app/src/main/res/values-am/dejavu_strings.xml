@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ነባሪ አሳሽዎ ነው።</string>
     <string name="dejavu_welcome_sync_title">የስራ ቦታዎችዎ በእያንዳንዱ መሣሪያ ላይ</string>
     <string name="dejavu_welcome_sync_text">የስራ ቦታዎችን፣ የተሰኩ ትሮችን እና አስፈላጊዎችን ከ Zen ጋር፣ ወይም ትሮችን ከ Firefox ጋር ለማመሳሰል Mozilla መለያ ተጠቅመው ይግቡ።</string>
-    <string name="dejavu_settings_matrix">በMatrix ላይ ይወያዩ</string>
-    <string name="dejavu_settings_matrix_summary">ጥያቄ ይጠይቁ፣ ባህሪ ይጠቁሙ ወይም ስህተት ሪፖርት ያድርጉ</string>
+    <string name="dejavu_settings_email">ኢ-ሜይል</string>
+    <string name="dejavu_settings_email_summary">ጥያቄ ይጠይቁ፣ ባህሪ ይጠቁሙ ወይም ስህተት ሪፖርት ያድርጉ</string>
     <string name="dejavu_menu_clear_data">ውሂብ አጽዳ</string>
     <string name="dejavu_menu_clear_data_and_quit">ውሂብ አጽዳ እና አቋርጥ</string>
     <string name="dejavu_clear_data_button">«ውሂብ አጽዳ» አዝራር</string>

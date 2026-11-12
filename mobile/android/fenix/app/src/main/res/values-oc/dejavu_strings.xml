@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu es vòstre navegador per defaut.</string>
     <string name="dejavu_welcome_sync_title">Vòstres espacis de trabalh sus totes los aparelhs</string>
     <string name="dejavu_welcome_sync_text">Connectatz-vos amb un compte Mozilla per sincronizar los espacis de trabalh, los onglets fixats e los essencials amb Zen, o los onglets amb Firefox.</string>
-    <string name="dejavu_settings_matrix">Charratz sus Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pausatz una question, suggerissètz una foncionalitat o senhalatz una error</string>
+    <string name="dejavu_settings_email">Corrièl</string>
+    <string name="dejavu_settings_email_summary">Pausatz una question, suggerissètz una foncionalitat o senhalatz una error</string>
     <string name="dejavu_menu_clear_data">Escafar las donadas</string>
     <string name="dejavu_menu_clear_data_and_quit">Escafar las donadas e quitar</string>
     <string name="dejavu_clear_data_button">Boton «Escafar las donadas»</string>

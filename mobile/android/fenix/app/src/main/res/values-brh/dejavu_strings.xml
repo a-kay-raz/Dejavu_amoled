@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu نی نا اصل براؤزر ہس۔</string>
     <string name="dejavu_welcome_sync_title">نی نا ورک سپیساک ہر ڈیوائس پار</string>
     <string name="dejavu_welcome_sync_text">Zen گدا ورک سپیساک، پن ٹیباک او ضروری چیزاک، یا Firefox گدا ٹیباک سنک کننگ کن Mozilla اکاؤنٹ اٹ سائن ان کبو۔</string>
-    <string name="dejavu_settings_matrix">Matrix اٹ گپ شپ</string>
-    <string name="dejavu_settings_matrix_summary">سوال، فیچر نا تجویز یا بگ نا رپورٹ</string>
+    <string name="dejavu_settings_email">ای میل</string>
+    <string name="dejavu_settings_email_summary">سوال، فیچر نا تجویز یا بگ نا رپورٹ</string>
     <string name="dejavu_menu_clear_data">ڈیٹا صاف کبو</string>
     <string name="dejavu_menu_clear_data_and_quit">ڈیٹا صاف کبو او بند کبو</string>
     <string name="dejavu_clear_data_button">«ڈیٹا صاف کبو» بٹن</string>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu თქვენი ნაგულისხმევი ბრაუზერია.</string>
     <string name="dejavu_welcome_sync_title">თქვენი სივრცეები ყველა მოწყობილობაზე</string>
     <string name="dejavu_welcome_sync_text">შედით Mozilla-ანგარიშით, რომ სივრცეები, მიმაგრებული ჩანართები და საჭირო საიტები Zen-თან, ან ჩანართები Firefox-თან დაასინქრონოთ.</string>
-    <string name="dejavu_settings_matrix">ჩატი Matrix-ში</string>
-    <string name="dejavu_settings_matrix_summary">დასვით კითხვა, შემოგვთავაზეთ ფუნქცია ან შეგვატყობინეთ ხარვეზის შესახებ</string>
+    <string name="dejavu_settings_email">ელფოსტა</string>
+    <string name="dejavu_settings_email_summary">დასვით კითხვა, შემოგვთავაზეთ ფუნქცია ან შეგვატყობინეთ ხარვეზის შესახებ</string>
     <string name="dejavu_menu_clear_data">მონაცემების გასუფთავება</string>
     <string name="dejavu_menu_clear_data_and_quit">მონაცემების გასუფთავება და დახურვა</string>
     <string name="dejavu_clear_data_button">ღილაკი „მონაცემების გასუფთავება“</string>

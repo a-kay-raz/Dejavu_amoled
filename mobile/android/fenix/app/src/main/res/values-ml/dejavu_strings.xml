@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ആണ് നിങ്ങളുടെ സ്ഥിര ബ്രൗസർ.</string>
     <string name="dejavu_welcome_sync_title">എല്ലാ ഉപകരണങ്ങളിലും നിങ്ങളുടെ പണിയിടങ്ങൾ</string>
     <string name="dejavu_welcome_sync_text">പണിയിടങ്ങളും പിൻ ചെയ്ത ടാബുകളും പ്രധാനപ്പെട്ടവയും Zen ബ്രൗസറുമായോ ടാബുകൾ Firefox ബ്രൗസറുമായോ സിങ്ക് ചെയ്യാൻ ഒരു Mozilla അക്കൗണ്ട് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക.</string>
-    <string name="dejavu_settings_matrix">Matrix-ൽ ചാറ്റ് ചെയ്യൂ</string>
-    <string name="dejavu_settings_matrix_summary">ചോദ്യം ചോദിക്കൂ, സവിശേഷത നിർദ്ദേശിക്കൂ അല്ലെങ്കിൽ പിഴവ് അറിയിക്കൂ</string>
+    <string name="dejavu_settings_email">ഇ-തപാൽ</string>
+    <string name="dejavu_settings_email_summary">ചോദ്യം ചോദിക്കൂ, സവിശേഷത നിർദ്ദേശിക്കൂ അല്ലെങ്കിൽ പിഴവ് അറിയിക്കൂ</string>
     <string name="dejavu_menu_clear_data">ദത്ത മായ്ക്കുക</string>
     <string name="dejavu_menu_clear_data_and_quit">ദത്ത മായ്ച്ച് പുറത്തുകടക്കുക</string>
     <string name="dejavu_clear_data_button">“ദത്ത മായ്ക്കുക” ബട്ടൺ</string>

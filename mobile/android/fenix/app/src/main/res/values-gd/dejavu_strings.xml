@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">\'S e Dejavu am brabhsair bunaiteach agad.</string>
     <string name="dejavu_welcome_sync_title">Na h-àiteachan-obrach agad air gach uidheam</string>
     <string name="dejavu_welcome_sync_text">Clàraich a-steach le cunntas Mozilla gus àiteachan-obrach, tabaichean prìnichte is feumalachdan a shioncronachadh le Zen, no tabaichean le Firefox.</string>
-    <string name="dejavu_settings_matrix">Cabadaich air Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Faighnich ceist, mol gleus no dèan aithris air buga</string>
+    <string name="dejavu_settings_email">Post-d</string>
+    <string name="dejavu_settings_email_summary">Faighnich ceist, mol gleus no dèan aithris air buga</string>
     <string name="dejavu_menu_clear_data">Falamhaich an dàta</string>
     <string name="dejavu_menu_clear_data_and_quit">Falamhaich an dàta agus fàg</string>
     <string name="dejavu_clear_data_button">Am putan “Falamhaich an dàta”</string>

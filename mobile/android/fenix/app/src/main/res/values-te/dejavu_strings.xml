@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu మీ డిఫాల్ట్ బ్రౌజర్.</string>
     <string name="dejavu_welcome_sync_title">ప్రతి పరికరంలో మీ కార్యస్థలాలు</string>
     <string name="dejavu_welcome_sync_text">Mozilla ఖాతాతో సైన్ ఇన్ చేసి, కార్యస్థలాలు, పిన్ చేసిన ట్యాబులు, ముఖ్యమైనవాటిని Zen బ్రౌజర్‌తో, లేదా ట్యాబులను Firefox బ్రౌజర్‌తో సింక్ చేయండి.</string>
-    <string name="dejavu_settings_matrix">Matrixలో చాట్ చేయండి</string>
-    <string name="dejavu_settings_matrix_summary">ప్రశ్న అడగండి, సౌలభ్యాన్ని సూచించండి లేదా లోపాన్ని నివేదించండి</string>
+    <string name="dejavu_settings_email">ఈమెయిలు</string>
+    <string name="dejavu_settings_email_summary">ప్రశ్న అడగండి, సౌలభ్యాన్ని సూచించండి లేదా లోపాన్ని నివేదించండి</string>
     <string name="dejavu_menu_clear_data">డేటాను తుడిచివేయి</string>
     <string name="dejavu_menu_clear_data_and_quit">డేటాను తుడిచివేసి నిష్క్రమించు</string>
     <string name="dejavu_clear_data_button">“డేటాను తుడిచివేయి” బొత్తం</string>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu шәбраузер хадоуп.</string>
     <string name="dejavu_welcome_sync_title">Шәыҭыԥқәа аиқәыршәага цыԥхьаӡа аҟны</string>
     <string name="dejavu_welcome_sync_text">Аҭыԥқәа, ификсациатә абларҭақәа, иҵакыу сайтқәа Zen ала, ма абларҭақәа Firefox ала рсинхронизациа азы, Mozilla аккаунт ала шәыҭал.</string>
-    <string name="dejavu_settings_matrix">Matrix аҟны аицәажәара</string>
-    <string name="dejavu_settings_matrix_summary">Азҵаарақәа, ажәалагалақәа, насгьы агхақәа</string>
+    <string name="dejavu_settings_email">Ае-маил</string>
+    <string name="dejavu_settings_email_summary">Азҵаарақәа, ажәалагалақәа, насгьы агхақәа</string>
     <string name="dejavu_menu_clear_data">Адыррақәа раныхра</string>
     <string name="dejavu_menu_clear_data_and_quit">Адыррақәа раныхреи аҭыҵреи</string>
     <string name="dejavu_clear_data_button">«Адыррақәа раныхра» акнопка</string>

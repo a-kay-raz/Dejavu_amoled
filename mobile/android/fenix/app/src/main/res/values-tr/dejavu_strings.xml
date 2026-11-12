@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu varsayılan tarayıcınız.</string>
     <string name="dejavu_welcome_sync_title">Çalışma alanlarınız tüm cihazlarınızda</string>
     <string name="dejavu_welcome_sync_text">Çalışma alanlarını, sabitlenmiş sekmeleri ve temel sekmeleri Zen ile ya da sekmeleri Firefox ile eşitlemek için bir Mozilla hesabıyla giriş yapın.</string>
-    <string name="dejavu_settings_matrix">Matrix\'te sohbet edin</string>
-    <string name="dejavu_settings_matrix_summary">Soru sorun, özellik önerin veya hata bildirin</string>
+    <string name="dejavu_settings_email">E-posta</string>
+    <string name="dejavu_settings_email_summary">Soru sorun, özellik önerin veya hata bildirin</string>
     <string name="dejavu_menu_clear_data">Verileri temizle</string>
     <string name="dejavu_menu_clear_data_and_quit">Verileri temizle ve çık</string>
     <string name="dejavu_clear_data_button">Verileri temizle düğmesi</string>

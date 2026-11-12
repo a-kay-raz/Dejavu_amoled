@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu là trình duyệt mặc định của bạn.</string>
     <string name="dejavu_welcome_sync_title">Không gian làm việc của bạn trên mọi thiết bị</string>
     <string name="dejavu_welcome_sync_text">Đăng nhập bằng tài khoản Mozilla để đồng bộ hóa không gian làm việc, thẻ đã ghim và trang thiết yếu với Zen, hoặc thẻ với Firefox.</string>
-    <string name="dejavu_settings_matrix">Trò chuyện trên Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Đặt câu hỏi, đề xuất tính năng hoặc báo lỗi</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Đặt câu hỏi, đề xuất tính năng hoặc báo lỗi</string>
     <string name="dejavu_menu_clear_data">Xóa dữ liệu</string>
     <string name="dejavu_menu_clear_data_and_quit">Xóa dữ liệu và thoát</string>
     <string name="dejavu_clear_data_button">Nút “Xóa dữ liệu”</string>

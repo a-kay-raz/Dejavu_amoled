@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu உங்கள் இயல்புநிலை உலாவி.</string>
     <string name="dejavu_welcome_sync_title">எல்லாச் சாதனங்களிலும் உங்கள் பணியிடங்கள்</string>
     <string name="dejavu_welcome_sync_text">Zen உடன் பணியிடங்கள், பொருத்தப்பட்ட கீற்றுகள், முக்கியவை, அல்லது Firefox உடன் கீற்றுகளை ஒத்திசைக்க Mozilla கணக்கில் உள்நுழையவும்.</string>
-    <string name="dejavu_settings_matrix">Matrix-இல் உரையாடுங்கள்</string>
-    <string name="dejavu_settings_matrix_summary">கேள்வி கேளுங்கள், புதிய அம்சத்தைப் பரிந்துரையுங்கள் அல்லது பிழையைப் புகாரளியுங்கள்</string>
+    <string name="dejavu_settings_email">மின்னஞ்சல்</string>
+    <string name="dejavu_settings_email_summary">கேள்வி கேளுங்கள், புதிய அம்சத்தைப் பரிந்துரையுங்கள் அல்லது பிழையைப் புகாரளியுங்கள்</string>
     <string name="dejavu_menu_clear_data">தரவை அழி</string>
     <string name="dejavu_menu_clear_data_and_quit">தரவை அழித்து வெளியேறு</string>
     <string name="dejavu_clear_data_button">தரவை அழிக்கும் பொத்தான்</string>

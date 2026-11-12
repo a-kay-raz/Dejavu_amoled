@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu가 기본 브라우저입니다.</string>
     <string name="dejavu_welcome_sync_title">모든 기기에서 만나는 작업 공간</string>
     <string name="dejavu_welcome_sync_text">Mozilla 계정으로 로그인하여 작업 공간, 고정된 탭, 필수 사이트를 Zen과 동기화하거나 탭을 Firefox와 동기화하세요.</string>
-    <string name="dejavu_settings_matrix">Matrix에서 채팅</string>
-    <string name="dejavu_settings_matrix_summary">질문하거나 기능을 제안하거나 버그를 신고하세요</string>
+    <string name="dejavu_settings_email">이메일</string>
+    <string name="dejavu_settings_email_summary">질문하거나 기능을 제안하거나 버그를 신고하세요</string>
     <string name="dejavu_menu_clear_data">데이터 지우기</string>
     <string name="dejavu_menu_clear_data_and_quit">데이터 지우고 종료</string>
     <string name="dejavu_clear_data_button">“데이터 지우기” 버튼</string>

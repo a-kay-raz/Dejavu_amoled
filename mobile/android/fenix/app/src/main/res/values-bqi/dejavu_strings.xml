@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu گشت گر پؽش فرزته.</string>
     <string name="dejavu_welcome_sync_title">فضا یلت رو هر دستگاه</string>
     <string name="dejavu_welcome_sync_text">وا یه حساب Mozilla بیا تو تا فضا یل، بلگه یل سنجاق‌وابیده و سایت یل مهم ن وا Zen، یا بلگه یل ن وا Firefox همگام کنی.</string>
-    <string name="dejavu_settings_matrix">گفتگو در Matrix</string>
-    <string name="dejavu_settings_matrix_summary">یه سوال بپرس، یه ویژگی پیشنهاد بده یا یه خطا گزارش کن</string>
+    <string name="dejavu_settings_email">ایمیل</string>
+    <string name="dejavu_settings_email_summary">یه سوال بپرس، یه ویژگی پیشنهاد بده یا یه خطا گزارش کن</string>
     <string name="dejavu_menu_clear_data">پاک کردن داده یل</string>
     <string name="dejavu_menu_clear_data_and_quit">پاک کردن داده یل و در زیڌن</string>
     <string name="dejavu_clear_data_button">دکمه پاک کردن داده یل</string>

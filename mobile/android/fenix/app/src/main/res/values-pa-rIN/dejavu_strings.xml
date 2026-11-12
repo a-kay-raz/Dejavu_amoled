@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ਤੁਹਾਡਾ ਮੂਲ ਬਰਾਊਜ਼ਰ ਹੈ।</string>
     <string name="dejavu_welcome_sync_title">ਹਰ ਡਿਵਾਈਸ ‘ਤੇ ਤੁਹਾਡੀਆਂ ਵਰਕਸਪੇਸਾਂ</string>
     <string name="dejavu_welcome_sync_text">Zen ਨਾਲ ਵਰਕਸਪੇਸਾਂ, ਪਿੰਨ ਕੀਤੀਆਂ ਟੈਬਾਂ ਅਤੇ ਜ਼ਰੂਰੀ, ਜਾਂ Firefox ਨਾਲ ਟੈਬਾਂ ਸਿੰਕ ਕਰਨ ਲਈ Mozilla ਖਾਤੇ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ।</string>
-    <string name="dejavu_settings_matrix">Matrix ਉੱਤੇ ਗੱਲਬਾਤ ਕਰੋ</string>
-    <string name="dejavu_settings_matrix_summary">ਸਵਾਲ ਪੁੱਛੋ, ਫ਼ੀਚਰ ਦਾ ਸੁਝਾਅ ਦਿਓ ਜਾਂ ਬੱਗ ਦੀ ਰਿਪੋਰਟ ਕਰੋ</string>
+    <string name="dejavu_settings_email">ਈ-ਮੇਲ</string>
+    <string name="dejavu_settings_email_summary">ਸਵਾਲ ਪੁੱਛੋ, ਫ਼ੀਚਰ ਦਾ ਸੁਝਾਅ ਦਿਓ ਜਾਂ ਬੱਗ ਦੀ ਰਿਪੋਰਟ ਕਰੋ</string>
     <string name="dejavu_menu_clear_data">ਡਾਟਾ ਸਾਫ਼ ਕਰੋ</string>
     <string name="dejavu_menu_clear_data_and_quit">ਡਾਟਾ ਸਾਫ਼ ਕਰਕੇ ਬੰਦ ਕਰੋ</string>
     <string name="dejavu_clear_data_button">“ਡਾਟਾ ਸਾਫ਼ ਕਰੋ” ਬਟਨ</string>

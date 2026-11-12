@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu d iminig-ik amezwer.</string>
     <string name="dejavu_welcome_sync_title">Imukan n umahil-ik ɣef yal ibenk</string>
     <string name="dejavu_welcome_sync_text">Kcem s umiḍan Mozilla akken ad tesdukleḍ imukan n umahil, iccaren yessersen d wayen ilaqen akked Zen, neɣ iccaren akked Firefox.</string>
-    <string name="dejavu_settings_matrix">Mmeslay deg Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Seqsi asteqsi, sumer tamahilt neɣ mmel-d tuccḍa</string>
+    <string name="dejavu_settings_email">Imayl</string>
+    <string name="dejavu_settings_email_summary">Seqsi asteqsi, sumer tamahilt neɣ mmel-d tuccḍa</string>
     <string name="dejavu_menu_clear_data">Sfeḍ isefka</string>
     <string name="dejavu_menu_clear_data_and_quit">Sfeḍ isefka syen ffeɣ</string>
     <string name="dejavu_clear_data_button">Taqeffalt Sfeḍ isefka</string>

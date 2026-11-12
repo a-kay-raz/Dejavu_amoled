@@ -540,8 +540,8 @@
     <string name="dejavu_welcome_default_done">Dejavu eo ho merdeer dre ziouer.</string>
     <string name="dejavu_welcome_sync_title">Hoc’h egorioù labour war pep trevnad</string>
     <string name="dejavu_welcome_sync_text">Kevreit gant ur gont Mozilla evit goubredañ an egorioù labour, an ivinelloù spilhennet hag an traoù pouezus gant Zen, pe an ivinelloù gant Firefox.</string>
-    <string name="dejavu_settings_matrix">Kaozeal war Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Savit ur goulenn, kinnigit ur mennozh pe danevellit ur fazi</string>
+    <string name="dejavu_settings_email">Postel</string>
+    <string name="dejavu_settings_email_summary">Savit ur goulenn, kinnigit ur mennozh pe danevellit ur fazi</string>
     <string name="dejavu_menu_clear_data">Skarzhañ ar roadennoù</string>
     <string name="dejavu_menu_clear_data_and_quit">Skarzhañ ar roadennoù ha kuitaat</string>
     <string name="dejavu_clear_data_button">Afell “Skarzhañ ar roadennoù”</string>

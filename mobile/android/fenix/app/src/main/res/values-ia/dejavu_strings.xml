@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu es tu navigator predefinite.</string>
     <string name="dejavu_welcome_sync_title">Tu spatios de labor super cata apparato</string>
     <string name="dejavu_welcome_sync_text">Aperi session con un conto Mozilla pro synchronisar spatios de labor, schedas fixate e essentiales con Zen, o schedas con Firefox.</string>
-    <string name="dejavu_settings_matrix">Conversa in Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pone un question, suggere un functionalitate o reporta un error</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Pone un question, suggere un functionalitate o reporta un error</string>
     <string name="dejavu_menu_clear_data">Deler datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Deler datos e quitar</string>
     <string name="dejavu_clear_data_button">Button Deler datos</string>

@@ -12,7 +12,7 @@
   <a href="https://play.google.com/store/apps/details?id=com.byarchitect.dejavu"><img alt="Google Play" src="https://img.shields.io/badge/Google%20Play-Dejavu-F2B84B?logo=googleplay&logoColor=white"></a>
   <a href="#download"><img alt="iOS: help wanted" src="https://img.shields.io/badge/iOS-help%20wanted-5A452A?logo=apple&logoColor=white"></a>
   <a href="LICENSE"><img alt="License: MPL 2.0" src="https://img.shields.io/badge/license-MPL%202.0-5A452A"></a>
-  <a href="https://matrix.to/#/#dejavu-browser:matrix.org"><img alt="Matrix: #dejavu-browser:matrix.org" src="https://img.shields.io/badge/Matrix-%23dejavu--browser-556B4F?logo=matrix&logoColor=white"></a>
+  <a href="mailto:byarchitect@disroot.org"><img alt="Email: byarchitect@disroot.org" src="https://img.shields.io/badge/Email-byarchitect%40disroot.org-556B4F"></a>
   <a href="https://github.com/by-architect/Dejavu/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/by-architect/Dejavu?color=F2B84B"></a>
   <a href="https://buymeacoffee.com/ByArchitect"><img alt="Buy me a coffee" src="https://img.shields.io/badge/Buy%20me%20a%20coffee-F2B84B?logo=buymeacoffee&logoColor=white"></a>
 </p>
@@ -95,7 +95,7 @@ switching between Play and F-Droid or the APK means uninstalling first.
 
 **iOS:** There is no iOS app yet, and none is planned for now. Dejavu is a one-person project, and an iOS version
 needs more hands. If you are an iOS developer who would like to help, or want to sponsor it, email
-[byarchitect@disroot.org](mailto:byarchitect@disroot.org) or say hello in the [Matrix room](#community).
+[byarchitect@disroot.org](mailto:byarchitect@disroot.org).
 
 ## Features
 
@@ -173,18 +173,6 @@ last, or a private tab. Back takes you straight back to the app you came from.
 4. Each computer and phone with Firefox gets its own workspace: pinned tabs stay pinned and tab groups become folders in
    their colors. Open or close a tab there, and Firefox does the same.
 
-## Community
-
-Dejavu has a chat room on [Matrix](https://matrix.org), an open and free chat network. Come say hello, ask a question,
-share your setup or ideas, and hear about new releases first.
-
-<p>
-  <a href="https://matrix.to/#/#dejavu-browser:matrix.org"><img alt="Join the chat on Matrix: #dejavu-browser:matrix.org" src="https://img.shields.io/badge/Join%20the%20chat-%23dejavu--browser%3Amatrix.org-556B4F?style=for-the-badge&logo=matrix&logoColor=white"></a>
-</p>
-
-Open [#dejavu-browser:matrix.org](https://matrix.to/#/#dejavu-browser:matrix.org) in Element or any other Matrix app.
-For bugs and feature requests, please open an issue as explained below, so nothing gets lost in the chat.
-
 ## Report a bug or request a feature
 
 Feedback goes through [GitHub issues](https://github.com/by-architect/Dejavu/issues). When you
@@ -207,10 +195,8 @@ Pull requests are welcome too. Start the title with the kind of change, `[FIX]`,
 
 ## Contact
 
-Questions and chat go to the [Matrix room](#community).
-
-For sponsorship, designs, icon packs, themes, or anything that is not a bug report or a feature request, email
-[byarchitect@disroot.org](mailto:byarchitect@disroot.org).
+For questions, sponsorship, designs, icon packs, themes, or anything that is not a bug report or a feature request,
+email [byarchitect@disroot.org](mailto:byarchitect@disroot.org). Settings in Dejavu has an Email row that starts one.
 
 ## Contributing
 

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — asosiy brauzeringiz.</string>
     <string name="dejavu_welcome_sync_title">Ish maydonlaringiz har bir qurilmada</string>
     <string name="dejavu_welcome_sync_text">Ish maydonlari, mahkamlangan varaqlar va muhimlarni Zen bilan yoki varaqlarni Firefox bilan sinxronlashtirish uchun Mozilla hisobi bilan kiring.</string>
-    <string name="dejavu_settings_matrix">Matrix-da suhbatlashing</string>
-    <string name="dejavu_settings_matrix_summary">Savol bering, imkoniyat taklif qiling yoki xato haqida xabar bering</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Savol bering, imkoniyat taklif qiling yoki xato haqida xabar bering</string>
     <string name="dejavu_menu_clear_data">Ma\'lumotlarni tozalash</string>
     <string name="dejavu_menu_clear_data_and_quit">Ma\'lumotlarni tozalash va chiqish</string>
     <string name="dejavu_clear_data_button">“Ma\'lumotlarni tozalash” tugmasi</string>

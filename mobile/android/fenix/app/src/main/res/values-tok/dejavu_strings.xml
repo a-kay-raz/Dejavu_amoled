@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">ilo Dejavu li open e lipu ale sina.</string>
     <string name="dejavu_welcome_sync_title">kulupu poki sina lon ilo ale sina</string>
     <string name="dejavu_welcome_sync_text">o kepeken e nimi Mozilla. ni la, sina ken sama e kulupu poki e poki awen e lipu suli kepeken ilo Zen, anu e poki kepeken ilo Firefox.</string>
-    <string name="dejavu_settings_matrix">o toki lon ilo Matrix</string>
-    <string name="dejavu_settings_matrix_summary">o toki e wile sona, e wile pi ijo sin anu e pakala</string>
+    <string name="dejavu_settings_email">poki lipu</string>
+    <string name="dejavu_settings_email_summary">o toki e wile sona, e wile pi ijo sin anu e pakala</string>
     <string name="dejavu_menu_clear_data">o weka e sona</string>
     <string name="dejavu_menu_clear_data_and_quit">o weka e sona, o weka tan ilo</string>
     <string name="dejavu_clear_data_button">nena “o weka e sona”</string>

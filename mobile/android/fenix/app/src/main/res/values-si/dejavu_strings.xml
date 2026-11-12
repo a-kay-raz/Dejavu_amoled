@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ඔබේ පෙරනිමි අතිරික්සුවයි.</string>
     <string name="dejavu_welcome_sync_title">සෑම උපාංගයකම ඔබේ අවකාශ</string>
     <string name="dejavu_welcome_sync_text">අවකාශ, අමුණන ලද පටිති සහ අත්‍යවශ්‍යයන් Zen සමඟ, නැතහොත් පටිති Firefox සමඟ සමමුහුර්ත කිරීමට Mozilla ගිණුමකින් පිවිසෙන්න.</string>
-    <string name="dejavu_settings_matrix">Matrix හි කතාබස් කරන්න</string>
-    <string name="dejavu_settings_matrix_summary">ප්‍රශ්නයක් අසන්න, විශේෂාංගයක් යෝජනා කරන්න හෝ දෝෂයක් වාර්තා කරන්න</string>
+    <string name="dejavu_settings_email">වි-තැපෑල</string>
+    <string name="dejavu_settings_email_summary">ප්‍රශ්නයක් අසන්න, විශේෂාංගයක් යෝජනා කරන්න හෝ දෝෂයක් වාර්තා කරන්න</string>
     <string name="dejavu_menu_clear_data">දත්ත හිස් කරන්න</string>
     <string name="dejavu_menu_clear_data_and_quit">දත්ත හිස් කර ඉවත් වන්න</string>
     <string name="dejavu_clear_data_button">“දත්ත හිස් කරන්න” බොත්තම</string>

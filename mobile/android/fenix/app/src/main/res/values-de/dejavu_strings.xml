@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ist dein Standardbrowser.</string>
     <string name="dejavu_welcome_sync_title">Deine Arbeitsbereiche auf jedem Gerät</string>
     <string name="dejavu_welcome_sync_text">Melde dich mit einem Mozilla-Konto an, um Arbeitsbereiche, angeheftete Tabs und Favoriten mit Zen oder Tabs mit Firefox zu synchronisieren.</string>
-    <string name="dejavu_settings_matrix">Auf Matrix chatten</string>
-    <string name="dejavu_settings_matrix_summary">Stell eine Frage, schlag eine Funktion vor oder melde einen Fehler</string>
+    <string name="dejavu_settings_email">E-Mail</string>
+    <string name="dejavu_settings_email_summary">Stell eine Frage, schlag eine Funktion vor oder melde einen Fehler</string>
     <string name="dejavu_menu_clear_data">Daten löschen</string>
     <string name="dejavu_menu_clear_data_and_quit">Daten löschen und beenden</string>
     <string name="dejavu_clear_data_button">Schaltfläche „Daten löschen“</string>

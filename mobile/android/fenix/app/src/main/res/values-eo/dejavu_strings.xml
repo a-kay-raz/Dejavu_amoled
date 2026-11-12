@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu estas via norma retumilo.</string>
     <string name="dejavu_welcome_sync_title">Viaj laborspacoj sur ĉiu aparato</string>
     <string name="dejavu_welcome_sync_text">Ensalutu per Mozilla-konto por sinkronigi laborspacojn, pinglitajn langetojn kaj esencaĵojn kun Zen, aŭ langetojn kun Firefox.</string>
-    <string name="dejavu_settings_matrix">Babilu en Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Faru demandon, proponu funkcion aŭ raportu eraron</string>
+    <string name="dejavu_settings_email">Retpoŝto</string>
+    <string name="dejavu_settings_email_summary">Faru demandon, proponu funkcion aŭ raportu eraron</string>
     <string name="dejavu_menu_clear_data">Forviŝi datumojn</string>
     <string name="dejavu_menu_clear_data_and_quit">Forviŝi datumojn kaj fini</string>
     <string name="dejavu_clear_data_button">Butono “Forviŝi datumojn”</string>

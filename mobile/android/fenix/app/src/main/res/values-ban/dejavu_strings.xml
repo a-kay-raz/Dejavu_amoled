@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu suba dadi peramban bawaan ragane.</string>
     <string name="dejavu_welcome_sync_title">Genah ragane di makejang piranti</string>
     <string name="dejavu_welcome_sync_text">Sign in nganggon akun Mozilla anggon nyinkronang genah, tab kasemat, lan Penting ajak Zen, wiadin tab ajak Firefox.</string>
-    <string name="dejavu_settings_matrix">Ngorta ring Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Metakon, usulang fitur, utawi laporang bug</string>
+    <string name="dejavu_settings_email">Surel</string>
+    <string name="dejavu_settings_email_summary">Metakon, usulang fitur, utawi laporang bug</string>
     <string name="dejavu_menu_clear_data">Bersihang data</string>
     <string name="dejavu_menu_clear_data_and_quit">Bersihang data tur medal</string>
     <string name="dejavu_clear_data_button">Tombol “Bersihang data”</string>

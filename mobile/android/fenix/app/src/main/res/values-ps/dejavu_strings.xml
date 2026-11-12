@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ستاسو اصلي براوزر دی.</string>
     <string name="dejavu_welcome_sync_title">ستاسو ساحې په هره وسیله کې</string>
     <string name="dejavu_welcome_sync_text">د Mozilla حساب سره ننوځئ، ترڅو ساحې، پین شوي ټبونه او مهمې ویب پاڼې له Zen سره، یا ټبونه له Firefox سره همغږي کړئ.</string>
-    <string name="dejavu_settings_matrix">په Matrix کې خبرې وکړئ</string>
-    <string name="dejavu_settings_matrix_summary">پوښتنه وکړئ، د یوې ځانګړنې وړاندیز وکړئ یا د تېروتنې راپور ورکړئ</string>
+    <string name="dejavu_settings_email">برېښنالیک</string>
+    <string name="dejavu_settings_email_summary">پوښتنه وکړئ، د یوې ځانګړنې وړاندیز وکړئ یا د تېروتنې راپور ورکړئ</string>
     <string name="dejavu_menu_clear_data">معلومات پاکول</string>
     <string name="dejavu_menu_clear_data_and_quit">معلومات پاکول او وتل</string>
     <string name="dejavu_clear_data_button">د «معلومات پاکول» تڼۍ</string>

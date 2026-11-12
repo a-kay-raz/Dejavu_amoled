@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu hè u vostru navigatore predefinitu.</string>
     <string name="dejavu_welcome_sync_title">I vostri spazii di travagliu nant\'à tutti i vostri apparechji</string>
     <string name="dejavu_welcome_sync_text">Cunnettitevi cù un contu Mozilla per sincrunizà i spazii di travagliu, l\'unghjette fissate è l\'essenziali cù Zen, o l\'unghjette cù Firefox.</string>
-    <string name="dejavu_settings_matrix">Chjachjarate nant\'à Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fate una dumanda, prupunite una funzione o signalate un sbagliu</string>
+    <string name="dejavu_settings_email">Indirizu elettronicu</string>
+    <string name="dejavu_settings_email_summary">Fate una dumanda, prupunite una funzione o signalate un sbagliu</string>
     <string name="dejavu_menu_clear_data">Squassà i dati</string>
     <string name="dejavu_menu_clear_data_and_quit">Squassà i dati è esce</string>
     <string name="dejavu_clear_data_button">Buttone Squassà i dati</string>

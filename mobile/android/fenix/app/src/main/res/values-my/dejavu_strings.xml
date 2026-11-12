@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu သည် သင်၏ ပုံသေဘရောက်ဇာ ဖြစ်သည်။</string>
     <string name="dejavu_welcome_sync_title">ကိရိယာတိုင်းတွင် သင့်လုပ်ငန်းခွင်များ</string>
     <string name="dejavu_welcome_sync_text">Zen နှင့် လုပ်ငန်းခွင်များ၊ ပင်ထိုးထားသော တက်ဗ်များနှင့် မရှိမဖြစ်များကို၊ သို့မဟုတ် Firefox နှင့် တက်ဗ်များကို စင့်ခ်ချရန် Mozilla အကောင့်ဖြင့် ဝင်ရောက်ပါ။</string>
-    <string name="dejavu_settings_matrix">Matrix တွင် စကားပြောပါ</string>
-    <string name="dejavu_settings_matrix_summary">မေးခွန်းမေးပါ၊ လုပ်ဆောင်ချက်အသစ် အကြံပြုပါ သို့မဟုတ် ချို့ယွင်းချက်ကို သတင်းပို့ပါ</string>
+    <string name="dejavu_settings_email">အီးမေးလ်</string>
+    <string name="dejavu_settings_email_summary">မေးခွန်းမေးပါ၊ လုပ်ဆောင်ချက်အသစ် အကြံပြုပါ သို့မဟုတ် ချို့ယွင်းချက်ကို သတင်းပို့ပါ</string>
     <string name="dejavu_menu_clear_data">အချက်အလက် ရှင်းလင်းရန်</string>
     <string name="dejavu_menu_clear_data_and_quit">အချက်အလက် ရှင်းလင်းပြီး ထွက်ရန်</string>
     <string name="dejavu_clear_data_button">“အချက်အလက် ရှင်းလင်းရန်” ခလုတ်</string>

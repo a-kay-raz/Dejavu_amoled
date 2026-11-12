@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu este browserul tău implicit.</string>
     <string name="dejavu_welcome_sync_title">Spațiile tale de lucru pe orice dispozitiv</string>
     <string name="dejavu_welcome_sync_text">Conectează-te cu un cont Mozilla pentru a sincroniza spațiile de lucru, filele fixate și favoritele cu Zen sau filele cu Firefox.</string>
-    <string name="dejavu_settings_matrix">Discută pe Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pune o întrebare, sugerează o funcționalitate sau raportează o eroare</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Pune o întrebare, sugerează o funcționalitate sau raportează o eroare</string>
     <string name="dejavu_menu_clear_data">Șterge datele</string>
     <string name="dejavu_menu_clear_data_and_quit">Șterge datele și ieși</string>
     <string name="dejavu_clear_data_button">Butonul „Șterge datele”</string>

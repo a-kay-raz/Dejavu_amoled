@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu on oletusselaimesi.</string>
     <string name="dejavu_welcome_sync_title">Työtilasi kaikilla laitteilla</string>
     <string name="dejavu_welcome_sync_text">Kirjaudu Mozilla-tilillä ja synkronoi työtilat, kiinnitetyt välilehdet ja suosikit Zenin kanssa tai välilehdet Firefoxin kanssa.</string>
-    <string name="dejavu_settings_matrix">Keskustele Matrixissa</string>
-    <string name="dejavu_settings_matrix_summary">Esitä kysymys, ehdota ominaisuutta tai ilmoita virheestä</string>
+    <string name="dejavu_settings_email">Sähköposti</string>
+    <string name="dejavu_settings_email_summary">Esitä kysymys, ehdota ominaisuutta tai ilmoita virheestä</string>
     <string name="dejavu_menu_clear_data">Tyhjennä tiedot</string>
     <string name="dejavu_menu_clear_data_and_quit">Tyhjennä tiedot ja lopeta</string>
     <string name="dejavu_clear_data_button">Tyhjennä tiedot -painike</string>

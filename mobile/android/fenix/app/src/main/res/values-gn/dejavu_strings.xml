@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ha\'e ne kundahára ypykuéva.</string>
     <string name="dejavu_welcome_sync_title">Ne tembiapo renda opaite mba\'e\'okápe</string>
     <string name="dejavu_welcome_sync_text">Eike peteĩ kuenta Mozilla-gua reheve esincroniza hag̃ua tembiapo renda, tendayke mboguapypyre ha iporãvéva Zen ndive, térã tendayke Firefox ndive.</string>
-    <string name="dejavu_settings_matrix">Eñomongeta Matrix-pe</string>
-    <string name="dejavu_settings_matrix_summary">Eporandu, eikuave’ẽ peteĩ mba’e pyahu térã emomarandu peteĩ jejavy</string>
+    <string name="dejavu_settings_email">Ñanduti veve</string>
+    <string name="dejavu_settings_email_summary">Eporandu, eikuave’ẽ peteĩ mba’e pyahu térã emomarandu peteĩ jejavy</string>
     <string name="dejavu_menu_clear_data">Emboguete mba\'ekuaarã</string>
     <string name="dejavu_menu_clear_data_and_quit">Emboguete mba\'ekuaarã ha esẽ</string>
     <string name="dejavu_clear_data_button">Votõ Emboguete mba\'ekuaarã</string>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu është shfletuesi juaj parazgjedhje.</string>
     <string name="dejavu_welcome_sync_title">Hapësirat tuaja të punës në çdo pajisje</string>
     <string name="dejavu_welcome_sync_text">Bëni hyrjen me një llogari Mozilla, që të njëkohësoni hapësira pune, skeda të fiksuara dhe thelbësore me Zen-in, ose skeda me Firefox-in.</string>
-    <string name="dejavu_settings_matrix">Bisedoni në Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Bëni një pyetje, sugjeroni një veçori ose njoftoni një të metë</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Bëni një pyetje, sugjeroni një veçori ose njoftoni një të metë</string>
     <string name="dejavu_menu_clear_data">Pastroji të dhënat</string>
     <string name="dejavu_menu_clear_data_and_quit">Pastroji të dhënat dhe mbylle</string>
     <string name="dejavu_clear_data_button">Butoni “Pastroji të dhënat”</string>

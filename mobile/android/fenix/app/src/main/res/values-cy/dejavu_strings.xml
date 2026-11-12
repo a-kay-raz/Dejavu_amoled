@@ -548,8 +548,8 @@
     <string name="dejavu_welcome_default_done">Dejavu yw eich porwr rhagosodedig.</string>
     <string name="dejavu_welcome_sync_title">Eich gweithleoedd ar bob dyfais</string>
     <string name="dejavu_welcome_sync_text">Mewngofnodwch gyda chyfrif Mozilla i gydweddu gweithleoedd, tabiau wedi’u pinio a hanfodion â Zen, neu dabiau â Firefox.</string>
-    <string name="dejavu_settings_matrix">Sgwrsio ar Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Gofynnwch gwestiwn, awgrymwch nodwedd neu adroddwch am nam</string>
+    <string name="dejavu_settings_email">Ebost</string>
+    <string name="dejavu_settings_email_summary">Gofynnwch gwestiwn, awgrymwch nodwedd neu adroddwch am nam</string>
     <string name="dejavu_menu_clear_data">Clirio data</string>
     <string name="dejavu_menu_clear_data_and_quit">Clirio data a gadael</string>
     <string name="dejavu_clear_data_button">Botwm clirio data</string>

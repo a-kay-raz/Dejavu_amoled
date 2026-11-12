@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu مرورگر پیش‌فرض شماست.</string>
     <string name="dejavu_welcome_sync_title">فضاهای کاری شما در همهٔ دستگاه‌ها</string>
     <string name="dejavu_welcome_sync_text">با یک حساب Mozilla وارد شوید تا فضاهای کاری، زبانه‌های سنجاق‌شده و ضروریات را با Zen، یا زبانه‌ها را با Firefox همگام‌سازی کنید.</string>
-    <string name="dejavu_settings_matrix">در Matrix گفت‌وگو کنید</string>
-    <string name="dejavu_settings_matrix_summary">سؤالی بپرسید، قابلیتی پیشنهاد دهید یا اشکالی را گزارش کنید</string>
+    <string name="dejavu_settings_email">ایمیل</string>
+    <string name="dejavu_settings_email_summary">سؤالی بپرسید، قابلیتی پیشنهاد دهید یا اشکالی را گزارش کنید</string>
     <string name="dejavu_menu_clear_data">پاک کردن داده‌ها</string>
     <string name="dejavu_menu_clear_data_and_quit">پاک کردن داده‌ها و خروج</string>
     <string name="dejavu_clear_data_button">دکمهٔ «پاک کردن داده‌ها»</string>

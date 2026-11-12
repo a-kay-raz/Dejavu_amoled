@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu เป็นเบราว์เซอร์เริ่มต้นของคุณแล้ว</string>
     <string name="dejavu_welcome_sync_title">พื้นที่ทำงานของคุณบนทุกอุปกรณ์</string>
     <string name="dejavu_welcome_sync_text">ลงชื่อเข้าใช้ด้วยบัญชี Mozilla เพื่อซิงค์พื้นที่ทำงาน แท็บที่ปักหมุด และเว็บที่ใช้บ่อยกับ Zen หรือซิงค์แท็บกับ Firefox</string>
-    <string name="dejavu_settings_matrix">แชทบน Matrix</string>
-    <string name="dejavu_settings_matrix_summary">ถามคำถาม เสนอแนะคุณลักษณะ หรือรายงานข้อผิดพลาด</string>
+    <string name="dejavu_settings_email">อีเมล</string>
+    <string name="dejavu_settings_email_summary">ถามคำถาม เสนอแนะคุณลักษณะ หรือรายงานข้อผิดพลาด</string>
     <string name="dejavu_menu_clear_data">ล้างข้อมูล</string>
     <string name="dejavu_menu_clear_data_and_quit">ล้างข้อมูลและออก</string>
     <string name="dejavu_clear_data_button">ปุ่ม “ล้างข้อมูล”</string>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu كۆڭۈلدىكى توركۆرگۈڭىز بولدى.</string>
     <string name="dejavu_welcome_sync_title">ھەر بىر ئۈسكۈنىدە خىزمەت دائىرىلىرىڭىز</string>
     <string name="dejavu_welcome_sync_text">خىزمەت دائىرىلىرى، مىخلانغان بەتكۈچلەر ۋە مۇھىملارنى Zen بىلەن، ياكى بەتكۈچلەرنى Firefox بىلەن قەدەمداشلاش ئۈچۈن Mozilla ھېساباتى بىلەن كىرىڭ.</string>
-    <string name="dejavu_settings_matrix">Matrix تا پاراڭلىشىڭ</string>
-    <string name="dejavu_settings_matrix_summary">سوئال سوراڭ، ئىقتىدار تەۋسىيە قىلىڭ ياكى خاتالىق مەلۇم قىلىڭ</string>
+    <string name="dejavu_settings_email">ئېلخەت</string>
+    <string name="dejavu_settings_email_summary">سوئال سوراڭ، ئىقتىدار تەۋسىيە قىلىڭ ياكى خاتالىق مەلۇم قىلىڭ</string>
     <string name="dejavu_menu_clear_data">سانلىق مەلۇماتنى تازىلا</string>
     <string name="dejavu_menu_clear_data_and_quit">سانلىق مەلۇماتنى تازىلاپ چېكىن</string>
     <string name="dejavu_clear_data_button">«سانلىق مەلۇماتنى تازىلا» توپچىسى</string>

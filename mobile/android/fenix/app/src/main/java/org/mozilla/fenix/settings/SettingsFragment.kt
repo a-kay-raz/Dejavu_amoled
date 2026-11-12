@@ -5,6 +5,7 @@
 package org.mozilla.fenix.settings
 
 import android.Manifest.permission.ACCESS_LOCAL_NETWORK
+import android.content.ActivityNotFoundException
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -21,6 +22,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -47,11 +49,13 @@ import mozilla.components.concept.sync.AuthType
 import mozilla.components.concept.sync.OAuthAccount
 import mozilla.components.concept.sync.Profile
 import mozilla.components.feature.addons.ui.AddonFilePicker
+import mozilla.components.feature.contextmenu.R as contextmenuR
 import mozilla.components.feature.ipprotection.store.IPProtectionStore
 import mozilla.components.feature.ipprotection.store.state.isEligible
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.view.showKeyboard
 import mozilla.components.support.utils.BuildManufacturerChecker
+import mozilla.components.support.utils.ClipboardHandler
 import mozilla.components.support.utils.DateTimeProvider
 import mozilla.components.support.utils.DefaultDateTimeProvider
 import mozilla.components.support.utils.ext.navigateToDefaultBrowserAppsSettings
@@ -359,6 +363,22 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
         requireComponents.useCases.fenixBrowserUseCases.loadUrlOrSearch(searchTermOrURL = url, newTab = true)
     }
 
+    /** Starts an email to Dejavu, or copies its address where no app writes emails. */
+    private fun writeDejavuEmail() {
+        val email = Intent(Intent.ACTION_SENDTO, "mailto:${DejavuLinks.EMAIL}".toUri())
+            .putExtra(Intent.EXTRA_SUBJECT, "Dejavu")
+        try {
+            startActivity(email)
+        } catch (e: ActivityNotFoundException) {
+            ClipboardHandler(requireContext()).text = DejavuLinks.EMAIL
+            Toast.makeText(
+                requireContext(),
+                contextmenuR.string.mozac_feature_contextmenu_snackbar_email_address_copied,
+                Toast.LENGTH_SHORT,
+            ).show()
+        }
+    }
+
     @Suppress("LongMethod", "CyclomaticComplexMethod")
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         // Hide the scrollbar so the animation looks smoother
@@ -367,7 +387,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
 
         val directions: NavDirections? =
             when (preference.key) {
-                // Dejavu: what each version brought, its source code, its chat room, and a way to support it.
+                // Dejavu: what each version brought, its source code, its email, and a way to support it.
                 resources.getString(R.string.pref_key_dejavu_whats_new) -> {
                     DejavuFeatureTourFragment().show(parentFragmentManager, DejavuFeatureTourFragment.TAG)
                     null
@@ -378,8 +398,8 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                     null
                 }
 
-                resources.getString(R.string.pref_key_dejavu_matrix) -> {
-                    openDejavuPage(DejavuLinks.MATRIX)
+                resources.getString(R.string.pref_key_dejavu_email) -> {
+                    writeDejavuEmail()
                     null
                 }
 

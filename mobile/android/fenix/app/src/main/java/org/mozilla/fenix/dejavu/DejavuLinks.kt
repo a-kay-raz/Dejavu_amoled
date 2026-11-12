@@ -12,8 +12,8 @@ object DejavuLinks {
     const val PRIVACY_POLICY = "$SOURCE_CODE/blob/main/PRIVACY.md"
     const val BUY_ME_A_COFFEE = "https://buymeacoffee.com/ByArchitect"
 
-    /** Dejavu's space on Matrix, with its chat room and the room for bug reports and feature requests. */
-    const val MATRIX = "https://matrix.to/#/#dejavu-browser:matrix.org"
+    /** Where questions, feature requests and bug reports are written to. */
+    const val EMAIL = "byarchitect@disroot.org"
 
     /** The Google Play release's package. Every build rates that one, as no other build has a Play listing. */
     const val PLAY_STORE_ID = "com.byarchitect.dejavu"

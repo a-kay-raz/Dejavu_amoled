@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu je vaš privzeti brskalnik.</string>
     <string name="dejavu_welcome_sync_title">Vaši delovni prostori na vseh napravah</string>
     <string name="dejavu_welcome_sync_text">Prijavite se z računom Mozilla, da sinhronizirate delovne prostore, pripete zavihke in Izbrano z Zenom ali zavihke s Firefoxom.</string>
-    <string name="dejavu_settings_matrix">Klepetajte na Matrixu</string>
-    <string name="dejavu_settings_matrix_summary">Postavite vprašanje, predlagajte funkcijo ali prijavite napako</string>
+    <string name="dejavu_settings_email">E-pošta</string>
+    <string name="dejavu_settings_email_summary">Postavite vprašanje, predlagajte funkcijo ali prijavite napako</string>
     <string name="dejavu_menu_clear_data">Počisti podatke</string>
     <string name="dejavu_menu_clear_data_and_quit">Počisti podatke in zapri</string>
     <string name="dejavu_clear_data_button">Gumb »Počisti podatke«</string>

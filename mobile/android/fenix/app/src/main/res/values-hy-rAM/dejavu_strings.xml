@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Ձեր սկզբնադիր դիտարկիչը Dejavu է։</string>
     <string name="dejavu_welcome_sync_title">Ձեր տարածքները բոլոր սարքերում</string>
     <string name="dejavu_welcome_sync_text">Մուտք գործեք Mozilla հաշվով՝ տարածքները, ամրացված ներդիրներն ու կարևոր կայքերը Zen դիտարկիչի հետ, կամ ներդիրները Firefox դիտարկիչի հետ համաժամացնելու համար։</string>
-    <string name="dejavu_settings_matrix">Զրուցեք Matrix֊ում</string>
-    <string name="dejavu_settings_matrix_summary">Հարց տվեք, առաջարկեք գործառույթ կամ հայտնեք սխալի մասին</string>
+    <string name="dejavu_settings_email">Էլ. փոստ</string>
+    <string name="dejavu_settings_email_summary">Հարց տվեք, առաջարկեք գործառույթ կամ հայտնեք սխալի մասին</string>
     <string name="dejavu_menu_clear_data">Մաքրել տվյալները</string>
     <string name="dejavu_menu_clear_data_and_quit">Մաքրել տվյալները և փակել</string>
     <string name="dejavu_clear_data_button">«Մաքրել տվյալները» կոճակ</string>

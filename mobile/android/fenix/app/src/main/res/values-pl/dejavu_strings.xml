@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu jest domyślną przeglądarką.</string>
     <string name="dejavu_welcome_sync_title">Twoje obszary robocze na każdym urządzeniu</string>
     <string name="dejavu_welcome_sync_text">Zaloguj się na konto Mozilla, aby synchronizować obszary robocze, przypięte karty i ulubione z Zen lub karty z przeglądarką Firefox.</string>
-    <string name="dejavu_settings_matrix">Czatuj na Matrixie</string>
-    <string name="dejavu_settings_matrix_summary">Zadaj pytanie, zaproponuj funkcję lub zgłoś błąd</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Zadaj pytanie, zaproponuj funkcję lub zgłoś błąd</string>
     <string name="dejavu_menu_clear_data">Wyczyść dane</string>
     <string name="dejavu_menu_clear_data_and_quit">Wyczyść dane i zakończ</string>
     <string name="dejavu_clear_data_button">Przycisk „Wyczyść dane”</string>

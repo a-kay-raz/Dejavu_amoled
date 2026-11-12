@@ -23,6 +23,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,6 +44,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.Role
@@ -55,6 +58,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
+import com.google.accompanist.drawablepainter.rememberDrawablePainter
 import mozilla.components.browser.state.selector.findTab
 import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.browser.state.state.TabSessionState
@@ -65,6 +69,9 @@ import mozilla.components.compose.browser.toolbar.concept.PageOrigin
 import mozilla.components.compose.browser.toolbar.concept.PageOrigin.Companion.ContextualMenuOption
 import mozilla.components.compose.browser.toolbar.store.BrowserToolbarInteraction.BrowserToolbarEvent
 import mozilla.components.compose.browser.toolbar.store.BrowserToolbarInteraction.BrowserToolbarEvent.Source
+import mozilla.components.compose.browser.toolbar.store.BrowserToolbarInteraction.BrowserToolbarMenu
+import mozilla.components.compose.browser.toolbar.store.BrowserToolbarMenuItem.BrowserToolbarMenuButton
+import mozilla.components.compose.browser.toolbar.store.BrowserToolbarMenuItem.BrowserToolbarMenuDivider
 import mozilla.components.compose.browser.toolbar.store.BrowserToolbarStore
 import mozilla.components.concept.engine.utils.ABOUT_HOME_URL
 import mozilla.components.lib.state.ext.observeAsComposableState
@@ -93,6 +100,7 @@ import org.mozilla.fenix.dejavu.menu.rememberBarTab
 import org.mozilla.fenix.dejavu.menu.tap
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
 import org.mozilla.fenix.dejavu.ui.DejavuDropdownMenu
+import org.mozilla.fenix.dejavu.ui.DejavuMenuDivider
 import org.mozilla.fenix.dejavu.ui.DejavuMenuItem
 import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
 import org.mozilla.fenix.dejavu.ui.TapIcon
@@ -367,7 +375,7 @@ private fun SplitPageRow(
 ) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier.padding(horizontal = FIELD_PADDING)) {
         Box(contentAlignment = Alignment.Center, modifier = Modifier.size(SLOT_SIZE)) {
-            ActionContainer(actions = listOfNotNull(container), onInteraction = onInteraction)
+            ContainerButton(container, onInteraction)
         }
         Column(modifier = Modifier.weight(1f).padding(end = TITLE_END_PADDING).clearAndSetSemantics {}) {
             TitleAndDomain(
@@ -573,7 +581,7 @@ private fun AddressField(
             .padding(horizontal = FIELD_PADDING),
     ) {
         Box(contentAlignment = Alignment.Center, modifier = Modifier.size(SLOT_SIZE)) {
-            ActionContainer(actions = listOfNotNull(container), onInteraction = onInteraction)
+            ContainerButton(container, onInteraction)
         }
         Box(contentAlignment = Alignment.Center, modifier = Modifier.weight(1f)) {
             // The bar's own description already says the title.
@@ -683,6 +691,72 @@ private fun containerAction(tabId: String? = null): Action? {
     val records by remember { DejavuContainerStorage.get(context).records }.collectAsState()
     return remember(shown, records) {
         DejavuToolbar.containerAction(context, browserStore.state, browserStore.state.tabOrShown(tabId))
+    }
+}
+
+/**
+ * Shows [container], the button of [containerAction], with its menu of the other containers in a [DejavuDropdownMenu]
+ * over the shown workspace's colors, like the other menus over the page, instead of the toolbar's plain one.
+ */
+@Composable
+private fun ContainerButton(container: Action?, onInteraction: (BrowserToolbarEvent) -> Unit) {
+    val button = container as? Action.ActionButton
+    val menu = button?.onClick as? BrowserToolbarMenu
+    if (button == null || menu == null) {
+        ActionContainer(actions = listOfNotNull(container), onInteraction = onInteraction)
+        return
+    }
+    var open by remember { mutableStateOf(false) }
+    Box {
+        ActionContainer(
+            actions = listOf(button.copy(onClick = OpenContainerMenu)),
+            onInteraction = { event -> if (event == OpenContainerMenu) open = true else onInteraction(event) },
+        )
+        CompositionLocalProvider(LocalPopupTheme provides shownPopupTheme()) {
+            DejavuDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+                menu.items().forEach { item ->
+                    when (item) {
+                        BrowserToolbarMenuDivider -> DejavuMenuDivider()
+                        is BrowserToolbarMenuButton -> {
+                            val icon = item.icon
+                            DejavuMenuItem(
+                                text = item.label(),
+                                onClick = {
+                                    open = false
+                                    item.onClick?.let(onInteraction)
+                                },
+                                leadingIcon = if (icon != null) {
+                                    { MenuButtonIcon(icon) }
+                                } else {
+                                    null
+                                },
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+private data object OpenContainerMenu : BrowserToolbarEvent
+
+@Composable
+private fun BrowserToolbarMenuButton.label(): String = when (val text = text) {
+    is BrowserToolbarMenuButton.Text.StringText -> text.text
+    is BrowserToolbarMenuButton.Text.StringResText -> stringResource(text.resourceId)
+}
+
+@Composable
+private fun MenuButtonIcon(icon: BrowserToolbarMenuButton.Icon) {
+    when (icon) {
+        is BrowserToolbarMenuButton.Icon.DrawableIcon -> Icon(
+            painter = rememberDrawablePainter(icon.drawable),
+            contentDescription = null,
+            tint = if (icon.shouldTint) LocalContentColor.current else Color.Unspecified,
+        )
+        is BrowserToolbarMenuButton.Icon.DrawableResIcon ->
+            Icon(painter = painterResource(icon.resourceId), contentDescription = null)
     }
 }
 

@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu el xe el to navegador predefinìo.</string>
     <string name="dejavu_welcome_sync_title">I to spasi de laoro so onji aparechio</string>
     <string name="dejavu_welcome_sync_text">Entra co un account Mozilla par sincronizar spasi de laoro, schede fisà e essensiałi co Zen, o łe schede co Firefox.</string>
-    <string name="dejavu_settings_matrix">Ciàcoła su Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fà na domanda, propóni na funsion o segnała un eror</string>
+    <string name="dejavu_settings_email">Posta eletrònica</string>
+    <string name="dejavu_settings_email_summary">Fà na domanda, propóni na funsion o segnała un eror</string>
     <string name="dejavu_menu_clear_data">Scanseƚa i dati</string>
     <string name="dejavu_menu_clear_data_and_quit">Scanseƚa i dati e va fora</string>
     <string name="dejavu_clear_data_button">Boton Scanseƚa i dati</string>

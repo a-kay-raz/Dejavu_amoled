@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu er sjálfgefni vafrinn þinn.</string>
     <string name="dejavu_welcome_sync_title">Vinnusvæðin þín á öllum tækjum</string>
     <string name="dejavu_welcome_sync_text">Skráðu þig inn með Mozilla reikningi til að samstilla vinnusvæði, festa flipa og eftirlæti við Zen, eða flipa við Firefox.</string>
-    <string name="dejavu_settings_matrix">Spjalla á Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Spurðu spurningar, stingdu upp á eiginleika eða tilkynntu villu</string>
+    <string name="dejavu_settings_email">Tölvupóstur</string>
+    <string name="dejavu_settings_email_summary">Spurðu spurningar, stingdu upp á eiginleika eða tilkynntu villu</string>
     <string name="dejavu_menu_clear_data">Hreinsa gögn</string>
     <string name="dejavu_menu_clear_data_and_quit">Hreinsa gögn og hætta</string>
     <string name="dejavu_clear_data_button">Hnappur til að hreinsa gögn</string>

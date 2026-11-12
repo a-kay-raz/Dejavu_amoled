@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu تہاڈا ڈیفالٹ براؤزر اے۔</string>
     <string name="dejavu_welcome_sync_title">تہاڈیاں ورک سپیساں ہر ڈیوائس تے</string>
     <string name="dejavu_welcome_sync_text">Zen نال ورک سپیساں، پن کیتیاں ٹیباں تے ضروری چیزاں، یا Firefox نال ٹیباں سنک کرن لئی Mozilla اکاؤنٹ نال سائن ان کرو۔</string>
-    <string name="dejavu_settings_matrix">Matrix تے گل بات کرو</string>
-    <string name="dejavu_settings_matrix_summary">سوال پچھو، کوئی فیچر سجھاؤ یا بگ دی رپورٹ کرو</string>
+    <string name="dejavu_settings_email">ای‌میل</string>
+    <string name="dejavu_settings_email_summary">سوال پچھو، کوئی فیچر سجھاؤ یا بگ دی رپورٹ کرو</string>
     <string name="dejavu_menu_clear_data">ڈیٹا صاف کرو</string>
     <string name="dejavu_menu_clear_data_and_quit">ڈیٹا صاف کر کے بند کرو</string>
     <string name="dejavu_clear_data_button">”ڈیٹا صاف کرو“ بٹن</string>
