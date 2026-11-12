@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">Sidebery용으로 저장했습니다</string>
     <string name="dejavu_sidebery_export_failed">파일을 저장할 수 없습니다. 다시 시도하세요.</string>
     <string name="dejavu_sidebery_bad_file">이 파일은 Sidebery 스냅샷이나 백업이 아닙니다.</string>
+    <string name="dejavu_passkeys_unsupported">이 Android 버전에서는 아직 패스키가 지원되지 않습니다</string>
 </resources>

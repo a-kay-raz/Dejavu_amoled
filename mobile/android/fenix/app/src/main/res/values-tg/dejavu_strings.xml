@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Барои Sidebery нигоҳ дошта шуд</string>
     <string name="dejavu_sidebery_export_failed">Файл нигоҳ дошта нашуд. Аз нав кӯшиш кунед.</string>
     <string name="dejavu_sidebery_bad_file">Ин файл акси фаврӣ ё нусхаи эҳтиётии Sidebery нест.</string>
+    <string name="dejavu_passkeys_unsupported">Шоҳкалидҳо дар ин версияи Android ҳоло дастгирӣ намешаванд</string>
 </resources>

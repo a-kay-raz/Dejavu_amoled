@@ -38,6 +38,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -46,8 +47,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.CompositingStrategy
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -63,6 +73,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.coerceIn
 import androidx.compose.ui.unit.dp
 import androidx.core.text.BidiFormatter
@@ -86,7 +97,6 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.components.AppStore
 import org.mozilla.fenix.components.components
 import org.mozilla.fenix.compose.Favicon
-import org.mozilla.fenix.compose.HorizontalFadingEdgeBox
 import org.mozilla.fenix.compose.ext.isItemPartiallyVisible
 import org.mozilla.fenix.dejavu.browser.DejavuTabStrip
 import org.mozilla.fenix.dejavu.browser.SLEEPING_TAB_ALPHA
@@ -481,20 +491,24 @@ private fun TabItem(
 
                 Spacer(modifier = Modifier.size(8.dp))
 
-                HorizontalFadingEdgeBox(
-                    modifier = Modifier.weight(1f).fillMaxHeight(),
-                    fadeWidth = titleFadeWidth,
-                    backgroundColor = backgroundColor,
-                    isContentRtl = isTitleRtl,
-                ) {
-                    Text(
-                        text = state.title,
-                        modifier = Modifier.align(Alignment.CenterStart),
-                        color = MaterialTheme.colorScheme.onSurface,
-                        softWrap = false,
-                        maxLines = 1,
-                        style = FirefoxTheme.typography.body2,
-                    )
+                // Dejavu: the title fades out itself. The fade to the tab background that was here shows nothing
+                // on the transparent background of unselected tabs, which cut titles off in the middle of a letter.
+                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+                    Box(
+                        modifier =
+                            Modifier.weight(1f)
+                                .fillMaxHeight()
+                                .fadeOutEdge(titleFadeWidth, atRight = !isTitleRtl),
+                    ) {
+                        Text(
+                            text = state.title,
+                            modifier = Modifier.align(Alignment.CenterStart),
+                            color = MaterialTheme.colorScheme.onSurface,
+                            softWrap = false,
+                            maxLines = 1,
+                            style = FirefoxTheme.typography.body2,
+                        )
+                    }
                 }
             }
 
@@ -526,6 +540,26 @@ private fun TabItem(
         }
     }
 }
+
+/** Dejavu: fades the content out over [fadeWidth] at one edge, to what is behind it, whatever that is. */
+private fun Modifier.fadeOutEdge(fadeWidth: Dp, atRight: Boolean): Modifier =
+    graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
+        .drawWithContent {
+            drawContent()
+            val width = fadeWidth.toPx().coerceAtMost(size.width)
+            val left = if (atRight) size.width - width else 0f
+            drawRect(
+                brush =
+                    Brush.horizontalGradient(
+                        colors = listOf(Color.Black, Color.Transparent),
+                        startX = if (atRight) left else width,
+                        endX = if (atRight) size.width else 0f,
+                    ),
+                topLeft = Offset(left, 0f),
+                size = Size(width, size.height),
+                blendMode = BlendMode.DstIn,
+            )
+        }
 
 /**
  * Displays the icon for a tab in the tab strip.

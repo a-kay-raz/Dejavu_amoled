@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery өчен сакланды</string>
     <string name="dejavu_sidebery_export_failed">Файлны саклап булмады. Кабатлап карагыз.</string>
     <string name="dejavu_sidebery_bad_file">Бу файл Sidebery снапшоты яки резерв күчермәсе түгел.</string>
+    <string name="dejavu_passkeys_unsupported">Android-ның бу нөсхәсендә керү ачкычлары (passkey) әлегә хупланмый</string>
 </resources>

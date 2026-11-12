@@ -582,4 +582,5 @@
     <string name="dejavu_sidebery_exported">Įrašyta Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Nepavyko įrašyti failo. Bandykite dar kartą.</string>
     <string name="dejavu_sidebery_bad_file">Šis failas nėra Sidebery momentinė kopija ar atsarginė kopija.</string>
+    <string name="dejavu_passkeys_unsupported">Prieigos raktai šioje Android versijoje dar nepalaikomi</string>
 </resources>

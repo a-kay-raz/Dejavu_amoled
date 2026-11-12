@@ -582,4 +582,5 @@
     <string name="dejavu_sidebery_exported">Shranjeno za Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Datoteke ni bilo mogoče shraniti. Poskusite znova.</string>
     <string name="dejavu_sidebery_bad_file">Ta datoteka ni Sideberyjev posnetek ali varnostna kopija.</string>
+    <string name="dejavu_passkeys_unsupported">Ključi za dostop v tej različici Androida še niso podprti</string>
 </resources>

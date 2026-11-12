@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">Sidebery 用に保存しました</string>
     <string name="dejavu_sidebery_export_failed">ファイルを保存できませんでした。もう一度お試しください。</string>
     <string name="dejavu_sidebery_bad_file">このファイルは Sidebery のスナップショットでもバックアップでもありません。</string>
+    <string name="dejavu_passkeys_unsupported">このバージョンの Android では、パスキーはまだサポートされていません</string>
 </resources>

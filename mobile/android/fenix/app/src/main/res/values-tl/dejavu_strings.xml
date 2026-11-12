@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Na-save para sa Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Hindi ma-save ang file. Subukan ulit.</string>
     <string name="dejavu_sidebery_bad_file">Ang file na ito ay hindi snapshot o backup ng Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Hindi pa suportado ang mga passkey sa bersyong ito ng Android</string>
 </resources>

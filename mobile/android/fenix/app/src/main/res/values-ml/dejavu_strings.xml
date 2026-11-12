@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery-ക്കായി സേവ് ചെയ്തു</string>
     <string name="dejavu_sidebery_export_failed">ഫയൽ സേവ് ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="dejavu_sidebery_bad_file">ഈ ഫയൽ Sidebery-യുടെ സ്നാപ്ഷോട്ടോ ബാക്കപ്പോ അല്ല.</string>
+    <string name="dejavu_passkeys_unsupported">ഈ Android പതിപ്പിൽ ഒളിത്താക്കോലുകൾ ഇതുവരെ പിന്തുണയ്ക്കുന്നില്ല</string>
 </resources>

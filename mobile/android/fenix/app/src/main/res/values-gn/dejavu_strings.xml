@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Oñeñongatu Sidebery-pe ĝuarã</string>
     <string name="dejavu_sidebery_export_failed">Ndaikatúi oñeñongatu marandurenda. Eha’ã jey.</string>
     <string name="dejavu_sidebery_bad_file">Ko marandurenda ndaha’éi snapshot térã Sidebery mokõiha.</string>
+    <string name="dejavu_passkeys_unsupported">Ko Android peteĩchaguápe ndaikatúi gueteri eipuru ñe’ẽ ñemi jeikerã</string>
 </resources>

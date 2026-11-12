@@ -598,4 +598,5 @@
     <string name="dejavu_sidebery_exported">حُفظ لأجل Sidebery</string>
     <string name="dejavu_sidebery_export_failed">تعذّر حفظ الملف. حاول مرة أخرى.</string>
     <string name="dejavu_sidebery_bad_file">هذا الملف ليس لقطة ولا نسخة احتياطية من Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">مفاتيح المرور غير مدعومة بعد على إصدار Android هذا</string>
 </resources>

@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery үшін сақталды</string>
     <string name="dejavu_sidebery_export_failed">Файлды сақтау мүмкін болмады. Қайталап көріңіз.</string>
     <string name="dejavu_sidebery_bad_file">Бұл файл Sidebery снапшоты немесе сақтық көшірмесі емес.</string>
+    <string name="dejavu_passkeys_unsupported">Қол жеткізу кілттеріне Android-тың бұл нұсқасында әлі қолдау көрсетілмейді</string>
 </resources>

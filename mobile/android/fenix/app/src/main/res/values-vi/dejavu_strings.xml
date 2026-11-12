@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">Đã lưu cho Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Không thể lưu tập tin. Hãy thử lại.</string>
     <string name="dejavu_sidebery_bad_file">Tập tin này không phải ảnh chụp hay bản sao lưu của Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Passkey chưa được hỗ trợ trên phiên bản Android này</string>
 </resources>

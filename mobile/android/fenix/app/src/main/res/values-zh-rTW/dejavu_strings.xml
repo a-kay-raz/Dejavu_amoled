@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">已為 Sidebery 儲存</string>
     <string name="dejavu_sidebery_export_failed">無法儲存檔案，請再試一次。</string>
     <string name="dejavu_sidebery_bad_file">這個檔案不是 Sidebery 快照或備份。</string>
+    <string name="dejavu_passkeys_unsupported">此 Android 版本尚不支援 Passkey</string>
 </resources>

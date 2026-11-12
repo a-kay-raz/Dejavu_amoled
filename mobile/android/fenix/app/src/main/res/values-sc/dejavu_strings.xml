@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sarvadu pro Sidebery</string>
     <string name="dejavu_sidebery_export_failed">No est istadu possìbile sarvare s’archìviu. Torra a proare.</string>
     <string name="dejavu_sidebery_bad_file">Custu archìviu no est un’istantànea nen una còpia de seguresa de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Sas craes de atzessu non sunt galu suportadas in custa versione de Android</string>
 </resources>

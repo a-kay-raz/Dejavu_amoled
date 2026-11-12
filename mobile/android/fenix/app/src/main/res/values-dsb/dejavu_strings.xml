@@ -582,4 +582,5 @@
     <string name="dejavu_sidebery_exported">Za Sidebery skłaźone</string>
     <string name="dejavu_sidebery_export_failed">Dataja njedajo se składowaś. Wopytajśo hyšći raz.</string>
     <string name="dejavu_sidebery_bad_file">Toś ta dataja njejo fotka abo zawěsćeńska kopija Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Gronidłowe kluce se w toś tej wersiji Android hyšći njepódpěraju</string>
 </resources>

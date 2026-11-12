@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Guardóse pa Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Nun se pudo guardar el ficheru. Volvi tentalo.</string>
     <string name="dejavu_sidebery_bad_file">Esti ficheru nun ye una instantánea nin una copia de seguranza de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Les claves d\'accesu entá nun son compatibles con esta versión d\'Android</string>
 </resources>

@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">บันทึกสำหรับ Sidebery แล้ว</string>
     <string name="dejavu_sidebery_export_failed">ไม่สามารถบันทึกไฟล์ได้ ลองอีกครั้ง</string>
     <string name="dejavu_sidebery_bad_file">ไฟล์นี้ไม่ใช่สแนปช็อตหรือข้อมูลสำรองของ Sidebery</string>
+    <string name="dejavu_passkeys_unsupported">ยังไม่รองรับพาสคีย์ใน Android รุ่นนี้</string>
 </resources>

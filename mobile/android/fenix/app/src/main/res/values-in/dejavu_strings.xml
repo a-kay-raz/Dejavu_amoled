@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">Disimpan untuk Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Tidak dapat menyimpan berkas. Coba lagi.</string>
     <string name="dejavu_sidebery_bad_file">Berkas ini bukan snapshot atau cadangan Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Kunci sandi belum didukung di versi Android ini</string>
 </resources>

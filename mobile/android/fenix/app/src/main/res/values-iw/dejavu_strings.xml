@@ -574,4 +574,5 @@
     <string name="dejavu_sidebery_exported">נשמר עבור Sidebery</string>
     <string name="dejavu_sidebery_export_failed">לא ניתן לשמור את הקובץ. נא לנסות שוב.</string>
     <string name="dejavu_sidebery_bad_file">הקובץ הזה אינו תמונת מצב או גיבוי של Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">מפתחות גישה עדיין אינם נתמכים בגרסת Android זו</string>
 </resources>

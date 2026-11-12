@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery азы ичекуп</string>
     <string name="dejavu_sidebery_export_failed">Афаил аиқәырхара ауам. Еиҭах иҽашәырҳа.</string>
     <string name="dejavu_sidebery_bad_file">Ари афаил Sidebery аснапшот мамзар аикәыхра акәӡам.</string>
+    <string name="dejavu_passkeys_unsupported">Android ари аверсиаҿы passkey-қәа иахьазанӡа ирыдкылам</string>
 </resources>

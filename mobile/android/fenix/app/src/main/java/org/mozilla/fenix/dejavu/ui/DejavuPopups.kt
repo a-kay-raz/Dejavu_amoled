@@ -69,6 +69,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
+import mozilla.components.compose.base.menu.LocalCustomPlacementPopupCard
 import org.mozilla.fenix.dejavu.home.drawWorkspaceTheme
 import org.mozilla.fenix.dejavu.home.rememberGrainBrush
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
@@ -381,6 +382,33 @@ fun DejavuDropdownMenu(
 }
 
 /**
+ * Gives the menus Firefox's toolbar opens in [content], like the one of the container button, the look of a
+ * [DejavuDropdownMenu] over the colors of [theme]'s workspace, instead of their plain fill.
+ */
+@Composable
+fun DejavuToolbarMenus(theme: WorkspaceTheme?, content: @Composable () -> Unit) {
+    CompositionLocalProvider(
+        LocalPopupTheme provides theme,
+        LocalCustomPlacementPopupCard provides ToolbarMenuCard,
+        content = content,
+    )
+}
+
+private val ToolbarMenuCard: @Composable (Modifier, @Composable () -> Unit) -> Unit = { modifier, content ->
+    Box(
+        modifier = modifier
+            .shadow(MENU_SHADOW, DejavuPopup.MenuShape)
+            .clip(DejavuPopup.MenuShape)
+            .background(DejavuPopup.containerColor)
+            .popupGlow()
+            .border(1.dp, DejavuPopup.edgeColor, DejavuPopup.MenuShape)
+            .padding(vertical = MENU_PADDING),
+    ) {
+        content()
+    }
+}
+
+/**
  * An item of a [DejavuDropdownMenu], highlighted in a rounded box when pressed. Its [text] takes up to [maxLines]
  * lines, cut off after that.
  */
@@ -445,6 +473,7 @@ private val DIALOG_MAX_WIDTH = 560.dp
 private val DIALOG_PADDING = 24.dp
 private val DIALOG_SHADOW = 12.dp
 private val MENU_SHADOW = 8.dp
+private val MENU_PADDING = 8.dp
 private val BUTTON_PADDING = 18.dp
 private val BUTTON_SPACING = 8.dp
 private const val BUTTON_GAP = "gap"

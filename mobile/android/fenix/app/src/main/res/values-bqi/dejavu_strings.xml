@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">سی Sidebery ذخیره وابی</string>
     <string name="dejavu_sidebery_export_failed">فایل ذخیره نوابی. دوباره امتحان کو.</string>
     <string name="dejavu_sidebery_bad_file">ای فایل snapshot یا پشتیوان Sidebery نئ.</string>
+    <string name="dejavu_passkeys_unsupported">کیلیت گوڌشتن هنی و ای نسخه Android پشتیبانی نمیبوه</string>
 </resources>

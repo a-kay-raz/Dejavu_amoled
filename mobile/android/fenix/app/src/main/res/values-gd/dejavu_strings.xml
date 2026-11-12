@@ -582,4 +582,5 @@
     <string name="dejavu_sidebery_exported">Air a shàbhaladh airson Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Cha b’ urrainn dhuinn am faidhle a shàbhaladh. Feuch ris a-rithist.</string>
     <string name="dejavu_sidebery_bad_file">Chan e dealbh-làithreach no lethbhreac-glèidhidh de Sidebery a th’ san fhaidhle seo.</string>
+    <string name="dejavu_passkeys_unsupported">Chan eil taic ri iuchraichean-inntrigidh air an tionndadh seo de Android fhathast</string>
 </resources>

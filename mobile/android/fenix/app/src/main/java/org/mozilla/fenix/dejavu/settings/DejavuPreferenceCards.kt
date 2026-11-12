@@ -52,9 +52,10 @@ private class CardDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         val position = parent.getChildAdapterPosition(view)
-        val row = rowAt(parent, position) ?: return
+        // Category titles keep the card margin too, so they line up with the rows of their card on both sides.
         outRect.left = margin
         outRect.right = margin
+        val row = rowAt(parent, position) ?: return
         outRect.top = if (row.first) 0 else gap
         outRect.bottom = if (row.last) groupSpacing else 0
     }

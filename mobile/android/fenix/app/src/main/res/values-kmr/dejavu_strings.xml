@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Ji bo Sidebery hate tomarkirin</string>
     <string name="dejavu_sidebery_export_failed">Dosye nehate tomarkirin. Dîsa biceribîne.</string>
     <string name="dejavu_sidebery_bad_file">Ev dosye ne wêneyekî bilez û ne jî paşkeftek Sidebery ye.</string>
+    <string name="dejavu_passkeys_unsupported">Nifteyên derbasbûnê hîn di vê guhertoya Androidê de nayên destekkirin</string>
 </resources>

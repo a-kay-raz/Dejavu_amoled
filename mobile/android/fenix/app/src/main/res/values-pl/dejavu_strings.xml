@@ -582,4 +582,5 @@
     <string name="dejavu_sidebery_exported">Zapisano dla Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Nie udało się zapisać pliku. Spróbuj ponownie.</string>
     <string name="dejavu_sidebery_bad_file">Ten plik nie jest migawką ani kopią zapasową Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Klucze dostępu nie są jeszcze obsługiwane w tej wersji Androida</string>
 </resources>

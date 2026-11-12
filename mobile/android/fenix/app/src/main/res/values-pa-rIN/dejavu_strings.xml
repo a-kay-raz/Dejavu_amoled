@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery ਲਈ ਸੰਭਾਲਿਆ</string>
     <string name="dejavu_sidebery_export_failed">ਫ਼ਾਇਲ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="dejavu_sidebery_bad_file">ਇਹ ਫ਼ਾਇਲ Sidebery ਦਾ ਸਨੈਪਸ਼ਾਟ ਜਾਂ ਬੈਕਅੱਪ ਨਹੀਂ ਹੈ।</string>
+    <string name="dejavu_passkeys_unsupported">ਇਸ Android ਵਰਜ਼ਨ ਉੱਤੇ ਪਾਸ-ਕੀ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹਨ</string>
 </resources>

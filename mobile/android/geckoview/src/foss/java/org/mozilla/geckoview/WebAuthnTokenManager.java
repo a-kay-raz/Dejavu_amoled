@@ -10,6 +10,7 @@ import android.os.Build;
 import java.nio.ByteBuffer;
 import org.mozilla.gecko.GeckoAppShell;
 import org.mozilla.gecko.WebAuthnCredentialManager;
+import org.mozilla.gecko.WebAuthnUnsupported;
 import org.mozilla.gecko.annotation.WrapForJNI;
 import org.mozilla.gecko.util.GeckoBundle;
 import org.mozilla.gecko.util.ThreadUtils;
@@ -22,7 +23,8 @@ import org.mozilla.gecko.util.WebAuthnUtils;
  * The Google Play FIDO library is not free software and is not part of this build, so everything
  * goes through Android's own credential manager instead. That needs Android 14 or later and a
  * credential provider installed; on anything older WebAuthn reports that it is not supported,
- * exactly as it does today on a device with no Google Play services.
+ * exactly as it does today on a device with no Google Play services, and tells the app through
+ * {@link WebAuthnUnsupported} so it can say why the page failed.
  */
 public class WebAuthnTokenManager {
 
@@ -48,6 +50,7 @@ public class WebAuthnTokenManager {
       final ByteBuffer clientDataHash,
       final String requestJSON) {
     if (!credentialManagerAvailable()) {
+      WebAuthnUnsupported.notifyTurnedDown();
       return GeckoResult.fromException(new WebAuthnUtils.Exception("NOT_SUPPORTED_ERR"));
     }
 
@@ -73,6 +76,7 @@ public class WebAuthnTokenManager {
       final ByteBuffer clientDataHash,
       final String requestJSON) {
     if (!credentialManagerAvailable()) {
+      WebAuthnUnsupported.notifyTurnedDown();
       return GeckoResult.fromException(new WebAuthnUtils.Exception("NOT_SUPPORTED_ERR"));
     }
 

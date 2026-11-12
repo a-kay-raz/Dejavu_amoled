@@ -599,4 +599,5 @@
     <string name="dejavu_sidebery_exported">Sidebery-র জন্য সংরক্ষিত</string>
     <string name="dejavu_sidebery_export_failed">ফাইলটি সংরক্ষণ করা যায়নি। আবার চেষ্টা করুন।</string>
     <string name="dejavu_sidebery_bad_file">এই ফাইলটি Sidebery-র স্ন্যাপশট বা ব্যাকআপ নয়।</string>
+    <string name="dejavu_passkeys_unsupported">পাসকি এখনও এই Android সংস্করণে সমর্থিত নয়</string>
 </resources>

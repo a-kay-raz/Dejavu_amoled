@@ -582,4 +582,5 @@
     <string name="dejavu_sidebery_exported">Сохранено для Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Не удалось сохранить файл. Попробуйте ещё раз.</string>
     <string name="dejavu_sidebery_bad_file">Этот файл не является снепшотом или резервной копией Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Ключи доступа пока не поддерживаются в этой версии Android</string>
 </resources>

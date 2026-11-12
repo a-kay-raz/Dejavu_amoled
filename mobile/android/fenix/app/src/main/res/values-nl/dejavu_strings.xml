@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Opgeslagen voor Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Het bestand kon niet worden opgeslagen. Probeer het opnieuw.</string>
     <string name="dejavu_sidebery_bad_file">Dit bestand is geen momentopname of back-up van Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Wachtwoordsleutels worden nog niet ondersteund op deze Android-versie</string>
 </resources>

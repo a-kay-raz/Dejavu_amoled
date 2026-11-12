@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Arregistratu per Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Impussibule d’arregistrà u schedariu. Pruvate torna.</string>
     <string name="dejavu_sidebery_bad_file">Stu schedariu ùn hè micca una fotografia nè una copia di salvezza di Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">E chjave d’accessu ùn sò ancu supportate nant’à sta versione d’Android</string>
 </resources>

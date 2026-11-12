@@ -206,7 +206,7 @@ private data class PageColors(val top: Int, val bottom: Int)
 /** The row of [this] page view behind the middle of the navigation bar, or its last row without one. */
 private fun View.rowBehindNavigationBar(): Int {
     val top = IntArray(2).also(::getLocationInWindow)[1]
-    return rootView.height - navigationBarHeight / 2 - top
+    return (rootView.height - navigationBarHeight / 2 - top).coerceAtMost(height - 1)
 }
 
 /** Whether dark text and icons stand out more than light ones on [color]. */

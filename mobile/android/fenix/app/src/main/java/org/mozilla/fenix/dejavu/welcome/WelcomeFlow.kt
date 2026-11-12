@@ -71,7 +71,9 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.components
+import org.mozilla.fenix.dejavu.home.SystemBarIconsOver
 import org.mozilla.fenix.dejavu.home.WallpaperImage
+import org.mozilla.fenix.dejavu.home.WallpaperTheme
 import org.mozilla.fenix.dejavu.home.drawVeil
 import org.mozilla.fenix.dejavu.home.drawWorkspaceTheme
 import org.mozilla.fenix.dejavu.home.rememberGrainBrush
@@ -129,72 +131,76 @@ internal fun WelcomeFlow(page: Int, onPage: (Int) -> Unit, onDone: (signIn: Bool
     val isLast = shown == pages.lastIndex
     val next = { if (isLast) onDone(false) else onPage(shown + 1) }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        WelcomeBackdrop(theme = look?.theme ?: workspace?.theme, wallpaper = look?.wallpaper)
-        Column(modifier = Modifier.fillMaxSize().systemBarsPadding()) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth().padding(start = 24.dp, end = 8.dp, top = 8.dp),
-            ) {
-                PageProgress(count = pages.size, current = shown, modifier = Modifier.weight(1f))
-                TextButton(
-                    onClick = { onDone(false) },
-                    enabled = !isLast,
-                    modifier = Modifier.alpha(if (isLast) 0f else 1f),
+    // The pages show in the look of the wallpaper picked, as the home screen does, whatever the app's theme.
+    SystemBarIconsOver(look?.wallpaper)
+    WallpaperTheme(look?.wallpaper) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            WelcomeBackdrop(theme = look?.theme ?: workspace?.theme, wallpaper = look?.wallpaper)
+            Column(modifier = Modifier.fillMaxSize().systemBarsPadding()) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth().padding(start = 24.dp, end = 8.dp, top = 8.dp),
                 ) {
-                    Text(text = stringResource(R.string.dejavu_features_skip))
-                }
-            }
-            AnimatedContent(
-                targetState = shown,
-                transitionSpec = {
-                    val forward = targetState > initialState
-                    val enter = fadeIn(tween(ENTER_MS, delayMillis = ENTER_DELAY_MS)) +
-                        scaleIn(tween(ENTER_MS, easing = FastOutSlowInEasing), if (forward) BEHIND else IN_FRONT)
-                    val exit = fadeOut(tween(EXIT_MS)) +
-                        scaleOut(tween(EXIT_MS, easing = FastOutSlowInEasing), if (forward) IN_FRONT else BEHIND)
-                    enter togetherWith exit
-                },
-                modifier = Modifier.weight(1f).fillMaxWidth(),
-                label = "welcomePage",
-            ) { index ->
-                Box(contentAlignment = Alignment.TopCenter, modifier = Modifier.fillMaxSize()) {
-                    Column(
-                        modifier = Modifier
-                            .widthIn(max = MAX_WIDTH)
-                            .fillMaxWidth()
-                            .verticalScroll(rememberScrollState())
-                            .padding(horizontal = PAGE_MARGIN, vertical = 12.dp),
+                    PageProgress(count = pages.size, current = shown, modifier = Modifier.weight(1f))
+                    TextButton(
+                        onClick = { onDone(false) },
+                        enabled = !isLast,
+                        modifier = Modifier.alpha(if (isLast) 0f else 1f),
                     ) {
-                        // Dialogs opened from the pages take on the colors of the wallpaper picked.
-                        CompositionLocalProvider(LocalPopupTheme provides popupThemeOf(look?.wallpaper)) {
-                            WelcomePageContent(page = pages[index], look = look, onSignIn = { onDone(true) })
+                        Text(text = stringResource(R.string.dejavu_features_skip))
+                    }
+                }
+                AnimatedContent(
+                    targetState = shown,
+                    transitionSpec = {
+                        val forward = targetState > initialState
+                        val enter = fadeIn(tween(ENTER_MS, delayMillis = ENTER_DELAY_MS)) +
+                            scaleIn(tween(ENTER_MS, easing = FastOutSlowInEasing), if (forward) BEHIND else IN_FRONT)
+                        val exit = fadeOut(tween(EXIT_MS)) +
+                            scaleOut(tween(EXIT_MS, easing = FastOutSlowInEasing), if (forward) IN_FRONT else BEHIND)
+                        enter togetherWith exit
+                    },
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    label = "welcomePage",
+                ) { index ->
+                    Box(contentAlignment = Alignment.TopCenter, modifier = Modifier.fillMaxSize()) {
+                        Column(
+                            modifier = Modifier
+                                .widthIn(max = MAX_WIDTH)
+                                .fillMaxWidth()
+                                .verticalScroll(rememberScrollState())
+                                .padding(horizontal = PAGE_MARGIN, vertical = 12.dp),
+                        ) {
+                            // Dialogs opened from the pages take on the colors of the wallpaper picked.
+                            CompositionLocalProvider(LocalPopupTheme provides popupThemeOf(look?.wallpaper)) {
+                                WelcomePageContent(page = pages[index], look = look, onSignIn = { onDone(true) })
+                            }
                         }
                     }
                 }
-            }
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 16.dp),
-            ) {
-                if (shown > 0) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 16.dp),
+                ) {
+                    if (shown > 0) {
+                        DejavuDialogButton(
+                            text = stringResource(R.string.dejavu_back),
+                            onClick = { onPage(shown - 1) },
+                        )
+                    }
+                    Spacer(Modifier.weight(1f))
                     DejavuDialogButton(
-                        text = stringResource(R.string.dejavu_back),
-                        onClick = { onPage(shown - 1) },
+                        text = stringResource(
+                            when {
+                                shown == 0 -> R.string.dejavu_welcome_start
+                                isLast -> R.string.dejavu_welcome_done
+                                else -> R.string.dejavu_features_next
+                            },
+                        ),
+                        onClick = next,
+                        style = DejavuButtonStyle.Primary,
                     )
                 }
-                Spacer(Modifier.weight(1f))
-                DejavuDialogButton(
-                    text = stringResource(
-                        when {
-                            shown == 0 -> R.string.dejavu_welcome_start
-                            isLast -> R.string.dejavu_welcome_done
-                            else -> R.string.dejavu_features_next
-                        },
-                    ),
-                    onClick = next,
-                    style = DejavuButtonStyle.Primary,
-                )
             }
         }
     }

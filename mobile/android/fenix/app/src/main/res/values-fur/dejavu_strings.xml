@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Salvât par Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Impussibil salvâ il file. Torne prove.</string>
     <string name="dejavu_sidebery_bad_file">Chest file nol è une istantanie ni une copie di sigurece di Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Lis passkey no son ancjemò supuartadis su cheste version di Android</string>
 </resources>

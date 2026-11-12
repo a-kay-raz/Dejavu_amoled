@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Yettwasekles i Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Ur yezmir ara ad yettwasekles ufaylu. Ɛreḍ tikkelt-nniḍen.</string>
     <string name="dejavu_sidebery_bad_file">Afaylu-a mačči d tawlaft neɣ d aḥraz n Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Tisura n unekcum (passkeys) mazal ur ttwasefraken ara deg lqem-agi n Android</string>
 </resources>

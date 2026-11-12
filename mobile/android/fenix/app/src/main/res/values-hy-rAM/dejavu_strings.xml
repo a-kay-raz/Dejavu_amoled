@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Պահվեց Sidebery-ի համար</string>
     <string name="dejavu_sidebery_export_failed">Չհաջողվեց պահել ֆայլը։ Կրկին փորձեք։</string>
     <string name="dejavu_sidebery_bad_file">Այս ֆայլը Sidebery-ի պատկերաքաղվածք կամ պահուստ չէ։</string>
+    <string name="dejavu_passkeys_unsupported">Անցանիշները դեռ չեն աջակցվում Android-ի այս տարբերակում</string>
 </resources>

@@ -574,4 +574,5 @@
     <string name="dejavu_sidebery_exported">Salvo para o Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Não foi possível salvar o arquivo. Tente novamente.</string>
     <string name="dejavu_sidebery_bad_file">Este arquivo não é um instantâneo nem um backup do Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">As chaves de acesso ainda não são compatíveis com esta versão do Android</string>
 </resources>

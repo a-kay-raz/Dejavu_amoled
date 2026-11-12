@@ -574,4 +574,5 @@
     <string name="dejavu_sidebery_exported">Salvat pentru Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Fișierul nu a putut fi salvat. Încearcă din nou.</string>
     <string name="dejavu_sidebery_bad_file">Acest fișier nu este un instantaneu sau o copie de rezervă Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Cheile de acces nu sunt încă acceptate pe această versiune de Android</string>
 </resources>

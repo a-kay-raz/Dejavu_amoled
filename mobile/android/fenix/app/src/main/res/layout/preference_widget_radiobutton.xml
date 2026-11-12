@@ -24,20 +24,26 @@
         android:layout_marginStart="@dimen/radio_button_preference_horizontal"
         tools:drawableStart="?android:attr/listChoiceIndicatorSingle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <!-- Dejavu: the title and the summary stack right under each other in the middle of the row, with the same room
+         above and below them, and the radio button in the middle beside them. A title alone keeps the 48dp row. -->
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_marginStart="@dimen/radiobutton_preference_margin_start"
         android:layout_height="wrap_content"
-        android:minHeight="@dimen/radio_button_preference_height"
-        android:gravity="center|start"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
         android:layout_marginEnd="@dimen/radio_button_preference_horizontal"
         tools:text="@tools:sample/lorem"
         android:textAlignment="viewStart"
         android:textAppearance="?android:attr/textAppearanceListItem"
-        app:layout_constraintTop_toTopOf="@id/radio_button"
+        app:layout_goneMarginBottom="12dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/widget_summary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/radio_button"/>
 
@@ -45,6 +51,7 @@
         android:id="@+id/widget_summary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:textAlignment="viewStart"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="?android:attr/textColorSecondary"

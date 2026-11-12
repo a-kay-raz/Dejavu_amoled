@@ -558,4 +558,5 @@
     <string name="dejavu_sidebery_exported">Kasimpen anggen Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Nenten prasida nyimpen file. Cobia malih.</string>
     <string name="dejavu_sidebery_bad_file">File puniki boya snapshot utawi cadangan Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Kunci sandi (passkey) durung kasokong ring versi Android puniki</string>
 </resources>

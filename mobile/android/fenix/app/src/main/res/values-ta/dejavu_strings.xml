@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery-க்காகச் சேமிக்கப்பட்டது</string>
     <string name="dejavu_sidebery_export_failed">கோப்பைச் சேமிக்க முடியவில்லை. மீண்டும் முயலவும்.</string>
     <string name="dejavu_sidebery_bad_file">இந்தக் கோப்பு Sidebery ஸ்னாப்ஷாட் அல்லது காப்புப்பிரதி அல்ல.</string>
+    <string name="dejavu_passkeys_unsupported">இந்த Android பதிப்பில் கடவுச்சாவிகள் இன்னும் ஆதரிக்கப்படவில்லை</string>
 </resources>

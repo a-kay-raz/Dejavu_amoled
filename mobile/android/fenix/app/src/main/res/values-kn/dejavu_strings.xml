@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery ಗಾಗಿ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="dejavu_sidebery_export_failed">ಫೈಲ್ ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="dejavu_sidebery_bad_file">ಈ ಫೈಲ್ Sidebery ಯ ಸ್ನ್ಯಾಪ್‌ಶಾಟ್ ಅಥವಾ ಬ್ಯಾಕಪ್ ಅಲ್ಲ.</string>
+    <string name="dejavu_passkeys_unsupported">ಈ Android ಆವೃತ್ತಿಯಲ್ಲಿ ಪಾಸ್‌ಕೀಗಳು ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
 </resources>

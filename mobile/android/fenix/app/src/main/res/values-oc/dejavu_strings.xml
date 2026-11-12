@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Enregistrat per Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Impossible d’enregistrar lo fichièr. Ensajatz tornarmai.</string>
     <string name="dejavu_sidebery_bad_file">Aqueste fichièr es pas una captura nimai una salvagarda de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Las claus d’accès son pas encara presas en carga sus aquesta version d’Android</string>
 </resources>

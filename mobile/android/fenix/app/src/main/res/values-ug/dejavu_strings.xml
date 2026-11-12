@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery ئۈچۈن ساقلاندى</string>
     <string name="dejavu_sidebery_export_failed">ھۆججەتنى ساقلىغىلى بولمىدى. قايتا سىناڭ.</string>
     <string name="dejavu_sidebery_bad_file">بۇ ھۆججەت Sidebery نىڭ تېز سۈرىتى ياكى زاپىسى ئەمەس.</string>
+    <string name="dejavu_passkeys_unsupported">شىفىرلىق ئاچقۇچ بۇ Android نەشرىدە تېخى قوللىمايدۇ</string>
 </resources>

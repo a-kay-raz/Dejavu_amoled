@@ -946,4 +946,6 @@
     <string name="dejavu_sidebery_export_failed">Couldn’t save the file. Try again.</string>
     <!-- Short message when the chosen file is not one that Sidebery exported. -->
     <string name="dejavu_sidebery_bad_file">This file isn’t a Sidebery snapshot or backup.</string>
+    <!-- Shown at the bottom of a web page that asked for a passkey, on Android 13 and older, where Dejavu cannot use passkeys yet. The page shows its own error at the same time. -->
+    <string name="dejavu_passkeys_unsupported">Passkeys aren\'t supported on this Android version yet</string>
 </resources>

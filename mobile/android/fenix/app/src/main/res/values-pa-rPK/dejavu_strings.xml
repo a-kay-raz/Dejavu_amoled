@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Sidebery لئی سانبھیا</string>
     <string name="dejavu_sidebery_export_failed">فائل سانبھی نئیں جا سکی۔ مڑ کوشش کرو۔</string>
     <string name="dejavu_sidebery_bad_file">ایہ فائل Sidebery دا سنیپ شاٹ یا بیک اپ نئیں۔</string>
+    <string name="dejavu_passkeys_unsupported">ایس Android ورژن تے پاس کی ہالے سپورٹ نئیں</string>
 </resources>

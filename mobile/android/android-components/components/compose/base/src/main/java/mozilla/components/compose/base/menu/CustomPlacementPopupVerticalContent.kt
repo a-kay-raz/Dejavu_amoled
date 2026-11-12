@@ -24,9 +24,16 @@ import androidx.compose.ui.unit.dp
  */
 @Composable
 inline fun CustomPlacementPopup.CustomPlacementPopupVerticalContent(content: @Composable ColumnScope.() -> Unit) {
+    // Dejavu: a card from LocalCustomPlacementPopupCard draws the background instead.
+    val background =
+        if (LocalCustomPlacementPopupCard.current == null) {
+            Modifier.background(MaterialTheme.colorScheme.surfaceBright)
+        } else {
+            Modifier
+        }
     Column(
         modifier =
-            Modifier.background(MaterialTheme.colorScheme.surfaceBright)
+            background
                 .requiredWidthIn(min = 250.dp)
                 .width(IntrinsicSize.Max)
                 .verticalScroll(rememberScrollState())

@@ -574,4 +574,5 @@
     <string name="dejavu_sidebery_exported">Sidebery ᱞᱟᱹᱜᱤᱫ ᱥᱟᱺᱪᱟᱣ ᱮᱱᱟ</string>
     <string name="dejavu_sidebery_export_failed">ᱨᱮᱫᱽ ᱵᱟᱝ ᱥᱟᱺᱪᱟᱣ ᱫᱟᱲᱮᱭᱟᱫᱟ᱾ ᱫᱩᱦᱲᱟᱹ ᱪᱮᱥᱴᱟᱭ ᱢᱮ᱾</string>
     <string name="dejavu_sidebery_bad_file">ᱱᱚᱶᱟ ᱨᱮᱫᱽ ᱫᱚ Sidebery ᱨᱮᱭᱟᱜ ᱥᱱᱮᱯᱥᱚᱴ ᱥᱮ ᱵᱮᱠᱚᱯ ᱵᱟᱝ ᱠᱟᱱᱟ᱾</string>
+    <string name="dejavu_passkeys_unsupported">ᱱᱚᱶᱟ Android ᱵᱷᱟᱨᱥᱚᱱ ᱨᱮ ᱯᱟᱥᱠᱤ ᱫᱚ ᱱᱤᱛ ᱦᱟᱹᱵᱤᱡ ᱵᱟᱝ ᱜᱚᱲᱚᱭ ᱠᱟᱱᱟ</string>
 </resources>

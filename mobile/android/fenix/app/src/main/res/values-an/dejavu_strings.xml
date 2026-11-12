@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Alzau ta Sidebery</string>
     <string name="dejavu_sidebery_export_failed">No s’ha puesto alzar o fichero. Torna-lo a intentar.</string>
     <string name="dejavu_sidebery_bad_file">Iste fichero no ye una instantania ni una copia de seguranza de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Las claus d\'acceso encara no son compatibles con esta versión d\'Android</string>
 </resources>

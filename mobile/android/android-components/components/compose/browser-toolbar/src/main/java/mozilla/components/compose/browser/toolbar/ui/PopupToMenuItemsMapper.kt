@@ -37,6 +37,7 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
+import mozilla.components.compose.base.menu.LocalCustomPlacementPopupCard
 import mozilla.components.compose.base.modifier.thenConditional
 import mozilla.components.compose.base.theme.AcornTheme
 import mozilla.components.compose.browser.toolbar.store.BrowserToolbarInteraction
@@ -71,11 +72,15 @@ internal fun menuItemComposable(
         is BrowserToolbarMenuButton -> {
             @Composable {
                 val contentDescription = source.contentDescription()
+                // Dejavu: a card from LocalCustomPlacementPopupCard draws the background instead.
+                val plainBackground = LocalCustomPlacementPopupCard.current == null
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier =
-                        Modifier.background(MaterialTheme.colorScheme.surfaceBright)
+                        Modifier.thenConditional(Modifier.background(MaterialTheme.colorScheme.surfaceBright)) {
+                                plainBackground
+                            }
                             .thenConditional(
                                 Modifier.clickable(
                                     role = Role.Button,

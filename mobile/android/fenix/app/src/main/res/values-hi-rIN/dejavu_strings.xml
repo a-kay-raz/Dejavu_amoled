@@ -599,4 +599,5 @@
     <string name="dejavu_sidebery_exported">Sidebery के लिए सहेजा गया</string>
     <string name="dejavu_sidebery_export_failed">फ़ाइल सहेजी नहीं जा सकी। फिर से कोशिश करें।</string>
     <string name="dejavu_sidebery_bad_file">यह फ़ाइल Sidebery का स्नैपशॉट या बैकअप नहीं है।</string>
+    <string name="dejavu_passkeys_unsupported">इस Android संस्करण पर पास-की अभी समर्थित नहीं हैं</string>
 </resources>

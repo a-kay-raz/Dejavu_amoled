@@ -598,4 +598,5 @@
     <string name="dejavu_sidebery_exported">Gwithys rag Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Ny allsa an restren bos gwithys. Assayewgh arta.</string>
     <string name="dejavu_sidebery_bad_file">Nyns yw an restren ma skeusen po kopi gwitha a Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Ny vydh alhwedhow tremena skoodhys war an versyon ma a Android hwath</string>
 </resources>

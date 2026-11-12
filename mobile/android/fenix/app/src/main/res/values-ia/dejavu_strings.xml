@@ -566,4 +566,5 @@
     <string name="dejavu_sidebery_exported">Salvate pro Sidebery</string>
     <string name="dejavu_sidebery_export_failed">Impossibile salvar le file. Retenta.</string>
     <string name="dejavu_sidebery_bad_file">Iste file non es un instantaneo o un copia de reserva de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Le claves-contrasigno non es ancora supportate in iste version de Android</string>
 </resources>
