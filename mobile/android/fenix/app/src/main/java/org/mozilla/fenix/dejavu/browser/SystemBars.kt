@@ -8,10 +8,11 @@ import android.app.Activity
 import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES
 import android.view.Window
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.navigationBarsIgnoringVisibility
-import androidx.compose.foundation.layout.statusBarsIgnoringVisibility
+import androidx.compose.foundation.layout.displayCutout
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.union
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
@@ -35,8 +36,8 @@ private var hiddenOverPages = false
 /**
  * Hides the status bar and the navigation bar over the pages of [this] browser screen while it shows and [hidden] is
  * set; swiping in from an edge of the screen shows them for a moment. When something shows them again, they are hidden
- * again, while a video shown full screen hides them its own way. Dejavu's bars keep the room the system bars take, see
- * [statusBarHeight], so they never move under a camera cutout or into the navigation gestures.
+ * again, while a video shown full screen hides them its own way. Dejavu's bars keep clear of the system bars only while
+ * they show, see [statusBarHeight], so no room stays empty for a hidden bar.
  */
 fun Fragment.hideSystemBarsOverPages(engineView: EngineView, hidden: StateFlow<Boolean>) {
     val window = requireActivity().window
@@ -80,16 +81,14 @@ fun Activity.exitFullScreenKeepingBarsHidden(exitImmersiveMode: () -> Unit) {
     if (hiddenOverPages) window.hideSystemBars()
 }
 
-/** Keeps [this] below the status bar, also while it is hidden over pages. */
-@OptIn(ExperimentalLayoutApi::class)
+/** Keeps [this] below the status bar while it shows, and below a camera cutout. */
 fun Modifier.statusBarRoomPadding(): Modifier = composed {
-    windowInsetsPadding(WindowInsets.statusBarsIgnoringVisibility)
+    windowInsetsPadding(WindowInsets.statusBars.union(WindowInsets.displayCutout))
 }
 
-/** Keeps [this] above the navigation bar, also while it is hidden over pages. */
-@OptIn(ExperimentalLayoutApi::class)
+/** Keeps [this] above the navigation bar while it shows, leaving no room for it while it is hidden over pages. */
 fun Modifier.navigationBarRoomPadding(): Modifier = composed {
-    windowInsetsPadding(WindowInsets.navigationBarsIgnoringVisibility)
+    windowInsetsPadding(WindowInsets.navigationBars)
 }
 
 private fun Window.hideSystemBars() = WindowCompat.getInsetsController(this, decorView).run {

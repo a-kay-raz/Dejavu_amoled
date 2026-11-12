@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu est su navigadore predefinidu tuo.</string>
     <string name="dejavu_welcome_sync_title">Is ispàtzios de traballu tuos in dònnia dispositivu</string>
     <string name="dejavu_welcome_sync_text">Intra cun unu contu Mozilla pro sincronizare ispàtzios de traballu, ischedas fissadas e essentziales cun Zen, o ischedas cun Firefox.</string>
-    <string name="dejavu_settings_matrix">Chistiona in Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Faghe una pregunta, cussìgia una funtzione o sinnala unu errore</string>
+    <string name="dejavu_settings_email">Posta eletrònica</string>
+    <string name="dejavu_settings_email_summary">Faghe una pregunta, cussìgia una funtzione o sinnala unu errore</string>
     <string name="dejavu_menu_clear_data">Illìmpia is datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Illìmpia is datos e essi</string>
     <string name="dejavu_clear_data_button">Butone “Illìmpia is datos”</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Si disativat torra cando Dejavu si torrat a aviare</string>
     <string name="dejavu_preference_mouse_support">Supportu de su sòrighe</string>
     <string name="dejavu_preference_mouse_support_summary">Unu clic cun su butone de mesu aberit unu ligòngiu in un\'ischeda in segundu pranu, e passende subra de unu ligòngiu nde mustrat s\'indiritzu. Unu clic cun su butone de mesu subra de un\'ischeda la serrat.</string>
+    <string name="dejavu_no_closed_tabs">Nissuna ischeda serrada de reghente</string>
+    <string name="dejavu_tab_page_number">Pàgina %1$d in custa ischeda</string>
+    <string name="dejavu_tab_pages">Pàginas in custa ischeda</string>
+    <string name="dejavu_settings_tabs_import_export">Importa e esporta ischedas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Moe ispàtzios de traballu, cartellas e ischedas a Sidebery e dae Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery est unu gestore de ischedas pro Firefox in sos elaboradores. Inoghe sos pannellos suos sunt ispàtzios de traballu, sos grupos de ischedas suos sunt cartellas e sas ischedas fissadas suas sunt essentziales.</string>
+    <string name="dejavu_sidebery_export">Esporta a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importa dae Sidebery</string>
+    <string name="dejavu_sidebery_steps">In su «Snapshots viewer» de Sidebery, «Import snapshot» leghet s’archìviu de Dejavu e «Open all windows» nde abberit sas ischedas. Pro portare ischedas inoghe, sèbera inie un’istantànea, a pustis «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Ispàtzios de traballu noos</string>
+    <string name="dejavu_sidebery_essentials">Essentziales</string>
+    <string name="dejavu_sidebery_new_containers">Cuntenidores noos</string>
+    <string name="dejavu_sidebery_left_out">Lassadas a foras</string>
+    <string name="dejavu_sidebery_left_out_note">Pàginas chi unu telèfonu non podet abèrrere, comente archìvios locales, e ischedas de ventanas privadas</string>
+    <string name="dejavu_sidebery_nothing_new">Non b’at nudda de nou in custu archìviu.</string>
+    <string name="dejavu_sidebery_import_button">Importa</string>
+    <string name="dejavu_sidebery_imported">Importadu dae Sidebery</string>
+    <string name="dejavu_sidebery_exported">Sarvadu pro Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">No est istadu possìbile sarvare s’archìviu. Torra a proare.</string>
+    <string name="dejavu_sidebery_bad_file">Custu archìviu no est un’istantànea nen una còpia de seguresa de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Sas craes de atzessu non sunt galu suportadas in custa versione de Android</string>
 </resources>

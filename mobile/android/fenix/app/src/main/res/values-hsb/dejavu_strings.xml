@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu je twój standardny wobhladowak.</string>
     <string name="dejavu_welcome_sync_title">Twoje dźěłowe rumy na kóždym graće</string>
     <string name="dejavu_welcome_sync_text">Přizjew so z kontom Mozilla, zo by dźěłowe rumy, připjate rajtarki a najwažniše z Zen abo rajtarki z Firefox synchronizował.</string>
-    <string name="dejavu_settings_matrix">Chat přez Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Praš so, namjetuj funkciju abo zdźěl zmylk</string>
+    <string name="dejavu_settings_email">E-mejl</string>
+    <string name="dejavu_settings_email_summary">Praš so, namjetuj funkciju abo zdźěl zmylk</string>
     <string name="dejavu_menu_clear_data">Daty zhašeć</string>
     <string name="dejavu_menu_clear_data_and_quit">Daty zhašeć a skónčić</string>
     <string name="dejavu_clear_data_button">Tłóčatko „Daty zhašeć“</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Znjemóžni so zaso, hdyž so Dejavu znowa startuje</string>
     <string name="dejavu_preference_mouse_support">Podpěra myški</string>
     <string name="dejavu_preference_mouse_support_summary">Srjedźne kliknjenje wotkaz w pozadkowym rajtarku wočinja, a hdyž myšku nad wotkazom dźeržiće, so jeho adresa pokazuje. Srjedźne kliknjenje na rajtark jón začinja.</string>
+    <string name="dejavu_no_closed_tabs">Žane runje začinjene rajtarki njejsu</string>
+    <string name="dejavu_tab_page_number">Strona %1$d w tutym rajtarku</string>
+    <string name="dejavu_tab_pages">Strony w tutym rajtarku</string>
+    <string name="dejavu_settings_tabs_import_export">Rajtarki importować a eksportować</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Dźěłowe rumy, zarjadniki a rajtarki do Sidebery a ze Sidebery přenjesć</string>
+    <string name="dejavu_sidebery_hint">Sidebery je zrjadowak rajtarkow za Firefox na ličakach. Jeho panele su tu dźěłowe rumy, jeho skupiny rajtarkow su zarjadniki a jeho připjate rajtarki su najwažniše.</string>
+    <string name="dejavu_sidebery_export">Do Sidebery eksportować</string>
+    <string name="dejavu_sidebery_import">Ze Sidebery importować</string>
+    <string name="dejavu_sidebery_steps">W «Snapshots viewer» Sidebery čita «Import snapshot» dataju z Dejavu a «Open all windows» wočinja jeje rajtarki. Zo byšće rajtarki sem přinjesł, wubjerće tam fotku, potom «Export snapshot» a «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nowe dźěłowe rumy</string>
+    <string name="dejavu_sidebery_essentials">Najwažniše</string>
+    <string name="dejavu_sidebery_new_containers">Nowe kontejnery</string>
+    <string name="dejavu_sidebery_left_out">Wuwostajene</string>
+    <string name="dejavu_sidebery_left_out_note">Strony, kotrež telefon njemóže wočinić, na př. lokalne dataje, a rajtarki priwatnych woknow</string>
+    <string name="dejavu_sidebery_nothing_new">W tutej dataji ničo nowe njeje.</string>
+    <string name="dejavu_sidebery_import_button">Importować</string>
+    <string name="dejavu_sidebery_imported">Ze Sidebery importowane</string>
+    <string name="dejavu_sidebery_exported">Za Sidebery składowane</string>
+    <string name="dejavu_sidebery_export_failed">Dataja njeda so składować. Spytajće hišće raz.</string>
+    <string name="dejavu_sidebery_bad_file">Tuta dataja fotka abo zawěsćenska kopija Sidebery njeje.</string>
+    <string name="dejavu_passkeys_unsupported">Hesłowe kluče so w tutej wersiji Android hišće njepodpěruja</string>
 </resources>

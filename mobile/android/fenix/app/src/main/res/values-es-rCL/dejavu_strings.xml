@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu es tu navegador predeterminado.</string>
     <string name="dejavu_welcome_sync_title">Tus espacios de trabajo en todos tus dispositivos</string>
     <string name="dejavu_welcome_sync_text">Inicia sesión con una cuenta de Mozilla para sincronizar espacios de trabajo, pestañas fijadas y esenciales con Zen, o pestañas con Firefox.</string>
-    <string name="dejavu_settings_matrix">Chatea en Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Haz una pregunta, sugiere una función o reporta un error</string>
+    <string name="dejavu_settings_email">Correo</string>
+    <string name="dejavu_settings_email_summary">Haz una pregunta, sugiere una función o reporta un error</string>
     <string name="dejavu_menu_clear_data">Borrar datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Borrar datos y salir</string>
     <string name="dejavu_clear_data_button">Botón Borrar datos</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Se desactiva de nuevo cuando Dejavu se reinicia</string>
     <string name="dejavu_preference_mouse_support">Compatibilidad con mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic con el botón del medio abre un enlace en una pestaña en segundo plano, y pasar el mouse sobre un enlace muestra su dirección. Un clic con el botón del medio sobre una pestaña la cierra.</string>
+    <string name="dejavu_no_closed_tabs">No hay pestañas cerradas recientemente</string>
+    <string name="dejavu_tab_page_number">Página %1$d en esta pestaña</string>
+    <string name="dejavu_tab_pages">Páginas en esta pestaña</string>
+    <string name="dejavu_settings_tabs_import_export">Importar y exportar pestañas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mueve espacios de trabajo, carpetas y pestañas a Sidebery y desde Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery es un gestor de pestañas para Firefox en ordenadores. Aquí sus paneles son espacios de trabajo, sus grupos de pestañas son carpetas y sus pestañas fijadas son esenciales.</string>
+    <string name="dejavu_sidebery_export">Exportar a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar desde Sidebery</string>
+    <string name="dejavu_sidebery_steps">En el «Snapshots viewer» de Sidebery, «Import snapshot» lee el archivo de Dejavu y «Open all windows» abre sus pestañas. Para traer pestañas aquí, elige allí una instantánea y luego «Export snapshot» y «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espacios de trabajo nuevos</string>
+    <string name="dejavu_sidebery_essentials">Esenciales</string>
+    <string name="dejavu_sidebery_new_containers">Contenedores nuevos</string>
+    <string name="dejavu_sidebery_left_out">Excluidas</string>
+    <string name="dejavu_sidebery_left_out_note">Páginas que un teléfono no puede abrir, como archivos locales, y pestañas de ventanas privadas</string>
+    <string name="dejavu_sidebery_nothing_new">No hay nada nuevo en este archivo.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importado desde Sidebery</string>
+    <string name="dejavu_sidebery_exported">Guardado para Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">No se pudo guardar el archivo. Inténtalo de nuevo.</string>
+    <string name="dejavu_sidebery_bad_file">Este archivo no es una instantánea ni una copia de seguridad de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Las llaves de acceso todavía no son compatibles con esta versión de Android</string>
 </resources>

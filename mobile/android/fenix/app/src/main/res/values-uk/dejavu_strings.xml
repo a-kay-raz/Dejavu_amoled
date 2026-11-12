@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — ваш типовий браузер.</string>
     <string name="dejavu_welcome_sync_title">Ваші робочі простори на кожному пристрої</string>
     <string name="dejavu_welcome_sync_text">Увійдіть з обліковим записом Mozilla, щоб синхронізувати робочі простори, закріплені вкладки й обране з Zen або вкладки з Firefox.</string>
-    <string name="dejavu_settings_matrix">Чат у Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Поставте запитання, запропонуйте функцію або повідомте про помилку</string>
+    <string name="dejavu_settings_email">Електронна пошта</string>
+    <string name="dejavu_settings_email_summary">Поставте запитання, запропонуйте функцію або повідомте про помилку</string>
     <string name="dejavu_menu_clear_data">Очистити дані</string>
     <string name="dejavu_menu_clear_data_and_quit">Очистити дані й вийти</string>
     <string name="dejavu_clear_data_button">Кнопка «Очистити дані»</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Знову вимикається після перезапуску Dejavu</string>
     <string name="dejavu_preference_mouse_support">Підтримка миші</string>
     <string name="dejavu_preference_mouse_support_summary">Клацання середньою кнопкою відкриває посилання у фоновій вкладці, а наведення на посилання показує його адресу. Клацання середньою кнопкою по вкладці закриває її.</string>
+    <string name="dejavu_no_closed_tabs">Немає нещодавно закритих вкладок</string>
+    <string name="dejavu_tab_page_number">Сторінка %1$d у цій вкладці</string>
+    <string name="dejavu_tab_pages">Сторінки в цій вкладці</string>
+    <string name="dejavu_settings_tabs_import_export">Імпорт та експорт вкладок</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Перенесення робочих просторів, тек і вкладок у Sidebery та з нього</string>
+    <string name="dejavu_sidebery_hint">Sidebery — менеджер вкладок для Firefox на комп’ютерах. Його панелі тут — робочі простори, групи вкладок — теки, а закріплені вкладки — обране.</string>
+    <string name="dejavu_sidebery_export">Експортувати в Sidebery</string>
+    <string name="dejavu_sidebery_import">Імпортувати з Sidebery</string>
+    <string name="dejavu_sidebery_steps">У «Snapshots viewer» у Sidebery кнопка «Import snapshot» читає файл із Dejavu, а «Open all windows» відкриває його вкладки. Щоб перенести вкладки сюди, виберіть там знімок, потім «Export snapshot» і «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Нові робочі простори</string>
+    <string name="dejavu_sidebery_essentials">Обране</string>
+    <string name="dejavu_sidebery_new_containers">Нові контейнери</string>
+    <string name="dejavu_sidebery_left_out">Пропущено</string>
+    <string name="dejavu_sidebery_left_out_note">Сторінки, які телефон не може відкрити, як-от локальні файли, і вкладки приватних вікон</string>
+    <string name="dejavu_sidebery_nothing_new">У цьому файлі немає нічого нового.</string>
+    <string name="dejavu_sidebery_import_button">Імпортувати</string>
+    <string name="dejavu_sidebery_imported">Імпортовано з Sidebery</string>
+    <string name="dejavu_sidebery_exported">Збережено для Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Не вдалося зберегти файл. Спробуйте ще раз.</string>
+    <string name="dejavu_sidebery_bad_file">Цей файл не є знімком чи резервною копією Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Ключі доступу поки не підтримуються в цій версії Android</string>
 </resources>

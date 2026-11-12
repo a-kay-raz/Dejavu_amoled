@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu est ton navigateur par défaut.</string>
     <string name="dejavu_welcome_sync_title">Tes espaces sur tous tes appareils</string>
     <string name="dejavu_welcome_sync_text">Connecte-toi avec un compte Mozilla pour synchroniser tes espaces, onglets épinglés et favoris avec Zen, ou tes onglets avec Firefox.</string>
-    <string name="dejavu_settings_matrix">Discuter sur Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pose une question, suggère une fonctionnalité ou signale un bug</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Pose une question, suggère une fonctionnalité ou signale un bug</string>
     <string name="dejavu_menu_clear_data">Effacer les données</string>
     <string name="dejavu_menu_clear_data_and_quit">Effacer les données et quitter</string>
     <string name="dejavu_clear_data_button">Bouton « Effacer les données »</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Se désactive à nouveau au redémarrage de Dejavu</string>
     <string name="dejavu_preference_mouse_support">Prise en charge de la souris</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic du milieu ouvre un lien dans un onglet en arrière-plan, et survoler un lien affiche son adresse. Un clic du milieu sur un onglet le ferme.</string>
+    <string name="dejavu_no_closed_tabs">Aucun onglet récemment fermé</string>
+    <string name="dejavu_tab_page_number">Page %1$d de cet onglet</string>
+    <string name="dejavu_tab_pages">Pages de cet onglet</string>
+    <string name="dejavu_settings_tabs_import_export">Importer et exporter des onglets</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Transférer espaces, dossiers et onglets vers et depuis Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery est un gestionnaire d’onglets pour Firefox sur ordinateur. Ici, ses panneaux sont des espaces, ses groupes d’onglets des dossiers et ses onglets épinglés des favoris.</string>
+    <string name="dejavu_sidebery_export">Exporter vers Sidebery</string>
+    <string name="dejavu_sidebery_import">Importer depuis Sidebery</string>
+    <string name="dejavu_sidebery_steps">Dans la « Visionneuse d’instantanés » de Sidebery, « Importer un instantané » lit le fichier de Dejavu et « Ouvrir toutes les fenêtres » ouvre ses onglets. Pour amener des onglets ici, choisissez-y un instantané, puis « Exporter un instantané » et « Sauvegarder en JSON ».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nouveaux espaces</string>
+    <string name="dejavu_sidebery_essentials">Favoris</string>
+    <string name="dejavu_sidebery_new_containers">Nouveaux conteneurs</string>
+    <string name="dejavu_sidebery_left_out">Laissés de côté</string>
+    <string name="dejavu_sidebery_left_out_note">Pages qu’un téléphone ne peut pas ouvrir, comme les fichiers locaux, et onglets des fenêtres privées</string>
+    <string name="dejavu_sidebery_nothing_new">Ce fichier ne contient rien de nouveau.</string>
+    <string name="dejavu_sidebery_import_button">Importer</string>
+    <string name="dejavu_sidebery_imported">Importé depuis Sidebery</string>
+    <string name="dejavu_sidebery_exported">Enregistré pour Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impossible d’enregistrer le fichier. Veuillez réessayer.</string>
+    <string name="dejavu_sidebery_bad_file">Ce fichier n’est ni un instantané ni une sauvegarde de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Les clés d’accès ne sont pas encore prises en charge sur cette version d’Android</string>
 </resources>

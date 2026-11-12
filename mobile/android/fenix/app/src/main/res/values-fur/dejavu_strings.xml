@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu al è il to navigadôr predefinît.</string>
     <string name="dejavu_welcome_sync_title">I tiei spazis di lavôr su ducj i dispositîfs</string>
     <string name="dejavu_welcome_sync_text">Jentre cuntun account Mozilla par sincronizâ spazis di lavôr, schedis fissadis e essenziâi cun Zen, o lis schedis cun Firefox.</string>
-    <string name="dejavu_settings_matrix">Cjacare su Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fâs une domande, sugjerìs une funzion o segnale un erôr</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Fâs une domande, sugjerìs une funzion o segnale un erôr</string>
     <string name="dejavu_menu_clear_data">Nete dâts</string>
     <string name="dejavu_menu_clear_data_and_quit">Nete dâts e siere</string>
     <string name="dejavu_clear_data_button">Boton «Nete dâts»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Si torne a disativâ cuant che Dejavu al tache di gnûf</string>
     <string name="dejavu_preference_mouse_support">Supuart pe surie</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic di mieç al vierç un colegament intune schede in sotfont, e passâ parsore di un colegament al mostre la sô direzion. Un clic di mieç parsore di une schede le siere.</string>
+    <string name="dejavu_no_closed_tabs">Nissune schede sierade di resint</string>
+    <string name="dejavu_tab_page_number">Pagjine %1$d di cheste schede</string>
+    <string name="dejavu_tab_pages">Pagjinis di cheste schede</string>
+    <string name="dejavu_settings_tabs_import_export">Impuarte e espuarte schedis</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Sposte spazis di lavôr, cartelis e schedis viers Sidebery e di Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery al è un gjestôr di schedis par Firefox sui computers. Achì i siei panei a son spazis di lavôr, i siei grups di schedis a son cartelis e lis sôs schedis fissadis a son essenziâi.</string>
+    <string name="dejavu_sidebery_export">Espuarte su Sidebery</string>
+    <string name="dejavu_sidebery_import">Impuarte di Sidebery</string>
+    <string name="dejavu_sidebery_steps">Tal «Snapshots viewer» di Sidebery, «Import snapshot» al lei il file di Dejavu e «Open all windows» al vierç lis sôs schedis. Par puartâ schedis achì, sielç li une istantanie, po dopo «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Gnûfs spazis di lavôr</string>
+    <string name="dejavu_sidebery_essentials">Essenziâi</string>
+    <string name="dejavu_sidebery_new_containers">Gnûfs contenidôrs</string>
+    <string name="dejavu_sidebery_left_out">Lassadis fûr</string>
+    <string name="dejavu_sidebery_left_out_note">Pagjinis che un telefon nol pues vierzi, come i files locâi, e schedis di barcons privâts</string>
+    <string name="dejavu_sidebery_nothing_new">Nol è nuie di gnûf in chest file.</string>
+    <string name="dejavu_sidebery_import_button">Impuarte</string>
+    <string name="dejavu_sidebery_imported">Impuartât di Sidebery</string>
+    <string name="dejavu_sidebery_exported">Salvât par Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impussibil salvâ il file. Torne prove.</string>
+    <string name="dejavu_sidebery_bad_file">Chest file nol è une istantanie ni une copie di sigurece di Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Lis passkey no son ancjemò supuartadis su cheste version di Android</string>
 </resources>

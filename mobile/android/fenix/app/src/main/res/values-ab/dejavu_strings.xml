@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu шәбраузер хадоуп.</string>
     <string name="dejavu_welcome_sync_title">Шәыҭыԥқәа аиқәыршәага цыԥхьаӡа аҟны</string>
     <string name="dejavu_welcome_sync_text">Аҭыԥқәа, ификсациатә абларҭақәа, иҵакыу сайтқәа Zen ала, ма абларҭақәа Firefox ала рсинхронизациа азы, Mozilla аккаунт ала шәыҭал.</string>
-    <string name="dejavu_settings_matrix">Matrix аҟны аицәажәара</string>
-    <string name="dejavu_settings_matrix_summary">Азҵаарақәа, ажәалагалақәа, насгьы агхақәа</string>
+    <string name="dejavu_settings_email">Ае-маил</string>
+    <string name="dejavu_settings_email_summary">Азҵаарақәа, ажәалагалақәа, насгьы агхақәа</string>
     <string name="dejavu_menu_clear_data">Адыррақәа раныхра</string>
     <string name="dejavu_menu_clear_data_and_quit">Адыррақәа раныхреи аҭыҵреи</string>
     <string name="dejavu_clear_data_button">«Адыррақәа раныхра» акнопка</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu аиҭаартра ашьҭахь еиҭах иаҿыхуеит</string>
     <string name="dejavu_preference_mouse_support">Аҳәынаԥ арыцхыраара</string>
     <string name="dejavu_preference_mouse_support_summary">Аҳәынаԥ абжьаратәи ақәыӷәӷәара азхьарԥш абларҭа ҿыц аҿы иаанартуеит, азхьарԥш ахь аҳәынаԥ анаагалак уи аҭыԥ аарԥшуеит. Азхьарԥш аҿы аҳәынаԥ абжьаратәи ақәыӷәӷәара уи иаарыцәуеит.</string>
+    <string name="dejavu_no_closed_tabs">Ааигәа иаркыз абларҭақәа ыҟам</string>
+    <string name="dejavu_tab_page_number">Ари абларҭа адаҟьа %1$d</string>
+    <string name="dejavu_tab_pages">Ари абларҭа адаҟьақәа</string>
+    <string name="dejavu_settings_tabs_import_export">Абларҭақәа аимпорти аекспорти</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Аусуратә ҭыԥқәа, апапкақәа, абларҭақәа Sidebery ахь аиаганы, уахьтә ааганы</string>
+    <string name="dejavu_sidebery_hint">Sidebery — Firefox акомпиутерқәа рзы абларҭақәа рырдыргаҩ ауп. Иара апанелқәа ара аусуратә ҭыԥқәа ауп, абларҭақәа ргәыԥқәа — апапкақәа, иҵакыу абларҭақәа — иҵакыу сайтқәа.</string>
+    <string name="dejavu_sidebery_export">Sidebery ахь аекспорт</string>
+    <string name="dejavu_sidebery_import">Sidebery аҟынтә аимпорт</string>
+    <string name="dejavu_sidebery_steps">Sidebery аҟны «Snapshots viewer» аҟны, «Import snapshot» Dejavu афаил аԥхьоит, «Open all windows» абларҭақәа аартуеит. Абларҭақәа ара раагаразы, усҟан аснапшот алхны, «Export snapshot» нас «Save as JSON» алх.</string>
+    <string name="dejavu_sidebery_new_workspaces">Аусуратә ҭыԥқәа ҿыцқәа</string>
+    <string name="dejavu_sidebery_essentials">Иҵакыу сайтқәа</string>
+    <string name="dejavu_sidebery_new_containers">Аконтейнерқәа ҿыцқәа</string>
+    <string name="dejavu_sidebery_left_out">Иаламлаӡеит</string>
+    <string name="dejavu_sidebery_left_out_note">Аҭел иаанамырту адаҟьақәа, алокалтә фаилқәа реиԥш, ашәҭқәа хыхьчоу абларҭақәа</string>
+    <string name="dejavu_sidebery_nothing_new">Ари афаил аҟны иҿыцу акгьы ыҟам.</string>
+    <string name="dejavu_sidebery_import_button">Аимпорт</string>
+    <string name="dejavu_sidebery_imported">Sidebery аҟынтә иааганы</string>
+    <string name="dejavu_sidebery_exported">Sidebery азы ичекуп</string>
+    <string name="dejavu_sidebery_export_failed">Афаил аиқәырхара ауам. Еиҭах иҽашәырҳа.</string>
+    <string name="dejavu_sidebery_bad_file">Ари афаил Sidebery аснапшот мамзар аикәыхра акәӡам.</string>
+    <string name="dejavu_passkeys_unsupported">Android ари аверсиаҿы passkey-қәа иахьазанӡа ирыдкылам</string>
 </resources>

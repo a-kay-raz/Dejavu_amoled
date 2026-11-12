@@ -43,6 +43,9 @@ import org.json.JSONObject
  * @param light How light the lightest parts of the picture are, as a relative luminance: a tenth of it is lighter.
  * @param dark How dark the darkest parts of the picture are: a tenth of it is darker. Both are `null` until they are
  * taken from the picture.
+ * @param lightLook Whether it shows in its light look, under a pale veil with dark text, as picked among the light
+ * wallpapers; otherwise in its dark look, under a deep veil with light text. Either way it looks the same in the
+ * app's light and dark themes.
  */
 data class WorkspaceWallpaper(
     val file: String,
@@ -50,6 +53,7 @@ data class WorkspaceWallpaper(
     val colors: List<Int> = emptyList(),
     val light: Float? = null,
     val dark: Float? = null,
+    val lightLook: Boolean = false,
 ) {
     companion object {
         const val DEFAULT_INTENSITY = 0.6f
@@ -236,6 +240,7 @@ private const val KEY_INTENSITY = "intensity"
 private const val KEY_COLORS = "colors"
 private const val KEY_LIGHT = "light"
 private const val KEY_DARK = "dark"
+private const val KEY_LIGHT_LOOK = "lightLook"
 
 // Before wallpapers had a veil, they were blurred, as much as this said: the more blurred, the less they showed.
 private const val KEY_BLUR = "blur"
@@ -291,6 +296,8 @@ internal fun readWallpapers(json: String?): Map<String, WorkspaceWallpaper> {
                 .take(GRADIENT_COLORS),
             light = item.optShade(KEY_LIGHT),
             dark = item.optShade(KEY_DARK),
+            // Wallpapers kept before they had a look of their own show in the dark one.
+            lightLook = item.optBoolean(KEY_LIGHT_LOOK),
         )
     }.toMap()
 }
@@ -309,6 +316,7 @@ internal fun writeWallpapers(wallpapers: Map<String, WorkspaceWallpaper>): Strin
                 .apply {
                     wallpaper.light?.let { put(KEY_LIGHT, it.toDouble()) }
                     wallpaper.dark?.let { put(KEY_DARK, it.toDouble()) }
+                    if (wallpaper.lightLook) put(KEY_LIGHT_LOOK, true)
                 },
         )
     }
@@ -410,6 +418,13 @@ private fun Bitmap.lookOnScreen(screenWidth: Int, screenHeight: Int): PictureLoo
     val shades = shadesOf(pixels)
     return PictureLook(gradientColorsOf(pixels, SAMPLE_COLUMNS, rows), shades?.first, shades?.second)
 }
+
+/**
+ * A wallpaper of this picture in its [lightLook] or its dark one, with the colors and the shades a screen of the
+ * picture's size shows, for a picture that is not kept, like the small one a choice of wallpaper shows.
+ */
+internal fun Bitmap.previewWallpaper(lightLook: Boolean): WorkspaceWallpaper =
+    lookOnScreen(width, height).applyTo(WorkspaceWallpaper(file = "", lightLook = lightLook))
 
 /**
  * How light the lightest tenth of [pixels] is and how dark the darkest tenth is, as relative luminances; `null` for a

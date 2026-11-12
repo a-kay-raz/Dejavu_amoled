@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu உங்கள் இயல்புநிலை உலாவி.</string>
     <string name="dejavu_welcome_sync_title">எல்லாச் சாதனங்களிலும் உங்கள் பணியிடங்கள்</string>
     <string name="dejavu_welcome_sync_text">Zen உடன் பணியிடங்கள், பொருத்தப்பட்ட கீற்றுகள், முக்கியவை, அல்லது Firefox உடன் கீற்றுகளை ஒத்திசைக்க Mozilla கணக்கில் உள்நுழையவும்.</string>
-    <string name="dejavu_settings_matrix">Matrix-இல் உரையாடுங்கள்</string>
-    <string name="dejavu_settings_matrix_summary">கேள்வி கேளுங்கள், புதிய அம்சத்தைப் பரிந்துரையுங்கள் அல்லது பிழையைப் புகாரளியுங்கள்</string>
+    <string name="dejavu_settings_email">மின்னஞ்சல்</string>
+    <string name="dejavu_settings_email_summary">கேள்வி கேளுங்கள், புதிய அம்சத்தைப் பரிந்துரையுங்கள் அல்லது பிழையைப் புகாரளியுங்கள்</string>
     <string name="dejavu_menu_clear_data">தரவை அழி</string>
     <string name="dejavu_menu_clear_data_and_quit">தரவை அழித்து வெளியேறு</string>
     <string name="dejavu_clear_data_button">தரவை அழிக்கும் பொத்தான்</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu மீண்டும் தொடங்கும்போது மறுபடியும் அணைந்துவிடும்</string>
     <string name="dejavu_preference_mouse_support">சுட்டி ஆதரவு</string>
     <string name="dejavu_preference_mouse_support_summary">நடுப் பொத்தானைச் சொடுக்கினால் இணைப்பு பின்னணிக் கீற்றில் திறக்கும், இணைப்பின் மேல் சுட்டியை வைத்தால் அதன் முகவரி காட்டப்படும். கீற்றின் மேல் நடுப் பொத்தானைச் சொடுக்கினால் அது மூடப்படும்.</string>
+    <string name="dejavu_no_closed_tabs">சமீபத்தில் மூடிய கீற்றுகள் ஏதுமில்லை</string>
+    <string name="dejavu_tab_page_number">இந்தக் கீற்றில் பக்கம் %1$d</string>
+    <string name="dejavu_tab_pages">இந்தக் கீற்றில் உள்ள பக்கங்கள்</string>
+    <string name="dejavu_settings_tabs_import_export">கீற்றுகளை இறக்குமதி மற்றும் ஏற்றுமதி செய்</string>
+    <string name="dejavu_settings_tabs_import_export_summary">பணியிடங்கள், கோப்புறைகள் மற்றும் கீற்றுகளை Sidebery-க்கும் Sidebery-இலிருந்தும் நகர்த்து</string>
+    <string name="dejavu_sidebery_hint">Sidebery என்பது கணினிகளில் Firefox-க்கான கீற்று மேலாளர். அதன் பலகங்கள் இங்கே பணியிடங்கள், அதன் கீற்றுக் குழுக்கள் கோப்புறைகள், அதன் பொருத்தப்பட்ட கீற்றுகள் முக்கியவை.</string>
+    <string name="dejavu_sidebery_export">Sidebery-க்கு ஏற்றுமதி செய்</string>
+    <string name="dejavu_sidebery_import">Sidebery-இலிருந்து இறக்குமதி செய்</string>
+    <string name="dejavu_sidebery_steps">Sidebery-இன் «Snapshots viewer»-இல் «Import snapshot» Dejavu-வின் கோப்பைப் படிக்கிறது, «Open all windows» அதன் கீற்றுகளைத் திறக்கிறது. கீற்றுகளை இங்கே கொண்டுவர அங்கே ஒரு ஸ்னாப்ஷாட்டைத் தேர்ந்தெடுத்து, பின்னர் «Export snapshot», «Save as JSON» ஆகியவற்றைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="dejavu_sidebery_new_workspaces">புதிய பணியிடங்கள்</string>
+    <string name="dejavu_sidebery_essentials">முக்கியவை</string>
+    <string name="dejavu_sidebery_new_containers">புதிய கொள்கலன்கள்</string>
+    <string name="dejavu_sidebery_left_out">விடுபட்டவை</string>
+    <string name="dejavu_sidebery_left_out_note">தொலைபேசியால் திறக்க முடியாத பக்கங்கள், உள்ளகக் கோப்புகள் போன்றவை, மற்றும் தனிப்பட்ட சாளரங்களின் கீற்றுகள்</string>
+    <string name="dejavu_sidebery_nothing_new">இந்தக் கோப்பில் புதிதாக எதுவும் இல்லை.</string>
+    <string name="dejavu_sidebery_import_button">இறக்குமதி செய்</string>
+    <string name="dejavu_sidebery_imported">Sidebery-இலிருந்து இறக்குமதி செய்யப்பட்டது</string>
+    <string name="dejavu_sidebery_exported">Sidebery-க்காகச் சேமிக்கப்பட்டது</string>
+    <string name="dejavu_sidebery_export_failed">கோப்பைச் சேமிக்க முடியவில்லை. மீண்டும் முயலவும்.</string>
+    <string name="dejavu_sidebery_bad_file">இந்தக் கோப்பு Sidebery ஸ்னாப்ஷாட் அல்லது காப்புப்பிரதி அல்ல.</string>
+    <string name="dejavu_passkeys_unsupported">இந்த Android பதிப்பில் கடவுச்சாவிகள் இன்னும் ஆதரிக்கப்படவில்லை</string>
 </resources>

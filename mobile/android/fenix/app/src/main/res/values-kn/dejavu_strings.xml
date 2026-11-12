@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ನಿಮ್ಮ ಪೂರ್ವನಿಯೋಜಿತ ಬ್ರೌಸರ್ ಆಗಿದೆ.</string>
     <string name="dejavu_welcome_sync_title">ಪ್ರತಿ ಸಾಧನದಲ್ಲೂ ನಿಮ್ಮ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು</string>
     <string name="dejavu_welcome_sync_text">Zen ಜೊತೆ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು, ಪಿನ್ ಮಾಡಿದ ಟ್ಯಾಬ್‌ಗಳು ಮತ್ತು ಅಗತ್ಯವಾದವನ್ನು, ಅಥವಾ Firefox ಜೊತೆ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಲು Mozilla ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ.</string>
-    <string name="dejavu_settings_matrix">Matrix ನಲ್ಲಿ ಚಾಟ್ ಮಾಡಿ</string>
-    <string name="dejavu_settings_matrix_summary">ಪ್ರಶ್ನೆ ಕೇಳಿ, ವೈಶಿಷ್ಟ್ಯವನ್ನು ಸೂಚಿಸಿ ಅಥವಾ ದೋಷವನ್ನು ವರದಿ ಮಾಡಿ</string>
+    <string name="dejavu_settings_email">ಇಮೇಲ್</string>
+    <string name="dejavu_settings_email_summary">ಪ್ರಶ್ನೆ ಕೇಳಿ, ವೈಶಿಷ್ಟ್ಯವನ್ನು ಸೂಚಿಸಿ ಅಥವಾ ದೋಷವನ್ನು ವರದಿ ಮಾಡಿ</string>
     <string name="dejavu_menu_clear_data">ಡೇಟಾ ತೆರವುಗೊಳಿಸು</string>
     <string name="dejavu_menu_clear_data_and_quit">ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ ನಿರ್ಗಮಿಸು</string>
     <string name="dejavu_clear_data_button">“ಡೇಟಾ ತೆರವುಗೊಳಿಸು” ಬಟನ್</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ಮರುಪ್ರಾರಂಭವಾದಾಗ ಮತ್ತೆ ಆಫ್ ಆಗುತ್ತದೆ</string>
     <string name="dejavu_preference_mouse_support">ಮೌಸ್ ಬೆಂಬಲ</string>
     <string name="dejavu_preference_mouse_support_summary">ಮಧ್ಯದ ಬಟನ್ ಕ್ಲಿಕ್ ಕೊಂಡಿಯನ್ನು ಹಿನ್ನೆಲೆ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ, ಮತ್ತು ಕೊಂಡಿಯ ಮೇಲೆ ಪಾಯಿಂಟರ್ ಇರಿಸಿದರೆ ಅದರ ವಿಳಾಸ ಕಾಣಿಸುತ್ತದೆ. ಟ್ಯಾಬ್ ಮೇಲೆ ಮಧ್ಯದ ಬಟನ್ ಕ್ಲಿಕ್ ಅದನ್ನು ಮುಚ್ಚುತ್ತದೆ.</string>
+    <string name="dejavu_no_closed_tabs">ಇತ್ತೀಚೆಗೆ ಮುಚ್ಚಿದ ಯಾವುದೇ ಟ್ಯಾಬ್‌ಗಳಿಲ್ಲ</string>
+    <string name="dejavu_tab_page_number">ಈ ಟ್ಯಾಬ್‌ನ ಪುಟ %1$d</string>
+    <string name="dejavu_tab_pages">ಈ ಟ್ಯಾಬ್‌ನ ಪುಟಗಳು</string>
+    <string name="dejavu_settings_tabs_import_export">ಟ್ಯಾಬ್‌ಗಳನ್ನು ಆಮದು ಮತ್ತು ರಫ್ತು ಮಾಡಿ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು, ಫೋಲ್ಡರ್‌ಗಳು ಮತ್ತು ಟ್ಯಾಬ್‌ಗಳನ್ನು Sidebery ಗೆ ಮತ್ತು Sidebery ಯಿಂದ ಸರಿಸಿ</string>
+    <string name="dejavu_sidebery_hint">Sidebery ಕಂಪ್ಯೂಟರ್‌ಗಳಲ್ಲಿನ Firefox ಗಾಗಿ ಟ್ಯಾಬ್ ನಿರ್ವಾಹಕ. ಅದರ ಪ್ಯಾನೆಲ್‌ಗಳು ಇಲ್ಲಿ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು, ಅದರ ಟ್ಯಾಬ್ ಗುಂಪುಗಳು ಫೋಲ್ಡರ್‌ಗಳು ಮತ್ತು ಅದರ ಪಿನ್ ಮಾಡಿದ ಟ್ಯಾಬ್‌ಗಳು ಅಗತ್ಯವಾದವು.</string>
+    <string name="dejavu_sidebery_export">Sidebery ಗೆ ರಫ್ತು ಮಾಡಿ</string>
+    <string name="dejavu_sidebery_import">Sidebery ಯಿಂದ ಆಮದು ಮಾಡಿ</string>
+    <string name="dejavu_sidebery_steps">Sidebery ಯ «Snapshots viewer» ನಲ್ಲಿ «Import snapshot» Dejavu ದ ಫೈಲ್ ಓದುತ್ತದೆ ಮತ್ತು «Open all windows» ಅದರ ಟ್ಯಾಬ್‌ಗಳನ್ನು ತೆರೆಯುತ್ತದೆ. ಟ್ಯಾಬ್‌ಗಳನ್ನು ಇಲ್ಲಿಗೆ ತರಲು ಅಲ್ಲಿ ಒಂದು ಸ್ನ್ಯಾಪ್‌ಶಾಟ್ ಆಯ್ಕೆಮಾಡಿ, ನಂತರ «Export snapshot» ಮತ್ತು «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">ಹೊಸ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು</string>
+    <string name="dejavu_sidebery_essentials">ಅಗತ್ಯವಾದವು</string>
+    <string name="dejavu_sidebery_new_containers">ಹೊಸ ಕಂಟೇನರ್‌ಗಳು</string>
+    <string name="dejavu_sidebery_left_out">ಬಿಟ್ಟವು</string>
+    <string name="dejavu_sidebery_left_out_note">ಫೋನ್ ತೆರೆಯಲಾಗದ ಪುಟಗಳು, ಸ್ಥಳೀಯ ಫೈಲ್‌ಗಳಂತಹವು, ಮತ್ತು ಖಾಸಗಿ ವಿಂಡೋಗಳ ಟ್ಯಾಬ್‌ಗಳು</string>
+    <string name="dejavu_sidebery_nothing_new">ಈ ಫೈಲ್‌ನಲ್ಲಿ ಹೊಸದೇನೂ ಇಲ್ಲ.</string>
+    <string name="dejavu_sidebery_import_button">ಆಮದು ಮಾಡಿ</string>
+    <string name="dejavu_sidebery_imported">Sidebery ಯಿಂದ ಆಮದು ಮಾಡಲಾಗಿದೆ</string>
+    <string name="dejavu_sidebery_exported">Sidebery ಗಾಗಿ ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="dejavu_sidebery_export_failed">ಫೈಲ್ ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="dejavu_sidebery_bad_file">ಈ ಫೈಲ್ Sidebery ಯ ಸ್ನ್ಯಾಪ್‌ಶಾಟ್ ಅಥವಾ ಬ್ಯಾಕಪ್ ಅಲ್ಲ.</string>
+    <string name="dejavu_passkeys_unsupported">ಈ Android ಆವೃತ್ತಿಯಲ್ಲಿ ಪಾಸ್‌ಕೀಗಳು ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
 </resources>

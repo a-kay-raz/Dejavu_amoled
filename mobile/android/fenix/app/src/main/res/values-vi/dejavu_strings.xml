@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu là trình duyệt mặc định của bạn.</string>
     <string name="dejavu_welcome_sync_title">Không gian làm việc của bạn trên mọi thiết bị</string>
     <string name="dejavu_welcome_sync_text">Đăng nhập bằng tài khoản Mozilla để đồng bộ hóa không gian làm việc, thẻ đã ghim và trang thiết yếu với Zen, hoặc thẻ với Firefox.</string>
-    <string name="dejavu_settings_matrix">Trò chuyện trên Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Đặt câu hỏi, đề xuất tính năng hoặc báo lỗi</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Đặt câu hỏi, đề xuất tính năng hoặc báo lỗi</string>
     <string name="dejavu_menu_clear_data">Xóa dữ liệu</string>
     <string name="dejavu_menu_clear_data_and_quit">Xóa dữ liệu và thoát</string>
     <string name="dejavu_clear_data_button">Nút “Xóa dữ liệu”</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">Tự tắt lại khi Dejavu khởi động lại</string>
     <string name="dejavu_preference_mouse_support">Hỗ trợ chuột</string>
     <string name="dejavu_preference_mouse_support_summary">Nhấp chuột giữa sẽ mở liên kết trong một thẻ nền, và di chuột lên liên kết sẽ hiển thị địa chỉ của nó. Nhấp chuột giữa vào một thẻ sẽ đóng thẻ đó.</string>
+    <string name="dejavu_no_closed_tabs">Không có thẻ nào đã đóng gần đây</string>
+    <string name="dejavu_tab_page_number">Trang %1$d trong thẻ này</string>
+    <string name="dejavu_tab_pages">Các trang trong thẻ này</string>
+    <string name="dejavu_settings_tabs_import_export">Nhập và xuất thẻ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Chuyển không gian làm việc, thư mục và thẻ sang Sidebery và từ Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery là trình quản lý thẻ cho Firefox trên máy tính. Ở đây, các bảng của nó là không gian làm việc, các nhóm thẻ là thư mục và các thẻ đã ghim là trang thiết yếu.</string>
+    <string name="dejavu_sidebery_export">Xuất sang Sidebery</string>
+    <string name="dejavu_sidebery_import">Nhập từ Sidebery</string>
+    <string name="dejavu_sidebery_steps">Trong «Snapshots viewer» của Sidebery, «Import snapshot» đọc tập tin từ Dejavu và «Open all windows» mở các thẻ của nó. Để mang thẻ về đây, hãy chọn một ảnh chụp ở đó, rồi «Export snapshot» và «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Không gian làm việc mới</string>
+    <string name="dejavu_sidebery_essentials">Trang thiết yếu</string>
+    <string name="dejavu_sidebery_new_containers">Vùng chứa mới</string>
+    <string name="dejavu_sidebery_left_out">Bị bỏ qua</string>
+    <string name="dejavu_sidebery_left_out_note">Các trang điện thoại không mở được, như tập tin cục bộ, và thẻ của cửa sổ riêng tư</string>
+    <string name="dejavu_sidebery_nothing_new">Tập tin này không có gì mới.</string>
+    <string name="dejavu_sidebery_import_button">Nhập</string>
+    <string name="dejavu_sidebery_imported">Đã nhập từ Sidebery</string>
+    <string name="dejavu_sidebery_exported">Đã lưu cho Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Không thể lưu tập tin. Hãy thử lại.</string>
+    <string name="dejavu_sidebery_bad_file">Tập tin này không phải ảnh chụp hay bản sao lưu của Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Passkey chưa được hỗ trợ trên phiên bản Android này</string>
 </resources>

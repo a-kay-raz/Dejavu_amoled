@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — tiykarǵı brauzerińiz.</string>
     <string name="dejavu_welcome_sync_title">Jumıs maydanlarıńız hár bir qurılmada</string>
     <string name="dejavu_welcome_sync_text">Jumıs maydanların, bekitilgen betlerdi hám tiykarǵılardı Zen penen yamasa betlerdi Firefox penen sinxronlastırıw ushın Mozilla akkauntı menen kiriń.</string>
-    <string name="dejavu_settings_matrix">Matrix-te sóylesiń</string>
-    <string name="dejavu_settings_matrix_summary">Soraw beriń, imkaniyat usınıń yamasa qáte haqqında xabarlań</string>
+    <string name="dejavu_settings_email">Elektron pochta</string>
+    <string name="dejavu_settings_email_summary">Soraw beriń, imkaniyat usınıń yamasa qáte haqqında xabarlań</string>
     <string name="dejavu_menu_clear_data">Maǵlıwmatlardı tazalaw</string>
     <string name="dejavu_menu_clear_data_and_quit">Maǵlıwmatlardı tazalaw hám shıǵıw</string>
     <string name="dejavu_clear_data_button">«Maǵlıwmatlardı tazalaw» túymesi</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu qaytadan iske túskende qayta óshedi</string>
     <string name="dejavu_preference_mouse_support">Tıshqansha qollaw</string>
     <string name="dejavu_preference_mouse_support_summary">Ortańǵı túyme menen basıw siltemeni artqı fondaǵı bette ashadı, al siltemeniń ústine tıshqansha alıp barıw onıń mánzilin kórsetedi. Bet ústine ortańǵı túyme menen basıw onı jabadı.</string>
+    <string name="dejavu_no_closed_tabs">Jaqında jabılǵan betler joq</string>
+    <string name="dejavu_tab_page_number">Bul bettegi %1$d-bet</string>
+    <string name="dejavu_tab_pages">Bul bettegi betler</string>
+    <string name="dejavu_settings_tabs_import_export">Betlerdi import hám eksport qılıw</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Jumıs maydanların, papkalardı hám betlerdi Sidebery-ge hám Sidebery-den kóshiriw</string>
+    <string name="dejavu_sidebery_hint">Sidebery — kompyuterlerdegi Firefox ushın betler basqarıwshısı. Onıń panelleri bul jerde jumıs maydanları, bet toparları papkalar, bekitilgen betleri bolsa tiykarǵılar.</string>
+    <string name="dejavu_sidebery_export">Sidebery-ge eksportlaw</string>
+    <string name="dejavu_sidebery_import">Sidebery-den importlaw</string>
+    <string name="dejavu_sidebery_steps">Sidebery-diń «Snapshots viewer» bóliminde «Import snapshot» Dejavu faylın oqıydı, «Open all windows» bolsa onıń betlerin ashadı. Betlerdi bul jerge alıp keliw ushın ol jerde snapshot tańlań, keyin «Export snapshot» hám «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Jańa jumıs maydanları</string>
+    <string name="dejavu_sidebery_essentials">Tiykarǵılar</string>
+    <string name="dejavu_sidebery_new_containers">Jańa konteynerler</string>
+    <string name="dejavu_sidebery_left_out">Qosılmaǵanlar</string>
+    <string name="dejavu_sidebery_left_out_note">Telefon asha almaytuǵın betler, mısalı jergilikli fayllar, hám jeke aynalardıń betleri</string>
+    <string name="dejavu_sidebery_nothing_new">Bul faylda jańa hesh nárse joq.</string>
+    <string name="dejavu_sidebery_import_button">Importlaw</string>
+    <string name="dejavu_sidebery_imported">Sidebery-den importlandı</string>
+    <string name="dejavu_sidebery_exported">Sidebery ushın saqlandı</string>
+    <string name="dejavu_sidebery_export_failed">Fayldı saqlap bolmadı. Qaytadan urınıp kóriń.</string>
+    <string name="dejavu_sidebery_bad_file">Bul fayl Sidebery snapshot-ı yamasa zapas nusqası emes.</string>
+    <string name="dejavu_passkeys_unsupported">Kiriw giltleri (passkey) bul Android nusqasında áli qollap-quwatlanbaydı</string>
 </resources>

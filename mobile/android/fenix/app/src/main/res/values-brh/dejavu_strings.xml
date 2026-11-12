@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu نی نا اصل براؤزر ہس۔</string>
     <string name="dejavu_welcome_sync_title">نی نا ورک سپیساک ہر ڈیوائس پار</string>
     <string name="dejavu_welcome_sync_text">Zen گدا ورک سپیساک، پن ٹیباک او ضروری چیزاک، یا Firefox گدا ٹیباک سنک کننگ کن Mozilla اکاؤنٹ اٹ سائن ان کبو۔</string>
-    <string name="dejavu_settings_matrix">Matrix اٹ گپ شپ</string>
-    <string name="dejavu_settings_matrix_summary">سوال، فیچر نا تجویز یا بگ نا رپورٹ</string>
+    <string name="dejavu_settings_email">ای میل</string>
+    <string name="dejavu_settings_email_summary">سوال، فیچر نا تجویز یا بگ نا رپورٹ</string>
     <string name="dejavu_menu_clear_data">ڈیٹا صاف کبو</string>
     <string name="dejavu_menu_clear_data_and_quit">ڈیٹا صاف کبو او بند کبو</string>
     <string name="dejavu_clear_data_button">«ڈیٹا صاف کبو» بٹن</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu دوبارہ شروع مننگ آ پدا بند مریک</string>
     <string name="dejavu_preference_mouse_support">ماؤس نا مدد</string>
     <string name="dejavu_preference_mouse_support_summary">درمیانی بٹن آن کلک کننگ لنک اے پد نا ٹیب اٹ ملیک، و لنک نا مونا ماؤس اے بننگ اونا پتہ اے پیش کیک۔ ٹیب آ درمیانی بٹن اٹ کلک کننگ اونا بند کیک۔</string>
+    <string name="dejavu_no_closed_tabs">زوتیاٹ بندکروکا ٹیب کائی نی</string>
+    <string name="dejavu_tab_page_number">دا ٹیب ٹی صفحہ %1$d</string>
+    <string name="dejavu_tab_pages">دا ٹیب ٹی صفحہ غاک</string>
+    <string name="dejavu_settings_tabs_import_export">ٹیباک امپورٹ او ایکسپورٹ کبو</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ورک سپیساک، فولڈراک او ٹیباک Sidebery غا او Sidebery آن منتقل کبو</string>
+    <string name="dejavu_sidebery_hint">Sidebery کمپیوٹراک ٹی Firefox کن ٹیب مینیجر ئسے۔ دا پینلاک ادے ورک سپیساک ئو، ٹیب گروپاک فولڈراک ئو او پن ٹیباک ضروری چیزاک ئو۔</string>
+    <string name="dejavu_sidebery_export">Sidebery غا ایکسپورٹ کبو</string>
+    <string name="dejavu_sidebery_import">Sidebery آن امپورٹ کبو</string>
+    <string name="dejavu_sidebery_steps">Sidebery نا «Snapshots viewer» ٹی «Import snapshot» Dejavu نا فائل اے خوانک او «Open all windows» دا ٹیباک اے ملک۔ ٹیباک ادے ہتنگ کن اوڑے اسٹ snapshot چنبو، دانا پد «Export snapshot» او «Save as JSON»۔</string>
+    <string name="dejavu_sidebery_new_workspaces">پوسکنا ورک سپیساک</string>
+    <string name="dejavu_sidebery_essentials">ضروری چیزاک</string>
+    <string name="dejavu_sidebery_new_containers">پوسکنا کنٹینراک</string>
+    <string name="dejavu_sidebery_left_out">یلہ کننگا</string>
+    <string name="dejavu_sidebery_left_out_note">او صفحہ آک ہرافتے فون ملنگ کپک، داڑان لوکل فائلاک، او پرائیویٹ کھڑکیاک نا ٹیباک</string>
+    <string name="dejavu_sidebery_nothing_new">دا فائل اٹی ہچ پوسکنا اف۔</string>
+    <string name="dejavu_sidebery_import_button">امپورٹ کبو</string>
+    <string name="dejavu_sidebery_imported">Sidebery آن امپورٹ مس</string>
+    <string name="dejavu_sidebery_exported">Sidebery کن محفوظ مس</string>
+    <string name="dejavu_sidebery_export_failed">فائل محفوظ مننگ کتو۔ پدا کوشش کبو۔</string>
+    <string name="dejavu_sidebery_bad_file">دا فائل Sidebery نا snapshot یا بیک اپ اف۔</string>
+    <string name="dejavu_passkeys_unsupported">پاس کی (passkey) ای Android ورژن ٹی ہلے تک سپورٹ مفسہ</string>
 </resources>

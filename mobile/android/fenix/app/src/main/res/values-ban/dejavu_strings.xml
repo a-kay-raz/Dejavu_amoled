@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu suba dadi peramban bawaan ragane.</string>
     <string name="dejavu_welcome_sync_title">Genah ragane di makejang piranti</string>
     <string name="dejavu_welcome_sync_text">Sign in nganggon akun Mozilla anggon nyinkronang genah, tab kasemat, lan Penting ajak Zen, wiadin tab ajak Firefox.</string>
-    <string name="dejavu_settings_matrix">Ngorta ring Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Metakon, usulang fitur, utawi laporang bug</string>
+    <string name="dejavu_settings_email">Surel</string>
+    <string name="dejavu_settings_email_summary">Metakon, usulang fitur, utawi laporang bug</string>
     <string name="dejavu_menu_clear_data">Bersihang data</string>
     <string name="dejavu_menu_clear_data_and_quit">Bersihang data tur medal</string>
     <string name="dejavu_clear_data_button">Tombol “Bersihang data”</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">Mademang malih rikala Dejavu kawitin malih</string>
     <string name="dejavu_preference_mouse_support">Dukungan mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Klik tengah ngungkabang link ring tab latar, tur ngenahang mouse ring link ngedengang alamatnyane. Klik tengah ring tab nutup tab punika.</string>
+    <string name="dejavu_no_closed_tabs">Tusing ada tab ane mara katutup</string>
+    <string name="dejavu_tab_page_number">Kaca %1$d ring tab puniki</string>
+    <string name="dejavu_tab_pages">Kaca ring tab puniki</string>
+    <string name="dejavu_settings_tabs_import_export">Impor lan ekspor tab</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Pindahang genah, map, lan tab ka Sidebery lan saking Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery inggih punika pangatur tab anggen Firefox ring komputer. Panelnyane dados genah iriki, grup tabnyane dados map, lan tab kasematnyane dados penting.</string>
+    <string name="dejavu_sidebery_export">Ekspor ka Sidebery</string>
+    <string name="dejavu_sidebery_import">Impor saking Sidebery</string>
+    <string name="dejavu_sidebery_steps">Ring «Snapshots viewer» Sidebery, «Import snapshot» ngwacen file saking Dejavu lan «Open all windows» ngungkab tabnyane. Anggen ngaturang tab iriki, pilih snapshot irika, raris «Export snapshot» lan «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Genah anyar</string>
+    <string name="dejavu_sidebery_essentials">Penting</string>
+    <string name="dejavu_sidebery_new_containers">Wadah anyar</string>
+    <string name="dejavu_sidebery_left_out">Kakutang</string>
+    <string name="dejavu_sidebery_left_out_note">Kaca sane nenten prasida kaungkab ring telepon, sakadi file lokal, miwah tab saking jendela pribadi</string>
+    <string name="dejavu_sidebery_nothing_new">Nenten wenten sane anyar ring file puniki.</string>
+    <string name="dejavu_sidebery_import_button">Impor</string>
+    <string name="dejavu_sidebery_imported">Kaimpor saking Sidebery</string>
+    <string name="dejavu_sidebery_exported">Kasimpen anggen Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Nenten prasida nyimpen file. Cobia malih.</string>
+    <string name="dejavu_sidebery_bad_file">File puniki boya snapshot utawi cadangan Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Kunci sandi (passkey) durung kasokong ring versi Android puniki</string>
 </resources>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu es vòstre navegador per defaut.</string>
     <string name="dejavu_welcome_sync_title">Vòstres espacis de trabalh sus totes los aparelhs</string>
     <string name="dejavu_welcome_sync_text">Connectatz-vos amb un compte Mozilla per sincronizar los espacis de trabalh, los onglets fixats e los essencials amb Zen, o los onglets amb Firefox.</string>
-    <string name="dejavu_settings_matrix">Charratz sus Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pausatz una question, suggerissètz una foncionalitat o senhalatz una error</string>
+    <string name="dejavu_settings_email">Corrièl</string>
+    <string name="dejavu_settings_email_summary">Pausatz una question, suggerissètz una foncionalitat o senhalatz una error</string>
     <string name="dejavu_menu_clear_data">Escafar las donadas</string>
     <string name="dejavu_menu_clear_data_and_quit">Escafar las donadas e quitar</string>
     <string name="dejavu_clear_data_button">Boton «Escafar las donadas»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Se desactiva tornamai quand Dejavu se reaviá</string>
     <string name="dejavu_preference_mouse_support">Presa en carga de la mirga</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic del mitan dobrís un ligam dins un onglet en rèireplan, e passar sus un ligam aficha son adreça. Un clic del mitan sus un onglet lo barra.</string>
+    <string name="dejavu_no_closed_tabs">Cap d’onglet tampat recentament</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d d’aqueste onglet</string>
+    <string name="dejavu_tab_pages">Paginas d’aqueste onglet</string>
+    <string name="dejavu_settings_tabs_import_export">Importar e exportar d’onglets</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Desplaçar espacis de trabalh, dossièrs e onglets cap a Sidebery e dempuèi Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery es un gestionari d’onglets per Firefox sus ordenador. Aquí sos panèls son d’espacis de trabalh, sos grops d’onglets son de dossièrs e sos onglets fixats son d’essencials.</string>
+    <string name="dejavu_sidebery_export">Exportar cap a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar dempuèi Sidebery</string>
+    <string name="dejavu_sidebery_steps">Dins lo « Snapshots viewer » de Sidebery, « Import snapshot » legís lo fichièr de Dejavu e « Open all windows » ne dobrís los onglets. Per portar d’onglets aquí, causissètz-i una captura, puèi « Export snapshot » e « Save as JSON ».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espacis de trabalh novèls</string>
+    <string name="dejavu_sidebery_essentials">Essencials</string>
+    <string name="dejavu_sidebery_new_containers">Contenidors novèls</string>
+    <string name="dejavu_sidebery_left_out">Daissats de costat</string>
+    <string name="dejavu_sidebery_left_out_note">Paginas qu’un telefòn pòt pas dobrir, coma los fichièrs locals, e onglets de fenèstras privadas</string>
+    <string name="dejavu_sidebery_nothing_new">I a pas res de nòu dins aqueste fichièr.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importat dempuèi Sidebery</string>
+    <string name="dejavu_sidebery_exported">Enregistrat per Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impossible d’enregistrar lo fichièr. Ensajatz tornarmai.</string>
+    <string name="dejavu_sidebery_bad_file">Aqueste fichièr es pas una captura nimai una salvagarda de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Las claus d’accès son pas encara presas en carga sus aquesta version d’Android</string>
 </resources>

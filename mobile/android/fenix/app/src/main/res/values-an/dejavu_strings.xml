@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ye o tuyo navegador predeterminau.</string>
     <string name="dejavu_welcome_sync_title">Os tuyos espacios de treballo en cada dispositivo</string>
     <string name="dejavu_welcome_sync_text">Inicia sesión con una cuenta de Mozilla ta sincronizar espacios de treballo, pestanyas fixadas y esenciales con Zen, u pestanyas con Firefox.</string>
-    <string name="dejavu_settings_matrix">Charra en Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fe preguntas, sucherencias u informes d\'errors</string>
+    <string name="dejavu_settings_email">Correu electronico</string>
+    <string name="dejavu_settings_email_summary">Fe preguntas, sucherencias u informes d\'errors</string>
     <string name="dejavu_menu_clear_data">Limpiar datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Limpiar datos y salir</string>
     <string name="dejavu_clear_data_button">Botón «Limpiar datos»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Se torna a desactivar quan Dejavu se reinicia</string>
     <string name="dejavu_preference_mouse_support">Suporte de churi</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic central ubre un vinclo en una pestanya de fondo, y pasar por denzima d\'un vinclo amuestra la suya adreza. Un clic central en una pestanya la zarra.</string>
+    <string name="dejavu_no_closed_tabs">No bi ha pestanyas zarradas fa poco</string>
+    <string name="dejavu_tab_page_number">Pachina %1$d en ista pestanya</string>
+    <string name="dejavu_tab_pages">Pachinas en ista pestanya</string>
+    <string name="dejavu_settings_tabs_import_export">Importar y exportar pestanyas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mover espacios de treballo, carpetas y pestanyas enta Sidebery y dende Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery ye un chestor de pestanyas pa Firefox en ordinadors. Os suyos panels son aquí espacios de treballo, os suyos grupos de pestanyas son carpetas y as suyas pestanyas fixadas son esenciales.</string>
+    <string name="dejavu_sidebery_export">Exportar ta Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar dende Sidebery</string>
+    <string name="dejavu_sidebery_steps">En o «Snapshots viewer» de Sidebery, «Import snapshot» leye o fichero de Dejavu y «Open all windows» ubre as suyas pestanyas. Pa portar pestanyas aquí, tría una instantania allí y dimpués «Export snapshot» y «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espacios de treballo nuevos</string>
+    <string name="dejavu_sidebery_essentials">Esenciales</string>
+    <string name="dejavu_sidebery_new_containers">Contenedors nuevos</string>
+    <string name="dejavu_sidebery_left_out">Deixadas de costau</string>
+    <string name="dejavu_sidebery_left_out_note">Pachinas que un telefono no puede ubrir, como fichers locals, y pestanyas de finestras privadas</string>
+    <string name="dejavu_sidebery_nothing_new">No i hai cosa nueva en iste fichero.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importau dende Sidebery</string>
+    <string name="dejavu_sidebery_exported">Alzau ta Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">No s’ha puesto alzar o fichero. Torna-lo a intentar.</string>
+    <string name="dejavu_sidebery_bad_file">Iste fichero no ye una instantania ni una copia de seguranza de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Las claus d\'acceso encara no son compatibles con esta versión d\'Android</string>
 </resources>

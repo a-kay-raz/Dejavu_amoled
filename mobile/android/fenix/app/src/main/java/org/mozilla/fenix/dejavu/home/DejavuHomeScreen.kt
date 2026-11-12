@@ -240,6 +240,7 @@ fun ComposeView.setDejavuHomeContent(
                     searchAtBottom = searchAtBottom,
                     hasDataToClear = hasDataToClear,
                     tipsAllowed = !welcomeDue && !syncStatus.askSource && !isSearchActive,
+                    searching = isSearchActive,
                 )
 
                 if (showsPage) {

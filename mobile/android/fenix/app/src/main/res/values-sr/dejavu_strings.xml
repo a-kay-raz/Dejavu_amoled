@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu је ваш подразумевани прегледач.</string>
     <string name="dejavu_welcome_sync_title">Ваши радни простори на сваком уређају</string>
     <string name="dejavu_welcome_sync_text">Пријавите се Mozilla налогом да бисте синхронизовали радне просторе, закачене језичке и Фаворите са Zen-ом, или језичке са Firefox-ом.</string>
-    <string name="dejavu_settings_matrix">Ћаскајте на Matrix-у</string>
-    <string name="dejavu_settings_matrix_summary">Поставите питање, предложите функцију или пријавите грешку</string>
+    <string name="dejavu_settings_email">Е-пошта</string>
+    <string name="dejavu_settings_email_summary">Поставите питање, предложите функцију или пријавите грешку</string>
     <string name="dejavu_menu_clear_data">Очисти податке</string>
     <string name="dejavu_menu_clear_data_and_quit">Очисти податке и затвори</string>
     <string name="dejavu_clear_data_button">Дугме „Очисти податке“</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Опет се искључује када се Dejavu поново покрене</string>
     <string name="dejavu_preference_mouse_support">Подршка за миша</string>
     <string name="dejavu_preference_mouse_support_summary">Клик средњим тастером отвара везу у језичку у позадини, а прелазак мишем преко везе приказује њену адресу. Клик средњим тастером на језичак га затвара.</string>
+    <string name="dejavu_no_closed_tabs">Нема недавно затворених језичака</string>
+    <string name="dejavu_tab_page_number">Страница %1$d у овом језичку</string>
+    <string name="dejavu_tab_pages">Странице у овом језичку</string>
+    <string name="dejavu_settings_tabs_import_export">Увоз и извоз језичака</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Премештање радних простора, фасцикли и језичака у Sidebery и из њега</string>
+    <string name="dejavu_sidebery_hint">Sidebery је управник језичака за Firefox на рачунарима. Његови панели су овде радни простори, групе језичака фасцикле, а закачени језичци фаворити.</string>
+    <string name="dejavu_sidebery_export">Извези у Sidebery</string>
+    <string name="dejavu_sidebery_import">Увези из Sidebery-ја</string>
+    <string name="dejavu_sidebery_steps">У Sidebery-јевом «Snapshots viewer» дугме «Import snapshot» чита датотеку из Dejavu-а, а «Open all windows» отвара њене језичке. Да бисте донели језичке овамо, тамо изаберите снимак, затим «Export snapshot» и «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Нови радни простори</string>
+    <string name="dejavu_sidebery_essentials">Фаворити</string>
+    <string name="dejavu_sidebery_new_containers">Нови контејнери</string>
+    <string name="dejavu_sidebery_left_out">Изостављено</string>
+    <string name="dejavu_sidebery_left_out_note">Странице које телефон не може да отвори, као што су локалне датотеке, и језичци приватних прозора</string>
+    <string name="dejavu_sidebery_nothing_new">У овој датотеци нема ничег новог.</string>
+    <string name="dejavu_sidebery_import_button">Увези</string>
+    <string name="dejavu_sidebery_imported">Увезено из Sidebery-ја</string>
+    <string name="dejavu_sidebery_exported">Сачувано за Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Чување датотеке није успело. Покушајте поново.</string>
+    <string name="dejavu_sidebery_bad_file">Ова датотека није Sidebery снимак ни резервна копија.</string>
+    <string name="dejavu_passkeys_unsupported">Приступни кључеви још увек нису подржани на овој верзији Android-а</string>
 </resources>

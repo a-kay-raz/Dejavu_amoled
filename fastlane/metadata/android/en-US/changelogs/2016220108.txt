@@ -1,0 +1,12 @@
+- [FIX] Leave room only for the system bars that show
+- [FIX] Settings: space radio summaries from the card edge and line headers up with the rows
+- [FIX] Tab strip: fade long titles out instead of cutting them off
+- [FIX] Hidden status and navigation bars no longer leave a gap
+- [FIX] Customize > Bars: summaries clear of the card edge, headers lined up with their rows
+- [FIX] Long tab strip titles fade out instead of being cut off
+- [FEATURE] Wallpapers keep their dark look in the light theme, light looks are picked by hand, and passkeys on old Android show a warning
+- [FIX] Dejavu no longer gets stuck sideways after a fullscreen video on YouTube
+- [FIX] Dejavu no longer gets stuck sideways after a fullscreen video on YouTube
+- [FIX] A picked chip on the search screen scrolls into view in the middle of its row
+- [FIX] Radio rows in settings show their description right under the title, after pull request #283
+- [FIX] The status bar icons on the search screen are readable again over a dark wallpaper

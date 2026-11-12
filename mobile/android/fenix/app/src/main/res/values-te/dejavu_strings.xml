@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu మీ డిఫాల్ట్ బ్రౌజర్.</string>
     <string name="dejavu_welcome_sync_title">ప్రతి పరికరంలో మీ కార్యస్థలాలు</string>
     <string name="dejavu_welcome_sync_text">Mozilla ఖాతాతో సైన్ ఇన్ చేసి, కార్యస్థలాలు, పిన్ చేసిన ట్యాబులు, ముఖ్యమైనవాటిని Zen బ్రౌజర్‌తో, లేదా ట్యాబులను Firefox బ్రౌజర్‌తో సింక్ చేయండి.</string>
-    <string name="dejavu_settings_matrix">Matrixలో చాట్ చేయండి</string>
-    <string name="dejavu_settings_matrix_summary">ప్రశ్న అడగండి, సౌలభ్యాన్ని సూచించండి లేదా లోపాన్ని నివేదించండి</string>
+    <string name="dejavu_settings_email">ఈమెయిలు</string>
+    <string name="dejavu_settings_email_summary">ప్రశ్న అడగండి, సౌలభ్యాన్ని సూచించండి లేదా లోపాన్ని నివేదించండి</string>
     <string name="dejavu_menu_clear_data">డేటాను తుడిచివేయి</string>
     <string name="dejavu_menu_clear_data_and_quit">డేటాను తుడిచివేసి నిష్క్రమించు</string>
     <string name="dejavu_clear_data_button">“డేటాను తుడిచివేయి” బొత్తం</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu పునఃప్రారంభమైనప్పుడు మళ్లీ ఆఫ్ అవుతుంది</string>
     <string name="dejavu_preference_mouse_support">మౌస్ మద్దతు</string>
     <string name="dejavu_preference_mouse_support_summary">మధ్య బటన్‌తో క్లిక్ చేస్తే లంకె నేపథ్య ట్యాబులో తెరుచుకుంటుంది, లంకెపై పాయింటర్ ఉంచితే దాని చిరునామా కనిపిస్తుంది. ట్యాబుపై మధ్య బటన్‌తో క్లిక్ చేస్తే అది మూసుకుంటుంది.</string>
+    <string name="dejavu_no_closed_tabs">ఇటీవల మూసివేసిన ట్యాబులు ఏమీ లేవు</string>
+    <string name="dejavu_tab_page_number">ఈ ట్యాబులో పేజీ %1$d</string>
+    <string name="dejavu_tab_pages">ఈ ట్యాబులోని పేజీలు</string>
+    <string name="dejavu_settings_tabs_import_export">ట్యాబులను దిగుమతి మరియు ఎగుమతి చేయండి</string>
+    <string name="dejavu_settings_tabs_import_export_summary">కార్యస్థలాలు, ఫోల్డర్లు మరియు ట్యాబులను Sidebery కి మరియు Sidebery నుండి తరలించండి</string>
+    <string name="dejavu_sidebery_hint">Sidebery కంప్యూటర్లలోని Firefox కోసం ట్యాబ్ నిర్వాహకం. దాని ప్యానెళ్లు ఇక్కడ కార్యస్థలాలు, దాని ట్యాబ్ సమూహాలు ఫోల్డర్లు మరియు దాని పిన్ చేసిన ట్యాబులు ముఖ్యమైనవి.</string>
+    <string name="dejavu_sidebery_export">Sidebery కి ఎగుమతి చేయండి</string>
+    <string name="dejavu_sidebery_import">Sidebery నుండి దిగుమతి చేయండి</string>
+    <string name="dejavu_sidebery_steps">Sidebery లోని «Snapshots viewer» లో «Import snapshot» Dejavu ఫైలును చదువుతుంది, «Open all windows» దాని ట్యాబులను తెరుస్తుంది. ట్యాబులను ఇక్కడికి తేవడానికి అక్కడ ఒక స్నాప్‌షాట్‌ను ఎంచుకుని, ఆపై «Export snapshot» మరియు «Save as JSON» ఎంచుకోండి.</string>
+    <string name="dejavu_sidebery_new_workspaces">కొత్త కార్యస్థలాలు</string>
+    <string name="dejavu_sidebery_essentials">ముఖ్యమైనవి</string>
+    <string name="dejavu_sidebery_new_containers">కొత్త కంటైనర్లు</string>
+    <string name="dejavu_sidebery_left_out">వదిలేసినవి</string>
+    <string name="dejavu_sidebery_left_out_note">ఫోన్ తెరవలేని పేజీలు, స్థానిక ఫైళ్లు వంటివి, మరియు ప్రైవేట్ విండోల ట్యాబులు</string>
+    <string name="dejavu_sidebery_nothing_new">ఈ ఫైలులో కొత్తదేమీ లేదు.</string>
+    <string name="dejavu_sidebery_import_button">దిగుమతి చేయండి</string>
+    <string name="dejavu_sidebery_imported">Sidebery నుండి దిగుమతి చేయబడింది</string>
+    <string name="dejavu_sidebery_exported">Sidebery కోసం భద్రపరచబడింది</string>
+    <string name="dejavu_sidebery_export_failed">ఫైలును భద్రపరచలేకపోయాం. మళ్లీ ప్రయత్నించండి.</string>
+    <string name="dejavu_sidebery_bad_file">ఈ ఫైలు Sidebery స్నాప్‌షాట్ లేదా బ్యాకప్ కాదు.</string>
+    <string name="dejavu_passkeys_unsupported">ఈ Android వెర్షన్‌లో పాస్‌కీలకు ఇంకా మద్దతు లేదు</string>
 </resources>

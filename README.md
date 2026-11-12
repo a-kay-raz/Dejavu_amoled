@@ -9,11 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://f-droid.org/packages/com.byarchitect.dejavu/"><img alt="F-Droid" src="https://img.shields.io/f-droid/v/com.byarchitect.dejavu?color=556B4F&logo=fdroid&logoColor=white"></a>
   <a href="https://play.google.com/store/apps/details?id=com.byarchitect.dejavu"><img alt="Google Play" src="https://img.shields.io/badge/Google%20Play-Dejavu-F2B84B?logo=googleplay&logoColor=white"></a>
   <a href="#download"><img alt="iOS: help wanted" src="https://img.shields.io/badge/iOS-help%20wanted-5A452A?logo=apple&logoColor=white"></a>
   <a href="LICENSE"><img alt="License: MPL 2.0" src="https://img.shields.io/badge/license-MPL%202.0-5A452A"></a>
-  <a href="https://matrix.to/#/#dejavu-browser:matrix.org"><img alt="Matrix: #dejavu-browser:matrix.org" src="https://img.shields.io/badge/Matrix-%23dejavu--browser-556B4F?logo=matrix&logoColor=white"></a>
+  <a href="mailto:byarchitect@disroot.org"><img alt="Email: byarchitect@disroot.org" src="https://img.shields.io/badge/Email-byarchitect%40disroot.org-556B4F"></a>
   <a href="https://github.com/by-architect/Dejavu/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/by-architect/Dejavu?color=F2B84B"></a>
   <a href="https://buymeacoffee.com/ByArchitect"><img alt="Buy me a coffee" src="https://img.shields.io/badge/Buy%20me%20a%20coffee-F2B84B?logo=buymeacoffee&logoColor=white"></a>
 </p>
@@ -49,9 +48,8 @@ containers and pinned tabs show up on your phone too. Sync is the only thing the
 <a href="https://fdroid.byarchitect.org/fdroid/repo?fingerprint=50941BDAC56B056A520ABFA3FC7DAAB789DEE5B83B295DA54A1961C7BC8A91C9"><img src="docs/readme/fdroid-qr.svg" alt="QR code that adds the ByArchitect repository to F-Droid" width="170" align="right"></a>
 
 <p>
-  <a href="https://f-droid.org/packages/com.byarchitect.dejavu/"><img alt="Get it on F-Droid" src="docs/readme/badge-fdroid.png" height="80"></a>
-  <a href="https://play.google.com/store/apps/details?id=com.byarchitect.dejavu"><img alt="Get it on Google Play" src="docs/readme/badge-google-play.png" height="80"></a>
   <a href="https://fdroid.byarchitect.org/fdroid/repo?fingerprint=50941BDAC56B056A520ABFA3FC7DAAB789DEE5B83B295DA54A1961C7BC8A91C9"><img alt="Get it from the ByArchitect F-Droid repository" src="docs/readme/badge-fdroid-byarchitect.png" height="80"></a>
+  <a href="https://play.google.com/store/apps/details?id=com.byarchitect.dejavu"><img alt="Get it on Google Play" src="docs/readme/badge-google-play.png" height="80"></a>
   <a href="https://github.com/by-architect/Dejavu/releases/latest"><img alt="Get it on GitHub" src="docs/readme/badge-github.png" height="80"></a>
   <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/by-architect/Dejavu"><img alt="Get it on Obtainium" src="docs/readme/badge-obtainium.png" height="80"></a>
 </p>
@@ -61,17 +59,19 @@ security keys need Android 14 or newer: Dejavu signs in with them through Androi
 passkey app you use, like Google Password Manager, Proton Pass or Bitwarden. On older Android, Google's passkey service
 only serves the browsers on Google's own list, which Dejavu is not on.
 
-**F-Droid (recommended):** Dejavu is in [F-Droid's main repository](https://f-droid.org/packages/com.byarchitect.dejavu/): search for it in F-Droid, install it,
-and F-Droid keeps it up to date. F-Droid builds it from Dejavu's source code and signs it with its own key. Like
-F-Droid does for Firefox-based browsers, it marks Dejavu with **Tracking**, as Dejavu connects to Mozilla's services
-and, unless you turn it off, to Google Safe Browsing.
-
-**ByArchitect F-Droid repository:** to get new versions a few days sooner, add Dejavu's own repository instead. In
-F-Droid, open **Repositories**, tap **+** and scan the QR code, or open
+**ByArchitect F-Droid repository (recommended):** add Dejavu's own repository to F-Droid, install Dejavu from it, and
+F-Droid keeps it up to date. In F-Droid, open **Repositories**, tap **+** and scan the QR code, or open
 [this link](https://fdroid.byarchitect.org/fdroid/repo?fingerprint=50941BDAC56B056A520ABFA3FC7DAAB789DEE5B83B295DA54A1961C7BC8A91C9)
 on your phone, then search for Dejavu. It offers the same APKs as the GitHub releases, which Dejavu's developer builds
-and signs. F-Droid's main repository and this one sign Dejavu with different keys, so switching between them means
-uninstalling first.
+and signs, and gets each new version the day it comes out.
+
+**F-Droid's main repository (not recommended):** Dejavu is also in
+[F-Droid's main repository](https://f-droid.org/packages/com.byarchitect.dejavu/), but new versions reach it slowly, often weeks
+after they come out. F-Droid builds each version itself from Dejavu's source code, and every update first waits for
+F-Droid's volunteers to review it and then for F-Droid's build cycle, which takes long for a browser this large. So
+you would miss fixes and new features for weeks. F-Droid signs its version with its own key, so switching between it
+and the ByArchitect repository means uninstalling first. Like F-Droid does for Firefox-based browsers, it marks Dejavu
+with **Tracking**, as Dejavu connects to Mozilla's services and, unless you turn it off, to Google Safe Browsing.
 
 **APK:** download `dejavu-v<version>-arm64-v8a.apk` from the
 [latest release](https://github.com/by-architect/Dejavu/releases/latest). It does not update itself, so use F-Droid
@@ -95,7 +95,7 @@ switching between Play and F-Droid or the APK means uninstalling first.
 
 **iOS:** There is no iOS app yet, and none is planned for now. Dejavu is a one-person project, and an iOS version
 needs more hands. If you are an iOS developer who would like to help, or want to sponsor it, email
-[byarchitect@disroot.org](mailto:byarchitect@disroot.org) or say hello in the [Matrix room](#community).
+[byarchitect@disroot.org](mailto:byarchitect@disroot.org).
 
 ## Features
 
@@ -173,18 +173,6 @@ last, or a private tab. Back takes you straight back to the app you came from.
 4. Each computer and phone with Firefox gets its own workspace: pinned tabs stay pinned and tab groups become folders in
    their colors. Open or close a tab there, and Firefox does the same.
 
-## Community
-
-Dejavu has a chat room on [Matrix](https://matrix.org), an open and free chat network. Come say hello, ask a question,
-share your setup or ideas, and hear about new releases first.
-
-<p>
-  <a href="https://matrix.to/#/#dejavu-browser:matrix.org"><img alt="Join the chat on Matrix: #dejavu-browser:matrix.org" src="https://img.shields.io/badge/Join%20the%20chat-%23dejavu--browser%3Amatrix.org-556B4F?style=for-the-badge&logo=matrix&logoColor=white"></a>
-</p>
-
-Open [#dejavu-browser:matrix.org](https://matrix.to/#/#dejavu-browser:matrix.org) in Element or any other Matrix app.
-For bugs and feature requests, please open an issue as explained below, so nothing gets lost in the chat.
-
 ## Report a bug or request a feature
 
 Feedback goes through [GitHub issues](https://github.com/by-architect/Dejavu/issues). When you
@@ -207,10 +195,8 @@ Pull requests are welcome too. Start the title with the kind of change, `[FIX]`,
 
 ## Contact
 
-Questions and chat go to the [Matrix room](#community).
-
-For sponsorship, designs, icon packs, themes, or anything that is not a bug report or a feature request, email
-[byarchitect@disroot.org](mailto:byarchitect@disroot.org).
+For questions, sponsorship, designs, icon packs, themes, or anything that is not a bug report or a feature request,
+email [byarchitect@disroot.org](mailto:byarchitect@disroot.org). Settings in Dejavu has an Email row that starts one.
 
 ## Contributing
 
@@ -266,12 +252,3 @@ have their own licenses, listed in [toolkit/content/license.html](toolkit/conten
 
 Dejavu is an independent project, not made or endorsed by Mozilla or the Zen Browser team. Firefox is a trademark of
 the Mozilla Foundation, and this repository grants no rights to Mozilla's trademarks.
-
-## Star history
-
-<a href="https://github.com/by-architect/Dejavu/stargazers">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/by-architect/Dejavu/roadmap/stars-dark.svg">
-    <img alt="Star history of Dejavu" src="https://raw.githubusercontent.com/by-architect/Dejavu/roadmap/stars.svg">
-  </picture>
-</a>

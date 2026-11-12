@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu adalah peramban baku Anda.</string>
     <string name="dejavu_welcome_sync_title">Ruang kerja Anda di setiap perangkat</string>
     <string name="dejavu_welcome_sync_text">Masuk dengan akun Mozilla untuk menyinkronkan ruang kerja, tab yang disemat, dan situs penting dengan Zen, atau tab dengan Firefox.</string>
-    <string name="dejavu_settings_matrix">Mengobrol di Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Ajukan pertanyaan, usulkan fitur, atau laporkan bug</string>
+    <string name="dejavu_settings_email">Surel</string>
+    <string name="dejavu_settings_email_summary">Ajukan pertanyaan, usulkan fitur, atau laporkan bug</string>
     <string name="dejavu_menu_clear_data">Bersihkan data</string>
     <string name="dejavu_menu_clear_data_and_quit">Bersihkan data dan keluar</string>
     <string name="dejavu_clear_data_button">Tombol “Bersihkan data”</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">Mati lagi saat Dejavu dimulai ulang</string>
     <string name="dejavu_preference_mouse_support">Dukungan mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Klik tengah membuka tautan di tab latar belakang, dan mengarahkan mouse ke tautan menampilkan alamatnya. Klik tengah pada tab menutupnya.</string>
+    <string name="dejavu_no_closed_tabs">Tidak ada tab yang baru saja ditutup</string>
+    <string name="dejavu_tab_page_number">Laman %1$d di tab ini</string>
+    <string name="dejavu_tab_pages">Laman di tab ini</string>
+    <string name="dejavu_settings_tabs_import_export">Impor dan ekspor tab</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Pindahkan ruang kerja, folder, dan tab ke dan dari Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery adalah pengelola tab untuk Firefox di komputer. Panelnya di sini adalah ruang kerja, grup tabnya adalah folder, dan tab yang disematnya adalah situs penting.</string>
+    <string name="dejavu_sidebery_export">Ekspor ke Sidebery</string>
+    <string name="dejavu_sidebery_import">Impor dari Sidebery</string>
+    <string name="dejavu_sidebery_steps">Di «Snapshots viewer» Sidebery, «Import snapshot» membaca berkas dari Dejavu dan «Open all windows» membuka tab-tabnya. Untuk membawa tab ke sini, pilih snapshot di sana, lalu «Export snapshot» dan «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Ruang kerja baru</string>
+    <string name="dejavu_sidebery_essentials">Situs penting</string>
+    <string name="dejavu_sidebery_new_containers">Wadah baru</string>
+    <string name="dejavu_sidebery_left_out">Tidak disertakan</string>
+    <string name="dejavu_sidebery_left_out_note">Halaman yang tidak bisa dibuka ponsel, seperti berkas lokal, dan tab dari jendela pribadi</string>
+    <string name="dejavu_sidebery_nothing_new">Tidak ada yang baru di berkas ini.</string>
+    <string name="dejavu_sidebery_import_button">Impor</string>
+    <string name="dejavu_sidebery_imported">Diimpor dari Sidebery</string>
+    <string name="dejavu_sidebery_exported">Disimpan untuk Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Tidak dapat menyimpan berkas. Coba lagi.</string>
+    <string name="dejavu_sidebery_bad_file">Berkas ini bukan snapshot atau cadangan Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Kunci sandi belum didukung di versi Android ini</string>
 </resources>

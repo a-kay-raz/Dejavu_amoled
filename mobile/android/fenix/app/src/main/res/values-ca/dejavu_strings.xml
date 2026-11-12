@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">El Dejavu és el vostre navegador per defecte.</string>
     <string name="dejavu_welcome_sync_title">Els vostres espais de treball a tots els dispositius</string>
     <string name="dejavu_welcome_sync_text">Inicieu la sessió amb un compte de Mozilla per sincronitzar els espais de treball, les pestanyes fixades i els essencials amb el Zen, o les pestanyes amb el Firefox.</string>
-    <string name="dejavu_settings_matrix">Xategeu a Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Feu una pregunta, suggeriu una funcionalitat o informeu d\'un error</string>
+    <string name="dejavu_settings_email">Correu electrònic</string>
+    <string name="dejavu_settings_email_summary">Feu una pregunta, suggeriu una funcionalitat o informeu d\'un error</string>
     <string name="dejavu_menu_clear_data">Neteja les dades</string>
     <string name="dejavu_menu_clear_data_and_quit">Neteja les dades i surt</string>
     <string name="dejavu_clear_data_button">Botó «Neteja les dades»</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Es torna a desactivar quan el Dejavu es reinicia</string>
     <string name="dejavu_preference_mouse_support">Compatibilitat amb el ratolí</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic amb el botó del mig obre un enllaç en una pestanya en segon pla, i passar per sobre d\'un enllaç en mostra l\'adreça. Un clic amb el botó del mig en una pestanya la tanca.</string>
+    <string name="dejavu_no_closed_tabs">No hi ha cap pestanya tancada recentment</string>
+    <string name="dejavu_tab_page_number">Pàgina %1$d d’aquesta pestanya</string>
+    <string name="dejavu_tab_pages">Pàgines d’aquesta pestanya</string>
+    <string name="dejavu_settings_tabs_import_export">Importa i exporta pestanyes</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mou espais de treball, carpetes i pestanyes cap a Sidebery i des de Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery és un gestor de pestanyes per al Firefox als ordinadors. Aquí els seus plafons són espais de treball, els seus grups de pestanyes són carpetes i les seves pestanyes fixades són essencials.</string>
+    <string name="dejavu_sidebery_export">Exporta a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importa de Sidebery</string>
+    <string name="dejavu_sidebery_steps">Al «Snapshots viewer» de Sidebery, «Import snapshot» llegeix el fitxer de Dejavu i «Open all windows» n’obre les pestanyes. Per portar pestanyes aquí, trieu-hi una instantània i després «Export snapshot» i «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espais de treball nous</string>
+    <string name="dejavu_sidebery_essentials">Essencials</string>
+    <string name="dejavu_sidebery_new_containers">Contenidors nous</string>
+    <string name="dejavu_sidebery_left_out">Deixades de banda</string>
+    <string name="dejavu_sidebery_left_out_note">Pàgines que un telèfon no pot obrir, com fitxers locals, i pestanyes de finestres privades</string>
+    <string name="dejavu_sidebery_nothing_new">No hi ha res de nou en aquest fitxer.</string>
+    <string name="dejavu_sidebery_import_button">Importa</string>
+    <string name="dejavu_sidebery_imported">S’ha importat de Sidebery</string>
+    <string name="dejavu_sidebery_exported">S’ha desat per a Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">No s’ha pogut desar el fitxer. Torneu-ho a provar.</string>
+    <string name="dejavu_sidebery_bad_file">Aquest fitxer no és una instantània ni una còpia de seguretat de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Les claus d’accés encara no són compatibles amb aquesta versió d’Android</string>
 </resources>

@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu este browserul tău implicit.</string>
     <string name="dejavu_welcome_sync_title">Spațiile tale de lucru pe orice dispozitiv</string>
     <string name="dejavu_welcome_sync_text">Conectează-te cu un cont Mozilla pentru a sincroniza spațiile de lucru, filele fixate și favoritele cu Zen sau filele cu Firefox.</string>
-    <string name="dejavu_settings_matrix">Discută pe Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pune o întrebare, sugerează o funcționalitate sau raportează o eroare</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Pune o întrebare, sugerează o funcționalitate sau raportează o eroare</string>
     <string name="dejavu_menu_clear_data">Șterge datele</string>
     <string name="dejavu_menu_clear_data_and_quit">Șterge datele și ieși</string>
     <string name="dejavu_clear_data_button">Butonul „Șterge datele”</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Se dezactivează din nou când Dejavu repornește</string>
     <string name="dejavu_preference_mouse_support">Suport pentru mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic cu butonul din mijloc deschide un link într-o filă în fundal, iar trecerea cu mouse-ul peste un link îi afișează adresa. Un clic cu butonul din mijloc pe o filă o închide.</string>
+    <string name="dejavu_no_closed_tabs">Nu există file închise recent</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d din această filă</string>
+    <string name="dejavu_tab_pages">Paginile din această filă</string>
+    <string name="dejavu_settings_tabs_import_export">Importă și exportă file</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mută spații de lucru, foldere și file în și din Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery este un manager de file pentru Firefox pe calculatoare. Aici panourile sale sunt spații de lucru, grupurile de file sunt foldere, iar filele fixate sunt favorite.</string>
+    <string name="dejavu_sidebery_export">Exportă în Sidebery</string>
+    <string name="dejavu_sidebery_import">Importă din Sidebery</string>
+    <string name="dejavu_sidebery_steps">În «Snapshots viewer» din Sidebery, «Import snapshot» citește fișierul din Dejavu, iar «Open all windows» îi deschide filele. Ca să aduci file aici, alege acolo un instantaneu, apoi «Export snapshot» și «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Spații de lucru noi</string>
+    <string name="dejavu_sidebery_essentials">Favorite</string>
+    <string name="dejavu_sidebery_new_containers">Containere noi</string>
+    <string name="dejavu_sidebery_left_out">Omise</string>
+    <string name="dejavu_sidebery_left_out_note">Pagini pe care un telefon nu le poate deschide, cum ar fi fișierele locale, și filele din ferestrele private</string>
+    <string name="dejavu_sidebery_nothing_new">Nu este nimic nou în acest fișier.</string>
+    <string name="dejavu_sidebery_import_button">Importă</string>
+    <string name="dejavu_sidebery_imported">Importat din Sidebery</string>
+    <string name="dejavu_sidebery_exported">Salvat pentru Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Fișierul nu a putut fi salvat. Încearcă din nou.</string>
+    <string name="dejavu_sidebery_bad_file">Acest fișier nu este un instantaneu sau o copie de rezervă Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Cheile de acces nu sunt încă acceptate pe această versiune de Android</string>
 </resources>

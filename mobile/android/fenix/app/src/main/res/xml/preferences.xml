@@ -26,6 +26,12 @@
             android:summary="@string/dejavu_settings_tips_summary"
             android:title="@string/dejavu_settings_tips" />
 
+        <androidx.preference.Preference
+            android:icon="@drawable/dejavu_ic_email_24"
+            android:key="@string/pref_key_dejavu_email"
+            android:summary="@string/dejavu_settings_email_summary"
+            android:title="@string/dejavu_settings_email"
+            app:widgetLayout="@layout/preference_widget_external_link" />
     </androidx.preference.PreferenceCategory>
 
     <!-- Dejavu: the account section is shown before signing in too, its sign in button telling what workspace sync

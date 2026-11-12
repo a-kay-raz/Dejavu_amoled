@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ඔබේ පෙරනිමි අතිරික්සුවයි.</string>
     <string name="dejavu_welcome_sync_title">සෑම උපාංගයකම ඔබේ අවකාශ</string>
     <string name="dejavu_welcome_sync_text">අවකාශ, අමුණන ලද පටිති සහ අත්‍යවශ්‍යයන් Zen සමඟ, නැතහොත් පටිති Firefox සමඟ සමමුහුර්ත කිරීමට Mozilla ගිණුමකින් පිවිසෙන්න.</string>
-    <string name="dejavu_settings_matrix">Matrix හි කතාබස් කරන්න</string>
-    <string name="dejavu_settings_matrix_summary">ප්‍රශ්නයක් අසන්න, විශේෂාංගයක් යෝජනා කරන්න හෝ දෝෂයක් වාර්තා කරන්න</string>
+    <string name="dejavu_settings_email">වි-තැපෑල</string>
+    <string name="dejavu_settings_email_summary">ප්‍රශ්නයක් අසන්න, විශේෂාංගයක් යෝජනා කරන්න හෝ දෝෂයක් වාර්තා කරන්න</string>
     <string name="dejavu_menu_clear_data">දත්ත හිස් කරන්න</string>
     <string name="dejavu_menu_clear_data_and_quit">දත්ත හිස් කර ඉවත් වන්න</string>
     <string name="dejavu_clear_data_button">“දත්ත හිස් කරන්න” බොත්තම</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu යළි ආරම්භ වූ විට එය නැවත අක්‍රිය වේ</string>
     <string name="dejavu_preference_mouse_support">මූසික සහාය</string>
     <string name="dejavu_preference_mouse_support_summary">මැද බොත්තමෙන් ක්ලික් කිරීමෙන් සබැඳියක් පසුබිම් පටිත්තක විවෘත වන අතර, සබැඳියක් මත මූසිකය තැබීමෙන් එහි ලිපිනය පෙන්වයි. පටිත්තක් මත මැද බොත්තමෙන් ක්ලික් කිරීමෙන් එය වසයි.</string>
+    <string name="dejavu_no_closed_tabs">මෑත දී වසා දැමූ පටිති නැත</string>
+    <string name="dejavu_tab_page_number">මෙම පටිත්තේ පිටුව %1$d</string>
+    <string name="dejavu_tab_pages">මෙම පටිත්තේ පිටු</string>
+    <string name="dejavu_settings_tabs_import_export">පටිති ආයාත සහ නිර්යාත කරන්න</string>
+    <string name="dejavu_settings_tabs_import_export_summary">අවකාශ, ෆෝල්ඩර සහ පටිති Sidebery වෙත සහ Sidebery වෙතින් ගෙන යන්න</string>
+    <string name="dejavu_sidebery_hint">Sidebery යනු පරිගණකවල Firefox සඳහා පටිති කළමනාකරුවෙකි. එහි පැනල මෙහි අවකාශ වන අතර, පටිති කණ්ඩායම් ෆෝල්ඩර ද, අමුණන ලද පටිති අත්‍යවශ්‍ය ද වේ.</string>
+    <string name="dejavu_sidebery_export">Sidebery වෙත නිර්යාත කරන්න</string>
+    <string name="dejavu_sidebery_import">Sidebery වෙතින් ආයාත කරන්න</string>
+    <string name="dejavu_sidebery_steps">Sidebery හි «Snapshots viewer» තුළ «Import snapshot» Dejavu ගොනුව කියවන අතර «Open all windows» එහි පටිති විවෘත කරයි. පටිති මෙහි ගෙන ඒමට එහි ස්නැප්ෂොට් එකක් තෝරා, පසුව «Export snapshot» සහ «Save as JSON» තෝරන්න.</string>
+    <string name="dejavu_sidebery_new_workspaces">නව අවකාශ</string>
+    <string name="dejavu_sidebery_essentials">අත්‍යවශ්‍ය</string>
+    <string name="dejavu_sidebery_new_containers">නව බහාලුම්</string>
+    <string name="dejavu_sidebery_left_out">ඉවත් කළ</string>
+    <string name="dejavu_sidebery_left_out_note">දුරකථනයකට විවෘත කළ නොහැකි පිටු, දේශීය ගොනු වැනි, සහ පෞද්ගලික කවුළුවල පටිති</string>
+    <string name="dejavu_sidebery_nothing_new">මෙම ගොනුවේ අලුත් කිසිවක් නැත.</string>
+    <string name="dejavu_sidebery_import_button">ආයාත කරන්න</string>
+    <string name="dejavu_sidebery_imported">Sidebery වෙතින් ආයාත කළා</string>
+    <string name="dejavu_sidebery_exported">Sidebery සඳහා සුරැකුණා</string>
+    <string name="dejavu_sidebery_export_failed">ගොනුව සුරැකිය නොහැකි විය. නැවත උත්සාහ කරන්න.</string>
+    <string name="dejavu_sidebery_bad_file">මෙම ගොනුව Sidebery ස්නැප්ෂොට් එකක් හෝ උපස්ථයක් නොවේ.</string>
+    <string name="dejavu_passkeys_unsupported">මෙම Android සංස්කරණයේ පාස්කී තවම සහාය නොදක්වයි</string>
 </resources>

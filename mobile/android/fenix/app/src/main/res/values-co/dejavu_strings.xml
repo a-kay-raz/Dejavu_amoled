@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu hè u vostru navigatore predefinitu.</string>
     <string name="dejavu_welcome_sync_title">I vostri spazii di travagliu nant\'à tutti i vostri apparechji</string>
     <string name="dejavu_welcome_sync_text">Cunnettitevi cù un contu Mozilla per sincrunizà i spazii di travagliu, l\'unghjette fissate è l\'essenziali cù Zen, o l\'unghjette cù Firefox.</string>
-    <string name="dejavu_settings_matrix">Chjachjarate nant\'à Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fate una dumanda, prupunite una funzione o signalate un sbagliu</string>
+    <string name="dejavu_settings_email">Indirizu elettronicu</string>
+    <string name="dejavu_settings_email_summary">Fate una dumanda, prupunite una funzione o signalate un sbagliu</string>
     <string name="dejavu_menu_clear_data">Squassà i dati</string>
     <string name="dejavu_menu_clear_data_and_quit">Squassà i dati è esce</string>
     <string name="dejavu_clear_data_button">Buttone Squassà i dati</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Si disattiva torna quandu Dejavu riparte</string>
     <string name="dejavu_preference_mouse_support">Supportu di u topu</string>
     <string name="dejavu_preference_mouse_support_summary">Un cliccu cù u buttone di u mezu apre un liame in un\'unghjetta in fondu, è passà nantu à un liame ne mostra l\'indirizzu. Un cliccu cù u buttone di u mezu nant\'à un\'unghjetta a chjode.</string>
+    <string name="dejavu_no_closed_tabs">Alcuna unghjetta chjosa pocu fà</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d di st’unghjetta</string>
+    <string name="dejavu_tab_pages">Pagine di st’unghjetta</string>
+    <string name="dejavu_settings_tabs_import_export">Impurtà è espurtà unghjette</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Traslucà spazii di travagliu, cartulari è unghjette ver di Sidebery è da Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery hè un amministratore d’unghjette per Firefox nant’à l’urdinatori. Quì i so pannelli sò spazii di travagliu, i so gruppi d’unghjette sò cartulari è e so unghjette fissate sò essenziali.</string>
+    <string name="dejavu_sidebery_export">Espurtà ver di Sidebery</string>
+    <string name="dejavu_sidebery_import">Impurtà da Sidebery</string>
+    <string name="dejavu_sidebery_steps">In u «Snapshots viewer» di Sidebery, «Import snapshot» leghje u schedariu di Dejavu è «Open all windows» ne apre l’unghjette. Per purtà unghjette quì, sceglite una fotografia culà, dopu «Export snapshot» è «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Spazii di travagliu novi</string>
+    <string name="dejavu_sidebery_essentials">Essenziali</string>
+    <string name="dejavu_sidebery_new_containers">Cuntenitori novi</string>
+    <string name="dejavu_sidebery_left_out">Lasciate fora</string>
+    <string name="dejavu_sidebery_left_out_note">Pagine chì un telefonu ùn pò micca apre, cum’è schedarii lucali, è unghjette di finestre private</string>
+    <string name="dejavu_sidebery_nothing_new">Ùn ci hè nunda di novu in stu schedariu.</string>
+    <string name="dejavu_sidebery_import_button">Impurtà</string>
+    <string name="dejavu_sidebery_imported">Impurtatu da Sidebery</string>
+    <string name="dejavu_sidebery_exported">Arregistratu per Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impussibule d’arregistrà u schedariu. Pruvate torna.</string>
+    <string name="dejavu_sidebery_bad_file">Stu schedariu ùn hè micca una fotografia nè una copia di salvezza di Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">E chjave d’accessu ùn sò ancu supportate nant’à sta versione d’Android</string>
 </resources>

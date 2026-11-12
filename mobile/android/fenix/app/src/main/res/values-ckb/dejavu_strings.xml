@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu وێبگەڕی سەرەکیتە.</string>
     <string name="dejavu_welcome_sync_title">فەزاکانت لە هەموو ئامێرێکدا</string>
     <string name="dejavu_welcome_sync_text">بە هەژمارێکی Mozilla بچۆ ژوورەوە بۆ هاوکاتکردنی فەزاکان، بازدەرە چەسپاوەکان و ماڵپەڕە گرنگەکان لەگەڵ Zen، یان بازدەرەکان لەگەڵ Firefox.</string>
-    <string name="dejavu_settings_matrix">لە Matrix گفتوگۆ بکە</string>
-    <string name="dejavu_settings_matrix_summary">پرسیارێک بکە، تایبەتمەندییەک پێشنیار بکە یان هەڵەیەک ڕاپۆرت بکە</string>
+    <string name="dejavu_settings_email">ئیمەیڵ</string>
+    <string name="dejavu_settings_email_summary">پرسیارێک بکە، تایبەتمەندییەک پێشنیار بکە یان هەڵەیەک ڕاپۆرت بکە</string>
     <string name="dejavu_menu_clear_data">خاوێنکردنەوەی زانیاری</string>
     <string name="dejavu_menu_clear_data_and_quit">خاوێنکردنەوەی زانیاری و دەرچوون</string>
     <string name="dejavu_clear_data_button">دوگمەی «خاوێنکردنەوەی زانیاری»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">کاتێک Dejavu دووبارە دەست پێدەکاتەوە دەکوژێتەوە</string>
     <string name="dejavu_preference_mouse_support">پشتگیری مشک</string>
     <string name="dejavu_preference_mouse_support_summary">کرتەی ناوەڕاست بەستەرێک لە بازدەرێکی پاشبنەمادا دەکاتەوە، و ڕاگرتنی مشک لەسەر بەستەر ناونیشانەکەی پیشان دەدات. کرتەی ناوەڕاست لەسەر بازدەرێک دایدەخات.</string>
+    <string name="dejavu_no_closed_tabs">هیچ بازدەرێکی داخراوی نوێ نیە</string>
+    <string name="dejavu_tab_page_number">پەڕەی %1$d لەم بازدەرەدا</string>
+    <string name="dejavu_tab_pages">پەڕەکانی ئەم بازدەرە</string>
+    <string name="dejavu_settings_tabs_import_export">هاوردە و هەناردەکردنی بازدەرەکان</string>
+    <string name="dejavu_settings_tabs_import_export_summary">فەزاکان، پۆشەکان و بازدەرەکان بگوازەرەوە بۆ Sidebery و لە Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery بەڕێوەبەری بازدەرە بۆ Firefox لەسەر کۆمپیوتەرەکان. پانێڵەکانی لێرە فەزان، کۆمەڵە بازدەرەکانی پۆشەن و بازدەرە چەسپاوەکانی ماڵپەڕە گرنگەکانن.</string>
+    <string name="dejavu_sidebery_export">هەناردەکردن بۆ Sidebery</string>
+    <string name="dejavu_sidebery_import">هاوردەکردن لە Sidebery</string>
+    <string name="dejavu_sidebery_steps">لە «Snapshots viewer»ی Sidebery، «Import snapshot» پەڕگەکەی Dejavu دەخوێنێتەوە و «Open all windows» بازدەرەکانی دەکاتەوە. بۆ هێنانی بازدەرەکان بۆ ئێرە، لەوێ وێنەیەکی خێرا هەڵبژێرە، پاشان «Export snapshot» و «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">فەزای نوێ</string>
+    <string name="dejavu_sidebery_essentials">ماڵپەڕە گرنگەکان</string>
+    <string name="dejavu_sidebery_new_containers">کۆنتەینەری نوێ</string>
+    <string name="dejavu_sidebery_left_out">لابراو</string>
+    <string name="dejavu_sidebery_left_out_note">ئەو پەڕانەی مۆبایل ناتوانێت بیانکاتەوە، وەک پەڕگە ناوخۆییەکان، و بازدەرەکانی پەنجەرە تایبەتەکان</string>
+    <string name="dejavu_sidebery_nothing_new">هیچ شتێکی نوێ لەم پەڕگەیەدا نییە.</string>
+    <string name="dejavu_sidebery_import_button">هاوردەکردن</string>
+    <string name="dejavu_sidebery_imported">لە Sidebery هاوردە کرا</string>
+    <string name="dejavu_sidebery_exported">بۆ Sidebery پاشەکەوت کرا</string>
+    <string name="dejavu_sidebery_export_failed">پەڕگەکە پاشەکەوت نەکرا. دووبارە هەوڵ بدەرەوە.</string>
+    <string name="dejavu_sidebery_bad_file">ئەم پەڕگەیە وێنەی خێرا یان پاشەکەوتی Sidebery نییە.</string>
+    <string name="dejavu_passkeys_unsupported">کلیلی چوونەژوورەوە (passkey) هێشتا لەم وەشانەی Android پشتگیری ناکرێت</string>
 </resources>

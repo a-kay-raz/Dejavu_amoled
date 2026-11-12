@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu jo twój standardny wobglědowak.</string>
     <string name="dejavu_welcome_sync_title">Twóje źěłowe rumy na kuždem rěźe</string>
     <string name="dejavu_welcome_sync_text">Pśizjaw se z Mozilla-kontom, aby źěłowe rumy, pśipěte rejtariki a nejwažnjejše ze Zen abo rejtariki z Firefox synchronizěrował.</string>
-    <string name="dejavu_settings_matrix">Chat pśez Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pšašaj se, naraź funkciju abo daj zmólku k wěsći</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Pšašaj se, naraź funkciju abo daj zmólku k wěsći</string>
     <string name="dejavu_menu_clear_data">Daty wulašowaś</string>
     <string name="dejavu_menu_clear_data_and_quit">Daty wulašowaś a skóńcyś</string>
     <string name="dejavu_clear_data_button">Tłocašk „Daty wulašowaś“</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Wótšaltujo se zasej, gaž se Dejavu znowego startujo</string>
     <string name="dejavu_preference_mouse_support">Pódpěra myški</string>
     <string name="dejavu_preference_mouse_support_summary">Srjejźne kliknjenje wócynja wótkaz w slězynowem rejtariku, a gaž myšku nad wótkazom źaržyśo, se jogo adresa pokazujo. Srjejźne kliknjenje na rejtarik jen zacynja.</string>
+    <string name="dejavu_no_closed_tabs">Njejsu rowno zacynjone rejtariki</string>
+    <string name="dejavu_tab_page_number">Bok %1$d w toś tom rejtariku</string>
+    <string name="dejavu_tab_pages">Boki w toś tom rejtariku</string>
+    <string name="dejavu_settings_tabs_import_export">Rejtariki importěrowaś a eksportěrowaś</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Źěłowe rumy, zarědniki a rejtariki do Sidebery a z Sidebery pśenjasć</string>
+    <string name="dejavu_sidebery_hint">Sidebery jo zastojnik rejtarikow za Firefox na licadłach. Jogo panele su how źěłowe rumy, jogo kupki rejtarikow su zarědniki a jogo pśipěte rejtariki su nejwažnjejše.</string>
+    <string name="dejavu_sidebery_export">Do Sidebery eksportěrowaś</string>
+    <string name="dejavu_sidebery_import">Ze Sidebery importěrowaś</string>
+    <string name="dejavu_sidebery_steps">W «Snapshots viewer» Sidebery cyta «Import snapshot» dataju z Dejavu a «Open all windows» wócynja jeje rejtariki. Aby rejtariki sem pśinjasł, wubjeŕśo tam fotku, pótom «Export snapshot» a «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nowe źěłowe rumy</string>
+    <string name="dejavu_sidebery_essentials">Nejwažnjejše</string>
+    <string name="dejavu_sidebery_new_containers">Nowe kontejnery</string>
+    <string name="dejavu_sidebery_left_out">Wuwóstajone</string>
+    <string name="dejavu_sidebery_left_out_note">Boki, kótarež telefon njamóžo wócyniś, na pś. lokalne dataje, a rejtariki priwatnych woknow</string>
+    <string name="dejavu_sidebery_nothing_new">W toś tej dataji nic nowe njejo.</string>
+    <string name="dejavu_sidebery_import_button">Importěrowaś</string>
+    <string name="dejavu_sidebery_imported">Ze Sidebery importěrowane</string>
+    <string name="dejavu_sidebery_exported">Za Sidebery skłaźone</string>
+    <string name="dejavu_sidebery_export_failed">Dataja njedajo se składowaś. Wopytajśo hyšći raz.</string>
+    <string name="dejavu_sidebery_bad_file">Toś ta dataja njejo fotka abo zawěsćeńska kopija Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Gronidłowe kluce se w toś tej wersiji Android hyšći njepódpěraju</string>
 </resources>

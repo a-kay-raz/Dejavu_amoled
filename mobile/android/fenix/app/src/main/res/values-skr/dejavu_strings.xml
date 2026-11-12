@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu تہاݙا ڈیفالٹ براؤزر ہے۔</string>
     <string name="dejavu_welcome_sync_title">تہاݙیاں ورک سپیساں ہر ڈیوائس تے</string>
     <string name="dejavu_welcome_sync_text">ورک سپیساں، پن تھیاں ٹیباں تے ضروری ٹیباں Zen نال، یا ٹیباں Firefox نال ہم وقت کرݨ کیتے Mozilla کھاتے نال سائن ان تھیوو۔</string>
-    <string name="dejavu_settings_matrix">Matrix تے چیٹ کرو</string>
-    <string name="dejavu_settings_matrix_summary">سوال پچھو، فیچر تجویز کرو یا خرابی رپورٹ کرو</string>
+    <string name="dejavu_settings_email">ای میل</string>
+    <string name="dejavu_settings_email_summary">سوال پچھو، فیچر تجویز کرو یا خرابی رپورٹ کرو</string>
     <string name="dejavu_menu_clear_data">ڈیٹا صاف کرو</string>
     <string name="dejavu_menu_clear_data_and_quit">ڈیٹا صاف کرو تے چھوڑو</string>
     <string name="dejavu_clear_data_button">“ڈیٹا صاف کرو” بٹن</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu دے ولا شروع تھیوݨ تے ایہ ولا بند تھی ویندی اے</string>
     <string name="dejavu_preference_mouse_support">ماؤس دی سہولت</string>
     <string name="dejavu_preference_mouse_support_summary">وچلے بٹݨ نال کلک کرݨ نال لنک پچھلی ٹیب وچ کھلدا ہے، تے لنک اُتے ماؤس رکھݨ نال اوندا پتہ ݙکھدا ہے۔ ٹیب اُتے وچلے بٹݨ نال کلک کرݨ نال او بند تھی ویندی ہے۔</string>
+    <string name="dejavu_no_closed_tabs">حالیہ بند تھیاں ٹیباں کوئی کائنی</string>
+    <string name="dejavu_tab_page_number">ایں ٹیب وچ ورقہ %1$d</string>
+    <string name="dejavu_tab_pages">ایں ٹیب دے ورقے</string>
+    <string name="dejavu_settings_tabs_import_export">ٹیباں درآمد تے برآمد کرو</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ورک سپیساں، فولڈراں تے ٹیباں کوں Sidebery وچ تے Sidebery کنوں گھن ونڄو</string>
+    <string name="dejavu_sidebery_hint">Sidebery کمپیوٹراں تے Firefox کیتے ٹیب منیجر ہے۔ ایندے پینل اتھاں ورک سپیس ہن، ایندے ٹیب گروپ فولڈر ہن تے ایندیاں پن تھیاں ٹیباں ضروری ٹیباں ہن۔</string>
+    <string name="dejavu_sidebery_export">Sidebery وچ برآمد کرو</string>
+    <string name="dejavu_sidebery_import">Sidebery کنوں درآمد کرو</string>
+    <string name="dejavu_sidebery_steps">Sidebery دے «Snapshots viewer» وچ «Import snapshot» Dejavu دی فائل پڑھدا ہے تے «Open all windows» ایندیاں ٹیباں کھولیندا ہے۔ ٹیباں اتھاں گھن آوݨ کیتے اتھاں ہک سنیپ شاٹ چݨو، ول «Export snapshot» تے «Save as JSON»۔</string>
+    <string name="dejavu_sidebery_new_workspaces">نویں ورک سپیس</string>
+    <string name="dejavu_sidebery_essentials">ضروری ٹیباں</string>
+    <string name="dejavu_sidebery_new_containers">نویں کنٹینر</string>
+    <string name="dejavu_sidebery_left_out">چھوڑیاں ڳئیاں</string>
+    <string name="dejavu_sidebery_left_out_note">او ورقے جیڑھے فون نہیں کھول سڳدا، جیویں مقامی فائلاں، تے نجی ونڈوز دیاں ٹیباں</string>
+    <string name="dejavu_sidebery_nothing_new">ایں فائل وچ کجھ نواں کائنی۔</string>
+    <string name="dejavu_sidebery_import_button">درآمد کرو</string>
+    <string name="dejavu_sidebery_imported">Sidebery کنوں درآمد تھیا</string>
+    <string name="dejavu_sidebery_exported">Sidebery کیتے محفوظ تھیا</string>
+    <string name="dejavu_sidebery_export_failed">فائل محفوظ نہیں تھی سڳی۔ ولدا کوشش کرو۔</string>
+    <string name="dejavu_sidebery_bad_file">اے فائل Sidebery دا سنیپ شاٹ یا بیک اپ کائنی۔</string>
+    <string name="dejavu_passkeys_unsupported">ایں Android ورژن تے پاس کی (passkey) ہݨ تئیں سپورٹ کائنی</string>
 </resources>

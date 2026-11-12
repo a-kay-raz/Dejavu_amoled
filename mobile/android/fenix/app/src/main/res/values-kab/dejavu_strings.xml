@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu d iminig-ik amezwer.</string>
     <string name="dejavu_welcome_sync_title">Imukan n umahil-ik ɣef yal ibenk</string>
     <string name="dejavu_welcome_sync_text">Kcem s umiḍan Mozilla akken ad tesdukleḍ imukan n umahil, iccaren yessersen d wayen ilaqen akked Zen, neɣ iccaren akked Firefox.</string>
-    <string name="dejavu_settings_matrix">Mmeslay deg Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Seqsi asteqsi, sumer tamahilt neɣ mmel-d tuccḍa</string>
+    <string name="dejavu_settings_email">Imayl</string>
+    <string name="dejavu_settings_email_summary">Seqsi asteqsi, sumer tamahilt neɣ mmel-d tuccḍa</string>
     <string name="dejavu_menu_clear_data">Sfeḍ isefka</string>
     <string name="dejavu_menu_clear_data_and_quit">Sfeḍ isefka syen ffeɣ</string>
     <string name="dejavu_clear_data_button">Taqeffalt Sfeḍ isefka</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Ad yensu tikkelt-nniḍen mi ara yales Dejavu asenker</string>
     <string name="dejavu_preference_mouse_support">Tallalt n tɣerdayt</string>
     <string name="dejavu_preference_mouse_support_summary">Asiti s tqeffalt n tlemmast yeldi aseɣwen deg yiccer deg ugilal, ma d aɛeddi n tɣerdayt ɣef useɣwen yesskan-d tansa-ines. Asiti s tqeffalt n tlemmast ɣef yiccer ad t-isekkeṛ.</string>
+    <string name="dejavu_no_closed_tabs">Ulac iccaren imedlen melmi kan</string>
+    <string name="dejavu_tab_page_number">Asebter %1$d deg yiccer-a</string>
+    <string name="dejavu_tab_pages">Isebtar deg yiccer-a</string>
+    <string name="dejavu_settings_tabs_import_export">Kter rnu sifeḍ iccaren</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Smutti imukan n umahil, ikuramen d yiccaren ɣer Sidebery akked seg Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery d amsefrak n yiccaren i Firefox ɣef yiselkimen. Agalisen-is da d imukan n umahil, igrawen-is n yiccaren d ikuramen, iccaren-is yessersen d ayen ilaqen.</string>
+    <string name="dejavu_sidebery_export">Sifeḍ ɣer Sidebery</string>
+    <string name="dejavu_sidebery_import">Kter seg Sidebery</string>
+    <string name="dejavu_sidebery_steps">Deg «Snapshots viewer» n Sidebery, «Import snapshot» iɣṛ afaylu n Dejavu, «Open all windows» ad yeldi iccaren-is. I wakken ad d-tawiḍ iccaren ɣer da, fren tawlaft din, sakin «Export snapshot» d «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Imukan n umahil imaynuten</string>
+    <string name="dejavu_sidebery_essentials">Ayen ilaqen</string>
+    <string name="dejavu_sidebery_new_containers">Isenduqen imaynuten</string>
+    <string name="dejavu_sidebery_left_out">Yettwaǧǧan</string>
+    <string name="dejavu_sidebery_left_out_note">Isebtar ur yezmir ara ad ten-yeldi utilifun, am yifuyla idiganen, d yiccaren n yisfuyla usligen</string>
+    <string name="dejavu_sidebery_nothing_new">Ulac acu n umaynut deg ufaylu-a.</string>
+    <string name="dejavu_sidebery_import_button">Kter</string>
+    <string name="dejavu_sidebery_imported">Yettwakter seg Sidebery</string>
+    <string name="dejavu_sidebery_exported">Yettwasekles i Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Ur yezmir ara ad yettwasekles ufaylu. Ɛreḍ tikkelt-nniḍen.</string>
+    <string name="dejavu_sidebery_bad_file">Afaylu-a mačči d tawlaft neɣ d aḥraz n Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Tisura n unekcum (passkeys) mazal ur ttwasefraken ara deg lqem-agi n Android</string>
 </resources>

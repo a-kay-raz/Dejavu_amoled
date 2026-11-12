@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu 是您的默认浏览器。</string>
     <string name="dejavu_welcome_sync_title">在所有设备上使用您的工作区</string>
     <string name="dejavu_welcome_sync_text">登录 Mozilla 账户，即可与 Zen 同步工作区、固定标签页和常用网站，或与 Firefox 同步标签页。</string>
-    <string name="dejavu_settings_matrix">在 Matrix 上聊天</string>
-    <string name="dejavu_settings_matrix_summary">提问、提出功能建议或报告错误</string>
+    <string name="dejavu_settings_email">电子邮件</string>
+    <string name="dejavu_settings_email_summary">提问、提出功能建议或报告错误</string>
     <string name="dejavu_menu_clear_data">清除数据</string>
     <string name="dejavu_menu_clear_data_and_quit">清除数据并退出</string>
     <string name="dejavu_clear_data_button">“清除数据”按钮</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu 重启后会再次关闭</string>
     <string name="dejavu_preference_mouse_support">鼠标支持</string>
     <string name="dejavu_preference_mouse_support_summary">中键点击会在后台标签页中打开链接，鼠标悬停在链接上会显示其地址。 在标签页上中键点击会将其关闭。</string>
+    <string name="dejavu_no_closed_tabs">暂无最近关闭的标签页</string>
+    <string name="dejavu_tab_page_number">此标签页中的第 %1$d 页</string>
+    <string name="dejavu_tab_pages">此标签页中的页面</string>
+    <string name="dejavu_settings_tabs_import_export">导入和导出标签页</string>
+    <string name="dejavu_settings_tabs_import_export_summary">在 Sidebery 和这里之间移动工作区、文件夹和标签页</string>
+    <string name="dejavu_sidebery_hint">Sidebery 是电脑版 Firefox 的标签页管理器。它的面板在这里是工作区，标签页组是文件夹，固定的标签页是常用网站。</string>
+    <string name="dejavu_sidebery_export">导出到 Sidebery</string>
+    <string name="dejavu_sidebery_import">从 Sidebery 导入</string>
+    <string name="dejavu_sidebery_steps">在 Sidebery 的“快照查看器”中，“导入快照”会读取 Dejavu 的文件，“打开全部窗口”会打开其中的标签页。要把标签页带到这里，请在那里选择一个快照，然后选择“导出快照”和“另存为 JSON”。</string>
+    <string name="dejavu_sidebery_new_workspaces">新工作区</string>
+    <string name="dejavu_sidebery_essentials">常用网站</string>
+    <string name="dejavu_sidebery_new_containers">新容器</string>
+    <string name="dejavu_sidebery_left_out">未导入</string>
+    <string name="dejavu_sidebery_left_out_note">手机无法打开的页面（如本地文件），以及隐私窗口中的标签页</string>
+    <string name="dejavu_sidebery_nothing_new">此文件中没有新内容。</string>
+    <string name="dejavu_sidebery_import_button">导入</string>
+    <string name="dejavu_sidebery_imported">已从 Sidebery 导入</string>
+    <string name="dejavu_sidebery_exported">已为 Sidebery 保存</string>
+    <string name="dejavu_sidebery_export_failed">无法保存文件，请重试。</string>
+    <string name="dejavu_sidebery_bad_file">此文件不是 Sidebery 快照或备份。</string>
+    <string name="dejavu_passkeys_unsupported">此 Android 版本尚不支持通行密钥</string>
 </resources>

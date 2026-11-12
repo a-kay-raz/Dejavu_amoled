@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu הוא דפדפן ברירת המחדל שלכם.</string>
     <string name="dejavu_welcome_sync_title">מרחבי העבודה שלכם בכל מכשיר</string>
     <string name="dejavu_welcome_sync_text">היכנסו עם חשבון Mozilla כדי לסנכרן מרחבי עבודה, לשוניות מוצמדות ומועדפים עם Zen, או לשוניות עם Firefox.</string>
-    <string name="dejavu_settings_matrix">צ׳אט ב-Matrix</string>
-    <string name="dejavu_settings_matrix_summary">שאלו שאלה, הציעו תכונה או דווחו על באג</string>
+    <string name="dejavu_settings_email">דוא״ל</string>
+    <string name="dejavu_settings_email_summary">שאלו שאלה, הציעו תכונה או דווחו על באג</string>
     <string name="dejavu_menu_clear_data">ניקוי נתונים</string>
     <string name="dejavu_menu_clear_data_and_quit">ניקוי נתונים ויציאה</string>
     <string name="dejavu_clear_data_button">כפתור ״ניקוי נתונים״</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">נכבה שוב כש-Dejavu מופעל מחדש</string>
     <string name="dejavu_preference_mouse_support">תמיכה בעכבר</string>
     <string name="dejavu_preference_mouse_support_summary">לחיצה אמצעית פותחת קישור בלשונית ברקע, וריחוף מעל קישור מציג את הכתובת שלו. לחיצה אמצעית על לשונית סוגרת אותה.</string>
+    <string name="dejavu_no_closed_tabs">אין לשוניות שנסגרו לאחרונה</string>
+    <string name="dejavu_tab_page_number">דף %1$d בלשונית זו</string>
+    <string name="dejavu_tab_pages">דפים בלשונית זו</string>
+    <string name="dejavu_settings_tabs_import_export">ייבוא וייצוא לשוניות</string>
+    <string name="dejavu_settings_tabs_import_export_summary">העברת מרחבי עבודה, תיקיות ולשוניות אל Sidebery וממנו</string>
+    <string name="dejavu_sidebery_hint">Sidebery הוא מנהל לשוניות ל־Firefox במחשבים. הלוחות שלו הם כאן מרחבי עבודה, קבוצות הלשוניות שלו הן תיקיות והלשוניות המוצמדות שלו הן מועדפים.</string>
+    <string name="dejavu_sidebery_export">ייצוא אל Sidebery</string>
+    <string name="dejavu_sidebery_import">ייבוא מ־Sidebery</string>
+    <string name="dejavu_sidebery_steps">ב־«Snapshots viewer» של Sidebery, ‏«Import snapshot» קורא את הקובץ מ־Dejavu ו־«Open all windows» פותח את הלשוניות שלו. כדי להביא לשוניות לכאן, יש לבחור שם תמונת מצב, ואז «Export snapshot» ו־«Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">מרחבי עבודה חדשים</string>
+    <string name="dejavu_sidebery_essentials">מועדפים</string>
+    <string name="dejavu_sidebery_new_containers">מארזים חדשים</string>
+    <string name="dejavu_sidebery_left_out">הושמטו</string>
+    <string name="dejavu_sidebery_left_out_note">עמודים שטלפון לא יכול לפתוח, כמו קבצים מקומיים, ולשוניות של חלונות פרטיים</string>
+    <string name="dejavu_sidebery_nothing_new">אין שום דבר חדש בקובץ הזה.</string>
+    <string name="dejavu_sidebery_import_button">ייבוא</string>
+    <string name="dejavu_sidebery_imported">יובא מ־Sidebery</string>
+    <string name="dejavu_sidebery_exported">נשמר עבור Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">לא ניתן לשמור את הקובץ. נא לנסות שוב.</string>
+    <string name="dejavu_sidebery_bad_file">הקובץ הזה אינו תמונת מצב או גיבוי של Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">מפתחות גישה עדיין אינם נתמכים בגרסת Android זו</string>
 </resources>

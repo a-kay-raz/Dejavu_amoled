@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu to je twoja bazowo przeglōndarka.</string>
     <string name="dejavu_welcome_sync_title">Twoje place na kożdym geracie</string>
     <string name="dejavu_welcome_sync_text">Zaloguj sie kōntym Mozilla, coby synchronizować place, przipiynte karty i nojważniejsze z Zen, abo karty z Firefox.</string>
-    <string name="dejavu_settings_matrix">Czat na Matrixie</string>
-    <string name="dejavu_settings_matrix_summary">Spytej sie, zaproponuj funkcyjo abo zgłoś feler</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Spytej sie, zaproponuj funkcyjo abo zgłoś feler</string>
     <string name="dejavu_menu_clear_data">Wyczyś dane</string>
     <string name="dejavu_menu_clear_data_and_quit">Wyczyś dane i zawrzij</string>
     <string name="dejavu_clear_data_button">Knefel „Wyczyś dane”</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Wyłōnczo sie zaś po ponownym sztarcie Dejavu</string>
     <string name="dejavu_preference_mouse_support">Spiyranie mysze</string>
     <string name="dejavu_preference_mouse_support_summary">Klikniyncie postrzodkowym knefliym ôtwiyro link we karcie w tle, a najechanie na link pokazuje jego adresa. Klikniyncie postrzodkowym knefliym na karcie zamyko ja.</string>
+    <string name="dejavu_no_closed_tabs">Niy ma żodnych niydowno zawartych kart</string>
+    <string name="dejavu_tab_page_number">Strōna %1$d we tyj karcie</string>
+    <string name="dejavu_tab_pages">Strōny we tyj karcie</string>
+    <string name="dejavu_settings_tabs_import_export">Import i eksport kart</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Przenoś place, foldry i karty do i ze Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery to mynedżer kart dlo Firefoxa na kōmputry. Jego panele sōm tukej placami, grupy kart foldrami, a przipiynte karty nojważniejszymi.</string>
+    <string name="dejavu_sidebery_export">Eksportuj do Sidebery</string>
+    <string name="dejavu_sidebery_import">Importuj ze Sidebery</string>
+    <string name="dejavu_sidebery_steps">We «Snapshots viewer» we Sidebery knefel «Import snapshot» czyto zbiōr ze Dejavu, a «Open all windows» ôtwiyro jego karty. Coby przeniyś sam karty, wybier tam migawka, potym «Export snapshot» i «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nowe place</string>
+    <string name="dejavu_sidebery_essentials">Nojważniejsze</string>
+    <string name="dejavu_sidebery_new_containers">Nowe kōntynery</string>
+    <string name="dejavu_sidebery_left_out">Pōminiynte</string>
+    <string name="dejavu_sidebery_left_out_note">Strōny, kerych telefōn niy poradzi ôtworzić, bez przikład zbiory lokalne, i karty ze ôkyn prywatnych</string>
+    <string name="dejavu_sidebery_nothing_new">We tym zbiorze niy ma nic nowego.</string>
+    <string name="dejavu_sidebery_import_button">Importuj</string>
+    <string name="dejavu_sidebery_imported">Zaimportowano ze Sidebery</string>
+    <string name="dejavu_sidebery_exported">Spamiyntano dlo Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Niy szło spamiyntać zbioru. Sprōbuj zaś.</string>
+    <string name="dejavu_sidebery_bad_file">Tyn zbiōr niy ma migawkōm ani kopijōm zapasowōm Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Klucze dostympu niy sōm jeszcze spiyrane we tyj wersyji Androida</string>
 </resources>

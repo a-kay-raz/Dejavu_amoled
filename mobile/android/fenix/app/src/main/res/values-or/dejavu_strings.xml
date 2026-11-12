@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ଆପଣଙ୍କ ଡିଫଲ୍ଟ ବ୍ରାଉଜର ଅଟେ।</string>
     <string name="dejavu_welcome_sync_title">ପ୍ରତ୍ୟେକ ଡିଭାଇସରେ ଆପଣଙ୍କ କାର୍ଯ୍ୟକ୍ଷେତ୍ର</string>
     <string name="dejavu_welcome_sync_text">Zen ସହିତ କାର୍ଯ୍ୟକ୍ଷେତ୍ର, ପିନ୍ ଟ୍ୟାବ୍ ଏବଂ ଆବଶ୍ୟକୀୟ, କିମ୍ବା Firefox ସହିତ ଟ୍ୟାବ୍ ସିଙ୍କ କରିବାକୁ ଏକ Mozilla ଆକାଉଣ୍ଟରେ ସାଇନ୍ ଇନ୍ କରନ୍ତୁ।</string>
-    <string name="dejavu_settings_matrix">Matrix ରେ ଚାଟ୍ କରନ୍ତୁ</string>
-    <string name="dejavu_settings_matrix_summary">ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ, ବୈଶିଷ୍ଟ୍ୟର ପରାମର୍ଶ ଦିଅନ୍ତୁ କିମ୍ବା ତ୍ରୁଟି ରିପୋର୍ଟ କରନ୍ତୁ</string>
+    <string name="dejavu_settings_email">ଇମେଲ୍</string>
+    <string name="dejavu_settings_email_summary">ପ୍ରଶ୍ନ ପଚାରନ୍ତୁ, ବୈଶିଷ୍ଟ୍ୟର ପରାମର୍ଶ ଦିଅନ୍ତୁ କିମ୍ବା ତ୍ରୁଟି ରିପୋର୍ଟ କରନ୍ତୁ</string>
     <string name="dejavu_menu_clear_data">ଡାଟା ସଫା କରନ୍ତୁ</string>
     <string name="dejavu_menu_clear_data_and_quit">ଡାଟା ସଫା କରି ବାହାରନ୍ତୁ</string>
     <string name="dejavu_clear_data_button">“ଡାଟା ସଫା କରନ୍ତୁ” ବଟନ୍</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ପୁଣି ଆରମ୍ଭ ହେଲେ ଏହା ପୁଣି ବନ୍ଦ ହୋଇଯାଏ</string>
     <string name="dejavu_preference_mouse_support">ମାଉସ୍ ସମର୍ଥନ</string>
     <string name="dejavu_preference_mouse_support_summary">ମଝି ବଟନ୍‌ରେ କ୍ଲିକ୍ କଲେ ଲିଙ୍କ୍ ପୃଷ୍ଠଭୂମି ଟ୍ୟାବ୍‌ରେ ଖୋଲେ, ଏବଂ ଲିଙ୍କ୍ ଉପରେ ପଏଣ୍ଟର୍ ରଖିଲେ ଏହାର ଠିକଣା ଦେଖାଏ। ଟ୍ୟାବ୍‌ରେ ମଝି ବଟନ୍‌ରେ କ୍ଲିକ୍ କଲେ ତାହା ବନ୍ଦ ହୁଏ।</string>
+    <string name="dejavu_no_closed_tabs">ନିକଟରେ ବନ୍ଦ ହୋଇଥିବା କୌଣସି ଟ୍ୟାବ୍ ନାହିଁ</string>
+    <string name="dejavu_tab_page_number">ଏହି ଟ୍ୟାବ୍‌ର ପୃଷ୍ଠା %1$d</string>
+    <string name="dejavu_tab_pages">ଏହି ଟ୍ୟାବ୍‌ର ପୃଷ୍ଠାଗୁଡ଼ିକ</string>
+    <string name="dejavu_settings_tabs_import_export">ଟ୍ୟାବ୍ ଆମଦାନି ଓ ରପ୍ତାନି କରନ୍ତୁ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">କାର୍ଯ୍ୟକ୍ଷେତ୍ର, ଫୋଲଡର ଓ ଟ୍ୟାବ୍ Sidebery କୁ ଏବଂ Sidebery ରୁ ଘୁଞ୍ଚାନ୍ତୁ</string>
+    <string name="dejavu_sidebery_hint">Sidebery ହେଉଛି କମ୍ପ୍ୟୁଟରରେ Firefox ପାଇଁ ଏକ ଟ୍ୟାବ୍ ପରିଚାଳକ। ଏହାର ପ୍ୟାନେଲ୍ ଏଠାରେ କାର୍ଯ୍ୟକ୍ଷେତ୍ର, ଟ୍ୟାବ୍ ଗୋଷ୍ଠୀ ଫୋଲଡର ଏବଂ ପିନ୍ କରାଯାଇଥିବା ଟ୍ୟାବ୍ ଆବଶ୍ୟକୀୟ।</string>
+    <string name="dejavu_sidebery_export">Sidebery କୁ ରପ୍ତାନି କରନ୍ତୁ</string>
+    <string name="dejavu_sidebery_import">Sidebery ରୁ ଆମଦାନି କରନ୍ତୁ</string>
+    <string name="dejavu_sidebery_steps">Sidebery ର «Snapshots viewer» ରେ «Import snapshot» Dejavu ର ଫାଇଲ ପଢ଼େ ଏବଂ «Open all windows» ଏହାର ଟ୍ୟାବ୍ ଖୋଲେ। ଟ୍ୟାବ୍ ଏଠାକୁ ଆଣିବା ପାଇଁ ସେଠାରେ ଏକ ସ୍ନାପସଟ୍ ବାଛନ୍ତୁ, ତାପରେ «Export snapshot» ଓ «Save as JSON»।</string>
+    <string name="dejavu_sidebery_new_workspaces">ନୂଆ କାର୍ଯ୍ୟକ୍ଷେତ୍ର</string>
+    <string name="dejavu_sidebery_essentials">ଆବଶ୍ୟକୀୟ</string>
+    <string name="dejavu_sidebery_new_containers">ନୂଆ କଣ୍ଟେନର</string>
+    <string name="dejavu_sidebery_left_out">ବାଦ ପଡ଼ିଥିବା</string>
+    <string name="dejavu_sidebery_left_out_note">ଫୋନ ଖୋଲିପାରୁନଥିବା ପୃଷ୍ଠା, ଯେପରି ସ୍ଥାନୀୟ ଫାଇଲ, ଏବଂ ବ୍ୟକ୍ତିଗତ ୱିଣ୍ଡୋର ଟ୍ୟାବ୍</string>
+    <string name="dejavu_sidebery_nothing_new">ଏହି ଫାଇଲରେ କିଛି ନୂଆ ନାହିଁ।</string>
+    <string name="dejavu_sidebery_import_button">ଆମଦାନି କରନ୍ତୁ</string>
+    <string name="dejavu_sidebery_imported">Sidebery ରୁ ଆମଦାନି ହେଲା</string>
+    <string name="dejavu_sidebery_exported">Sidebery ପାଇଁ ସଞ୍ଚୟ ହେଲା</string>
+    <string name="dejavu_sidebery_export_failed">ଫାଇଲ ସଞ୍ଚୟ ହୋଇପାରିଲା ନାହିଁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
+    <string name="dejavu_sidebery_bad_file">ଏହି ଫାଇଲ Sidebery ର ସ୍ନାପସଟ୍ କିମ୍ବା ବ୍ୟାକଅପ୍ ନୁହେଁ।</string>
+    <string name="dejavu_passkeys_unsupported">ଏହି Android ସଂସ୍କରଣରେ ପାସକି ଏପର୍ଯ୍ୟନ୍ତ ସମର୍ଥିତ ନୁହେଁ</string>
 </resources>

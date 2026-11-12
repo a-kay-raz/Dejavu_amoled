@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu geroka te ya sereke ye.</string>
     <string name="dejavu_welcome_sync_title">Qadên te li ser her amûrê</string>
     <string name="dejavu_welcome_sync_text">Bi hesabekî Mozilla têkeve da ku qad, hilpekînên sabît û malperên girîng bi Zen re, an jî hilpekînan bi Firefox re hevdem bikî.</string>
-    <string name="dejavu_settings_matrix">Li ser Matrixê sohbet bike</string>
-    <string name="dejavu_settings_matrix_summary">Pirsekê bipirse, taybetmendiyekê pêşniyar bike an çewtiyekê ragihîne</string>
+    <string name="dejavu_settings_email">Emaîl</string>
+    <string name="dejavu_settings_email_summary">Pirsekê bipirse, taybetmendiyekê pêşniyar bike an çewtiyekê ragihîne</string>
     <string name="dejavu_menu_clear_data">Daneyan paqij bike</string>
     <string name="dejavu_menu_clear_data_and_quit">Daneyan paqij bike û derkeve</string>
     <string name="dejavu_clear_data_button">Bişkoka «Daneyan paqij bike»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dema Dejavu ji nû ve dest pê dike dîsa tê girtin</string>
     <string name="dejavu_preference_mouse_support">Piştgiriya mişkê</string>
     <string name="dejavu_preference_mouse_support_summary">Bi bişkoka navîn tikandin girêdanekê di hilpekîneke paşxanê de vedike, û ragirtina mişkê li ser girêdanê navnîşana wê nîşan dide. Bi bişkoka navîn tikandin li ser hilpekînekê wê digire.</string>
+    <string name="dejavu_no_closed_tabs">Hilpekîna berî niha hatiye girtin tune</string>
+    <string name="dejavu_tab_page_number">Rûpela %1$d di vê hilpekînê de</string>
+    <string name="dejavu_tab_pages">Rûpelên di vê hilpekînê de</string>
+    <string name="dejavu_settings_tabs_import_export">Hilpekînan îthal û ixrac bike</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Qad, peldank û hilpekînan bibe Sidebery û ji Sidebery bîne</string>
+    <string name="dejavu_sidebery_hint">Sidebery rêveberê hilpekînan e ji bo Firefoxa li ser komputeran. Panelên wê li vir qad in, komên hilpekînên wê peldank in û hilpekînên wê yên sabît malperên girîng in.</string>
+    <string name="dejavu_sidebery_export">Bo Sidebery ixrac bike</string>
+    <string name="dejavu_sidebery_import">Ji Sidebery îthal bike</string>
+    <string name="dejavu_sidebery_steps">Di «Snapshots viewer» ya Sidebery de, «Import snapshot» dosyeya ji Dejavu dixwîne û «Open all windows» hilpekînên wê vedike. Ji bo anîna hilpekînan bo vir, li wir wêneyekî bilez hilbijêre, paşê «Export snapshot» û «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Qadên nû</string>
+    <string name="dejavu_sidebery_essentials">Malperên girîng</string>
+    <string name="dejavu_sidebery_new_containers">Konteynerên nû</string>
+    <string name="dejavu_sidebery_left_out">Li derve hiştî</string>
+    <string name="dejavu_sidebery_left_out_note">Rûpelên ku telefon nikare veke, wekî dosyeyên herêmî, û hilpekînên paceyên taybet</string>
+    <string name="dejavu_sidebery_nothing_new">Di vê dosyeyê de tiştekî nû tune.</string>
+    <string name="dejavu_sidebery_import_button">Îthal bike</string>
+    <string name="dejavu_sidebery_imported">Ji Sidebery hate îthalkirin</string>
+    <string name="dejavu_sidebery_exported">Ji bo Sidebery hate tomarkirin</string>
+    <string name="dejavu_sidebery_export_failed">Dosye nehate tomarkirin. Dîsa biceribîne.</string>
+    <string name="dejavu_sidebery_bad_file">Ev dosye ne wêneyekî bilez û ne jî paşkeftek Sidebery ye.</string>
+    <string name="dejavu_passkeys_unsupported">Nifteyên derbasbûnê hîn di vê guhertoya Androidê de nayên destekkirin</string>
 </resources>

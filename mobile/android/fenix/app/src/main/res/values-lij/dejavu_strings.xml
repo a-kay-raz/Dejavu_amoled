@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu o l\'é o tò navegatô predefinio.</string>
     <string name="dejavu_welcome_sync_title">I tò spaçi de travaggio in sce ògni dispoxitivo</string>
     <string name="dejavu_welcome_sync_text">Fa l\'accesso con un conto Mozilla pe sincronizzâ spaçi de travaggio, feuggi fissæ e essençiali con Zen, ò feuggi con Firefox.</string>
-    <string name="dejavu_settings_matrix">Parla in sce Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fa domande, dà idee ò segnala un erô</string>
+    <string name="dejavu_settings_email">Pòsta eletrònica</string>
+    <string name="dejavu_settings_email_summary">Fa domande, dà idee ò segnala un erô</string>
     <string name="dejavu_menu_clear_data">Pulisci dæti</string>
     <string name="dejavu_menu_clear_data_and_quit">Pulisci dæti e sciòrti</string>
     <string name="dejavu_clear_data_button">Pomello “Pulisci dæti”</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">O se dizativa torna quande Dejavu o se reavvia</string>
     <string name="dejavu_preference_mouse_support">Sopòrto do ratto</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic co-o pomello de mezo o l\'arve un colegamento inte \'n feuggio in sfondo, e passâ in sciô colegamento o ne mostra l\'adresso. Un clic co-o pomello de mezo in sciô feuggio o o sära.</string>
+    <string name="dejavu_no_closed_tabs">Nisciun feuggio særou urtimamente</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d in sto feuggio</string>
+    <string name="dejavu_tab_pages">Pagine in sto feuggio</string>
+    <string name="dejavu_settings_tabs_import_export">Importa e esporta feuggi</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mescia spaçi de travaggio, cartelle e feuggi vèrso e da Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery o l’é un gestô de feuggi pe Firefox in sci computer. Chi i seu panelli son spaçi de travaggio, i seu gruppi de feuggi son cartelle e i seu feuggi fissæ son essençiali.</string>
+    <string name="dejavu_sidebery_export">Esporta in Sidebery</string>
+    <string name="dejavu_sidebery_import">Importa da Sidebery</string>
+    <string name="dejavu_sidebery_steps">Into «Snapshots viewer» de Sidebery, «Import snapshot» o lèze o schedaio de Dejavu e «Open all windows» o arve i seu feuggi. Pe portâ di feuggi chi, çerni lì un’istantania, pöi «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Neuvi spaçi de travaggio</string>
+    <string name="dejavu_sidebery_essentials">Essençiali</string>
+    <string name="dejavu_sidebery_new_containers">Neuvi contenitoi</string>
+    <string name="dejavu_sidebery_left_out">Lasciæ feua</string>
+    <string name="dejavu_sidebery_left_out_note">Pagine che un telefono o no peu arvî, comme i schedai locali, e feuggi de barcoin privæ</string>
+    <string name="dejavu_sidebery_nothing_new">No gh’é ninte de neuvo inte sto schedaio.</string>
+    <string name="dejavu_sidebery_import_button">Importa</string>
+    <string name="dejavu_sidebery_imported">Importou da Sidebery</string>
+    <string name="dejavu_sidebery_exported">Sarvou pe Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">No s’é posciuo sarvâ o schedaio. Preuva torna.</string>
+    <string name="dejavu_sidebery_bad_file">Sto schedaio o no l’é un’istantania ni unna copia de seguessa de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">E ciave d\'accesso no son ancon supportæ in sta verscion d\'Android</string>
 </resources>

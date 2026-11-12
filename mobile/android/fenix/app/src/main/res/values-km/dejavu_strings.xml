@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu គឺជាកម្មវិធីរុករកលំនាំដើមរបស់អ្នក។</string>
     <string name="dejavu_welcome_sync_title">ចន្លោះការងាររបស់អ្នកនៅលើគ្រប់ឧបករណ៍</string>
     <string name="dejavu_welcome_sync_text">ចូលគណនី Mozilla ដើម្បីធ្វើសមកាលកម្មចន្លោះការងារ ផ្ទាំងបានខ្ទាស់ និងសំខាន់ៗជាមួយ Zen ឬផ្ទាំងជាមួយ Firefox។</string>
-    <string name="dejavu_settings_matrix">ជជែកនៅលើ Matrix</string>
-    <string name="dejavu_settings_matrix_summary">សួរសំណួរ ស្នើមុខងារ ឬរាយការណ៍កំហុស</string>
+    <string name="dejavu_settings_email">អ៊ីមែល</string>
+    <string name="dejavu_settings_email_summary">សួរសំណួរ ស្នើមុខងារ ឬរាយការណ៍កំហុស</string>
     <string name="dejavu_menu_clear_data">សម្អាតទិន្នន័យ</string>
     <string name="dejavu_menu_clear_data_and_quit">សម្អាតទិន្នន័យ និងចេញ</string>
     <string name="dejavu_clear_data_button">ប៊ូតុងសម្អាតទិន្នន័យ</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">បិទវិញ នៅពេល Dejavu ចាប់ផ្ដើមឡើងវិញ</string>
     <string name="dejavu_preference_mouse_support">ការគាំទ្រកណ្ដុរ</string>
     <string name="dejavu_preference_mouse_support_summary">ការចុចប៊ូតុងកណ្ដាលបើកតំណក្នុងផ្ទាំងផ្ទៃខាងក្រោយ ហើយការដាក់ទស្សន៍ទ្រនិចលើតំណបង្ហាញអាសយដ្ឋានរបស់វា។ ការចុចប៊ូតុងកណ្ដាលលើផ្ទាំងនឹងបិទផ្ទាំងនោះ។</string>
+    <string name="dejavu_no_closed_tabs">គ្មានផ្ទាំងដែលបានបិទថ្មីៗឡើយ</string>
+    <string name="dejavu_tab_page_number">ទំព័រ %1$d ក្នុង​ផ្ទាំង​នេះ</string>
+    <string name="dejavu_tab_pages">ទំព័រ​ក្នុង​ផ្ទាំង​នេះ</string>
+    <string name="dejavu_settings_tabs_import_export">នាំចូល និងនាំចេញផ្ទាំង</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ផ្លាស់ទីចន្លោះការងារ ថត និងផ្ទាំង ទៅកាន់ និងពី Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery គឺជាកម្មវិធីគ្រប់គ្រងផ្ទាំងសម្រាប់ Firefox នៅលើកុំព្យូទ័រ។ ផ្ទាំងបញ្ជារបស់វានៅទីនេះគឺជាចន្លោះការងារ ក្រុមផ្ទាំងរបស់វាជាថត ហើយផ្ទាំងដែលបានខ្ទាស់ជាសំខាន់ៗ។</string>
+    <string name="dejavu_sidebery_export">នាំចេញទៅ Sidebery</string>
+    <string name="dejavu_sidebery_import">នាំចូលពី Sidebery</string>
+    <string name="dejavu_sidebery_steps">នៅក្នុង «Snapshots viewer» របស់ Sidebery «Import snapshot» អានឯកសារពី Dejavu ហើយ «Open all windows» បើកផ្ទាំងរបស់វា។ ដើម្បីនាំផ្ទាំងមកទីនេះ សូមជ្រើសរើសរូបថតមួយនៅទីនោះ បន្ទាប់មក «Export snapshot» និង «Save as JSON»។</string>
+    <string name="dejavu_sidebery_new_workspaces">ចន្លោះការងារថ្មី</string>
+    <string name="dejavu_sidebery_essentials">សំខាន់ៗ</string>
+    <string name="dejavu_sidebery_new_containers">កុងតឺន័រថ្មី</string>
+    <string name="dejavu_sidebery_left_out">បានទុកចោល</string>
+    <string name="dejavu_sidebery_left_out_note">ទំព័រដែលទូរសព្ទមិនអាចបើកបាន ដូចជាឯកសារមូលដ្ឋាន និងផ្ទាំងនៃបង្អួចឯកជន</string>
+    <string name="dejavu_sidebery_nothing_new">គ្មានអ្វីថ្មីនៅក្នុងឯកសារនេះទេ។</string>
+    <string name="dejavu_sidebery_import_button">នាំចូល</string>
+    <string name="dejavu_sidebery_imported">បាននាំចូលពី Sidebery</string>
+    <string name="dejavu_sidebery_exported">បានរក្សាទុកសម្រាប់ Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">មិនអាចរក្សាទុកឯកសារបានទេ។ សូមព្យាយាមម្ដងទៀត។</string>
+    <string name="dejavu_sidebery_bad_file">ឯកសារនេះមិនមែនជារូបថត ឬការបម្រុងទុករបស់ Sidebery ទេ។</string>
+    <string name="dejavu_passkeys_unsupported">សោសម្ងាត់មិនទាន់ត្រូវបានគាំទ្រនៅលើកំណែ Android នេះនៅឡើយទេ</string>
 </resources>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu er din standardbrowser.</string>
     <string name="dejavu_welcome_sync_title">Dine arbejdsområder på alle enheder</string>
     <string name="dejavu_welcome_sync_text">Log ind med en Mozilla-konto for at synkronisere arbejdsområder, fastgjorte faneblade og favoritter med Zen eller faneblade med Firefox.</string>
-    <string name="dejavu_settings_matrix">Chat på Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Stil et spørgsmål, foreslå en funktion eller rapportér en fejl</string>
+    <string name="dejavu_settings_email">E-mail</string>
+    <string name="dejavu_settings_email_summary">Stil et spørgsmål, foreslå en funktion eller rapportér en fejl</string>
     <string name="dejavu_menu_clear_data">Ryd data</string>
     <string name="dejavu_menu_clear_data_and_quit">Ryd data og afslut</string>
     <string name="dejavu_clear_data_button">Knappen »Ryd data«</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Slås fra igen, når Dejavu genstarter</string>
     <string name="dejavu_preference_mouse_support">Understøttelse af mus</string>
     <string name="dejavu_preference_mouse_support_summary">Et klik med midterknappen åbner et link i et faneblad i baggrunden, og når du holder markøren over et link, vises dets adresse. Et klik med midterknappen på et faneblad lukker det.</string>
+    <string name="dejavu_no_closed_tabs">Ingen nyligt lukkede faneblade</string>
+    <string name="dejavu_tab_page_number">Side %1$d i dette faneblad</string>
+    <string name="dejavu_tab_pages">Sider i dette faneblad</string>
+    <string name="dejavu_settings_tabs_import_export">Importer og eksporter faneblade</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Flyt arbejdsområder, mapper og faneblade til og fra Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery er en fanebladshåndtering til Firefox på computere. Dens paneler er her arbejdsområder, dens fanebladsgrupper er mapper, og dens fastgjorte faneblade er favoritter.</string>
+    <string name="dejavu_sidebery_export">Eksporter til Sidebery</string>
+    <string name="dejavu_sidebery_import">Importer fra Sidebery</string>
+    <string name="dejavu_sidebery_steps">I Sideberys «Snapshots viewer» læser «Import snapshot» filen fra Dejavu, og «Open all windows» åbner dens faneblade. For at hente faneblade hertil skal du vælge et snapshot der og derefter «Export snapshot» og «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nye arbejdsområder</string>
+    <string name="dejavu_sidebery_essentials">Favoritter</string>
+    <string name="dejavu_sidebery_new_containers">Nye beholdere</string>
+    <string name="dejavu_sidebery_left_out">Udeladt</string>
+    <string name="dejavu_sidebery_left_out_note">Sider, som en telefon ikke kan åbne, fx lokale filer, og faneblade fra private vinduer</string>
+    <string name="dejavu_sidebery_nothing_new">Der er intet nyt i denne fil.</string>
+    <string name="dejavu_sidebery_import_button">Importer</string>
+    <string name="dejavu_sidebery_imported">Importeret fra Sidebery</string>
+    <string name="dejavu_sidebery_exported">Gemt til Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Filen kunne ikke gemmes. Prøv igen.</string>
+    <string name="dejavu_sidebery_bad_file">Denne fil er ikke et snapshot eller en sikkerhedskopi fra Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Adgangsnøgler understøttes endnu ikke på denne Android-version</string>
 </resources>

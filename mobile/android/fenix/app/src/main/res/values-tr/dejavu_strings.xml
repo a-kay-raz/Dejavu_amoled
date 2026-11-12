@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu varsayılan tarayıcınız.</string>
     <string name="dejavu_welcome_sync_title">Çalışma alanlarınız tüm cihazlarınızda</string>
     <string name="dejavu_welcome_sync_text">Çalışma alanlarını, sabitlenmiş sekmeleri ve temel sekmeleri Zen ile ya da sekmeleri Firefox ile eşitlemek için bir Mozilla hesabıyla giriş yapın.</string>
-    <string name="dejavu_settings_matrix">Matrix\'te sohbet edin</string>
-    <string name="dejavu_settings_matrix_summary">Soru sorun, özellik önerin veya hata bildirin</string>
+    <string name="dejavu_settings_email">E-posta</string>
+    <string name="dejavu_settings_email_summary">Soru sorun, özellik önerin veya hata bildirin</string>
     <string name="dejavu_menu_clear_data">Verileri temizle</string>
     <string name="dejavu_menu_clear_data_and_quit">Verileri temizle ve çık</string>
     <string name="dejavu_clear_data_button">Verileri temizle düğmesi</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu yeniden başladığında tekrar kapanır</string>
     <string name="dejavu_preference_mouse_support">Fare desteği</string>
     <string name="dejavu_preference_mouse_support_summary">Orta tıklama bir bağlantıyı arka plandaki bir sekmede açar, bir bağlantının üzerine gelmek ise adresini gösterir. Bir sekmeye orta tıklama onu kapatır.</string>
+    <string name="dejavu_no_closed_tabs">Yakın zamanda kapatılmış sekme yok</string>
+    <string name="dejavu_tab_page_number">Bu sekmedeki %1$d. sayfa</string>
+    <string name="dejavu_tab_pages">Bu sekmedeki sayfalar</string>
+    <string name="dejavu_settings_tabs_import_export">Sekmeleri içe ve dışa aktar</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Çalışma alanlarını, klasörleri ve sekmeleri Sidebery’ye taşıyın ve Sidebery’den alın</string>
+    <string name="dejavu_sidebery_hint">Sidebery, bilgisayarlardaki Firefox için bir sekme yöneticisidir. Panelleri burada çalışma alanı, sekme grupları klasör, sabitlenmiş sekmeleri de temel sekmedir.</string>
+    <string name="dejavu_sidebery_export">Sidebery’ye aktar</string>
+    <string name="dejavu_sidebery_import">Sidebery’den al</string>
+    <string name="dejavu_sidebery_steps">Sidebery’nin «Snapshots viewer» bölümünde «Import snapshot» Dejavu’dan gelen dosyayı okur, «Open all windows» da sekmelerini açar. Sekmeleri buraya getirmek için orada bir anlık görüntü seçin, ardından «Export snapshot» ve «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Yeni çalışma alanları</string>
+    <string name="dejavu_sidebery_essentials">Temel sekmeler</string>
+    <string name="dejavu_sidebery_new_containers">Yeni kapsayıcılar</string>
+    <string name="dejavu_sidebery_left_out">Alınmayanlar</string>
+    <string name="dejavu_sidebery_left_out_note">Telefonun açamadığı sayfalar, örneğin yerel dosyalar, ve gizli pencerelerin sekmeleri</string>
+    <string name="dejavu_sidebery_nothing_new">Bu dosyada yeni bir şey yok.</string>
+    <string name="dejavu_sidebery_import_button">İçe aktar</string>
+    <string name="dejavu_sidebery_imported">Sidebery’den alındı</string>
+    <string name="dejavu_sidebery_exported">Sidebery için kaydedildi</string>
+    <string name="dejavu_sidebery_export_failed">Dosya kaydedilemedi. Yeniden deneyin.</string>
+    <string name="dejavu_sidebery_bad_file">Bu dosya bir Sidebery anlık görüntüsü ya da yedeği değil.</string>
+    <string name="dejavu_passkeys_unsupported">Geçiş anahtarları bu Android sürümünde henüz desteklenmiyor</string>
 </resources>

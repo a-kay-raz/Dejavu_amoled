@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Default browser mo na ang Dejavu.</string>
     <string name="dejavu_welcome_sync_title">Ang iyong mga workspace sa bawat device</string>
     <string name="dejavu_welcome_sync_text">Mag-sign in gamit ang Mozilla account para i-sync ang mga workspace, naka-pin na tab at Mahahalaga sa Zen, o mga tab sa Firefox.</string>
-    <string name="dejavu_settings_matrix">Makipag-chat sa Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Magtanong, magmungkahi ng feature, o mag-ulat ng bug</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Magtanong, magmungkahi ng feature, o mag-ulat ng bug</string>
     <string name="dejavu_menu_clear_data">Linisin ang data</string>
     <string name="dejavu_menu_clear_data_and_quit">Linisin ang data at isara</string>
     <string name="dejavu_clear_data_button">Button na “Linisin ang data”</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Mag-o-off ulit kapag nag-restart ang Dejavu</string>
     <string name="dejavu_preference_mouse_support">Suporta sa mouse</string>
     <string name="dejavu_preference_mouse_support_summary">Binubuksan ng middle-click ang link sa isang background tab, at ipinapakita ng pag-hover sa link ang address nito. Isinasara ng middle-click sa isang tab ang tab.</string>
+    <string name="dejavu_no_closed_tabs">Walang mga isinarang tab kamakailan</string>
+    <string name="dejavu_tab_page_number">Pahina %1$d sa tab na ito</string>
+    <string name="dejavu_tab_pages">Mga pahina sa tab na ito</string>
+    <string name="dejavu_settings_tabs_import_export">Mag-import at mag-export ng mga tab</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Ilipat ang mga workspace, folder, at tab papunta at mula sa Sidebery</string>
+    <string name="dejavu_sidebery_hint">Ang Sidebery ay isang tab manager para sa Firefox sa mga computer. Dito, ang mga panel nito ay mga workspace, ang mga grupo ng tab nito ay mga folder, at ang mga naka-pin na tab nito ay mahahalaga.</string>
+    <string name="dejavu_sidebery_export">I-export sa Sidebery</string>
+    <string name="dejavu_sidebery_import">I-import mula sa Sidebery</string>
+    <string name="dejavu_sidebery_steps">Sa «Snapshots viewer» ng Sidebery, binabasa ng «Import snapshot» ang file mula sa Dejavu at binubuksan ng «Open all windows» ang mga tab nito. Para dalhin ang mga tab dito, pumili roon ng snapshot, saka «Export snapshot» at «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Mga bagong workspace</string>
+    <string name="dejavu_sidebery_essentials">Mahahalaga</string>
+    <string name="dejavu_sidebery_new_containers">Mga bagong container</string>
+    <string name="dejavu_sidebery_left_out">Hindi isinama</string>
+    <string name="dejavu_sidebery_left_out_note">Mga page na hindi mabubuksan ng telepono, gaya ng mga lokal na file, at mga tab ng mga pribadong window</string>
+    <string name="dejavu_sidebery_nothing_new">Walang bago sa file na ito.</string>
+    <string name="dejavu_sidebery_import_button">I-import</string>
+    <string name="dejavu_sidebery_imported">Na-import mula sa Sidebery</string>
+    <string name="dejavu_sidebery_exported">Na-save para sa Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Hindi ma-save ang file. Subukan ulit.</string>
+    <string name="dejavu_sidebery_bad_file">Ang file na ito ay hindi snapshot o backup ng Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Hindi pa suportado ang mga passkey sa bersyong ito ng Android</string>
 </resources>

@@ -5,9 +5,11 @@
 package org.mozilla.fenix.dejavu.browser
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.animateScrollBy
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,23 +28,32 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
+import androidx.compose.ui.layout.LayoutCoordinates
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.first
 import mozilla.components.browser.state.search.SearchEngine
 import mozilla.components.browser.state.selector.findTab
 import mozilla.components.browser.state.state.TabSessionState
@@ -272,17 +283,29 @@ fun DejavuClipboardChip(link: String?, onClick: () -> Unit, modifier: Modifier =
     }
 }
 
+/** The scroll of a [ChipRow] and the middle of the row on the screen, so a picked [SearchChip] can move there. */
+private class ChipRowState(val scroll: ScrollState) {
+    var middle by mutableStateOf<Float?>(null)
+}
+
+private val LocalChipRow = compositionLocalOf<ChipRowState?> { null }
+
 @Composable
 private fun ChipRow(content: @Composable RowScope.() -> Unit) {
-    Row(
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .fillMaxWidth()
-            .horizontalScroll(rememberScrollState())
-            .padding(horizontal = 12.dp, vertical = 4.dp),
-        content = content,
-    )
+    val scroll = rememberScrollState()
+    val state = remember(scroll) { ChipRowState(scroll) }
+    CompositionLocalProvider(LocalChipRow provides state) {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .fillMaxWidth()
+                .onGloballyPositioned { state.middle = it.middleInWindow() }
+                .horizontalScroll(scroll)
+                .padding(horizontal = 12.dp, vertical = 4.dp),
+            content = content,
+        )
+    }
 }
 
 @Composable
@@ -293,9 +316,20 @@ private fun SearchChip(
     leading: @Composable (IconTaps) -> Unit,
 ) {
     val taps = rememberIconTaps()
+    val row = LocalChipRow.current
+    var middle by remember { mutableStateOf<Float?>(null) }
+    // A picked chip moves to the middle of its row, also one picked for the user, so one past the edge comes into view.
+    LaunchedEffect(selected) {
+        if (!selected || row == null) return@LaunchedEffect
+        val offset = snapshotFlow { middle?.let { chip -> row.middle?.let { chip - it } } }
+            .filterNotNull()
+            .first()
+        row.scroll.animateScrollBy(offset)
+    }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
+            .onGloballyPositioned { middle = it.middleInWindow() }
             .height(36.dp)
             .clip(CircleShape)
             .background(
@@ -319,5 +353,8 @@ private fun SearchChip(
         )
     }
 }
+
+/** The middle of this on the screen across, also when the row it scrolls in hides part of it or all of it. */
+private fun LayoutCoordinates.middleInWindow() = positionInWindow().x + size.width / 2f
 
 private val CHIP_ICON = 18.dp

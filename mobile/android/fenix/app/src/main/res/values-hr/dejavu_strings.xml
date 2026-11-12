@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu je vaš zadani preglednik.</string>
     <string name="dejavu_welcome_sync_title">Vaši radni prostori na svakom uređaju</string>
     <string name="dejavu_welcome_sync_text">Prijavite se Mozilla računom za sinkronizaciju radnih prostora, prikvačenih kartica i Favorita sa Zenom ili kartica s Firefoxom.</string>
-    <string name="dejavu_settings_matrix">Razgovarajte na Matrixu</string>
-    <string name="dejavu_settings_matrix_summary">Postavite pitanje, predložite značajku ili prijavite grešku</string>
+    <string name="dejavu_settings_email">E-pošta</string>
+    <string name="dejavu_settings_email_summary">Postavite pitanje, predložite značajku ili prijavite grešku</string>
     <string name="dejavu_menu_clear_data">Izbriši podatke</string>
     <string name="dejavu_menu_clear_data_and_quit">Izbriši podatke i izađi</string>
     <string name="dejavu_clear_data_button">Gumb „Izbriši podatke”</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Opet se isključuje kad se Dejavu ponovno pokrene</string>
     <string name="dejavu_preference_mouse_support">Podrška za miš</string>
     <string name="dejavu_preference_mouse_support_summary">Klik srednjom tipkom otvara poveznicu u kartici u pozadini, a prelazak mišem preko poveznice prikazuje njezinu adresu. Klik srednjom tipkom na karticu zatvara je.</string>
+    <string name="dejavu_no_closed_tabs">Nema nedavno zatvorenih kartica</string>
+    <string name="dejavu_tab_page_number">Stranica %1$d u ovoj kartici</string>
+    <string name="dejavu_tab_pages">Stranice u ovoj kartici</string>
+    <string name="dejavu_settings_tabs_import_export">Uvoz i izvoz kartica</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Premjesti radne prostore, mape i kartice u Sidebery i iz njega</string>
+    <string name="dejavu_sidebery_hint">Sidebery je upravitelj karticama za Firefox na računalima. Njegove su ploče ovdje radni prostori, grupe kartica mape, a prikvačene kartice favoriti.</string>
+    <string name="dejavu_sidebery_export">Izvezi u Sidebery</string>
+    <string name="dejavu_sidebery_import">Uvezi iz Sideberyja</string>
+    <string name="dejavu_sidebery_steps">U Sideberyjevu «Snapshots viewer» opcija «Import snapshot» čita datoteku iz Dejavua, a «Open all windows» otvara njezine kartice. Za donošenje kartica ovamo ondje odaberi snimku, zatim «Export snapshot» i «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Novi radni prostori</string>
+    <string name="dejavu_sidebery_essentials">Favoriti</string>
+    <string name="dejavu_sidebery_new_containers">Novi spremnici</string>
+    <string name="dejavu_sidebery_left_out">Izostavljeno</string>
+    <string name="dejavu_sidebery_left_out_note">Stranice koje telefon ne može otvoriti, poput lokalnih datoteka, i kartice privatnih prozora</string>
+    <string name="dejavu_sidebery_nothing_new">U ovoj datoteci nema ničeg novog.</string>
+    <string name="dejavu_sidebery_import_button">Uvezi</string>
+    <string name="dejavu_sidebery_imported">Uvezeno iz Sideberyja</string>
+    <string name="dejavu_sidebery_exported">Spremljeno za Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Datoteku nije moguće spremiti. Pokušaj ponovo.</string>
+    <string name="dejavu_sidebery_bad_file">Ova datoteka nije Sideberyjeva snimka ni sigurnosna kopija.</string>
+    <string name="dejavu_passkeys_unsupported">Pristupni ključevi još nisu podržani na ovoj verziji Androida</string>
 </resources>

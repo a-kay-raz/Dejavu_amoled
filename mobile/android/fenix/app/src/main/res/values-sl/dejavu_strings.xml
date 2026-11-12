@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu je vaš privzeti brskalnik.</string>
     <string name="dejavu_welcome_sync_title">Vaši delovni prostori na vseh napravah</string>
     <string name="dejavu_welcome_sync_text">Prijavite se z računom Mozilla, da sinhronizirate delovne prostore, pripete zavihke in Izbrano z Zenom ali zavihke s Firefoxom.</string>
-    <string name="dejavu_settings_matrix">Klepetajte na Matrixu</string>
-    <string name="dejavu_settings_matrix_summary">Postavite vprašanje, predlagajte funkcijo ali prijavite napako</string>
+    <string name="dejavu_settings_email">E-pošta</string>
+    <string name="dejavu_settings_email_summary">Postavite vprašanje, predlagajte funkcijo ali prijavite napako</string>
     <string name="dejavu_menu_clear_data">Počisti podatke</string>
     <string name="dejavu_menu_clear_data_and_quit">Počisti podatke in zapri</string>
     <string name="dejavu_clear_data_button">Gumb »Počisti podatke«</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Ob ponovnem zagonu Dejavuja se znova izklopi</string>
     <string name="dejavu_preference_mouse_support">Podpora za miško</string>
     <string name="dejavu_preference_mouse_support_summary">Klik s srednjim gumbom odpre povezavo v zavihku v ozadju, premik miške nad povezavo pa prikaže njen naslov. Klik s srednjim gumbom na zavihek ga zapre.</string>
+    <string name="dejavu_no_closed_tabs">Ni nedavno zaprtih zavihkov</string>
+    <string name="dejavu_tab_page_number">Stran %1$d v tem zavihku</string>
+    <string name="dejavu_tab_pages">Strani v tem zavihku</string>
+    <string name="dejavu_settings_tabs_import_export">Uvoz in izvoz zavihkov</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Premikanje delovnih prostorov, map in zavihkov v Sidebery in iz njega</string>
+    <string name="dejavu_sidebery_hint">Sidebery je upravitelj zavihkov za Firefox na računalnikih. Njegove plošče so tukaj delovni prostori, skupine zavihkov mape, pripeti zavihki pa izbrano.</string>
+    <string name="dejavu_sidebery_export">Izvozi v Sidebery</string>
+    <string name="dejavu_sidebery_import">Uvozi iz Sideberyja</string>
+    <string name="dejavu_sidebery_steps">V Sideberyjevem «Snapshots viewer» gumb «Import snapshot» prebere datoteko iz Dejavuja, «Open all windows» pa odpre njene zavihke. Če želite zavihke prenesti sem, tam izberite posnetek, nato «Export snapshot» in «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Novi delovni prostori</string>
+    <string name="dejavu_sidebery_essentials">Izbrano</string>
+    <string name="dejavu_sidebery_new_containers">Novi vsebniki</string>
+    <string name="dejavu_sidebery_left_out">Izpuščeno</string>
+    <string name="dejavu_sidebery_left_out_note">Strani, ki jih telefon ne more odpreti, na primer krajevne datoteke, in zavihki zasebnih oken</string>
+    <string name="dejavu_sidebery_nothing_new">V tej datoteki ni nič novega.</string>
+    <string name="dejavu_sidebery_import_button">Uvozi</string>
+    <string name="dejavu_sidebery_imported">Uvoženo iz Sideberyja</string>
+    <string name="dejavu_sidebery_exported">Shranjeno za Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Datoteke ni bilo mogoče shraniti. Poskusite znova.</string>
+    <string name="dejavu_sidebery_bad_file">Ta datoteka ni Sideberyjev posnetek ali varnostna kopija.</string>
+    <string name="dejavu_passkeys_unsupported">Ključi za dostop v tej različici Androida še niso podprti</string>
 </resources>

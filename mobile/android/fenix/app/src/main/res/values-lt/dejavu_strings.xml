@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu yra jūsų numatytoji naršyklė.</string>
     <string name="dejavu_welcome_sync_title">Jūsų darbo erdvės visuose įrenginiuose</string>
     <string name="dejavu_welcome_sync_text">Prisijunkite prie Mozilla paskyros, kad sinchronizuotumėte darbo erdves, prisegtas korteles ir Mėgstamiausius su Zen arba korteles su Firefox.</string>
-    <string name="dejavu_settings_matrix">Pokalbiai Matrix tinkle</string>
-    <string name="dejavu_settings_matrix_summary">Užduokite klausimą, pasiūlykite funkciją arba praneškite apie klaidą</string>
+    <string name="dejavu_settings_email">El. paštas</string>
+    <string name="dejavu_settings_email_summary">Užduokite klausimą, pasiūlykite funkciją arba praneškite apie klaidą</string>
     <string name="dejavu_menu_clear_data">Išvalyti duomenis</string>
     <string name="dejavu_menu_clear_data_and_quit">Išvalyti duomenis ir išjungti</string>
     <string name="dejavu_clear_data_button">Mygtukas „Išvalyti duomenis“</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Iš naujo paleidus Dejavu vėl išsijungia</string>
     <string name="dejavu_preference_mouse_support">Pelės palaikymas</string>
     <string name="dejavu_preference_mouse_support_summary">Spustelėjus viduriniu mygtuku, saitas atveriamas fono kortelėje, o užvedus pelę ant saito rodomas jo adresas. Spustelėjus viduriniu mygtuku kortelę, ji uždaroma.</string>
+    <string name="dejavu_no_closed_tabs">Nėra paskiausiai užvertų kortelių</string>
+    <string name="dejavu_tab_page_number">Puslapis %1$d šioje kortelėje</string>
+    <string name="dejavu_tab_pages">Puslapiai šioje kortelėje</string>
+    <string name="dejavu_settings_tabs_import_export">Kortelių importas ir eksportas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Perkelkite darbo erdves, aplankus ir korteles į Sidebery ir iš jo</string>
+    <string name="dejavu_sidebery_hint">Sidebery yra kortelių tvarkytuvė kompiuterių Firefox naršyklei. Jos skydeliai čia yra darbo erdvės, kortelių grupės – aplankai, o prisegtos kortelės – mėgstamiausi.</string>
+    <string name="dejavu_sidebery_export">Eksportuoti į Sidebery</string>
+    <string name="dejavu_sidebery_import">Importuoti iš Sidebery</string>
+    <string name="dejavu_sidebery_steps">Sidebery skiltyje „Snapshots viewer“ „Import snapshot“ nuskaito failą iš Dejavu, o „Open all windows“ atveria jo korteles. Norėdami korteles atsinešti čia, ten pasirinkite momentinę kopiją, tada „Export snapshot“ ir „Save as JSON“.</string>
+    <string name="dejavu_sidebery_new_workspaces">Naujos darbo erdvės</string>
+    <string name="dejavu_sidebery_essentials">Mėgstamiausi</string>
+    <string name="dejavu_sidebery_new_containers">Nauji konteineriai</string>
+    <string name="dejavu_sidebery_left_out">Praleista</string>
+    <string name="dejavu_sidebery_left_out_note">Tinklalapiai, kurių telefonas negali atverti, pavyzdžiui, vietiniai failai, ir privačių langų kortelės</string>
+    <string name="dejavu_sidebery_nothing_new">Šiame faile nėra nieko naujo.</string>
+    <string name="dejavu_sidebery_import_button">Importuoti</string>
+    <string name="dejavu_sidebery_imported">Importuota iš Sidebery</string>
+    <string name="dejavu_sidebery_exported">Įrašyta Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Nepavyko įrašyti failo. Bandykite dar kartą.</string>
+    <string name="dejavu_sidebery_bad_file">Šis failas nėra Sidebery momentinė kopija ar atsarginė kopija.</string>
+    <string name="dejavu_passkeys_unsupported">Prieigos raktai šioje Android versijoje dar nepalaikomi</string>
 </resources>

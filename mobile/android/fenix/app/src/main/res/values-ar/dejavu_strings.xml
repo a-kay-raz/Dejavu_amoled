@@ -548,8 +548,8 @@
     <string name="dejavu_welcome_default_done">أصبح Dejavu متصفحك المبدئي.</string>
     <string name="dejavu_welcome_sync_title">مساحات عملك على كل أجهزتك</string>
     <string name="dejavu_welcome_sync_text">سجّل الدخول بحساب Mozilla لمزامنة مساحات العمل والتبويبات المثبتة والأساسيات مع Zen، أو التبويبات مع Firefox.</string>
-    <string name="dejavu_settings_matrix">دردش على Matrix</string>
-    <string name="dejavu_settings_matrix_summary">اطرح سؤالًا، أو اقترح ميزة، أو أبلغ عن خطأ</string>
+    <string name="dejavu_settings_email">البريد الإلكتروني</string>
+    <string name="dejavu_settings_email_summary">اطرح سؤالًا، أو اقترح ميزة، أو أبلغ عن خطأ</string>
     <string name="dejavu_menu_clear_data">مسح البيانات</string>
     <string name="dejavu_menu_clear_data_and_quit">مسح البيانات والخروج</string>
     <string name="dejavu_clear_data_button">زر مسح البيانات</string>
@@ -578,4 +578,25 @@
     <string name="dejavu_remote_debugging_summary">يتعطّل مجددًا عند إعادة تشغيل Dejavu</string>
     <string name="dejavu_preference_mouse_support">دعم الفأرة</string>
     <string name="dejavu_preference_mouse_support_summary">النقر بالزر الأوسط يفتح الرابط في تبويب في الخلفية، والمرور فوق الرابط يعرض عنوانه. النقر بالزر الأوسط على تبويب يغلقه.</string>
+    <string name="dejavu_no_closed_tabs">ما من تبويبات أُغلقت حديثًا</string>
+    <string name="dejavu_tab_page_number">الصفحة %1$d في هذا التبويب</string>
+    <string name="dejavu_tab_pages">الصفحات في هذا التبويب</string>
+    <string name="dejavu_settings_tabs_import_export">استيراد التبويبات وتصديرها</string>
+    <string name="dejavu_settings_tabs_import_export_summary">انقل مساحات العمل والمجلدات والتبويبات من Sidebery وإليه</string>
+    <string name="dejavu_sidebery_hint">Sidebery مدير تبويبات لمتصفح Firefox على الحواسيب. لوحاته هنا مساحات عمل، ومجموعات تبويباته مجلدات، وتبويباته المثبتة أساسيات.</string>
+    <string name="dejavu_sidebery_export">صدِّر إلى Sidebery</string>
+    <string name="dejavu_sidebery_import">استورد من Sidebery</string>
+    <string name="dejavu_sidebery_steps">في «Snapshots viewer» في Sidebery، يقرأ «Import snapshot» الملف القادم من Dejavu ويفتح «Open all windows» تبويباته. لإحضار التبويبات إلى هنا، اختر لقطة هناك ثم «Export snapshot» ثم «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">مساحات عمل جديدة</string>
+    <string name="dejavu_sidebery_essentials">الأساسيات</string>
+    <string name="dejavu_sidebery_new_containers">حاويات جديدة</string>
+    <string name="dejavu_sidebery_left_out">مستبعدة</string>
+    <string name="dejavu_sidebery_left_out_note">صفحات لا يستطيع الهاتف فتحها، مثل الملفات المحلية، وتبويبات النوافذ الخاصة</string>
+    <string name="dejavu_sidebery_nothing_new">لا جديد في هذا الملف.</string>
+    <string name="dejavu_sidebery_import_button">استورد</string>
+    <string name="dejavu_sidebery_imported">استُورد من Sidebery</string>
+    <string name="dejavu_sidebery_exported">حُفظ لأجل Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">تعذّر حفظ الملف. حاول مرة أخرى.</string>
+    <string name="dejavu_sidebery_bad_file">هذا الملف ليس لقطة ولا نسخة احتياطية من Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">مفاتيح المرور غير مدعومة بعد على إصدار Android هذا</string>
 </resources>

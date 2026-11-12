@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu браузери пешфарзи шумо мебошад.</string>
     <string name="dejavu_welcome_sync_title">Фазоҳои шумо дар ҳар як дастгоҳ</string>
     <string name="dejavu_welcome_sync_text">Бо ҳисоби Mozilla ворид шавед, то фазоҳо, варақаҳои часпонидашуда ва сомонаҳои муҳимро бо Zen ё варақаҳоро бо Firefox ҳамоҳанг кунед.</string>
-    <string name="dejavu_settings_matrix">Дар Matrix сӯҳбат кунед</string>
-    <string name="dejavu_settings_matrix_summary">Савол пурсед, хусусият пешниҳод кунед ё дар бораи хато хабар диҳед</string>
+    <string name="dejavu_settings_email">Почтаи электронӣ</string>
+    <string name="dejavu_settings_email_summary">Савол пурсед, хусусият пешниҳод кунед ё дар бораи хато хабар диҳед</string>
     <string name="dejavu_menu_clear_data">Пок кардани маълумот</string>
     <string name="dejavu_menu_clear_data_and_quit">Пок кардани маълумот ва баромадан</string>
     <string name="dejavu_clear_data_button">Тугмаи «Пок кардани маълумот»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Ҳангоми аз нав оғоз шудани Dejavu боз хомӯш мешавад</string>
     <string name="dejavu_preference_mouse_support">Дастгирии муш</string>
     <string name="dejavu_preference_mouse_support_summary">Зеркунӣ бо тугмаи миёна пайвандро дар варақаи пасзамина мекушояд, ва нигоҳ доштани муш болои пайванд нишонии онро нишон медиҳад. Зеркунӣ бо тугмаи миёна болои варақа онро мебандад.</string>
+    <string name="dejavu_no_closed_tabs">Ягон варақаи ба наздикӣ пӯшидашуда нест</string>
+    <string name="dejavu_tab_page_number">Саҳифаи %1$d дар ин варақа</string>
+    <string name="dejavu_tab_pages">Саҳифаҳо дар ин варақа</string>
+    <string name="dejavu_settings_tabs_import_export">Ворид ва содир кардани варақаҳо</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Фазоҳо, ҷузвдонҳо ва варақаҳоро ба Sidebery ва аз Sidebery интиқол диҳед</string>
+    <string name="dejavu_sidebery_hint">Sidebery мудири варақаҳо барои Firefox дар компютерҳо мебошад. Панелҳои он дар ин ҷо фазоҳо, гурӯҳҳои варақаҳо ҷузвдонҳо ва варақаҳои часпонидашуда сомонаҳои муҳим мебошанд.</string>
+    <string name="dejavu_sidebery_export">Содир кардан ба Sidebery</string>
+    <string name="dejavu_sidebery_import">Ворид кардан аз Sidebery</string>
+    <string name="dejavu_sidebery_steps">Дар «Snapshots viewer»-и Sidebery «Import snapshot» файли Dejavu-ро мехонад ва «Open all windows» варақаҳои онро мекушояд. Барои овардани варақаҳо ба ин ҷо, дар он ҷо як акси фаврӣ интихоб кунед, баъд «Export snapshot» ва «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Фазоҳои нав</string>
+    <string name="dejavu_sidebery_essentials">Сомонаҳои муҳим</string>
+    <string name="dejavu_sidebery_new_containers">Контейнерҳои нав</string>
+    <string name="dejavu_sidebery_left_out">Партофташуда</string>
+    <string name="dejavu_sidebery_left_out_note">Саҳифаҳое, ки телефон кушода наметавонад, монанди файлҳои маҳаллӣ, ва варақаҳои равзанаҳои хусусӣ</string>
+    <string name="dejavu_sidebery_nothing_new">Дар ин файл ягон чизи нав нест.</string>
+    <string name="dejavu_sidebery_import_button">Ворид кардан</string>
+    <string name="dejavu_sidebery_imported">Аз Sidebery ворид карда шуд</string>
+    <string name="dejavu_sidebery_exported">Барои Sidebery нигоҳ дошта шуд</string>
+    <string name="dejavu_sidebery_export_failed">Файл нигоҳ дошта нашуд. Аз нав кӯшиш кунед.</string>
+    <string name="dejavu_sidebery_bad_file">Ин файл акси фаврӣ ё нусхаи эҳтиётии Sidebery нест.</string>
+    <string name="dejavu_passkeys_unsupported">Шоҳкалидҳо дар ин версияи Android ҳоло дастгирӣ намешаванд</string>
 </resources>

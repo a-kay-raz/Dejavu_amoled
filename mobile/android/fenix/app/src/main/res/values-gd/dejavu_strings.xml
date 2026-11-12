@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">\'S e Dejavu am brabhsair bunaiteach agad.</string>
     <string name="dejavu_welcome_sync_title">Na h-àiteachan-obrach agad air gach uidheam</string>
     <string name="dejavu_welcome_sync_text">Clàraich a-steach le cunntas Mozilla gus àiteachan-obrach, tabaichean prìnichte is feumalachdan a shioncronachadh le Zen, no tabaichean le Firefox.</string>
-    <string name="dejavu_settings_matrix">Cabadaich air Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Faighnich ceist, mol gleus no dèan aithris air buga</string>
+    <string name="dejavu_settings_email">Post-d</string>
+    <string name="dejavu_settings_email_summary">Faighnich ceist, mol gleus no dèan aithris air buga</string>
     <string name="dejavu_menu_clear_data">Falamhaich an dàta</string>
     <string name="dejavu_menu_clear_data_and_quit">Falamhaich an dàta agus fàg</string>
     <string name="dejavu_clear_data_button">Am putan “Falamhaich an dàta”</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Thèid a chur dheth a-rithist nuair a thòisicheas Dejavu às ùr</string>
     <string name="dejavu_preference_mouse_support">Taic luchaige</string>
     <string name="dejavu_preference_mouse_support_summary">Fosglaidh briogadh meadhanach ceangal ann an taba sa chùlaibh, agus seallaidh fantainn os cionn ceangail an seòladh aige. Dùinidh briogadh meadhanach air taba e.</string>
+    <string name="dejavu_no_closed_tabs">Chan eil taba sam bith ann a dhùin thu o chionn goirid</string>
+    <string name="dejavu_tab_page_number">Duilleag %1$d san taba seo</string>
+    <string name="dejavu_tab_pages">Duilleagan san taba seo</string>
+    <string name="dejavu_settings_tabs_import_export">Ion-phortaich is às-phortaich tabaichean</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Gluais àiteachan-obrach, pasganan is tabaichean gu Sidebery is uaithe</string>
+    <string name="dejavu_sidebery_hint">’S e manaidsear thabaichean airson Firefox air coimpiutairean a th’ ann an Sidebery. ’S e àiteachan-obrach a th’ anns na panailean aige an-seo, ’s e pasganan a th’ anns na buidhnean thabaichean aige agus ’s e feumalachdan a th’ anns na tabaichean prìnichte aige.</string>
+    <string name="dejavu_sidebery_export">Às-phortaich gu Sidebery</string>
+    <string name="dejavu_sidebery_import">Ion-phortaich o Sidebery</string>
+    <string name="dejavu_sidebery_steps">Ann an «Snapshots viewer» aig Sidebery, leughaidh «Import snapshot» am faidhle o Dejavu agus fosglaidh «Open all windows» na tabaichean aige. Gus tabaichean a thoirt an-seo, tagh dealbh-làithreach an-sin, an uairsin «Export snapshot» agus «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Àiteachan-obrach ùra</string>
+    <string name="dejavu_sidebery_essentials">Feumalachdan</string>
+    <string name="dejavu_sidebery_new_containers">Soithichean ùra</string>
+    <string name="dejavu_sidebery_left_out">Air am fàgail às</string>
+    <string name="dejavu_sidebery_left_out_note">Duilleagan nach urrainn do fhòn fhosgladh, can faidhlichean ionadail, agus tabaichean o uinneagan prìobhaideach</string>
+    <string name="dejavu_sidebery_nothing_new">Chan eil dad ùr san fhaidhle seo.</string>
+    <string name="dejavu_sidebery_import_button">Ion-phortaich</string>
+    <string name="dejavu_sidebery_imported">Air ion-phortadh o Sidebery</string>
+    <string name="dejavu_sidebery_exported">Air a shàbhaladh airson Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Cha b’ urrainn dhuinn am faidhle a shàbhaladh. Feuch ris a-rithist.</string>
+    <string name="dejavu_sidebery_bad_file">Chan e dealbh-làithreach no lethbhreac-glèidhidh de Sidebery a th’ san fhaidhle seo.</string>
+    <string name="dejavu_passkeys_unsupported">Chan eil taic ri iuchraichean-inntrigidh air an tionndadh seo de Android fhathast</string>
 </resources>

@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -39,6 +40,7 @@ import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -49,10 +51,12 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
@@ -66,13 +70,18 @@ import org.mozilla.fenix.dejavu.ui.DejavuPopup
 import org.mozilla.fenix.dejavu.workspaces.WallpaperArt
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpaper
+import org.mozilla.fenix.dejavu.workspaces.previewWallpaper
+import org.mozilla.fenix.theme.getThemeProvider
 
 private const val PHOTO = "photo"
+private const val LIGHT_KEY = "-light"
 
 /**
- * The wallpapers to pick from, in a row: the ones Dejavu draws and a photo of the user's own, after no wallpaper when
- * [noneTheme] is given, which shows the workspace's colors. [shown] is outlined. A drawn one is drawn with [drawArt]
- * and a photo copied with [importPicture] before it goes to [onPick], one at a time; no wallpaper goes as `null`.
+ * The wallpapers to pick from: the ones Dejavu draws and a photo of the user's own, in their dark look in a first row
+ * and in their light look in a second one, after no wallpaper in the first row when [showsNone], which shows the
+ * workspace's colors of [noneTheme]. Neither look follows the app's theme, see [WorkspaceWallpaper.lightLook].
+ * [shown] is outlined. A drawn one is drawn with [drawArt] and a photo copied with [importPicture] before it goes to
+ * [onPick] in the look of its row, one at a time; no wallpaper goes as `null`.
  */
 @Suppress("LongParameterList", "LongMethod")
 @Composable
@@ -91,79 +100,101 @@ internal fun WallpaperTiles(
     val latestOnPick by rememberUpdatedState(onPick)
     var importing by remember { mutableStateOf<String?>(null) }
     var failed by remember { mutableStateOf(false) }
+    // The look of the row whose photo tile opened the photo picker.
+    var photoLightLook by rememberSaveable { mutableStateOf(false) }
     val art = WallpaperArt.of(shown)
 
     // Pictures are drawn or copied in the background; one at a time.
-    fun pick(key: String, load: suspend () -> WorkspaceWallpaper?) {
+    fun pick(key: String, lightLook: Boolean, load: suspend () -> WorkspaceWallpaper?) {
         if (importing != null) return
         importing = key
         failed = false
         scope.launch {
-            val picked = load()
+            val picked = load()?.copy(lightLook = lightLook)
             importing = null
             failed = picked == null
             picked?.let(latestOnPick)
         }
     }
     val picker = rememberLauncherForActivityResult(PickVisualMedia()) { uri ->
-        if (uri != null) pick(PHOTO) { importPicture(uri) }
+        if (uri != null) pick(tileKey(PHOTO, photoLightLook), photoLightLook) { importPicture(uri) }
     }
+    val start = contentPadding.calculateStartPadding(LocalLayoutDirection.current)
 
-    LazyRow(
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
-        contentPadding = contentPadding,
-        modifier = modifier,
-    ) {
-        if (showsNone) {
-            item {
-                WallpaperTile(
-                    selected = shown == null,
-                    description = stringResource(R.string.dejavu_welcome_wallpaper_none),
-                    width = tileWidth,
-                    onClick = { onPick(null) },
-                ) {
-                    NoWallpaper(noneTheme)
+    Column(modifier = modifier) {
+        listOf(false, true).forEach { lightLook ->
+            val look = stringResource(
+                if (lightLook) R.string.preference_light_theme else R.string.preference_dark_theme,
+            )
+            Text(
+                text = look,
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier
+                    .padding(start = start, top = if (lightLook) 12.dp else 0.dp, bottom = 6.dp)
+                    .semantics { heading() },
+            )
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                contentPadding = contentPadding,
+            ) {
+                if (showsNone && !lightLook) {
+                    item {
+                        WallpaperTile(
+                            selected = shown == null,
+                            description = stringResource(R.string.dejavu_welcome_wallpaper_none),
+                            width = tileWidth,
+                            onClick = { onPick(null) },
+                        ) {
+                            NoWallpaper(noneTheme)
+                        }
+                    }
+                }
+                itemsIndexed(WallpaperArt.entries) { index, entry ->
+                    val key = tileKey(entry.key, lightLook)
+                    WallpaperTile(
+                        selected = art == entry && shown?.lightLook == lightLook,
+                        description = "${stringResource(R.string.dejavu_welcome_wallpaper_number, index + 1)}, $look",
+                        width = tileWidth,
+                        importing = importing == key,
+                        onClick = { pick(key, lightLook) { drawArt(entry) } },
+                    ) {
+                        ArtPicture(entry, tileWidth, lightLook)
+                    }
+                }
+                item {
+                    WallpaperTile(
+                        selected = shown != null && art == null && shown.lightLook == lightLook,
+                        description = "${stringResource(R.string.dejavu_welcome_wallpaper_photo)}, $look",
+                        width = tileWidth,
+                        importing = importing == tileKey(PHOTO, lightLook),
+                        onClick = {
+                            try {
+                                photoLightLook = lightLook
+                                picker.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly))
+                            } catch (e: ActivityNotFoundException) {
+                                failed = true
+                            }
+                        },
+                    ) {
+                        PhotoTile(photo = shown?.takeIf { art == null && it.lightLook == lightLook })
+                    }
                 }
             }
         }
-        itemsIndexed(WallpaperArt.entries) { index, entry ->
-            WallpaperTile(
-                selected = art == entry,
-                description = stringResource(R.string.dejavu_welcome_wallpaper_number, index + 1),
-                width = tileWidth,
-                importing = importing == entry.key,
-                onClick = { pick(entry.key) { drawArt(entry) } },
-            ) {
-                ArtPicture(entry, tileWidth)
-            }
+        if (failed) {
+            Text(
+                text = stringResource(R.string.dejavu_workspace_wallpaper_failed),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.error,
+                modifier = Modifier.padding(start = start, top = 8.dp),
+            )
         }
-        item {
-            WallpaperTile(
-                selected = shown != null && art == null,
-                description = stringResource(R.string.dejavu_welcome_wallpaper_photo),
-                width = tileWidth,
-                importing = importing == PHOTO,
-                onClick = {
-                    try {
-                        picker.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly))
-                    } catch (e: ActivityNotFoundException) {
-                        failed = true
-                    }
-                },
-            ) {
-                PhotoTile(photo = shown?.takeIf { art == null })
-            }
-        }
-    }
-    if (failed) {
-        Text(
-            text = stringResource(R.string.dejavu_workspace_wallpaper_failed),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.error,
-            modifier = Modifier.padding(top = 8.dp),
-        )
     }
 }
+
+/** What tells the tile of [key] in the row of the light look from the one in the row of the dark look. */
+private fun tileKey(key: String, lightLook: Boolean) = if (lightLook) "$key$LIGHT_KEY" else key
 
 /** A wallpaper to pick, shaped like the screen, outlined while it is [selected]; a wheel turns while [importing]. */
 @Suppress("LongParameterList")
@@ -212,30 +243,46 @@ private fun NoWallpaper(theme: WorkspaceTheme?) {
     )
 }
 
-/** A small picture of [art], drawn in the background at the size of a tile [tileWidth] wide. */
+/**
+ * A small picture of [art] under the veil of its [lightLook] or its dark one, as the home screen shows it, drawn in
+ * the background at the size of a tile [tileWidth] wide.
+ */
 @Composable
-private fun ArtPicture(art: WallpaperArt, tileWidth: Dp) {
+private fun ArtPicture(art: WallpaperArt, tileWidth: Dp, lightLook: Boolean) {
     val configuration = LocalConfiguration.current
     val width = with(LocalDensity.current) { tileWidth.roundToPx() }
     val height = width * configuration.screenHeightDp / configuration.screenWidthDp.coerceAtLeast(1)
-    val picture by produceState<ImageBitmap?>(null, art, width, height) {
-        value = withContext(Dispatchers.Default) { art.draw(width, height).asImageBitmap() }
+    val appTheme = getThemeProvider().provideTheme()
+    val picture by produceState<Pair<ImageBitmap, Veil>?>(null, art, width, height, lightLook, appTheme) {
+        value = withContext(Dispatchers.Default) {
+            val drawn = art.draw(width, height)
+            drawn.asImageBitmap() to veilOf(drawn.previewWallpaper(lightLook), appTheme)
+        }
     }
-    picture?.let {
+    picture?.let { (image, veil) ->
         Image(
-            bitmap = it,
+            bitmap = image,
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize(),
         )
+        VeilOver(veil)
     }
 }
 
-/** The user's own [photo] when it is the wallpaper, else what picks one. */
+/** [veil] over the picture of a tile. */
+@Composable
+private fun VeilOver(veil: Veil) {
+    Spacer(modifier = Modifier.fillMaxSize().drawBehind { drawVeil(veil.colors, veil.colors, 0f, veil.alpha) })
+}
+
+/** The user's own [photo] under the veil of its look when it is the wallpaper, else what picks one. */
 @Composable
 private fun PhotoTile(photo: WorkspaceWallpaper?) {
     if (photo != null) {
+        val appTheme = getThemeProvider().provideTheme()
         WallpaperImage(wallpaper = photo, modifier = Modifier.fillMaxSize())
+        VeilOver(remember(photo, appTheme) { veilOf(photo, appTheme) })
         return
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(6.dp)) {

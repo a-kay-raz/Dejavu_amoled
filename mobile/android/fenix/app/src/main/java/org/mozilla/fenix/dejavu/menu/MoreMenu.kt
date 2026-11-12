@@ -54,6 +54,8 @@ enum class MoreMenuItem(
     RESET_PINNED_URL("reset_pinned_url", R.string.dejavu_menu_reset_pinned_url, R.drawable.dejavu_ic_reset_pin_24),
     REPLACE_PINNED_URL("replace_pinned_url", R.string.dejavu_menu_replace_pinned_url, iconsR.drawable.mozac_ic_pin_fill_24),
     SPLIT_VIEW("split_view", R.string.dejavu_menu_split_view, R.drawable.dejavu_ic_split_24),
+    // Named and drawn like the home screen's button that does the same.
+    RESTORE_CLOSED_TAB("restore_closed_tab", R.string.dejavu_reopen_closed_tab, R.drawable.dejavu_ic_reopen_tab_24),
 
     // What the split view entry turns into on screens with room for both ways of splitting; never put by the user.
     SPLIT_TOP_AND_BOTTOM("split_top_and_bottom", R.string.dejavu_split_top_and_bottom, R.drawable.dejavu_ic_split_24),

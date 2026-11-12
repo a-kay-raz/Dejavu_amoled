@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu əsas brauzerinizdir.</string>
     <string name="dejavu_welcome_sync_title">İş sahələriniz hər cihazda</string>
     <string name="dejavu_welcome_sync_text">İş sahələrini, bərkidilmiş vərəqləri və əsasları Zen ilə, vərəqləri isə Firefox ilə sinxronlaşdırmaq üçün Mozilla hesabı ilə daxil olun.</string>
-    <string name="dejavu_settings_matrix">Matrix-də söhbət edin</string>
-    <string name="dejavu_settings_matrix_summary">Sual verin, funksiya təklif edin və ya xəta barədə bildirin</string>
+    <string name="dejavu_settings_email">E-poçt</string>
+    <string name="dejavu_settings_email_summary">Sual verin, funksiya təklif edin və ya xəta barədə bildirin</string>
     <string name="dejavu_menu_clear_data">Məlumatları təmizlə</string>
     <string name="dejavu_menu_clear_data_and_quit">Məlumatları təmizlə və çıx</string>
     <string name="dejavu_clear_data_button">«Məlumatları təmizlə» düyməsi</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu yenidən başladıqda yenə sönür</string>
     <string name="dejavu_preference_mouse_support">Siçan dəstəyi</string>
     <string name="dejavu_preference_mouse_support_summary">Orta düymə ilə klik keçidi arxa planda yeni vərəqdə açır, keçidin üzərinə gəlmək isə onun ünvanını göstərir. Vərəqin üzərində orta düymə ilə klik onu bağlayır.</string>
+    <string name="dejavu_no_closed_tabs">Son bağlanmış vərəq yoxdur</string>
+    <string name="dejavu_tab_page_number">Bu vərəqdə səhifə %1$d</string>
+    <string name="dejavu_tab_pages">Bu vərəqdəki səhifələr</string>
+    <string name="dejavu_settings_tabs_import_export">Vərəqləri idxal və ixrac et</string>
+    <string name="dejavu_settings_tabs_import_export_summary">İş sahələrini, qovluqları və vərəqləri Sidebery-yə və Sidebery-dən köçür</string>
+    <string name="dejavu_sidebery_hint">Sidebery kompüterlərdə Firefox üçün vərəq idarəedicisidir. Onun panelləri burada iş sahələri, vərəq qrupları qovluqlar, bərkidilmiş vərəqləri isə əsaslardır.</string>
+    <string name="dejavu_sidebery_export">Sidebery-yə ixrac et</string>
+    <string name="dejavu_sidebery_import">Sidebery-dən idxal et</string>
+    <string name="dejavu_sidebery_steps">Sidebery-nin «Snapshots viewer» bölməsində «Import snapshot» Dejavu-dan gələn faylı oxuyur, «Open all windows» isə vərəqləri açır. Vərəqləri bura gətirmək üçün orada bir snapshot seçin, sonra «Export snapshot» və «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Yeni iş sahələri</string>
+    <string name="dejavu_sidebery_essentials">Əsaslar</string>
+    <string name="dejavu_sidebery_new_containers">Yeni konteynerlər</string>
+    <string name="dejavu_sidebery_left_out">Kənarda qalanlar</string>
+    <string name="dejavu_sidebery_left_out_note">Telefonun aça bilmədiyi səhifələr, məsələn yerli fayllar, və məxfi pəncərələrin vərəqləri</string>
+    <string name="dejavu_sidebery_nothing_new">Bu faylda yeni heç nə yoxdur.</string>
+    <string name="dejavu_sidebery_import_button">İdxal et</string>
+    <string name="dejavu_sidebery_imported">Sidebery-dən idxal edildi</string>
+    <string name="dejavu_sidebery_exported">Sidebery üçün saxlanıldı</string>
+    <string name="dejavu_sidebery_export_failed">Fayl saxlanıla bilmədi. Yenidən cəhd edin.</string>
+    <string name="dejavu_sidebery_bad_file">Bu fayl Sidebery snapshot-u və ya ehtiyat nüsxəsi deyil.</string>
+    <string name="dejavu_passkeys_unsupported">Giriş açarları (passkey) bu Android versiyasında hələ dəstəklənmir</string>
 </resources>

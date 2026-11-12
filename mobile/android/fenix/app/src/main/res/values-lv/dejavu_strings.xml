@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ir jūsu noklusējuma pārlūks.</string>
     <string name="dejavu_welcome_sync_title">Jūsu darbvietas visās ierīcēs</string>
     <string name="dejavu_welcome_sync_text">Piesakieties ar Mozilla kontu, lai sinhronizētu darbvietas, piespraustās cilnes un Izlasi ar Zen vai cilnes ar Firefox.</string>
-    <string name="dejavu_settings_matrix">Tērzējiet Matrix tīklā</string>
-    <string name="dejavu_settings_matrix_summary">Uzdodiet jautājumu, iesakiet funkciju vai ziņojiet par kļūdu</string>
+    <string name="dejavu_settings_email">E-pasts</string>
+    <string name="dejavu_settings_email_summary">Uzdodiet jautājumu, iesakiet funkciju vai ziņojiet par kļūdu</string>
     <string name="dejavu_menu_clear_data">Notīrīt datus</string>
     <string name="dejavu_menu_clear_data_and_quit">Notīrīt datus un iziet</string>
     <string name="dejavu_clear_data_button">Poga „Notīrīt datus“</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Atkal izslēdzas, kad Dejavu tiek restartēts</string>
     <string name="dejavu_preference_mouse_support">Peles atbalsts</string>
     <string name="dejavu_preference_mouse_support_summary">Klikšķis ar vidējo pogu atver saiti fona cilnē, un, novietojot peli virs saites, tiek parādīta tās adrese. Klikšķis ar vidējo pogu uz cilnes to aizver.</string>
+    <string name="dejavu_no_closed_tabs">Nav nesen aizvērtu ciļņu</string>
+    <string name="dejavu_tab_page_number">Lapa %1$d šajā cilnē</string>
+    <string name="dejavu_tab_pages">Lapas šajā cilnē</string>
+    <string name="dejavu_settings_tabs_import_export">Ciļņu importēšana un eksportēšana</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Pārvietojiet darbvietas, mapes un cilnes uz Sidebery un no tā</string>
+    <string name="dejavu_sidebery_hint">Sidebery ir ciļņu pārvaldnieks datoru Firefox. Tā paneļi šeit ir darbvietas, ciļņu grupas ir mapes, bet piespraustās cilnes ir izlase.</string>
+    <string name="dejavu_sidebery_export">Eksportēt uz Sidebery</string>
+    <string name="dejavu_sidebery_import">Importēt no Sidebery</string>
+    <string name="dejavu_sidebery_steps">Sidebery sadaļā «Snapshots viewer» poga «Import snapshot» nolasa datni no Dejavu, bet «Open all windows» atver tās cilnes. Lai cilnes atnestu šurp, izvēlieties tur momentuzņēmumu, tad «Export snapshot» un «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Jaunas darbvietas</string>
+    <string name="dejavu_sidebery_essentials">Izlase</string>
+    <string name="dejavu_sidebery_new_containers">Jauni konteineri</string>
+    <string name="dejavu_sidebery_left_out">Izlaists</string>
+    <string name="dejavu_sidebery_left_out_note">Lapas, ko tālrunis nevar atvērt, piemēram, lokālās datnes, un privāto logu cilnes</string>
+    <string name="dejavu_sidebery_nothing_new">Šajā datnē nav nekā jauna.</string>
+    <string name="dejavu_sidebery_import_button">Importēt</string>
+    <string name="dejavu_sidebery_imported">Importēts no Sidebery</string>
+    <string name="dejavu_sidebery_exported">Saglabāts priekš Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Neizdevās saglabāt datni. Mēģiniet vēlreiz.</string>
+    <string name="dejavu_sidebery_bad_file">Šī datne nav Sidebery momentuzņēmums vai rezerves kopija.</string>
+    <string name="dejavu_passkeys_unsupported">Piekļuves atslēgas šajā Android versijā vēl netiek atbalstītas</string>
 </resources>

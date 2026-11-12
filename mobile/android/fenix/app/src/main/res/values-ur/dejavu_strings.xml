@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu آپ کا ڈیفالٹ براؤزر ہے۔</string>
     <string name="dejavu_welcome_sync_title">آپ کی ورک اسپیسز ہر آلے پر</string>
     <string name="dejavu_welcome_sync_text">ورک اسپیسز، پن کردہ ٹیبز اور اہم کو Zen کے ساتھ، یا ٹیبز کو Firefox کے ساتھ ہم وقت کرنے کے لیے Mozilla اکاؤنٹ سے سائن اِن کریں۔</string>
-    <string name="dejavu_settings_matrix">Matrix پر چیٹ کریں</string>
-    <string name="dejavu_settings_matrix_summary">سوال پوچھیں، کوئی فیچر تجویز کریں یا بگ کی اطلاع دیں</string>
+    <string name="dejavu_settings_email">ای میل</string>
+    <string name="dejavu_settings_email_summary">سوال پوچھیں، کوئی فیچر تجویز کریں یا بگ کی اطلاع دیں</string>
     <string name="dejavu_menu_clear_data">ڈیٹا صاف کریں</string>
     <string name="dejavu_menu_clear_data_and_quit">ڈیٹا صاف کر کے بند کریں</string>
     <string name="dejavu_clear_data_button">”ڈیٹا صاف کریں“ بٹن</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu کے دوبارہ شروع ہونے پر یہ پھر سے بند ہو جاتی ہے</string>
     <string name="dejavu_preference_mouse_support">ماؤس کی معاونت</string>
     <string name="dejavu_preference_mouse_support_summary">درمیانی بٹن سے کلک کرنے پر ربط پس منظر کے ٹیب میں کھلتا ہے، اور ربط پر ماؤس رکھنے سے اس کا پتہ دکھائی دیتا ہے۔ ٹیب پر درمیانی بٹن سے کلک کرنے پر وہ بند ہو جاتا ہے۔</string>
+    <string name="dejavu_no_closed_tabs">حالیہ بند کیے گئے ٹیبز نہیں ہیں</string>
+    <string name="dejavu_tab_page_number">اس ٹیب میں صفحہ %1$d</string>
+    <string name="dejavu_tab_pages">اس ٹیب کے صفحات</string>
+    <string name="dejavu_settings_tabs_import_export">ٹیبز درآمد اور برآمد کریں</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ورک اسپیسز، فولڈرز اور ٹیبز کو Sidebery میں اور Sidebery سے منتقل کریں</string>
+    <string name="dejavu_sidebery_hint">Sidebery کمپیوٹرز پر Firefox کے لیے ٹیب منیجر ہے۔ اس کے پینل یہاں ورک اسپیسز ہیں، اس کے ٹیب گروپ فولڈرز ہیں اور اس کے پن کردہ ٹیبز اہم ہیں۔</string>
+    <string name="dejavu_sidebery_export">Sidebery میں برآمد کریں</string>
+    <string name="dejavu_sidebery_import">Sidebery سے درآمد کریں</string>
+    <string name="dejavu_sidebery_steps">Sidebery کے «Snapshots viewer» میں «Import snapshot» Dejavu کی فائل پڑھتا ہے اور «Open all windows» اس کے ٹیبز کھولتا ہے۔ ٹیبز یہاں لانے کے لیے وہاں ایک سنیپ شاٹ منتخب کریں، پھر «Export snapshot» اور «Save as JSON»۔</string>
+    <string name="dejavu_sidebery_new_workspaces">نئی ورک اسپیسز</string>
+    <string name="dejavu_sidebery_essentials">اہم</string>
+    <string name="dejavu_sidebery_new_containers">نئے کنٹینرز</string>
+    <string name="dejavu_sidebery_left_out">چھوڑ دیے گئے</string>
+    <string name="dejavu_sidebery_left_out_note">ایسے صفحات جنہیں فون نہیں کھول سکتا، جیسے مقامی فائلیں، اور نجی ونڈوز کے ٹیبز</string>
+    <string name="dejavu_sidebery_nothing_new">اس فائل میں کچھ نیا نہیں ہے۔</string>
+    <string name="dejavu_sidebery_import_button">درآمد کریں</string>
+    <string name="dejavu_sidebery_imported">Sidebery سے درآمد ہو گیا</string>
+    <string name="dejavu_sidebery_exported">Sidebery کے لیے محفوظ ہو گیا</string>
+    <string name="dejavu_sidebery_export_failed">فائل محفوظ نہیں ہو سکی۔ دوبارہ کوشش کریں۔</string>
+    <string name="dejavu_sidebery_bad_file">یہ فائل Sidebery کا سنیپ شاٹ یا بیک اپ نہیں ہے۔</string>
+    <string name="dejavu_passkeys_unsupported">اس Android ورژن پر پاس کیز ابھی تک تعاون یافتہ نہیں ہیں</string>
 </resources>

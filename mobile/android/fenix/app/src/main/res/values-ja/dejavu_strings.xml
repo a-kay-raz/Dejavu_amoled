@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavuは既定のブラウザーです。</string>
     <string name="dejavu_welcome_sync_title">すべての端末でワークスペースを利用</string>
     <string name="dejavu_welcome_sync_text">Mozillaアカウントでサインインすると、ワークスペース、ピン留めタブ、よく使うサイトをZenと、タブをFirefoxと同期できます。</string>
-    <string name="dejavu_settings_matrix">Matrixでチャット</string>
-    <string name="dejavu_settings_matrix_summary">質問や機能の提案、バグの報告ができます</string>
+    <string name="dejavu_settings_email">メール</string>
+    <string name="dejavu_settings_email_summary">質問や機能の提案、バグの報告ができます</string>
     <string name="dejavu_menu_clear_data">データを消去</string>
     <string name="dejavu_menu_clear_data_and_quit">データを消去して終了</string>
     <string name="dejavu_clear_data_button">「データを消去」ボタン</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu を再起動すると再びオフになります</string>
     <string name="dejavu_preference_mouse_support">マウスのサポート</string>
     <string name="dejavu_preference_mouse_support_summary">中クリックでリンクをバックグラウンドのタブで開き、リンクにマウスを重ねるとそのアドレスを表示します。 タブを中クリックすると、そのタブを閉じます。</string>
+    <string name="dejavu_no_closed_tabs">最近閉じたタブはありません</string>
+    <string name="dejavu_tab_page_number">このタブの %1$d ページ目</string>
+    <string name="dejavu_tab_pages">このタブのページ</string>
+    <string name="dejavu_settings_tabs_import_export">タブのインポートとエクスポート</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ワークスペース、フォルダー、タブを Sidebery との間で移動します</string>
+    <string name="dejavu_sidebery_hint">Sidebery はパソコン版 Firefox のタブ管理ツールです。ここでは、そのパネルがワークスペース、タブグループがフォルダー、ピン留めタブがよく使うサイトになります。</string>
+    <string name="dejavu_sidebery_export">Sidebery にエクスポート</string>
+    <string name="dejavu_sidebery_import">Sidebery からインポート</string>
+    <string name="dejavu_sidebery_steps">Sidebery の「スナップショットビューア」で「スナップショットをインポート」を使うと Dejavu のファイルを読み込み、「すべてのウィンドウを開く」でそのタブを開けます。タブをここに持ってくるには、そこでスナップショットを選び、「スナップショットをエクスポート」から「JSONとして保存」を選びます。</string>
+    <string name="dejavu_sidebery_new_workspaces">新しいワークスペース</string>
+    <string name="dejavu_sidebery_essentials">よく使うサイト</string>
+    <string name="dejavu_sidebery_new_containers">新しいコンテナー</string>
+    <string name="dejavu_sidebery_left_out">除外</string>
+    <string name="dejavu_sidebery_left_out_note">スマートフォンでは開けないページ (ローカルファイルなど) と、プライベートウィンドウのタブ</string>
+    <string name="dejavu_sidebery_nothing_new">このファイルに新しいものはありません。</string>
+    <string name="dejavu_sidebery_import_button">インポート</string>
+    <string name="dejavu_sidebery_imported">Sidebery からインポートしました</string>
+    <string name="dejavu_sidebery_exported">Sidebery 用に保存しました</string>
+    <string name="dejavu_sidebery_export_failed">ファイルを保存できませんでした。もう一度お試しください。</string>
+    <string name="dejavu_sidebery_bad_file">このファイルは Sidebery のスナップショットでもバックアップでもありません。</string>
+    <string name="dejavu_passkeys_unsupported">このバージョンの Android では、パスキーはまだサポートされていません</string>
 </resources>

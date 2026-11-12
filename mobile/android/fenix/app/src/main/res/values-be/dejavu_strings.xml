@@ -532,8 +532,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — ваш прадвызначаны браўзер.</string>
     <string name="dejavu_welcome_sync_title">Вашы прасторы на кожнай прыладзе</string>
     <string name="dejavu_welcome_sync_text">Увайдзіце з уліковым запісам Mozilla, каб сінхранізаваць прасторы, замацаваныя карткі і важнае з Zen або карткі з Firefox.</string>
-    <string name="dejavu_settings_matrix">Чат у Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Задайце пытанне, прапануйце функцыю або паведаміце пра памылку</string>
+    <string name="dejavu_settings_email">Электронная пошта</string>
+    <string name="dejavu_settings_email_summary">Задайце пытанне, прапануйце функцыю або паведаміце пра памылку</string>
     <string name="dejavu_menu_clear_data">Ачысціць дадзеныя</string>
     <string name="dejavu_menu_clear_data_and_quit">Ачысціць дадзеныя і выйсці</string>
     <string name="dejavu_clear_data_button">Кнопка «Ачысціць дадзеныя»</string>
@@ -562,4 +562,25 @@
     <string name="dejavu_remote_debugging_summary">Зноў выключаецца пасля перазапуску Dejavu</string>
     <string name="dejavu_preference_mouse_support">Падтрымка мышы</string>
     <string name="dejavu_preference_mouse_support_summary">Націсканне сярэдняй кнопкай адкрывае спасылку ў фонавай картцы, а навядзенне на спасылку паказвае яе адрас. Націсканне сярэдняй кнопкай на картцы закрывае яе.</string>
+    <string name="dejavu_no_closed_tabs">Няма нядаўна закрытых картак</string>
+    <string name="dejavu_tab_page_number">Старонка %1$d у гэтай картцы</string>
+    <string name="dejavu_tab_pages">Старонкі ў гэтай картцы</string>
+    <string name="dejavu_settings_tabs_import_export">Імпарт і экспарт картак</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Перанос прастор, папак і картак у Sidebery і з яго</string>
+    <string name="dejavu_sidebery_hint">Sidebery — кіраўнік картак для Firefox на камп’ютарах. Яго панэлі тут — прасторы, групы картак — папкі, а замацаваныя карткі — важнае.</string>
+    <string name="dejavu_sidebery_export">Экспартаваць у Sidebery</string>
+    <string name="dejavu_sidebery_import">Імпартаваць з Sidebery</string>
+    <string name="dejavu_sidebery_steps">У «Snapshots viewer» у Sidebery «Import snapshot» чытае файл з Dejavu, а «Open all windows» адкрывае яго карткі. Каб перанесці карткі сюды, выберыце там здымак, потым «Export snapshot» і «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Новыя прасторы</string>
+    <string name="dejavu_sidebery_essentials">Важнае</string>
+    <string name="dejavu_sidebery_new_containers">Новыя кантэйнеры</string>
+    <string name="dejavu_sidebery_left_out">Прапушчана</string>
+    <string name="dejavu_sidebery_left_out_note">Старонкі, якія тэлефон не можа адкрыць, напрыклад лакальныя файлы, і карткі прыватных вокнаў</string>
+    <string name="dejavu_sidebery_nothing_new">У гэтым файле няма нічога новага.</string>
+    <string name="dejavu_sidebery_import_button">Імпартаваць</string>
+    <string name="dejavu_sidebery_imported">Імпартавана з Sidebery</string>
+    <string name="dejavu_sidebery_exported">Захавана для Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Не ўдалося захаваць файл. Паспрабуйце яшчэ раз.</string>
+    <string name="dejavu_sidebery_bad_file">Гэты файл не з’яўляецца здымкам або рэзервовай копіяй Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Ключы доступу пакуль не падтрымліваюцца ў гэтай версіі Android</string>
 </resources>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ye\'l to restolador predetermináu.</string>
     <string name="dejavu_welcome_sync_title">Los tos espacios de trabayu en tolos preseos</string>
     <string name="dejavu_welcome_sync_text">Anicia sesión con una cuenta Mozilla pa sincronizar espacios de trabayu, llingüetes fixaes y esenciales con Zen, o llingüetes con Firefox.</string>
-    <string name="dejavu_settings_matrix">Charra en Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fai una entruga, propón una función o informa d\'un fallu</string>
+    <string name="dejavu_settings_email">Corréu electrónicu</string>
+    <string name="dejavu_settings_email_summary">Fai una entruga, propón una función o informa d\'un fallu</string>
     <string name="dejavu_menu_clear_data">Llimpiar los datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Llimpiar los datos y colar</string>
     <string name="dejavu_clear_data_button">Botón «Llimpiar los datos»</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Desactívase de nuevu cuando Dejavu se reanicia</string>
     <string name="dejavu_preference_mouse_support">Sofitu pal mur</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic col botón central abre un enllaz nuna llingüeta en segundu planu, y pasar penriba d\'un enllaz amuesa la so direición. Un clic col botón central nuna llingüeta péchala.</string>
+    <string name="dejavu_no_closed_tabs">Nun hai llingüetes que se zarraren apocayá</string>
+    <string name="dejavu_tab_page_number">Páxina %1$d d’esta llingüeta</string>
+    <string name="dejavu_tab_pages">Páxines d’esta llingüeta</string>
+    <string name="dejavu_settings_tabs_import_export">Importar y esportar llingüetes</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Movi espacios de trabayu, carpetes y llingüetes a Sidebery y dende Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery ye un xestor de llingüetes pa Firefox n’ordenadores. Los sos paneles son equí espacios de trabayu, los sos grupos de llingüetes son carpetes y les sos llingüetes fixaes son esenciales.</string>
+    <string name="dejavu_sidebery_export">Esportar a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar de Sidebery</string>
+    <string name="dejavu_sidebery_steps">Nel «Snapshots viewer» de Sidebery, «Import snapshot» llee’l ficheru de Dejavu y «Open all windows» abre les sos llingüetes. Pa trayer llingüetes equí, escueyi ellí una instantánea y depués «Export snapshot» y «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Espacios de trabayu nuevos</string>
+    <string name="dejavu_sidebery_essentials">Esenciales</string>
+    <string name="dejavu_sidebery_new_containers">Contenedores nuevos</string>
+    <string name="dejavu_sidebery_left_out">Fuera</string>
+    <string name="dejavu_sidebery_left_out_note">Páxines que nun pue abrir un teléfonu, como ficheros locales, y llingüetes de ventanes privaes</string>
+    <string name="dejavu_sidebery_nothing_new">Nun hai nada nuevo nesti ficheru.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importáronse de Sidebery</string>
+    <string name="dejavu_sidebery_exported">Guardóse pa Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Nun se pudo guardar el ficheru. Volvi tentalo.</string>
+    <string name="dejavu_sidebery_bad_file">Esti ficheru nun ye una instantánea nin una copia de seguranza de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Les claves d\'accesu entá nun son compatibles con esta versión d\'Android</string>
 </resources>

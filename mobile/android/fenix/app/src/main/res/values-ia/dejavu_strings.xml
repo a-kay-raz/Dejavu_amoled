@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu es tu navigator predefinite.</string>
     <string name="dejavu_welcome_sync_title">Tu spatios de labor super cata apparato</string>
     <string name="dejavu_welcome_sync_text">Aperi session con un conto Mozilla pro synchronisar spatios de labor, schedas fixate e essentiales con Zen, o schedas con Firefox.</string>
-    <string name="dejavu_settings_matrix">Conversa in Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Pone un question, suggere un functionalitate o reporta un error</string>
+    <string name="dejavu_settings_email">Email</string>
+    <string name="dejavu_settings_email_summary">Pone un question, suggere un functionalitate o reporta un error</string>
     <string name="dejavu_menu_clear_data">Deler datos</string>
     <string name="dejavu_menu_clear_data_and_quit">Deler datos e quitar</string>
     <string name="dejavu_clear_data_button">Button Deler datos</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Se disactiva de novo quando Dejavu se reinitia</string>
     <string name="dejavu_preference_mouse_support">Supporto del mus</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic central aperi un ligamine in un scheda in secunde plano, e passar super un ligamine monstra su adresse. Un clic central super un scheda lo claude.</string>
+    <string name="dejavu_no_closed_tabs">Nulle schedas claudite recentemente</string>
+    <string name="dejavu_tab_page_number">Pagina %1$d in iste scheda</string>
+    <string name="dejavu_tab_pages">Paginas in iste scheda</string>
+    <string name="dejavu_settings_tabs_import_export">Importar e exportar schedas</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Mover spatios de labor, dossiers e schedas a e ab Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery es un gestor de schedas pro Firefox sur computatores. Su pannellos es hic spatios de labor, su gruppos de schedas es dossiers e su schedas fixate es essentiales.</string>
+    <string name="dejavu_sidebery_export">Exportar a Sidebery</string>
+    <string name="dejavu_sidebery_import">Importar ab Sidebery</string>
+    <string name="dejavu_sidebery_steps">In le «Snapshots viewer» de Sidebery, «Import snapshot» lege le file de Dejavu e «Open all windows» aperi su schedas. Pro apportar schedas hic, elige un instantaneo illac, postea «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Nove spatios de labor</string>
+    <string name="dejavu_sidebery_essentials">Essentiales</string>
+    <string name="dejavu_sidebery_new_containers">Nove recipientes</string>
+    <string name="dejavu_sidebery_left_out">Excludite</string>
+    <string name="dejavu_sidebery_left_out_note">Paginas que un telephono non pote aperir, como files local, e schedas de fenestras private</string>
+    <string name="dejavu_sidebery_nothing_new">Il ha nihil de nove in iste file.</string>
+    <string name="dejavu_sidebery_import_button">Importar</string>
+    <string name="dejavu_sidebery_imported">Importate ab Sidebery</string>
+    <string name="dejavu_sidebery_exported">Salvate pro Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Impossibile salvar le file. Retenta.</string>
+    <string name="dejavu_sidebery_bad_file">Iste file non es un instantaneo o un copia de reserva de Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Le claves-contrasigno non es ancora supportate in iste version de Android</string>
 </resources>

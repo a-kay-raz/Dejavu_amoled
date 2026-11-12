@@ -524,8 +524,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ᱫᱚ ᱟᱢᱟᱜ ᱢᱩᱞ ᱵᱽᱨᱟᱣᱩᱡᱟᱨ ᱠᱟᱱᱟ ᱾</string>
     <string name="dejavu_welcome_sync_title">ᱡᱚᱛᱚ ᱥᱟᱫᱷᱚᱱ ᱨᱮ ᱟᱢᱟᱜ ᱣᱟᱨᱠᱥᱯᱮᱥ ᱠᱚ</string>
     <string name="dejavu_welcome_sync_text">Zen ᱥᱟᱶ ᱣᱟᱨᱠᱥᱯᱮᱥ ᱠᱚ, ᱯᱤᱱ ᱴᱮᱵᱽ ᱠᱚ ᱟᱨ ᱮᱥᱮᱱᱥᱤᱭᱟᱞ ᱠᱚ, ᱥᱮ Firefox ᱥᱟᱶ ᱴᱮᱵᱽ ᱠᱚ ᱥᱤᱝᱠ ᱞᱟᱹᱜᱤᱫ Mozilla ᱟᱠᱟᱩᱱᱴ ᱛᱮ ᱥᱟᱭᱤᱱ ᱤᱱ ᱢᱮ ᱾</string>
-    <string name="dejavu_settings_matrix">Matrix ᱨᱮ ᱜᱟᱞᱢᱟᱨᱟᱣ</string>
-    <string name="dejavu_settings_matrix_summary">ᱠᱩᱠᱞᱤ ᱠᱩᱞᱤ ᱢᱮ, ᱯᱷᱤᱪᱚᱨ ᱥᱩᱡᱷᱟᱹᱣ ᱢᱮ ᱟᱨᱵᱟᱝ ᱵᱟᱜᱽ ᱨᱤᱯᱚᱨᱴ ᱢᱮ</string>
+    <string name="dejavu_settings_email">ᱤᱢᱮᱞ</string>
+    <string name="dejavu_settings_email_summary">ᱠᱩᱠᱞᱤ ᱠᱩᱞᱤ ᱢᱮ, ᱯᱷᱤᱪᱚᱨ ᱥᱩᱡᱷᱟᱹᱣ ᱢᱮ ᱟᱨᱵᱟᱝ ᱵᱟᱜᱽ ᱨᱤᱯᱚᱨᱴ ᱢᱮ</string>
     <string name="dejavu_menu_clear_data">ᱰᱟᱴᱟ ᱠᱞᱤᱭᱟᱨ ᱢᱮ</string>
     <string name="dejavu_menu_clear_data_and_quit">ᱰᱟᱴᱟ ᱠᱞᱤᱭᱟᱨ ᱟᱨ ᱵᱟᱹᱜᱤ ᱢᱮ</string>
     <string name="dejavu_clear_data_button">“ᱰᱟᱴᱟ ᱠᱞᱤᱭᱟᱨ ᱢᱮ” ᱵᱩᱛᱟᱹᱢ</string>
@@ -554,4 +554,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu ᱫᱚᱦᱲᱟ ᱮᱦᱚᱵ ᱚᱠᱛᱮ ᱫᱚᱦᱲᱟ ᱵᱚᱸᱫᱚ ᱦᱩᱭᱩᱜᱼᱟ</string>
     <string name="dejavu_preference_mouse_support">ᱢᱟᱣᱩᱥ ᱜᱚᱲᱚ</string>
     <string name="dejavu_preference_mouse_support_summary">ᱛᱟᱞᱟ ᱵᱩᱴᱟᱹᱢ ᱚᱛᱟ ᱠᱟᱛᱮ ᱞᱤᱝᱠ ᱯᱟᱪᱷᱚᱞ ᱴᱮᱵᱽ ᱨᱮ ᱡᱷᱤᱡᱽᱚᱜᱼᱟ, ᱟᱨ ᱞᱤᱝᱠ ᱪᱮᱛᱟᱱ ᱨᱮ ᱢᱟᱣᱩᱥ ᱫᱚᱦᱚ ᱠᱟᱛᱮ ᱚᱱᱟᱨ ᱴᱷᱤᱠᱬᱟᱹ ᱩᱫᱩᱜᱚᱜᱼᱟ ᱾ ᱴᱮᱵᱽ ᱨᱮ ᱛᱟᱞᱟ ᱵᱩᱴᱟᱹᱢ ᱚᱛᱟ ᱞᱮᱱ ᱥᱟᱶ ᱚᱱᱟ ᱵᱚᱱᱚᱫ ᱠᱟᱱᱟ ᱾</string>
+    <string name="dejavu_no_closed_tabs">ᱱᱤᱛᱚᱜᱽᱼᱟᱜ ᱵᱚᱸᱫᱚᱼᱟᱜ ᱴᱮᱵᱽ ᱠᱚ ᱵᱟᱹᱱᱩᱜᱼᱟ</string>
+    <string name="dejavu_tab_page_number">ᱱᱚᱶᱟ ᱴᱮᱵᱽ ᱨᱮᱭᱟᱜ ᱥᱟᱦᱴᱟ %1$d</string>
+    <string name="dejavu_tab_pages">ᱱᱚᱶᱟ ᱴᱮᱵᱽ ᱨᱮᱭᱟᱜ ᱥᱟᱦᱴᱟ ᱠᱚ</string>
+    <string name="dejavu_settings_tabs_import_export">ᱴᱮᱵᱽ ᱠᱚ ᱟᱹᱜᱩ ᱟᱨ ᱤᱫᱤ ᱢᱮ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ᱣᱟᱨᱠᱥᱯᱮᱥ, ᱯᱷᱚᱞᱰᱚᱨ ᱟᱨ ᱴᱮᱵᱽ ᱠᱚ Sidebery ᱛᱮ ᱟᱨ Sidebery ᱠᱷᱚᱱ ᱩᱪᱟᱹᱲ ᱢᱮ</string>
+    <string name="dejavu_sidebery_hint">Sidebery ᱫᱚ ᱠᱟᱢᱯᱭᱩᱴᱚᱨ ᱨᱮ Firefox ᱞᱟᱹᱜᱤᱫ ᱢᱤᱫᱴᱟᱹᱝ ᱴᱮᱵᱽ ᱢᱮᱱᱮᱡᱟᱨ ᱠᱟᱱᱟ᱾ ᱱᱚᱸᱰᱮ ᱚᱱᱟ ᱨᱮᱭᱟᱜ ᱯᱮᱱᱮᱞ ᱠᱚ ᱣᱟᱨᱠᱥᱯᱮᱥ, ᱴᱮᱵᱽ ᱜᱟᱫᱮᱞ ᱠᱚ ᱯᱷᱚᱞᱰᱚᱨ ᱟᱨ ᱯᱤᱱ ᱴᱮᱵᱽ ᱠᱚ ᱮᱥᱮᱱᱥᱤᱭᱟᱞ ᱠᱟᱱᱟ᱾</string>
+    <string name="dejavu_sidebery_export">Sidebery ᱛᱮ ᱤᱫᱤ ᱢᱮ</string>
+    <string name="dejavu_sidebery_import">Sidebery ᱠᱷᱚᱱ ᱟᱹᱜᱩ ᱢᱮ</string>
+    <string name="dejavu_sidebery_steps">Sidebery ᱨᱮᱭᱟᱜ «Snapshots viewer» ᱨᱮ «Import snapshot» Dejavu ᱨᱮᱭᱟᱜ ᱨᱮᱫᱽ ᱯᱟᱲᱦᱟᱣᱟᱭ ᱟᱨ «Open all windows» ᱚᱱᱟ ᱨᱮᱭᱟᱜ ᱴᱮᱵᱽ ᱠᱚ ᱠᱷᱩᱞᱟᱹᱭ᱾ ᱴᱮᱵᱽ ᱠᱚ ᱱᱚᱸᱰᱮ ᱟᱹᱜᱩ ᱞᱟᱹᱜᱤᱫ ᱚᱸᱰᱮ ᱢᱤᱫᱴᱟᱹᱝ ᱥᱱᱮᱯᱥᱚᱴ ᱵᱟᱪᱷᱟᱣ ᱢᱮ, ᱚᱱᱟ ᱛᱟᱭᱚᱢ «Export snapshot» ᱟᱨ «Save as JSON»᱾</string>
+    <string name="dejavu_sidebery_new_workspaces">ᱱᱟᱶᱟ ᱣᱟᱨᱠᱥᱯᱮᱥ ᱠᱚ</string>
+    <string name="dejavu_sidebery_essentials">ᱮᱥᱮᱱᱥᱤᱭᱟᱞ ᱠᱚ</string>
+    <string name="dejavu_sidebery_new_containers">ᱱᱟᱶᱟ ᱠᱚᱱᱴᱮᱱᱟᱨ ᱠᱚ</string>
+    <string name="dejavu_sidebery_left_out">ᱵᱟᱹᱜᱤ ᱟᱠᱟᱱ</string>
+    <string name="dejavu_sidebery_left_out_note">ᱡᱟᱦᱟᱸ ᱥᱟᱦᱴᱟ ᱠᱚ ᱯᱷᱚᱱ ᱵᱟᱝ ᱠᱷᱩᱞᱟᱹ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ, ᱡᱮᱞᱮᱠᱟ ᱞᱚᱠᱟᱞ ᱨᱮᱫᱽ ᱠᱚ, ᱟᱨ ᱱᱤᱡᱮᱨᱟᱜ ᱡᱷᱚᱨᱠᱟ ᱨᱮᱭᱟᱜ ᱴᱮᱵᱽ ᱠᱚ</string>
+    <string name="dejavu_sidebery_nothing_new">ᱱᱚᱶᱟ ᱨᱮᱫᱽ ᱨᱮ ᱡᱟᱦᱟᱱᱟᱜ ᱱᱟᱶᱟ ᱵᱟᱹᱱᱩᱜᱼᱟ᱾</string>
+    <string name="dejavu_sidebery_import_button">ᱟᱹᱜᱩ ᱢᱮ</string>
+    <string name="dejavu_sidebery_imported">Sidebery ᱠᱷᱚᱱ ᱟᱹᱜᱩ ᱮᱱᱟ</string>
+    <string name="dejavu_sidebery_exported">Sidebery ᱞᱟᱹᱜᱤᱫ ᱥᱟᱺᱪᱟᱣ ᱮᱱᱟ</string>
+    <string name="dejavu_sidebery_export_failed">ᱨᱮᱫᱽ ᱵᱟᱝ ᱥᱟᱺᱪᱟᱣ ᱫᱟᱲᱮᱭᱟᱫᱟ᱾ ᱫᱩᱦᱲᱟᱹ ᱪᱮᱥᱴᱟᱭ ᱢᱮ᱾</string>
+    <string name="dejavu_sidebery_bad_file">ᱱᱚᱶᱟ ᱨᱮᱫᱽ ᱫᱚ Sidebery ᱨᱮᱭᱟᱜ ᱥᱱᱮᱯᱥᱚᱴ ᱥᱮ ᱵᱮᱠᱚᱯ ᱵᱟᱝ ᱠᱟᱱᱟ᱾</string>
+    <string name="dejavu_passkeys_unsupported">ᱱᱚᱶᱟ Android ᱵᱷᱟᱨᱥᱚᱱ ᱨᱮ ᱯᱟᱥᱠᱤ ᱫᱚ ᱱᱤᱛ ᱦᱟᱹᱵᱤᱡ ᱵᱟᱝ ᱜᱚᱲᱚᱭ ᱠᱟᱱᱟ</string>
 </resources>

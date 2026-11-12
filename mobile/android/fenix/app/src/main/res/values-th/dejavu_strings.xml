@@ -508,8 +508,8 @@
     <string name="dejavu_welcome_default_done">Dejavu เป็นเบราว์เซอร์เริ่มต้นของคุณแล้ว</string>
     <string name="dejavu_welcome_sync_title">พื้นที่ทำงานของคุณบนทุกอุปกรณ์</string>
     <string name="dejavu_welcome_sync_text">ลงชื่อเข้าใช้ด้วยบัญชี Mozilla เพื่อซิงค์พื้นที่ทำงาน แท็บที่ปักหมุด และเว็บที่ใช้บ่อยกับ Zen หรือซิงค์แท็บกับ Firefox</string>
-    <string name="dejavu_settings_matrix">แชทบน Matrix</string>
-    <string name="dejavu_settings_matrix_summary">ถามคำถาม เสนอแนะคุณลักษณะ หรือรายงานข้อผิดพลาด</string>
+    <string name="dejavu_settings_email">อีเมล</string>
+    <string name="dejavu_settings_email_summary">ถามคำถาม เสนอแนะคุณลักษณะ หรือรายงานข้อผิดพลาด</string>
     <string name="dejavu_menu_clear_data">ล้างข้อมูล</string>
     <string name="dejavu_menu_clear_data_and_quit">ล้างข้อมูลและออก</string>
     <string name="dejavu_clear_data_button">ปุ่ม “ล้างข้อมูล”</string>
@@ -538,4 +538,25 @@
     <string name="dejavu_remote_debugging_summary">ปิดอีกครั้งเมื่อ Dejavu เริ่มใหม่</string>
     <string name="dejavu_preference_mouse_support">การรองรับเมาส์</string>
     <string name="dejavu_preference_mouse_support_summary">การคลิกปุ่มกลางจะเปิดลิงก์ในแท็บเบื้องหลัง และการวางเมาส์เหนือลิงก์จะแสดงที่อยู่ของลิงก์ การคลิกปุ่มกลางที่แท็บจะปิดแท็บนั้น</string>
+    <string name="dejavu_no_closed_tabs">ไม่มีแท็บที่ปิดล่าสุด</string>
+    <string name="dejavu_tab_page_number">หน้าที่ %1$d ในแท็บนี้</string>
+    <string name="dejavu_tab_pages">หน้าในแท็บนี้</string>
+    <string name="dejavu_settings_tabs_import_export">นำเข้าและส่งออกแท็บ</string>
+    <string name="dejavu_settings_tabs_import_export_summary">ย้ายพื้นที่ทำงาน โฟลเดอร์ และแท็บ ไปยังและจาก Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery คือตัวจัดการแท็บสำหรับ Firefox บนคอมพิวเตอร์ แผงของ Sidebery ที่นี่คือพื้นที่ทำงาน กลุ่มแท็บคือโฟลเดอร์ และแท็บที่ปักหมุดคือเว็บที่ใช้บ่อย</string>
+    <string name="dejavu_sidebery_export">ส่งออกไปยัง Sidebery</string>
+    <string name="dejavu_sidebery_import">นำเข้าจาก Sidebery</string>
+    <string name="dejavu_sidebery_steps">ใน «Snapshots viewer» ของ Sidebery «Import snapshot» จะอ่านไฟล์จาก Dejavu และ «Open all windows» จะเปิดแท็บของไฟล์นั้น หากต้องการนำแท็บมาที่นี่ ให้เลือกสแนปช็อตที่นั่น แล้วเลือก «Export snapshot» และ «Save as JSON»</string>
+    <string name="dejavu_sidebery_new_workspaces">พื้นที่ทำงานใหม่</string>
+    <string name="dejavu_sidebery_essentials">เว็บที่ใช้บ่อย</string>
+    <string name="dejavu_sidebery_new_containers">คอนเทนเนอร์ใหม่</string>
+    <string name="dejavu_sidebery_left_out">ไม่ได้นำมา</string>
+    <string name="dejavu_sidebery_left_out_note">หน้าที่โทรศัพท์เปิดไม่ได้ เช่น ไฟล์ในเครื่อง และแท็บของหน้าต่างส่วนตัว</string>
+    <string name="dejavu_sidebery_nothing_new">ไม่มีอะไรใหม่ในไฟล์นี้</string>
+    <string name="dejavu_sidebery_import_button">นำเข้า</string>
+    <string name="dejavu_sidebery_imported">นำเข้าจาก Sidebery แล้ว</string>
+    <string name="dejavu_sidebery_exported">บันทึกสำหรับ Sidebery แล้ว</string>
+    <string name="dejavu_sidebery_export_failed">ไม่สามารถบันทึกไฟล์ได้ ลองอีกครั้ง</string>
+    <string name="dejavu_sidebery_bad_file">ไฟล์นี้ไม่ใช่สแนปช็อตหรือข้อมูลสำรองของ Sidebery</string>
+    <string name="dejavu_passkeys_unsupported">ยังไม่รองรับพาสคีย์ใน Android รุ่นนี้</string>
 </resources>

@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu — сіздің негізгі браузеріңіз.</string>
     <string name="dejavu_welcome_sync_title">Жұмыс кеңістіктеріңіз әр құрылғыда</string>
     <string name="dejavu_welcome_sync_text">Жұмыс кеңістіктерін, бекітілген беттерді және негізгілерді Zen-мен, ал беттерді Firefox-пен синхрондау үшін Mozilla есептік жазбасымен кіріңіз.</string>
-    <string name="dejavu_settings_matrix">Matrix-те сөйлесу</string>
-    <string name="dejavu_settings_matrix_summary">Сұрақ қойыңыз, мүмкіндік ұсыныңыз немесе қате туралы хабарлаңыз</string>
+    <string name="dejavu_settings_email">Эл. пошта</string>
+    <string name="dejavu_settings_email_summary">Сұрақ қойыңыз, мүмкіндік ұсыныңыз немесе қате туралы хабарлаңыз</string>
     <string name="dejavu_menu_clear_data">Деректерді тазалау</string>
     <string name="dejavu_menu_clear_data_and_quit">Деректерді тазалап, жұмысты аяқтау</string>
     <string name="dejavu_clear_data_button">«Деректерді тазалау» батырмасы</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Dejavu қайта іске қосылғанда қайтадан сөнеді</string>
     <string name="dejavu_preference_mouse_support">Тінтуірді қолдау</string>
     <string name="dejavu_preference_mouse_support_summary">Ортаңғы батырмамен шерту сілтемені фондық бетте ашады, ал сілтеменің үстіне апару оның адресін көрсетеді. Бетте ортаңғы батырмамен шерту оны жабады.</string>
+    <string name="dejavu_no_closed_tabs">Жуырда жабылған беттер жоқ</string>
+    <string name="dejavu_tab_page_number">Осы беттегі парақ %1$d</string>
+    <string name="dejavu_tab_pages">Осы беттегі парақтар</string>
+    <string name="dejavu_settings_tabs_import_export">Беттерді импорттау және экспорттау</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Жұмыс кеңістіктерін, қалталарды және беттерді Sidebery-ге және Sidebery-ден тасымалдау</string>
+    <string name="dejavu_sidebery_hint">Sidebery — компьютерлердегі Firefox үшін беттер басқарушысы. Оның панельдері мұнда жұмыс кеңістіктері, бет топтары қалталар, ал бекітілген беттері негізгілер болады.</string>
+    <string name="dejavu_sidebery_export">Sidebery-ге экспорттау</string>
+    <string name="dejavu_sidebery_import">Sidebery-ден импорттау</string>
+    <string name="dejavu_sidebery_steps">Sidebery-дің «Snapshots viewer» бөлімінде «Import snapshot» Dejavu файлын оқиды, ал «Open all windows» оның беттерін ашады. Беттерді осында әкелу үшін сол жерде снапшот таңдап, содан кейін «Export snapshot» және «Save as JSON» таңдаңыз.</string>
+    <string name="dejavu_sidebery_new_workspaces">Жаңа жұмыс кеңістіктері</string>
+    <string name="dejavu_sidebery_essentials">Негізгілер</string>
+    <string name="dejavu_sidebery_new_containers">Жаңа контейнерлер</string>
+    <string name="dejavu_sidebery_left_out">Қосылмағандар</string>
+    <string name="dejavu_sidebery_left_out_note">Телефон аша алмайтын беттер, мысалы жергілікті файлдар, және жеке терезелердің беттері</string>
+    <string name="dejavu_sidebery_nothing_new">Бұл файлда жаңа ештеңе жоқ.</string>
+    <string name="dejavu_sidebery_import_button">Импорттау</string>
+    <string name="dejavu_sidebery_imported">Sidebery-ден импортталды</string>
+    <string name="dejavu_sidebery_exported">Sidebery үшін сақталды</string>
+    <string name="dejavu_sidebery_export_failed">Файлды сақтау мүмкін болмады. Қайталап көріңіз.</string>
+    <string name="dejavu_sidebery_bad_file">Бұл файл Sidebery снапшоты немесе сақтық көшірмесі емес.</string>
+    <string name="dejavu_passkeys_unsupported">Қол жеткізу кілттеріне Android-тың бұл нұсқасында әлі қолдау көрсетілмейді</string>
 </resources>

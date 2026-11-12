@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu گشت گر پؽش فرزته.</string>
     <string name="dejavu_welcome_sync_title">فضا یلت رو هر دستگاه</string>
     <string name="dejavu_welcome_sync_text">وا یه حساب Mozilla بیا تو تا فضا یل، بلگه یل سنجاق‌وابیده و سایت یل مهم ن وا Zen، یا بلگه یل ن وا Firefox همگام کنی.</string>
-    <string name="dejavu_settings_matrix">گفتگو در Matrix</string>
-    <string name="dejavu_settings_matrix_summary">یه سوال بپرس، یه ویژگی پیشنهاد بده یا یه خطا گزارش کن</string>
+    <string name="dejavu_settings_email">ایمیل</string>
+    <string name="dejavu_settings_email_summary">یه سوال بپرس، یه ویژگی پیشنهاد بده یا یه خطا گزارش کن</string>
     <string name="dejavu_menu_clear_data">پاک کردن داده یل</string>
     <string name="dejavu_menu_clear_data_and_quit">پاک کردن داده یل و در زیڌن</string>
     <string name="dejavu_clear_data_button">دکمه پاک کردن داده یل</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">وختی Dejavu دوواره راه بکفه، خاموش مئبوئه</string>
     <string name="dejavu_preference_mouse_support">پشتیبانی موس</string>
     <string name="dejavu_preference_mouse_support_summary">کلیک وسط یه لینک ناْ د یه بلگه پشت صحنه واز اکونه، وو بردن موس رو لینک نشونی اوننه نشون ایده. کلیک وسط رو یه بلگه اونه وسته کنه.</string>
+    <string name="dejavu_no_closed_tabs">هیچ بلگه ای ک هیم دمۊوی بسته وابیڌه نؽ</string>
+    <string name="dejavu_tab_page_number">صفحه %1$d ای بلگه</string>
+    <string name="dejavu_tab_pages">صفحه‌ئل ای بلگه</string>
+    <string name="dejavu_settings_tabs_import_export">وارد کردن و در بردن بلگه یل</string>
+    <string name="dejavu_settings_tabs_import_export_summary">فضا یل، پوشه یل و بلگه یل نه و Sidebery و ز Sidebery جابجا کو</string>
+    <string name="dejavu_sidebery_hint">Sidebery یه گل مدیر بلگه سی Firefox ری کامپیوتر یله. پنل یل وی ایچه فضا یلن، دسه یل بلگه وی پوشه یلن و بلگه یل سنجاق‌وابیده وی سایت یل مهمن.</string>
+    <string name="dejavu_sidebery_export">و در بردن سی Sidebery</string>
+    <string name="dejavu_sidebery_import">وارد کردن ز Sidebery</string>
+    <string name="dejavu_sidebery_steps">د «Snapshots viewer» Sidebery، «Import snapshot» فایل Dejavu نه می‌خونه و «Open all windows» بلگه یل وی نه واز می‌کنه. سی آوردن بلگه یل و ایچه، اوچه یه گل snapshot انتخاو کو، بعد «Export snapshot» و «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">فضا یل تازه</string>
+    <string name="dejavu_sidebery_essentials">سایت یل مهم</string>
+    <string name="dejavu_sidebery_new_containers">کانتینر یل تازه</string>
+    <string name="dejavu_sidebery_left_out">کنار نهاده</string>
+    <string name="dejavu_sidebery_left_out_note">بلگه یلی که تلفن نمی‌تونه واز کنه، چی فایل یل محلی، و بلگه یل پنجره یل خصوصی</string>
+    <string name="dejavu_sidebery_nothing_new">د ای فایل چی تازه‌ای نئ.</string>
+    <string name="dejavu_sidebery_import_button">وارد کردن</string>
+    <string name="dejavu_sidebery_imported">ز Sidebery وارد وابی</string>
+    <string name="dejavu_sidebery_exported">سی Sidebery ذخیره وابی</string>
+    <string name="dejavu_sidebery_export_failed">فایل ذخیره نوابی. دوباره امتحان کو.</string>
+    <string name="dejavu_sidebery_bad_file">ای فایل snapshot یا پشتیوان Sidebery نئ.</string>
+    <string name="dejavu_passkeys_unsupported">کیلیت گوڌشتن هنی و ای نسخه Android پشتیبانی نمیبوه</string>
 </resources>

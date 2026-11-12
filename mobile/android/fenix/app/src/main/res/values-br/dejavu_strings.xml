@@ -540,8 +540,8 @@
     <string name="dejavu_welcome_default_done">Dejavu eo ho merdeer dre ziouer.</string>
     <string name="dejavu_welcome_sync_title">Hoc’h egorioù labour war pep trevnad</string>
     <string name="dejavu_welcome_sync_text">Kevreit gant ur gont Mozilla evit goubredañ an egorioù labour, an ivinelloù spilhennet hag an traoù pouezus gant Zen, pe an ivinelloù gant Firefox.</string>
-    <string name="dejavu_settings_matrix">Kaozeal war Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Savit ur goulenn, kinnigit ur mennozh pe danevellit ur fazi</string>
+    <string name="dejavu_settings_email">Postel</string>
+    <string name="dejavu_settings_email_summary">Savit ur goulenn, kinnigit ur mennozh pe danevellit ur fazi</string>
     <string name="dejavu_menu_clear_data">Skarzhañ ar roadennoù</string>
     <string name="dejavu_menu_clear_data_and_quit">Skarzhañ ar roadennoù ha kuitaat</string>
     <string name="dejavu_clear_data_button">Afell “Skarzhañ ar roadennoù”</string>
@@ -570,4 +570,25 @@
     <string name="dejavu_remote_debugging_summary">Diweredekaet e vez en-dro pa adloc’h Dejavu</string>
     <string name="dejavu_preference_mouse_support">Skor al logodenn</string>
     <string name="dejavu_preference_mouse_support_summary">Ur c\'hlik kreiz a zigor ul liamm en un ivinell e drekleur, ha tremen a-us d\'ul liamm a ziskouez e chomlec\'h. Ur c\'hlik kreiz war un ivinell a serr anezhi.</string>
+    <string name="dejavu_no_closed_tabs">N’eus ivinell nevez serret ebet</string>
+    <string name="dejavu_tab_page_number">Pajenn %1$d en ivinell-mañ</string>
+    <string name="dejavu_tab_pages">Pajennoù en ivinell-mañ</string>
+    <string name="dejavu_settings_tabs_import_export">Enporzhiañ hag ezporzhiañ ivinelloù</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Dilec’hiañ egorioù labour, teuliadoù hag ivinelloù etrezek Sidebery hag eus Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery a zo un ardoer ivinelloù evit Firefox war an urzhiataerioù. E bannelloù a zo egorioù labour amañ, e strolladoù ivinelloù a zo teuliadoù hag e ivinelloù spilhennet a zo traoù pouezus.</string>
+    <string name="dejavu_sidebery_export">Ezporzhiañ etrezek Sidebery</string>
+    <string name="dejavu_sidebery_import">Enporzhiañ eus Sidebery</string>
+    <string name="dejavu_sidebery_steps">E «Snapshots viewer» Sidebery, «Import snapshot» a lenn ar restr eus Dejavu hag «Open all windows» a zigor he ivinelloù. Evit degas ivinelloù amañ, dibabit un dapadenn eno, goude «Export snapshot» ha «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Egorioù labour nevez</string>
+    <string name="dejavu_sidebery_essentials">Traoù pouezus</string>
+    <string name="dejavu_sidebery_new_containers">Kontenerioù nevez</string>
+    <string name="dejavu_sidebery_left_out">Lezet a-gostez</string>
+    <string name="dejavu_sidebery_left_out_note">Pajennoù na c’hall ket ur pellgomz digeriñ, evel restroù lec’hel, hag ivinelloù prenestroù prevez</string>
+    <string name="dejavu_sidebery_nothing_new">N’eus netra nevez er restr-mañ.</string>
+    <string name="dejavu_sidebery_import_button">Enporzhiañ</string>
+    <string name="dejavu_sidebery_imported">Enporzhiet eus Sidebery</string>
+    <string name="dejavu_sidebery_exported">Enrollet evit Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">N’eus ket bet gallet enrollañ ar restr. Klaskit en-dro.</string>
+    <string name="dejavu_sidebery_bad_file">N’eo ket ar restr-mañ un dapadenn pe un eilenn gwarez eus Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">N\'eo ket skoret an alc\'hwezioù tremen gant ar stumm Android-mañ c\'hoazh</string>
 </resources>

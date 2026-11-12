@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu ist dein Standardbrowser.</string>
     <string name="dejavu_welcome_sync_title">Deine Arbeitsbereiche auf jedem Gerät</string>
     <string name="dejavu_welcome_sync_text">Melde dich mit einem Mozilla-Konto an, um Arbeitsbereiche, angeheftete Tabs und Favoriten mit Zen oder Tabs mit Firefox zu synchronisieren.</string>
-    <string name="dejavu_settings_matrix">Auf Matrix chatten</string>
-    <string name="dejavu_settings_matrix_summary">Stell eine Frage, schlag eine Funktion vor oder melde einen Fehler</string>
+    <string name="dejavu_settings_email">E-Mail</string>
+    <string name="dejavu_settings_email_summary">Stell eine Frage, schlag eine Funktion vor oder melde einen Fehler</string>
     <string name="dejavu_menu_clear_data">Daten löschen</string>
     <string name="dejavu_menu_clear_data_and_quit">Daten löschen und beenden</string>
     <string name="dejavu_clear_data_button">Schaltfläche „Daten löschen“</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Wird beim Neustart von Dejavu wieder deaktiviert</string>
     <string name="dejavu_preference_mouse_support">Mausunterstützung</string>
     <string name="dejavu_preference_mouse_support_summary">Ein Mittelklick öffnet einen Link in einem Hintergrund-Tab, und wenn der Mauszeiger auf einem Link ruht, wird seine Adresse angezeigt. Ein Mittelklick auf einen Tab schließt ihn.</string>
+    <string name="dejavu_no_closed_tabs">Keine kürzlich geschlossenen Tabs vorhanden</string>
+    <string name="dejavu_tab_page_number">Seite %1$d in diesem Tab</string>
+    <string name="dejavu_tab_pages">Seiten in diesem Tab</string>
+    <string name="dejavu_settings_tabs_import_export">Tabs importieren und exportieren</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Arbeitsbereiche, Ordner und Tabs zu und von Sidebery übertragen</string>
+    <string name="dejavu_sidebery_hint">Sidebery ist eine Tab-Verwaltung für Firefox auf Computern. Seine Panels sind hier Arbeitsbereiche, seine Tab-Gruppen Ordner und seine angehefteten Tabs Favoriten.</string>
+    <string name="dejavu_sidebery_export">Nach Sidebery exportieren</string>
+    <string name="dejavu_sidebery_import">Aus Sidebery importieren</string>
+    <string name="dejavu_sidebery_steps">Im «Schnappschuss-Betrachter» von Sidebery liest «Importieren» die Datei aus Dejavu ein, und «Alle Fenster öffnen» öffnet ihre Tabs. Um Tabs hierher zu holen, wählen Sie dort einen Schnappschuss, dann «Exportieren» und «Als JSON speichern».</string>
+    <string name="dejavu_sidebery_new_workspaces">Neue Arbeitsbereiche</string>
+    <string name="dejavu_sidebery_essentials">Favoriten</string>
+    <string name="dejavu_sidebery_new_containers">Neue Container</string>
+    <string name="dejavu_sidebery_left_out">Ausgelassen</string>
+    <string name="dejavu_sidebery_left_out_note">Seiten, die ein Telefon nicht öffnen kann, etwa lokale Dateien, und Tabs aus privaten Fenstern</string>
+    <string name="dejavu_sidebery_nothing_new">Diese Datei enthält nichts Neues.</string>
+    <string name="dejavu_sidebery_import_button">Importieren</string>
+    <string name="dejavu_sidebery_imported">Aus Sidebery importiert</string>
+    <string name="dejavu_sidebery_exported">Für Sidebery gespeichert</string>
+    <string name="dejavu_sidebery_export_failed">Die Datei konnte nicht gespeichert werden. Versuchen Sie es erneut.</string>
+    <string name="dejavu_sidebery_bad_file">Diese Datei ist kein Schnappschuss und keine Sicherung von Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Zugangsschlüssel werden in dieser Android-Version noch nicht unterstützt</string>
 </resources>

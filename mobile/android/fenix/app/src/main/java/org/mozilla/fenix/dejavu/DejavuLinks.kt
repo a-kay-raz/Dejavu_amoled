@@ -11,6 +11,9 @@ object DejavuLinks {
     const val ISSUES = "$SOURCE_CODE/issues"
     const val PRIVACY_POLICY = "$SOURCE_CODE/blob/main/PRIVACY.md"
 
+    /** Where questions, feature requests and bug reports are written to. */
+    const val EMAIL = "byarchitect@disroot.org"
+
     /** The Google Play release's package. Every build rates that one, as no other build has a Play listing. */
     const val PLAY_STORE_ID = "com.byarchitect.dejavu"
     const val PLAY_STORE_APP_LISTING = "market://details?id=$PLAY_STORE_ID"

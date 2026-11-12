@@ -516,8 +516,8 @@
     <string name="dejavu_welcome_default_done">Dejavu è u tò navigaturi pridifinutu.</string>
     <string name="dejavu_welcome_sync_title">I tò spazzii di travagghiu supra ogni dispositivu</string>
     <string name="dejavu_welcome_sync_text">Trasi cu un cuntu Mozilla pi sincronizzari spazzii di travagghiu, schedi ficcati e essenziali cu Zen, o schedi cu Firefox.</string>
-    <string name="dejavu_settings_matrix">Parra supra Matrix</string>
-    <string name="dejavu_settings_matrix_summary">Fai na dumanna, pruponi na funzioni o signala un errori</string>
+    <string name="dejavu_settings_email">Posta elittrònica</string>
+    <string name="dejavu_settings_email_summary">Fai na dumanna, pruponi na funzioni o signala un errori</string>
     <string name="dejavu_menu_clear_data">Scancella i dati</string>
     <string name="dejavu_menu_clear_data_and_quit">Scancella i dati e nesci</string>
     <string name="dejavu_clear_data_button">Buttuni Scancella i dati</string>
@@ -546,4 +546,25 @@
     <string name="dejavu_remote_debugging_summary">Si disattiva arrè quannu Dejavu s\'arriavvìa</string>
     <string name="dejavu_preference_mouse_support">Supportu pô surciu</string>
     <string name="dejavu_preference_mouse_support_summary">Un clic cû buttuni dô menzu apri un liami nta na scheda n sfunnu, e passari supra un liami ni ammustra lu nnirizzu. Un clic cû buttuni dô menzu supra na scheda la chiudi.</string>
+    <string name="dejavu_no_closed_tabs">Nun cc’è nuḍḍa scheda chiujuta di picca</string>
+    <string name="dejavu_tab_page_number">Pàggina %1$d nta sta scheda</string>
+    <string name="dejavu_tab_pages">Pàggini nta sta scheda</string>
+    <string name="dejavu_settings_tabs_import_export">Mporta e sporta schedi</string>
+    <string name="dejavu_settings_tabs_import_export_summary">Sposta spazzi di travagghiu, carteddi e schedi versu e di Sidebery</string>
+    <string name="dejavu_sidebery_hint">Sidebery è un gistori di schedi pi Firefox nta li computer. Ccà li so pannelli sunnu spazzi di travagghiu, li so gruppi di schedi sunnu carteddi e li so schedi ficcati sunnu essenziali.</string>
+    <string name="dejavu_sidebery_export">Sporta nta Sidebery</string>
+    <string name="dejavu_sidebery_import">Mporta di Sidebery</string>
+    <string name="dejavu_sidebery_steps">Nto «Snapshots viewer» di Sidebery, «Import snapshot» leggi lu pricu di Dejavu e «Open all windows» nni grapi li schedi. Pi purtari schedi ccà, scegghi ddà n’istantania, poi «Export snapshot» e «Save as JSON».</string>
+    <string name="dejavu_sidebery_new_workspaces">Spazzi di travagghiu novi</string>
+    <string name="dejavu_sidebery_essentials">Essenziali</string>
+    <string name="dejavu_sidebery_new_containers">Cuntinituri novi</string>
+    <string name="dejavu_sidebery_left_out">Lassati fora</string>
+    <string name="dejavu_sidebery_left_out_note">Pàggini ca un telèfunu nun pò grapiri, comu li prichi lucali, e schedi di finestri privati</string>
+    <string name="dejavu_sidebery_nothing_new">Nun c’è nenti di novu nta stu pricu.</string>
+    <string name="dejavu_sidebery_import_button">Mporta</string>
+    <string name="dejavu_sidebery_imported">Mpurtatu di Sidebery</string>
+    <string name="dejavu_sidebery_exported">Sarvatu pi Sidebery</string>
+    <string name="dejavu_sidebery_export_failed">Nun fu pussìbbili sarvari lu pricu. Prova arreri.</string>
+    <string name="dejavu_sidebery_bad_file">Stu pricu nun è n’istantania nè na copia di sicurizza di Sidebery.</string>
+    <string name="dejavu_passkeys_unsupported">Li chiavi d\'accessu ancora nun sunnu supurtati nta sta virsioni di Android</string>
 </resources>
