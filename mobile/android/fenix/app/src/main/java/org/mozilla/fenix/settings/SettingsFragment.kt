@@ -75,6 +75,7 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
 import org.mozilla.fenix.databinding.AmoCollectionOverrideDialogBinding
+import org.mozilla.fenix.dejavu.DejavuLinks
 import org.mozilla.fenix.dejavu.discover.NewThing
 import org.mozilla.fenix.dejavu.discover.NewThings
 import org.mozilla.fenix.dejavu.discover.Tips
