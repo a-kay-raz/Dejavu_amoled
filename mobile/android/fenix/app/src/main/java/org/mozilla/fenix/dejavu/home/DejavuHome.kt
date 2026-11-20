@@ -107,6 +107,7 @@ import org.mozilla.fenix.dejavu.actions.icon
 import org.mozilla.fenix.dejavu.actions.label
 import org.mozilla.fenix.dejavu.browser.ClearData
 import org.mozilla.fenix.dejavu.browser.SplitSpace
+import org.mozilla.fenix.dejavu.browser.awaitSteadyFrames
 import org.mozilla.fenix.dejavu.containers.ContainerColor
 import org.mozilla.fenix.dejavu.containers.ContainerPick
 import org.mozilla.fenix.dejavu.containers.ContainerRecord
@@ -277,8 +278,12 @@ fun DejavuHome(
     essentialsShown: Boolean = true,
     hiddenEssentials: Set<String> = emptySet(),
 ) {
-    // The private workspace is an extra last page, there while private tabs are open.
-    val privateIndex = state.workspaces.size.takeIf { privateTabs.isNotEmpty() }
+    // The private workspace is an extra last page, there while private tabs are open. Shown as its last tabs close, it
+    // stays until they poured away and the pages turned to the workspace before it.
+    var keepsPrivatePage by remember { mutableStateOf(false) }
+    val privateIndex = state.workspaces.size.takeIf { privateTabs.isNotEmpty() || keepsPrivatePage }
+    // While the pages turn from the emptied private workspace, only the workspace they turn to is set up next to it.
+    var turningFromPrivate by remember { mutableStateOf(false) }
     val pagerState = rememberPagerState(
         initialPage = if (privateTabs.any { it.id == selectedTabId } && privateIndex != null) privateIndex else state.activeIndex,
     ) { state.workspaces.size + if (privateIndex != null) 1 else 0 }
@@ -295,7 +300,9 @@ fun DejavuHome(
     val pour = remember { DataPour() }
     // Clear data asked for on a page, which closed to here: the page shown carries it out.
     val askedClear by ClearData.asked.collectAsState()
-    val onPrivatePage = privateIndex != null && pagerState.currentPage == privateIndex
+    // Turning from the emptied private workspace already counts as being on the workspace it turns to, so that what
+    // changes with it changes before the pages move.
+    val onPrivatePage = privateIndex != null && pagerState.currentPage == privateIndex && !turningFromPrivate
     // While any of the private workspace shows, even halfway through a swipe.
     val privatePageShown by remember(privateIndex) {
         derivedStateOf {
@@ -323,7 +330,12 @@ fun DejavuHome(
     val currentHidden = hiddenAt(pagerState.currentPage)
     // The workspace of a device on the account shows what the device has, which has no essentials, and a locked one
     // shows nothing until it is unlocked.
-    val essentials = if (onPrivatePage || currentWorkspace.device != null || currentHidden) {
+    val essentialsHidden = if (turningFromPrivate) {
+        hiddenAt(state.workspaces.lastIndex)
+    } else {
+        onPrivatePage || currentHidden
+    }
+    val essentials = if (essentialsHidden || currentWorkspace.device != null) {
         emptyList()
     } else {
         shownEssentials(
@@ -372,6 +384,9 @@ fun DejavuHome(
     var swiped by remember { mutableStateOf(false) }
     LaunchedEffect(pagerState) {
         pagerState.interactionSource.interactions.collect { if (it is DragInteraction.Start) swiped = true }
+    }
+    LaunchedEffect(pagerState.settledPage, privateIndex) {
+        keepsPrivatePage = privateIndex != null && pagerState.settledPage == privateIndex
     }
     LaunchedEffect(pagerState.settledPage) {
         state.workspaces.getOrNull(pagerState.settledPage)?.let { interactor.onWorkspaceSelected(it.id) }
@@ -781,6 +796,7 @@ fun DejavuHome(
                         state = pagerState,
                         userScrollEnabled = activeSelection == null,
                         modifier = Modifier.fillMaxSize(),
+                        beyondViewportPageCount = if (turningFromPrivate) 1 else 0,
                         key = { state.workspaces.getOrNull(it)?.id ?: PRIVATE_PAGE_KEY },
                     ) { page ->
                         if (page == privateIndex) {
@@ -806,10 +822,24 @@ fun DejavuHome(
                                     onCloseTab = { interactor.onCloseTab(it.id) },
                                     onNewTab = interactor::onNewPrivateTab,
                                     onCloseAll = interactor::onClosePrivateTabs,
+                                    onEmptied = {
+                                        scope.launch {
+                                            // The workspace it turns to sets itself up first, while nothing moves, so
+                                            // the pages turn smoothly.
+                                            turningFromPrivate = true
+                                            try {
+                                                awaitSteadyFrames()
+                                                pagerState.animateScrollToPage(state.workspaces.lastIndex)
+                                            } finally {
+                                                turningFromPrivate = false
+                                            }
+                                        }
+                                    },
                                 )
                             }
                             return@HorizontalPager
                         }
+                        if (turningFromPrivate && page != state.workspaces.lastIndex) return@HorizontalPager
                         val workspace = state.workspaces[page]
                         // Remembered, so that a page skips recomposing when nothing it shows changed.
                         val pageTabs = remember(tabs, state, workspace.id) {

@@ -38,7 +38,9 @@ internal fun rememberClipboardHasLink(): Boolean {
     val context = LocalContext.current
     val view = LocalView.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
-    val clipboard = remember { context.getSystemService<ClipboardManager>() }
+    // The app's own, as the system service can keep a listener's clipboard, and the activity of its context, long after
+    // the listener was removed: each switch between private and normal browsing starts the activity again.
+    val clipboard = remember { context.applicationContext.getSystemService<ClipboardManager>() }
     var hasLink by remember { mutableStateOf(false) }
     var checks by remember { mutableIntStateOf(0) }
 

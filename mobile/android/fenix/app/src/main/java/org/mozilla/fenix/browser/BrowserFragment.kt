@@ -72,6 +72,7 @@ import org.mozilla.fenix.dejavu.browser.DejavuLinkMenu
 import org.mozilla.fenix.dejavu.browser.DejavuToolbar
 import org.mozilla.fenix.dejavu.browser.PagePictures
 import org.mozilla.fenix.dejavu.browser.PageTint
+import org.mozilla.fenix.dejavu.browser.TabZoom
 import org.mozilla.fenix.dejavu.browser.addStatusBarScrim
 import org.mozilla.fenix.dejavu.browser.hideSystemBarsOverPages
 import org.mozilla.fenix.dejavu.browser.installFullScreenView
@@ -202,6 +203,7 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
         }
         binding.readerViewControlsBar.padForNavigationBar()
         PagePictures.attach(binding.engineView)
+        TabZoom.browserComing(requireActivity())
         PageTint(
             window = window,
             engineView = binding.engineView,

@@ -4,6 +4,7 @@
 
 package org.mozilla.fenix.dejavu.home
 
+import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import android.os.StrictMode
@@ -126,6 +127,8 @@ fun ComposeView.setDejavuHomeContent(
     onOpenTab: (String) -> Unit,
     onFirstFrameDrawn: () -> Unit,
 ) {
+    // A page going home as the activity started again, as coming home from a private tab does, shrinks over it.
+    (context as? Activity)?.let(TabZoom::homeComing)
     setContent {
         FirefoxTheme {
             val fenix = components

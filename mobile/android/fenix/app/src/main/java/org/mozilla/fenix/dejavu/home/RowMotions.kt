@@ -236,6 +236,10 @@ internal class RowMotions(private val graphics: GraphicsContext, private val sco
     val isClearing: Boolean
         get() = running.any { it is Clearing }
 
+    /** Whether any row is on the move now. */
+    val isPlaying: Boolean
+        get() = running.isNotEmpty()
+
     /** What changed among [rows], the open tabs of each row by its key, since [start] last saw them. */
     fun plan(rows: Map<String, Set<String>>, openTabIds: Set<String>, reopenedTabId: String?): RowPlan {
         val now = SystemClock.uptimeMillis()

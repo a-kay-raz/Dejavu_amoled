@@ -31,6 +31,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -38,6 +39,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.flow.first
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.lib.state.ext.observeAsComposableState
 import mozilla.components.support.utils.ext.getActivityWindow
@@ -105,8 +107,8 @@ private var windowSecuredHere = false
 
 /**
  * The private tabs, shown as a workspace of their own while any are open. It cannot hold pinned tabs, folders or
- * essentials, and is not saved: it goes away with its last tab. A closing tab pours into its close button, see
- * [RowMotions].
+ * essentials, and is not saved: it goes away with its last tab, once [onEmptied] says its rows poured away. A closing
+ * tab pours into its close button, and Close all pours them all into itself, see [RowMotions].
  */
 @Composable
 internal fun PrivateWorkspacePage(
@@ -116,6 +118,7 @@ internal fun PrivateWorkspacePage(
     onCloseTab: (TabSessionState) -> Unit,
     onNewTab: () -> Unit,
     onCloseAll: () -> Unit,
+    onEmptied: () -> Unit,
 ) {
     var editing by remember { mutableStateOf(false) }
     var menuOpen by remember { mutableStateOf(false) }
@@ -128,6 +131,12 @@ internal fun PrivateWorkspacePage(
     )
     SideEffect { motions.start(plan, flights = false) }
     val placement = motions.placementSpec(plan)
+    if (tabs.isEmpty()) {
+        LaunchedEffect(Unit) {
+            snapshotFlow { motions.isPlaying }.first { !it }
+            onEmptied()
+        }
+    }
     val listState = rememberHomeListState(PRIVATE_LIST_KEY)
     LaunchedEffect(Unit) {
         val index = tabs.indexOfFirst { it.id == selectedTabId }.takeIf { it >= 0 } ?: return@LaunchedEffect
@@ -166,7 +175,13 @@ internal fun PrivateWorkspacePage(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
-                    TextButton(onClick = onCloseAll) {
+                    TextButton(
+                        onClick = {
+                            motions.clearTapped()
+                            onCloseAll()
+                        },
+                        modifier = Modifier.motionButton(motions, MotionButton.CLEAR),
+                    ) {
                         Icon(
                             painter = iconPainter(iconsR.drawable.mozac_ic_delete_24),
                             contentDescription = null,
