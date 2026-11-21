@@ -47,6 +47,7 @@ import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.core.graphics.toColorInt
 import androidx.core.view.MenuProvider
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.DialogFragment
@@ -455,6 +456,11 @@ class HistoryFragment :
                                 }
                             }
 
+                            // Dejavu: the suggestions let the page's backdrop show through like the rest of the page,
+                            // so the history under them hides while they show, instead of showing through them.
+                            val historyHidden = historyState.isSearching && searchState.query.isNotEmpty()
+                            LaunchedEffect(historyHidden) { binding.historyLayout.isInvisible = historyHidden }
+
                             BackInvokedHandler(historyState.isSearching) {
                                 historyStore.dispatch(SearchDismissed)
                             }
@@ -541,6 +547,7 @@ class HistoryFragment :
         binding.historyLayout.updateLayoutParams {
             (this as? ViewGroup.MarginLayoutParams)?.topMargin = 0
         }
+        binding.historyLayout.isInvisible = false
         searchLayout?.isVisible = false
         requireComponents.appStore.dispatch(AppAction.SearchAction.SearchEnded)
         toolbarStore.dispatch(BrowserEditToolbarAction.SearchQueryUpdated(BrowserToolbarQuery("")))
