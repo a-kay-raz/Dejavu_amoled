@@ -1,0 +1,24 @@
+- Add a full page screenshot action to the More menu
+- Add a restore closed tab action to the More menu and actions bar
+- #0 [FEATURE] Full page screenshot in the More menu, and split view keeps Firefox's focus on the page in focus
+- Merge pull request #268 from Andrew-0807/pr/full-page-screenshot
+- Merge pull request #266 from Andrew-0807/pr/restore-closed-tab
+- #0 [FIX] Reopen closed tab in the menu matches the home screen's button, and its message is in every language
+- #0 [FEATURE] Merge Dejavu 3.1.0 into 4.0: mouse support, reader view settings in the menu, and the battery and privacy fixes
+- #0 [FEATURE] Workspaces can be locked with the fingerprint and kept out of history, and Private browsing is back in the settings
+- #0 [FEATURE] The address bar shows how many pages the tab went through, where the protection shield was
+- #0 [FEATURE] Tabs, workspaces and containers settings can import and export tabs with Sidebery
+- Release notes for Dejavu 3.2.0
+- #0 [FEATURE] Animations can be turned off in Customize, and Full screen in the More menu hides every bar until its floating button brings them back
+- #0 [FEATURE] Merge Dejavu 3.2.0 into 4.0, and add the accent color, the icon styles and hiding essentials from the 4.0 roadmap
+- #0 [FEATURE] Orange dots for what 4.0 brought, private workspace settings, and steadier private and workspace locks
+- #0 [FIX] Fingerprint first for locks, private tabs blurred in their workspace with a Show button, closing a private tab from the menu, and big pictures in every icon style
+- #0 [FEATURE] Private tabs blur again when you turn to another workspace
+- #0 [FEATURE] New yellow app icon, with the blue one and the old icon to pick in Customize
+- Merge branch 'v4.0' of github.com:by-architect/Dejavu into v4.0
+- #0 [FIX] The privacy policy explains how to delete a Mozilla account and says the email address goes to Mozilla
+- #0 [FEATURE] Orange dots for every new thing since 3.2.0: Screenshot, Private browsing, and the workspace lock and history switches
+- #0 [FEATURE] Merge the new app icons into 4.0, with orange dots on the new Yellow and Blue icons
+- #0 [FIX] Searching from hidden private tabs no longer asks for the fingerprint, and debug builds keep private tabs when LeakCanary asks for its permission
+- #0 [FEATURE] Merge Dejavu 4.0 into main: workspace locks, private workspace, app and icon styles, accent color, animations, full screen and full page screenshots
+- #0 [FIX] Private workspace animations: going home zooms the page back into its tab, and Close all pours the tabs away
