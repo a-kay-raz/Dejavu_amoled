@@ -36,11 +36,18 @@ def isAppBundle = gradle.startParameter.taskNames.any { it.toLowerCase().contain
 
 // Dejavu: the id Dejavu is published with. The launcher shortcuts in src/release/res/xml/shortcuts.xml use it too.
 def DEJAVU_APPLICATION_ID = "com.byarchitect.dejavu"
-// Dejavu: -PdejavuTest makes the release build Dejavu Test, the test version members get from the test repository
-// (scripts/dejavu-test-build.sh in the Kaizen project). It is an app of its own that installs beside Dejavu, from
-// whichever store: its own id (DEJAVU_APPLICATION_ID.test), name, icon, deep link scheme and launcher shortcuts
-// (src/main/res/xml/dejavu_test_shortcuts.xml), so it neither updates nor touches the user's Dejavu.
+// Dejavu: -PdejavuTest makes the release build Dejavu Test, the test version testers get from the test repository
+// (scripts/build-apk-test.sh in the Kaizen project). It is an app of its own that installs beside Dejavu, from
+// whichever store: its own id, name, icon, deep link scheme and launcher shortcuts
+// (src/main/res/xml/dejavu_test_shortcuts.xml), so it neither updates nor touches the user's Dejavu. Each coming
+// version's tests are an app of their own too, so several can be tested side by side: -PversionName=4.1.0-test.2 makes
+// com.byarchitect.dejavu.test.v4_1_0, named Dejavu Test 4.1.0 (without a test version: com.byarchitect.dejavu.test).
 def DEJAVU_TEST = project.hasProperty("dejavuTest")
+def dejavuTestVersionName = gradle.startParameter.projectProperties["versionName"] ?: ""
+def dejavuTestVersion = dejavuTestVersionName ==~ /\d+\.\d+\.\d+-test\.\d+/ ? dejavuTestVersionName.split("-")[0] : null
+def DEJAVU_TEST_APPLICATION_ID = "${DEJAVU_APPLICATION_ID}.test" + (dejavuTestVersion ? ".v" + dejavuTestVersion.replace(".", "_") : "")
+def DEJAVU_TEST_LABEL = "Dejavu Test" + (dejavuTestVersion ? " $dejavuTestVersion" : "")
+def DEJAVU_TEST_SCHEME = "dejavu-test" + (dejavuTestVersion ? "-" + dejavuTestVersion.replace(".", "-") : "")
 def DEJAVU_VERSION_CODE_BASE = 2016190000
 
 android {
@@ -68,6 +75,8 @@ android {
         testInstrumentationRunnerArguments clearPackageData: 'true'
         testInstrumentationRunnerArguments "detect-leaks": 'true'
         resValue "bool", "IS_DEBUG", "false"
+        // Dejavu: the id Dejavu Test's launcher shortcuts open (src/main/res/xml/dejavu_test_shortcuts.xml).
+        resValue "string", "dejavu_test_package", DEJAVU_TEST_APPLICATION_ID
         buildConfigField "boolean", "USE_RELEASE_VERSIONING", "false"
         // Blank in debug builds so that tests are deterministic.
         buildConfigField "String", "VCS_HASH", "\"\""
@@ -166,14 +175,14 @@ android {
             buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
             // Dejavu: release builds are Dejavu, an app of its own. Its id is set in onVariants below, and it has its
             // own deep link scheme and no shared user id.
-            def deepLinkSchemeValue = DEJAVU_TEST ? "dejavu-test" : "dejavu"
+            def deepLinkSchemeValue = DEJAVU_TEST ? DEJAVU_TEST_SCHEME : "dejavu"
             buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
             manifestPlaceholders.putAll([
                     "deepLinkScheme": deepLinkSchemeValue,
             ])
             if (DEJAVU_TEST) {
                 manifestPlaceholders.putAll([
-                        "dejavuAppLabel": "Dejavu Test",
+                        "dejavuAppLabel": DEJAVU_TEST_LABEL,
                         "dejavuAppIcon": "@mipmap/dejavu_test_launcher",
                         "dejavuAppRoundIcon": "@mipmap/dejavu_test_launcher_round",
                         "dejavuBlueIcon": "@mipmap/dejavu_test_launcher_blue",
@@ -329,7 +338,7 @@ androidComponents {
     onVariants(selector().all()) { variant ->
         def buildType = variant.buildType
         if (buildType == 'release') {
-            variant.applicationId.set(DEJAVU_TEST ? "${DEJAVU_APPLICATION_ID}.test" : DEJAVU_APPLICATION_ID)
+            variant.applicationId.set(DEJAVU_TEST ? DEJAVU_TEST_APPLICATION_ID : DEJAVU_APPLICATION_ID)
         }
 
         project.logger.debug("----------------------------------------------")

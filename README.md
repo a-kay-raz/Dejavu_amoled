@@ -103,7 +103,8 @@ needs more hands. If you are an iOS developer who would like to help, or want to
 
 Anyone can test Dejavu's next version before it comes out. **Dejavu Test** is the test version of Dejavu, and it has
 its own F-Droid repository. It is a separate app with its own tabs and settings, so it installs beside your Dejavu and
-never touches it. Test versions are new, so they can have bugs.
+never touches it. Each coming version has its own Dejavu Test, named after it (like Dejavu Test 4.1.0), so you can try
+more than one. Test versions are new, so they can have bugs.
 
 In F-Droid, open **Repositories**, tap **+** and scan the QR code, or open
 [this link](https://fdroid.byarchitect.org/test-2025bfpt6hunqbzikztu/repo?fingerprint=62EFF007F5EEFEABB74853B87AC55E2BD2D69A46968357883EE120383004F7CC)
