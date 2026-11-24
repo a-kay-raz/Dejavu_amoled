@@ -21,6 +21,7 @@ import mozilla.components.service.fxa.manager.FxaAccountManager
 import mozilla.components.service.fxa.sync.SyncReason
 import org.mozilla.fenix.R
 import org.mozilla.fenix.databinding.ComponentHistoryBinding
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.library.LibraryPageView
 import org.mozilla.fenix.theme.ThemeManager
@@ -43,7 +44,15 @@ class HistoryView(
             LayoutInflater.from(container.context),
             container,
             true,
-        )
+        ).also {
+            // Dejavu: the picture in the style of icons picked in Customize.
+            it.historyEmptyView.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                0,
+                DejavuIcons.of(R.drawable.dejavu_illustration_history),
+                0,
+                0,
+            )
+        }
 
     var mode: HistoryFragmentState.Mode = HistoryFragmentState.Mode.Normal
         private set

@@ -210,6 +210,9 @@ internal class SplitPaneFeature(
         if (shownTabId in tabIds) releaseEngine()
     }
 
+    /** The view that shows the tab [tabId]: the pane while it shows that tab, else the browser's own. */
+    fun engineViewOf(tabId: String): EngineView = pane?.engineView?.takeIf { tabId == shownTabId } ?: mainEngineView
+
     private fun targetOf(state: BrowserState, workspaces: WorkspaceState): PaneTarget? {
         val selected = state.selectedTab ?: return null
         if (selected.content.private || selected.content.fullScreen) return null
@@ -260,6 +263,9 @@ internal class SplitPaneFeature(
         shownTabId = next.tabId
         shownSession = session
         bindRetries = 0
+        // A tap on the pane left Android's focus there, now with the page that moved over, but the page in focus is the
+        // browser's: Firefox only prints, saves as PDF and pictures the page whose view has the focus.
+        if (pane.hasFocus()) mainEngineView.asView().findGeckoView()?.requestFocus()
         // The pane draws the page it now shows within a few frames, the browser's view too; their pictures can go then.
         if (covers.isNotEmpty()) {
             browserLayout.removeCallbacks(dropCover)

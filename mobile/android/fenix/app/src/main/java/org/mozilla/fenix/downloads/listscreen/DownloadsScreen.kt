@@ -70,6 +70,7 @@ import mozilla.components.compose.base.theme.ThemedValueProvider
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
 import org.mozilla.fenix.compose.list.ExpandableListHeader
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.downloads.DownloadsScreenTestTag
 import org.mozilla.fenix.downloads.listscreen.store.DownloadListItem
 import org.mozilla.fenix.downloads.listscreen.store.DownloadUIAction
@@ -547,7 +548,7 @@ private fun EmptyState(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Image(
-            painter = painterResource(R.drawable.dejavu_illustration_downloads),
+            painter = iconPainter(R.drawable.dejavu_illustration_downloads),
             contentDescription = null,
         )
 

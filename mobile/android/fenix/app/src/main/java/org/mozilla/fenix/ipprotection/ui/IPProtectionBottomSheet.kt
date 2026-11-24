@@ -35,7 +35,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.PreviewParameter
@@ -49,6 +48,7 @@ import mozilla.components.compose.base.button.TextButton
 import mozilla.components.compose.base.theme.PreviewThemeProvider
 import mozilla.components.compose.base.theme.Theme
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.theme.FirefoxTheme
 
 private val bannerImageSize = 170.dp
@@ -295,7 +295,7 @@ private fun PromoBannerCard() {
         }
 
         Image(
-            painter = painterResource(id = R.drawable.dejavu_illustration_shield),
+            painter = iconPainter(R.drawable.dejavu_illustration_shield),
             contentDescription = null,
             modifier = Modifier.size(bannerImageSize).offset(y = 16.dp),
         )

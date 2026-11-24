@@ -4,7 +4,9 @@
 
 package org.mozilla.fenix.dejavu.home
 
+import android.content.Intent
 import android.net.Uri
+import android.provider.Settings
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -28,6 +30,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -36,8 +39,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Slider
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -50,7 +55,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -61,6 +66,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import mozilla.components.ui.icons.R as iconsR
+import androidx.biometric.BiometricManager
 import org.mozilla.fenix.R
 import mozilla.components.browser.state.state.ContainerState
 import org.mozilla.fenix.dejavu.containers.ContainerColor
@@ -71,6 +77,10 @@ import org.mozilla.fenix.dejavu.containers.NoContainerIcon
 import org.mozilla.fenix.dejavu.containers.TemporaryContainerIcon
 import org.mozilla.fenix.dejavu.containers.color
 import org.mozilla.fenix.dejavu.containers.splitTemporary
+import org.mozilla.fenix.dejavu.discover.NewThing
+import org.mozilla.fenix.dejavu.discover.NewThings
+import org.mozilla.fenix.dejavu.discover.newDotAfterText
+import org.mozilla.fenix.dejavu.discover.rememberUnseenNewThings
 import org.mozilla.fenix.dejavu.settings.ContainerEditorDialog
 import org.mozilla.fenix.dejavu.sync.DejavuSync
 import org.mozilla.fenix.dejavu.sync.DejavuSyncSource
@@ -80,12 +90,14 @@ import org.mozilla.fenix.dejavu.ui.DejavuDialog
 import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
 import org.mozilla.fenix.dejavu.ui.DejavuPopup
 import org.mozilla.fenix.dejavu.ui.DejavuTextField
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.MAX_FOLDER_DEPTH
 import org.mozilla.fenix.dejavu.workspaces.WallpaperArt
 import org.mozilla.fenix.dejavu.workspaces.Workspace
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpaper
+import org.mozilla.fenix.settings.biometric.ext.isAuthenticatorAvailable
 
 /**
  * Changes to tabs, pinned tabs and folders that need the user's input first, asked for by [ItemDialogs]: on the home
@@ -133,8 +145,17 @@ internal fun HomeDialogs(
                 onDrawWallpaper = interactor::onDrawWallpaper,
                 onImportWallpaper = interactor::onImportWallpaper,
                 onDiscardWallpaper = interactor::onDiscardWallpaper,
-                onSave = { name, containerId, icon, theme, wallpaper ->
-                    interactor.onSaveWorkspace(workspace?.id, name, containerId, icon, theme, wallpaper)
+                onSave = { name, containerId, icon, theme, wallpaper, locked, savesHistory ->
+                    interactor.onSaveWorkspace(
+                        workspace?.id,
+                        name,
+                        containerId,
+                        icon,
+                        theme,
+                        wallpaper,
+                        locked,
+                        savesHistory,
+                    )
                     onDismiss()
                 },
                 onDismiss = onDismiss,
@@ -325,11 +346,11 @@ internal fun ItemDialogs(
 }
 
 /**
- * Creates or edits a workspace: its icon, name, look and default container. The look is either a theme of colors or
- * a wallpaper, which gives the theme the colors taken from its picture, so that Zen, which syncs themes but not
- * pictures, shows the same colors. [onDrawWallpaper] draws a wallpaper Dejavu draws, [onImportWallpaper] copies a
- * picture picked for the wallpaper, and [onDiscardWallpaper] deletes a picture that ends up unused. While workspaces [syncsWithFirefox], the dialog says what
- * Firefox Sync leaves out.
+ * Creates or edits a workspace: its icon, name, look, default container, and whether it is locked and saves history.
+ * The look is either a theme of colors or a wallpaper, which gives the theme the colors taken from its picture, so that
+ * Zen, which syncs themes but not pictures, shows the same colors. [onDrawWallpaper] draws a wallpaper Dejavu draws,
+ * [onImportWallpaper] copies a picture picked for the wallpaper, and [onDiscardWallpaper] deletes a picture that ends
+ * up unused. While workspaces [syncsWithFirefox], the dialog says what Firefox Sync leaves out.
  */
 @Suppress("LongMethod", "LongParameterList")
 @Composable
@@ -348,10 +369,14 @@ private fun WorkspaceDialog(
         icon: String?,
         theme: WorkspaceTheme?,
         wallpaper: WorkspaceWallpaper?,
+        locked: Boolean,
+        savesHistory: Boolean,
     ) -> Unit,
     onDismiss: () -> Unit,
 ) {
     var name by remember { mutableStateOf(workspace?.name.orEmpty()) }
+    var locked by remember { mutableStateOf(workspace?.locked == true) }
+    var savesHistory by remember { mutableStateOf(workspace?.savesHistory != false) }
     var containerId by remember { mutableStateOf(workspace?.containerId) }
     var icon by remember { mutableStateOf(workspace?.icon) }
     var theme by remember { mutableStateOf(workspace?.theme) }
@@ -389,7 +414,7 @@ private fun WorkspaceDialog(
                 texture = theme?.texture ?: 0f,
             )
         } ?: theme
-        onSave(name, containerId, icon, savedTheme, keptWallpaper)
+        onSave(name, containerId, icon, savedTheme, keptWallpaper, locked, savesHistory)
     }
 
     if (creatingContainer) {
@@ -490,34 +515,129 @@ private fun WorkspaceDialog(
             ThemeColors(theme = theme, onChange = { theme = it }, onCustomColors = { pickingColors = true })
         }
 
-        if (isDevice) return@DejavuDialog
-        Spacer(Modifier.size(16.dp))
-        Text(stringResource(R.string.dejavu_workspace_container), style = MaterialTheme.typography.labelLarge)
-        Text(
-            text = stringResource(R.string.dejavu_workspace_container_hint),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        RadioRow(
-            label = stringResource(R.string.dejavu_workspace_no_container),
-            selected = containerId == null,
-            onClick = { containerId = null },
-            leading = { NoContainerIcon() },
-        )
-        if (containers.isNotEmpty()) DialogDivider()
-        containers.forEach { container ->
+        if (!isDevice) {
+            Spacer(Modifier.size(16.dp))
+            Text(stringResource(R.string.dejavu_workspace_container), style = MaterialTheme.typography.labelLarge)
+            Text(
+                text = stringResource(R.string.dejavu_workspace_container_hint),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
             RadioRow(
-                label = container.name,
-                selected = containerId == container.contextId,
-                onClick = { containerId = container.contextId },
-                leading = { ContainerIcon(container) },
+                label = stringResource(R.string.dejavu_workspace_no_container),
+                selected = containerId == null,
+                onClick = { containerId = null },
+                leading = { NoContainerIcon() },
+            )
+            if (containers.isNotEmpty()) DialogDivider()
+            containers.forEach { container ->
+                RadioRow(
+                    label = container.name,
+                    selected = containerId == container.contextId,
+                    onClick = { containerId = container.contextId },
+                    leading = { ContainerIcon(container) },
+                )
+            }
+            PickerRow(
+                label = stringResource(R.string.dejavu_container_add),
+                leading = { PickerIcon(iconsR.drawable.mozac_ic_plus_24) },
+                onClick = { creatingContainer = true },
             )
         }
-        PickerRow(
-            label = stringResource(R.string.dejavu_container_add),
-            leading = { PickerIcon(iconsR.drawable.mozac_ic_plus_24) },
-            onClick = { creatingContainer = true },
+
+        Spacer(Modifier.size(16.dp))
+        Text(
+            text = stringResource(R.string.preferences_category_privacy_security),
+            style = MaterialTheme.typography.labelLarge,
         )
+        WorkspacePrivacy(
+            locked = locked,
+            savesHistory = savesHistory,
+            onLockedChange = { locked = it },
+            onSavesHistoryChange = { savesHistory = it },
+        )
+    }
+}
+
+/**
+ * Whether a workspace is [locked] and [savesHistory]. A workspace can only be locked while the phone has a screen lock
+ * to unlock it with; without one, a row leads to the phone's settings to set it up.
+ */
+@Composable
+private fun WorkspacePrivacy(
+    locked: Boolean,
+    savesHistory: Boolean,
+    onLockedChange: (Boolean) -> Unit,
+    onSavesHistoryChange: (Boolean) -> Unit,
+) {
+    val context = LocalContext.current
+    val canLock = remember { BiometricManager.from(context).isAuthenticatorAvailable() }
+    // New in 4.0: the orange dot stays on both switches while the dialog shows, and goes once it closes.
+    val privacyNew = NewThing.WORKSPACE_PRIVACY in rememberUnseenNewThings()
+    DisposableEffect(Unit) {
+        onDispose { NewThings.seen(context, NewThing.WORKSPACE_PRIVACY) }
+    }
+    SwitchRow(
+        label = stringResource(R.string.dejavu_workspace_lock),
+        description = stringResource(R.string.dejavu_workspace_lock_summary),
+        checked = locked,
+        enabled = canLock || locked,
+        isNew = privacyNew,
+        onChange = onLockedChange,
+    )
+    if (!canLock) {
+        PickerRow(
+            label = stringResource(R.string.pbm_authentication_lock_device_feature_disabled),
+            leading = { PickerIcon(iconsR.drawable.mozac_ic_lock_24) },
+            onClick = { context.startActivity(Intent(Settings.ACTION_SECURITY_SETTINGS)) },
+        )
+    }
+    SwitchRow(
+        label = stringResource(R.string.dejavu_workspace_no_history),
+        description = stringResource(R.string.dejavu_workspace_no_history_summary),
+        checked = !savesHistory,
+        isNew = privacyNew,
+        onChange = { onSavesHistoryChange(!it) },
+    )
+}
+
+/**
+ * A row of a dialog with [label], [description] below it, and a switch at its end. [isNew] puts the orange dot of what
+ * is new after the label.
+ */
+@Composable
+internal fun SwitchRow(
+    label: String,
+    description: String,
+    checked: Boolean,
+    onChange: (Boolean) -> Unit,
+    enabled: Boolean = true,
+    isNew: Boolean = false,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .toggleable(value = checked, enabled = enabled, role = Role.Switch, onValueChange = onChange)
+            .alpha(if (enabled) 1f else DISABLED_ROW_ALPHA)
+            .padding(start = 8.dp, top = 10.dp, bottom = 10.dp, end = 4.dp),
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurface,
+                modifier = Modifier.newDotAfterText(isNew),
+            )
+            Text(
+                text = description,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        Spacer(Modifier.width(12.dp))
+        Switch(checked = checked, onCheckedChange = null, enabled = enabled)
     }
 }
 
@@ -540,7 +660,7 @@ private fun FirefoxSyncNote(@StringRes text: Int) {
             .semantics(mergeDescendants = true) {},
     ) {
         Icon(
-            painter = painterResource(iconsR.drawable.mozac_ic_sync_24),
+            painter = iconPainter(iconsR.drawable.mozac_ic_sync_24),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.size(20.dp),
@@ -863,7 +983,7 @@ private fun PickerRow(
         )
         if (selected) {
             Icon(
-                painter = painterResource(iconsR.drawable.mozac_ic_checkmark_24),
+                painter = iconPainter(iconsR.drawable.mozac_ic_checkmark_24),
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.size(20.dp),
@@ -900,7 +1020,7 @@ private fun DialogDivider() {
 @Composable
 private fun PickerIcon(icon: Int) {
     Icon(
-        painter = painterResource(icon),
+        painter = iconPainter(icon),
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.size(20.dp),

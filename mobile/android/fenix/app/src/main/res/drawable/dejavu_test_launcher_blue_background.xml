@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- Background of Dejavu Test's launcher icon: white with a dark band across the lower part, inside the area
+     every launcher mask shows. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M0 0 H108 V108 H0 Z"
+        android:fillColor="#FFFFFFFF" />
+    <path
+        android:pathData="M0 76 H108 V88 H0 Z"
+        android:fillColor="#FF2E2416" />
+    <path
+        android:pathData="M0 76 H108 V77.5 H0 Z"
+        android:fillColor="#FF2D4ED3" />
+</vector>

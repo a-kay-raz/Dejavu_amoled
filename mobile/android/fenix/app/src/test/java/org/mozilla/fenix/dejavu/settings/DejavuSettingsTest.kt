@@ -17,7 +17,10 @@ import org.mozilla.fenix.dejavu.actions.CustomAction
 import org.mozilla.fenix.dejavu.actions.HttpMethod
 import org.mozilla.fenix.dejavu.actions.RowAction
 import org.mozilla.fenix.dejavu.browser.BarsLayout
+import org.mozilla.fenix.dejavu.browser.FloatingButtonPlace
 import org.mozilla.fenix.dejavu.menu.AddressBarButtons
+import org.mozilla.fenix.dejavu.ui.AccentColor
+import org.mozilla.fenix.dejavu.ui.IconStyle
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
@@ -54,6 +57,65 @@ class DejavuSettingsTest {
 
         settings.setSystemBarsHidden(false)
         assertFalse(newSettings().systemBarsHidden.value)
+    }
+
+    @Test
+    fun `full screen view stays as the user left it, and its button where the user dragged it`() {
+        val settings = newSettings()
+        assertFalse(settings.fullScreenView.value)
+        assertEquals(FloatingButtonPlace(), settings.fullScreenButton.value)
+
+        settings.setFullScreenView(true)
+        settings.setFullScreenButton(FloatingButtonPlace(atEnd = false, height = 0.2f))
+        val read = newSettings()
+        assertTrue(read.fullScreenView.value)
+        assertEquals(FloatingButtonPlace(atEnd = false, height = 0.2f), read.fullScreenButton.value)
+
+        read.setFullScreenView(false)
+        assertFalse(newSettings().fullScreenView.value)
+    }
+
+    @Test
+    fun `animations and the genie are on until the user turns them off`() {
+        val settings = newSettings()
+        assertTrue(settings.animations.value)
+        assertTrue(settings.genieEffect.value)
+
+        settings.setGenieEffect(false)
+        assertTrue(newSettings().animations.value)
+        assertFalse(newSettings().genieEffect.value)
+
+        settings.setAnimations(false)
+        settings.setGenieEffect(true)
+        assertFalse(newSettings().animations.value)
+        assertTrue(newSettings().genieEffect.value)
+    }
+
+    @Test
+    fun `the accent color and the style of icons stay as the user picked them`() {
+        val settings = newSettings()
+        assertEquals(AccentColor.NEUTRAL, settings.accentColor.value)
+        assertEquals(IconStyle.DEJAVU, settings.iconStyle.value)
+
+        settings.setAccentColor(AccentColor.BLUE)
+        settings.setIconStyle(IconStyle.FIREFOX)
+        assertEquals(AccentColor.BLUE, newSettings().accentColor.value)
+        assertEquals(IconStyle.FIREFOX, newSettings().iconStyle.value)
+    }
+
+    @Test
+    fun `the essentials show until the user hides them, all of them or one by one`() {
+        val settings = newSettings()
+        assertTrue(settings.essentialsShown.value)
+        assertEquals(emptySet<String>(), settings.hiddenEssentials.value)
+
+        settings.setEssentialHidden("a", hidden = true)
+        settings.setEssentialHidden("b", hidden = true)
+        settings.setEssentialHidden("a", hidden = false)
+        settings.setEssentialsShown(false)
+        val read = newSettings()
+        assertFalse(read.essentialsShown.value)
+        assertEquals(setOf("b"), read.hiddenEssentials.value)
     }
 
     @Test

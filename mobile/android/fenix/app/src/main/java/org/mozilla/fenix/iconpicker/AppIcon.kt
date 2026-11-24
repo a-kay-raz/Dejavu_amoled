@@ -151,6 +151,19 @@ enum class AppIcon(
         iconBackground = IconBackground.Drawable(drawableResId = R.drawable.ic_launcher_background_cool),
         iconForegroundId = R.drawable.ic_cool,
         titleId = R.string.alternative_app_icon_option_cool,
+    ),
+
+    // Dejavu: the blue and the classic icon, which Customize offers beside the yellow one of AppDefault, see
+    // org.mozilla.fenix.dejavu.settings.DejavuAppIcon. The search widget shows their logo.
+    AppDejavuBlue(
+        aliasSuffix = "AppDejavuBlue",
+        iconForegroundId = R.drawable.dejavu_logo_blue,
+        titleId = R.string.dejavu_app_icon_blue,
+    ),
+    AppDejavuClassic(
+        aliasSuffix = "AppDejavuClassic",
+        iconForegroundId = R.drawable.dejavu_logo_classic,
+        titleId = R.string.dejavu_app_icon_classic,
     );
 
     /** [AppIcon] helper object */

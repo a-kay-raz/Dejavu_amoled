@@ -90,6 +90,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import org.mozilla.fenix.R
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 import org.mozilla.fenix.ext.components
 
 /**
@@ -200,11 +201,18 @@ internal fun TipHost(
     }
 }
 
-/** The milliseconds since [tip] started showing, counted on every frame while it shows, or 0 without one. */
+/**
+ * The milliseconds since [tip] started showing, counted on every frame while it shows, or 0 without one. With
+ * animations off, the clock stands still once the ring around the tip's place has shown.
+ */
 @Composable
 private fun tipClock(tip: Tip?): State<Long> = produceState(0L, tip) {
     value = 0L
     if (tip == null) return@produceState
+    if (!DejavuMotion.animates) {
+        value = RING_APPEAR_MS.toLong()
+        return@produceState
+    }
     val start = withFrameMillis { it }
     while (true) {
         value = withFrameMillis { it } - start

@@ -37,7 +37,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontFamily
@@ -59,6 +58,7 @@ import org.mozilla.fenix.dejavu.actions.HttpMethod
 import org.mozilla.fenix.dejavu.actions.customActionExamples
 import org.mozilla.fenix.dejavu.actions.isSecretHeader
 import org.mozilla.fenix.dejavu.ui.DejavuTextField
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 /** Adds or edits a [CustomAction]. */
 class DejavuCustomActionFragment : DejavuComposeFragment(R.string.dejavu_custom_action) {
@@ -212,7 +212,7 @@ private fun CustomActionEditor(
                 )
                 IconButton(onClick = { headers.removeAt(index) }) {
                     Icon(
-                        painter = painterResource(iconsR.drawable.mozac_ic_cross_24),
+                        painter = iconPainter(iconsR.drawable.mozac_ic_cross_24),
                         contentDescription = stringResource(R.string.dejavu_custom_action_remove_header),
                     )
                 }

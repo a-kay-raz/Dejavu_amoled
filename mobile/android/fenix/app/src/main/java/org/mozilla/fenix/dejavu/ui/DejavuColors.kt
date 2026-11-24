@@ -8,6 +8,8 @@ import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.luminance
 import mozilla.components.compose.base.theme.AcornColors
 import mozilla.components.compose.base.theme.AcornGradient
 import mozilla.components.compose.base.theme.AcornGradientScheme
@@ -22,9 +24,9 @@ import mozilla.components.compose.base.utils.ColorStop
 
 /**
  * Dejavu's neutral look: dark grays in the dark themes and light ones in the light theme, with a near white or near
- * black accent, so the colors come from the themes and wallpapers of the workspaces. Private browsing keeps Firefox's
- * purple. The same colors are in `dejavu_colors.xml` for the screens made of views; each gray is named after its
- * lightness, from 0 for black to 100.
+ * black accent, so the colors come from the themes and wallpapers of the workspaces, or with the accent picked in
+ * Customize, see [DejavuAccent]. Private browsing keeps Firefox's purple. The same colors are in `dejavu_colors.xml`
+ * for the screens made of views; each gray is named after its lightness, from 0 for black to 100.
  */
 object DejavuColors {
     private val Gray6 = Color(0xFF121212)
@@ -61,18 +63,57 @@ object DejavuColors {
     private val Black = Color(0xFF000000)
 
     /** Dejavu's Material colors for [theme], or `null` when Firefox's are kept. */
-    fun colorScheme(theme: Theme): ColorScheme? = when (theme) {
-        Theme.Light -> light
-        Theme.Dark -> dark
-        Theme.Oled -> oled
-        Theme.Private -> null
+    fun colorScheme(theme: Theme): ColorScheme? {
+        val neutral = when (theme) {
+            Theme.Light -> light
+            Theme.Dark -> dark
+            Theme.Oled -> oled
+            Theme.Private -> return null
+        }
+        val tones = DejavuAccent.tones ?: return neutral
+        return accented(tones).schemes.getOrPut(theme) { neutral.withAccent(tones.of(theme), tones.dark.primary) }
     }
 
     /** Dejavu's gradients for [theme], such as the page loading bar, or `null` when Firefox's are kept. */
-    fun gradients(theme: Theme): AcornGradientScheme? = when (theme) {
-        Theme.Light -> lightGradients
-        Theme.Dark, Theme.Oled -> darkGradients
-        Theme.Private -> null
+    fun gradients(theme: Theme): AcornGradientScheme? {
+        val neutral = when (theme) {
+            Theme.Light -> lightGradients
+            Theme.Dark, Theme.Oled -> darkGradients
+            Theme.Private -> return null
+        }
+        val tones = DejavuAccent.tones ?: return neutral
+        return accented(tones).gradients.getOrPut(theme) {
+            val primary = tones.of(theme).primary
+            val end = lerp(primary, if (theme == Theme.Light) Black else White, GRADIENT_SHADE)
+            accentGradient(primary, end).let { neutral.copy(accent = it, tabOutline = it) }
+        }
+    }
+
+    // The schemes made for the accent picked last, by theme, so a theme recomposing takes the same ones again.
+    private class Accented(val tones: AccentTones) {
+        val schemes = mutableMapOf<Theme, ColorScheme>()
+        val gradients = mutableMapOf<Theme, AcornGradientScheme>()
+    }
+
+    private var accentedLast: Accented? = null
+
+    private fun accented(tones: AccentTones): Accented =
+        accentedLast?.takeIf { it.tones == tones } ?: Accented(tones).also { accentedLast = it }
+
+    private fun AccentTones.of(theme: Theme) = if (theme == Theme.Light) light else dark
+
+    // The accent takes the place of the near white or near black: what stands out, switches, which Firefox draws in
+    // the tertiary color, and the buttons of snackbars, which are dark in every theme.
+    private fun ColorScheme.withAccent(tone: AccentTone, inverse: Color): ColorScheme {
+        val onAccent = if (tone.primary.luminance() > ON_ACCENT_LUMINANCE) Gray10 else White
+        return copy(
+            primary = tone.primary,
+            onPrimary = onAccent,
+            primaryContainer = tone.container,
+            inversePrimary = inverse,
+            tertiary = tone.primary,
+            onTertiary = onAccent,
+        )
     }
 
     /** Dejavu's extra design tokens for [theme], or `null` when Firefox's are kept. */
@@ -236,6 +277,8 @@ object DejavuColors {
     )
 
     private const val AUTOFILL_ALPHA = 0.55f
+    private const val ON_ACCENT_LUMINANCE = 0.4f
+    private const val GRADIENT_SHADE = 0.25f
     private const val GRADIENT_ANGLE = 96f
     private const val GRADIENT_END = 0.71f
 }

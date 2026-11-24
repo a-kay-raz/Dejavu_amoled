@@ -83,10 +83,12 @@ android {
 
         manifestPlaceholders = [
                 "deepLinkScheme": deepLinkSchemeValue,
-                // Dejavu: the app's name, icon and launcher shortcuts, which Dejavu Test replaces.
+                // Dejavu: the app's name, icons and launcher shortcuts, which Dejavu Test replaces.
                 "dejavuAppLabel": "@string/app_name",
                 "dejavuAppIcon": "@mipmap/dejavu_launcher",
                 "dejavuAppRoundIcon": "@mipmap/dejavu_launcher_round",
+                "dejavuBlueIcon": "@mipmap/dejavu_launcher_blue",
+                "dejavuClassicIcon": "@mipmap/dejavu_launcher_classic",
                 "dejavuShortcuts": "@xml/shortcuts",
         ]
 
@@ -174,6 +176,8 @@ android {
                         "dejavuAppLabel": "Dejavu Test",
                         "dejavuAppIcon": "@mipmap/dejavu_test_launcher",
                         "dejavuAppRoundIcon": "@mipmap/dejavu_test_launcher_round",
+                        "dejavuBlueIcon": "@mipmap/dejavu_test_launcher_blue",
+                        "dejavuClassicIcon": "@mipmap/dejavu_test_launcher_classic",
                         "dejavuShortcuts": "@xml/dejavu_test_shortcuts",
                 ])
             }

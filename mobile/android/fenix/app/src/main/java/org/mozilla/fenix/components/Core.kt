@@ -126,6 +126,8 @@ import org.mozilla.fenix.dejavu.browser.PdfScripts
 import org.mozilla.fenix.dejavu.browser.SavePage
 import org.mozilla.fenix.dejavu.browser.SearchTelemetryExtensions
 import org.mozilla.fenix.dejavu.dejavuBrowserMiddleware
+import org.mozilla.fenix.dejavu.history.NoHistoryClosedTabsMiddleware
+import org.mozilla.fenix.dejavu.history.WorkspaceHistory
 import org.mozilla.fenix.downloads.DownloadService
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.isLargeWindow
@@ -356,6 +358,8 @@ class Core(
         val middlewareList =
             listOf(
                 PrivateNewTabMiddleware(),
+                // Dejavu: before the recently closed tabs are saved, the workspaces that save no history leave theirs.
+                NoHistoryClosedTabsMiddleware(),
                 ProfileMarkerMiddleware(markerName = "BrowserStore", profiler = engine.profiler),
                 LogMiddleware(tag = "BrowserStore", shouldIncludeDetailedData = { Config.channel.isDebug }),
                 LastAccessMiddleware(),
@@ -487,7 +491,8 @@ class Core(
 
     /** The [HistoryMetadataService] is used to record history metadata. */
     val historyMetadataService: HistoryMetadataService by lazyMonitored {
-        DefaultHistoryMetadataService(storage = historyStorage)
+        // Dejavu: nothing is recorded for the workspaces that save no history.
+        WorkspaceHistory.metadataService(DefaultHistoryMetadataService(storage = historyStorage))
     }
 
     /** The [ProtectionsStorage] is used to store tracker blocking statistics. */

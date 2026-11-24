@@ -91,9 +91,19 @@ open class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPadde
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Dejavu: the menu's settings hold the new Clear data buttons, which an orange dot leads to.
+        // Dejavu: orange dots on what is new here, until the user leaves, and on the menu's settings, which hold the
+        // new Full screen and Screenshot buttons.
         findPreference<Preference>(getString(R.string.pref_key_dejavu_more_menu))?.let {
-            NewThings.follow(it, NewThing.CLEAR_DATA_ENTRIES, viewLifecycleOwner)
+            NewThings.follow(it, NewThing.MENU_BUTTONS, viewLifecycleOwner)
+        }
+        findPreference<Preference>(getString(R.string.pref_key_dejavu_animations))?.parent?.let {
+            NewThings.mark(it, NewThing.ANIMATIONS)
+        }
+        findPreference<Preference>(getString(R.string.pref_key_dejavu_icon_style))?.parent?.let {
+            NewThings.mark(it, NewThing.ICON_STYLE)
+        }
+        findPreference<Preference>(getString(R.string.pref_key_dejavu_app_icon))?.parent?.let {
+            NewThings.mark(it, NewThing.APP_ICON)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
@@ -130,6 +140,16 @@ open class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPadde
         }
     }
 
+    override fun onPause() {
+        super.onPause()
+        // Dejavu: what is new on this screen was shown once it is left.
+        if (!showsBars) {
+            listOf(NewThing.APP_ICON, NewThing.ACCENT_COLOR, NewThing.ICON_STYLE, NewThing.ANIMATIONS).forEach {
+                NewThings.seen(requireContext(), it)
+            }
+        }
+    }
+
     private fun setupPreferences(status: DynamicFeaturesStatus) {
         dynamicFeaturesStatus = status
 
@@ -140,6 +160,7 @@ open class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPadde
             bindLightTheme()
             bindAutoBatteryTheme()
             setupRadioGroups()
+            setupAnimationSwitches()
             setupMoreMenuEditButton()
             return
         }
@@ -336,6 +357,30 @@ open class CustomizationFragment : PreferenceFragmentCompat(), SystemInsetsPadde
             }
         }
         addToRadioGroup(*choices.toTypedArray())
+    }
+
+    /**
+     * Turns Dejavu's animations, and the genie of the home screen's buttons among them, on or off, which Dejavu's own
+     * settings keep.
+     */
+    private fun setupAnimationSwitches() {
+        val dejavuSettings = dejavuSettings()
+        val genie = requirePreference<SwitchPreferenceCompat>(R.string.pref_key_dejavu_genie_effect).apply {
+            isChecked = dejavuSettings.genieEffect.value
+            isEnabled = dejavuSettings.animations.value
+            onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+                dejavuSettings.setGenieEffect(newValue == true)
+                true
+            }
+        }
+        requirePreference<SwitchPreferenceCompat>(R.string.pref_key_dejavu_animations).apply {
+            isChecked = dejavuSettings.animations.value
+            onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+                dejavuSettings.setAnimations(newValue == true)
+                genie.isEnabled = newValue == true
+                true
+            }
+        }
     }
 
     /** Hides the Edit button at the bottom of Dejavu's "More" menu, which Dejavu's own settings keep. */

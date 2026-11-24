@@ -56,6 +56,7 @@ import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.menu.compose.MenuGroup
 import org.mozilla.fenix.components.menu.compose.MenuTextItem
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.theme.FirefoxTheme
 
 /**
@@ -181,7 +182,7 @@ private fun LocationsEmptyState() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Image(
-                painter = painterResource(R.drawable.dejavu_illustration_no_results),
+                painter = iconPainter(R.drawable.dejavu_illustration_no_results),
                 contentDescription = null, // Decorative only
             )
 

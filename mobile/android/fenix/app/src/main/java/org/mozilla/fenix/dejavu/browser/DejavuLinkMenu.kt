@@ -28,6 +28,7 @@ import org.mozilla.fenix.dejavu.containers.DejavuContainerStorage
 import org.mozilla.fenix.dejavu.containers.drawable
 import org.mozilla.fenix.dejavu.containers.splitTemporary
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
 import org.mozilla.fenix.dejavu.workspaces.SplitOrientation
 import org.mozilla.fenix.dejavu.workspaces.Workspace
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
@@ -217,7 +218,7 @@ private class LinkOpener(
 
     private fun icon(resId: Int): Drawable? = AppCompatResources.getDrawable(context, resId)?.mutate()
 
-    private fun tinted(resId: Int): Drawable? = icon(resId)?.apply {
+    private fun tinted(resId: Int): Drawable? = icon(DejavuIcons.of(resId))?.apply {
         setTint(MaterialColors.getColor(context, materialR.attr.colorOnSurfaceVariant, DEFAULT_ICON_TINT))
     }
 

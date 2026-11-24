@@ -1,0 +1,2 @@
+- Version 4.0.1 (2016220111)
+- [FIX] History search no longer shows the history list through its suggestions

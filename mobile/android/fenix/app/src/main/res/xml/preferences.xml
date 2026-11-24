@@ -112,12 +112,18 @@
         android:key="@string/pref_key_privacy_security_category"
         android:layout="@layout/preference_category_no_icon_style">
 
-        <!-- Dejavu: private tabs live in the private workspace, and links from other apps can open in private tabs. -->
+        <!-- Dejavu: the lock of the private tabs and screenshots of them. Opening links from other apps in private tabs is
+             chosen under Links from other apps. -->
         <androidx.preference.Preference
             android:key="@string/pref_key_private_browsing"
             app:iconSpaceReserved="false"
-            app:isPreferenceVisible="false"
             android:title="@string/preferences_private_browsing_options" />
+
+        <!-- Dejavu: when locked workspaces lock again once unlocked. -->
+        <androidx.preference.Preference
+            android:key="@string/pref_key_dejavu_workspace_lock"
+            app:iconSpaceReserved="false"
+            android:title="@string/dejavu_settings_workspace_lock" />
 
         <!-- Dejavu: every protection on one screen of Dejavu's own, in place of Firefox's tracking protection, HTTPS-Only
              and secure DNS screens and of Dejavu's switches that were here. Site settings open from it. -->

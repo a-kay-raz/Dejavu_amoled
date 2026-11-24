@@ -12,7 +12,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -20,6 +19,7 @@ import mozilla.components.browser.state.state.ContainerState
 import org.mozilla.fenix.R
 import org.mozilla.fenix.dejavu.ui.IconTaps
 import org.mozilla.fenix.dejavu.ui.TapIcon
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.ui.rememberIconTaps
 
 /** Icon of a container, taken from Firefox desktop. */
@@ -52,7 +52,7 @@ fun ContainerIcon(
     size: Dp = 20.dp,
 ) {
     Icon(
-        painter = painterResource(record.icon.drawable),
+        painter = iconPainter(record.icon.drawable),
         contentDescription = record.name,
         tint = record.color.color,
         modifier = modifier.size(size),
@@ -70,7 +70,7 @@ fun NoContainerIcon(
     @StringRes description: Int = R.string.dejavu_workspace_no_container,
 ) {
     Icon(
-        painter = painterResource(R.drawable.dejavu_ic_no_container_24),
+        painter = iconPainter(R.drawable.dejavu_ic_no_container_24),
         contentDescription = stringResource(description),
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = modifier.size(size),

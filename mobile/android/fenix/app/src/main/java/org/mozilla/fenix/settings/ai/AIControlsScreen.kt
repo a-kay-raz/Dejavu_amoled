@@ -57,6 +57,7 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.compose.list.IconListItem
 import org.mozilla.fenix.compose.list.SwitchListItem
 import org.mozilla.fenix.compose.settings.SettingsSectionHeader
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.settings.settingssearch.PreferenceFileInformation
 import org.mozilla.fenix.settings.settingssearch.SettingsSearchItem
@@ -268,7 +269,7 @@ private fun AIChoiceBanner(onLearnMoreClick: () -> Unit) {
                 ),
         illustration = {
             Image(
-                painter = painterResource(R.drawable.dejavu_illustration_sparkle),
+                painter = iconPainter(R.drawable.dejavu_illustration_sparkle),
                 contentDescription = null,
                 modifier = Modifier.width(62.dp).height(63.dp),
             )

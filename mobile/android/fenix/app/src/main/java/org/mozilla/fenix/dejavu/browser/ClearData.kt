@@ -21,8 +21,6 @@ import mozilla.components.browser.state.state.TabSessionState
 import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.appstate.AppAction
-import org.mozilla.fenix.dejavu.discover.NewThing
-import org.mozilla.fenix.dejavu.discover.NewThings
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
 import org.mozilla.fenix.dejavu.settings.slideTo
 import org.mozilla.fenix.ext.components
@@ -156,7 +154,6 @@ internal object ClearData {
         quit: Boolean,
         showChoices: () -> Unit,
     ) {
-        NewThings.seen(context, NewThing.CLEAR_DATA_ENTRIES)
         if (chosen(context).isEmpty()) {
             Toast.makeText(context, R.string.dejavu_clear_data_choose, Toast.LENGTH_SHORT).show()
             showChoices()

@@ -37,6 +37,7 @@ import mozilla.components.lib.state.ext.observeAsComposableState
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.BuildConfig
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.theme.FirefoxTheme
 
 @Composable
@@ -132,7 +133,7 @@ private fun CircularLoadButton() {
 @Composable
 private fun ScreenImg() {
     Image(
-        painter = painterResource(id = R.drawable.dejavu_illustration_problem),
+        painter = iconPainter(R.drawable.dejavu_illustration_problem),
         contentDescription = null,
     )
 }

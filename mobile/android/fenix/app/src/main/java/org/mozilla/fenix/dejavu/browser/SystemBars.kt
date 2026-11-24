@@ -24,7 +24,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import mozilla.components.concept.engine.EngineView
 
@@ -39,7 +39,7 @@ private var hiddenOverPages = false
  * again, while a video shown full screen hides them its own way. Dejavu's bars keep clear of the system bars only while
  * they show, see [statusBarHeight], so no room stays empty for a hidden bar.
  */
-fun Fragment.hideSystemBarsOverPages(engineView: EngineView, hidden: StateFlow<Boolean>) {
+fun Fragment.hideSystemBarsOverPages(engineView: EngineView, hidden: Flow<Boolean>) {
     val window = requireActivity().window
     var barsShown = false
     val hideAgain = OnApplyWindowInsetsListener { _, insets ->

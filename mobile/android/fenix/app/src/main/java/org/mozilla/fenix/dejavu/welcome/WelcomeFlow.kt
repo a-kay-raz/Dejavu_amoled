@@ -62,7 +62,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -80,8 +79,10 @@ import org.mozilla.fenix.dejavu.home.rememberGrainBrush
 import org.mozilla.fenix.dejavu.home.veilOf
 import org.mozilla.fenix.dejavu.ui.DejavuButtonStyle
 import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
 import org.mozilla.fenix.dejavu.ui.glass
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.ui.popupThemeOf
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
@@ -348,7 +349,7 @@ private fun PageProgress(count: Int, current: Int, modifier: Modifier = Modifier
 internal fun Modifier.rise(order: Int): Modifier {
     val shown = remember { Animatable(0f) }
     LaunchedEffect(Unit) {
-        delay(order * RISE_STEP_MS)
+        if (DejavuMotion.animates) delay(order * RISE_STEP_MS)
         shown.animateTo(1f, tween(RISE_MS, easing = FastOutSlowInEasing))
     }
     return graphicsLayer {
@@ -370,7 +371,7 @@ internal fun Modifier.toPageEdges(): Modifier = layout { measurable, constraints
 @Composable
 internal fun PageHeader(@DrawableRes icon: Int, @StringRes title: Int, @StringRes text: Int) {
     Icon(
-        painter = painterResource(icon),
+        painter = iconPainter(icon),
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurface,
         modifier = Modifier.size(36.dp).rise(0),

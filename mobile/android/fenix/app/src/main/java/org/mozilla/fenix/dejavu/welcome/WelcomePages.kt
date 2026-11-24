@@ -61,7 +61,6 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextAlign
@@ -93,6 +92,7 @@ import org.mozilla.fenix.dejavu.ui.DejavuButtonStyle
 import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
 import org.mozilla.fenix.dejavu.ui.WordFittedText
 import org.mozilla.fenix.dejavu.ui.glass
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpapers
 import org.mozilla.fenix.ext.getPreferenceKey
@@ -147,7 +147,7 @@ private fun IntroPage() {
 private fun EchoLogo() {
     val progress = remember { Animatable(0f) }
     LaunchedEffect(Unit) { progress.animateTo(1f, tween(ECHO_MS, easing = FastOutSlowInEasing)) }
-    val logo = painterResource(R.drawable.dejavu_logo)
+    val logo = iconPainter(R.drawable.dejavu_logo)
     Box(contentAlignment = Alignment.Center, modifier = Modifier.size(LOGO_SIZE * ECHO_ROOM)) {
         ECHOES.forEach { (scale, strength) ->
             Image(
@@ -478,7 +478,7 @@ private fun AdsPage() {
             modifier = Modifier.rise(FIRST_CHOICE + index),
         ) {
             Icon(
-                painter = painterResource(
+                painter = iconPainter(
                     if (block) iconsR.drawable.mozac_ic_shield_checkmark_24 else iconsR.drawable.mozac_ic_shield_24,
                 ),
                 contentDescription = null,
@@ -519,7 +519,7 @@ private fun DefaultBrowserPage() {
         if (isDefault) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(iconsR.drawable.mozac_ic_checkmark_24),
+                    painter = iconPainter(iconsR.drawable.mozac_ic_checkmark_24),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.primary,
                 )

@@ -11,6 +11,7 @@ import android.os.StrictMode
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ReplacementSpan
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -47,12 +48,48 @@ import org.mozilla.fenix.ext.components
  *
  * @property key Stable identifier used to remember that the user looked at it.
  */
-internal enum class NewThing(val key: String) {
-    /** The Clear data and Clear data and quit buttons for the menu and the bars, found in the menu's settings. */
-    CLEAR_DATA_ENTRIES("clear_data_entries"),
+internal enum class NewThing(val key: String, val inSettings: Boolean = true) {
+    /** The app icons, in Customize. */
+    APP_ICON("app_icon"),
 
-    /** What Clear data deletes, chosen in the settings of deleting browsing data on quit. */
-    CLEAR_DATA_CHOICES("clear_data_choices"),
+    /** The accent color, in Customize. */
+    ACCENT_COLOR("accent_color"),
+
+    /** The styles of icons, in Customize. */
+    ICON_STYLE("icon_style"),
+
+    /** The switches that turn the animations off, in Customize. */
+    ANIMATIONS("animations"),
+
+    /** The Full screen button for the menu and the bars, found in the menu's settings. */
+    FULL_SCREEN("full_screen"),
+
+    /** The full page screenshot button for the menu and the bars, found in the menu's settings. */
+    SCREENSHOT("screenshot"),
+
+    /** The essentials hidden on this phone, under Tabs, workspaces and containers. */
+    ESSENTIALS("essentials"),
+
+    /** When unlocked workspaces lock again, under Privacy and security. */
+    WORKSPACE_LOCK("workspace_lock"),
+
+    /** The private browsing settings, back under Privacy and security: the lock of private tabs, and screenshots. */
+    PRIVATE_BROWSING("private_browsing"),
+
+    /**
+     * Lock this workspace and Don't save history, in the dialog that edits a workspace, the private one too, found
+     * through the menu of each workspace on the home screen rather than in the settings.
+     */
+    WORKSPACE_PRIVACY("workspace_privacy", inSettings = false),
+    ;
+
+    companion object {
+        /** The new things found in Customize. */
+        val CUSTOMIZE = setOf(APP_ICON, ACCENT_COLOR, ICON_STYLE, ANIMATIONS, FULL_SCREEN, SCREENSHOT)
+
+        /** The new buttons for the menu and the bars, which wait in the menu's settings. */
+        val MENU_BUTTONS = setOf(FULL_SCREEN, SCREENSHOT)
+    }
 }
 
 /** Which [NewThing]s the user has not looked at yet, see [NewThing]. */
@@ -66,14 +103,20 @@ internal object NewThings {
     /** Shows the orange dot after the title of [preference] while [thing] is new, the way to it or the thing itself. */
     fun mark(preference: Preference, thing: NewThing) = preference.showNewDot(isNew(preference.context, thing))
 
+    /** Shows the orange dot after the title of [preference] while any of [things] is new, the way to them. */
+    fun markAny(preference: Preference, things: Set<NewThing>) =
+        preference.showNewDot(things.any { isNew(preference.context, it) })
+
     /**
-     * Shows the orange dot after the title of [preference] while [thing] is new, and takes it away as soon as the user
-     * looked at it, also on a screen further on that closes only after [owner] showed again.
+     * Shows the orange dot after the title of [preference] while any of [things] is new, and takes it away as soon as
+     * the user looked at them, also on a screen further on that closes only after [owner] showed again.
      */
-    fun follow(preference: Preference, thing: NewThing, owner: LifecycleOwner) {
+    fun follow(preference: Preference, things: Set<NewThing>, owner: LifecycleOwner) {
         owner.lifecycleScope.launch {
             owner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                settings(preference.context).seenNewThings.collect { preference.showNewDot(thing.key !in it) }
+                settings(preference.context).seenNewThings.collect { seen ->
+                    preference.showNewDot(things.any { it.key !in seen })
+                }
             }
         }
     }
@@ -94,16 +137,20 @@ internal fun rememberUnseenNewThings(): Set<NewThing> {
 }
 
 /**
- * Whether this button of the menu or the bars has the orange dot, with the [unseen] new things not looked at: Clear
- * data while it is new, and Settings, which [leadsToSettings] where tapping it opens the settings, while anything there
- * is.
+ * Whether this button of the menu or the bars has the orange dot, with the [unseen] new things not looked at: Full
+ * screen and Screenshot while they are new, and Settings, which [leadsToSettings] where tapping it opens the settings,
+ * while anything there is.
  */
 internal fun MoreMenuEntry.isNewAmong(unseen: Set<NewThing>, leadsToSettings: Boolean = true): Boolean =
     when ((this as? MoreMenuEntry.BuiltIn)?.item) {
-        MoreMenuItem.CLEAR_DATA, MoreMenuItem.CLEAR_DATA_AND_QUIT -> NewThing.CLEAR_DATA_ENTRIES in unseen
-        MoreMenuItem.SETTINGS -> leadsToSettings && unseen.isNotEmpty()
+        MoreMenuItem.FULL_SCREEN -> NewThing.FULL_SCREEN in unseen
+        MoreMenuItem.SCREENSHOT -> NewThing.SCREENSHOT in unseen
+        MoreMenuItem.SETTINGS -> leadsToSettings && unseen.inSettings()
         else -> false
     }
+
+/** Whether any of these new things is found in the settings. */
+internal fun Set<NewThing>.inSettings(): Boolean = any { it.inSettings }
 
 /**
  * Puts the orange dot on the top end corner of this, [inset] from its edges, while [show], which screen readers read
@@ -123,6 +170,11 @@ internal fun Modifier.newDot(show: Boolean, inset: Dp = DOT_INSET): Modifier {
             drawCircle(color, DOT_RADIUS.toPx(), center)
         }
 }
+
+/** Puts the orange dot after this text, in room it keeps for it at its end, while [show]. */
+@Composable
+internal fun Modifier.newDotAfterText(show: Boolean): Modifier =
+    if (show) newDot(true, inset = TEXT_DOT_INSET).padding(end = TEXT_DOT_ROOM) else this
 
 /**
  * Shows the orange dot after this preference's title, or takes it away. Screen readers read the dot as "New", which
@@ -184,3 +236,5 @@ private val DOT_RADIUS = 4.dp
 private val DOT_HALO = 1.5.dp
 private val DOT_INSET = 6.dp
 private val DOT_GAP = 8.dp
+private val TEXT_DOT_INSET = 4.dp
+private val TEXT_DOT_ROOM = 14.dp

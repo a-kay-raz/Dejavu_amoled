@@ -52,7 +52,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -67,6 +66,7 @@ import kotlinx.coroutines.withContext
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
 import org.mozilla.fenix.dejavu.ui.DejavuPopup
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.WallpaperArt
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceWallpaper
@@ -236,7 +236,7 @@ private fun NoWallpaper(theme: WorkspaceTheme?) {
     Spacer(modifier = Modifier.fillMaxSize().drawBehind { drawWorkspaceTheme(theme, null, 0f, grain) })
     // The tile says what it is, so the sign is not read out as "No container".
     Icon(
-        painter = painterResource(R.drawable.dejavu_ic_no_container_24),
+        painter = iconPainter(R.drawable.dejavu_ic_no_container_24),
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.size(20.dp),
@@ -287,7 +287,7 @@ private fun PhotoTile(photo: WorkspaceWallpaper?) {
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(6.dp)) {
         Icon(
-            painter = painterResource(iconsR.drawable.mozac_ic_wallpaper_24),
+            painter = iconPainter(iconsR.drawable.mozac_ic_wallpaper_24),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
         )

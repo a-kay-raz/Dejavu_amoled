@@ -27,6 +27,7 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 
 private const val SWEEP_MS = 1_400
 
@@ -54,8 +55,8 @@ private val LightColors = listOf(
 /**
  * While a page is [loading], colors run through the letters this draws, in place of a loading bar: a band of Dejavu's
  * gold and the colors around it sweeps along, resting after a few seconds, and the letters fade back to their own color
- * once the page is in. With [range], only the letters between the two ends it gives, in pixels from the start, take
- * the colors.
+ * once the page is in. With animations off, the colors stand still while the page loads. With [range], only the
+ * letters between the two ends it gives, in pixels from the start, take the colors.
  */
 @Composable
 internal fun Modifier.loadingColors(
@@ -65,6 +66,10 @@ internal fun Modifier.loadingColors(
     val shown = remember { mutableFloatStateOf(if (loading) 1f else 0f) }
     val sweep = remember { mutableFloatStateOf(0f) }
     LaunchedEffect(loading) {
+        if (!DejavuMotion.animates) {
+            shown.floatValue = if (loading) 1f else 0f
+            return@LaunchedEffect
+        }
         val from = shown.floatValue
         if (!loading) {
             // The colors keep running while they fade, which takes less from a page that came in before they showed.

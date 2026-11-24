@@ -16,6 +16,16 @@
             android:key="@string/pref_key_app_icon" />
     </androidx.preference.PreferenceCategory>
 
+    <!-- Dejavu: the app's icon, see AppIconPreference. -->
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/preference_cat_style"
+        android:title="@string/dejavu_settings_app_icon"
+        app:iconSpaceReserved="false">
+        <org.mozilla.fenix.dejavu.settings.AppIconPreference
+            android:key="@string/pref_key_dejavu_app_icon"
+            android:persistent="false" />
+    </androidx.preference.PreferenceCategory>
+
     <androidx.preference.PreferenceCategory
         android:layout="@layout/preference_cat_style"
         android:title="@string/preferences_theme"
@@ -47,6 +57,40 @@
             android:key="@string/pref_key_follow_device_theme"
             android:title="@string/preference_follow_device_theme"
             app:isPreferenceVisible="@bool/API28" />
+
+        <!-- Dejavu: the accent color, see AccentColor. -->
+        <org.mozilla.fenix.dejavu.settings.AccentColorPreference
+            android:key="@string/pref_key_dejavu_accent_color"
+            android:persistent="false" />
+    </androidx.preference.PreferenceCategory>
+
+    <!-- Dejavu: the style of the icons, see IconStyle. -->
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/preference_cat_style"
+        android:title="@string/dejavu_settings_icons"
+        app:iconSpaceReserved="false">
+        <org.mozilla.fenix.dejavu.settings.IconStylePreference
+            android:key="@string/pref_key_dejavu_icon_style"
+            android:persistent="false" />
+    </androidx.preference.PreferenceCategory>
+
+    <!-- Dejavu: how much Dejavu's screens move, see DejavuMotion. -->
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/preference_cat_style"
+        android:title="@string/dejavu_settings_animations"
+        app:iconSpaceReserved="false">
+        <androidx.preference.SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            android:key="@string/pref_key_dejavu_animations"
+            android:persistent="false"
+            android:title="@string/dejavu_settings_all_animations"
+            android:summary="@string/dejavu_settings_all_animations_summary" />
+        <androidx.preference.SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            android:key="@string/pref_key_dejavu_genie_effect"
+            android:persistent="false"
+            android:title="@string/dejavu_settings_genie_effect"
+            android:summary="@string/dejavu_settings_genie_effect_summary" />
     </androidx.preference.PreferenceCategory>
 
     <!-- Dejavu: the tab actions and the menu are set up here, and the bars, the tab bar and the gestures, and the

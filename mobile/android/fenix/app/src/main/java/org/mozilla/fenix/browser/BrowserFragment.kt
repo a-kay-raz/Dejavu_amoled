@@ -21,6 +21,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -71,8 +72,10 @@ import org.mozilla.fenix.dejavu.browser.DejavuLinkMenu
 import org.mozilla.fenix.dejavu.browser.DejavuToolbar
 import org.mozilla.fenix.dejavu.browser.PagePictures
 import org.mozilla.fenix.dejavu.browser.PageTint
+import org.mozilla.fenix.dejavu.browser.TabZoom
 import org.mozilla.fenix.dejavu.browser.addStatusBarScrim
 import org.mozilla.fenix.dejavu.browser.hideSystemBarsOverPages
+import org.mozilla.fenix.dejavu.browser.installFullScreenView
 import org.mozilla.fenix.dejavu.browser.moreMenuSwipe
 import org.mozilla.fenix.dejavu.browser.openDejavuMenu
 import org.mozilla.fenix.dejavu.browser.padForNavigationBar
@@ -181,14 +184,26 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
         val window = requireActivity().window
         binding.browserWindow.padForSystemBarsAtSides(window, onBarsChanged = ::reinitializeEngineView)
         binding.browserLayout.addStatusBarScrim(above = binding.tabReloadCover, window = window)
-        // The status bar and the navigation bar hide over pages when the user chose so in Customize.
-        val systemBarsHidden =
-            components.strictMode.allowViolation(StrictMode::allowThreadDiskReads) {
-                DejavuSettings.get(context).systemBarsHidden
-            }
-        hideSystemBarsOverPages(binding.engineView, systemBarsHidden)
+        // The status bar and the navigation bar hide over pages when the user chose so in Customize, and in full screen
+        // view, which hides the bars the way an installed web app without them does, until its floating button shows
+        // them again.
+        val dejavuSettings =
+            components.strictMode.allowViolation(StrictMode::allowThreadDiskReads) { DejavuSettings.get(context) }
+        hideSystemBarsOverPages(
+            binding.engineView,
+            combine(dejavuSettings.systemBarsHidden, dejavuSettings.fullScreenView) { hidden, fullScreen ->
+                hidden || fullScreen
+            },
+        )
+        installFullScreenView(binding.browserWindow, dejavuSettings) { on ->
+            if (webAppToolbarShouldBeVisible == !on) return@installFullScreenView
+            webAppToolbarShouldBeVisible = !on
+            (view as? SwipeGestureLayout)?.isSwipeEnabled = !on
+            if (on) expandBrowserView() else collapseBrowserView()
+        }
         binding.readerViewControlsBar.padForNavigationBar()
         PagePictures.attach(binding.engineView)
+        TabZoom.browserComing(requireActivity())
         PageTint(
             window = window,
             engineView = binding.engineView,

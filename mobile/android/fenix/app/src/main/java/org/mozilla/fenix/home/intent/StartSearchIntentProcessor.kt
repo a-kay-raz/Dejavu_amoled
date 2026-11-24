@@ -13,6 +13,7 @@ import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.browser.browsingmode.BrowsingModeManager
 import org.mozilla.fenix.components.metrics.MetricsUtils
 import org.mozilla.fenix.components.usecases.FenixBrowserUseCases
+import org.mozilla.fenix.dejavu.NewTabContainerChoice
 import org.mozilla.fenix.ext.nav
 import org.mozilla.fenix.utils.Settings
 
@@ -60,6 +61,11 @@ class StartSearchIntentProcessor(
                 }
 
             out.removeExtra(HomeActivity.OPEN_TO_SEARCH)
+
+            // Dejavu: the home, where the search opens, is never private, so the shortcuts for private tabs ask for one.
+            if (event == STATIC_SHORTCUT_NEW_PRIVATE_TAB || event == PRIVATE_BROWSING_PINNED_SHORTCUT) {
+                NewTabContainerChoice.setPrivate()
+            }
 
             source?.let {
                 if (settings.enableHomepageAsNewTab) {

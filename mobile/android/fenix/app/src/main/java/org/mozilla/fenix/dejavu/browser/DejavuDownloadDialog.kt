@@ -25,7 +25,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
@@ -42,6 +41,7 @@ import org.mozilla.fenix.dejavu.ui.DejavuDialogCard
 import org.mozilla.fenix.dejavu.ui.DejavuPopup
 import org.mozilla.fenix.dejavu.ui.DejavuTextField
 import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.downloads.enableConfirmButton
 
 /**
@@ -135,7 +135,7 @@ private fun FolderRow(friendlyPath: String, onClick: () -> Unit) {
             .padding(horizontal = 12.dp, vertical = 14.dp),
     ) {
         Icon(
-            painter = painterResource(iconsR.drawable.mozac_ic_folder_24),
+            painter = iconPainter(iconsR.drawable.mozac_ic_folder_24),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.primary,
             modifier = Modifier.size(22.dp),
@@ -150,7 +150,7 @@ private fun FolderRow(friendlyPath: String, onClick: () -> Unit) {
             modifier = Modifier.weight(1f),
         )
         Icon(
-            painter = painterResource(iconsR.drawable.mozac_ic_chevron_right_24),
+            painter = iconPainter(iconsR.drawable.mozac_ic_chevron_right_24),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.size(20.dp),

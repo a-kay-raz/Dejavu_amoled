@@ -5,6 +5,8 @@
 package org.mozilla.fenix.dejavu.browser
 
 import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
 import android.graphics.Bitmap
 import android.graphics.Canvas as BitmapCanvas
 import android.graphics.RectF
@@ -83,6 +85,7 @@ import mozilla.components.concept.base.images.ImageLoadRequest
 import mozilla.components.lib.state.ext.observeAsComposableState
 import org.mozilla.fenix.R
 import org.mozilla.fenix.dejavu.menu.DejavuActionsBar
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.utils.Settings
@@ -97,6 +100,9 @@ private const val REVEAL_TIMEOUT_MS = 1_200L
 private const val HOME_TIMEOUT_MS = 1_500L
 private const val ROW_FRAMES = 2
 private const val SHRINK_SETTLE_NANOS = 150_000_000L
+
+// A home screen whose activity just started again takes longer to set itself up.
+private const val RESTARTED_SETTLE_NANOS = 500_000_000L
 private const val NANOS_PER_MS = 1_000_000L
 private const val FRAME_NANOS = 16_666_667L
 
@@ -104,6 +110,7 @@ private const val FRAME_NANOS = 16_666_667L
 private const val STALL_NANOS = 34_000_000L
 private const val DRAWN_POLL_MS = 40L
 private const val THUMBNAIL_TIMEOUT_MS = 150L
+private const val CARRY_TIMEOUT_MS = 3_000L
 private const val DIM_ALPHA = 0.3f
 
 // The share of a zoom in which the card appears over its row, or fades into it.
@@ -115,34 +122,85 @@ private val Emphasized = CubicBezierEasing(0.2f, 0f, 0f, 1f)
  * Dejavu's zoom between a tab's row on the home screen and its page. Opening a tab grows a picture of its page out of
  * its row until it fills the screen, while the browser's bars come in from the top and the bottom of the screen, then
  * the browser shows the page behind it. Going home shrinks a picture of the page back into the tab's row, while
- * pictures of the bars go back out the same way.
+ * pictures of the bars go back out the same way. A zoom goes on when the activity starts again under it, as opening a
+ * private tab and coming home from one do to switch between private and normal browsing.
  */
 internal object TabZoom {
     private class Placed(val owner: Any, val bounds: Rect)
 
     /** A zoom in progress, with the picture of the tab's page it grows or shrinks. */
     private sealed class Zoom(val tabId: String, val picture: PageShot?) {
-        class In(tabId: String, picture: PageShot?, val row: Rect, val open: () -> Unit) : Zoom(tabId, picture)
+        /** Whether the zoom changed the screen already, which the activity starting again keeps. */
+        abstract val changedScreen: Boolean
+
+        /** The zoom going on from where it was, in the activity that started again after it changed the screen. */
+        abstract fun goingOn(): Zoom
+
+        /** A tab opening from its [row], which [open] shows in the browser once it is [OPEN_AT] of the way. */
+        class In(
+            tabId: String,
+            picture: PageShot?,
+            val row: Rect,
+            private val open: () -> Unit,
+        ) : Zoom(tabId, picture) {
+            var opened = false
+                private set
+
+            override val changedScreen: Boolean
+                get() = opened
+
+            fun openTab() {
+                if (opened) return
+                opened = true
+                open()
+            }
+
+            override fun goingOn() = In(tabId, picture, row, open = {}).also { it.opened = true }
+        }
 
         /**
          * A page going home, and [bars], pictures of the browser's bars as it left them. [keepsPicture] says whether
-         * opening the tab again can start from the picture, which a split view's is not for.
+         * opening the tab again can start from the picture, which a split view's is not for, and [restarted] whether
+         * it goes on in an activity that started again.
          */
         class Out(
             tabId: String,
-            picture: PageShot,
+            private val shot: PageShot,
             val bars: List<BarShot>,
-            val leave: () -> Unit,
+            private val leave: () -> Unit,
             val afterLeaving: () -> Unit,
             val keepsPicture: Boolean,
-        ) : Zoom(tabId, picture) {
+            val restarted: Boolean = false,
+        ) : Zoom(tabId, shot) {
             val homeShown = CompletableDeferred<Unit>()
+            private var left = false
+
+            override val changedScreen: Boolean
+                get() = left
+
+            fun leaveScreen() {
+                if (left) return
+                left = true
+                leave()
+            }
+
+            override fun goingOn() =
+                Out(tabId, shot, bars, leave = {}, afterLeaving, keepsPicture, restarted = true).also { it.left = true }
         }
     }
 
     private val rows = HashMap<String, Placed>()
     private var zoom by mutableStateOf<Zoom?>(null)
     private var overlay: ComposeView? = null
+
+    // A zoom cut short as the activity started again, which the new activity's home screen or browser goes on with.
+    private var carried: Zoom? = null
+    private val handler by lazy { Handler(Looper.getMainLooper()) }
+    private val carryTimeout = Runnable {
+        val cut = carried ?: return@Runnable
+        carried = null
+        done(cut)
+    }
 
     // The page left last for the home screen, at half size, so opening that tab again starts from where it was left.
     private var lastPicture: PageShot? = null
@@ -225,6 +283,36 @@ internal object TabZoom {
         (zoom as? Zoom.Out)?.homeShown?.complete(Unit)
     }
 
+    /** The home screen of [activity] sets itself up: a page going home cut short goes on over it, see [carry]. */
+    fun homeComing(activity: Activity) = goOn<Zoom.Out>(activity)
+
+    /** The browser of [activity] sets itself up: a tab opening cut short goes on over it, see [carry]. */
+    fun browserComing(activity: Activity) = goOn<Zoom.In>(activity)
+
+    private inline fun <reified Z : Zoom> goOn(activity: Activity) {
+        val cut = carried as? Z ?: return
+        carried = null
+        handler.removeCallbacks(carryTimeout)
+        activity.findViewById<ViewGroup>(android.R.id.content)?.let { start(it, cut.goingOn()) } ?: done(cut)
+    }
+
+    /**
+     * Keeps [cut], cut short as the activity started again after it changed the screen, for the new activity to go on
+     * with from where it was: its first frames show the zoom where the old one left it. Without a screen to go on in
+     * soon, it is done.
+     */
+    private fun carry(cut: Zoom) {
+        finish(cut)
+        carried = cut
+        handler.removeCallbacks(carryTimeout)
+        handler.postDelayed(carryTimeout, CARRY_TIMEOUT_MS)
+    }
+
+    /** What is left to do once [cut] cannot go on: a page that went home is done leaving. */
+    private fun done(cut: Zoom) {
+        (cut as? Zoom.Out)?.afterLeaving?.invoke()
+    }
+
     private val isZooming: Boolean
         get() {
             // A zoom whose screen went away, like with the app's window, is over.
@@ -237,7 +325,20 @@ internal object TabZoom {
         next.picture?.let { PageTint.rememberColor(next.tabId, it.edgeColor.toArgb()) }
         zoom = next
         overlay?.let { (it.parent as? ViewGroup)?.removeView(it) }
-        overlay = ComposeView(content.context).apply { setContent { ZoomOverlay() } }.also {
+        overlay = ComposeView(content.context).apply {
+            setContent { ZoomOverlay() }
+            // The activity starting again takes its views away before the new one sets itself up, so the zoom is
+            // kept for it then.
+            addOnAttachStateChangeListener(
+                object : View.OnAttachStateChangeListener {
+                    override fun onViewAttachedToWindow(view: View) = Unit
+
+                    override fun onViewDetachedFromWindow(view: View) {
+                        if (zoom === next && next.changedScreen && view.context.isRestarting) carry(next)
+                    }
+                },
+            )
+        }.also {
             content.addView(it, ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT))
         }
     }
@@ -258,13 +359,14 @@ internal object TabZoom {
     @Composable
     private fun ZoomCard(current: Zoom) {
         // 0 with the card on the tab's row, 1 with the card filling the screen.
-        val progress = remember { Animatable(if (current is Zoom.In) 0f else 1f) }
+        val progress = remember { Animatable(if (current is Zoom.In && !current.opened) 0f else 1f) }
         // How much the card shows, as it uncovers the page in the browser or a home screen without the tab's row.
         val shown = remember { Animatable(1f) }
         var row by remember { mutableStateOf((current as? Zoom.In)?.row) }
         var origin by remember { mutableStateOf(Offset.Zero) }
         val placeholder = colorResource(R.color.fx_mobile_surface)
         val leftBars = (current as? Zoom.Out)?.bars.orEmpty()
+        val context = LocalContext.current
         LaunchedEffect(current) {
             // The zoom lives in TabZoom's static state and its lambdas hold the
             // browser fragment and activity, so it must be cleared even when
@@ -275,24 +377,30 @@ internal object TabZoom {
             try {
                 when (current) {
                     is Zoom.In -> {
-                        progress.grow(current.open)
+                        if (!current.opened) progress.grow(current::openTab)
                         withTimeoutOrNull(REVEAL_TIMEOUT_MS) { awaitPageDrawn() }
                         shown.animateTo(0f, tween(REVEAL_MS))
                     }
                     is Zoom.Out -> {
-                        current.leave()
-                        // The card covers the home screen while it sets itself up, then shrinks into the tab's row, placed
-                        // in the frames right after the home screen first drew.
-                        withTimeoutOrNull(HOME_TIMEOUT_MS) { current.homeShown.await() }
-                        repeat(ROW_FRAMES) { withFrameNanos { } }
-                        awaitSteadyFrames(maxNanos = SHRINK_SETTLE_NANOS)
-                        row = rows[current.tabId]?.bounds?.takeIf { it.isShown }
-                        if (row != null) {
-                            progress.animateTo(0f, tween(ZOOM_OUT_MS, easing = Emphasized))
-                        } else {
-                            shown.animateTo(0f, tween(REVEAL_MS))
+                        try {
+                            current.leaveScreen()
+                            // The card covers the home screen while it sets itself up, then shrinks into the tab's row,
+                            // placed in the frames right after the home screen first drew.
+                            withTimeoutOrNull(HOME_TIMEOUT_MS) { current.homeShown.await() }
+                            repeat(ROW_FRAMES) { withFrameNanos { } }
+                            val settle = if (current.restarted) RESTARTED_SETTLE_NANOS else SHRINK_SETTLE_NANOS
+                            awaitSteadyFrames(maxNanos = settle)
+                            row = rows[current.tabId]?.bounds?.takeIf { it.isShown }
+                            if (row != null) {
+                                progress.animateTo(0f, tween(ZOOM_OUT_MS, easing = Emphasized))
+                            } else {
+                                shown.animateTo(0f, tween(REVEAL_MS))
+                            }
+                        } finally {
+                            // Also when the zoom is cut short with its screen, else a private tab closed from its menu
+                            // could stay open, but not as the activity starts again: the new one goes on with the zoom.
+                            if (!context.isRestarting) current.afterLeaving()
                         }
-                        current.afterLeaving()
                         if (current.keepsPicture) current.picture?.let(::keepForReopening)
                     }
                 }
@@ -321,12 +429,16 @@ internal object TabZoom {
     /**
      * The bars the browser will show for the tab with [tabId], as their layout has them, coming in from the top and
      * the bottom of the screen: [arrived] says how far, from 0 out of sight to 1 where the browser shows them. They
-     * only show what is coming, so screen readers skip them. Browsers with other bars show none.
+     * only show what is coming, so screen readers skip them. Browsers with other bars show none, and so does full
+     * screen view.
      */
     @Composable
     private fun BrowserBars(tabId: String, arrived: () -> Float) {
-        val components = LocalContext.current.components
-        if (!remember { components.settings.showsOnlyDejavuBars }) return
+        val context = LocalContext.current
+        val components = context.components
+        val dejavuBars = remember { components.settings.showsOnlyDejavuBars }
+        val fullScreen = remember { context.isFullScreenView }
+        if (!dejavuBars || fullScreen) return
         val tab by components.core.store.observeAsComposableState { it.findTab(tabId) }
         val barsTab = tab ?: return
         val layout = currentBarsLayout()
@@ -400,13 +512,25 @@ private fun Modifier.comingIn(arrived: () -> Float, fromTop: Boolean) = layout {
 private val Rect.isShown: Boolean
     get() = width > 1f && height > 1f
 
+/** Whether the activity of this context starts again, as for a change of configuration or of browsing mode. */
+private val Context.isRestarting: Boolean
+    get() = generateSequence(this) { (it as? ContextWrapper)?.baseContext }
+        .filterIsInstance<Activity>()
+        .firstOrNull()
+        ?.isChangingConfigurations == true
+
 /**
  * Grows the card from the tab's row to the whole screen, as this goes from 0 to 1, and calls [open] once it is
  * [OPEN_AT] of the way: the browser starts setting itself up then, as the last frames of the growth hardly move the
  * card. Until then a frame coming after a stall moves the card on by one frame only, so the frames that first draw the
- * zoom and the browser's bars skip none of its start.
+ * zoom and the browser's bars skip none of its start. With animations off, the card fills the screen at once.
  */
 internal suspend fun Animatable<Float, AnimationVector1D>.grow(open: () -> Unit) {
+    if (!DejavuMotion.animates) {
+        snapTo(1f)
+        open()
+        return
+    }
     val duration = ZOOM_IN_MS * NANOS_PER_MS
     var played = 0L
     var opened = false
@@ -498,11 +622,15 @@ private fun joined(content: ViewGroup, shot: PageShot, other: Bitmap, place: Pix
 
 /**
  * The picture saved for the tab with [tabId] when its page loaded, placed where the browser shows the page: below the
- * status bar, and below the address bar when it is above pages.
+ * status bar, and below the address bar when it is above pages, or at the top of the screen in full screen view.
  */
 private fun savedPicture(content: ViewGroup, tabId: String, bitmap: Bitmap): PageShot {
     val bar = if (content.context.barsLayout.addressBarAtBottom) 0f else ADDRESS_BAR_HEIGHT.value
-    val pageTop = content.statusBarHeight + bar * content.resources.displayMetrics.density
+    val pageTop = if (content.context.isFullScreenView) {
+        0f
+    } else {
+        content.statusBarHeight + bar * content.resources.displayMetrics.density
+    }
     return PageShot(bitmap.asImageBitmap(), Offset(0f, pageTop), tabId, Color(bitmap.topEdgeColor()))
 }
 

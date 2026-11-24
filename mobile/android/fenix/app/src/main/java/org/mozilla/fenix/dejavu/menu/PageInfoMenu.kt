@@ -37,7 +37,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextOverflow
@@ -77,6 +76,7 @@ import org.mozilla.fenix.dejavu.containers.drawable
 import org.mozilla.fenix.dejavu.home.SiteIcon
 import org.mozilla.fenix.dejavu.home.WorkspaceMark
 import org.mozilla.fenix.dejavu.home.titleOf
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.Workspace
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
@@ -370,7 +370,7 @@ private fun CardButton(@DrawableRes icon: Int, label: String, onClick: () -> Uni
             .padding(start = 12.dp, end = 14.dp, top = 8.dp, bottom = 8.dp),
     ) {
         Icon(
-            painter = painterResource(icon),
+            painter = iconPainter(icon),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.size(18.dp),
@@ -451,7 +451,7 @@ private fun ContainerRow(container: PageContainer?, onClick: (() -> Unit)?) {
         leading = {
             if (container != null) {
                 Icon(
-                    painter = painterResource(container.icon.drawable),
+                    painter = iconPainter(container.icon.drawable),
                     contentDescription = null,
                     tint = container.color.color,
                     modifier = Modifier.size(ROW_ICON_SIZE),
@@ -479,7 +479,7 @@ private fun WorkspaceRow(workspace: Workspace?, container: ContainerRecord?, onC
                 WorkspaceMark(workspace, container)
             } else {
                 Icon(
-                    painter = painterResource(R.drawable.dejavu_ic_private_tab_24),
+                    painter = iconPainter(R.drawable.dejavu_ic_private_tab_24),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.size(ROW_ICON_SIZE),
@@ -503,7 +503,7 @@ private fun InfoRow(
     InfoRow(
         leading = {
             Icon(
-                painter = painterResource(icon),
+                painter = iconPainter(icon),
                 contentDescription = null,
                 tint = iconTint,
                 modifier = Modifier.size(ROW_ICON_SIZE),
@@ -558,7 +558,7 @@ private fun InfoRow(
         }
         if (showsMore) {
             Icon(
-                painter = painterResource(iconsR.drawable.mozac_ic_chevron_right_24),
+                painter = iconPainter(iconsR.drawable.mozac_ic_chevron_right_24),
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(20.dp),
@@ -583,7 +583,7 @@ private fun MarkLabels(marks: List<PageMark>) {
                     .padding(start = 10.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
             ) {
                 Icon(
-                    painter = painterResource(mark.icon),
+                    painter = iconPainter(mark.icon),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.size(16.dp),

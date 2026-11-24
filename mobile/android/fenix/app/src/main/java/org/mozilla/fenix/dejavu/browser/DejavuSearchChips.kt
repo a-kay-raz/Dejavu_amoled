@@ -47,7 +47,6 @@ import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextOverflow
@@ -72,6 +71,7 @@ import org.mozilla.fenix.dejavu.containers.TemporaryContainerIcon
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
 import org.mozilla.fenix.dejavu.ui.IconTaps
 import org.mozilla.fenix.dejavu.ui.TapIcon
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.ui.rememberIconTaps
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 import org.mozilla.fenix.search.ext.searchEngineShortcuts
@@ -255,7 +255,7 @@ fun DejavuClipboardChip(link: String?, onClick: () -> Unit, modifier: Modifier =
                 .padding(horizontal = 12.dp),
         ) {
             Icon(
-                painter = painterResource(R.drawable.dejavu_ic_clipboard_24),
+                painter = iconPainter(R.drawable.dejavu_ic_clipboard_24),
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(CHIP_ICON),

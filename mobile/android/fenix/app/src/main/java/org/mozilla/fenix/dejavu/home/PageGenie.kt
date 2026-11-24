@@ -41,6 +41,7 @@ import java.util.WeakHashMap
 import kotlin.math.roundToInt
 import org.mozilla.fenix.R
 import org.mozilla.fenix.dejavu.settings.PageBackdrop
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 
 private const val OPEN_MS = 520L
 private const val CLOSE_MS = 480L
@@ -101,15 +102,13 @@ internal object PageGenie {
 
     /**
      * Opens the page of [button] with [navigate], pouring it out of the button. Without the button on screen, or with
-     * animations turned off, it just opens.
+     * animations or the genie turned off, it just opens.
      */
     fun open(context: Context, button: Button, navigate: () -> Unit) {
         val activity = context.activity as? FragmentActivity
         val window = activity?.window?.decorView as? ViewGroup
         val host = activity?.supportFragmentManager?.findFragmentById(R.id.container) as? NavHostFragment
-        if (window == null || host == null || boundsOf(button) == null || isBusy ||
-            !ValueAnimator.areAnimatorsEnabled()
-        ) {
+        if (window == null || host == null || boundsOf(button) == null || isBusy || !DejavuMotion.genie) {
             navigate()
             return
         }
@@ -176,7 +175,7 @@ internal object PageGenie {
         opened = null
         val view = fragment.view?.takeIf { it.isAttachedToWindow && it.isShown && it.width > 0 && it.height > 0 }
         val window = view?.rootView as? ViewGroup ?: return
-        if (!ValueAnimator.areAnimatorsEnabled()) return
+        if (!DejavuMotion.genie) return
         val genieView = GenieView(window.context, page.button, opening = false)
         // The whole window, with the bars some pages show around them, like the settings' title.
         val picture = picture(window, genieView.surface)

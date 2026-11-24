@@ -41,6 +41,7 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.components.menu.compose.MenuGroup
 import org.mozilla.fenix.components.menu.compose.MenuItem
 import org.mozilla.fenix.components.share.store.ShareUiState
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.share.listadapters.SyncShareOption
 import org.mozilla.fenix.theme.FirefoxTheme
 
@@ -213,7 +214,7 @@ private fun NoDevicesAvailableScreen(onLearnMoreClicked: () -> Unit) {
         modifier = Modifier.padding(bottom = FirefoxTheme.layout.space.static400),
     ) {
         Image(
-            painter = painterResource(id = R.drawable.dejavu_illustration_devices),
+            painter = iconPainter(R.drawable.dejavu_illustration_devices),
             contentDescription = null,
             modifier = Modifier.align(Alignment.CenterHorizontally),
         )
@@ -263,7 +264,7 @@ private fun ReconnectToSyncScreen(
         verticalArrangement = Arrangement.spacedBy(20.dp),
     ) {
         Image(
-            painter = painterResource(id = R.drawable.dejavu_illustration_devices),
+            painter = iconPainter(R.drawable.dejavu_illustration_devices),
             contentDescription = null,
             modifier = Modifier.align(Alignment.CenterHorizontally),
         )
@@ -306,7 +307,7 @@ private fun NoInternetConnectionScreen(onRetryClicked: () -> Unit) {
         modifier = Modifier.fillMaxWidth().padding(bottom = FirefoxTheme.layout.space.static400),
     ) {
         Image(
-            painter = painterResource(id = R.drawable.dejavu_illustration_offline),
+            painter = iconPainter(R.drawable.dejavu_illustration_offline),
             contentDescription = null,
             modifier = Modifier.align(Alignment.CenterHorizontally),
         )

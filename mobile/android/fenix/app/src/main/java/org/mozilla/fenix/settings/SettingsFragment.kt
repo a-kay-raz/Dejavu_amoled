@@ -80,7 +80,9 @@ import org.mozilla.fenix.dejavu.discover.NewThing
 import org.mozilla.fenix.dejavu.discover.NewThings
 import org.mozilla.fenix.dejavu.discover.Tips
 import org.mozilla.fenix.dejavu.features.DejavuFeatureTourFragment
+import org.mozilla.fenix.dejavu.settings.dejavuSettings
 import org.mozilla.fenix.dejavu.settings.slideTo
+import org.mozilla.fenix.dejavu.settings.workspaceLockLabel
 import org.mozilla.fenix.e2e.SystemInsetsPaddedFragment
 import org.mozilla.fenix.ext.application
 import org.mozilla.fenix.ext.components
@@ -343,9 +345,14 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
             } else {
                 getString(R.string.delete_browsing_data_quit_off)
             }
+        // Dejavu: when unlocked workspaces lock again.
+        requirePreference<Preference>(R.string.pref_key_dejavu_workspace_lock).summary =
+            workspaceLockLabel(requireContext(), dejavuSettings().workspaceLockTime.value)
         // Dejavu: orange dots lead to what the new version brought, see NewThings.
-        NewThings.mark(deleteBrowsingDataPreference, NewThing.CLEAR_DATA_CHOICES)
-        NewThings.mark(requirePreference<Preference>(R.string.pref_key_customize), NewThing.CLEAR_DATA_ENTRIES)
+        NewThings.markAny(requirePreference<Preference>(R.string.pref_key_customize), NewThing.CUSTOMIZE)
+        NewThings.mark(requirePreference<Preference>(R.string.pref_key_dejavu_tabs_workspaces), NewThing.ESSENTIALS)
+        NewThings.mark(requirePreference<Preference>(R.string.pref_key_dejavu_workspace_lock), NewThing.WORKSPACE_LOCK)
+        NewThings.mark(requirePreference<Preference>(R.string.pref_key_private_browsing), NewThing.PRIVATE_BROWSING)
 
         setupPreferences(settings)
 
@@ -430,6 +437,10 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
 
                 resources.getString(R.string.pref_key_dejavu_tracking_protection) -> {
                     ActionOnlyNavDirections(R.id.dejavu_tracking_protection_graph)
+                }
+
+                resources.getString(R.string.pref_key_dejavu_workspace_lock) -> {
+                    ActionOnlyNavDirections(R.id.dejavu_workspace_lock_graph)
                 }
 
                 resources.getString(R.string.pref_key_customize) -> {

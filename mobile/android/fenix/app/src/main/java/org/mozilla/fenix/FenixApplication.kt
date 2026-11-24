@@ -124,6 +124,10 @@ import org.mozilla.fenix.components.startMetricsIfEnabled
 import org.mozilla.fenix.dejavu.DejavuDefaults
 import org.mozilla.fenix.dejavu.browser.UBlockOrigin
 import org.mozilla.fenix.dejavu.dejavuKeepsTab
+import org.mozilla.fenix.dejavu.settings.DejavuSettings
+import org.mozilla.fenix.dejavu.ui.DejavuAccent
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 import org.mozilla.fenix.experiments.maybeFetchExperiments
 import org.mozilla.fenix.ext.application
 import org.mozilla.fenix.ext.components
@@ -281,6 +285,12 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                 try {
                     DejavuDefaults.applyEveryStart(applicationContext)
                     DejavuDefaults.applyOnce(applicationContext)
+                    // Dejavu: the animations of every window follow the animations switch of Customize, and the
+                    // screens take the accent color and the style of icons picked there.
+                    val dejavuSettings = DejavuSettings.get(applicationContext)
+                    DejavuMotion.install(applicationContext, dejavuSettings, applicationScope)
+                    DejavuAccent.install(applicationContext, dejavuSettings, applicationScope)
+                    DejavuIcons.install(dejavuSettings, applicationScope)
                 } finally {
                     StrictMode.setThreadPolicy(policy)
                 }

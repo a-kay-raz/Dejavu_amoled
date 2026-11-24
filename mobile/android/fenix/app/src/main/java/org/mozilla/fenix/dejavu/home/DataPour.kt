@@ -28,13 +28,13 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
 import kotlin.math.PI
 import kotlin.math.min
 import kotlin.math.sin
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 private const val POUR_MS = 900
 
@@ -123,8 +123,8 @@ internal class DataPour {
 /** Draws the bits of [pour] over the home screen. */
 @Composable
 internal fun DataPourOverlay(pour: DataPour, modifier: Modifier = Modifier) {
-    val history = painterResource(R.drawable.dejavu_ic_history_24)
-    val downloads = painterResource(R.drawable.dejavu_ic_downloads_24)
+    val history = iconPainter(R.drawable.dejavu_ic_history_24)
+    val downloads = iconPainter(R.drawable.dejavu_ic_downloads_24)
     val tint = ColorFilter.tint(MaterialTheme.colorScheme.onSurface)
     Spacer(
         modifier = modifier

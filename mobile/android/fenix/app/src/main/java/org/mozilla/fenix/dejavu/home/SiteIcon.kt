@@ -16,13 +16,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import mozilla.components.browser.icons.Icon.Source
 import mozilla.components.browser.icons.compose.Placeholder
 import mozilla.components.browser.icons.compose.WithIcon
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.components.components
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 /**
  * The icon of the site at [url], round. Until the site's own icon is known, as for tabs synced from other devices
@@ -68,7 +68,7 @@ internal fun SiteIcon(
 @Composable
 private fun DefaultSiteIcon(size: Dp, modifier: Modifier) {
     Icon(
-        painter = painterResource(iconsR.drawable.mozac_ic_globe_24),
+        painter = iconPainter(iconsR.drawable.mozac_ic_globe_24),
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = modifier.size(size),

@@ -26,7 +26,9 @@ internal object IconMotions {
         R.drawable.dejavu_ic_temporary_container_24 to temporaryContainer,
     )
 
-    operator fun get(@DrawableRes icon: Int): IconMotion? = motions[icon]
+    /** The motion of [icon], while Dejavu's own icons are shown: those of the other [IconStyle]s stay still. */
+    operator fun get(@DrawableRes icon: Int): IconMotion? =
+        motions[icon]?.takeIf { DejavuIcons.style == IconStyle.DEJAVU }
 }
 
 private fun motion(durationMillis: Int, vararg parts: Pair<String, (Float) -> Pose>) =

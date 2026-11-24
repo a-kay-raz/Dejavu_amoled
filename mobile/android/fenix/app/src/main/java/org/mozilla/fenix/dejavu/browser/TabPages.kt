@@ -35,7 +35,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
@@ -66,6 +65,7 @@ import org.mozilla.fenix.dejavu.ui.DejavuDropdownMenu
 import org.mozilla.fenix.dejavu.ui.DejavuMenuItem
 import org.mozilla.fenix.dejavu.ui.DejavuMenuLabel
 import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 /**
  * A page of a tab's history, as the page counter of the address bar lists it, see [PageCounter].
@@ -267,7 +267,7 @@ private fun TabPagesMenu(tabId: String, expanded: Boolean, onDismiss: () -> Unit
                     trailingIcon = if (page.isShown) {
                         {
                             Icon(
-                                painter = painterResource(iconsR.drawable.mozac_ic_checkmark_24),
+                                painter = iconPainter(iconsR.drawable.mozac_ic_checkmark_24),
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(PAGE_ICON_SIZE),

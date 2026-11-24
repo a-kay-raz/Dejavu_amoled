@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- Exit full screen: four corners pointing in. Made by scripts/make-media-icons.py. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M2 8.5H5.5C7.16 8.5 8.5 7.16 8.5 5.5V2M22 15.5H18.5C16.84 15.5 15.5 16.84 15.5 18.5V22" />
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeAlpha="0.4"
+        android:pathData="M15.5 2V5.5C15.5 7.16 16.84 8.5 18.5 8.5H22M8.5 22V18.5C8.5 16.84 7.16 15.5 5.5 15.5H2" />
+</vector>

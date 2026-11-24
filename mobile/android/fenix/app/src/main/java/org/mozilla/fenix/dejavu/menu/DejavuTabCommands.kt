@@ -41,7 +41,7 @@ import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
 
 /** The entries of the "More" menu that only Dejavu has, carried out on [tab]. */
 internal class DejavuTabCommands(
-    context: Context,
+    private val context: Context,
     private val components: Components,
     private val repository: WorkspaceRepository,
     private val settings: DejavuSettings,
@@ -61,6 +61,7 @@ internal class DejavuTabCommands(
             MoreMenuItem.AMOLED_PAGES -> AmoledPages.toggle(appContext, tab)
             MoreMenuItem.SAVE_PAGE -> SavePage.save(appContext, tab)
             MoreMenuItem.SAVE_AS_PDF -> sessionUseCases.saveToPdf(tab.id)
+            MoreMenuItem.SCREENSHOT -> FullPageScreenshot.take(context, components, tab)
             MoreMenuItem.PRINT -> sessionUseCases.printContent(tab.id)
             MoreMenuItem.PIN_TAB ->
                 if (pin != null && !pin.essential) repository.unpin(setOf(pin.id)) else repository.pinTabs(listOf(tab.toPinSource()))
@@ -72,6 +73,7 @@ internal class DejavuTabCommands(
                 components.appStore.dispatch(if (tab.readerState.active) ReaderViewDismissed else ReaderViewStarted)
             MoreMenuItem.RESTORE_CLOSED_TAB ->
                 restoreClosedTab(appContext, components, repository, private = tab.content.private)
+            MoreMenuItem.FULL_SCREEN -> settings.setFullScreenView(!settings.fullScreenView.value)
             else -> return false
         }
         return true

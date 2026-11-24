@@ -23,6 +23,13 @@
     <androidx.preference.Preference
         app:iconSpaceReserved="false"
         app:widgetLayout="@layout/dejavu_preference_badge"
+        android:key="@string/pref_key_dejavu_essentials"
+        android:title="@string/dejavu_settings_essentials"
+        android:summary="@string/dejavu_settings_essentials_summary" />
+
+    <androidx.preference.Preference
+        app:iconSpaceReserved="false"
+        app:widgetLayout="@layout/dejavu_preference_badge"
         android:key="@string/pref_key_dejavu_containers"
         android:title="@string/dejavu_settings_containers"
         android:summary="@string/dejavu_settings_containers_entry_summary" />

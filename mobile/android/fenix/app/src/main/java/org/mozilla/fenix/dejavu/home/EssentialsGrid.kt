@@ -39,7 +39,6 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalViewConfiguration
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -52,7 +51,9 @@ import org.mozilla.fenix.dejavu.containers.color
 import org.mozilla.fenix.dejavu.discover.Tip
 import org.mozilla.fenix.dejavu.discover.TipGesture
 import org.mozilla.fenix.dejavu.discover.tipTarget
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.PinnedItem
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 
 private val TileHeight = 52.dp
 private val TileGap = 8.dp
@@ -238,6 +239,28 @@ internal fun essentialRows(count: Int, columns: Int): List<Int> {
     return List(rows) { row -> count / rows + if (row < count % rows) 1 else 0 }
 }
 
+/**
+ * The ones of [essentials] the home screen shows on this phone (issue #278): none while [shown] is off, else all but
+ * the [hidden] ones, by id.
+ */
+internal fun shownEssentials(essentials: List<PinnedItem>, shown: Boolean, hidden: Set<String>): List<PinnedItem> =
+    if (shown) essentials.filterNot { it.id in hidden } else emptyList()
+
+/**
+ * Where essential [pinId] goes among all the essentials of its [group], by id and in order, hidden ones too, once
+ * dropped at [index] among the [shown] ones: in front of the shown essential it was dropped in front of, or right after
+ * the last shown one. The place counts the essentials without [pinId], as [WorkspaceRepository.moveEssential] does.
+ */
+internal fun groupIndexOfShown(group: List<String>, shown: List<String>, pinId: String, index: Int): Int {
+    val others = group - pinId
+    val shownOthers = shown - pinId
+    return when {
+        shownOthers.isEmpty() -> group.indexOf(pinId).coerceIn(0, others.size)
+        index < shownOthers.size -> others.indexOf(shownOthers[index.coerceAtLeast(0)])
+        else -> others.indexOf(shownOthers.last()) + 1
+    }
+}
+
 /** This list cut into rows of [sizes] items, in order. */
 internal fun <T> List<T>.inRows(sizes: List<Int>): List<List<T>> {
     var start = 0
@@ -310,7 +333,7 @@ private fun EssentialTile(
                     .background(MaterialTheme.colorScheme.primary),
             ) {
                 Icon(
-                    painter = painterResource(iconsR.drawable.mozac_ic_checkmark_16),
+                    painter = iconPainter(iconsR.drawable.mozac_ic_checkmark_16),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onPrimary,
                     modifier = Modifier.size(12.dp),

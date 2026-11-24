@@ -1,6 +1,6 @@
 # Dejavu Privacy Policy
 
-Effective date: October 21, 2026
+Effective date: November 20, 2026
 
 Dejavu is a web browser for Android, built from Mozilla's open source Firefox code. It is an independent project,
 not made, endorsed or supported by Mozilla. This policy explains what happens to your data when you use it.
@@ -21,7 +21,8 @@ the page a closed pinned tab reopens on. Uninstalling Dejavu deletes all of it.
 ## What we collect
 
 Nothing. You do not need an account with us, Dejavu sends us no usage data or crash reports, and it does not use the
-advertising ID of your device.
+advertising ID of your device. If you choose to sign in with a Mozilla account, your email address goes to Mozilla,
+not to us, as described in [Mozilla account and sync](#mozilla-account-and-sync-optional).
 
 ## Every connection Dejavu makes
 
@@ -44,11 +45,10 @@ Dejavu connects only to the sites you open. It does not connect ahead to the sit
 type, to links from other apps before they open, or to links that pages mark to load ahead.
 
 Calls in websites, which use WebRTC, connect only through the site's relay servers, so neither the site nor the people
-you call learn your IP address or your addresses on your local network. If a call does not connect, you can turn on
+you call learn your IP address or your addresses on your local network. If a call does not connect, you can turn
 **Block direct call connections** off in **Settings**, under **Privacy and security**, then **Tracking protection**.
-The people you call and the sites that
-make calls can then see your IP address, and sites you let use your camera or microphone also your addresses on your
-local network.
+The people you call and the sites that make calls can then see your IP address, and sites you let use your camera or
+microphone can also see your addresses on your local network.
 
 ### Looking up website addresses (DNS over HTTPS)
 
@@ -107,7 +107,8 @@ page is translated on your device and is not sent anywhere.
 
 ### Mozilla account and sync (optional)
 
-If you sign in with a Mozilla account, Firefox Sync keeps your data the same on your devices. After you sign in, Dejavu
+If you sign in with a Mozilla account, Firefox Sync keeps your data the same on your devices. To sign you in, Dejavu
+sends your email address and password to Mozilla, and you can create a new account on the same page. After you sign in, Dejavu
 syncs everything your account syncs, like bookmarks, history, passwords, payment cards and open tabs, unless you turn
 it off under **Choose what to sync**. Dejavu also syncs your workspaces, containers, pinned tabs, essentials and
 folders, so they match Zen Browser and Dejavu on your other devices.
@@ -160,6 +161,22 @@ Dejavu's developers run the website dejavubrowser.com and the ByArchitect F-Droi
 not connect to them. The website loads nothing from other sites, apart from asking GitHub's API for the newest release,
 so its download button gets the newest APK. The F-Droid repository's server sees your IP address when the F-Droid app
 checks it for updates.
+
+## Deleting your account and data
+
+Dejavu's developers keep no account or data of yours, so there is nothing to delete on our side. The only account you
+can use in Dejavu is a Mozilla account, which Mozilla keeps. To delete it:
+
+1. In Dejavu, open **Settings** and tap your account at the top.
+2. Tap **Manage account**. Your Mozilla account settings open.
+3. At the bottom, tap **Delete account** and follow the steps.
+
+Mozilla then deletes your account, your email address and the synced data stored on its servers. What Mozilla keeps,
+and for how long, is described in the [Mozilla Accounts Privacy Notice](https://www.mozilla.org/privacy/mozilla-accounts/).
+You can also delete your account without Dejavu at <https://accounts.firefox.com/settings>.
+
+Deleting your Mozilla account does not delete what Dejavu stores on your device. To delete that, open **Settings**,
+then **Delete browsing data**, or uninstall Dejavu.
 
 ## Permissions
 

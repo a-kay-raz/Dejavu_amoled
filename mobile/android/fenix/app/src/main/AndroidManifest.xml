@@ -119,6 +119,40 @@
                 android:resource="${dejavuShortcuts}" />
         </activity-alias>
 
+        <!-- Dejavu: the blue and the classic icon, which Customize offers beside the yellow one of the App alias
+             above, see org.mozilla.fenix.dejavu.settings.DejavuAppIcon. -->
+        <activity-alias
+            android:name="${applicationId}.AppDejavuBlue"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="${dejavuBlueIcon}"
+            android:roundIcon="${dejavuBlueIcon}"
+            android:targetActivity="HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="${dejavuShortcuts}" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="${applicationId}.AppDejavuClassic"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="${dejavuClassicIcon}"
+            android:roundIcon="${dejavuClassicIcon}"
+            android:targetActivity="HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="${dejavuShortcuts}" />
+        </activity-alias>
+
         <!--
             Activity-alias entries used by the app icon selection feature.
             Only one is enabled at a time to switch the launcher icon dynamically.

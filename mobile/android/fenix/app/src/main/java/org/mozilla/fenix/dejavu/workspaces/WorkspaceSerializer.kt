@@ -31,6 +31,8 @@ internal object WorkspaceSerializer {
                 createdAt = item.optLong("createdAt", now),
                 updatedAt = item.optLong("updatedAt", now),
                 device = SyncedDevice.fromKey(item.optStringOrNull("device")),
+                locked = item.optBoolean("locked"),
+                savesHistory = item.optBoolean("savesHistory", true),
             )
         }.ifEmpty {
             listOf(
@@ -117,7 +119,11 @@ internal object WorkspaceSerializer {
                             .putOpt("theme", ws.theme?.toJson())
                             .put("createdAt", ws.createdAt)
                             .put("updatedAt", ws.updatedAt)
-                            .putOpt("device", ws.device?.key),
+                            .putOpt("device", ws.device?.key)
+                            .apply {
+                                if (ws.locked) put("locked", true)
+                                if (!ws.savesHistory) put("savesHistory", false)
+                            },
                     )
                 }
             },

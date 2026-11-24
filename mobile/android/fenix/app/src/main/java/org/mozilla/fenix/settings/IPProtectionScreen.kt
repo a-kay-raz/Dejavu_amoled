@@ -80,6 +80,7 @@ import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
 import org.mozilla.fenix.compose.list.TextListItem
 import org.mozilla.fenix.compose.settings.SettingsSectionHeader
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.theme.FirefoxTheme
 
 private val PROMO_ILLUSTRATION_SIZE = 60.dp
@@ -477,7 +478,7 @@ private fun VpnPromoCard(
         illustration = {
             Image(
                 painter =
-                    painterResource(
+                    iconPainter(
                         if (isActive) {
                             R.drawable.dejavu_illustration_shield
                         } else {

@@ -34,7 +34,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toDrawable
@@ -60,6 +59,8 @@ import org.mozilla.fenix.dejavu.browser.ClearData
 import org.mozilla.fenix.dejavu.browser.SplitSpace
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
 import org.mozilla.fenix.dejavu.settings.PageBackdrop
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.SplitOrientation
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
@@ -114,7 +115,7 @@ object DejavuMenu {
     /** The way a split view picked in the menu opened with [arguments] shows, if it said. */
     fun splitWay(arguments: Bundle?): SplitOrientation? = SplitOrientation.fromKey(arguments?.getString(ARG_SPLIT_WAY))
 
-    /** A dialog showing its content at the top of the screen, sliding down from the edge. */
+    /** A dialog showing its content at the top of the screen, sliding down from the edge while animations are on. */
     fun createTopSheetDialog(context: Context, onMenuKey: () -> Unit): Dialog =
         object : Dialog(context, R.style.DejavuTopSheetDialog) {
             override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
@@ -132,7 +133,9 @@ object DejavuMenu {
                 setBackgroundDrawable(android.graphics.Color.TRANSPARENT.toDrawable())
                 addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
                 setDimAmount(TOP_SHEET_DIM)
-                setWindowAnimations(R.style.DejavuTopSheetAnimation)
+                setWindowAnimations(
+                    if (DejavuMotion.animates) R.style.DejavuTopSheetAnimation else R.style.DejavuNoWindowAnimation,
+                )
             }
         }
 
@@ -250,7 +253,7 @@ private fun MoreMenuContent(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
             ) {
                 Icon(
-                    painter = painterResource(R.drawable.dejavu_ic_extensions_24),
+                    painter = iconPainter(R.drawable.dejavu_ic_extensions_24),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurface,
                 )
@@ -377,6 +380,9 @@ internal fun moreMenuState(
         }
     }
     val translationEngineSupported = fenix.core.store.state.translationEngine.isEngineSupported == true
+    val context = LocalContext.current
+    val settings = remember { fenix.readOnMainThread { DejavuSettings.get(context) } }
+    val fullScreen by settings.fullScreenView.collectAsState()
     val undoTabs by fenix.core.store.observeAsComposableState { it.undoHistory.tabs }
     val closedTabs by fenix.core.store.observeAsComposableState { it.closedTabs }
     return MoreMenuState(
@@ -404,6 +410,11 @@ internal fun moreMenuState(
         isAmoledDisabled = AmoledPages.isDisabled(LocalContext.current, tab),
         isDeviceTab = !tab.content.private &&
             workspaces.isDeviceWorkspace(pin?.workspaceId ?: workspaces.workspaceOf(tab.id)),
+        isFullScreen = fullScreen,
+        allowsScreenshots = FullPageScreenshot.isAllowed(
+            tab.content.private,
+            fenix.settings.shouldSecureModeBeOverridden,
+        ),
         splitWays = SplitSpace.supported(LocalConfiguration.current),
     )
 }
@@ -460,6 +471,11 @@ private class MenuActions(
             }
             dismiss()
             openNewTab(navController, tab, private)
+            return
+        }
+        // The floating menu shrinks back into its bar before full screen view hides the bar.
+        if (item == MoreMenuItem.FULL_SCREEN && closer != null) {
+            closer.close { commands.run(item, workspaces) }
             return
         }
         if (item == MoreMenuItem.CLEAR_DATA || item == MoreMenuItem.CLEAR_DATA_AND_QUIT) {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- The wallpaper's accent in the dark themes, see values-v31/dejavu_accents.xml. -->
+<resources>
+    <color name="dejavu_accent_system">@android:color/system_accent1_200</color>
+    <color name="dejavu_accent_system_container">@android:color/system_accent1_700</color>
+</resources>

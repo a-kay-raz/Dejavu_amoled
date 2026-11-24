@@ -3,6 +3,16 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <resources>
+    <!-- The splash screens of the blue and the classic app icon, which Dejavu starts with from Android 13 on while
+       - that icon is picked in Customize, see DejavuAppIcon. The yellow one is SplashScreenThemeBase's. -->
+    <style name="DejavuSplashBlue" parent="SplashScreenThemeBase">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/dejavu_splash_logo_blue</item>
+    </style>
+
+    <style name="DejavuSplashClassic" parent="SplashScreenThemeBase">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/dejavu_splash_logo_classic</item>
+    </style>
+
     <!-- A full width dialog shown at the top of the screen, used by the "More" menu when the address bar is at the top. -->
     <style name="DejavuTopSheetDialog" parent="Theme.MaterialComponents.DayNight.Dialog">
         <item name="android:windowNoTitle">true</item>

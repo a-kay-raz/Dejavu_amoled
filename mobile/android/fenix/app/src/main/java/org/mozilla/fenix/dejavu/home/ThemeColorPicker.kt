@@ -46,7 +46,6 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.selected
@@ -61,6 +60,7 @@ import org.mozilla.fenix.dejavu.ui.DejavuButtonStyle
 import org.mozilla.fenix.dejavu.ui.DejavuDialog
 import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
 import org.mozilla.fenix.dejavu.ui.DejavuTextField
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 
 /**
@@ -86,8 +86,9 @@ internal fun CustomThemeChoice(colors: List<Int>?, selected: Boolean, onClick: (
                 this.selected = selected
             },
     ) {
+        val icon = if (colors == null) iconsR.drawable.mozac_ic_plus_24 else iconsR.drawable.mozac_ic_edit_24
         Icon(
-            painter = painterResource(if (colors == null) iconsR.drawable.mozac_ic_plus_24 else iconsR.drawable.mozac_ic_edit_24),
+            painter = iconPainter(icon),
             contentDescription = null,
             tint = Color.White,
             modifier = Modifier
@@ -193,7 +194,7 @@ private fun StopChip(color: Color, selected: Boolean, onClick: () -> Unit, onRem
         )
         if (onRemove != null) {
             Icon(
-                painter = painterResource(iconsR.drawable.mozac_ic_cross_24),
+                painter = iconPainter(iconsR.drawable.mozac_ic_cross_24),
                 contentDescription = stringResource(R.string.dejavu_workspace_theme_remove_color),
                 tint = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier
@@ -222,7 +223,7 @@ private fun AddStopChip(onClick: () -> Unit) {
             .clickable(onClick = onClick),
     ) {
         Icon(
-            painter = painterResource(iconsR.drawable.mozac_ic_plus_24),
+            painter = iconPainter(iconsR.drawable.mozac_ic_plus_24),
             contentDescription = stringResource(R.string.dejavu_workspace_theme_add_color),
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.size(20.dp),

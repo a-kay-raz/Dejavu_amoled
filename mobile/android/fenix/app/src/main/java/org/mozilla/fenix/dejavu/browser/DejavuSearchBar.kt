@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 
 private const val MOVE_DURATION_MS = 280
 
@@ -128,9 +129,10 @@ private const val MAX_SETTLE_NANOS = 500_000_000L
 
 /**
  * Waits until the screen is drawn at a steady pace again, for at most [maxNanos], so that an animation started next is
- * not skipped through while a screen that just opened is still setting itself up.
+ * not skipped through while a screen that just opened is still setting itself up. With animations off, nothing waits.
  */
 internal suspend fun awaitSteadyFrames(maxNanos: Long = MAX_SETTLE_NANOS) {
+    if (!DejavuMotion.animates) return
     val first = withFrameNanos { it }
     var last = first
     var steady = 0

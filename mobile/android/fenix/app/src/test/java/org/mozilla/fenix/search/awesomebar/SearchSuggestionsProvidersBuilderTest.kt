@@ -843,7 +843,8 @@ class SearchSuggestionsProvidersBuilderTest {
 
         val localSessionsProviders = result.filterIsInstance<SessionSuggestionProvider>()
         assertEquals(1, localSessionsProviders.size)
-        assertNull(localSessionsProviders[0].resultsUriFilter)
+        // Dejavu: the filter only leaves out the tabs of locked workspaces, and none is locked here.
+        assertTrue(localSessionsProviders[0].resultsUriFilter!!.invoke(url))
     }
 
     @Test
@@ -868,7 +869,8 @@ class SearchSuggestionsProvidersBuilderTest {
 
         val localSessionsProviders = result.filterIsInstance<SessionSuggestionProvider>()
         assertEquals(1, localSessionsProviders.size)
-        assertNull(localSessionsProviders[0].resultsUriFilter)
+        // Dejavu: the filter only leaves out the tabs of locked workspaces, and none is locked here.
+        assertTrue(localSessionsProviders[0].resultsUriFilter!!.invoke(url))
     }
 
     @Test

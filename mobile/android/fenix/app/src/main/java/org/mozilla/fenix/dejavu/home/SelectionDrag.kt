@@ -25,13 +25,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.dejavu.containers.ContainerRecord
 import org.mozilla.fenix.dejavu.containers.color
 import org.mozilla.fenix.dejavu.sync.workspaceIconText
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.workspaces.Workspace
 
 /**
@@ -137,7 +137,7 @@ internal fun SideStrip(
             ),
     ) {
         Icon(
-            painter = painterResource(iconsR.drawable.mozac_ic_chevron_right_24),
+            painter = iconPainter(iconsR.drawable.mozac_ic_chevron_right_24),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.size(24.dp).graphicsLayer { scaleX = if (atEnd) 1f else -1f },

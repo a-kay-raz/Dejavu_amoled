@@ -363,6 +363,36 @@ public class GeckoDisplay {
       this.mSession = session;
     }
 
+    // Dejavu: the largest full page screenshot taken at the page's own size. Image viewers and
+    // GPU textures often refuse longer sides, and at 4 bytes a pixel more pixels need more memory
+    // than a phone can spare.
+    /* package */ static final int MAX_FULL_PAGE_SIDE = 16384;
+    /* package */ static final long MAX_FULL_PAGE_PIXELS = 16L * 1024 * 1024;
+
+    /**
+     * Dejavu: how much a full page screenshot of width by height pixels is scaled down to stay
+     * within {@link #MAX_FULL_PAGE_SIDE} and {@link #MAX_FULL_PAGE_PIXELS}, or 1 when it fits.
+     */
+    /* package */ static double fullPageFit(final int width, final int height) {
+      final double side = (double) MAX_FULL_PAGE_SIDE / Math.max(width, height);
+      final double pixels = Math.sqrt(MAX_FULL_PAGE_PIXELS / ((double) width * height));
+      return Math.min(1.0, Math.min(side, pixels));
+    }
+
+    // Dejavu: the size in CSS pixels of the tiles Gecko draws a full page screenshot in, kTileSize
+    // of FullPageScreenshot in widget/android/nsWindow.cpp.
+    /* package */ static final int FULL_PAGE_TILE = 1024;
+
+    /**
+     * Dejavu: the rendering scale of a full page screenshot scaled down by fit at device pixel
+     * ratio dpr. Gecko places the tiles a whole number of pixels apart, so it is the nearest
+     * smaller scale that makes a tile a whole number of pixels, or the tiles would leave a white
+     * band at the end.
+     */
+    /* package */ static float fullPageScale(final float dpr, final double fit) {
+      return (float) (Math.floor(FULL_PAGE_TILE * dpr * fit) / FULL_PAGE_TILE);
+    }
+
     /**
      * The screenshot will be of a region instead of the entire screen / web page
      *
@@ -596,6 +626,14 @@ public class GeckoDisplay {
                 outWidth = srcWidth;
                 outHeight = srcHeight;
                 effectiveRenderingScale = dpr;
+                // Dejavu: a long page is drawn smaller, keeping its proportions, instead of into a
+                // bitmap too big to allocate or to show.
+                final double fit = fullPageFit(srcWidth, srcHeight);
+                if (fit < 1.0) {
+                  effectiveRenderingScale = fullPageScale(dpr, fit);
+                  outWidth = Math.max(1, (int) (cssWidth * effectiveRenderingScale));
+                  outHeight = Math.max(1, (int) (cssHeight * effectiveRenderingScale));
+                }
                 break;
               case SCALE:
                 outWidth = (int) (srcWidth * mScale);

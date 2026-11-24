@@ -31,7 +31,6 @@ import androidx.compose.ui.graphics.vector.RenderVectorGroup
 import androidx.compose.ui.graphics.vector.VectorConfig
 import androidx.compose.ui.graphics.vector.VectorProperty
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.util.lerp
 
@@ -82,7 +81,7 @@ fun TapIcon(
     val motion = moving?.let { IconMotions[it.icon] }
     val moved = motion?.let { rememberMovingPainter(shown, it, progress) }
     Icon(
-        painter = painterResource(shown),
+        painter = iconPainter(shown),
         contentDescription = contentDescription,
         tint = tint,
         modifier = modifier.drawWithContent {

@@ -16,7 +16,7 @@ import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
  * Makes the Sidebery snapshot of Dejavu's workspaces. Each workspace is a tab panel, which lists its pinned section,
  * its folders as group tabs with what is inside them as their children, then its unpinned tabs. The essentials are the
  * pinned tabs every panel shows. The workspaces of devices on the account, private tabs and tabs a page opened by
- * itself are left out, like sync leaves them out.
+ * itself are left out, like sync leaves them out, and so are the locked workspaces the user has not unlocked.
  */
 internal object SideberyExport {
     /**
@@ -31,6 +31,7 @@ internal object SideberyExport {
 
     /**
      * @param tabs The open tabs, in their order.
+     * @param hidden Whether a workspace is locked and not unlocked.
      * @param iconImage The icon of a workspace as a `data:` address of an image, for its panel.
      */
     @Suppress("LongParameterList")
@@ -38,12 +39,13 @@ internal object SideberyExport {
         state: WorkspaceState,
         tabs: List<TabSessionState>,
         containers: List<ContainerRecord>,
+        hidden: (Workspace) -> Boolean,
         iconImage: (Workspace) -> String? = { null },
         now: Long = System.currentTimeMillis(),
         random: Random = Random.Default,
     ): Result {
         val permanent = containers.filterNot { it.showsAsTemporary }.associateBy { it.contextId }
-        val shown = state.workspaces.filter { it.device == null }
+        val shown = state.workspaces.filter { it.device == null && !hidden(it) }
         val panelIds = panelIdsOf(shown)
         val usedContainers = LinkedHashSet<String>()
         fun containerOf(contextId: String?) = contextId?.takeIf { it in permanent }?.also { usedContainers += it }

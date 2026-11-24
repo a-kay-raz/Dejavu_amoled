@@ -33,7 +33,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -59,6 +58,7 @@ import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
 import org.mozilla.fenix.dejavu.ui.DejavuDropdownMenu
 import org.mozilla.fenix.dejavu.ui.DejavuMenuItem
 import org.mozilla.fenix.dejavu.ui.DejavuTextField
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.ext.requireComponents
 import org.mozilla.fenix.settings.doh.DefaultDohSettingsProvider
 import org.mozilla.fenix.settings.doh.DohSettingsFragment
@@ -694,7 +694,7 @@ private fun ChoiceItem(row: ProtectionRow.Choice, modifier: Modifier) {
                     modifier = Modifier.widthIn(max = 136.dp),
                 )
                 Icon(
-                    painter = painterResource(iconsR.drawable.mozac_ic_chevron_down_20),
+                    painter = iconPainter(iconsR.drawable.mozac_ic_chevron_down_20),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.primary,
                 )
@@ -709,7 +709,7 @@ private fun ChoiceItem(row: ProtectionRow.Choice, modifier: Modifier) {
                         },
                         leadingIcon = {
                             Icon(
-                                painter = painterResource(iconsR.drawable.mozac_ic_checkmark_24),
+                                painter = iconPainter(iconsR.drawable.mozac_ic_checkmark_24),
                                 contentDescription = null,
                                 modifier = Modifier.alpha(if (option.selected) 1f else 0f),
                             )

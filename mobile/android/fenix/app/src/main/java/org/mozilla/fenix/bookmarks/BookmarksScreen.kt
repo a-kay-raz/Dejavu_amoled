@@ -119,6 +119,7 @@ import org.mozilla.fenix.compose.Favicon
 import org.mozilla.fenix.compose.list.FaviconListItem
 import org.mozilla.fenix.compose.list.SelectableFaviconListItem
 import org.mozilla.fenix.compose.list.SelectableIconListItem
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.tabstray.ui.tabpage.EmptyTabPage
 import org.mozilla.fenix.theme.FirefoxTheme
 
@@ -1072,7 +1073,7 @@ private fun NoSearchResults() {
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             Image(
-                painter = painterResource(R.drawable.dejavu_illustration_no_results),
+                painter = iconPainter(R.drawable.dejavu_illustration_no_results),
                 contentDescription = null,
             )
 
@@ -1097,7 +1098,7 @@ private fun RootEmptyContent(
     showSignIn: Boolean,
 ) {
     Image(
-        painter = painterResource(R.drawable.dejavu_illustration_bookmarks),
+        painter = iconPainter(R.drawable.dejavu_illustration_bookmarks),
         contentDescription = null,
     )
 
@@ -1126,7 +1127,7 @@ private fun RootEmptyContent(
 @Composable
 private fun FolderEmptyContent() {
     Image(
-        painter = painterResource(R.drawable.dejavu_illustration_folder),
+        painter = iconPainter(R.drawable.dejavu_illustration_folder),
         contentDescription = null,
     )
 

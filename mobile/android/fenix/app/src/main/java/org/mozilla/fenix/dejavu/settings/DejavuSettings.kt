@@ -16,12 +16,16 @@ import org.mozilla.fenix.dejavu.actions.CustomAction
 import org.mozilla.fenix.dejavu.actions.RowAction
 import org.mozilla.fenix.dejavu.actions.TabAction
 import org.mozilla.fenix.dejavu.browser.BarsLayout
+import org.mozilla.fenix.dejavu.browser.FloatingButtonPlace
 import org.mozilla.fenix.dejavu.containers.ContainerPick
 import org.mozilla.fenix.dejavu.history.HistoryGrouping
 import org.mozilla.fenix.dejavu.menu.ActionsBarLayout
 import org.mozilla.fenix.dejavu.menu.AddressBarButtons
 import org.mozilla.fenix.dejavu.menu.MoreMenuItem
 import org.mozilla.fenix.dejavu.menu.MoreMenuLayout
+import org.mozilla.fenix.dejavu.ui.AccentColor
+import org.mozilla.fenix.dejavu.ui.IconStyle
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceLockTime
 
 /**
  * Device local Dejavu preferences: where actions are shown, the custom actions and the menus. They are not synced.
@@ -48,6 +52,17 @@ class DejavuSettings private constructor(context: Context) {
     private val _moreMenuRows = MutableStateFlow(readMoreMenuRows())
     private val _moreMenuEditHidden = MutableStateFlow(prefs.getBoolean(KEY_MORE_MENU_EDIT_HIDDEN, false))
     private val _systemBarsHidden = MutableStateFlow(prefs.getBoolean(KEY_SYSTEM_BARS_HIDDEN, false))
+    private val _fullScreenView = MutableStateFlow(prefs.getBoolean(KEY_FULL_SCREEN_VIEW, false))
+    private val _fullScreenButton = MutableStateFlow(
+        FloatingButtonPlace(
+            atEnd = prefs.getBoolean(KEY_FULL_SCREEN_BUTTON_AT_END, true),
+            height = prefs.getFloat(KEY_FULL_SCREEN_BUTTON_HEIGHT, FloatingButtonPlace.DEFAULT_HEIGHT),
+        ),
+    )
+    private val _animations = MutableStateFlow(prefs.getBoolean(KEY_ANIMATIONS, true))
+    private val _genieEffect = MutableStateFlow(prefs.getBoolean(KEY_GENIE_EFFECT, true))
+    private val _accentColor = MutableStateFlow(AccentColor.of(prefs.getString(KEY_ACCENT_COLOR, null)))
+    private val _iconStyle = MutableStateFlow(IconStyle.of(prefs.getString(KEY_ICON_STYLE, null)))
     private val _barsLayout = MutableStateFlow(BarsLayout.fromKey(prefs.getString(KEY_BARS_LAYOUT, null)))
     private val _homeSearchAtBottom = MutableStateFlow(prefs.getBoolean(KEY_HOME_SEARCH_AT_BOTTOM, false))
     private val _addressBarButtons = MutableStateFlow(readAddressBarButtons())
@@ -62,6 +77,10 @@ class DejavuSettings private constructor(context: Context) {
     private val _seenTips = MutableStateFlow(readSet(KEY_SEEN_TIPS))
     private val _seenNewThings = MutableStateFlow(readSet(KEY_SEEN_NEW_THINGS))
     private val _amoledDisabledHosts = MutableStateFlow(readSet(KEY_AMOLED_DISABLED_HOSTS))
+    private val _essentialsShown = MutableStateFlow(prefs.getBoolean(KEY_ESSENTIALS_SHOWN, true))
+    private val _hiddenEssentials = MutableStateFlow(readSet(KEY_HIDDEN_ESSENTIALS))
+    private val _workspaceLockTime =
+        MutableStateFlow(WorkspaceLockTime.fromKey(prefs.getString(KEY_WORKSPACE_LOCK_TIME, null)))
 
     /** Actions the user defined, in creation order. */
     val customActions: StateFlow<List<CustomAction>> = _customActions.asStateFlow()
@@ -77,6 +96,12 @@ class DejavuSettings private constructor(context: Context) {
 
     /** Whether every container has its own essentials, shown in the workspaces using that container. */
     val essentialsPerContainer: StateFlow<Boolean> = _essentialsPerContainer.asStateFlow()
+
+    /** Whether the home screen shows the essentials on this phone (issue #278). Sync and other devices keep them. */
+    val essentialsShown: StateFlow<Boolean> = _essentialsShown.asStateFlow()
+
+    /** The ids of the essentials hidden on this phone, see [org.mozilla.fenix.dejavu.home.shownEssentials]. */
+    val hiddenEssentials: StateFlow<Set<String>> = _hiddenEssentials.asStateFlow()
 
     /** Whether new tabs of workspaces without a default container open in new temporary containers. */
     val temporaryContainersByDefault: StateFlow<Boolean> = _temporaryContainersByDefault.asStateFlow()
@@ -95,6 +120,33 @@ class DejavuSettings private constructor(context: Context) {
 
     /** Whether the status bar and the navigation bar are hidden while a page shows. */
     val systemBarsHidden: StateFlow<Boolean> = _systemBarsHidden.asStateFlow()
+
+    /**
+     * Whether pages fill the whole screen, without Dejavu's bars and the system bars, until the floating button over
+     * them shows the bars again, see [org.mozilla.fenix.dejavu.browser.installFullScreenView].
+     */
+    val fullScreenView: StateFlow<Boolean> = _fullScreenView.asStateFlow()
+
+    /** Where the floating button of [fullScreenView] floats, as the user last dragged it. */
+    val fullScreenButton: StateFlow<FloatingButtonPlace> = _fullScreenButton.asStateFlow()
+
+    /**
+     * Whether Dejavu's screens, menus and buttons move as they open, close and change, see
+     * [org.mozilla.fenix.dejavu.ui.DejavuMotion].
+     */
+    val animations: StateFlow<Boolean> = _animations.asStateFlow()
+
+    /**
+     * Whether the pages the buttons of the home screen open pour out of them, see
+     * [org.mozilla.fenix.dejavu.home.PageGenie]. Only while [animations] are on.
+     */
+    val genieEffect: StateFlow<Boolean> = _genieEffect.asStateFlow()
+
+    /** The accent color picked in Customize, see [AccentColor]. */
+    val accentColor: StateFlow<AccentColor> = _accentColor.asStateFlow()
+
+    /** The style of icons picked in Customize, see [IconStyle]. */
+    val iconStyle: StateFlow<IconStyle> = _iconStyle.asStateFlow()
 
     /** Where the bars show around pages, and so where the "More" menu opens from. */
     val barsLayout: StateFlow<BarsLayout> = _barsLayout.asStateFlow()
@@ -133,6 +185,14 @@ class DejavuSettings private constructor(context: Context) {
     fun setAwakeTabLimit(limit: Int) {
         _awakeTabLimit.value = limit
         prefs.edit { putInt(KEY_AWAKE_TAB_LIMIT, limit) }
+    }
+
+    /** When the locked workspaces the user unlocked lock again. */
+    val workspaceLockTime: StateFlow<WorkspaceLockTime> = _workspaceLockTime.asStateFlow()
+
+    fun setWorkspaceLockTime(time: WorkspaceLockTime) {
+        _workspaceLockTime.value = time
+        prefs.edit { putString(KEY_WORKSPACE_LOCK_TIME, time.key) }
     }
 
     /** Whether the welcome pages were shown, or are not due, as Dejavu was updated from a version that had them. */
@@ -258,6 +318,52 @@ class DejavuSettings private constructor(context: Context) {
     fun setSystemBarsHidden(hidden: Boolean) {
         _systemBarsHidden.value = hidden
         prefs.edit { putBoolean(KEY_SYSTEM_BARS_HIDDEN, hidden) }
+    }
+
+    fun setFullScreenView(on: Boolean) {
+        _fullScreenView.value = on
+        prefs.edit { putBoolean(KEY_FULL_SCREEN_VIEW, on) }
+    }
+
+    fun setFullScreenButton(place: FloatingButtonPlace) {
+        _fullScreenButton.value = place
+        prefs.edit {
+            putBoolean(KEY_FULL_SCREEN_BUTTON_AT_END, place.atEnd)
+            putFloat(KEY_FULL_SCREEN_BUTTON_HEIGHT, place.height)
+        }
+    }
+
+    fun setAnimations(on: Boolean) {
+        _animations.value = on
+        prefs.edit { putBoolean(KEY_ANIMATIONS, on) }
+    }
+
+    fun setGenieEffect(on: Boolean) {
+        _genieEffect.value = on
+        prefs.edit { putBoolean(KEY_GENIE_EFFECT, on) }
+    }
+
+    fun setAccentColor(accent: AccentColor) {
+        _accentColor.value = accent
+        prefs.edit { putString(KEY_ACCENT_COLOR, accent.key) }
+    }
+
+    fun setIconStyle(style: IconStyle) {
+        _iconStyle.value = style
+        prefs.edit { putString(KEY_ICON_STYLE, style.key) }
+    }
+
+    fun setEssentialsShown(shown: Boolean) {
+        _essentialsShown.value = shown
+        prefs.edit { putBoolean(KEY_ESSENTIALS_SHOWN, shown) }
+    }
+
+    /** Hides the essential [pinId] on this phone, or shows it again. */
+    fun setEssentialHidden(pinId: String, hidden: Boolean) {
+        val ids = if (hidden) _hiddenEssentials.value + pinId else _hiddenEssentials.value - pinId
+        if (ids == _hiddenEssentials.value) return
+        _hiddenEssentials.value = ids
+        prefs.edit { putString(KEY_HIDDEN_ESSENTIALS, ids.joinToString(",")) }
     }
 
     fun setBarsLayout(layout: BarsLayout) {
@@ -477,6 +583,15 @@ class DejavuSettings private constructor(context: Context) {
         private const val KEY_PRIVATE_TAB_ADDED = "private_tab_menu_added"
         private const val KEY_MORE_MENU_EDIT_HIDDEN = "more_menu_edit_hidden"
         private const val KEY_SYSTEM_BARS_HIDDEN = "system_bars_hidden"
+        private const val KEY_FULL_SCREEN_VIEW = "full_screen_view"
+        private const val KEY_FULL_SCREEN_BUTTON_AT_END = "full_screen_button_at_end"
+        private const val KEY_FULL_SCREEN_BUTTON_HEIGHT = "full_screen_button_height"
+        private const val KEY_ANIMATIONS = "animations"
+        private const val KEY_GENIE_EFFECT = "genie_effect"
+        private const val KEY_ACCENT_COLOR = "accent_color"
+        private const val KEY_ICON_STYLE = "icon_style"
+        private const val KEY_ESSENTIALS_SHOWN = "essentials_shown"
+        private const val KEY_HIDDEN_ESSENTIALS = "hidden_essentials"
         private const val KEY_BARS_LAYOUT = "bars_layout"
         private const val KEY_HOME_SEARCH_AT_BOTTOM = "home_search_at_bottom"
         private const val KEY_ADDRESS_BAR_START = "address_bar_start"
@@ -492,6 +607,7 @@ class DejavuSettings private constructor(context: Context) {
         private const val KEY_SEEN_TIPS = "seen_tips"
         private const val KEY_SEEN_NEW_THINGS = "seen_new_things"
         private const val KEY_AMOLED_DISABLED_HOSTS = "amoled_disabled_hosts"
+        private const val KEY_WORKSPACE_LOCK_TIME = "workspace_lock_time"
         private val DEFAULT_PINNED_ROW_ACTIONS = listOf(TabAction.CLOSE)
         private val DEFAULT_UNPINNED_ROW_ACTIONS = listOf(TabAction.PIN, TabAction.CLOSE)
         private val DEFAULT_FOLDER_ROW_ACTIONS = listOf(TabAction.SLEEP)

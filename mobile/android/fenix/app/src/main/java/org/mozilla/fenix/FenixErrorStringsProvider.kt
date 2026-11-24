@@ -8,6 +8,8 @@ import android.content.Context
 import mozilla.components.browser.errorpages.DefaultErrorStringsProvider
 import mozilla.components.browser.errorpages.ErrorStrings
 import mozilla.components.concept.engine.request.ErrorType
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
+import org.mozilla.fenix.dejavu.ui.IconStyle
 
 /**
  * Fenix-specific [ErrorStrings] provider.
@@ -33,8 +35,16 @@ class FenixErrorStringsProvider : DefaultErrorStringsProvider() {
         return strings.copy(imageName = strings.imageName?.let { dejavuErrorPicture(errorType) })
     }
 
-    /** Dejavu's picture for the error page of [errorType], one of the `dejavu_error_*.svg` assets. */
-    private fun dejavuErrorPicture(errorType: ErrorType): String = when (errorType) {
+    /**
+     * Dejavu's picture for the error page of [errorType], one of the `dejavu_error_*.svg` assets, in the style of icons
+     * picked in Customize: the Classic style has the same Firefox icons.
+     */
+    private fun dejavuErrorPicture(errorType: ErrorType): String {
+        val style = if (DejavuIcons.style == IconStyle.ROUNDED) "rounded_" else ""
+        return "dejavu_error_$style${errorPictureName(errorType)}"
+    }
+
+    private fun errorPictureName(errorType: ErrorType): String = when (errorType) {
         ErrorType.ERROR_NO_INTERNET,
         ErrorType.ERROR_OFFLINE,
         ErrorType.ERROR_NET_INTERRUPT,
@@ -43,15 +53,15 @@ class FenixErrorStringsProvider : DefaultErrorStringsProvider() {
         ErrorType.ERROR_CONNECTION_REFUSED,
         ErrorType.ERROR_PROXY_CONNECTION_REFUSED,
         ErrorType.ERROR_UNKNOWN_PROXY_HOST,
-        -> "dejavu_error_offline"
+        -> "offline"
 
         ErrorType.ERROR_SECURITY_SSL,
         ErrorType.ERROR_SECURITY_BAD_CERT,
         ErrorType.ERROR_BAD_HSTS_CERT,
         ErrorType.ERROR_HTTPS_ONLY,
         ErrorType.ERROR_PORT_BLOCKED,
-        -> "dejavu_error_lock"
+        -> "lock"
 
-        else -> "dejavu_error_problem"
+        else -> "problem"
     }
 }

@@ -28,6 +28,7 @@ import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.databinding.FragmentTurnOnSyncBinding
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
 import org.mozilla.fenix.e2e.SystemInsetsPaddedFragment
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.increaseTapArea
@@ -131,6 +132,8 @@ class TurnOnSyncFragment : Fragment(), AccountObserver, SystemInsetsPaddedFragme
             return null
         }
         _binding = FragmentTurnOnSyncBinding.inflate(inflater, container, false)
+        // Dejavu: the picture in the style of icons picked in Customize.
+        binding.signInImage.setImageResource(DejavuIcons.of(R.drawable.dejavu_illustration_account))
 
         binding.signInScanButton.setOnClickListener(paringClickListener)
         binding.signInEmailButton.setOnClickListener(signInClickListener)

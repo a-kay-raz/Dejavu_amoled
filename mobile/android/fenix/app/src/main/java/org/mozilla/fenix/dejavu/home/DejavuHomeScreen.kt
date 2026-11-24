@@ -4,6 +4,7 @@
 
 package org.mozilla.fenix.dejavu.home
 
+import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import android.os.StrictMode
@@ -96,6 +97,7 @@ import org.mozilla.fenix.dejavu.workspaces.PinPlacement
 import org.mozilla.fenix.dejavu.workspaces.PinSource
 import org.mozilla.fenix.dejavu.workspaces.PinnedItem
 import org.mozilla.fenix.dejavu.workspaces.WallpaperArt
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceLock
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceState
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
@@ -125,6 +127,8 @@ fun ComposeView.setDejavuHomeContent(
     onOpenTab: (String) -> Unit,
     onFirstFrameDrawn: () -> Unit,
 ) {
+    // A page going home as the activity started again, as coming home from a private tab does, shrinks over it.
+    (context as? Activity)?.let(TabZoom::homeComing)
     setContent {
         FirefoxTheme {
             val fenix = components
@@ -161,6 +165,8 @@ fun ComposeView.setDejavuHomeContent(
             val folderKeys by settings.folderRowKeys.collectAsState()
             val hiddenSelectionKeys by settings.hiddenSelectionKeys.collectAsState()
             val essentialsPerContainer by settings.essentialsPerContainer.collectAsState()
+            val essentialsShown by settings.essentialsShown.collectAsState()
+            val hiddenEssentials by settings.hiddenEssentials.collectAsState()
             val searchAtBottom by settings.homeSearchAtBottom.collectAsState()
             val containerRecords by containerStorage.records.collectAsState()
             val containers = remember(containerRecords) { containerRecords.orEmpty().associateBy { it.contextId } }
@@ -215,7 +221,7 @@ fun ComposeView.setDejavuHomeContent(
                     modifier = Modifier.blurBehindSearch(active = isSearchActive && !showsPage),
                     state = workspaceState,
                     tabs = tabs,
-                    privateTabs = if (isPrivateLocked) emptyList() else allPrivateTabs,
+                    privateTabs = allPrivateTabs,
                     selectedTabId = selectedTabId,
                     hasClosedTab = hasClosedTab,
                     hasClipboardLink = hasClipboardLink,
@@ -240,7 +246,10 @@ fun ComposeView.setDejavuHomeContent(
                     searchAtBottom = searchAtBottom,
                     hasDataToClear = hasDataToClear,
                     tipsAllowed = !welcomeDue && !syncStatus.askSource && !isSearchActive,
+                    privateLocked = isPrivateLocked && allPrivateTabs.isNotEmpty(),
                     searching = isSearchActive,
+                    essentialsShown = essentialsShown,
+                    hiddenEssentials = hiddenEssentials,
                 )
 
                 if (showsPage) {
@@ -393,14 +402,18 @@ private class DefaultDejavuHomeInteractor(
         icon: String?,
         theme: WorkspaceTheme?,
         wallpaper: WorkspaceWallpaper?,
+        locked: Boolean,
+        savesHistory: Boolean,
     ) {
         val savedId = if (workspaceId == null) {
-            repository.addWorkspace(name, containerId, icon, theme)
+            repository.addWorkspace(name, containerId, icon, theme, locked, savesHistory)
         } else {
-            repository.updateWorkspace(workspaceId, name, containerId, icon, theme)
+            repository.updateWorkspace(workspaceId, name, containerId, icon, theme, locked, savesHistory)
             workspaceId
         }
         wallpapers.set(savedId, wallpaper)
+        // A workspace just locked stays open until it locks as the settings say, rather than right under the user.
+        if (locked) WorkspaceLock.unlock(savedId) else WorkspaceLock.lock(savedId)
     }
 
     override suspend fun onDrawWallpaper(art: WallpaperArt): WorkspaceWallpaper? {
@@ -569,8 +582,16 @@ private class DefaultDejavuHomeInteractor(
         if (leaving.isNotEmpty()) repository.unsplit(leaving.toSet())
     }
 
-    override fun onMoveEssential(pinId: String, index: Int) =
-        repository.moveEssential(pinId, index, settings.essentialsPerContainer.value)
+    // The grid counts only the essentials it shows, the repository all of them.
+    override fun onMoveEssential(pinId: String, index: Int) {
+        val state = repository.state.value
+        val perContainer = settings.essentialsPerContainer.value
+        val item = state.essentials.firstOrNull { it.id == pinId } ?: return
+        val group = state.essentialsFor(state.essentialsGroupOf(item.containerId), perContainer)
+        val shown = shownEssentials(group, settings.essentialsShown.value, settings.hiddenEssentials.value)
+        val place = groupIndexOfShown(group.map { it.id }, shown.map { it.id }, pinId, index)
+        repository.moveEssential(pinId, place, perContainer)
+    }
 
     override fun onClearData(quit: Boolean): Set<DeleteBrowsingDataOnQuitType> =
         ClearData.run(context, showChoices = { ClearData.showChoices(navController) }, quit, onDataCleared)
@@ -611,6 +632,8 @@ private class DefaultDejavuHomeInteractor(
     }
 
     override fun onClosePrivateTabs() = tabsUseCases.removePrivateTabs()
+
+    override fun onUnlockPrivateTabs() = components.useCases.privateBrowsingLockUseCases.authenticatedUseCase()
 
     override fun onCloseTab(tabId: String) = tabsUseCases.removeTab(tabId)
 

@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import mozilla.components.compose.base.theme.surfaceDimVariant
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.theme.FirefoxTheme
 
 private val BANNER_IMAGE_SIZE = 80.dp
@@ -181,7 +182,7 @@ private fun ProtectionPanelBannerRow(
     ) {
         Image(
             modifier = Modifier.size(BANNER_IMAGE_SIZE),
-            painter = painterResource(id = content.imageId),
+            painter = iconPainter(content.imageId),
             contentDescription = null,
         )
 
@@ -236,7 +237,7 @@ private fun ProtectionPanelGradientBanner(
             }
 
             Image(
-                painter = painterResource(id = imageId),
+                painter = iconPainter(imageId),
                 contentDescription = null,
                 modifier = Modifier.size(BANNER_IMAGE_SIZE),
             )

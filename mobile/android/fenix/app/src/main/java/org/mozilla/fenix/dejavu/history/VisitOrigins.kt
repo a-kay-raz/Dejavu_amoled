@@ -131,8 +131,9 @@ class VisitOrigins private constructor(private val file: File) {
 }
 
 /**
- * Records in [VisitOrigins] the workspace and folder of each page a normal tab goes to. Once history is deleted, it
- * forgets the pages history no longer has, as [isVisited] tells, and the pages closed pinned tabs would reopen on.
+ * Records in [VisitOrigins] the workspace and folder of each page a normal tab goes to, unless the workspace saves no
+ * history. Once history is deleted, it forgets the pages history no longer has, as [isVisited] tells, and the pages
+ * closed pinned tabs would reopen on.
  */
 internal class VisitOriginsMiddleware(
     private val origins: VisitOrigins,
@@ -158,6 +159,7 @@ internal class VisitOriginsMiddleware(
         val workspaces = WorkspaceRepository.peek()?.state?.value ?: return
         val pin = workspaces.pinOf(tab.id)
         val workspaceId = pin?.workspaceId ?: workspaces.workspaceOf(tab.id)
+        if (WorkspaceHistory.isOff(workspaces, tab.id)) return
         origins.record(action.url, VisitOrigin(workspaceId, pin?.parentId))
     }
 }

@@ -30,7 +30,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.PreviewLightDark
@@ -38,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import mozilla.components.compose.base.button.TextButton
 import mozilla.components.lib.state.ext.observeAsComposableState
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.settings.settingssearch.ui.SettingsSearchSectionHeader
 import org.mozilla.fenix.theme.FirefoxTheme
 
@@ -231,7 +231,7 @@ private fun EmptySearchResultsView(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             Image(
-                painter = painterResource(R.drawable.dejavu_illustration_no_results),
+                painter = iconPainter(R.drawable.dejavu_illustration_no_results),
                 contentDescription = null,
             )
 

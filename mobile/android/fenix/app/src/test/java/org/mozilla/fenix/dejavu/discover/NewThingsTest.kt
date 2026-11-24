@@ -19,23 +19,39 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class NewThingsTest {
     @Test
-    fun `the Clear data buttons have the dot until the user looked at them`() {
-        val clearData = MoreMenuEntry.BuiltIn(MoreMenuItem.CLEAR_DATA)
-        val clearAndQuit = MoreMenuEntry.BuiltIn(MoreMenuItem.CLEAR_DATA_AND_QUIT)
+    fun `the Full screen button has the dot until the user looked at it`() {
+        val fullScreen = MoreMenuEntry.BuiltIn(MoreMenuItem.FULL_SCREEN)
 
-        assertTrue(clearData.isNewAmong(setOf(NewThing.CLEAR_DATA_ENTRIES)))
-        assertTrue(clearAndQuit.isNewAmong(setOf(NewThing.CLEAR_DATA_ENTRIES)))
-        assertFalse(clearData.isNewAmong(setOf(NewThing.CLEAR_DATA_CHOICES)))
+        assertTrue(fullScreen.isNewAmong(setOf(NewThing.FULL_SCREEN)))
+        assertFalse(fullScreen.isNewAmong(setOf(NewThing.ACCENT_COLOR)))
         assertFalse(MoreMenuEntry.BuiltIn(MoreMenuItem.BACK).isNewAmong(NewThing.entries.toSet()))
+    }
+
+    @Test
+    fun `the Screenshot button has the dot until the user looked at it`() {
+        val screenshot = MoreMenuEntry.BuiltIn(MoreMenuItem.SCREENSHOT)
+
+        assertTrue(screenshot.isNewAmong(setOf(NewThing.SCREENSHOT)))
+        assertFalse(screenshot.isNewAmong(setOf(NewThing.FULL_SCREEN)))
+        assertTrue(NewThing.SCREENSHOT in NewThing.CUSTOMIZE)
     }
 
     @Test
     fun `Settings has the dot while anything in the settings is new, except in the menu's editor`() {
         val settings = MoreMenuEntry.BuiltIn(MoreMenuItem.SETTINGS)
 
-        assertTrue(settings.isNewAmong(setOf(NewThing.CLEAR_DATA_CHOICES)))
-        assertFalse(settings.isNewAmong(setOf(NewThing.CLEAR_DATA_CHOICES), leadsToSettings = false))
+        assertTrue(settings.isNewAmong(setOf(NewThing.ESSENTIALS)))
+        assertTrue(settings.isNewAmong(setOf(NewThing.PRIVATE_BROWSING)))
+        assertFalse(settings.isNewAmong(setOf(NewThing.ESSENTIALS), leadsToSettings = false))
         assertFalse(settings.isNewAmong(emptySet()))
+    }
+
+    @Test
+    fun `the lock and history of workspaces are found on the home screen, so they lead nobody to the settings`() {
+        val settings = MoreMenuEntry.BuiltIn(MoreMenuItem.SETTINGS)
+
+        assertFalse(settings.isNewAmong(setOf(NewThing.WORKSPACE_PRIVACY)))
+        assertFalse(setOf(NewThing.WORKSPACE_PRIVACY).inSettings())
     }
 
     @Test

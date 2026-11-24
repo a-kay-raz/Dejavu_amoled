@@ -11,6 +11,7 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigator
 import androidx.navigation.fragment.FragmentNavigator
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
 
 /**
  * A [FragmentNavigator] that strips navigation transition animations when the user has enabled reduced-motion
@@ -59,6 +60,8 @@ class MotionAwareFragmentNavigator(
      */
     private val Context.reducedMotionActive: Boolean
         get() {
+            // Dejavu: also while animations are turned off in Customize.
+            if (!DejavuMotion.animates) return true
             val contentResolver = contentResolver ?: return false
             val transitionScale =
                 Settings.Global.getFloat(

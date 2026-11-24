@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- The dark themes take the dark tones of the accents, see values/dejavu_accents.xml. -->
+<resources>
+    <color name="dejavu_accent_yellow">@color/dejavu_accent_yellow_dark</color>
+    <color name="dejavu_accent_yellow_container">@color/dejavu_accent_yellow_dark_container</color>
+    <color name="dejavu_accent_orange">@color/dejavu_accent_orange_dark</color>
+    <color name="dejavu_accent_orange_container">@color/dejavu_accent_orange_dark_container</color>
+    <color name="dejavu_accent_red">@color/dejavu_accent_red_dark</color>
+    <color name="dejavu_accent_red_container">@color/dejavu_accent_red_dark_container</color>
+    <color name="dejavu_accent_pink">@color/dejavu_accent_pink_dark</color>
+    <color name="dejavu_accent_pink_container">@color/dejavu_accent_pink_dark_container</color>
+    <color name="dejavu_accent_purple">@color/dejavu_accent_purple_dark</color>
+    <color name="dejavu_accent_purple_container">@color/dejavu_accent_purple_dark_container</color>
+    <color name="dejavu_accent_blue">@color/dejavu_accent_blue_dark</color>
+    <color name="dejavu_accent_blue_container">@color/dejavu_accent_blue_dark_container</color>
+    <color name="dejavu_accent_cyan">@color/dejavu_accent_cyan_dark</color>
+    <color name="dejavu_accent_cyan_container">@color/dejavu_accent_cyan_dark_container</color>
+    <color name="dejavu_accent_green">@color/dejavu_accent_green_dark</color>
+    <color name="dejavu_accent_green_container">@color/dejavu_accent_green_dark_container</color>
+</resources>

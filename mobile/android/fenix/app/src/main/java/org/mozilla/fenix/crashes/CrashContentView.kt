@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import org.mozilla.fenix.R
 import org.mozilla.fenix.crashes.CrashContentView.Companion.TAP_INCREASE_DP
 import org.mozilla.fenix.databinding.ViewCrashReporterBinding
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
 import org.mozilla.fenix.ext.increaseTapArea
 
 /**
@@ -74,6 +75,8 @@ constructor(
 
     @VisibleForTesting
     internal fun bindViews() {
+        // Dejavu: the picture in the style of icons picked in Customize.
+        binding.crashTabImage.setImageResource(DejavuIcons.of(R.drawable.dejavu_illustration_problem))
         binding.title.text = context.getString(R.string.tab_crash_title_2, context.getString(R.string.app_name))
 
         binding.restoreTabButton.apply {

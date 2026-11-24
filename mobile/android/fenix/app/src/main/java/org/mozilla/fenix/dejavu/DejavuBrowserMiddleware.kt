@@ -31,6 +31,7 @@ import org.mozilla.fenix.dejavu.history.ClosedTabOrigins
 import org.mozilla.fenix.dejavu.history.ClosedTabOriginsMiddleware
 import org.mozilla.fenix.dejavu.history.VisitOrigins
 import org.mozilla.fenix.dejavu.history.VisitOriginsMiddleware
+import org.mozilla.fenix.dejavu.history.WorkspaceHistoryMiddleware
 import org.mozilla.fenix.dejavu.settings.DejavuSettings
 import org.mozilla.fenix.dejavu.sync.DejavuSync
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
@@ -72,6 +73,7 @@ fun dejavuBrowserMiddleware(context: Context): List<Middleware<BrowserState, Bro
         PageOpenedTabsMiddleware(),
         SplitViewMiddleware(),
         VisitOriginsMiddleware(VisitOrigins.get(context), isVisited),
+        WorkspaceHistoryMiddleware(),
         TabSleepMiddleware(),
         UBlockOriginPromptMiddleware(),
     )

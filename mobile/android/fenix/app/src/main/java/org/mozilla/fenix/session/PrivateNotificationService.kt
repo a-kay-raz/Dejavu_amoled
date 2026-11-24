@@ -117,6 +117,9 @@ class PrivateNotificationService : AbstractPrivateNotificationService() {
         listOf(
             ExternalAppBrowserActivity::class.qualifiedName!!,
             IntentReceiverActivity::class.qualifiedName!!,
+            // Dejavu: LeakCanary, only in debug builds, asks for its permission in a task of its own as the app goes
+            // to the background, and that task going away closed every private tab.
+            "leakcanary.internal.RequestPermissionActivity",
         )
 
     override fun ignoreTaskActions(): List<String> = listOf()

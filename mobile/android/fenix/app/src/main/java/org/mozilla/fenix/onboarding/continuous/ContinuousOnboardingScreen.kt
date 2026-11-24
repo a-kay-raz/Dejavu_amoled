@@ -41,6 +41,7 @@ import mozilla.components.compose.base.button.IconButton
 import mozilla.components.compose.base.button.OutlinedButton
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.onboarding.view.Action
 import org.mozilla.fenix.onboarding.view.OnboardingPageState
 import org.mozilla.fenix.theme.FirefoxTheme
@@ -113,7 +114,7 @@ private fun CardContent(
                 contentAlignment = Alignment.Center,
             ) {
                 Image(
-                    painter = painterResource(pageState.imageRes),
+                    painter = iconPainter(pageState.imageRes),
                     contentDescription = null, // Decorative only.
                 )
             }

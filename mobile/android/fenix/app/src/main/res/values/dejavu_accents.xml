@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- The accent colors Customize offers in place of the neutral one, see AccentColor. Each has its color and the faint
+     fill behind what is picked, for the light theme (_light) and for the dark ones (_dark); the screens made of views
+     take dejavu_accent_<name> and its _container, which values-night points at the dark ones, through the theme
+     overlays below. -->
+<resources>
+    <color name="dejavu_accent_yellow_light">#FF8A6D00</color>
+    <color name="dejavu_accent_yellow_light_container">#FFEAE5D1</color>
+    <color name="dejavu_accent_yellow_dark">#FFF5CF4E</color>
+    <color name="dejavu_accent_yellow_dark_container">#FF5C512A</color>
+    <color name="dejavu_accent_yellow">@color/dejavu_accent_yellow_light</color>
+    <color name="dejavu_accent_yellow_container">@color/dejavu_accent_yellow_light_container</color>
+
+    <color name="dejavu_accent_orange_light">#FFB4510B</color>
+    <color name="dejavu_accent_orange_light_container">#FFF2E0D3</color>
+    <color name="dejavu_accent_orange_dark">#FFFFB26B</color>
+    <color name="dejavu_accent_orange_dark_container">#FF5F4833</color>
+    <color name="dejavu_accent_orange">@color/dejavu_accent_orange_light</color>
+    <color name="dejavu_accent_orange_container">@color/dejavu_accent_orange_light_container</color>
+
+    <color name="dejavu_accent_red_light">#FFC0262D</color>
+    <color name="dejavu_accent_red_light_container">#FFF4D8D9</color>
+    <color name="dejavu_accent_red_dark">#FFFF8F87</color>
+    <color name="dejavu_accent_red_dark_container">#FF5F3E3B</color>
+    <color name="dejavu_accent_red">@color/dejavu_accent_red_light</color>
+    <color name="dejavu_accent_red_container">@color/dejavu_accent_red_light_container</color>
+
+    <color name="dejavu_accent_pink_light">#FFB0285F</color>
+    <color name="dejavu_accent_pink_light_container">#FFF1D8E2</color>
+    <color name="dejavu_accent_pink_dark">#FFF590B8</color>
+    <color name="dejavu_accent_pink_dark_container">#FF5C3E4A</color>
+    <color name="dejavu_accent_pink">@color/dejavu_accent_pink_light</color>
+    <color name="dejavu_accent_pink_container">@color/dejavu_accent_pink_light_container</color>
+
+    <color name="dejavu_accent_purple_light">#FF6E44B8</color>
+    <color name="dejavu_accent_purple_light_container">#FFE5DDF2</color>
+    <color name="dejavu_accent_purple_dark">#FFC9B0FF</color>
+    <color name="dejavu_accent_purple_dark_container">#FF4F485F</color>
+    <color name="dejavu_accent_purple">@color/dejavu_accent_purple_light</color>
+    <color name="dejavu_accent_purple_container">@color/dejavu_accent_purple_light_container</color>
+
+    <color name="dejavu_accent_blue_light">#FF1F5FBF</color>
+    <color name="dejavu_accent_blue_light_container">#FFD7E2F3</color>
+    <color name="dejavu_accent_blue_dark">#FF9DC2FF</color>
+    <color name="dejavu_accent_blue_dark_container">#FF424D5F</color>
+    <color name="dejavu_accent_blue">@color/dejavu_accent_blue_light</color>
+    <color name="dejavu_accent_blue_container">@color/dejavu_accent_blue_light_container</color>
+
+    <color name="dejavu_accent_cyan_light">#FF00707C</color>
+    <color name="dejavu_accent_cyan_light_container">#FFD1E5E7</color>
+    <color name="dejavu_accent_cyan_dark">#FF7ED4DE</color>
+    <color name="dejavu_accent_cyan_dark_container">#FF395256</color>
+    <color name="dejavu_accent_cyan">@color/dejavu_accent_cyan_light</color>
+    <color name="dejavu_accent_cyan_container">@color/dejavu_accent_cyan_light_container</color>
+
+    <color name="dejavu_accent_green_light">#FF2F7A35</color>
+    <color name="dejavu_accent_green_light_container">#FFDAE7DB</color>
+    <color name="dejavu_accent_green_dark">#FF9ED6A0</color>
+    <color name="dejavu_accent_green_dark_container">#FF425343</color>
+    <color name="dejavu_accent_green">@color/dejavu_accent_green_light</color>
+    <color name="dejavu_accent_green_container">@color/dejavu_accent_green_light_container</color>
+
+    <!-- The wallpaper's colors, from Android 12 (values-v31); before it the neutral accent, which is not offered. -->
+    <color name="dejavu_accent_system">@color/fx_mobile_primary</color>
+    <color name="dejavu_accent_system_container">@color/fx_mobile_primary_container</color>
+
+    <style name="DejavuAccent" />
+    <style name="DejavuAccent.System">
+        <item name="colorPrimary">@color/dejavu_accent_system</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_system_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_system</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_system</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_system</item>
+        <item name="accent">@color/dejavu_accent_system</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_system</item>
+    </style>
+    <style name="DejavuAccent.Yellow">
+        <item name="colorPrimary">@color/dejavu_accent_yellow</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_yellow_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_yellow</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_yellow</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_yellow</item>
+        <item name="accent">@color/dejavu_accent_yellow</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_yellow</item>
+    </style>
+    <style name="DejavuAccent.Orange">
+        <item name="colorPrimary">@color/dejavu_accent_orange</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_orange_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_orange</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_orange</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_orange</item>
+        <item name="accent">@color/dejavu_accent_orange</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_orange</item>
+    </style>
+    <style name="DejavuAccent.Red">
+        <item name="colorPrimary">@color/dejavu_accent_red</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_red_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_red</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_red</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_red</item>
+        <item name="accent">@color/dejavu_accent_red</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_red</item>
+    </style>
+    <style name="DejavuAccent.Pink">
+        <item name="colorPrimary">@color/dejavu_accent_pink</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_pink_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_pink</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_pink</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_pink</item>
+        <item name="accent">@color/dejavu_accent_pink</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_pink</item>
+    </style>
+    <style name="DejavuAccent.Purple">
+        <item name="colorPrimary">@color/dejavu_accent_purple</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_purple_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_purple</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_purple</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_purple</item>
+        <item name="accent">@color/dejavu_accent_purple</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_purple</item>
+    </style>
+    <style name="DejavuAccent.Blue">
+        <item name="colorPrimary">@color/dejavu_accent_blue</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_blue_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_blue</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_blue</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_blue</item>
+        <item name="accent">@color/dejavu_accent_blue</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_blue</item>
+    </style>
+    <style name="DejavuAccent.Cyan">
+        <item name="colorPrimary">@color/dejavu_accent_cyan</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_cyan_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_cyan</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_cyan</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_cyan</item>
+        <item name="accent">@color/dejavu_accent_cyan</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_cyan</item>
+    </style>
+    <style name="DejavuAccent.Green">
+        <item name="colorPrimary">@color/dejavu_accent_green</item>
+        <item name="colorPrimaryContainer">@color/dejavu_accent_green_container</item>
+        <item name="colorTertiary">@color/dejavu_accent_green</item>
+        <item name="colorOnTertiary">@color/fx_mobile_on_primary</item>
+        <item name="colorControlActivated">@color/dejavu_accent_green</item>
+        <item name="android:colorControlActivated">@color/dejavu_accent_green</item>
+        <item name="accent">@color/dejavu_accent_green</item>
+        <item name="android:colorEdgeEffect">@color/dejavu_accent_green</item>
+    </style>
+</resources>

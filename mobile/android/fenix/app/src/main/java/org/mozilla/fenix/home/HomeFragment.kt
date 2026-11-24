@@ -544,6 +544,8 @@ class HomeFragment : Fragment(), UserInteractionHandler, OnLongPressedListener {
         recordHomepageTelemetry()
 
         observePrivateModeLock {
+            // Dejavu: its home shows the locked private tabs blurred, as the private workspace.
+            if (isDejavuHomeEnabled(browsingModeManager.mode.isPrivate)) return@observePrivateModeLock
             findNavController()
                 .navigate(NavGraphDirections.actionGlobalUnlockPrivateTabsFragment(NavigationOrigin.HOME_PAGE))
         }

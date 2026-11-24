@@ -2,10 +2,8 @@
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<!-- Dejavu Test's launcher icon (-PdejavuTest in build.gradle): Dejavu's icon with a dark band across its lower half,
-     so the test version is told apart from Dejavu at a glance. -->
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
     <background android:drawable="@drawable/dejavu_test_launcher_background" />
-    <foreground android:drawable="@drawable/dejavu_launcher_foreground" />
-    <monochrome android:drawable="@drawable/dejavu_launcher_monochrome" />
+    <foreground android:drawable="@mipmap/dejavu_launcher_foreground" />
+    <monochrome android:drawable="@mipmap/dejavu_launcher_monochrome" />
 </adaptive-icon>

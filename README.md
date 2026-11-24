@@ -97,6 +97,27 @@ switching between Play and F-Droid or the APK means uninstalling first.
 needs more hands. If you are an iOS developer who would like to help, or want to sponsor it, email
 [byarchitect@disroot.org](mailto:byarchitect@disroot.org).
 
+## Test new versions
+
+<a href="https://fdroid.byarchitect.org/test-2025bfpt6hunqbzikztu/repo?fingerprint=62EFF007F5EEFEABB74853B87AC55E2BD2D69A46968357883EE120383004F7CC"><img src="docs/readme/fdroid-test-qr.svg" alt="QR code that adds the Dejavu Test repository to F-Droid" width="170" align="right"></a>
+
+Anyone can test Dejavu's next version before it comes out. **Dejavu Test** is the test version of Dejavu, and it has
+its own F-Droid repository. It is a separate app with its own tabs and settings, so it installs beside your Dejavu and
+never touches it. Test versions are new, so they can have bugs.
+
+In F-Droid, open **Repositories**, tap **+** and scan the QR code, or open
+[this link](https://fdroid.byarchitect.org/test-2025bfpt6hunqbzikztu/repo?fingerprint=62EFF007F5EEFEABB74853B87AC55E2BD2D69A46968357883EE120383004F7CC)
+on your phone, then search for Dejavu Test. F-Droid keeps it up to date as new test versions come out.
+
+Found a problem, or want something changed? Tell us, and say which Dejavu Test version you use:
+
+- **GitHub:** [open an issue](https://github.com/by-architect/Dejavu/issues/new/choose), or a pull request if you have
+  a fix.
+- **Matrix:** write in [#dejavu-browser:matrix.org](https://matrix.to/#/#dejavu-browser:matrix.org).
+- **Email:** [byarchitect@disroot.org](mailto:byarchitect@disroot.org).
+
+<br clear="right">
+
 ## Features
 
 Dejavu is made of small things that save you time every day.
@@ -207,7 +228,7 @@ Dejavu is open to contributions of every kind, and we would especially love help
 - **Themes:** new color themes for workspaces.
 - **Translations:** corrections for Dejavu's own texts in your language.
 - **Code:** bug fixes and new features.
-- **Testing:** try Dejavu on your phone or tablet and tell us what breaks.
+- **Testing:** try Dejavu, or [its test versions](#test-new-versions), on your phone or tablet and tell us what breaks.
 - **iOS:** help to build an iOS version of Dejavu. It is not planned yet because it needs more hands.
 
 Send designs, icon packs and themes to [byarchitect@disroot.org](mailto:byarchitect@disroot.org), or open a pull
@@ -248,7 +269,9 @@ optional features, like sync, share with Mozilla and your search engine.
 ## License
 
 Dejavu is licensed under the [Mozilla Public License 2.0](LICENSE), like Firefox. Some third-party parts of the code
-have their own licenses, listed in [toolkit/content/license.html](toolkit/content/license.html).
+have their own licenses, listed in [toolkit/content/license.html](toolkit/content/license.html). The Rounded icons are
+Google's [Material Symbols](https://github.com/google/material-design-icons), under the
+[Apache License 2.0](toolkit/content/licenses/apache.txt).
 
 Dejavu is an independent project, not made or endorsed by Mozilla or the Zen Browser team. Firefox is a trademark of
 the Mozilla Foundation, and this repository grants no rights to Mozilla's trademarks.

@@ -47,7 +47,6 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
@@ -69,6 +68,8 @@ import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.DejavuMotion
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 /** How many rows above and below the long-pressed one go into the stack. */
 internal const val MAX_STACK_DEPTH = 2
@@ -225,7 +226,7 @@ internal class DragStackState(private val scope: CoroutineScope) {
             repeat(LIFT_START_FRAMES) { withFrameNanos { } }
             lifted.forEach { card ->
                 launch {
-                    delay(STAGGER_MS * card.depth)
+                    if (DejavuMotion.animates) delay(STAGGER_MS * card.depth)
                     card.lift.animateTo(1f, LiftSpring)
                 }
             }
@@ -369,7 +370,7 @@ private fun LiftedCardView(card: LiftedCard, rect: Rect, blocked: Boolean) {
             val url = card.card.url
             if (blocked) {
                 Icon(
-                    painter = painterResource(R.drawable.dejavu_ic_no_container_24),
+                    painter = iconPainter(R.drawable.dejavu_ic_no_container_24),
                     contentDescription = null,
                     tint = colors.error,
                     modifier = Modifier.size(20.dp),
@@ -378,7 +379,7 @@ private fun LiftedCardView(card: LiftedCard, rect: Rect, blocked: Boolean) {
                 SiteIcon(url = url, size = 20.dp)
             } else {
                 Icon(
-                    painter = painterResource(iconsR.drawable.mozac_ic_folder_24),
+                    painter = iconPainter(iconsR.drawable.mozac_ic_folder_24),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.size(20.dp),

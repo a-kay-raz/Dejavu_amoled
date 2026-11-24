@@ -17,6 +17,10 @@ package org.mozilla.fenix.dejavu.workspaces
  * @property device The device on the Mozilla account whose open tabs the workspace shows, or `null` for the user's own
  *   workspaces. Such a workspace follows the device: tabs can only be opened and closed in it, and its name, icon and
  *   lack of a container come from the device. Local to this device.
+ * @property locked Whether the workspace is locked: its page shows blurred and its tabs stay covered until the user
+ *   unlocks it with their fingerprint, face or screen lock, see [WorkspaceLock]. Local to this device.
+ * @property savesHistory Whether the pages its tabs open are saved to history, the recent searches and the recently
+ *   closed tabs, see [org.mozilla.fenix.dejavu.history.WorkspaceHistory]. Local to this device.
  */
 data class Workspace(
     val id: String,
@@ -27,6 +31,8 @@ data class Workspace(
     val createdAt: Long,
     val updatedAt: Long,
     val device: SyncedDevice? = null,
+    val locked: Boolean = false,
+    val savesHistory: Boolean = true,
 ) {
     /**
      * Whether it looks like the workspace a fresh Dejavu starts with, named [defaultName]: with its [HomeIcon] or no

@@ -40,7 +40,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathMeasure
 import androidx.compose.ui.graphics.StrokeCap
@@ -51,6 +53,7 @@ import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.drawscope.withTransform
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
@@ -65,6 +68,9 @@ import kotlinx.coroutines.launch
 import mozilla.components.browser.state.state.BrowserState
 import mozilla.components.browser.state.state.content.DownloadState
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.DejavuIcons
+import org.mozilla.fenix.dejavu.ui.IconStyle
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 /**
  * What the downloads button on the home screen shows about the downloads in the browser.
@@ -197,6 +203,8 @@ internal fun DownloadsButton(status: State<DownloadsStatus>, onClick: () -> Unit
     val tray = remember { PathParser().parsePathString(TRAY_PATH).toPath() }
     val arrow = remember { PathParser().parsePathString(ARROW_PATH).toPath() }
     val check = remember { checkPath() }
+    // The other styles of icons have no parts that move, so their icon stays still inside the ring.
+    val styledIcon = if (DejavuIcons.style == IconStyle.DEJAVU) null else iconPainter(R.drawable.dejavu_ic_downloads_24)
     val percent = current.progress?.takeIf { current.isRunning }?.let { NumberFormat.getPercentInstance().format(it) }
     val label = stringResource(R.string.dejavu_downloads)
 
@@ -253,10 +261,12 @@ internal fun DownloadsButton(status: State<DownloadsStatus>, onClick: () -> Unit
                 val checkTrim = if (celebrating) LinearOutSlowInEasing.transform(phase(f, CHECK_START, CHECK_DRAWN)) else 0f
                 val checkAlpha = 1f - phase(f, CHECK_FADE_START, CHECK_FADE_END)
                 translate(left = shake) {
-                    drawGlyph(tray, arrow, drop, iconColor, glyphScale)
-                    if (checkTrim > 0f && checkAlpha > 0f) {
-                        drawCheck(check, checkTrim, activeColor.copy(alpha = checkAlpha), glyphScale)
+                    val checking = checkTrim > 0f && checkAlpha > 0f
+                    when {
+                        styledIcon == null -> drawGlyph(tray, arrow, drop, iconColor, glyphScale)
+                        !checking -> drawStyledGlyph(styledIcon, iconColor, glyphScale)
                     }
+                    if (checking) drawCheck(check, checkTrim, activeColor.copy(alpha = checkAlpha), glyphScale)
                 }
             }
         }
@@ -325,6 +335,14 @@ private fun DrawScope.drawGlyph(tray: Path, arrow: Path, drop: Float, color: Col
         clipRect(top = ARROW_CLIP_TOP, bottom = ARROW_CLIP_BOTTOM) {
             translate(top = drop) { drawPath(arrow, color.copy(alpha = color.alpha * ARROW_ALPHA), style = line) }
         }
+    }
+}
+
+/** The downloads icon of another [IconStyle], [glyphScale] of its size, which the check mark takes the place of. */
+private fun DrawScope.drawStyledGlyph(icon: Painter, color: Color, glyphScale: Float) {
+    val side = IconSize.toPx() * glyphScale
+    translate((size.width - side) / 2, (size.height - side) / 2) {
+        with(icon) { draw(Size(side, side), colorFilter = ColorFilter.tint(color)) }
     }
 }
 

@@ -57,7 +57,6 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -80,6 +79,7 @@ import org.mozilla.fenix.dejavu.menu.MoreMenuEntry
 import org.mozilla.fenix.dejavu.menu.MoreMenuLayout
 import org.mozilla.fenix.dejavu.ui.DejavuDropdownMenu
 import org.mozilla.fenix.dejavu.ui.DejavuMenuItem
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 /** Where a button dragged in the editor of the "More" menu comes from. */
 internal sealed interface MenuDragSource {
@@ -346,7 +346,7 @@ internal fun MoreMenuLinesEditor(settings: DejavuSettings, modifier: Modifier = 
     val unseen = rememberUnseenNewThings()
     val context = LocalContext.current
     DisposableEffect(Unit) {
-        onDispose { NewThings.seen(context, NewThing.CLEAR_DATA_ENTRIES) }
+        onDispose { NewThing.MENU_BUTTONS.forEach { NewThings.seen(context, it) } }
     }
 
     fun update(updated: List<List<String>>) {
@@ -499,7 +499,7 @@ internal fun MoreMenuLinesEditor(settings: DejavuSettings, modifier: Modifier = 
                     modifier = Modifier.size(LineEndWidth),
                 ) {
                     Icon(
-                        painter = painterResource(iconsR.drawable.mozac_ic_cross_24),
+                        painter = iconPainter(iconsR.drawable.mozac_ic_cross_24),
                         contentDescription = stringResource(R.string.dejavu_more_menu_delete_row),
                         tint = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.size(20.dp),
@@ -674,7 +674,7 @@ private fun FieldBlock(showsIcon: Boolean, modifier: Modifier = Modifier) {
     ) {
         if (showsIcon) {
             Icon(
-                painter = painterResource(R.drawable.dejavu_ic_search_24),
+                painter = iconPainter(R.drawable.dejavu_ic_search_24),
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(22.dp),
@@ -768,7 +768,7 @@ private fun BlockContent(
 @Composable
 private fun BlockIcon(entry: MoreMenuEntry) {
     Icon(
-        painter = painterResource(entry.icon),
+        painter = iconPainter(entry.icon),
         contentDescription = null,
         tint = MaterialTheme.colorScheme.onSurface,
         modifier = Modifier.size(22.dp),
@@ -798,7 +798,7 @@ private fun RemoveArea(active: Boolean) {
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
-                painter = painterResource(iconsR.drawable.mozac_ic_delete_24),
+                painter = iconPainter(iconsR.drawable.mozac_ic_delete_24),
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onErrorContainer,
             )

@@ -5,6 +5,7 @@
 package org.mozilla.fenix.dejavu.home
 
 import android.view.WindowManager
+import androidx.biometric.BiometricManager
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -23,28 +24,47 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.flow.first
 import mozilla.components.browser.state.state.TabSessionState
+import mozilla.components.lib.state.ext.observeAsComposableState
 import mozilla.components.support.utils.ext.getActivityWindow
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
+import org.mozilla.fenix.components.appstate.AppAction.PrivateBrowsingLockAction
 import org.mozilla.fenix.dejavu.actions.RowAction
 import org.mozilla.fenix.dejavu.actions.TabAction
 import org.mozilla.fenix.dejavu.browser.closeOnMiddleClick
 import org.mozilla.fenix.dejavu.browser.tabZoomTarget
+import org.mozilla.fenix.dejavu.discover.NewThing
+import org.mozilla.fenix.dejavu.discover.NewThings
+import org.mozilla.fenix.dejavu.discover.newDot
+import org.mozilla.fenix.dejavu.discover.rememberUnseenNewThings
+import org.mozilla.fenix.dejavu.ui.DejavuDialog
+import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
+import org.mozilla.fenix.dejavu.ui.DejavuDropdownMenu
+import org.mozilla.fenix.dejavu.ui.DejavuMenuItem
 import org.mozilla.fenix.dejavu.ui.TapIcon
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.ui.rememberIconTaps
+import org.mozilla.fenix.dejavu.ui.rememberUnlockPrompt
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
 import org.mozilla.fenix.ext.components
+import org.mozilla.fenix.settings.biometric.ext.isAuthenticatorAvailable
 
 /** Key of the private workspace page. Workspace IDs are braced UUIDs, so it cannot clash with one. */
 internal const val PRIVATE_PAGE_KEY = "private"
@@ -63,7 +83,9 @@ internal val privateWorkspaceTheme = WorkspaceTheme(
 @Composable
 internal fun SecureWindowWhile(secure: Boolean) {
     val context = LocalContext.current
-    LaunchedEffect(secure) {
+    // Firefox clears the flag as it leaves private browsing, so it is set again after each change of mode.
+    val mode by context.components.appStore.observeAsComposableState { it.mode }
+    LaunchedEffect(secure, mode) {
         val window = context.getActivityWindow() ?: return@LaunchedEffect
         if (secure && !context.components.settings.shouldSecureModeBeOverridden) {
             window.addFlags(WindowManager.LayoutParams.FLAG_SECURE)
@@ -85,8 +107,8 @@ private var windowSecuredHere = false
 
 /**
  * The private tabs, shown as a workspace of their own while any are open. It cannot hold pinned tabs, folders or
- * essentials, and is not saved: it goes away with its last tab. A closing tab pours into its close button, see
- * [RowMotions].
+ * essentials, and is not saved: it goes away with its last tab, once [onEmptied] says its rows poured away. A closing
+ * tab pours into its close button, and Close all pours them all into itself, see [RowMotions].
  */
 @Composable
 internal fun PrivateWorkspacePage(
@@ -96,7 +118,10 @@ internal fun PrivateWorkspacePage(
     onCloseTab: (TabSessionState) -> Unit,
     onNewTab: () -> Unit,
     onCloseAll: () -> Unit,
+    onEmptied: () -> Unit,
 ) {
+    var editing by remember { mutableStateOf(false) }
+    var menuOpen by remember { mutableStateOf(false) }
     val close = RowAction.BuiltIn(TabAction.CLOSE)
     val motions = rememberRowMotions()
     val plan = motions.plan(
@@ -106,6 +131,12 @@ internal fun PrivateWorkspacePage(
     )
     SideEffect { motions.start(plan, flights = false) }
     val placement = motions.placementSpec(plan)
+    if (tabs.isEmpty()) {
+        LaunchedEffect(Unit) {
+            snapshotFlow { motions.isPlaying }.first { !it }
+            onEmptied()
+        }
+    }
     val listState = rememberHomeListState(PRIVATE_LIST_KEY)
     LaunchedEffect(Unit) {
         val index = tabs.indexOfFirst { it.id == selectedTabId }.takeIf { it >= 0 } ?: return@LaunchedEffect
@@ -119,25 +150,40 @@ internal fun PrivateWorkspacePage(
                     modifier = Modifier
                         .animateItem(fadeInSpec = null, placementSpec = placement, fadeOutSpec = null)
                         .fillMaxWidth()
-                        .padding(start = 12.dp, top = 4.dp, bottom = 4.dp),
+                        .padding(top = 4.dp, bottom = 4.dp),
                 ) {
-                    Icon(
-                        painter = painterResource(R.drawable.dejavu_ic_private_tab_24),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(18.dp),
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    Text(
-                        text = stringResource(R.string.dejavu_private_workspace),
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.weight(1f),
-                    )
-                    TextButton(onClick = onCloseAll) {
+                    // Like the name of a workspace, the name opens its settings.
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(10.dp))
+                            .clickable { editing = true }
+                            .padding(horizontal = 12.dp, vertical = 8.dp),
+                    ) {
                         Icon(
-                            painter = painterResource(iconsR.drawable.mozac_ic_delete_24),
+                            painter = iconPainter(R.drawable.dejavu_ic_private_tab_24),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(18.dp),
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Text(
+                            text = stringResource(R.string.dejavu_private_workspace),
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    TextButton(
+                        onClick = {
+                            motions.clearTapped()
+                            onCloseAll()
+                        },
+                        modifier = Modifier.motionButton(motions, MotionButton.CLEAR),
+                    ) {
+                        Icon(
+                            painter = iconPainter(iconsR.drawable.mozac_ic_delete_24),
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.error,
                             modifier = Modifier.size(18.dp),
@@ -148,6 +194,33 @@ internal fun PrivateWorkspacePage(
                             style = MaterialTheme.typography.labelLarge,
                             color = MaterialTheme.colorScheme.error,
                         )
+                    }
+                    Box {
+                        val privacyNew = NewThing.WORKSPACE_PRIVACY in rememberUnseenNewThings()
+                        SmallIconButton(
+                            icon = iconsR.drawable.mozac_ic_ellipsis_vertical_24,
+                            description = R.string.dejavu_workspace_menu,
+                            modifier = Modifier.newDot(privacyNew),
+                        ) {
+                            menuOpen = true
+                        }
+                        DejavuDropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
+                            DejavuMenuItem(
+                                text = stringResource(R.string.dejavu_new_private_tab),
+                                onClick = {
+                                    menuOpen = false
+                                    onNewTab()
+                                },
+                            )
+                            DejavuMenuItem(
+                                text = stringResource(R.string.dejavu_workspace_edit),
+                                onClick = {
+                                    menuOpen = false
+                                    editing = true
+                                },
+                                isNew = privacyNew,
+                            )
+                        }
                     }
                 }
             }
@@ -211,5 +284,51 @@ internal fun PrivateWorkspacePage(
             }
         }
         RowMotionsOverlay(motions, modifier = Modifier.matchParentSize().padding(horizontal = 8.dp))
+    }
+    if (editing) PrivateWorkspaceDialog(onDismiss = { editing = false })
+}
+
+/**
+ * The settings of the private workspace: whether it locks, Firefox's lock of private tabs, which asks for the
+ * fingerprint, face or screen lock to turn on or off, as Firefox's settings do.
+ */
+@Composable
+private fun PrivateWorkspaceDialog(onDismiss: () -> Unit) {
+    val context = LocalContext.current
+    val settings = context.components.settings
+    val appStore = context.components.appStore
+    val prompt = rememberUnlockPrompt()
+    var locked by remember { mutableStateOf(settings.privateBrowsingModeLocked) }
+    val canLock = remember { BiometricManager.from(context).isAuthenticatorAvailable() }
+    val privacyNew = NewThing.WORKSPACE_PRIVACY in rememberUnseenNewThings()
+    DisposableEffect(Unit) {
+        onDispose { NewThings.seen(context, NewThing.WORKSPACE_PRIVACY) }
+    }
+    DejavuDialog(
+        title = stringResource(R.string.dejavu_workspace_edit),
+        onDismissRequest = onDismiss,
+        buttons = { DejavuDialogButton(text = stringResource(R.string.dejavu_done), onClick = onDismiss) },
+    ) {
+        Text(
+            text = stringResource(R.string.preferences_category_privacy_security),
+            style = MaterialTheme.typography.labelLarge,
+        )
+        SwitchRow(
+            label = stringResource(R.string.dejavu_workspace_lock),
+            description = stringResource(R.string.dejavu_workspace_lock_summary),
+            checked = locked,
+            enabled = canLock || locked,
+            isNew = privacyNew,
+            onChange = { lock ->
+                val title = if (lock) R.string.pbm_authentication_enable_lock else R.string.pbm_authentication_disable_lock
+                prompt.ask(context.getString(title)) {
+                    settings.privateBrowsingModeLocked = lock
+                    if (lock) settings.allowScreenshotsInPrivateMode = false
+                    locked = lock
+                    // Turned on here, the private tabs stay open until the user leaves them.
+                    appStore.dispatch(PrivateBrowsingLockAction.UpdatePrivateBrowsingLock(isLocked = false))
+                }
+            },
+        )
     }
 }

@@ -38,10 +38,9 @@ internal fun rememberClipboardHasLink(): Boolean {
     val context = LocalContext.current
     val view = LocalView.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
-    // The clipboard listener is held by a native system stub, so it is
-    // registered only while Home is resumed and removed on pause, before the
-    // activity can be destroyed, not only when composition is disposed.
-    val clipboard = remember(context) { context.getSystemService<ClipboardManager>() }
+    // The app's own, as the system service can keep a listener's clipboard, and the activity of its context, long after
+    // the listener was removed: each switch between private and normal browsing starts the activity again.
+    val clipboard = remember { context.applicationContext.getSystemService<ClipboardManager>() }
     var hasLink by remember { mutableStateOf(false) }
     var checks by remember { mutableIntStateOf(0) }
 

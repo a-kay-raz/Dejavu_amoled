@@ -140,6 +140,7 @@ import org.mozilla.fenix.debugsettings.ui.FenixOverlay
 import org.mozilla.fenix.dejavu.browser.TabSleepMiddleware
 import org.mozilla.fenix.dejavu.settings.DejavuPreferenceCards
 import org.mozilla.fenix.dejavu.settings.PageBackdropCallbacks
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceLock
 import org.mozilla.fenix.downloads.DownloadSnackbar
 import org.mozilla.fenix.e2e.EdgeToEdgeFragmentLifecycleCallbacks
 import org.mozilla.fenix.experiments.ResearchSurfaceDialogFragment
@@ -701,6 +702,8 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
         )
         supportFragmentManager.registerFragmentLifecycleCallbacks(DejavuPreferenceCards(), true)
         supportFragmentManager.registerFragmentLifecycleCallbacks(PageBackdropCallbacks(), true)
+        // Dejavu: unlocked workspaces lock again as the privacy settings say, and stay out of the recent apps view.
+        WorkspaceLock.watch(this)
 
         if (components.settings.showContileFeature) {
             components.core.macTopSitesUpdater.startPeriodicWork()

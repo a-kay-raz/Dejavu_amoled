@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!-- Temporary container in the Firefox style, from before the two-tone icons: an hourglass. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M6.5 3.5h11M6.5 20.5h11M8 3.5v1.8c0 3 4 4.2 4 6.7s-4 3.7-4 6.7v1.8M16 3.5v1.8c0 3 -4 4.2 -4 6.7s4 3.7 4 6.7v1.8" />
+</vector>

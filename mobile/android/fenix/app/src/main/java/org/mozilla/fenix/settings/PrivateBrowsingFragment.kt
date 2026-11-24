@@ -20,6 +20,8 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.components.DefaultPendingIntentFactory
 import org.mozilla.fenix.components.DefaultShortcutManagerCompatWrapper
 import org.mozilla.fenix.components.PrivateShortcutCreateManager
+import org.mozilla.fenix.dejavu.discover.NewThing
+import org.mozilla.fenix.dejavu.discover.NewThings
 import org.mozilla.fenix.e2e.SystemInsetsPaddedFragment
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.registerForActivityResult
@@ -36,6 +38,8 @@ class PrivateBrowsingFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFr
     override fun onResume() {
         super.onResume()
         showToolbar(getString(R.string.preferences_private_browsing_options))
+        // Dejavu: these settings are back in 4.0, marked with an orange dot until looked at.
+        NewThings.seen(requireContext(), NewThing.PRIVATE_BROWSING)
 
         // If user changes their device lock status (i.e. adds or removes device lock),
         // check the device pin status and determine if private browsing lock toggle
@@ -74,6 +78,8 @@ class PrivateBrowsingFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFr
         requirePreference<SwitchPreferenceCompat>(R.string.pref_key_open_links_in_a_private_tab).apply {
             onPreferenceChangeListener = SharedPreferenceUpdater()
             isChecked = context.components.settings.openLinksInAPrivateTab
+            // Dejavu: chosen under Links from other apps, with the workspace and container links open in.
+            isVisible = false
         }
 
         requirePreference<SwitchPreferenceCompat>(R.string.pref_key_allow_screenshots_in_private_mode).apply {

@@ -4,6 +4,10 @@
 
 package org.mozilla.fenix.dejavu.settings
 
+import android.content.Context
+import android.icu.text.MeasureFormat
+import android.icu.util.Measure
+import android.icu.util.MeasureUnit
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.LayoutInflater
@@ -41,8 +45,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
@@ -69,6 +73,8 @@ import org.mozilla.fenix.dejavu.containers.NoContainerIcon
 import org.mozilla.fenix.dejavu.containers.TemporaryContainerIcon
 import org.mozilla.fenix.dejavu.containers.color
 import org.mozilla.fenix.dejavu.containers.drawable
+import org.mozilla.fenix.dejavu.discover.NewThing
+import org.mozilla.fenix.dejavu.discover.NewThings
 import org.mozilla.fenix.dejavu.menu.ActionsBarLayout
 import org.mozilla.fenix.dejavu.menu.menuKey
 import org.mozilla.fenix.dejavu.sync.workspaceIconText
@@ -76,7 +82,10 @@ import org.mozilla.fenix.dejavu.ui.DejavuButtonStyle
 import org.mozilla.fenix.dejavu.ui.DejavuDialog
 import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
 import org.mozilla.fenix.dejavu.ui.LocalPopupTheme
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.dejavu.ui.workspacePopupTheme
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceLock
+import org.mozilla.fenix.dejavu.workspaces.WorkspaceLockTime
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceRepository
 import org.mozilla.fenix.e2e.SystemInsetsPaddedFragment
 import org.mozilla.fenix.ext.requireComponents
@@ -159,7 +168,7 @@ class DejavuTabActionsFragment : DejavuComposeFragment(R.string.dejavu_settings_
             SettingsHint(stringResource(R.string.dejavu_settings_tab_actions_hint))
             FilledButton(
                 text = stringResource(R.string.dejavu_custom_action_add),
-                icon = painterResource(iconsR.drawable.mozac_ic_plus_24),
+                icon = iconPainter(iconsR.drawable.mozac_ic_plus_24),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
                 onClick = { openEditor(null) },
             )
@@ -168,7 +177,7 @@ class DejavuTabActionsFragment : DejavuComposeFragment(R.string.dejavu_settings_
                 IconListItem(
                     label = stringResource(list.place.label),
                     description = placeSummary(list.place, placements, customActions),
-                    beforeIconPainter = painterResource(list.icon),
+                    beforeIconPainter = iconPainter(list.icon),
                     modifier = Modifier.settingsCard(index, ActionList.entries.size),
                     onClick = { openList(list) },
                 )
@@ -183,7 +192,7 @@ class DejavuTabActionsFragment : DejavuComposeFragment(R.string.dejavu_settings_
                     } else {
                         places.map { stringResource(it.label) }.joinToString(", ")
                     },
-                    beforeIconPainter = painterResource(action.icon),
+                    beforeIconPainter = iconPainter(action.icon),
                     modifier = Modifier.settingsCard(index, actions.size),
                     onClick = { choosing = action },
                 )
@@ -481,7 +490,7 @@ class DejavuContainersFragment : DejavuComposeFragment(R.string.dejavu_settings_
             itemsIndexed(containers.orEmpty(), key = { _, record -> record.contextId }) { index, record ->
                 IconListItem(
                     label = record.name,
-                    beforeIconPainter = painterResource(record.icon.drawable),
+                    beforeIconPainter = iconPainter(record.icon.drawable),
                     beforeIconTint = record.color.color,
                     modifier = Modifier.settingsCard(index, containerRows),
                     onClick = { editing = record },
@@ -490,7 +499,7 @@ class DejavuContainersFragment : DejavuComposeFragment(R.string.dejavu_settings_
             item {
                 IconListItem(
                     label = stringResource(R.string.dejavu_container_add),
-                    beforeIconPainter = painterResource(iconsR.drawable.mozac_ic_plus_24),
+                    beforeIconPainter = iconPainter(iconsR.drawable.mozac_ic_plus_24),
                     modifier = Modifier.settingsCard(containerRows - 1, containerRows),
                     onClick = { adding = true },
                 )
@@ -584,6 +593,46 @@ class DejavuTabSleepFragment : DejavuComposeFragment(R.string.dejavu_settings_ta
         )
     }
 }
+
+/** Chooses when the locked workspaces the user unlocked lock again, see [WorkspaceLock]. */
+class DejavuWorkspaceLockFragment : DejavuComposeFragment(R.string.dejavu_settings_workspace_lock) {
+    @Composable
+    override fun DejavuScreen() {
+        val settings = remember { dejavuSettings() }
+        val context = LocalContext.current
+        val chosen by settings.workspaceLockTime.collectAsState()
+        val choices = WorkspaceLockTime.entries
+        LaunchedEffect(Unit) { NewThings.seen(context, NewThing.WORKSPACE_LOCK) }
+        Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
+            SettingsHint(stringResource(R.string.dejavu_workspace_lock_hint))
+            SettingsHeader(stringResource(R.string.dejavu_workspace_lock_when))
+            choices.forEachIndexed { index, choice ->
+                SettingsChoiceRow(
+                    label = workspaceLockLabel(context, choice),
+                    selected = chosen == choice,
+                    modifier = Modifier.settingsCard(index, choices.size),
+                    onClick = { settings.setWorkspaceLockTime(choice) },
+                )
+            }
+            Spacer(Modifier.height(24.dp))
+        }
+    }
+}
+
+/** How [time] reads in the settings, like "5 minutes after you leave Dejavu", the time in the words of the language. */
+internal fun workspaceLockLabel(context: Context, time: WorkspaceLockTime): String = when (time) {
+    WorkspaceLockTime.SWITCH -> context.getString(R.string.dejavu_workspace_lock_on_switch)
+    WorkspaceLockTime.LEAVE -> context.getString(R.string.dejavu_workspace_lock_on_leave)
+    WorkspaceLockTime.CLOSE -> context.getString(R.string.dejavu_workspace_lock_on_close)
+    else -> {
+        val minutes = (time.awayMillis ?: 0L) / MILLIS_PER_MINUTE
+        val away = MeasureFormat.getInstance(context.resources.configuration.locales[0], MeasureFormat.FormatWidth.WIDE)
+            .format(Measure(minutes, MeasureUnit.MINUTE))
+        context.getString(R.string.dejavu_workspace_lock_after, away)
+    }
+}
+
+private const val MILLIS_PER_MINUTE = 60_000L
 
 /** Chooses the workspace and container that links from other apps open in. */
 class DejavuExternalLinksFragment : DejavuComposeFragment(R.string.dejavu_settings_external_links) {

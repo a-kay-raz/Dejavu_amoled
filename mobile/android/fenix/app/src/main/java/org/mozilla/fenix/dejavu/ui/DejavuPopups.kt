@@ -59,7 +59,6 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Constraints
@@ -70,6 +69,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
 import mozilla.components.compose.base.menu.LocalCustomPlacementPopupCard
+import org.mozilla.fenix.dejavu.discover.newDotAfterText
 import org.mozilla.fenix.dejavu.home.drawWorkspaceTheme
 import org.mozilla.fenix.dejavu.home.rememberGrainBrush
 import org.mozilla.fenix.dejavu.workspaces.WorkspaceTheme
@@ -214,7 +214,7 @@ fun DejavuDialogCard(
                         .background(MaterialTheme.colorScheme.primaryContainer),
                 ) {
                     Icon(
-                        painter = painterResource(icon),
+                        painter = iconPainter(icon),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.onPrimaryContainer,
                         modifier = Modifier.size(22.dp),
@@ -410,7 +410,7 @@ private val ToolbarMenuCard: @Composable (Modifier, @Composable () -> Unit) -> U
 
 /**
  * An item of a [DejavuDropdownMenu], highlighted in a rounded box when pressed. Its [text] takes up to [maxLines]
- * lines, cut off after that.
+ * lines, cut off after that, followed by the orange dot of what is new while [isNew].
  */
 @Composable
 fun DejavuMenuItem(
@@ -420,6 +420,7 @@ fun DejavuMenuItem(
     leadingIcon: (@Composable () -> Unit)? = null,
     trailingIcon: (@Composable () -> Unit)? = null,
     maxLines: Int = Int.MAX_VALUE,
+    isNew: Boolean = false,
 ) {
     DropdownMenuItem(
         text = {
@@ -428,6 +429,7 @@ fun DejavuMenuItem(
                 style = MaterialTheme.typography.bodyLarge,
                 maxLines = maxLines,
                 overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.newDotAfterText(isNew),
             )
         },
         onClick = onClick,
@@ -484,3 +486,4 @@ private const val MIN_TEXT_SCALE = 0.75f
 /** How much smaller the texts of buttons in a row get before the buttons go on lines of their own. */
 private const val MIN_ROW_SCALE = 0.8f
 private val ITEM_INSET = 6.dp
+

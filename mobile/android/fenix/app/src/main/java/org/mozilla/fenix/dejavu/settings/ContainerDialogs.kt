@@ -32,7 +32,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import mozilla.components.browser.state.state.ContainerState
@@ -50,6 +49,7 @@ import org.mozilla.fenix.dejavu.ui.DejavuDialog
 import org.mozilla.fenix.dejavu.ui.DejavuDialogButton
 import org.mozilla.fenix.dejavu.ui.DejavuPopup
 import org.mozilla.fenix.dejavu.ui.DejavuTextField
+import org.mozilla.fenix.dejavu.ui.iconPainter
 
 private const val ITEMS_PER_ROW = 5
 
@@ -112,7 +112,7 @@ fun ContainerEditorDialog(
                 row.forEach { option ->
                     ChoiceCircle(selected = option == icon, onClick = { icon = option }) {
                         Icon(
-                            painter = painterResource(option.drawable),
+                            painter = iconPainter(option.drawable),
                             contentDescription = option.icon,
                             tint = color.color,
                             modifier = Modifier.size(22.dp),

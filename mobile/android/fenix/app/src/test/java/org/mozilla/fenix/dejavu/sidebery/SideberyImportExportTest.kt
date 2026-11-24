@@ -31,6 +31,7 @@ class SideberyImportExportTest {
             state = dejavu,
             tabs = tabs,
             containers = containers,
+            hidden = { it.locked },
             iconImage = { if (it.id == HOME) "data:image/png;base64,AA" else null },
             now = NOW,
             random = Random(1),
@@ -66,7 +67,7 @@ class SideberyImportExportTest {
 
     @Test
     fun `importing an export into the same Dejavu adds nothing`() {
-        val exported = SideberyExport.export(dejavu, tabs, containers, now = NOW).snapshot
+        val exported = SideberyExport.export(dejavu, tabs, containers, hidden = { it.locked }, now = NOW).snapshot
         val read = SideberyFile.read(SideberyFile.write(exported))!!
 
         val openTabs = tabs.filterNot { it.content.private }.map { it.id to it.content.url }
@@ -283,8 +284,9 @@ class SideberyImportExportTest {
         name: String,
         containerId: String? = null,
         theme: WorkspaceTheme? = null,
+        locked: Boolean = false,
         device: SyncedDevice? = null,
-    ) = Workspace(id, name, containerId, theme = theme, createdAt = 0, updatedAt = 0, device = device)
+    ) = Workspace(id, name, containerId, theme = theme, createdAt = 0, updatedAt = 0, device = device, locked = locked)
 
     @Suppress("LongParameterList")
     private fun pin(
@@ -325,12 +327,13 @@ class SideberyImportExportTest {
 
     /**
      * Home, with an essential, a folder holding a pinned tab and a folder, a pinned tab with its own title, and a pin
-     * only a computer opens; Work with its container; and the workspace of a laptop on the account.
+     * only a computer opens; Work with its container; a locked workspace and the workspace of a laptop on the account.
      */
     private val dejavu = WorkspaceState(
         workspaces = listOf(
             workspace(HOME, "Home", theme = WorkspaceTheme(listOf(0xFF5A87FD.toInt()))),
             workspace(WORK, "Work", containerId = "work-ctx"),
+            workspace(LOCKED, "Diary", locked = true),
             workspace(LAPTOP, "Laptop", device = SyncedDevice.DESKTOP),
         ),
         pins = listOf(
@@ -341,6 +344,7 @@ class SideberyImportExportTest {
             pin("gadgets", HOME, parentId = "tech", containerId = "work-ctx"),
             pin("mine", HOME, title = "My page", staticLabel = true, tabId = "t-mine"),
             pin("config", HOME, url = "about:config"),
+            pin("secret", LOCKED),
         ),
         activeWorkspaceId = HOME,
         assignments = mapOf(
@@ -348,6 +352,7 @@ class SideberyImportExportTest {
             "t-jira" to WORK,
             "t-private" to HOME,
             "t-popup" to HOME,
+            "t-diary" to LOCKED,
             "t-laptop" to LAPTOP,
             "t-mine" to HOME,
             "t-blank" to HOME,
@@ -362,6 +367,7 @@ class SideberyImportExportTest {
         createTab("https://jira.example/", id = "t-jira", title = "Jira", contextId = "work-ctx"),
         createTab("https://private.example/", private = true, id = "t-private"),
         createTab("https://popup.example/", id = "t-popup"),
+        createTab("https://diary.example/", id = "t-diary"),
         createTab("https://laptop.example/", id = "t-laptop"),
         createTab("https://mine.example/", id = "t-mine"),
         createTab("about:blank", id = "t-blank"),
@@ -378,6 +384,7 @@ class SideberyImportExportTest {
         const val NOW = 1_762_500_000_000L
         const val HOME = "{11111111-aaaa-bbbb-cccc-000000000001}"
         const val WORK = "{22222222-aaaa-bbbb-cccc-000000000002}"
+        const val LOCKED = "{33333333-aaaa-bbbb-cccc-000000000003}"
         const val LAPTOP = "{44444444-aaaa-bbbb-cccc-000000000004}"
         const val HOME_PANEL = "11111111aaaa"
         const val WORK_PANEL = "22222222aaaa"

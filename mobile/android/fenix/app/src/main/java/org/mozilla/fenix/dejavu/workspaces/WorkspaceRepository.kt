@@ -80,7 +80,15 @@ class WorkspaceRepository private constructor(context: Context) {
     }
 
     /** Adds a workspace and shows it; returns its id. */
-    fun addWorkspace(name: String, containerId: String?, icon: String?, theme: WorkspaceTheme?): String =
+    @Suppress("LongParameterList")
+    fun addWorkspace(
+        name: String,
+        containerId: String?,
+        icon: String?,
+        theme: WorkspaceTheme?,
+        locked: Boolean = false,
+        savesHistory: Boolean = true,
+    ): String =
         update { state ->
             val now = now()
             val workspace = Workspace(
@@ -91,31 +99,44 @@ class WorkspaceRepository private constructor(context: Context) {
                 theme = theme,
                 createdAt = now,
                 updatedAt = now,
+                locked = locked,
+                savesHistory = savesHistory,
             )
             state.copy(workspaces = state.workspaces + workspace, activeWorkspaceId = workspace.id) to workspace.id
         }
 
-    /** Changes workspace [id]. The workspace of a device on the account only takes [theme]: the rest is the device's. */
-    fun updateWorkspace(id: String, name: String, containerId: String?, icon: String?, theme: WorkspaceTheme?) =
-        mutate { state ->
-            state.copy(
-                workspaces = state.workspaces.map {
-                    if (it.id == id && it.device != null) {
-                        it.copy(theme = theme, updatedAt = now())
-                    } else if (it.id == id) {
-                        it.copy(
-                            name = name.trim().ifEmpty { it.name },
-                            containerId = containerId,
-                            icon = icon,
-                            theme = theme,
-                            updatedAt = now(),
-                        )
-                    } else {
-                        it
-                    }
-                },
-            )
-        }
+    /**
+     * Changes workspace [id]; [locked] and [savesHistory] stay as they are when `null`. The workspace of a device on
+     * the account only takes [theme] and those two: the rest is the device's.
+     */
+    @Suppress("LongParameterList")
+    fun updateWorkspace(
+        id: String,
+        name: String,
+        containerId: String?,
+        icon: String?,
+        theme: WorkspaceTheme?,
+        locked: Boolean? = null,
+        savesHistory: Boolean? = null,
+    ) = mutate { state ->
+        state.copy(
+            workspaces = state.workspaces.map {
+                if (it.id != id) return@map it
+                val privacy = it.copy(locked = locked ?: it.locked, savesHistory = savesHistory ?: it.savesHistory)
+                if (it.device != null) {
+                    privacy.copy(theme = theme, updatedAt = now())
+                } else {
+                    privacy.copy(
+                        name = name.trim().ifEmpty { it.name },
+                        containerId = containerId,
+                        icon = icon,
+                        theme = theme,
+                        updatedAt = now(),
+                    )
+                }
+            },
+        )
+    }
 
     /** Moves workspace [id] to position [index] among the workspaces. */
     fun moveWorkspace(id: String, index: Int) = mutate { state ->

@@ -40,6 +40,7 @@ import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.Core.Companion.METADATA_HISTORY_SUGGESTION_LIMIT
 import org.mozilla.fenix.components.Core.Companion.METADATA_SHORTCUT_SUGGESTION_LIMIT
 import org.mozilla.fenix.dejavu.browser.RecentSearchMenu
+import org.mozilla.fenix.dejavu.browser.withoutLockedTabs
 import org.mozilla.fenix.ext.containsQueryParameters
 import org.mozilla.fenix.search.SearchEngineSource
 
@@ -449,7 +450,8 @@ class SearchSuggestionsProvidersBuilder(
             excludeSelectedSession = !includeSelectedTab,
             suggestionsHeader = suggestionsStringsProvider.firefoxSuggestHeader,
             switchToTabDescription = suggestionsStringsProvider.getSwitchToTabDescriptionString(),
-            resultsUriFilter = filter?.let { it::shouldIncludeUri },
+            // Dejavu: the tabs of locked workspaces are not suggested until they are unlocked.
+            resultsUriFilter = withoutLockedTabs(components.core.store, filter?.let { it::shouldIncludeUri }),
         )
     }
 

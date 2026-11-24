@@ -28,6 +28,7 @@ import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.customtabs.ExternalAppBrowserActivity
+import org.mozilla.fenix.dejavu.ui.DejavuAccent
 
 abstract class ThemeManager {
 
@@ -74,6 +75,9 @@ abstract class ThemeManager {
 
     fun setActivityTheme(activity: Activity) {
         activity.setTheme(currentThemeResource)
+        // Dejavu: the accent color picked in Customize, which private browsing leaves out.
+        DejavuAccent.refresh(activity)
+        if (currentTheme == BrowsingMode.Normal) DejavuAccent.overlay?.let { activity.theme.applyStyle(it, true) }
     }
 
     companion object {

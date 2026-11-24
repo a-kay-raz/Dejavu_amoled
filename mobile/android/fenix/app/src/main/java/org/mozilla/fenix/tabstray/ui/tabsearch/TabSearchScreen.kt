@@ -54,6 +54,7 @@ import mozilla.components.compose.base.button.IconButton
 import mozilla.components.compose.base.searchbar.TopSearchBar
 import mozilla.components.ui.icons.R as iconsR
 import org.mozilla.fenix.R
+import org.mozilla.fenix.dejavu.ui.iconPainter
 import org.mozilla.fenix.ext.toShortUrl
 import org.mozilla.fenix.tabstray.TabsTrayTestTag
 import org.mozilla.fenix.tabstray.TabsTrayTestTag.TAB_SEARCH_BACK_BUTTON
@@ -256,7 +257,7 @@ private fun EmptyTabSearchResults(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             Image(
-                painter = painterResource(R.drawable.dejavu_illustration_no_results),
+                painter = iconPainter(R.drawable.dejavu_illustration_no_results),
                 contentDescription = null,
             )
 
