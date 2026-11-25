@@ -3,7 +3,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <!-- Dejavu Test's launcher shortcuts (-PdejavuTest in build.gradle): src/release/res/xml/shortcuts.xml for Dejavu
-     Test's own id. -->
+     Test's own id, which differs for each coming version (the dejavu_test_package string build.gradle makes). -->
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:shortcutId="password_manager"
@@ -12,7 +12,7 @@
         android:shortcutShortLabel="@string/home_screen_shortcut_passwords">
         <intent
             android:action="org.mozilla.fenix.OPEN_PASSWORD_MANAGER"
-            android:targetPackage="com.byarchitect.dejavu.test"
+            android:targetPackage="@string/dejavu_test_package"
             android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
     </shortcut>
     <shortcut
@@ -22,7 +22,7 @@
         android:shortcutShortLabel="@string/home_screen_shortcut_open_new_tab_2">
         <intent
             android:action="org.mozilla.fenix.OPEN_TAB"
-            android:targetPackage="com.byarchitect.dejavu.test"
+            android:targetPackage="@string/dejavu_test_package"
             android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
     </shortcut>
     <shortcut
@@ -32,7 +32,7 @@
         android:shortcutShortLabel="@string/home_screen_shortcut_open_new_private_tab_2">
         <intent
             android:action="org.mozilla.fenix.OPEN_PRIVATE_TAB"
-            android:targetPackage="com.byarchitect.dejavu.test"
+            android:targetPackage="@string/dejavu_test_package"
             android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
     </shortcut>
 </shortcuts>
